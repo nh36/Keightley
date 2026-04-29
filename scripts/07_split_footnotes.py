@@ -189,6 +189,12 @@ GV_MARKER_RE = re.compile(
 GV_NEWLINE_MARKER_RE = re.compile(
     r"(?:^|\n)(\d{1,3})\n(?=[A-Za-z\d])"
 )
+# Line-wrap marker: "...one.\n18 The pre-" — the marker is on the next
+# line after a sentence-ending punctuation, followed by space and a
+# capital letter starting the continuation.  Common at column boundaries.
+GV_LINEWRAP_MARKER_RE = re.compile(
+    r"(?<=[a-z\)\u2019\u201d\.,;:!?\"])[ \t]*\n[ \t]*(\d{1,3})[ \t]+(?=[A-Z])"
+)
 # Mixed superscript+digit: "³9" or "¹⁰0" → "39", "100".  Preceded by
 # closing letter/punct.
 GV_MIXED_SUPER_RE = re.compile(
@@ -259,26 +265,140 @@ def find_gv_markers(gv_prose: str, expected: set[int]) -> list[tuple[int, int]]:
             # Position the marker just after the digit (m.end() is the
             # newline after the digit, which is fine for snap_to_word_boundary)
             found.append((n, m.start(1) + len(m.group(1))))
+    for m in GV_LINEWRAP_MARKER_RE.finditer(gv_prose):
+        try:
+            n = int(m.group(1))
+        except ValueError:
+            continue
+        if n in expected:
+            found.append((n, m.start(1) + len(m.group(1))))
     found.sort(key=lambda x: x[1])
 
-    # Filter: keep only an in-order, non-decreasing-by-position run that
-    # matches the expected order (sorted ascending).
+    # Filter: pick a position for each expected note such that positions are
+    # strictly increasing across expected_order.  Forward-greedy: for each
+    # note in expected order, pick the SMALLEST candidate position strictly
+    # greater than the previous chosen position.  This is more robust than
+    # the previous global-sort approach against stray false-positives at
+    # page-header positions (e.g. note 3 from "]\n17\n]\n3\n" running-header
+    # noise was cannibalising notes 1 and 2 of chapter openers).
     expected_order = sorted(expected)
-    result: list[tuple[int, int]] = []
-    cursor = 0
+    cand_by_note: dict[int, list[int]] = {n: [] for n in expected_order}
     for n, pos in found:
-        while cursor < len(expected_order) and expected_order[cursor] != n:
-            if n > expected_order[cursor]:
-                cursor += 1
-            else:
-                break
-        if cursor >= len(expected_order):
-            break
-        if expected_order[cursor] == n:
-            if result and result[-1][0] == n:
-                continue
-            result.append((n, pos))
-            cursor += 1
+        cand_by_note[n].append(pos)
+    for n in cand_by_note:
+        # Dedupe and sort ascending
+        cand_by_note[n] = sorted(set(cand_by_note[n]))
+
+    result: list[tuple[int, int]] = []
+    last_pos = -1
+    for n in expected_order:
+        positions = cand_by_note.get(n, [])
+        # Take the smallest position strictly greater than last_pos.
+        chosen = next((p for p in positions if p > last_pos), None)
+        if chosen is None:
+            # No valid forward position for this note.  Don't anchor it but
+            # don't update last_pos so subsequent notes can still anchor.
+            continue
+        result.append((n, chosen))
+        last_pos = chosen
+    return result
+
+
+def find_tess_markers(tess_prose: str, missing: set[int],
+                      placed_positions: list[tuple[int, int]],
+                      ) -> list[tuple[int, int]]:
+    """Fallback marker scan against Tesseract prose for notes that GV
+    failed to mark.  Returns [(note_no, char_pos), ...].
+
+    Uses the same family of regexes as `find_gv_markers` since Tesseract
+    sometimes preserves an inline numeric marker that GV dropped, but
+    constrains each candidate to fall STRICTLY BETWEEN the two nearest
+    already-placed marker positions (positional monotonicity), which
+    sharply reduces false positives like "approximately 16 bone fragments".
+
+    `placed_positions` is the sorted list of (pos, note_no) already chosen
+    in the prose; `missing` is the set of note numbers still to anchor.
+    """
+    if not missing:
+        return []
+
+    # All raw candidates from Tesseract prose.
+    cand: dict[int, list[int]] = {n: [] for n in missing}
+    for m in GV_MARKER_RE.finditer(tess_prose):
+        try:
+            n = int(m.group(1))
+        except ValueError:
+            continue
+        if n in missing:
+            cand[n].append(m.end())
+    for m in SUPER_MARKER_RE.finditer(tess_prose):
+        digits = "".join(SUPERSCRIPT.get(c, "") for c in m.group(1))
+        if not digits:
+            continue
+        n = int(digits)
+        if n in missing:
+            cand[n].append(m.end())
+    for m in GV_NEWLINE_MARKER_RE.finditer(tess_prose):
+        try:
+            n = int(m.group(1))
+        except ValueError:
+            continue
+        if n in missing:
+            cand[n].append(m.start(1) + len(m.group(1)))
+    for m in GV_LINEWRAP_MARKER_RE.finditer(tess_prose):
+        try:
+            n = int(m.group(1))
+        except ValueError:
+            continue
+        if n in missing:
+            cand[n].append(m.start(1) + len(m.group(1)))
+    for m in GV_MIXED_SUPER_RE.finditer(tess_prose):
+        digits = "".join(SUPERSCRIPT.get(c, c) for c in m.group(1))
+        if not digits.isdigit():
+            continue
+        n = int(digits)
+        if n in missing:
+            cand[n].append(m.end())
+    for m in GV_MIXED_TRAIL_RE.finditer(tess_prose):
+        digits = "".join(SUPERSCRIPT.get(c, c) for c in m.group(1))
+        if not digits.isdigit():
+            continue
+        n = int(digits)
+        if n in missing:
+            cand[n].append(m.end())
+
+    # Build position bracket from placed_positions: for each missing note
+    # n, find prev_pos = max placed pos for note < n, next_pos = min placed
+    # pos for note > n.  Candidate must fall in (prev_pos, next_pos).
+    placed_by_note = sorted(placed_positions, key=lambda x: x[1])  # (pos, n)
+    result: list[tuple[int, int]] = []
+    for n in sorted(missing):
+        prev_pos = -1
+        next_pos = len(tess_prose) + 1
+        for pos, m_n in placed_by_note:
+            if m_n < n and pos > prev_pos:
+                prev_pos = pos
+            if m_n > n and pos < next_pos:
+                next_pos = pos
+        valid = sorted(set(p for p in cand[n] if prev_pos < p < next_pos))
+        if not valid:
+            continue
+        # Prefer the candidate closest to the linear interpolation between
+        # prev_pos and next_pos by note number, so we don't grab page-header
+        # noise.  If only one candidate, take it.
+        if len(valid) == 1:
+            result.append((n, valid[0]))
+            continue
+        # Compute interpolated target.
+        prev_n = max((mn for _, mn in placed_by_note if mn < n), default=None)
+        next_n = min((mn for _, mn in placed_by_note if mn > n), default=None)
+        if prev_n is not None and next_n is not None and next_n != prev_n:
+            t = (n - prev_n) / (next_n - prev_n)
+            target = prev_pos + t * (next_pos - prev_pos)
+        else:
+            target = (prev_pos + next_pos) / 2
+        valid.sort(key=lambda p: abs(p - target))
+        result.append((n, valid[0]))
     return result
 
 
@@ -289,7 +409,7 @@ def signature(text: str, end_pos: int, n: int = 32) -> str:
     return s[-n:]
 
 
-def fuzzy_locate(prose: str, sig: str) -> int:
+def fuzzy_locate(prose: str, sig: str, threshold: float = 0.78) -> int:
     """Return char position in `prose` where the ASCII-letter prefix-up-to-here
     ends with `sig` (best fuzzy match), or -1 if no good match.
 
@@ -326,7 +446,7 @@ def fuzzy_locate(prose: str, sig: str) -> int:
         if r > best_ratio:
             best_ratio = r
             best_letter_end = start + len(sig) - 1
-    if best_ratio < 0.78 or best_letter_end < 0:
+    if best_ratio < threshold or best_letter_end < 0:
         return -1
     if best_letter_end >= len(letter_chars):
         return -1
@@ -360,6 +480,9 @@ def insert_sentinels(prose: str, page_notes: list[tuple[int, str]],
 
     Note BODIES come from GV (page_notes); marker POSITIONS come from GV
     (gv_prose); placement happens against Tesseract `prose` via fuzzy match.
+    For notes that GV failed to mark, fall back to scanning Tesseract prose
+    directly with the same marker patterns, constrained to fall between
+    already-anchored neighbours.
     """
     expected = {n for n, _ in page_notes}
     note_text_by_no = {n: t for n, t in page_notes}
@@ -371,6 +494,11 @@ def insert_sentinels(prose: str, page_notes: list[tuple[int, str]],
     for n, gv_end in gv_markers:
         sig = signature(gv_prose, gv_end)
         raw_pos = fuzzy_locate(prose, sig)
+        if raw_pos < 0:
+            # Retry with a shorter signature — useful when GV/Tess differ
+            # significantly in line/word splits near a column boundary.
+            short_sig = signature(gv_prose, gv_end, n=16)
+            raw_pos = fuzzy_locate(prose, short_sig, threshold=0.70)
         if raw_pos > 0:
             pos = snap_to_word_boundary(prose, raw_pos)
             placements.append((pos, n))
@@ -378,6 +506,23 @@ def insert_sentinels(prose: str, page_notes: list[tuple[int, str]],
             audit.append({"note_no": n, "anchor": "matched", "sig_excerpt": sig[-12:]})
         else:
             audit.append({"note_no": n, "anchor": "no-fuzzy-match", "sig_excerpt": sig[-12:]})
+
+    # Tesseract fallback: try to anchor any still-missing notes by scanning
+    # Tesseract prose directly for inline markers between anchored neighbours.
+    missing = expected - placed
+    if missing:
+        tess_markers = find_tess_markers(prose, missing, placements)
+        for n, pos in tess_markers:
+            snapped = snap_to_word_boundary(prose, pos)
+            placements.append((snapped, n))
+            placed.add(n)
+            # Update audit row from no-fuzzy-match/no-marker to tess-fallback
+            for a in audit:
+                if a["note_no"] == n:
+                    a["anchor"] = "tess-fallback"
+                    break
+            else:
+                audit.append({"note_no": n, "anchor": "tess-fallback", "sig_excerpt": ""})
 
     placements.sort()
     out: list[str] = []
