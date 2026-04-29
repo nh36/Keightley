@@ -342,12 +342,60 @@ def check_phase4() -> None:
                 break
 
 
+def check_phase5() -> None:
+    """Bibliography reconstruction invariants."""
+    bib_file = ROOT / "tex" / "bibliography" / "keightley.bib"
+    raw_tsv = ROOT / "data" / "bibliography_raw.tsv"
+    abbr_yml = ROOT / "data" / "abbreviations.yml"
+    abbr_tex = ROOT / "tex" / "backmatter" / "abbreviations.tex"
+    citations_tsv = ROOT / "data" / "citations.tsv"
+    bib_a_tex = ROOT / "tex" / "backmatter" / "biblio_a.tex"
+    bib_b_tex = ROOT / "tex" / "backmatter" / "biblio_b.tex"
+
+    for f in (bib_file, raw_tsv, abbr_yml, abbr_tex, citations_tsv,
+              bib_a_tex, bib_b_tex):
+        if not f.exists():
+            errors.append(f"phase5: missing artefact {f.relative_to(ROOT)}")
+
+    if bib_file.exists():
+        text = bib_file.read_text(encoding="utf-8")
+        n_entries = len(re.findall(r"^@\w+\{", text, re.MULTILINE))
+        if n_entries < 50:
+            warn(f"phase5: keightley.bib has only {n_entries} entries "
+                 f"(expected ~250+); proofing required")
+        # Every entry must have author or editor + year + title
+        bad = 0
+        for m in re.finditer(r"^@\w+\{([^,]+),(.*?)\n\}\n", text,
+                             re.MULTILINE | re.DOTALL):
+            body = m.group(2)
+            if not re.search(r"\b(author|editor)\s*=", body):
+                bad += 1
+            elif not re.search(r"\byear\s*=", body):
+                bad += 1
+            elif not re.search(r"\btitle\s*=", body):
+                bad += 1
+        if bad:
+            errors.append(f"phase5: {bad} bib entries missing author/year/title")
+
+    if bib_b_tex.exists():
+        text = bib_b_tex.read_text(encoding="utf-8")
+        if "\\printbibliography" not in text:
+            errors.append("phase5: biblio_b.tex must call \\printbibliography")
+
+    if citations_tsv.exists():
+        rows = list(csv.DictReader(citations_tsv.open(), delimiter="\t"))
+        n_matched = sum(1 for r in rows if r.get("candidate_key"))
+        if n_matched == 0:
+            warn("phase5: no in-text citations matched a bib key")
+
+
 def main() -> int:
     rows = list(csv.DictReader(PAGES_CSV.open()))
     check_phase1(rows)
     check_phase2(rows)
     check_phase3()
     check_phase4()
+    check_phase5()
 
     if errors:
         print(f"FAIL ({len(errors)} issues):", file=sys.stderr)

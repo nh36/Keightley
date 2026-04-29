@@ -5,6 +5,9 @@
 \usepackage{fontspec}
 \usepackage{xunicode}
 \usepackage{xeCJK}
+% Noto Serif CJK SC ships glyph coverage across Simplified, Traditional, JP, KR
+% — single font avoids missing-glyph issues with simplified-only fonts.
+\setCJKmainfont{Noto Serif CJK SC}
 \usepackage{polyglossia}
 \setdefaultlanguage{english}
 \usepackage{microtype}
@@ -21,10 +24,11 @@
 \newcommand{\authorbyline}[1]{\par\noindent\emph{by #1}\par\bigskip}
 \newcommand{\ednote}[1]{\textsuperscript{[#1]}}
 
-% Bibliography (Phase 5)
-% \addbibresource{biblio_b.bib}
+% Phase 5 macros — oracle-bone references.  See tex/backmatter/abbreviations.tex
+% for the full list of collection abbreviations.
+\newcommand{\obcol}[1]{\textsc{#1}}            % oracle-bone collection abbrev.
+\newcommand{\obref}[2]{\obcol{#1}\,#2}         % collection + reference number
+\newcommand{\shimaref}[1]{Shima\,#1}           % Shima Kunio reference index
 
-\begin{document}
-\input{main_body}
-\printindex
-\end{document}
+% Bibliography (Phase 5)
+\addbibresource{bibliography/keightley.bib}

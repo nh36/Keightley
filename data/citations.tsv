@@ -1,0 +1,132 @@
+file	line	raw	surname	year	pages	candidate_count	candidate_key
+tex/appendices/app02.tex	64	Tung (1933), p. 420	Tung	1933	420	1	Tung1933Chia
+tex/appendices/app02.tex	152	Mickel (1973)	Mickel	1973		1	Mickel1973Book
+tex/appendices/app03.tex	56	Tung (1933)	Tung	1933		1	Tung1933Chia
+tex/appendices/app03.tex	148	Chang-ju (1959)	Chang-ju	1959		1	Shih1959Hsiao
+tex/appendices/app04.tex	150	Michels (1973), pp. 158-159	Michels	1973	158-159	1	Michels1973Dating
+tex/appendices/app04.tex	214	Kigoshi and Hasegawa (1966)	Kigoshi and Hasegawa	1966		1	Kigoshi1966Secular
+tex/appendices/app05.tex	193	Tung (1965), pp. 	Tung	1965		1	Tung1965Chia
+tex/appendices/app05.tex	348	Tung (1965)	Tung	1965		1	Tung1965Chia
+tex/appendices/app05.tex	370	Wan-li (1948)	Wan-li	1948		1	Chti1948Shih
+tex/appendices/app05.tex	375	Tung (1965), p. 98,	Tung	1965	98,	1	Tung1965Chia
+tex/appendices/app05.tex	449	Tung (1965), p. 93 	Tung	1965	93	1	Tung1965Chia
+tex/chapters/ch01.tex	41	Cooper (1936), pp. 34, 38	Cooper	1936	34, 38	1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	48	Cooper (1936), pp. 39-40, 	Cooper	1936	39-40,	1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	77	Cooper (1936), p. 34	Cooper	1936	34	1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	86	Cooper (1936), p. 29	Cooper	1936	29	1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	89	Cooper (1936), pp. 30-	Cooper	1936	30-	1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	133	Tsunoda (1951), p. 12	Tsunoda	1951	12	1	Tsunoda1951Japan
+tex/chapters/ch01.tex	143	Bawden (1958)	Bawden	1958		1	Bawden1958Practice
+tex/chapters/ch01.tex	149	Lot-Falck (1968), pp. 255-256	Lot-Falck	1968	255-256	1	LotFalck1968Work
+tex/chapters/ch01.tex	258	Hopwood (1925)	Hopwood	1925		1	Hopwood1925New
+tex/chapters/ch01.tex	276	Young (1936), p. 515, 	Young	1936	515,	1	Young1936New
+tex/chapters/ch01.tex	280	Chang-ju (1953), p. 9	Chang-ju	1953	9	1	Shih1953Hsiao
+tex/chapters/ch01.tex	309	Young (1936), p. 515	Young	1936	515	1	Young1936New
+tex/chapters/ch01.tex	315	Jao (1959), pp. 12-14, 	Jao	1959	12-14,	1	Jao1959Yin
+tex/chapters/ch01.tex	368	Chang-ju (1954)	Chang-ju	1954		1	Chang1954Yin
+tex/chapters/ch01.tex	404	Chang-ju (1954), pp. 268-269, 	Chang-ju	1954	268-269,	1	Chang1954Yin
+tex/chapters/ch01.tex	754	Tung (1954), p. 458, 	Tung	1954	458,	1	Tung1954Work
+tex/chapters/ch01.tex	889	Creel (1935), p. 176, 	Creel	1935	176,	1	Creel1935Dragon
+tex/chapters/ch01.tex	927	Serruys (1974), p. 98, 	Serruys	1974	98,	1	Serruys1974The
+tex/chapters/ch01.tex	1008	Minao (1968), pp. 50-67	Minao	1968	50-67	1	Hayashi1968BIE
+tex/chapters/ch01.tex	1076	Jao (1959), pp. 705-706	Jao	1959	705-706	1	Jao1959Yin
+tex/chapters/ch01.tex	1195	Kan (1957)	Kan	1957		1	Lao1957Shih
+tex/chapters/ch02.tex	91	Serruys (1974)	Serruys	1974		1	Serruys1974The
+tex/chapters/ch02.tex	210	Jao (1959), pp. 73-240	Jao	1959	73-240	1	Jao1959Yin
+tex/chapters/ch02.tex	221	Keightley (1973a)	Keightley	1973a		1	Keightley1973aShang
+tex/chapters/ch02.tex	232	Jao (1959)	Jao	1959		1	Jao1959Yin
+tex/chapters/ch02.tex	246	Serruys (1974), p. 86, 	Serruys	1974	86,	1	Serruys1974The
+tex/chapters/ch02.tex	300	Jao (1959), pp. 657-658, 678, 687, 747, 	Jao	1959	657-658, 678, 687, 747,	1	Jao1959Yin
+tex/chapters/ch02.tex	398	Tung (1965), p. 116	Tung	1965	116	1	Tung1965Chia
+tex/chapters/ch02.tex	529	Chi (1977), pp. 28-29	Chi	1977	28-29	1	Chang1977The
+tex/chapters/ch02.tex	554	Keightley (1972), pp. 35-37	Keightley	1972	35-37	1	Keightley1972New
+tex/chapters/ch02.tex	997	Hopkins (1938), p. 416, 	Hopkins	1938	416,	1	Hopkins1938The
+tex/chapters/ch02.tex	1112	Serruys (1974), p. 703	Serruys	1974	703	1	Serruys1974The
+tex/chapters/ch02.tex	1208	Britton (1940), pp. 7-8	Britton	1940	7-8	1	Britton1940Fifty
+tex/chapters/ch02.tex	1209	Wilkinson (1973), p. 60	Wilkinson	1973	60	1	Wilkinson1973The
+tex/chapters/ch02.tex	1362	Tung (1965)	Tung	1965		1	Tung1965Chia
+tex/chapters/ch02.tex	1468	Britton (1940), p. 3,	Britton	1940	3,	1	Britton1940Fifty
+tex/chapters/ch02.tex	1470	Watson (1963), p. 42	Watson	1963	42	1	Watson1963Handbook
+tex/chapters/ch02.tex	1470	Tung (1965)	Tung	1965		1	Tung1965Chia
+tex/chapters/ch02.tex	1511	Jao (1959), pp. 1188-1189, 	Jao	1959	1188-1189,	1	Jao1959Yin
+tex/chapters/ch02.tex	1663	Tung (1933), pp. 420-421	Tung	1933	420-421	1	Tung1933Chia
+tex/chapters/ch02.tex	1676	Serruys (1974)	Serruys	1974		1	Serruys1974The
+tex/chapters/ch02.tex	1977	Britton (1937), p. 1, 	Britton	1937	1,	1	Britton1937Oracle
+tex/chapters/ch02.tex	1995	Britton (1940), p. 7,	Britton	1940	7,	1	Britton1940Fifty
+tex/chapters/ch02.tex	2002	Tung (1933), p. 421, 	Tung	1933	421,	1	Tung1933Chia
+tex/chapters/ch02.tex	2010	Britton (1940), pp. 15-16,	Britton	1940	15-16,	1	Britton1940Fifty
+tex/chapters/ch02.tex	2046	Britton (1937), p. 1	Britton	1937	1	1	Britton1937Oracle
+tex/chapters/ch02.tex	2130	Britton (1940), p. 7	Britton	1940	7	1	Britton1940Fifty
+tex/chapters/ch03.tex	30	Keng (1947)	Keng	1947		1	Jung1947Chia
+tex/chapters/ch03.tex	32	Tung (1965), pp. 46-118	Tung	1965	46-118	1	Tung1965Chia
+tex/chapters/ch03.tex	33	Creel (1938), pp. 1-16	Creel	1938	1-16	1	Creel1938Studies
+tex/chapters/ch03.tex	34	Chi (1977)	Chi	1977		1	Chang1977The
+tex/chapters/ch03.tex	309	Teng and Biggerstaff (1971), p. 47	Teng and Biggerstaff	1971	47	1	Teng1971Annotated
+tex/chapters/ch03.tex	487	Akatsuka (1977)	Akatsuka	1977		1	Akatsuka1977Rev
+tex/chapters/ch03.tex	520	Serruys (1974)	Serruys	1974		1	Serruys1974The
+tex/chapters/ch03.tex	520	Britton (1936), p. 207	Britton	1936	207	1	Britton1936Sinological
+tex/chapters/ch03.tex	654	Serruys (1974)	Serruys	1974		1	Serruys1974The
+tex/chapters/ch03.tex	708	Serruys (1974), p. 92, 	Serruys	1974	92,	1	Serruys1974The
+tex/chapters/ch03.tex	828	Karlgren (1963), p. 2	Karlgren	1963	2	1	Karlgren1963Loan
+tex/chapters/ch03.tex	1026	Wang (1972), p. 53 	Wang	1972	53	1	Wang1972The
+tex/chapters/ch03.tex	1254	Jao (1959)	Jao	1959		1	Jao1959Yin
+tex/chapters/ch03.tex	1301	Jao (1959), p. 97, 	Jao	1959	97,	1	Jao1959Yin
+tex/chapters/ch03.tex	1378	Keightley (1973a)	Keightley	1973a		1	Keightley1973aShang
+tex/chapters/ch03.tex	1576	Serruys (1974), pp. 29-30	Serruys	1974	29-30	1	Serruys1974The
+tex/chapters/ch03.tex	1666	Serruys (1974)	Serruys	1974		1	Serruys1974The
+tex/chapters/ch03.tex	1786	Jao (1959), p. 138	Jao	1959	138	1	Jao1959Yin
+tex/chapters/ch03.tex	1804	Serruys (1974), p. 76	Serruys	1974	76	1	Serruys1974The
+tex/chapters/ch03.tex	1994	Serruys (1974)	Serruys	1974		1	Serruys1974The
+tex/chapters/ch03.tex	2092	Serruys (1974)	Serruys	1974		1	Serruys1974The
+tex/chapters/ch04.tex	85	Jao (1959), p. 922, 	Jao	1959	922,	1	Jao1959Yin
+tex/chapters/ch04.tex	92	Jao (1959), p. 1029, 	Jao	1959	1029,	1	Jao1959Yin
+tex/chapters/ch04.tex	347	Tung (1933)	Tung	1933		1	Tung1933Chia
+tex/chapters/ch04.tex	474	Miyazaki (1970)	Miyazaki	1970		1	Miyazaki1970Chiigoku
+tex/chapters/ch04.tex	624	Wan-li (1948), p. 223	Wan-li	1948	223	1	Chti1948Shih
+tex/chapters/ch04.tex	720	Jao (1959)	Jao	1959		1	Jao1959Yin
+tex/chapters/ch04.tex	934	Jao (1959)	Jao	1959		1	Jao1959Yin
+tex/chapters/ch04.tex	1264	Keightley (1973a), pp. 48	Keightley	1973a	48	1	Keightley1973aShang
+tex/chapters/ch04.tex	1306	Tung (1933), pp. 410	Tung	1933	410	1	Tung1933Chia
+tex/chapters/ch04.tex	1319	Tung (1965)	Tung	1965		1	Tung1965Chia
+tex/chapters/ch04.tex	1576	Tung (1954)	Tung	1954		1	Tung1954Work
+tex/chapters/ch04.tex	1632	Jao (1959), p. 658, 	Jao	1959	658,	1	Jao1959Yin
+tex/chapters/ch04.tex	1749	Chin-hsiung (1968)	Chin-hsiung	1968		1	Hsii1968Yin
+tex/chapters/ch04.tex	1895	Chin-hsiung (1968)	Chin-hsiung	1968		1	Hsii1968Yin
+tex/chapters/ch04.tex	2585	Chin-hsiung (1970a)	Chin-hsiung	1970a		1	Hsii1970aBIE
+tex/chapters/ch04.tex	2861	Chang-ju (1933)	Chang-ju	1933		1	Shih1933Tich
+tex/chapters/ch04.tex	2862	Tung (1929a)	Tung	1929a		1	Tung1929aHsin
+tex/chapters/ch04.tex	2867	Chang-ju (1959), pp. 319-329	Chang-ju	1959	319-329	1	Shih1959Hsiao
+tex/chapters/ch04.tex	2868	Tung (1965)	Tung	1965		1	Tung1965Chia
+tex/chapters/ch04.tex	2869	Chi (1977)	Chi	1977		1	Chang1977The
+tex/chapters/ch04.tex	3008	Tung (1933), p. 351	Tung	1933	351	1	Tung1933Chia
+tex/chapters/ch04.tex	3014	Chang-ju (1959)	Chang-ju	1959		1	Shih1959Hsiao
+tex/chapters/ch04.tex	3064	Nan (1976)	Nan	1976		1	Hsiao1976Work
+tex/chapters/ch04.tex	3160	Chang-ju (1959)	Chang-ju	1959		1	Shih1959Hsiao
+tex/chapters/ch04.tex	3185	Karlbeck (1957)	Karlbeck	1957		1	Karlbeck1957Treasure
+tex/chapters/ch04.tex	3195	Keng (1947), pp. 24,	Keng	1947	24,	1	Jung1947Chia
+tex/chapters/ch04.tex	3207	Chi (1977), p. 116	Chi	1977	116	1	Chang1977The
+tex/chapters/ch04.tex	3245	Chang-ju (1959), p. 322, 	Chang-ju	1959	322,	1	Shih1959Hsiao
+tex/chapters/ch05.tex	42	Akatsuka (1955)	Akatsuka	1955		1	Akatsuka1955Kohon
+tex/chapters/ch05.tex	46	Minao (1968)	Minao	1968		1	Hayashi1968BIE
+tex/chapters/ch05.tex	129	Middleton (1960)	Middleton	1960		1	Middleton1960Lugbara
+tex/chapters/ch05.tex	220	Waterbury (1942)	Waterbury	1942		1	Waterbury1942Early
+tex/chapters/ch05.tex	221	Linduff (1972), pp. 28, 39, 56,	Linduff	1972	28, 39, 56,	1	Linduff1972Tradition
+tex/chapters/ch05.tex	301	Tung (1933)	Tung	1933		1	Tung1933Chia
+tex/chapters/ch05.tex	405	Creel (1938)	Creel	1938		1	Creel1938Studies
+tex/chapters/ch05.tex	470	White (1945), pp. 75, 77	White	1945	75, 77	1	White1945Bone
+tex/chapters/ch05.tex	478	Karlbeck (1957), pp. 174-192	Karlbeck	1957	174-192	1	Karlbeck1957Treasure
+tex/chapters/ch05.tex	596	Tung (1965)	Tung	1965		1	Tung1965Chia
+tex/chapters/ch05.tex	925	Keng (1947), p. 22, 	Keng	1947	22,	1	Jung1947Chia
+tex/chapters/ch05.tex	939	Tzu-yii (1933)	Tzu-yii	1933		1	Wang1933Chia
+tex/chapters/ch05.tex	1046	Serruys (1974), pp. 15-19, 	Serruys	1974	15-19,	1	Serruys1974The
+tex/chapters/ch05.tex	1352	Gulik (1961)	Gulik	1961		1	Van1961Sexual
+tex/chapters/ch05.tex	1420	Lin (1970)	Lin	1970		1	Chao1970Marriage
+tex/chapters/ch05.tex	1456	Tung (1965), p. 117	Tung	1965	117	1	Tung1965Chia
+tex/chapters/ch05.tex	1459	Hughes (1961), p. 9	Hughes	1961	9	1	Hughes1961Consciousness
+tex/chapters/ch05.tex	1496	Leighton (1970), p. 348	Leighton	1970	348	1	Kluckhohn1970The
+tex/chapters/ch05.tex	1497	Bloch (1953)	Bloch	1953		1	Bloch1953The
+tex/frontmatter/book-preamble.tex	88	Tung (1965), pp. 14-15	Tung	1965	14-15	1	Tung1965Chia
+tex/frontmatter/book-preamble.tex	109	Pope (1955), p. 66	Pope	1955	66	1	Bit1955The
+tex/frontmatter/preface.tex	40	Creel (1938), pp. 63	Creel	1938	63	1	Creel1938Studies
+tex/frontmatter/preface.tex	100	Wan-li (1965a), pp. 88-89, 	Wan-li	1965a	88-89,	1	Chti1965aKuo
+tex/frontmatter/preface.tex	245	Kwang-chih (1977)	Kwang-chih	1977		1	Chang1977The
