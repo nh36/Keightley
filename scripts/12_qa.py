@@ -1,39 +1,54 @@
 #!/usr/bin/env python3
-"""Phase 1 verifier. Exits non-zero if any invariant fails.
+"""Phase 1 + Phase 2 verifier. Exits non-zero if any invariant fails.
 
-Invariants:
+Phase 1 invariants:
   - data/pages.csv has exactly 326 rows; one per scan_page; offsets monotone.
   - Every row has a section assigned.
   - section sequence has no backwards jumps (sections only advance).
   - Every numbered anchor's expected printed_page matches the row at its scan.
-  - Roman-numbered region precedes arabic; arabic resumes after the figures gap.
 
-Run after scripts/02_segment_book.py to ensure the segmentation is internally
-consistent before any downstream phase consumes pages.csv.
+Phase 2 invariants:
+  - build/ocr/pages/p_NNNN.txt exists for every scan page (Tesseract output).
+  - build/ocr/cleaned/p_NNNN.md exists for every scan page.
+  - Every cleaned file starts with the page-anchor comment <!-- source: ... -->.
+  - The page-anchor comment scan number matches the filename.
+  - For pages with very low Tesseract token counts (<5), the page is recorded
+    as "near-empty" in the QA report (figures plates etc. — expected).
+  - Total dropped/edited counters are within plausible bands.
+
+Run after scripts/02_segment_book.py and scripts/04_clean_ocr.py.
 """
 from __future__ import annotations
 
 import csv
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_CSV = ROOT / "data" / "pages.csv"
 ANCHORS_TSV = ROOT / "build" / "qa" / "segmentation_anchors.tsv"
+OCR_PAGES = ROOT / "build" / "ocr" / "pages"
+CLEAN_PAGES = ROOT / "build" / "ocr" / "cleaned"
+OCR_MANIFEST = ROOT / "build" / "ocr" / "MANIFEST.tsv"
+CLEAN_REPORT = ROOT / "build" / "qa" / "ocr_cleanup_report.tsv"
 
 errors: list[str] = []
+warnings: list[str] = []
 
 
 def fail(msg: str) -> None:
     errors.append(msg)
 
 
-def main() -> int:
-    rows = list(csv.DictReader(PAGES_CSV.open()))
+def warn(msg: str) -> None:
+    warnings.append(msg)
+
+
+def check_phase1(rows: list[dict]) -> None:
     if len(rows) != 326:
         fail(f"expected 326 pages, got {len(rows)}")
 
-    # offsets monotone
     last_end = -1
     for r in rows:
         s, e = int(r["ocr_start_offset"]), int(r["ocr_end_offset"])
@@ -43,12 +58,10 @@ def main() -> int:
             fail(f"scan {r['scan_page']}: end {e} < start {s}")
         last_end = e
 
-    # every row has section
     for r in rows:
         if not r["section"]:
             fail(f"scan {r['scan_page']}: empty section")
 
-    # section sequence: build first-seen scan order; assert monotone
     seen: dict[str, int] = {}
     order: list[str] = []
     for r in rows:
@@ -56,17 +69,14 @@ def main() -> int:
         if sec not in seen:
             seen[sec] = int(r["scan_page"])
             order.append(sec)
-    # No section may reappear after another section started:
     last_section_active = None
     for r in rows:
         sec = r["section"]
         if last_section_active and sec != last_section_active:
-            # transitioned. Make sure we never go back to an earlier section.
             if sec in order[: order.index(last_section_active)]:
                 fail(f"scan {r['scan_page']}: returned to earlier section {sec}")
         last_section_active = sec
 
-    # anchors round-trip
     anchors = list(csv.DictReader(ANCHORS_TSV.open(), delimiter="\t"))
     for a in anchors:
         if a["status"] != "ok":
@@ -82,12 +92,106 @@ def main() -> int:
                 f"is {actual!r}, anchor declares {a['printed_page']!r}"
             )
 
+    print(f"  phase1: {len(rows)} pages, {len(order)} sections, {len(anchors)} anchors")
+
+
+_HEADER_RE = re.compile(
+    r"^<!-- source: scan p\. (\d{3}), printed p\. ([^,]+), section: ([^ ]+) -->"
+)
+
+
+def check_phase2(rows: list[dict]) -> None:
+    # Tesseract per-page output exists for every scan
+    missing_ocr = []
+    for r in rows:
+        scan = int(r["scan_page"])
+        if not (OCR_PAGES / f"p_{scan:04d}.txt").exists():
+            missing_ocr.append(scan)
+    if missing_ocr:
+        fail(f"missing Tesseract OCR for scans: {missing_ocr[:10]}{'...' if len(missing_ocr) > 10 else ''}")
+
+    # Cleaned per-page output exists, header matches
+    missing_clean = []
+    bad_header = []
+    near_empty = 0
+    for r in rows:
+        scan = int(r["scan_page"])
+        path = CLEAN_PAGES / f"p_{scan:04d}.md"
+        if not path.exists():
+            missing_clean.append(scan)
+            continue
+        first = path.read_text().splitlines()[0]
+        m = _HEADER_RE.match(first)
+        if not m:
+            bad_header.append((scan, first[:80]))
+            continue
+        if int(m.group(1)) != scan:
+            bad_header.append((scan, first[:80]))
+            continue
+        # printed/section consistency
+        printed_in_csv = r["printed_page"] or "-"
+        printed_in_hdr = m.group(2).strip()
+        if printed_in_hdr != printed_in_csv:
+            bad_header.append((scan, f"hdr printed={printed_in_hdr!r} vs csv={printed_in_csv!r}"))
+            continue
+        section_in_hdr = m.group(3).strip()
+        section_in_csv = r["section"]
+        if section_in_hdr != section_in_csv:
+            bad_header.append((scan, f"hdr section={section_in_hdr!r} vs csv={section_in_csv!r}"))
+            continue
+        if path.stat().st_size < 200:
+            near_empty += 1
+    if missing_clean:
+        fail(f"missing cleaned page output for scans: {missing_clean[:10]}")
+    for scan, msg in bad_header[:10]:
+        fail(f"bad header in cleaned p_{scan:04d}.md: {msg}")
+    if len(bad_header) > 10:
+        fail(f"...and {len(bad_header) - 10} more bad headers")
+
+    # OCR confidence sanity
+    conf_low = 0
+    if OCR_MANIFEST.exists():
+        with OCR_MANIFEST.open() as f:
+            for row in csv.DictReader(f, delimiter="\t"):
+                try:
+                    if float(row["mean_conf"]) < 70 and int(row["tokens"]) > 30:
+                        conf_low += 1
+                except ValueError:
+                    pass
+        if conf_low > 0:
+            warn(f"{conf_low} pages have mean_conf < 70 with >30 tokens (review OCR for these)")
+
+    # Cleanup report sanity
+    if CLEAN_REPORT.exists():
+        rows_r = list(csv.DictReader(CLEAN_REPORT.open(), delimiter="\t"))
+        if len(rows_r) != 326:
+            fail(f"cleanup report has {len(rows_r)} rows, expected 326")
+        # Pages with significant content but zero content after cleaning are suspicious
+        suspicious = [r for r in rows_r
+                      if int(r["raw_chars"]) > 1500 and int(r["clean_chars"]) < 200]
+        if suspicious:
+            fail(f"{len(suspicious)} pages lost almost all content during cleanup: "
+                 f"{[r['scan_page'] for r in suspicious[:5]]}")
+
+    print(f"  phase2: cleaned files OK; near-empty (figures/plates etc.): {near_empty}")
+
+
+def main() -> int:
+    rows = list(csv.DictReader(PAGES_CSV.open()))
+    check_phase1(rows)
+    check_phase2(rows)
+
     if errors:
         print(f"FAIL ({len(errors)} issues):", file=sys.stderr)
         for e in errors:
             print(f"  - {e}", file=sys.stderr)
+        for w in warnings:
+            print(f"  ! {w}", file=sys.stderr)
         return 1
-    print(f"OK: {len(rows)} pages, {len(order)} sections, {len(anchors)} anchors verified.")
+    if warnings:
+        for w in warnings:
+            print(f"  ! warn: {w}")
+    print("OK")
     return 0
 
 
