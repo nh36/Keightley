@@ -1,0 +1,42 @@
+# Build artefacts
+build/
+proofs/page_proofs/*.png
+proofs/page_proofs/*.jpg
+
+# Rendered page images (large; reproducible from source PDF)
+source/pages/*.png
+source/pages/*.jpg
+source/pages/*.tif
+source/pages/*.tiff
+!source/pages/.gitkeep
+!source/pages/MANIFEST.tsv
+
+# LaTeX intermediate outputs
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.idx
+*.ilg
+*.ind
+
+# OS / editor cruft
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

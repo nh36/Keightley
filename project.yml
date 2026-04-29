@@ -1,0 +1,32 @@
+# Editorial decisions — Keightley, Sources of Shang History (1978)
+# Recorded per §9 of docs/agent_pipeline_brief.md.
+# These defaults are deliberate. Do not change ad hoc; update via a logged
+# editorial decision and a commit that explains the change.
+
+edition:
+  purpose: private scholarly working edition
+  distribution: unknown
+  romanisation: pinyin
+  preserve_wadegiles_in_notes: false
+  bibliography_system: biblatex-biber
+  citation_style: authoryear
+  cjk_script: preserve_original_characters_where_available
+  index_policy: preserve_original_first_then_regenerate_later
+  page_reference_policy: preserve_original_literal_references_unless_crossref_is_safe
+  figures_policy: crop_from_scan_unless_redrawing_is_approved
+  table_policy: reconstruct_as_latex_not_images
+  proofing_standard: page_by_page_against_scan
+
+build:
+  engine: xelatex
+  bibliography_backend: biber
+  page_render_dpi: 300
+  page_render_format: png
+  page_render_colourspace: gray
+
+source:
+  primary_pdf: source/Keightley_1978.pdf
+  primary_ocr: source/Keightley_1978.txt
+  primary_pages_dir: source/pages
+  reference_works:
+    - reference/Keightley_2012_Working_for_His_Majesty.pdf
