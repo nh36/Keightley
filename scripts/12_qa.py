@@ -58,6 +58,24 @@ def check_phase1(rows: list[dict]) -> None:
             fail(f"scan {r['scan_page']}: end {e} < start {s}")
         last_end = e
 
+    # Offsets are CHARACTER offsets into the decoded OCR string, not bytes.
+    # Confirm round-trip against the form-feed split — any drift here would
+    # corrupt downstream consumers (e.g. dual-OCR lookup utilities).
+    google_txt = ROOT / "source" / "Keightley_1978.txt"
+    if google_txt.exists():
+        text = google_txt.read_text(errors="replace")
+        chunks = text.split("\f")
+        if len(chunks) != len(rows):
+            fail(f"form-feed split yields {len(chunks)} pages, pages.csv has {len(rows)}")
+        else:
+            mismatched = 0
+            for i, (chunk, r) in enumerate(zip(chunks, rows), start=1):
+                s, e = int(r["ocr_start_offset"]), int(r["ocr_end_offset"])
+                if text[s:e] != chunk:
+                    mismatched += 1
+            if mismatched:
+                fail(f"{mismatched}/{len(rows)} pages: char-offset slice != form-feed split")
+
     for r in rows:
         if not r["section"]:
             fail(f"scan {r['scan_page']}: empty section")

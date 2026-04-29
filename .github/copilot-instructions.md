@@ -20,6 +20,30 @@ reviewer" step with an automated verification harness (see `scripts/12_qa.py`)
 that fails the build on inconsistencies. Spend tokens on writing better
 software rather than on ceremony around manual checks.
 
+## Two OCRs are available — use both
+
+The book has been OCR'd twice and both versions are kept:
+
+- **Google Vision** (supplied) — `source/Keightley_1978.txt`. Form-feed
+  delimited (one chunk per scan page; 326 chunks for 326 pages).
+- **Tesseract 5.5.2** with `eng+chi_tra` (Phase 2 re-OCR) —
+  `build/ocr/pages/p_NNNN.txt`, plus per-token confidence in
+  `p_NNNN.tsv` and a summary in `build/ocr/MANIFEST.tsv`.
+
+Tesseract is the primary source for clean prose. Google Vision is the
+fallback / cross-check for: low-confidence Tesseract regions, CJK glyphs,
+italics, dense layouts (tables, the Bibliography A abbreviations list).
+**Downstream phases (esp. 5 bibliography, 7 figures, 8 tables, 11 proofing)
+should consult both and prefer the more plausible reading per token.** Use
+`scripts/05_dual_ocr_lookup.py NNN [--diff]` to compare a page side-by-side.
+
+Note: `data/pages.csv` columns `ocr_start_offset` / `ocr_end_offset` are
+**character** offsets into the decoded Google Vision string, not byte
+offsets. Either slice the `.read_text()` result with them, or just split
+`source/Keightley_1978.txt` on `\f` and index by scan page (what
+`05_dual_ocr_lookup.py` does). `scripts/12_qa.py` enforces a round-trip
+between the two so this can't drift.
+
 ## Read first, then act
 
 Before proposing changes, open `keightley_latex_agent_pipeline.md`. Specifically consult:
