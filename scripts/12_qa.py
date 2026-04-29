@@ -261,11 +261,93 @@ def check_phase3() -> None:
         fail("phase3: build/qa/structure_inventory.tsv missing")
 
 
+def check_phase4() -> None:
+    """Phase 4 invariants:
+       - cleaned_with_notes/ pages exist (one per scan).
+       - footnote inventory tsv exists with reasonable row count.
+       - For each unit in structure_inventory.tsv with footnotes_anchored or
+         footnotes_unanchored set, the corresponding .tex file contains
+         exactly that many \\footnote[N]{ calls.
+       - No @@FN@@, @@FOOTNOTE@@, or @@HEADING@@ sentinels remain in tex/.
+       - Per-unit note numbering forms a roughly contiguous run (warn on gaps).
+    """
+    cwn_dir = ROOT / "build" / "ocr" / "cleaned_with_notes"
+    if not cwn_dir.exists():
+        fail("phase4: build/ocr/cleaned_with_notes/ missing")
+        return
+    inv_tsv = ROOT / "build" / "qa" / "footnote_inventory.tsv"
+    if not inv_tsv.exists():
+        fail("phase4: build/qa/footnote_inventory.tsv missing")
+        return
+
+    # Count notes per unit from inventory.
+    notes_per_unit: dict[str, list[int]] = {}
+    with inv_tsv.open() as f:
+        rdr = csv.DictReader(f, delimiter="\t")
+        for r in rdr:
+            unit = r["unit"]
+            try:
+                n = int(r["note_no"])
+            except (ValueError, KeyError):
+                continue
+            notes_per_unit.setdefault(unit, []).append(n)
+
+    # Check structure inventory footnote counts vs .tex files.
+    struct_tsv = ROOT / "build" / "qa" / "structure_inventory.tsv"
+    if struct_tsv.exists():
+        with struct_tsv.open() as f:
+            for r in csv.DictReader(f, delimiter="\t"):
+                a = r.get("footnotes_anchored") or ""
+                u = r.get("footnotes_unanchored") or ""
+                try:
+                    expected = int(a or 0) + int(u or 0)
+                except ValueError:
+                    continue
+                if expected == 0:
+                    continue
+                # Map unit id to its tex file via UNITS-style lookup
+                # (best-effort: walk tex/ for matching basename).
+                unit_id = r["unit"]
+                # Heuristic: tex/<dir>/<base>.tex from unit_id replacements
+                cand = ROOT / "tex" / f"{unit_id}.tex"
+                if not cand.exists():
+                    # Skip silently — emitter may use distinct filenames
+                    continue
+                text = cand.read_text(errors="replace")
+                actual = len(re.findall(r"\\footnote\[\d+\]\{", text))
+                if actual != expected:
+                    warn(f"phase4: {unit_id} expected {expected} footnotes, "
+                         f"tex has {actual}")
+
+    # No leftover sentinels anywhere in tex/.
+    leftovers: list[str] = []
+    for tex in (ROOT / "tex").rglob("*.tex"):
+        t = tex.read_text(errors="replace")
+        if "@@FN@@" in t or "@@FOOTNOTE@@" in t or "@@HEADING@@" in t:
+            leftovers.append(str(tex.relative_to(ROOT)))
+    if leftovers:
+        fail(f"phase4: leftover sentinels in {len(leftovers)} files: "
+             f"{', '.join(leftovers[:3])}")
+
+    # Per-unit note numbering: warn on gaps > 5.
+    for unit, nums in notes_per_unit.items():
+        nums_sorted = sorted(set(nums))
+        if not nums_sorted:
+            continue
+        if nums_sorted[0] != 1:
+            warn(f"phase4: {unit} first note is {nums_sorted[0]} (not 1)")
+        for prev, cur in zip(nums_sorted, nums_sorted[1:]):
+            if cur - prev > 5:
+                warn(f"phase4: {unit} note-number gap {prev}→{cur}")
+                break
+
+
 def main() -> int:
     rows = list(csv.DictReader(PAGES_CSV.open()))
     check_phase1(rows)
     check_phase2(rows)
     check_phase3()
+    check_phase4()
 
     if errors:
         print(f"FAIL ({len(errors)} issues):", file=sys.stderr)

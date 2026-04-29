@@ -41,7 +41,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_CSV = ROOT / "data" / "pages.csv"
-CLEAN_DIR = ROOT / "build" / "ocr" / "cleaned"
+CLEAN_DIR = ROOT / "build" / "ocr" / "cleaned_with_notes"
+if not CLEAN_DIR.exists():
+    CLEAN_DIR = ROOT / "build" / "ocr" / "cleaned"
 TEX_DIR = ROOT / "tex"
 INVENTORY = ROOT / "build" / "qa" / "structure_inventory.tsv"
 EMIT_LOG = ROOT / "build" / "logs" / "phase3_emit.md"
@@ -165,10 +167,18 @@ def parse_page(md: str) -> dict:
     return out
 
 
+FOOTNOTE_RE = re.compile(
+    r"<!--\s*FOOTNOTE(?:-UNANCHORED)?:(\d+)\s*-->(.*?)<!--\s*/FOOTNOTE\s*-->",
+    re.DOTALL,
+)
+
+
 def process_body_text(body: str) -> str:
     """Convert page body markdown to LaTeX-ready text:
        - drop <!-- CJK --> markers (keep CJK chars themselves)
        - convert <!-- CHECK OCR: ... --> to `% TODO CHECK OCR: ...` lines
+       - convert <!-- FOOTNOTE:N -->...<!-- /FOOTNOTE --> to a sentinel
+         that emit_chapter() unfolds into \\footnote{...}
        - escape LaTeX specials
        - drop bare-page-number residue lines
        Headings are preserved as-is so emit_chapter() can find them.
@@ -179,6 +189,18 @@ def process_body_text(body: str) -> str:
         return f"\n% TODO CHECK OCR: {m.group(1)}\n"
     body = re.sub(r"<!--\s*CHECK OCR:\s*(.+?)\s*-->", check_repl, body)
 
+    # Replace FOOTNOTE sentinels with @@FOOTNOTE@@N@@TYPE@@BODY@@/FOOTNOTE@@
+    # marker. Detect "UNANCHORED" by re-checking the source spelling.
+    def fn_repl(m: re.Match) -> str:
+        is_unanchored = m.group(0).startswith("<!-- FOOTNOTE-UNANCHORED")
+        n = m.group(1)
+        body_txt = m.group(2).strip()
+        kind = "U" if is_unanchored else "A"
+        # Encode body for safe carry-through escape: replace "@" with placeholder
+        encoded = body_txt.replace("@", "\u0001AT\u0001")
+        return f"@@FOOTNOTE@@{n}@@{kind}@@{encoded}@@/FOOTNOTE@@"
+    body = FOOTNOTE_RE.sub(fn_repl, body)
+
     # Drop bare-page-number lines that survived edge-strip
     out_lines = []
     for ln in body.splitlines():
@@ -187,18 +209,66 @@ def process_body_text(body: str) -> str:
         out_lines.append(ln)
     body = "\n".join(out_lines)
 
-    # Escape, but preserve heading lines so we can detect them after escaping.
-    # Heading-aware escape: split on headings, escape only non-heading parts.
+    # Escape, but preserve heading and footnote markers.
+    # Strategy: find all heading + footnote spans, escape only the gaps.
+    # IMPORTANT: footnote bodies may contain heading-like patterns
+    # (e.g., note 43 in ch1 contains "4.54.4 and 4.54.5..."). Headings
+    # inside footnote spans must be ignored.
+    fn_spans: list[tuple[int, int, str]] = []
+    for m in re.finditer(r"@@FOOTNOTE@@(\d+)@@([AU])@@(.*?)@@/FOOTNOTE@@", body, re.DOTALL):
+        decoded = m.group(3).replace("\u0001AT\u0001", "@")
+        esc_body = latex_escape(decoded)
+        repl = f"@@FN@@{m.group(1)}@@{m.group(2)}@@{esc_body}@@/FN@@"
+        fn_spans.append((m.start(), m.end(), repl))
+
+    def _inside_fn(pos: int) -> bool:
+        for s, e, _ in fn_spans:
+            if s <= pos < e:
+                return True
+        return False
+
+    spans: list[tuple[int, int, str]] = list(fn_spans)
+    for m in HEADING_RE.finditer(body):
+        if _inside_fn(m.start()):
+            continue
+        repl = f"@@HEADING@@{m.group(1)}@@{latex_escape(m.group(2).rstrip(' .'))}@@"
+        spans.append((m.start(), m.end(), repl))
+    spans.sort()
+
     parts: list[str] = []
     pos = 0
-    for m in HEADING_RE.finditer(body):
-        parts.append(latex_escape(body[pos:m.start()]))
-        # Heading: do not escape the digits/dots; escape the title text only.
-        # Output marker that emit_chapter will substitute later.
-        parts.append(f"@@HEADING@@{m.group(1)}@@{latex_escape(m.group(2).rstrip(' .'))}@@")
-        pos = m.end()
+    for s, e, repl in spans:
+        parts.append(latex_escape(body[pos:s]))
+        parts.append(repl)
+        pos = e
     parts.append(latex_escape(body[pos:]))
     return "".join(parts)
+
+
+FN_MARKER_RE = re.compile(r"@@FN@@(\d+)@@([AU])@@(.*?)@@/FN@@", re.DOTALL)
+
+
+def expand_footnotes(text: str, count: list[int] | None = None) -> str:
+    """Replace @@FN@@N@@A|U@@body@@/FN@@ sentinels with LaTeX footnote calls.
+
+    For 'A' (anchored): emit \\footnote[N]{body}.
+    For 'U' (unanchored): emit \\footnote[N]{body}\\unanchorednote{N} so the
+      audit comment is visible in the source. The visible result in the PDF
+      is identical to anchored (\\footnote[N]{}); only the audit-marker comment
+      differs so a reader can tell which footnotes lack a confirmed in-text
+      anchor and may sit at a non-ideal position.
+    """
+    def repl(m: re.Match) -> str:
+        n = m.group(1)
+        kind = m.group(2)
+        body = m.group(3).strip()
+        if count is not None:
+            count[0 if kind == "A" else 1] += 1
+        if kind == "A":
+            return f"\\footnote[{n}]{{{body}}}"
+        else:
+            return f"\\footnote[{n}]{{{body}}}% phase4: unanchored note {n}\n"
+    return FN_MARKER_RE.sub(repl, text)
 
 
 def collapse_paragraphs(s: str) -> str:
@@ -336,6 +406,7 @@ def emit_chapter(unit: dict, pages: list[dict], inventory: list[dict]) -> str:
 
     for m in head_re.finditer(full):
         out_text.append(full[pos:m.start()])
+        pos = m.end()
         num = m.group(1)
         htitle = m.group(2)
         depth = num.count(".")
@@ -361,7 +432,6 @@ def emit_chapter(unit: dict, pages: list[dict], inventory: list[dict]) -> str:
             f"\\label{{{sec_label}}}\n\n"
         )
         headings_emitted += 1
-        pos = m.end()
     out_text.append(full[pos:])
 
     body_str = "".join(out_text)
@@ -483,6 +553,14 @@ def main() -> int:
             sys.exit(f"unknown unit kind {unit['kind']!r} for {sec_id}")
         out_path = TEX_DIR / unit["file"]
         out_path.parent.mkdir(parents=True, exist_ok=True)
+        fn_count = [0, 0]  # [anchored, unanchored]
+        text = expand_footnotes(text, fn_count)
+        if fn_count[0] or fn_count[1]:
+            for r in inventory:
+                if r["unit"] == sec_id:
+                    r["footnotes_anchored"] = fn_count[0]
+                    r["footnotes_unanchored"] = fn_count[1]
+                    break
         out_path.write_text(text)
         files_written.append(str(out_path.relative_to(ROOT)))
 
@@ -499,7 +577,12 @@ def main() -> int:
     # Inventory
     INVENTORY.parent.mkdir(parents=True, exist_ok=True)
     with INVENTORY.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(inventory[0].keys()), delimiter="\t")
+        fieldnames = []
+        for r in inventory:
+            for k in r.keys():
+                if k not in fieldnames:
+                    fieldnames.append(k)
+        w = csv.DictWriter(f, fieldnames=fieldnames, delimiter="\t", extrasaction="ignore")
         w.writeheader()
         w.writerows(inventory)
 
