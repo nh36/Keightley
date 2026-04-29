@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Phase 1 + Phase 2 verifier. Exits non-zero if any invariant fails.
+"""Phase 1 + Phase 2 + Phase 3 verifier. Exits non-zero if any invariant fails.
 
 Phase 1 invariants:
   - data/pages.csv has exactly 326 rows; one per scan_page; offsets monotone.
@@ -194,10 +194,78 @@ def check_phase2(rows: list[dict]) -> None:
     print(f"  phase2: cleaned files OK; near-empty (figures/plates etc.): {near_empty}")
 
 
+def check_phase3() -> None:
+    """Phase 3 invariants: every TOC anchor has a tex file; main.tex is wired."""
+    # Use a tiny YAML reader to avoid a runtime dep — toc.yml has a known shape.
+    import re as _re
+    toc_text = (ROOT / "data" / "toc.yml").read_text()
+    ids_in_toc = set(_re.findall(r"^  - id:\s*(\S+)", toc_text, _re.MULTILINE))
+    expected_files = {
+        "frontmatter/half-title": "frontmatter/halftitle.tex",
+        "frontmatter/title": "frontmatter/title.tex",
+        "frontmatter/copyright": "frontmatter/copyright.tex",
+        "frontmatter/dedication": "frontmatter/dedication.tex",
+        "frontmatter/epigraph": "frontmatter/epigraph.tex",
+        "frontmatter/contents": "frontmatter/contents.tex",
+        "frontmatter/list-of-figures-tables": "frontmatter/list-figures-tables.tex",
+        "frontmatter/abbreviations": "frontmatter/abbreviations.tex",
+        "frontmatter/preface": "frontmatter/preface.tex",
+        "frontmatter/preamble": "frontmatter/book-preamble.tex",
+        "plates/figures": "plates/figures.tex",
+        "plates/tables": "plates/tables.tex",
+        "backmatter/bibliography-a": "backmatter/biblio_a.tex",
+        "backmatter/bibliography-b": "backmatter/biblio_b.tex",
+        "backmatter/finding-list": "backmatter/finding_list.tex",
+        "backmatter/index": "backmatter/index.tex",
+    }
+    for n in range(1, 6):
+        expected_files[f"chapter/{n}"] = f"chapters/ch{n:02d}.tex"
+        expected_files[f"appendix/{n}"] = f"appendices/app{n:02d}.tex"
+
+    ids_in_toc = set(_re.findall(r"^  - id:\s*(\S+)", toc_text, _re.MULTILINE))
+    TEX = ROOT / "tex"
+    if set(expected_files) != ids_in_toc:
+        fail(f"phase3: TOC ids vs emit map mismatch: "
+             f"missing-from-emit={ids_in_toc - set(expected_files)}, "
+             f"extra-in-emit={set(expected_files) - ids_in_toc}")
+
+    for sec, rel in expected_files.items():
+        p = TEX / rel
+        if not p.exists():
+            fail(f"phase3: missing tex file for {sec}: {p.relative_to(ROOT)}")
+
+    # main_body.tex must \input every emitted unit
+    main_body = (TEX / "main_body.tex").read_text()
+    for rel in expected_files.values():
+        token = "\\input{" + rel.replace(".tex", "") + "}"
+        if token not in main_body:
+            fail(f"phase3: main_body.tex missing {token}")
+
+    # preamble + main.tex sanity
+    if "\\origsecnum" not in (TEX / "preamble.tex").read_text():
+        fail("phase3: preamble.tex missing \\origsecnum macro")
+    if "\\input{preamble}" not in (TEX / "main.tex").read_text():
+        fail("phase3: main.tex doesn't \\input{preamble}")
+
+    # Each chapter must have a \chapter heading and at least one numbered section.
+    for n in range(1, 6):
+        ch = (TEX / f"chapters/ch{n:02d}.tex").read_text()
+        if "\\chapter{" not in ch:
+            fail(f"phase3: chapters/ch{n:02d}.tex missing \\chapter{{...}}")
+        if "\\section[" not in ch:
+            fail(f"phase3: chapters/ch{n:02d}.tex has no numbered \\section")
+
+    # Heading inventory must exist and cover all chapters
+    inv = ROOT / "build" / "qa" / "structure_inventory.tsv"
+    if not inv.exists():
+        fail("phase3: build/qa/structure_inventory.tsv missing")
+
+
 def main() -> int:
     rows = list(csv.DictReader(PAGES_CSV.open()))
     check_phase1(rows)
     check_phase2(rows)
+    check_phase3()
 
     if errors:
         print(f"FAIL ({len(errors)} issues):", file=sys.stderr)
