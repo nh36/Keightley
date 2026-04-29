@@ -12,6 +12,14 @@ The repository is currently at **inception stage**. It contains:
 
 There is no code, build, or git history yet. Treat the brief as the spec.
 
+## Workflow rule (project-specific override of the brief)
+
+The brief mentions human review gates between phases. **This project does not
+use human-in-the-loop gates.** Replace any "stop for review" / "ask the
+reviewer" step with an automated verification harness (see `scripts/12_qa.py`)
+that fails the build on inconsistencies. Spend tokens on writing better
+software rather than on ceremony around manual checks.
+
 ## Read first, then act
 
 Before proposing changes, open `keightley_latex_agent_pipeline.md`. Specifically consult:
