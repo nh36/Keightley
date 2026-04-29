@@ -40,3 +40,9 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Large reference PDFs (>100MB; not redistributable here)
+reference/Keightley_2012_Working_for_His_Majesty.pdf
+
+# Source PDFs (kept locally; not pushed)
+*.pdf
