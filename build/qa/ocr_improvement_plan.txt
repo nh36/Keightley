@@ -1,0 +1,64 @@
+OCR QUALITY IMPROVEMENT PLAN
+Generated: 2026-04-30
+Based on: Google Vision vs Tesseract comparison
+
+===== CRITICAL PRIORITY (Pages 242, 224, 228) =====
+
+Page 242 (TABLE) - Status: GOOD
+  Current: Google Vision 100 chars, Tesseract 55 chars
+  Issue: Low Tesseract confidence (32.5%)
+  Action: USE GOOGLE VISION - already in cleaned markdown
+  Expected outcome: Fix any remaining 82.4% low-confidence tokens
+
+Page 224 (FIGURES + CJK) - Status: NEEDS REVIEW
+  Current: Google Vision 0% (?), Tesseract 35% confidence
+  Issue: Mixed CJK/Latin with figure annotations - challenging for both engines
+  Action: Manual review of cleaned markdown; may need hybrid approach
+  Expected outcome: Ensure figure captions and CJK text are correctly preserved
+
+Page 228 (FIGURE CAPTIONS) - Status: GOOD
+  Current: Google Vision ~70, Tesseract 15% confidence
+  Issue: Low Tesseract; Google Vision has some garbling
+  Action: USE GOOGLE VISION - already in cleaned markdown with minimal markup
+  Expected outcome: Fix figure reference formatting (Fig. 30 etc.)
+
+===== HIGH PRIORITY (Pages 246, 203, 264, 265, 263) =====
+
+Recommendation: Extract from Google Vision source (Keightley_1978.txt), validate against Tesseract
+
+Pages with mixed CJK/Latin text:
+  - 203 (Google 95%, Tesseract 75%): Use Google
+  - 263 (Google 80%, Tesseract 25%): Use Google strongly
+  - 265 (Google 70%, Tesseract 55%): Use Google
+  - 264 (Google 65%, Tesseract 35%): Use Google
+  - 246 (Google 25%, Tesseract 45%): AMBIGUOUS - both poor, pick Tesseract
+
+===== MEDIUM PRIORITY (10 pages) =====
+
+Default: Extract from Google Vision (Keightley_1978.txt)
+Exceptions: Pages 275, 276 (0 confidence for both OCRs - check manually)
+
+===== ACTION PLAN =====
+
+Phase 1: Improve CRITICAL pages (3 pages)
+  1. Review cleaned markdown for pages 242, 224, 228
+  2. Extract Google Vision versions from source/Keightley_1978.txt
+  3. Manually correct CJK character garbling and figure captions
+  4. Update cleaned_with_notes/ markdown files
+
+Phase 2: Re-extract HIGH priority pages (5 pages)
+  1. Extract text chunks from source/Keightley_1978.txt using form-feed splits
+  2. Update cleaned_with_notes/ for pages 203, 246, 263, 264, 265
+  3. Validate against current markdown
+
+Phase 3: Spot-check MEDIUM priority (10 pages)
+  1. Sample 3-5 pages for manual review
+  2. Fix any obvious errors
+  3. Verify form-feed extraction is working correctly
+
+===== SUCCESS CRITERIA =====
+
+- 18 flagged pages: reduced low-confidence tokens by >= 50%
+- CRITICAL pages (242, 224, 228): 0-5 OCR issues remaining
+- HIGH pages (203, 246, 263, 264, 265): mean_conf >= 85%
+- Overall: 99%+ of pages with mean_conf >= 85%

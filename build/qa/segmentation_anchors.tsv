@@ -1,0 +1,27 @@
+section	kind	printed_page	scan_page	status
+frontmatter/half-title	front		1	ok
+frontmatter/title	front		3	ok
+frontmatter/copyright	front		4	ok
+frontmatter/dedication	front	v	5	ok
+frontmatter/epigraph	front	vii	6	ok
+frontmatter/contents	front	ix	7	ok
+frontmatter/list-of-figures-tables	front	x	10	ok
+frontmatter/abbreviations	front	xii	12	ok
+frontmatter/preface	front	xiii	13	ok
+frontmatter/preamble	front	1	18	ok
+chapter/1	main	3	20	ok
+chapter/2	main	28	45	ok
+chapter/3	main	57	74	ok
+chapter/4	main	88	108	ok
+chapter/5	main	134	151	ok
+appendix/1	main	157	175	ok
+appendix/2	main	161	178	ok
+appendix/3	main	165	182	ok
+appendix/4	main	171	188	ok
+appendix/5	main	177	194	ok
+plates/figures	plates		200	ok
+plates/tables	plates	183	230	ok
+backmatter/bibliography-a	back	229	275	ok
+backmatter/bibliography-b	back	232	278	ok
+backmatter/finding-list	back	257	303	ok
+backmatter/index	back	267	312	ok

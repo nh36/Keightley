@@ -22,16 +22,26 @@ proofs/      # Per-chapter / per-page proof reports.
 The authoritative project specification is `docs/agent_pipeline_brief.md`.
 Editorial defaults are recorded in `project.yml` (§9 of the brief).
 
-## Building (target state)
+## Building
 
-```
-latexmk -xelatex tex/main.tex
-biber main
-latexmk -xelatex tex/main.tex
+To build the PDF:
+
+```bash
+./scripts/build.sh
 ```
 
-The build is not yet wired up. Phase 1 (source audit and page inventory) is in
-progress; see `build/logs/source_audit.md` once produced.
+Output: `build/output/main.pdf`
+
+For detailed build instructions, prerequisites, and troubleshooting, see [BUILDING.md](BUILDING.md).
+
+### Repository Structure
+
+- **Source:** `tex/` - LaTeX files (chapters, macros, configuration)
+- **Output:** `build/output/main.pdf` - Canonical PDF location
+- **Data:** `data/` - Structured inventories and mappings
+- **Tests:** `tests/regression_repo_structure.py` - Repository tidiness checks
+- **Scripts:** `scripts/` - Build and automation utilities
+- **Docs:** `docs/`, `BUILDING.md`, this file
 
 ## Provenance
 

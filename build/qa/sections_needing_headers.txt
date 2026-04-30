@@ -1,0 +1,441 @@
+Sections Needing LaTeX Headers
+======================================================================
+
+
+p_0008.md:
+----------------------------------------------------------------------
+  Line  26: Section 45    | 45 46 47 5 50 53 53 54 55
+  Line  27: Section 57    | 57 57
+  Line  38: Section 59    | 59 59 083457
+
+p_0010.md:
+----------------------------------------------------------------------
+  Line  32: Section 24    | 24 Yin-hsü 16 (D)
+  Line  33: Section 25    | 25 Rules of thumb for dating (S289.4)
+  Line  34: Section 26    | 26 Period III writing style (Chia-t'u 42)
+  Line  35: Section 27    | 27 Period III + IV writing style (Jimbun shakubun, plate 25)
+  Line  38: Section 30    | 30 Exploded and imaginative reconstructions (Chui-hsin 312; 
+  Line  39: Section 31    | 31 Scute seams measured
+  Line  40: Section 32    | 32 Plastron identification: principal component analysis (1)
+  Line  41: Section 33    | 33 Plastron identification: principal component analysis (2)
+
+p_0011.md:
+----------------------------------------------------------------------
+  Line  26: Section 22    | 22 Calligraphy: period II
+  Line  27: Section 23    | 23 Calligraphy: period III
+  Line  28: Section 24    | 24 Calligraphy: period V
+  Line  29: Section 25    | 25 The evolution of Shang calligraphy in periods I to V
+  Line  30: Section 26    | 26 Epigraphic evolution: selected graphs
+  Line  31: Section 27    | 27 Epigraphic evolution: total number of variants by period
+  Line  32: Section 28    | 28 Crack notations: distribution by period
+  Line  33: Section 29    | 29 Divination topics: frequency in periods I to V
+  Line  34: Section 30    | 30 Scapula hollow shapes by period
+  Line  37: Section 33    | 33 Number of fragments per scapula and plastron in five majo
+  Line  38: Section 34    | 34 Scapulas and plastrons: distribution in three major colle
+  Line  39: Section 35    | 35 Scapulas and plastrons: distribution by period in Chia-pi
+  Line  40: Section 36    | 36 Number of oracle bones recovered compared with number rep
+  Line  41: Section 37    | 37 Chronologies proposed for the P'an Keng-Ti Hsin era
+  Line  42: Section 38    | 38 Revised short chronology for the historical period
+
+p_0017.md:
+----------------------------------------------------------------------
+  Line   8: Section 160   | 160 B.C. for WKGM 1 (table 2, sample ZK-5) accords well with
+
+p_0042.md:
+----------------------------------------------------------------------
+  Line  24: Section 25    | 25 percent of the hollows were used is hard to explain, espe
+
+p_0062.md:
+----------------------------------------------------------------------
+  Line  22: Section 154.3 | 154.3 235.2 (fig. 11); (4) Ching-hua 2 (S401.4;
+
+p_0110.md:
+----------------------------------------------------------------------
+  Line  73: Section 170   | 170 below.
+
+p_0149.md:
+----------------------------------------------------------------------
+  Line  20: Section 13.0.17714 | 13.0.17714 came from YH127; according to Shih
+  Line  22: Section 13.0.17756 | 13.0.17756 should also be included. At one point
+  Line  47: Section 38    | 38 at Cambridge University); see Tung (1945),
+
+p_0185.md:
+----------------------------------------------------------------------
+  Line  43: Section 104   | 104 bones (S152.1). In these cases, therefore, we
+
+p_0191.md:
+----------------------------------------------------------------------
+  Line  51: Section 55    | 55 [S581.2] offer good evidence that this was so;
+
+p_0192.md:
+----------------------------------------------------------------------
+  Line  71: Section 21    | 21 years; Later Han, at 16 years; T'ang, at 12
+
+p_0201.md:
+----------------------------------------------------------------------
+  Line  26: Section 61    | 61 percent. Reprinted, by permission, from Bone, p. 76.
+
+p_0231.md:
+----------------------------------------------------------------------
+  Line  51: Section 9     | 9 1
+  Line  70: Section 24    | 24 X
+
+p_0232.md:
+----------------------------------------------------------------------
+  Line  17: Section 28    | 28 B 2
+  Line  14: Section 29    | 29 8 A
+  Line  12: Section 30    | 30 8 +
+  Line  20: Section 31    | 31 A σ
+
+p_0235.md:
+----------------------------------------------------------------------
+  Line 277: Section 6     | 6 6 6 6 6 6 8
+  Line 295: Section 6     | 6 6 6 6 6 6 666666666
+
+p_0236.md:
+----------------------------------------------------------------------
+  Line  99: Section 6     | 6 6 6 6 6 6 6 6
+  Line 246: Section 6     | 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6
+  Line 316: Section 6     | 6 5 0 6 6 6 6660
+  Line  75: Section 53    | 53 54
+
+p_0237.md:
+----------------------------------------------------------------------
+  Line 116: Section 6     | 6 6 6 6 6 3
+
+p_0239.md:
+----------------------------------------------------------------------
+  Line  87: Section 0.2   | 0.2 I
+  Line 279: Section 0.75  | 0.75 -1.36
+  Line 203: Section 6     | 6 6 6 6 6 6 6 6 6 6 6 6 6666666666666666666666 Û Û ÖÖ m. n. 
+  Line 339: Section 6     | 6 6 6 6 6 6 6 Ó Û ÛÔÓ Û Ö n. 0006066666666666666668000386038
+
+p_0241.md:
+----------------------------------------------------------------------
+  Line  31: Section 0     | 0 (0%)
+  Line  25: Section 84    | 84 (87.5%)
+  Line  36: Section 116   | 116 (63%)
+  Line  37: Section 128   | 128 (64%)
+
+p_0246.md:
+----------------------------------------------------------------------
+  Line  51: Section 1     | 1 +
+  Line  45: Section 79    | 79 +1武 <!-- CJK -->
+
+p_0258.md:
+----------------------------------------------------------------------
+  Line  27: Section 3     | 3 4 5 6 7 8 9 IO I I 12 13 14
+  Line  16: Section 11    | 11 mm.
+  Line  15: Section 12    | 12 mm.
+  Line  17: Section 13    | 13 mm.
+
+p_0264.md:
+----------------------------------------------------------------------
+  Line  26: Section 21    | 21 岳 <!-- CJK -->
+  Line  28: Section 22    | 22 逐 <!-- CJK -->
+  Line  35: Section 23    | 23 犬 <!-- CJK -->
+  Line  36: Section 24    | 24 虎 <!-- CJK -->
+  Line  71: Section 31    | 31 戊 <!-- CJK -->
+
+p_0265.md:
+----------------------------------------------------------------------
+  Line  28: Section 33    | 33 癸 <!-- CJK -->
+  Line  32: Section 34    | 34 f
+  Line  42: Section 35    | 35 寅 <!-- CJK -->
+  Line  48: Section 37    | 37 E
+  Line  49: Section 38    | 38 午 <!-- CJK -->
+  Line  57: Section 39    | 39 未 <!-- CJK -->
+  Line  82: Section 42    | 42 戍 <!-- CJK -->
+
+p_0268.md:
+----------------------------------------------------------------------
+  Line  43: Section 0.6   | 0.6 [1]
+  Line 106: Section 9     | 9 9 9
+  Line  65: Section 22    | 22 |28|
+  Line  21: Section 37    | 37 [32] 58
+  Line  75: Section 68.6  | 68.6 [64]
+  Line  73: Section 95    | 95 [85]
+
+p_0269.md:
+----------------------------------------------------------------------
+  Line  53: Section 2.394 | 2.394 (6.8°)
+  Line  52: Section 11.030 | 11.030 (31.3'')
+  Line  51: Section 19.438 | 19.438 (55.2.) 2,346 (6.7'')
+  Line 115: Section 24    | 24 (5%)
+  Line 131: Section 33    | 33 (14'')
+  Line 102: Section 43    | 43 (42'')
+  Line 126: Section 51    | 51 (18)
+  Line  90: Section 53    | 53 (46.5°)
+  Line 103: Section 60    | 60 (58'')
+  Line  87: Section 61    | 61 (53.5'')
+  Line 112: Section 61    | 61 (5%)
+  Line 118: Section 72    | 72 (6%)
+  Line 104: Section 90    | 90 (22''
+  Line 123: Section 114   | 114 (119)
+  Line 129: Section 140   | 140 (36.5º)
+  Line  96: Section 141   | 141 (33)
+
+p_0270.md:
+----------------------------------------------------------------------
+  Line 102: Section 0.7   | 0.7 (13''..
+  Line  67: Section 24    | 24 (35)
+  Line  92: Section 24    | 24 (46)
+  Line 110: Section 27.7  | 27.7 (22%)
+  Line  86: Section 40    | 40 (95%)
+  Line  97: Section 41    | 41 (34%)
+  Line  76: Section 44    | 44 (65%)
+  Line  70: Section 64    | 64 (63%)
+  Line  88: Section 79.8  | 79.8 (66º)
+  Line  80: Section 85.8  | 85.8 (480)
+  Line 101: Section 90    | 90 (99%)
+  Line  73: Section 94.8  | 94.8 (52%)
+
+p_0271.md:
+----------------------------------------------------------------------
+  Line  24: Section 68    | 68 (57%) 8.8(45%)
+  Line  22: Section 126.8 | 126.8 (42%)
+
+p_0272.md:
+----------------------------------------------------------------------
+  Line  23: Section 28    | 28 1401
+
+p_0280.md:
+----------------------------------------------------------------------
+  Line  35: Section 120   | 120 (16 May 1972, pp. 22-23.
+
+p_0282.md:
+----------------------------------------------------------------------
+  Line  66: Section 26.3  | 26.3 (July 1973), pp. 176–181. (Chinese version, ``Chia-ku-w
+
+p_0304.md:
+----------------------------------------------------------------------
+  Line  13: Section 56    | 56 ¥
+
+p_0306.md:
+----------------------------------------------------------------------
+  Line  18: Section 2.28  | 2.28 31
+
+p_0308.md:
+----------------------------------------------------------------------
+  Line  46: Section 96    | 96 97
+  Line 128: Section 122   | 122 123
+  Line 149: Section 126   | 126 127
+  Line 186: Section 130   | 130 131
+  Line 257: Section 151   | 151 152
+  Line  62: Section 197.15 | 197.15 -- 19
+
+p_0312.md:
+----------------------------------------------------------------------
+  Line  53: Section 99    | 99 n. 27; risk of confusion, 103 n. 39:
+  Line  41: Section 104   | 104 n. 44
+  Line  84: Section 128   | 128 n. 173
+  Line  65: Section 132   | 132 n. 186; eighth and ninth. detailed
+  Line 125: Section 140   | 140 n. 27; material for forgers. 140-141;
+  Line 127: Section 166   | 166 n. 3
+
+p_0313.md:
+----------------------------------------------------------------------
+  Line 206: Section 43    | 43 n. 79
+  Line 118: Section 51    | 51 n. 124; positive and negative, 43, 67
+  Line  94: Section 63    | 63 n. 32
+  Line 168: Section 80    | 80 n. 89; size of graph, 105 n. 50
+  Line 132: Section 102   | 102 n. 39; writing style, 48 n. 104, n.
+  Line 142: Section 124   | 124 n. 147; scapulimantic techniques,
+  Line 182: Section 132   | 132 n. 187
+  Line  19: Section 134   | 134 n. 5; transcriptions and translations,
+  Line  20: Section 134   | 134 n. 5; use as historical sources, 134
+  Line   7: Section 143   | 143 n. 35
+  Line 203: Section 150   | 150 n. 66; rejoinings supplemented by
+
+p_0314.md:
+----------------------------------------------------------------------
+  Line 164: Section 36    | 36 n. 35, 37, 45 n. 87; corrected, 37:
+  Line 171: Section 37    | 37 usefulness to modern scholar, 37;
+  Line 132: Section 78    | 78 n. 86
+  Line 159: Section 86    | 86 n. 117, 87 n. 119; on plastron set, not
+  Line  77: Section 102   | 102 n. 39, 121 n. 136
+  Line  26: Section 114   | 114 n. 98
+  Line 168: Section 120   | 120 direction of, 71: erased. 37, 45
+  Line  55: Section 150   | 150 n. 66; duplicates previously published materials, 57 n. 
+  Line  96: Section 151   | 151 n. 74; collection of rejoined fragments, 150 n. 66; revi
+  Line 170: Section 151   | 151 orient fragment, 71: placement.
+
+p_0315.md:
+----------------------------------------------------------------------
+  Line  13: Section 22    | 22 n. 93, 53; and relative date, 53 n. 135
+  Line  56: Section 46    | 46 n. 90; with detailed verification,
+  Line 161: Section 46    | 46 n. go; on plastron set, 88-89; time
+  Line 160: Section 48    | 48 n. 102; microscopic study of strokes,
+  Line  34: Section 65    | 65 n. 38; graph for, 149 n. 62
+  Line   7: Section 81    | 81 n. 95
+  Line  24: Section 93    | 93 n. 3
+  Line 102: Section 103   | 103 n. 41 changes in personnel, 122
+  Line 157: Section 107   | 107 n. 59 small numbers of, 49
+  Line 151: Section 114   | 114 n. 98; for RFG diviners, 111 n. 83;
+  Line  37: Section 143   | 143 n. 35; capture of, 44; graph, 110
+  Line 130: Section 147   | 147 n. 55; method of indicating, xv;
+  Line 139: Section 165   | 165 n. 1
+
+p_0316.md:
+----------------------------------------------------------------------
+  Line 189: Section 21    | 21 n. 84; on carapaces, 20: as dating
+  Line 141: Section 48    | 48 n. 102: fake and genuine juxtaposed,
+  Line 132: Section 52    | 52 n. 125, 72; as shorthand notations,
+  Line 172: Section 102   | 102 n. 39, 121 n. 136; writing style, 48
+  Line  96: Section 104   | 104 n. 44; title nonspecific, 107 n. 62
+  Line 100: Section 107   | 107 n. 62
+  Line  28: Section 110   | 110 n. 76. See also wind
+  Line  72: Section 120   | 120 n. 132
+  Line 158: Section 124   | 124 n. 150: burns both shoulders in
+  Line 197: Section 124   | 124 n. 147; Hsü Chin-hsiung's eight
+  Line 185: Section 125   | 125 n. 154; non-Shang traditions, 126
+  Line 194: Section 126   | 126 n. 162; as dating criterion. 123–126;
+  Line  12: Section 140   | 140 n. 27; carved beside genuine, useful
+  Line  15: Section 141   | 141 n. 30: crude, more easy to detect.
+  Line 142: Section 146   | 146 n. 48: scholarship on, 146 n. 48;
+  Line 102: Section 147   | 147 n. 32; rubbings duplicated in Hsü-
+  Line  51: Section 150   | 150 n. 65; need to understand mor
+  Line 176: Section 150   | 150 n. 66
+  Line 137: Section 151   | 151 transcriptions must preserve structure. 149 upside down.
+  Line  79: Section 168   | 168 n. 15: in marginal notations. 17
+  Line 147: Section 181   | 181 n. 33
+
+p_0317.md:
+----------------------------------------------------------------------
+  Line  31: Section 25    | 25 n. 117, 26 n. 120
+  Line 142: Section 32    | 32 n. 19; few inscriptions in Jimbun, 138
+  Line  55: Section 81    | 81 n. 95, 82, 83, 85, 121 n. 135, n. 137
+  Line  49: Section 83    | 83 n. 102; reading uncertain, 83 n. 102
+  Line  52: Section 97    | 97 n. 23
+  Line  75: Section 98    | 98 n. 24
+  Line  71: Section 99    | 99 n. 27 called Tsu Yi in period V, 99
+  Line  79: Section 115   | 115 n. 102: intrudes in orderly sequence,
+  Line 138: Section 121   | 121 1. 137
+  Line  12: Section 124   | 124 n. 150; density, 20-21, 27 (see also
+  Line  20: Section 124   | 124 n. 152; double symmetrical arrangement on plastron, fig.
+  Line   6: Section 125   | 125 n. 155 published data, 126 n. 160;
+  Line   9: Section 125   | 125 n. 153
+  Line 120: Section 147   | 147 n. 55
+  Line 130: Section 166   | 166 n. 7; quality of drawings, 147 n. 55
+  Line  97: Section 181   | 181 n. 28
+  Line  99: Section 181   | 181 n. 28
+
+p_0318.md:
+----------------------------------------------------------------------
+  Line 111: Section 95    | 95 n. 13
+  Line 188: Section 124   | 124 n. 147; scapulimantic finds, 126
+  Line  92: Section 127   | 127 n. 168
+  Line 165: Section 130   | 130 n. 182
+  Line 204: Section 130   | 130 n. 182; 13 ping (north), contained
+  Line 114: Section 154   | 154 n. 87
+  Line 138: Section 172   | 172 n. 10; and names of Shang kings,
+
+p_0319.md:
+----------------------------------------------------------------------
+  Line  19: Section 56    | 56 n. 156, 77, 80, 83 n. 99: abbreviated
+  Line  16: Section 85    | 85 n. 114
+  Line 143: Section 94    | 94 n. 11 significance of 1973 finds,
+  Line  95: Section 102   | 102 n. 37; inherited, 102 n. 37
+  Line   7: Section 110   | 110 n. 75
+  Line  82: Section 115   | 115 n. 98; numbers lacking, 84 n. 109:
+  Line 106: Section 120   | 120 n. 132; occurrence by period, 120
+  Line 166: Section 124   | 124 n. 150, 139; recorded in clear, 154;
+  Line  53: Section 126   | 126 n. 60; hunting inscriptions on bone,
+  Line 144: Section 130   | 130 n. 179; Tung's hypothesis, 32 n. 18
+  Line 165: Section 138   | 138 n. 14, 165; pre-Wu Ting, 97 n. 24,
+  Line 160: Section 140   | 140 n. 25; as guide to world view, 135;
+  Line  48: Section 143   | 143 n. 38: and fakes, 143 n. 35; oracle
+  Line  62: Section 144   | 144 n. 40
+  Line  91: Section 146   | 146 n. 48
+  Line 162: Section 152   | 152 immediate contact with past, 152;
+  Line  43: Section 176   | 176 n. 27; reliability of, 176 n. 27
+
+p_0320.md:
+----------------------------------------------------------------------
+  Line 108: Section 67    | 67 n. 47, 149 n. 62
+  Line  33: Section 93    | 93 n. 6: distinguished by burn marks,
+  Line  29: Section 107   | 107 n. 61 writing style of IIIa and IIIb
+  Line  73: Section 107   | 107 n. 62
+  Line  86: Section 108   | 108 n. 66
+  Line 138: Section 122   | 122 on plastron set, time needed 89;
+  Line  34: Section 128   | 128 n. 170; distinguished by physical
+  Line  52: Section 128   | 128 n. 170; hollow patterns, 127 n. 167;
+  Line 174: Section 129   | 129 n. 172; contained more than fifty
+  Line 155: Section 132   | 132 n. 187
+  Line  42: Section 133   | 133 n. 188; period III + IV inscriptions,
+  Line 169: Section 166   | 166 n. 5
+  Line 195: Section 166   | 166 n. 5; contained period I and RFG
+  Line 188: Section 177   | 177 contained more than fifty fragments, 166 n. 5.
+  Line  20: Section 179   | 179 n. 8
+  Line  72: Section 180   | 180 n. 25, n. 27: dated calligraphically,
+  Line  66: Section 181   | 181 n. 27; dated calligraphically, 107 n.
+
+p_0321.md:
+----------------------------------------------------------------------
+  Line  26: Section 22    | 22 n. 97; Neolithic and Shang finds. 8 n.
+  Line  59: Section 76    | 76 n. 83, 81 n. 94; roughness of inner
+  Line 193: Section 94    | 94 n. 1 year-number identified by
+  Line 126: Section 120   | 120 n. 132
+  Line 189: Section 132   | 132 n. 186; relation to strata, 131 n. 183;
+  Line  80: Section 135   | 135 n. 6
+
+p_0322.md:
+----------------------------------------------------------------------
+  Line 192: Section 38    | 38 n. 47; extra-small, 38: extra-small,
+  Line 199: Section 66    | 66 n. 44; periodicity of divinations about,
+  Line  67: Section 91    | 91 n. 2, 129 n. 175; diviners, in pit E16,
+  Line  74: Section 110   | 110 n. 80; dated to period 1, 32 n. 18, 129
+  Line  52: Section 115   | 115 n. 102: schedule automatic by period
+  Line  68: Section 129   | 129 n. 175; diviners, writing style identical, 48 n. 105; en
+  Line  39: Section 142   | 142 n. 34; on plastron, defined, 14 n. 55:
+  Line  57: Section 168   | 168 169: used to calculate reign lengths,
+
+p_0323.md:
+----------------------------------------------------------------------
+  Line  94: Section 46    | 46 n. 90, 105 n. 51; varies for one diviner,
+  Line 145: Section 87    | 87 n. 119; pairs. positive and negative,
+  Line 109: Section 102   | 102 n. 39; Ch'u, 102 n. 39; found common, 102 n. 39; Ho, 102
+  Line  93: Section 105   | 105 n. 51 related to space available,
+  Line  49: Section 115   | 115 n. 98; occurrences listed by period,
+  Line  50: Section 115   | 115 n. 98
+  Line  52: Section 115   | 115 n. 98
+  Line 183: Section 130   | 130 n. 182
+  Line 107: Section 147   | 147 n. 52
+
+p_0324.md:
+----------------------------------------------------------------------
+  Line  20: Section 21    | 21 n. 90; number of hollows, 21 n. 90;
+  Line  65: Section 29    | 29 n. 7; may not be cheng, 29 n. 7;
+  Line  83: Section 80    | 80 n. 89; sacrifice, 79, 82, 85, 85 n. 114
+  Line 172: Section 99    | 99 n. 27; entertained by king, fig. 18:
+  Line 174: Section 99    | 99 n. 27; Shang distinguished from
+  Line  29: Section 100   | 100 n. 28
+  Line 201: Section 110   | 110 n. 76; estimate of fragments found,
+  Line 128: Section 114   | 114 n. 98
+  Line 105: Section 126   | 126 n. 161: defined, 91 n. 1
+  Line  19: Section 157   | 157 largest plastron found, I n. 36.
+  Line 202: Section 165   | 165 n. 2; five periods (see five periods);
+
+p_0325.md:
+----------------------------------------------------------------------
+  Line 159: Section 49    | 49 n. 106
+  Line  97: Section 66    | 66 n. 44, 78, 78 n. 86, 84
+  Line 196: Section 100   | 100 n. 31; lacking for campaign inscriptions cited, 84 n. 10
+  Line 120: Section 143   | 143 n. 35
+  Line  10: Section 151   | 151 rejoinings in Chui-hsin, 151 n. 74:
+  Line  21: Section 158   | 158 see also scute seams); labor involved.
+
+p_0326.md:
+----------------------------------------------------------------------
+  Line  30: Section 58    | 58 n. 5, 73 n. 72; mainly shell fragments,
+  Line  60: Section 104   | 104 n. 44 divinations about. discontinued. 177
+  Line  78: Section 118   | 118 n. 123
+  Line   8: Section 132   | 132 n. 187
+  Line  27: Section 158   | 158 159 rejoinings not all made, 151
+
+
+======================================================================
+SUMMARY
+======================================================================
+Total files affected: 48
+Total sections needing headers: 287

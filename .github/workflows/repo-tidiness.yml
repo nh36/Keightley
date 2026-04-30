@@ -1,0 +1,28 @@
+name: Repository Tidiness Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  repo-tidiness:
+    runs-on: ubuntu-latest
+    name: Check repository structure
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Run repository tidiness tests
+        run: python3 tests/regression_repo_structure.py
+
+      - name: Report results
+        if: always()
+        run: echo "Repository tidiness check completed"

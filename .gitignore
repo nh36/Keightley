@@ -1,5 +1,9 @@
-# Build artefacts
-build/
+# Build artifacts
+build/logs/
+build/ocr/
+build/data/
+build/tex/
+# build/output/ is gitignored below with *.pdf
 proofs/page_proofs/*.png
 proofs/page_proofs/*.jpg
 

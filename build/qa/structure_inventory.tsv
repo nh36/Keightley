@@ -1,0 +1,26 @@
+unit	kind	scan_first	scan_last	headings	footnotes_anchored	footnotes_unanchored
+frontmatter/half-title	verbatim	1	2	0		
+frontmatter/copyright	verbatim	4	4	0		
+frontmatter/dedication	verbatim	5	5	0		
+frontmatter/epigraph	verbatim	6	6	0		
+frontmatter/contents	stub	7	9	0		
+frontmatter/list-of-figures-tables	stub	10	11	0		
+frontmatter/abbreviations	verbatim	12	12	0		
+frontmatter/preface	named	13	17	0	8	0
+frontmatter/preamble	named	18	19	0	1	0
+chapter/1	chapter	20	44	4	103	0
+chapter/2	chapter	45	73	7	133	0
+chapter/3	chapter	74	107	8	114	0
+chapter/4	chapter	108	150	5	167	0
+chapter/5	chapter	151	174	4	76	0
+appendix/1	appendix	175	177	0		
+appendix/2	appendix	178	181	0	14	0
+appendix/3	appendix	182	187	0	9	0
+appendix/4	appendix	188	193	0	13	0
+appendix/5	appendix	194	199	0	8	0
+plates/figures	stub	200	229	0		
+plates/tables	stub	230	274	0		
+backmatter/bibliography-a	stub	275	277	0		
+backmatter/bibliography-b	stub	278	302	0		
+backmatter/finding-list	stub	303	311	0		
+backmatter/index	stub	312	326	0		

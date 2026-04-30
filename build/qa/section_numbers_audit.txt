@@ -1,0 +1,1043 @@
+Embedded Section Numbers Audit
+==================================================
+
+Total unique section numbers: 278
+
+
+0:
+  p_0241.md: 0 (0%)
+
+0.2:
+  p_0239.md: 0.2 I
+
+0.6:
+  p_0268.md: 0.6 [1]
+
+0.7:
+  p_0270.md: 0.7 (13''..
+
+0.75:
+  p_0239.md: 0.75 -1.36
+
+1:
+  p_0246.md: 1 +
+
+2.28:
+  p_0306.md: 2.28 31
+
+2.394:
+  p_0269.md: 2.394 (6.8°)
+
+3:
+  p_0258.md: 3 4 5 6 7 8 9 IO I I 12 13 14
+
+6:
+  p_0235.md: 6 6 6 6 6 6 8
+  p_0235.md: 6 6 6 6 6 6 666666666
+  p_0236.md: 6 6 6 6 6 6 6 6
+  p_0236.md: 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6
+  p_0236.md: 6 5 0 6 6 6 6660
+  p_0237.md: 6 6 6 6 6 3
+  p_0239.md: 6 6 6 6 6 6 6 6 6 6 6 6 6666666666666666666666 Û Û ÖÖ m. n. Ö
+  p_0239.md: 6 6 6 6 6 6 6 Ó Û ÛÔÓ Û Ö n. 0006066666666666666668000386038628 ð
+
+9:
+  p_0231.md: 9 1
+  p_0268.md: 9 9 9
+
+11:
+  p_0258.md: 11 mm.
+
+11.030:
+  p_0269.md: 11.030 (31.3'')
+
+12:
+  p_0258.md: 12 mm.
+
+13:
+  p_0258.md: 13 mm.
+
+13.0.17714:
+  p_0149.md: 13.0.17714 came from YH127; according to Shih
+
+13.0.17756:
+  p_0149.md: 13.0.17756 should also be included. At one point
+
+19.438:
+  p_0269.md: 19.438 (55.2.) 2,346 (6.7'')
+
+21:
+  p_0192.md: 21 years; Later Han, at 16 years; T'ang, at 12
+  p_0264.md: 21 岳 <!-- CJK -->
+  p_0316.md: 21 n. 84; on carapaces, 20: as dating
+  p_0324.md: 21 n. 90; number of hollows, 21 n. 90;
+
+22:
+  p_0011.md: 22 Calligraphy: period II
+  p_0264.md: 22 逐 <!-- CJK -->
+  p_0268.md: 22 |28|
+  p_0315.md: 22 n. 93, 53; and relative date, 53 n. 135
+  p_0321.md: 22 n. 97; Neolithic and Shang finds. 8 n.
+
+23:
+  p_0011.md: 23 Calligraphy: period III
+  p_0264.md: 23 犬 <!-- CJK -->
+
+24:
+  p_0010.md: 24 Yin-hsü 16 (D)
+  p_0011.md: 24 Calligraphy: period V
+  p_0231.md: 24 X
+  p_0264.md: 24 虎 <!-- CJK -->
+  p_0269.md: 24 (5%)
+  p_0270.md: 24 (35)
+  p_0270.md: 24 (46)
+
+25:
+  p_0010.md: 25 Rules of thumb for dating (S289.4)
+  p_0011.md: 25 The evolution of Shang calligraphy in periods I to V
+  p_0042.md: 25 percent of the hollows were used is hard to explain, especially since the fro
+  p_0317.md: 25 n. 117, 26 n. 120
+
+26:
+  p_0010.md: 26 Period III writing style (Chia-t'u 42)
+  p_0011.md: 26 Epigraphic evolution: selected graphs
+
+26.3:
+  p_0282.md: 26.3 (July 1973), pp. 176–181. (Chinese version, ``Chia-ku-wen p'o-p'ien ti
+
+27:
+  p_0010.md: 27 Period III + IV writing style (Jimbun shakubun, plate 25)
+  p_0011.md: 27 Epigraphic evolution: total number of variants by period
+
+27.7:
+  p_0270.md: 27.7 (22%)
+
+28:
+  p_0011.md: 28 Crack notations: distribution by period
+  p_0232.md: 28 B 2
+  p_0272.md: 28 1401
+
+29:
+  p_0011.md: 29 Divination topics: frequency in periods I to V
+  p_0232.md: 29 8 A
+  p_0324.md: 29 n. 7; may not be cheng, 29 n. 7;
+
+30:
+  p_0010.md: 30 Exploded and imaginative reconstructions (Chui-hsin 312; 508; 545)
+  p_0011.md: 30 Scapula hollow shapes by period
+  p_0232.md: 30 8 +
+
+31:
+  p_0010.md: 31 Scute seams measured
+  p_0232.md: 31 A σ
+  p_0264.md: 31 戊 <!-- CJK -->
+
+32:
+  p_0010.md: 32 Plastron identification: principal component analysis (1)
+  p_0317.md: 32 n. 19; few inscriptions in Jimbun, 138
+
+33:
+  p_0010.md: 33 Plastron identification: principal component analysis (2)
+  p_0011.md: 33 Number of fragments per scapula and plastron in five major collections
+  p_0265.md: 33 癸 <!-- CJK -->
+  p_0269.md: 33 (14'')
+
+34:
+  p_0011.md: 34 Scapulas and plastrons: distribution in three major collections (periods I to
+  p_0265.md: 34 f
+
+35:
+  p_0011.md: 35 Scapulas and plastrons: distribution by period in Chia-pien and Jimbun combin
+  p_0265.md: 35 寅 <!-- CJK -->
+
+36:
+  p_0011.md: 36 Number of oracle bones recovered compared with number reported in marginal no
+  p_0314.md: 36 n. 35, 37, 45 n. 87; corrected, 37:
+
+37:
+  p_0011.md: 37 Chronologies proposed for the P'an Keng-Ti Hsin era
+  p_0265.md: 37 E
+  p_0268.md: 37 [32] 58
+  p_0314.md: 37 usefulness to modern scholar, 37;
+
+38:
+  p_0011.md: 38 Revised short chronology for the historical period
+  p_0149.md: 38 at Cambridge University); see Tung (1945),
+  p_0265.md: 38 午 <!-- CJK -->
+  p_0322.md: 38 n. 47; extra-small, 38: extra-small,
+
+39:
+  p_0265.md: 39 未 <!-- CJK -->
+
+40:
+  p_0270.md: 40 (95%)
+
+41:
+  p_0270.md: 41 (34%)
+
+42:
+  p_0265.md: 42 戍 <!-- CJK -->
+
+43:
+  p_0269.md: 43 (42'')
+  p_0313.md: 43 n. 79
+
+44:
+  p_0270.md: 44 (65%)
+
+45:
+  p_0008.md: 45 46 47 5 50 53 53 54 55
+
+46:
+  p_0315.md: 46 n. 90; with detailed verification,
+  p_0315.md: 46 n. go; on plastron set, 88-89; time
+  p_0323.md: 46 n. 90, 105 n. 51; varies for one diviner,
+
+48:
+  p_0315.md: 48 n. 102; microscopic study of strokes,
+  p_0316.md: 48 n. 102: fake and genuine juxtaposed,
+
+49:
+  p_0325.md: 49 n. 106
+
+51:
+  p_0269.md: 51 (18)
+  p_0313.md: 51 n. 124; positive and negative, 43, 67
+
+52:
+  p_0316.md: 52 n. 125, 72; as shorthand notations,
+
+53:
+  p_0236.md: 53 54
+  p_0269.md: 53 (46.5°)
+
+55:
+  p_0191.md: 55 [S581.2] offer good evidence that this was so;
+
+56:
+  p_0304.md: 56 ¥
+  p_0319.md: 56 n. 156, 77, 80, 83 n. 99: abbreviated
+
+57:
+  p_0008.md: 57 57
+
+58:
+  p_0326.md: 58 n. 5, 73 n. 72; mainly shell fragments,
+
+59:
+  p_0008.md: 59 59 083457
+
+60:
+  p_0269.md: 60 (58'')
+
+61:
+  p_0201.md: 61 percent. Reprinted, by permission, from Bone, p. 76.
+  p_0269.md: 61 (53.5'')
+  p_0269.md: 61 (5%)
+
+63:
+  p_0313.md: 63 n. 32
+
+64:
+  p_0270.md: 64 (63%)
+
+65:
+  p_0315.md: 65 n. 38; graph for, 149 n. 62
+
+66:
+  p_0322.md: 66 n. 44; periodicity of divinations about,
+  p_0325.md: 66 n. 44, 78, 78 n. 86, 84
+
+67:
+  p_0320.md: 67 n. 47, 149 n. 62
+
+68:
+  p_0271.md: 68 (57%) 8.8(45%)
+
+68.6:
+  p_0268.md: 68.6 [64]
+
+72:
+  p_0269.md: 72 (6%)
+
+76:
+  p_0321.md: 76 n. 83, 81 n. 94; roughness of inner
+
+78:
+  p_0314.md: 78 n. 86
+
+79:
+  p_0246.md: 79 +1武 <!-- CJK -->
+
+79.8:
+  p_0270.md: 79.8 (66º)
+
+80:
+  p_0313.md: 80 n. 89; size of graph, 105 n. 50
+  p_0324.md: 80 n. 89; sacrifice, 79, 82, 85, 85 n. 114
+
+81:
+  p_0315.md: 81 n. 95
+  p_0317.md: 81 n. 95, 82, 83, 85, 121 n. 135, n. 137
+
+83:
+  p_0317.md: 83 n. 102; reading uncertain, 83 n. 102
+
+84:
+  p_0241.md: 84 (87.5%)
+
+85:
+  p_0319.md: 85 n. 114
+
+85.8:
+  p_0270.md: 85.8 (480)
+
+86:
+  p_0314.md: 86 n. 117, 87 n. 119; on plastron set, not
+
+87:
+  p_0323.md: 87 n. 119; pairs. positive and negative,
+
+90:
+  p_0269.md: 90 (22''
+  p_0270.md: 90 (99%)
+
+91:
+  p_0322.md: 91 n. 2, 129 n. 175; diviners, in pit E16,
+
+93:
+  p_0315.md: 93 n. 3
+  p_0320.md: 93 n. 6: distinguished by burn marks,
+
+94:
+  p_0319.md: 94 n. 11 significance of 1973 finds,
+  p_0321.md: 94 n. 1 year-number identified by
+
+94.8:
+  p_0270.md: 94.8 (52%)
+
+95:
+  p_0268.md: 95 [85]
+  p_0318.md: 95 n. 13
+
+96:
+  p_0308.md: 96 97
+
+97:
+  p_0317.md: 97 n. 23
+
+98:
+  p_0317.md: 98 n. 24
+
+99:
+  p_0312.md: 99 n. 27; risk of confusion, 103 n. 39:
+  p_0317.md: 99 n. 27 called Tsu Yi in period V, 99
+  p_0324.md: 99 n. 27; entertained by king, fig. 18:
+  p_0324.md: 99 n. 27; Shang distinguished from
+
+100:
+  p_0324.md: 100 n. 28
+  p_0325.md: 100 n. 31; lacking for campaign inscriptions cited, 84 n. 109
+
+102:
+  p_0313.md: 102 n. 39; writing style, 48 n. 104, n.
+  p_0314.md: 102 n. 39, 121 n. 136
+  p_0316.md: 102 n. 39, 121 n. 136; writing style, 48
+  p_0319.md: 102 n. 37; inherited, 102 n. 37
+  p_0323.md: 102 n. 39; Ch'u, 102 n. 39; found common, 102 n. 39; Ho, 102 n. 39; K'ou, 102
+
+103:
+  p_0315.md: 103 n. 41 changes in personnel, 122
+
+104:
+  p_0185.md: 104 bones (S152.1). In these cases, therefore, we
+  p_0312.md: 104 n. 44
+  p_0316.md: 104 n. 44; title nonspecific, 107 n. 62
+  p_0326.md: 104 n. 44 divinations about. discontinued. 177
+
+105:
+  p_0323.md: 105 n. 51 related to space available,
+
+107:
+  p_0315.md: 107 n. 59 small numbers of, 49
+  p_0316.md: 107 n. 62
+  p_0320.md: 107 n. 61 writing style of IIIa and IIIb
+  p_0320.md: 107 n. 62
+
+108:
+  p_0320.md: 108 n. 66
+
+110:
+  p_0316.md: 110 n. 76. See also wind
+  p_0319.md: 110 n. 75
+  p_0322.md: 110 n. 80; dated to period 1, 32 n. 18, 129
+  p_0324.md: 110 n. 76; estimate of fragments found,
+
+114:
+  p_0269.md: 114 (119)
+  p_0314.md: 114 n. 98
+  p_0315.md: 114 n. 98; for RFG diviners, 111 n. 83;
+  p_0324.md: 114 n. 98
+
+115:
+  p_0317.md: 115 n. 102: intrudes in orderly sequence,
+  p_0319.md: 115 n. 98; numbers lacking, 84 n. 109:
+  p_0322.md: 115 n. 102: schedule automatic by period
+  p_0323.md: 115 n. 98; occurrences listed by period,
+  p_0323.md: 115 n. 98
+  p_0323.md: 115 n. 98
+
+116:
+  p_0241.md: 116 (63%)
+
+118:
+  p_0326.md: 118 n. 123
+
+120:
+  p_0280.md: 120 (16 May 1972, pp. 22-23.
+  p_0314.md: 120 direction of, 71: erased. 37, 45
+  p_0316.md: 120 n. 132
+  p_0319.md: 120 n. 132; occurrence by period, 120
+  p_0321.md: 120 n. 132
+
+121:
+  p_0317.md: 121 1. 137
+
+122:
+  p_0308.md: 122 123
+  p_0320.md: 122 on plastron set, time needed 89;
+
+124:
+  p_0313.md: 124 n. 147; scapulimantic techniques,
+  p_0316.md: 124 n. 150: burns both shoulders in
+  p_0316.md: 124 n. 147; Hsü Chin-hsiung's eight
+  p_0317.md: 124 n. 150; density, 20-21, 27 (see also
+  p_0317.md: 124 n. 152; double symmetrical arrangement on plastron, fig. 4; in entoplastron.
+  p_0318.md: 124 n. 147; scapulimantic finds, 126
+  p_0319.md: 124 n. 150, 139; recorded in clear, 154;
+
+125:
+  p_0316.md: 125 n. 154; non-Shang traditions, 126
+  p_0317.md: 125 n. 155 published data, 126 n. 160;
+  p_0317.md: 125 n. 153
+
+126:
+  p_0308.md: 126 127
+  p_0316.md: 126 n. 162; as dating criterion. 123–126;
+  p_0319.md: 126 n. 60; hunting inscriptions on bone,
+  p_0324.md: 126 n. 161: defined, 91 n. 1
+
+126.8:
+  p_0271.md: 126.8 (42%)
+
+127:
+  p_0318.md: 127 n. 168
+
+128:
+  p_0241.md: 128 (64%)
+  p_0312.md: 128 n. 173
+  p_0320.md: 128 n. 170; distinguished by physical
+  p_0320.md: 128 n. 170; hollow patterns, 127 n. 167;
+
+129:
+  p_0320.md: 129 n. 172; contained more than fifty
+  p_0322.md: 129 n. 175; diviners, writing style identical, 48 n. 105; engravers, 107 n. 59;
+
+130:
+  p_0308.md: 130 131
+  p_0318.md: 130 n. 182
+  p_0318.md: 130 n. 182; 13 ping (north), contained
+  p_0319.md: 130 n. 179; Tung's hypothesis, 32 n. 18
+  p_0323.md: 130 n. 182
+
+132:
+  p_0312.md: 132 n. 186; eighth and ninth. detailed
+  p_0313.md: 132 n. 187
+  p_0320.md: 132 n. 187
+  p_0321.md: 132 n. 186; relation to strata, 131 n. 183;
+  p_0326.md: 132 n. 187
+
+133:
+  p_0320.md: 133 n. 188; period III + IV inscriptions,
+
+134:
+  p_0313.md: 134 n. 5; transcriptions and translations,
+  p_0313.md: 134 n. 5; use as historical sources, 134
+
+135:
+  p_0321.md: 135 n. 6
+
+138:
+  p_0319.md: 138 n. 14, 165; pre-Wu Ting, 97 n. 24,
+
+140:
+  p_0269.md: 140 (36.5º)
+  p_0312.md: 140 n. 27; material for forgers. 140-141;
+  p_0316.md: 140 n. 27; carved beside genuine, useful
+  p_0319.md: 140 n. 25; as guide to world view, 135;
+
+141:
+  p_0269.md: 141 (33)
+  p_0316.md: 141 n. 30: crude, more easy to detect.
+
+142:
+  p_0322.md: 142 n. 34; on plastron, defined, 14 n. 55:
+
+143:
+  p_0313.md: 143 n. 35
+  p_0315.md: 143 n. 35; capture of, 44; graph, 110
+  p_0319.md: 143 n. 38: and fakes, 143 n. 35; oracle
+  p_0325.md: 143 n. 35
+
+144:
+  p_0319.md: 144 n. 40
+
+146:
+  p_0316.md: 146 n. 48: scholarship on, 146 n. 48;
+  p_0319.md: 146 n. 48
+
+147:
+  p_0315.md: 147 n. 55; method of indicating, xv;
+  p_0316.md: 147 n. 32; rubbings duplicated in Hsü-
+  p_0317.md: 147 n. 55
+  p_0323.md: 147 n. 52
+
+150:
+  p_0313.md: 150 n. 66; rejoinings supplemented by
+  p_0314.md: 150 n. 66; duplicates previously published materials, 57 n. +
+  p_0316.md: 150 n. 65; need to understand mor
+  p_0316.md: 150 n. 66
+
+151:
+  p_0308.md: 151 152
+  p_0314.md: 151 n. 74; collection of rejoined fragments, 150 n. 66; review of, 150 n. 66
+  p_0314.md: 151 orient fragment, 71: placement.
+  p_0316.md: 151 transcriptions must preserve structure. 149 upside down. 47 n. 98. 49
+  p_0325.md: 151 rejoinings in Chui-hsin, 151 n. 74:
+
+152:
+  p_0319.md: 152 immediate contact with past, 152;
+
+154:
+  p_0318.md: 154 n. 87
+
+154.3:
+  p_0062.md: 154.3 235.2 (fig. 11); (4) Ching-hua 2 (S401.4;
+
+157:
+  p_0324.md: 157 largest plastron found, I n. 36.
+
+158:
+  p_0325.md: 158 see also scute seams); labor involved.
+  p_0326.md: 158 159 rejoinings not all made, 151
+
+160:
+  p_0017.md: 160 B.C. for WKGM 1 (table 2, sample ZK-5) accords well with the date of 1200-11
+
+165:
+  p_0315.md: 165 n. 1
+  p_0324.md: 165 n. 2; five periods (see five periods);
+
+166:
+  p_0312.md: 166 n. 3
+  p_0317.md: 166 n. 7; quality of drawings, 147 n. 55
+  p_0320.md: 166 n. 5
+  p_0320.md: 166 n. 5; contained period I and RFG
+
+168:
+  p_0316.md: 168 n. 15: in marginal notations. 17
+  p_0322.md: 168 169: used to calculate reign lengths,
+
+170:
+  p_0110.md: 170 below.
+
+172:
+  p_0318.md: 172 n. 10; and names of Shang kings,
+
+176:
+  p_0319.md: 176 n. 27; reliability of, 176 n. 27
+
+177:
+  p_0320.md: 177 contained more than fifty fragments, 166 n. 5.
+
+179:
+  p_0320.md: 179 n. 8
+
+180:
+  p_0320.md: 180 n. 25, n. 27: dated calligraphically,
+
+181:
+  p_0316.md: 181 n. 33
+  p_0317.md: 181 n. 28
+  p_0317.md: 181 n. 28
+  p_0320.md: 181 n. 27; dated calligraphically, 107 n.
+
+197.15:
+  p_0308.md: 197.15 -- 19
+
+202:
+  p_0269.md: 202 (860)
+
+204:
+  p_0042.md: 204 hollows, of which 50 would have been used.
+
+209:
+  p_0320.md: 209 n. ao; distinguished from period III
+
+228:
+  p_0184.md: 228 plastrons (or, more accurately, plastron fragments) with that notation. Simi
+
+244:
+  p_0269.md: 244 (63.5'')
+
+247:
+  p_0068.md: 247 [fig. 12]; Yi-pien 3287 [S433.1]; 4130
+
+262:
+  p_0241.md: 262 (97%)
+
+290:
+  p_0269.md: 290 (67'')
+
+304:
+  p_0123.md: 304 (fig. 7).
+
+307:
+  p_0241.md: 307 (100%)
+
+323:
+  p_0269.md: 323 (780)
+
+328:
+  p_0256.md: 328 (D); Hsi-ts'un 1.2463; Kikkō
+
+336:
+  p_0269.md: 336 (97%)
+
+354:
+  p_0239.md: 354 355
+
+364:
+  p_0239.md: 364 365
+
+366:
+  p_0239.md: 366 367
+
+368:
+  p_0239.md: 368 369
+
+377:
+  p_0239.md: 377 378
+
+386:
+  p_0239.md: 386 387
+
+388:
+  p_0239.md: 388 389
+
+390:
+  p_0091.md: 390 (1965). Jao, therefore, was working with the
+
+411:
+  p_0239.md: 411 412
+
+423:
+  p_0239.md: 423 424
+
+432:
+  p_0121.md: 432 [D] [S52.3]), correspond to period IIb
+
+442:
+  p_0269.md: 442 (23'')
+
+453:
+  p_0269.md: 453 (95%)
+
+502:
+  p_0239.md: 502 503
+
+513:
+  p_0239.md: 513 514
+
+517:
+  p_0239.md: 517 518
+
+527:
+  p_0239.md: 527 528
+
+539:
+  p_0042.md: 539 (twenty-five [?] hollows, twenty-five burned);
+
+552:
+  p_0239.md: 552 553
+
+571:
+  p_0269.md: 571 (37.5%)
+
+578:
+  p_0239.md: 578 579
+
+581:
+  p_0239.md: 581 582
+
+584:
+  p_0228.md: 584 [D] B Ching-chin 5552, C Kikkō 1.9.12); Center: Chui-hsin 508 (A Nan-pei, ``
+
+585:
+  p_0239.md: 585 586
+
+589:
+  p_0241.md: 589 (96%)
+
+615:
+  p_0239.md: 615 616
+
+799:
+  p_0269.md: 799 (90.5'')
+
+895:
+  p_0269.md: 895 (89)
+
+928:
+  p_0269.md: 928 (48)
+
+948:
+  p_0269.md: 948 (62.5'')
+
+983:
+  p_0306.md: 983 = USB 8
+
+1004:
+  p_0241.md: 1004 (60%)
+
+1011:
+  p_0269.md: 1011 (52)
+
+1060:
+  p_0272.md: 1060 oracle bones¹
+
+1080:
+  p_0274.md: 1080 1051 or 1070 1041
+
+1084:
+  p_0272.md: 1084 oracle bones¹
+
+1094:
+  p_0272.md: 1094 Ku-pen chi-nien
+
+1100:
+  p_0274.md: 1100 1081 or 1090 1071
+
+1107:
+  p_0269.md: 1107 (95)
+
+1112:
+  p_0272.md: 1112 Tung-chien
+
+1114:
+  p_0269.md: 1114 (95)
+
+1115:
+  p_0274.md: 1115 1101 or 1105 1091
+
+1129:
+  p_0272.md: 1129 Ku-pen chi-nieni
+
+1130:
+  p_0274.md: 1130 1116 or 1120 1106
+
+1140:
+  p_0272.md: 1140 yi''
+
+1150:
+  p_0274.md: 1150 1131 or 1150 1121
+
+1170:
+  p_0274.md: 1170 1151
+
+1173:
+  p_0272.md: 1173 lang
+
+1174:
+  p_0272.md: 1174 Yü Tzu; k
+
+1175:
+  p_0272.md: 1175 (?)J
+
+1180:
+  p_0193.md: 1180 B.C. is problematic. It may be noted, incidentally, that the reign dates gi
+  p_0272.md: 1180 yi''
+  p_0274.md: 1180 1171
+
+1200:
+  p_0274.md: 1200 1181a
+
+1206:
+  p_0113.md: 1206 (D); 1316 (D); Nan-pei, ``Ming'' 352 (D)
+
+1208:
+  p_0269.md: 1208 (38''..)
+
+1209:
+  p_0272.md: 1209 Ku-pen chi-nien
+
+1223:
+  p_0272.md: 1223 shih Tung-
+
+1226:
+  p_0272.md: 1226 Huang-chi ching-
+
+1234:
+  p_0272.md: 1234 Chin-pen chi-nien
+
+1235:
+  p_0272.md: 1235 lan Huang-chi
+
+1238:
+  p_0272.md: 1238 Shang-shu, “Wu
+
+1241:
+  p_0272.md: 1241 ching-shih¸h
+
+1259:
+  p_0306.md: 1259 USS 262
+
+1273:
+  p_0272.md: 1273 Huang-chi
+
+1274:
+  p_0272.md: 1274 lan; Huang-chi
+
+1281:
+  p_0272.md: 1281 agree f
+
+1315:
+  p_0269.md: 1315 (79)
+
+1349:
+  p_0272.md: 1349 Chin-pen chi-nien
+
+1370:
+  p_0272.md: 1370 Tung-chien
+
+1371:
+  p_0272.md: 1371 agree'd
+
+1380:
+  p_0269.md: 1380 (36''..)
+
+1398:
+  p_0272.md: 1398 ``all books
+
+1453:
+  p_0166.md: 1453 1471 on ☑, see sec. 3.5.2) and conclusions
+
+1550:
+  p_0070.md: 1550 (D). Tung (1949a), p. 261, cites other
+
+1575:
+  p_0269.md: 1575 (49.5'')
+
+1645:
+  p_0269.md: 1645 (50.5'')
+
+1680:
+  p_0249.md: 1680 period IV [but see ch. 2, n. 18; ch. 1, nn. 62, 161]); 1681-1915 (period V)
+
+1895:
+  p_0281.md: 1895 tr.)
+
+1905:
+  p_0297.md: 1905 Synchronismes Chinois. Shanghai.
+
+1906:
+  p_0278.md: 1906 ``Scapulimantia.'' In Anthropological Papers in Honour of Franz Boas, edite
+
+1933:
+  p_0266.md: 1933 p. 415: S104-4-105.3: 159.3-161.1; 250.1-251.4; CHP, ch. 7, pp. 1a-1b. 11: 
+
+1935:
+  p_0296.md: 1935 Naskapi: The Savage Hunters of the Labrador Peninsula. Norman, Okla.
+
+1936:
+  p_0283.md: 1936 ``Scapulimancy.'' In Essays in Anthropology, Presented to A. L. Kroeber, ed
+  p_0297.md: 1936 Geography of the Soils of China. Nanking.
+  p_0298.md: 1936 ``An-yang Hou-chia-chuang ch'u-t'u chih chia-ku wen-tzu *ŒU±2
+  p_0301.md: 1936 ``New Finds of Fossil Bubalus in China.” Bulletin of the Geological Society
+
+1937:
+  p_0149.md: 1937 will ever be written. More rigorous archaeological techniques will presumab
+
+1940:
+  p_0279.md: 1940 Fifty Shang Inscriptions (Chia-ku wu-shih p'ien
+
+1945:
+  p_0266.md: 1945 - pt. 2. ch. 6, p. 4b; (1949a), pp. 275-276; (1965, pp. 99-100; Kaizuka (19
+
+1953:
+  p_0266.md: 1953 - PP. 70 71; Ch'en Meng-chia (1956), p. 159: 8507-3- 4: CWP, ch. 5, pp. 14a
+
+1954:
+  p_0300.md: 1954 ``Pa-yüeh yi-yu yüeh-shih fu-chia ti p'an-ho yü k’ao-cheng ti ching-kuo ^ÂƑ
+
+1956:
+  p_0281.md: 1956 ``Pu-kuci fu-chia-ti hsü-shu '' BIHP 28.1, pp. 229–272.
+  p_0290.md: 1956 Ch'eng-tzu-yai: The Black Pottery Culture Site at Lung-shan-chen in Li-ch'e
+  p_0294.md: 1956 Osteology of the Reptiles. Chicago.
+  p_0297.md: 1956 Chia-ku-wen so-chien shih-tsu chi ch'i chih-tu #£££ & Peking.
+  p_0298.md: 1956 ``Ch'un-ch'iu Chin pu-ku wen-tzu k'ao #Μ¶¤7*.” TLTC 13.9, pp.
+
+1957:
+  p_0291.md: 1957 ``P'ing Ch'en Meng-chia Yin-hsü pu-tz'u tsung-shu ERBE |#M.”
+
+1958:
+  p_0110.md: 1958 book, which he would now place in IVb.
+  p_0291.md: 1958 “Ti Yi shih-tai ti fei-wang pu-tz'u 乙時代的非 <!-- CJK -->E卜辭 <!-- CJK -->”KKHP
+  p_0295.md: 1958 Nihon zenshi 1: genshi || 1: Tokyo.
+  p_0298.md: 1958 ``Chia-ku shih-wu chih cheng-li FATWŻKI.” BIHP 29.2, pp. 909–922.
+
+1958.3:
+  p_0288.md: 1958.3 ``Cheng-chou K'e-la-wang-ts'un yi-chih fa-chüeh pao-kao E
+  p_0288.md: 1958.3 Yi-chiu-wu-wu-nien ch'iu An-yang Hsiao-t'un Yin-hsü ti fa-chüch -ɩ H. F.
+
+1959:
+  p_0266.md: 1959 pp. 60 65: Jimbun 2983, shakubun, p. 684, n. 2: Chang Tsung-tung (1970), p.
+  p_0287.md: 1959 Chin-wen-pien. Rev. ed. Peking.
+
+1960:
+  p_0281.md: 1960 ``Lun ch'eng-t'ao pu-tz'u.” Chung-yang yen-chiu-yüan li-shih ¸yü-yen
+  p_0287.md: 1960 ``Tei tei yōrei no kentō Kōkotsugaku 8, pp. 19-32.
+  p_0293.md: 1960 Lugbara Religion: Ritual and Authority Among an East African People. London
+  p_0295.md: 1960 ``Ti Yi Ti Hsin chih tsai-wei nien-shu #Z**¿±³.” Kuo-li chung-yang yen-chiu
+
+1961:
+  p_0299.md: 1961 Inkyo Tokyo.
+
+1962:
+  p_0287.md: 1962 ``Indai ni okeru sosen saishi to teijin shūdan-In ōchō no kōzō, sono ichi―t
+  p_0298.md: 1962 ``Yin-hsü wen-tzu yi-pien mo-hsieh-pen shih-li ssu hsü E£FZKAS★
+  p_0300.md: 1962 ``Kuan-yü Wen Wu Ting shih-tai yi-p'ien fu-chia ti liang-chung chui-ho
+  p_0301.md: 1962 ``Chiang-su P'ei-hsien Liu-lin hsin-shih-ch'i shih-tai yi-chih ti-yi-tz'u f
+
+1963:
+  p_0278.md: 1963 ``[Book Reviews of] Cheng Te-k'un, Prehistoric China; Cheng Te-k'un, Shang
+  p_0291.md: 1963 “Chi Yi, Ch'iang, Na-hsi tsu ti yang ku-pu’记彝 <!-- CJK -->,羌 <!-- CJK -->,納
+  p_0297.md: 1963 ``Curiosités diplomatiques et protocolaires du Vietnam d'autrefois.'' Bulle
+
+1964:
+  p_0280.md: 1964 ``Some Dualistic Phenomena in Shang Society.'' Journal of Asian Studies 24.
+  p_0286.md: 1964 ``Ts'ung chia-wen, chin-wen liang-tz'u ti ying-yung k'ao-ch'a Han-yü liang-
+  p_0294.md: 1964 Ancient Mesopotamia: Portrait of a Dead Civilization. Chicago.
+  p_0298.md: 1964 Fifty Years of Studies in Oracle Inscriptions. Tokyo.
+  p_0300.md: 1964 ``Understanding a Primitive Society.'' American Philosophical Quarterly 1.4
+
+1964.9:
+  p_0288.md: 1964.9 ``Ho-nan Min-ch'ih Lu-ssu Shang-tai yi-chih shih-chüch chien-pao
+
+1965:
+  p_0278.md: 1965 ``Chou China: A Review of the Third Volume of Cheng Te-k'un's Archaeology
+  p_0283.md: 1965 Chung-kuo k'e-hsüch-yüan k'ao-ku yen-chiu-so. Chia-ku wen-pien
+  p_0283.md: 1965 ``Pa Li Yen-chai hsien-sheng chui-ho ti liang pan 'yung hou t'un' niu-ku pu
+
+1966:
+  p_0289.md: 1966 ``Secular Variation of Atmospheric Radiocarbon Concentration and Its Depend
+  p_0292.md: 1966 Shunju sengoku ni okeru Shōsho no tenkai K₺ | 3 Tokyo.
+  p_0295.md: 1966 “Bokuji jō no Inreki ``Nihon Chugokugaku kaihō *+*✰*
+  p_0296.md: 1966 ``Early, Middle, and Late Shang: A Note.'' Artibus Asiae 28, pp. 5–38.
+
+1967:
+  p_0281.md: 1967 ``Chia-ku-wen ti fa-hsien yü ku-pu hsi-kuan ti k'ao-cheng #×¥#|
+  p_0291.md: 1967 “Structural and Calligraphical Inconsistencies of Chinese Characters as Fou
+  p_0294.md: 1967 Living Turtles of the World. Jersey City, N.J.
+  p_0299.md: 1967 Hsü chia-ku nien-piao ✯✯✯. Taipei.
+
+1968:
+  p_0269.md: 1968 (62''..)
+  p_0278.md: 1968 ``The Incidence of Forgery Amongst Archaic Chinese Bronzes: Some Preliminar
+  p_0282.md: 1968 ``The Early History of the Chinese Word Shih (Poetry).'' In Wen Lin: Studie
+  p_0283.md: 1968 ``Résurgences d'un problème de méthode en histoire des religions.'' Numen 1
+  p_0287.md: 1968 ``La divination en Amérique du Nord.'' In Caquot and Leibovici, 1968. Vol. 
+  p_0291.md: 1968 ``Ts'ung liu-shu ti kuan-tien k'an chia-ku wen-tzu OST#LF.”
+  p_0294.md: 1968 Kojiki. Princeton and Tokyo.
+  p_0294.md: 1968 ``La divination chez les Turcs.'' In Caquot and Leibovici, 1968, vol. 2, pp
+
+1969:
+  p_0286.md: 1969 “Chia-wen ‘pu-tsai-ming' (?) yi-tz'u ti chien-t'ao 甲文「爪」一辭的檢討。 <!-- CJK -->
+  p_0287.md: 1969 ``The Ancient Chinese Metaphysical Characters through the Oracle Writing.''
+  p_0291.md: 1969 ``Tu Yin-hsü pu-tz'u tsung-lei' yü Tao Pang-nan po-shih shang-chüeh
+  p_0296.md: 1969 ``Cosmos and Computation in Early Chinese Mathematical Astronomy.''
+  p_0297.md: 1969 ``Yin-hsü wen-tzu yi-pien ping-pien pien-hao tui-chao-piao XF25AM
+  p_0297.md: 1969 Kanji gogen jiten 漢字語源辞典 <!-- CJK -->.Tokyo.
+
+1970:
+  p_0293.md: 1970 ``Chūgoku kodai no toshi kokka to sono bochi-Shōyū wa doko ni attaka
+
+1972:
+  p_0278.md: 1972 (ed.) Early Chinese Art and Its Possible Influence in the Pacific Basin: A 
+  p_0296.md: 1972 ``I am a Parrot, Red.'' History of Religions 11.4, pp. 391-413.
+  p_0296.md: 1972 et seq.
+
+1972.5:
+  p_0288.md: 1972.5 Fang-she-hsing t'an-su ts'e-ting nien-tai pao-kao (erh) ÆFAR
+
+1973:
+  p_0320.md: 1973 finds, 133 n. 188; preference for
+
+1973.2:
+  p_0288.md: 1973.2 ``Chiang-su T'ung-shan Ch'iu-wan ku yi-chih ti fa-chüeh
+
+1973.5:
+  p_0288.md: 1973.5 ``Ho-pei Kao-ch'eng T'ai-hsi-ts'un ti Shang-tai yi-chih
+
+1974:
+  p_0286.md: 1974 ``Scapulimantic Techniques and Periodic Classification.'' Ph.D. dissertatio
+  p_0293.md: 1974 ``Reduplicated and Rejoined Oracle Bones in the Ch'ien-Pien and Hou-Pien
+
+1975:
+  p_0279.md: 1975 Metallurgical Remains of Ancient China. Tokyo.
+
+1976:
+  p_0281.md: 1976 ``Ch'ing-chiang t'ao-wen chi ch'i so fan-ying ti Yin-tai nung-yeh ho chi-ss
+  p_0282.md: 1976 Oracle Bone Collections in the United States. Occasional Papers in Archaeol
+  p_0286.md: 1976 ``Chia-ku-wen so-chien Yin-tai nu-li ti fan ya-p'o tou-cheng FZKQ&A
+  p_0293.md: 1976 ``Two Major Reference Works on Bronze Vessels and Bronze Inscriptions.''
+  p_0293.md: 1976 ``A Semantic Analysis of the Disaster Graphs of Period One Shang Dynasty
+  p_0296.md: 1976 ``Subordinate Structure in Oracle Bone Inscriptions, With Particular Refere
+  p_0297.md: 1976 ``Ho-tsun ming-wen chieh-shih.” WIV 1976.1, pp. 60-63.
+  p_0301.md: 1976 Chia-ku ku-wen-tzu yen-chiu L. Vol. 1. Taipei.
+  p_0301.md: 1976 ``P'an-lung-ch'eng yü Shang-ch'ao ti nan-t'u t¨ ww
+
+1977:
+  p_0294.md: 1977 ``Interpretation of an Inscribed Turtle Plastron (Ping-pien 182, 183; reign
+  p_0301.md: 1977 The Archaeology of Ancient China. Third Edition, Revised and Enlarged. New
+  p_0301.md: 1977 ``T'an-14 ts'e-ting nien-tai ho Chung-kuo shih-ch'ien k'ao-ku-hsieh -14 测定 
+
+1977.5:
+  p_0301.md: 1977.5 ``An-yang Yin-hsü wu-hao mu-tso t'an chi-yao.''
+
+1978:
+  p_0004.md: 1978 by
+
+2439:
+  p_0269.md: 2439 (64''.,)
+
+2949:
+  p_0234.md: 2949 ± 100
+
+3035:
+  p_0234.md: 3035 ± 100
+
+3175:
+  p_0109.md: 3175 to 3754) and Hsü-ts'un inscriptions (spanning 1.1478 to 1.1725; 2.599 to 2.
+
+4601:
+  p_0234.md: 4601 ± 110
+
+4987:
+  p_0248.md: 4987 5642 (period V). Hu Hou-hsüan also suggests in his preface (p. 1b that 2908
+
+5397:
+  p_0062.md: 5397 (S245.4); it is not certain, however, that Jao
+
+5399:
+  p_0053.md: 5399 (fig. 5); if this is so-and study of the actual
