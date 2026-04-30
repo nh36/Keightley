@@ -9,18 +9,40 @@ import sys
 from pathlib import Path
 
 def check_title_page_formatting():
-    """Verify title page doesn't have escaped markdown headers."""
+    """Verify title page has proper LaTeX formatting, not escaped markdown."""
     title_tex = Path('tex/frontmatter/title.tex').read_text()
     
     # Check for escaped markdown headers (regression indicator)
     if r'\#' in title_tex:
         return False, "Title page has escaped markdown headers (\\#)"
     
-    # Check that actual markdown headers are present
-    if '# Sources of Shang History' not in title_tex:
-        return False, "Title page missing markdown header"
+    # Check for titlepage environment (proper LaTeX formatting)
+    if r'\begin{titlepage}' not in title_tex:
+        return False, "Title page missing titlepage environment"
     
-    return True, "Title page formatting OK"
+    if r'\end{titlepage}' not in title_tex:
+        return False, "Title page missing closing titlepage environment"
+    
+    # Check for font sizing commands (should use \fontsize, not \Large, \large, etc.)
+    if r'\fontsize{' not in title_tex:
+        return False, "Title page missing \\fontsize commands for proper sizing"
+    
+    # Verify key title elements are present
+    if 'Sources of Shang History' not in title_tex:
+        return False, "Title page missing main title text"
+    
+    if 'Oracle-Bone Inscriptions' not in title_tex:
+        return False, "Title page missing subtitle"
+    
+    if 'David N. Keightley' not in title_tex:
+        return False, "Title page missing author name"
+    
+    # Check that it doesn't look like plain text (no leading \# or newlines at start)
+    lines = title_tex.strip().split('\n')
+    if lines[0].startswith('#'):
+        return False, "Title page starts with markdown header"
+    
+    return True, "Title page formatting OK (titlepage env, fonts, all elements)"
 
 def check_footnote_order():
     """Verify footnotes are in sequence on first page with notes."""
@@ -95,10 +117,75 @@ def check_frontmatter_cleanup():
     
     return True, "Frontmatter cleanup OK"
 
+def check_markdown_header_preservation():
+    """Verify markdown headers are preserved, not escaped."""
+    from pathlib import Path
+    
+    # Check that emit_structure.py actually preserves markdown headers
+    # Look at a file that should have markdown headers
+    test_files = list(Path('build/ocr/cleaned_with_notes').glob('p_0[0-2]*.md'))
+    
+    if not test_files:
+        return True, "No markdown files to check"
+    
+    headers_found = 0
+    for md_file in test_files[:5]:
+        content = md_file.read_text()
+        # Count markdown headers (# , ## , ### , etc.)
+        header_count = len(re.findall(r'^#+\s+', content, re.MULTILINE))
+        headers_found += header_count
+    
+    if headers_found == 0:
+        return False, "No markdown headers found in source files"
+    
+    # Now check that they DON'T appear as escaped \# in TeX
+    ch01_tex = Path('tex/chapters/ch01.tex').read_text()
+    escaped_hashes = len(re.findall(r'^\s*\\\#\s+', ch01_tex, re.MULTILINE))
+    
+    if escaped_hashes > 2:  # Allow 1-2, but not many
+        return False, f"Too many escaped markdown headers (\\#) in ch01.tex: {escaped_hashes}"
+    
+    return True, f"Markdown header preservation OK ({headers_found} headers in source)"
+
+def check_title_page_skip_logic():
+    """Verify emit_structure.py skips title page generation."""
+    emit_script = Path('scripts/06_emit_structure.py').read_text()
+    
+    # Check that the skip logic is present
+    if 'sec_id == "frontmatter/title"' not in emit_script:
+        return False, "Missing title page skip logic in emit_structure.py"
+    
+    if 'continue' not in emit_script[emit_script.find('sec_id == "frontmatter/title"'):]:
+        return False, "Title page skip logic incomplete (no continue statement)"
+    
+    return True, "Title page skip logic present"
+
+def check_section_headers_not_escaped():
+    """Verify section headers in body chapters are rendered, not escaped."""
+    ch01_tex = Path('tex/chapters/ch01.tex').read_text()
+    
+    # Check for \section[ commands (properly rendered)
+    section_cmds = len(re.findall(r'\\section\[', ch01_tex))
+    
+    if section_cmds == 0:
+        return False, "No section commands found in ch01.tex"
+    
+    # Check for excessive escaped hashes that might indicate section number issues
+    # A few escaped hashes might be OK (in footnotes, etc), but many would be bad
+    escaped_hashes = len(re.findall(r'\\#', ch01_tex))
+    
+    if escaped_hashes > 10:
+        return False, f"Too many escaped hashes in ch01.tex: {escaped_hashes}"
+    
+    return True, f"Section headers properly rendered ({section_cmds} sections, {escaped_hashes} escaped hashes)"
+
 def main():
     """Run all regression checks."""
     checks = [
         ("Title Page Formatting", check_title_page_formatting),
+        ("Title Page Skip Logic", check_title_page_skip_logic),
+        ("Markdown Header Preservation", check_markdown_header_preservation),
+        ("Section Headers Not Escaped", check_section_headers_not_escaped),
         ("Footnote Order", check_footnote_order),
         ("Section Numbers", check_section_numbers),
         ("Quotation Marks", check_quotation_marks),
@@ -106,7 +193,7 @@ def main():
     ]
     
     print("Running regression checks...")
-    print("=" * 60)
+    print("=" * 70)
     
     passed = 0
     failed = 0
@@ -115,16 +202,16 @@ def main():
         try:
             ok, msg = check_fn()
             status = "✅ PASS" if ok else "❌ FAIL"
-            print(f"{status} | {name:25} | {msg}")
+            print(f"{status} | {name:30} | {msg}")
             if ok:
                 passed += 1
             else:
                 failed += 1
         except Exception as e:
-            print(f"❌ ERROR | {name:25} | {e}")
+            print(f"❌ ERROR | {name:30} | {e}")
             failed += 1
     
-    print("=" * 60)
+    print("=" * 70)
     print(f"Results: {passed} passed, {failed} failed")
     
     return 0 if failed == 0 else 1
