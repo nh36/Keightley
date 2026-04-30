@@ -1,0 +1,35 @@
+{
+  "test_pages": {
+    "7": "Main text (high CJK)",
+    "50": "Bibliography entry",
+    "100": "Table section",
+    "150": "Mixed content"
+  },
+  "comparison": {
+    "7": {
+      "gv_count": 0,
+      "eo_count": 1,
+      "overlap": 0,
+      "regions": 131
+    },
+    "50": {
+      "gv_count": 1,
+      "eo_count": 0,
+      "overlap": 0,
+      "regions": 3
+    },
+    "100": {
+      "gv_count": 3,
+      "eo_count": 6,
+      "overlap": 0,
+      "regions": 247
+    },
+    "150": {
+      "gv_count": 0,
+      "eo_count": 0,
+      "overlap": 0,
+      "regions": 2
+    }
+  },
+  "avg_detection_rate": 100.0
+}
