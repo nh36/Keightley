@@ -591,20 +591,42 @@ def strip_tesseract_notes_block(body: str, prev_max: int) -> str:
     if not matches:
         return body
 
-    chosen_start: int | None = None
-    last_n = prev_max
+    parsed: list[tuple[re.Match, int]] = []
     for m in matches:
         n = canon(m.group(1))
         if n is None:
             continue
-        if chosen_start is None:
-            if prev_max < n <= prev_max + 50:
-                chosen_start = m.start()
-                last_n = n
+        parsed.append((m, n))
+    if not parsed:
+        return body
+
+    # Phase 6 fix: section headers like "I. Introduction" or "2. The Date..."
+    # also match the candidate pattern and used to pre-empt the real notes
+    # block.  Mirror extract_notes_from_gv's tail-walk: scan from the LAST
+    # candidate backwards while values strictly decrease — that gives the
+    # contiguous notes block.  The strip point is the start of the first
+    # element in that tail run, provided it plausibly continues the section's
+    # note sequence.
+    tail: list[tuple[re.Match, int]] = []
+    for m, n in reversed(parsed):
+        if not tail:
+            tail.append((m, n))
+            continue
+        prev_n = tail[-1][1]
+        if n < prev_n:
+            tail.append((m, n))
+        elif n == prev_n:
+            continue
         else:
-            if n == last_n + 1 or n <= last_n + 5:
-                last_n = n
-    return body[:chosen_start] if chosen_start is not None else body
+            break
+    tail.reverse()
+    if not tail:
+        return body
+
+    first_n = tail[0][1]
+    if not (prev_max < first_n <= prev_max + 50):
+        return body
+    return body[: tail[0][0].start()]
 
 
 def main() -> int:
