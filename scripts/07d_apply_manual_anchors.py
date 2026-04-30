@@ -117,11 +117,12 @@ def apply_anchor(md_text: str, note_no: int, snippet: str) -> tuple[str, str]:
         
         # Phase 6: Validation — after fuzzy matching, check if there's a plausible
         # marker (superscript, *, #, or digit) within 150 chars BEFORE the match.
-        # If not, reject this as a likely false positive.
+        # If not, reject this as a likely false positive — UNLESS the match ratio is
+        # very high (>=0.90), indicating manual anchor precision.
         before_match = stripped[max(0, s-150):s]
         has_marker = bool(re.search(r'[⁰¹²³⁴⁵⁶⁷⁸⁹\*\#]|\b' + str(note_no) + r'\b', before_match))
-        if not has_marker and len(before_match) > 30:
-            # No marker found; likely a false positive. Reject this fuzzy match.
+        if not has_marker and len(before_match) > 30 and ratio < 0.90:
+            # No marker found AND low confidence; likely a false positive. Reject.
             return md_text, f"fuzzy-rejected-no-marker: {snippet[:50]!r} (ratio={ratio:.2f})"
         
         # Now search for `matched_text` in `md_text`.
