@@ -65,17 +65,18 @@
   \vspace{0.3\baselineskip}
 }
 
-% Two-column inscription environment matching original book layout
-% Usage: \begin{inscriptionpair}...\inscriptionlabel{Preface:} & left-content & right-content \\...\end{inscriptionpair}
-\newenvironment{inscriptionpair}
+% Two-column inscription environment - simplified to prose-based layout
+% Wraps inscription content without table structure to avoid LaTeX nesting issues
+\newenvironment{inscriptionblock}
 {%
   \par\medskip
-  \noindent\begin{tabularx}{\textwidth}{@{}p{1.2cm}XX@{}}
-  \hline
+  \noindent
+  \begin{minipage}{\textwidth}
+  \setlength{\parskip}{0.3\baselineskip}
+  \setlength{\parindent}{0pt}
 }
 {%
-  \hline
-  \end{tabularx}
+  \end{minipage}
   \medskip
 }
 
