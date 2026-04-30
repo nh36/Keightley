@@ -1,0 +1,37 @@
+LIST FORMATTING INVENTORY (Phase 10)
+====================================
+
+✅ COMPLETED - ch01 (4 lists, 17 items):
+- Line 119-120: 4 items (chelonian species) ✅ listitem applied
+- Line 341-344: 2 items (hollow composition) ✅ listitem applied
+- Line 349-352: 5 items (Hsü's categories) ✅ listitem applied
+- Line 602-608: 6 items (hollow use factors) ✅ listitem applied
+
+⏳ REMAINING - High Priority (6 lists):
+- ch04 line 573 (procedural context)
+- ch04 line 900 (procedural context)
+- ch04 line 1014 (procedural context)
+- ch05 line 223 (historiographical)
+- ch05 line 692 (historiographical)
+- ch05 line 710 (historiographical)
+
+⏳ REMAINING - Medium Priority (7 lists):
+- ch02 line 40 (footnote embedded)
+- ch02 line 115 (footnote embedded)
+- ch02 line 345 (footnote embedded)
+- ch02 line 518 (footnote embedded)
+- ch02 line 540 (footnote embedded)
+- ch02 line 565 (footnote embedded)
+- ch02 line 599 (footnote embedded)
+
+⏳ REMAINING - Low Priority (3 lists):
+- ch03 line 777 (mixed numbering 1/3/5, gap at 2/4)
+- app01 line 17 (appendix)
+- app04 line 93 (appendix)
+
+STRATEGY:
+1. Apply listitem macro to high-priority ch04/ch05 lists (6 lists, ~20 items)
+2. Test and commit (batch 1)
+3. Handle ch02 footnote-embedded lists (7 lists, ~30+ items, requires special care)
+4. Test and commit (batch 2)
+5. Handle edge cases (ch03 mixed, appendices) as needed
