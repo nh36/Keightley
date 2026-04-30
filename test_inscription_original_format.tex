@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage{xltxtra}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+
+% Inscription macros matching original book format
+\newcommand{\inscriptionref}[1]{\textit{(#1)}}
+\newcommand{\inscriptionlabel}[1]{\textbf{(#1:)}}
+\newcommand{\inscriptionside}[1]{\emph{#1}}
+\newcommand{\inscriptionsection}[1]{%
+  \par\vspace{0.5\baselineskip}
+  \noindent\textbf{\MakeUppercase{#1}}%
+  \par\vspace{0.3\baselineskip}
+}
+\newenvironment{inscriptionblock}{%
+  \par\medskip
+  \noindent\begin{minipage}{\textwidth}
+  \setlength{\parindent}{0pt}
+}{%
+  \end{minipage}
+  \medskip
+}
+
+\title{Oracle Inscription Test --- Original Book Format}
+\begin{document}
+\maketitle
+
+\section*{Example: Paired Verification}
+
+\inscriptionlabel{Preface:} \inscriptionlabel{Charge:} 
+\inscriptionlabel{Prognostication:} \inscriptionlabel{Verification:}
+
+\inscriptionsection{PAIR OF COMPLEMENTARY CHARGES}
+
+\begin{inscriptionblock}
+\inscriptionside{positive, left side}
+\inscriptionref{Ping-pien 235.2}
+
+Crack-making on chi-mao (day 16), Ch'üch divined:
+``It will rain.''
+The king, reading the cracks (said):
+``It will rain; it will be a jen day.''
+On jen-wu (day 19) it really did rain.
+\end{inscriptionblock}
+
+\begin{inscriptionblock}
+\inscriptionside{negative, right side}
+\inscriptionref{Ping-pien 235.1}
+
+Crack-making on chi-mao (day 16), Ch'üch divined:
+``It will not perhaps rain.''
+\end{inscriptionblock}
+
+In period I, verifications (and prognostications) might provide considerable detail; for example:
+
+\inscriptionlabel{Preface:} \inscriptionlabel{Charge:}
+\inscriptionlabel{Prognostication:}
+
+\inscriptionsection{PAIR OF COMPLEMENTARY CHARGES}
+
+\begin{inscriptionblock}
+\inscriptionside{negative, left side}
+\inscriptionref{Ping-pien 1.4}
+
+Crack-making on kuei-ch'ou (day 50), Cheng divined:
+``From today to ting-ssu (day 54) we will not perhaps harm the Chou.''
+\end{inscriptionblock}
+
+\begin{inscriptionblock}
+\inscriptionside{positive, right side}
+\inscriptionref{Ping-pien 1.3}
+
+Crack-making on kuei-ch'ou (day 50), Cheng divined:
+``From today to ting-ssu (day 54) we will harm the Chou.''
+The king, reading the cracks, said:
+``(Down to) ting-ssu (day 54) we should not perhaps harm (them); on the coming chia-tzu (day 1) we will harm (them).''
+On the eleventh day, kuei-hai (day 60), (our) chariots did not harm (them); in the t'ou period between that evening and chia-tzu (day 1), (we) really harmed (them).
+\end{inscriptionblock}
+
+\end{document}

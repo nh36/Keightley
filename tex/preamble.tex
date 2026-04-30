@@ -18,6 +18,9 @@
 \usepackage{booktabs}
 \usepackage{makeidx}
 \makeindex
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{fancybox}
 
 % Phase 3 macros
 % \origsecnum{X.Y} - prints original 1978 section number, suppressing LaTeX auto-counter
@@ -29,6 +32,52 @@
 }
 \newcommand{\authorbyline}[1]{\par\noindent\emph{by #1}\par\bigskip}
 \newcommand{\ednote}[1]{\textsuperscript{[#1]}}
+
+% Phase 9: Oracle Inscription Formatting Macros
+% ================================================
+% Macros recreate the original 1978 book format: two-column layout with
+% labels on the left and aligned paired inscriptions (positive/negative)
+
+% Reference/attribution formatter - parenthetical in italics
+% Usage: \inscriptionref{Ping-pien 235.2}
+\newcommand{\inscriptionref}[1]{%
+  \textit{(#1)}%
+}
+
+% Inscription component label formatter - bold parenthetical
+% Usage: \inscriptionlabel{Preface}
+\newcommand{\inscriptionlabel}[1]{%
+  \textbf{(#1:)}%
+}
+
+% Inscription side label - for "positive, left side" etc.
+% Usage: \inscriptionside{positive, left side}
+\newcommand{\inscriptionside}[1]{%
+  \emph{#1}%
+}
+
+% Centered section header for inscription groups
+% Usage: \inscriptionsection{PAIR OF COMPLEMENTARY CHARGES}
+\newcommand{\inscriptionsection}[1]{%
+  \par\vspace{0.5\baselineskip}
+  \noindent\hfill\textbf{\MakeUppercase{#1}}\hfill\par
+  \noindent\rule{\textwidth}{0.5pt}\par
+  \vspace{0.3\baselineskip}
+}
+
+% Two-column inscription environment matching original book layout
+% Usage: \begin{inscriptionpair}...\inscriptionlabel{Preface:} & left-content & right-content \\...\end{inscriptionpair}
+\newenvironment{inscriptionpair}
+{%
+  \par\medskip
+  \noindent\begin{tabularx}{\textwidth}{@{}p{1.2cm}XX@{}}
+  \hline
+}
+{%
+  \hline
+  \end{tabularx}
+  \medskip
+}
 
 % Bibliography (Phase 5)
 \addbibresource{bibliography/keightley.bib}

@@ -256,3 +256,56 @@ else
     echo -e "${RED}Some tests failed. Please review the errors above.${NC}"
     exit 1
 fi
+
+# ===== PHASE 9: INSCRIPTION FORMATTING TESTS =====
+
+# Test 21: Verify inscription macros are defined in preamble
+test_inscription_macros_defined() {
+  local preamble="tex/preamble.tex"
+  grep -q "\\\\newcommand{\\\\inscriptionref}" "$preamble" && \
+  grep -q "\\\\newcommand{\\\\inscriptionlabel}" "$preamble" && \
+  grep -q "\\\\newcommand{\\\\inscriptionside}" "$preamble" && \
+  grep -q "\\\\newcommand{\\\\inscriptionsection}" "$preamble" && \
+  grep -q "\\\\newenvironment{inscriptionpair}" "$preamble"
+  echo $?
+}
+
+# Test 22: Verify no leftover duplicate package declarations
+test_no_duplicate_packages() {
+  local preamble="tex/preamble.tex"
+  local tabularx_count=$(grep -c "\\\\usepackage{tabularx}" "$preamble")
+  local array_count=$(grep -c "\\\\usepackage{array}" "$preamble")
+  [ "$tabularx_count" -eq 1 ] && [ "$array_count" -eq 1 ]
+  echo $?
+}
+
+# Test 23: Verify preamble has no stray braces
+test_preamble_no_stray_braces() {
+  local preamble="tex/preamble.tex"
+  # Count opening and closing braces (excluding comments)
+  local opens=$(grep -v "^%" "$preamble" | tr -cd '{' | wc -c)
+  local closes=$(grep -v "^%" "$preamble" | tr -cd '}' | wc -c)
+  [ "$opens" -eq "$closes" ]
+  echo $?
+}
+
+# Test 24: Verify inscriptionpair environment is properly closed
+test_inscriptionpair_environment() {
+  local preamble="tex/preamble.tex"
+  grep -A 15 "newenvironment{inscriptionpair}" "$preamble" | grep -q "end{tabularx}"
+  echo $?
+}
+
+# Run all Phase 9 tests
+echo "=== Phase 9: Inscription Formatting Tests ==="
+result=$(test_inscription_macros_defined)
+[ "$result" -eq 0 ] && echo "✓ Test 21: Inscription macros defined" || echo "✗ Test 21: Inscription macros missing"
+
+result=$(test_no_duplicate_packages)
+[ "$result" -eq 0 ] && echo "✓ Test 22: No duplicate packages" || echo "✗ Test 22: Duplicate packages found"
+
+result=$(test_preamble_no_stray_braces)
+[ "$result" -eq 0 ] && echo "✓ Test 23: Preamble brace balance" || echo "✗ Test 23: Unbalanced braces in preamble"
+
+result=$(test_inscriptionpair_environment)
+[ "$result" -eq 0 ] && echo "✓ Test 24: inscriptionpair environment valid" || echo "✗ Test 24: inscriptionpair environment broken"

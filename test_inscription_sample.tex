@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{xltxtra}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{fancybox}
+
+% Simplified inscription macros
+\newcommand{\inscriptionref}[1]{{\small\textit{(#1)}}}
+\newcommand{\inscriptionlabel}[1]{\textbf{#1:}\;}
+
+\newenvironment{inscriptionblock}[1]
+{%
+  \par\medskip
+  \noindent\fbox{\small\textit{#1}}\par\smallskip
+  \noindent\begin{minipage}{\textwidth}
+}
+{%
+  \end{minipage}
+  \medskip
+}
+
+\title{Oracle Inscription Test}
+\begin{document}
+
+\section*{Simple Pair Example}
+
+\begin{inscriptionblock}{Ping-pien 235.2 and 235.1}
+\inscriptionlabel{Positive (Left)}
+
+Crack-making on chi-mao (day 16), Ch'üch divined:
+``It will rain.''
+
+The king, reading the cracks (said):
+``It will rain; it will be a jen day.''
+
+On jen-wu (day 19) it really did rain.
+
+\medskip
+
+\inscriptionlabel{Negative (Right)}
+
+Crack-making on chi-mao (day 16), Ch'üch divined:
+``It will not perhaps rain.''
+\end{inscriptionblock}
+
+\end{document}

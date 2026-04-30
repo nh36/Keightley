@@ -1,0 +1,42 @@
+\documentclass[11pt,a4paper]{book}
+\usepackage{xltxtra}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}
+\usepackage{tabularx}
+\usepackage{array}
+
+% Inscription macros
+\newcommand{\inscriptionref}[1]{\textit{(#1)}}
+\newcommand{\inscriptionlabel}[1]{\textbf{(#1:)}}
+\newcommand{\inscriptionside}[1]{\emph{#1}}
+\newcommand{\inscriptionsection}[1]{%
+  \par\vspace{0.5\baselineskip}
+  \noindent\hfill\textbf{\MakeUppercase{#1}}\hfill\par
+  \noindent\rule{\textwidth}{0.5pt}\par
+  \vspace{0.3\baselineskip}
+}
+
+\title{Oracle Inscription Formatting}
+\begin{document}
+\maketitle
+
+\section*{Example: Simple Pair Format}
+
+\inscriptionsection{PAIR OF COMPLEMENTARY CHARGES}
+
+\noindent\begin{tabular}{p{1.2cm}|p{3.5cm}|p{3.5cm}}
+\hline
+& \centering\inscriptionside{positive, left side} & \centering\inscriptionside{negative, right side} \\
+& \centering\inscriptionref{Ping-pien 235.2} & \centering\inscriptionref{Ping-pien 235.1} \\
+\hline
+\inscriptionlabel{Preface:} & \multicolumn{2}{c}{} \\
+\inscriptionlabel{Charge:} & Crack-making on chi-mao (day 16), Ch'üch divined: ``It will rain.'' & Crack-making on chi-mao (day 16), Ch'üch divined: ``It will not perhaps rain.'' \\
+\hline
+\inscriptionlabel{Prognostication:} & The king, reading the cracks (said): ``It will rain; it will be a jen day.'' & \\
+\hline
+\inscriptionlabel{Verification:} & On jen-wu (day 19) it really did rain. & \\
+\hline
+\end{tabular}
+
+\end{document}
