@@ -567,6 +567,9 @@ def main() -> int:
     for sec_id, unit_def in UNITS.items():
         unit = {**unit_def, "id": sec_id}
         pages = sec_to_pages[sec_id]
+        # Skip title page - it's manually formatted in tex/frontmatter/title.tex
+        if sec_id == "frontmatter/title":
+            continue
         if unit["kind"] == "verbatim":
             text = emit_verbatim(unit, pages, inventory)
         elif unit["kind"] == "named":
