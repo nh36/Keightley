@@ -67,7 +67,8 @@ def fuzzy_find(needle: str, haystack: str, threshold: float = 0.70) -> tuple[int
 
 
 def apply_anchor(md_text: str, note_no: int, snippet: str) -> tuple[str, str]:
-    """Returns (new_md, status)."""
+    """Returns (new_md, status). Phase 6: Added validation to reject implausible fuzzy
+    matches (e.g., no marker nearby after fuzzy matching)."""
     unre = re.compile(UNANCH_RE_TPL.format(n=note_no), re.DOTALL)
     m = unre.search(md_text)
     if not m:
@@ -100,24 +101,30 @@ def apply_anchor(md_text: str, note_no: int, snippet: str) -> tuple[str, str]:
         else:
             return md_text, f"snippet-regex-failed: {snippet[:50]!r}"
     else:
-        # Fuzzy fallback: search in `stripped` (which preserves whitespace and
-        # punctuation as in the prose) for a window most similar to `snippet`.
-        hit = fuzzy_find(snippet.strip(), stripped, threshold=0.70)
+        # Fuzzy fallback: search in `stripped` for a window most similar to `snippet`.
+        # Phase 6: Increased threshold from 0.70 to 0.80 to reduce false matches.
+        hit = fuzzy_find(snippet.strip(), stripped, threshold=0.80)
         if hit is None:
             # Try with normalized (collapsed-whitespace) variants
-            hit2 = fuzzy_find(needle, haystack_norm, threshold=0.80)
+            hit2 = fuzzy_find(needle, haystack_norm, threshold=0.85)
             if hit2 is None:
                 return md_text, f"snippet-not-found: {snippet[:50]!r}"
-            # Translate haystack_norm position back to stripped — too fragile;
-            # instead, take the matched window text and search for an
-            # approximation of it in stripped via a more permissive regex.
+            # Translate haystack_norm position back to stripped
             return md_text, f"snippet-not-found-fuzzy-norm: {snippet[:50]!r} (best={hit2[2]:.2f})"
         s, e, ratio = hit
         matched_text = stripped[s:e]
         fuzzy_used = True
-        # Now search for `matched_text` in `md_text`. Because strip_sentinels
-        # only removes complete tag-pair regions, `matched_text` should appear
-        # verbatim in `md_text` UNLESS the match crosses a removed sentinel.
+        
+        # Phase 6: Validation — after fuzzy matching, check if there's a plausible
+        # marker (superscript, *, #, or digit) within 150 chars BEFORE the match.
+        # If not, reject this as a likely false positive.
+        before_match = stripped[max(0, s-150):s]
+        has_marker = bool(re.search(r'[⁰¹²³⁴⁵⁶⁷⁸⁹\*\#]|\b' + str(note_no) + r'\b', before_match))
+        if not has_marker and len(before_match) > 30:
+            # No marker found; likely a false positive. Reject this fuzzy match.
+            return md_text, f"fuzzy-rejected-no-marker: {snippet[:50]!r} (ratio={ratio:.2f})"
+        
+        # Now search for `matched_text` in `md_text`.
         idx = md_text.find(matched_text)
         if idx < 0:
             # Fall back: search for the last 24 chars (a unique tail signature).

@@ -158,8 +158,10 @@ def parse_page(md: str) -> dict:
                     pass
                 body_start = i + 1
             else:
-                # Could be CJK or CHECK-OCR markers in mid-body (handled later)
-                continue
+                # Phase 6: Skip all leading metadata comments (substrate, cjk-tess-overlay, etc.)
+                # These should not appear in the body. Only keep comments that appear
+                # mid-body (CJK, CHECK-OCR, FOOTNOTE).
+                body_start = i + 1
         # First non-comment, non-blank line is start of body
         if ln.strip() and not cm:
             break
@@ -182,6 +184,7 @@ def process_body_text(body: str) -> str:
          that emit_chapter() unfolds into \\footnote{...}
        - escape LaTeX specials
        - drop bare-page-number residue lines
+       - drop any remaining HTML comments (phase 6 safeguard)
        Headings are preserved as-is so emit_chapter() can find them.
     """
     body = re.sub(r"\s*<!--\s*CJK\s*-->\s*", "", body)
@@ -201,6 +204,10 @@ def process_body_text(body: str) -> str:
         encoded = body_txt.replace("@", "\u0001AT\u0001")
         return f"@@FOOTNOTE@@{n}@@{kind}@@{encoded}@@/FOOTNOTE@@"
     body = FOOTNOTE_RE.sub(fn_repl, body)
+
+    # Phase 6: Drop any remaining HTML comments (e.g., substrate, cjk-tess-overlay)
+    # that weren't caught by parse_page. These should not appear in LaTeX output.
+    body = re.sub(r"<!--.*?-->", "", body, flags=re.DOTALL)
 
     # Drop bare-page-number lines that survived edge-strip
     out_lines = []
