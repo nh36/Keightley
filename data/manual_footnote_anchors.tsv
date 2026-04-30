@@ -1,206 +1,44 @@
 # Manual semantic placement of footnote markers.
 # Format: scan<TAB>note_no<TAB>anchor_snippet
-# anchor_snippet: a substring of the cleaned-with-notes markdown prose
-#   (currently-placed FOOTNOTE/UNANCHORED sentinels are stripped before
-#   matching).  The footnote sentinel is inserted IMMEDIATELY AFTER the
-#   first occurrence of the snippet.
-# Rationale for each placement: see comments above each row.
-# 
-# Comments must start with '#'.  Blank lines ignored.
+# anchor_snippet: a substring of cleaned prose where footnote should be inserted.
 
-# === Preface (scan 13) ===
-# Note 3 cites Chang Kwang-chih on Shang vs Yin terminology.  Marker is
-# at "...prior to P'an Keng's removal of the capital to Yin." in OCR
-# (the missing superscript ³ was lost).
 13	3	the capital to\nYin.
-
-# === Chapter 1 page 4 (scan 21) ===
-# Note 5 (Tsunoda 1951 / Yayoi scapulimancy): marker is the ° at
-# "from Yamato\n\nJapan in the third century a.p.,°" — about scapulimancy
-# in Japan; the ° in OCR == 5.  N.B. note 6 already MARK6'd at
-# "the eighth century." which sits between this position and note 7 below.
 21	5	in the third century a.p.,
-# Note 10 (Rockhill 1900 / Wieger 1923): about Mongolia and Mangu.
-# Marker '° at "...mid-thirteenth-century Mongolia at the court of
-# Chinggis' grandson, Mangu.'°"
 21	10	grandson, Mangu.
-# Note 11 (Cooper 1936 p. 29): about Indians near Quebec.  Marker !!
-# at "porcupines;!!".
 21	11	Quebec cracking ‘‘un certain os\nplat” of porcupines;
-# Note 12 (Cooper / Speck / Hultkrantz on diffusion): marker !* at
-# "Mackenzie River in the west to Labrador in the east.!*"
 21	12	in the west to Labrador in the east.
-
-# === Chapter 1 page 20 (scan 37) ===
-# Note 84 (Chang Ping-ch'üan 1956 etc on entoplastron hollows):
-# marker is at the 84 position between MARK85 and following text.
-# Looking at prose, MARK85 was placed at "those on the right side... vice versa.85"
-# (OCR'd "vice versa.84" and parser placed note 85 there, but actual
-# marker for 84 is right before that — at "...the order of Tung's table".
-# Skip: too speculative.
-
-# === Chapter 2 page 29 (scan 46) ===
-# Note 2 (Hsiao-t'un site / ta-yi Shang): marker "?" (=²) at "tun.?"
-# i.e. "...divination took place in the ritual center at Hsiao-\ntun.?"
 46	2	tun.?
-# Note 5 (Ping-pien 1.12 example): marker "?" (=⁵ misread) at end of
-# first quoted divination — "Crack-making on the day hsin-yu, Ch'iieh⁶
-# divined."⁵". OCR shows  divined."?" after Ch'iieh®.
-# Order in OCR: Ch'iieh® (=⁶) then divined."?" (=⁵)... but that's reversed.
-# Numbered order says 5 first.  Actually the FIRST superscripted ref on
-# this page after MARK4 is the Ch'iieh-name-note.  Hmm — Keightley's note
-# numbering might number the diviner-name note 6 because ⁵ comes at end
-# of full quote (after Ch'iieh).  In that reading: divined."⁵ then later
-# Ch'iieh⁶.  But OCR shows Ch'iieh® before divined."?".  The visual
-# layout (Ch'iieh has its superscript right after the name; the .⁵ comes
-# at end of the *quote*) means in source-order Ch'iieh⁶ ALMOST coincides
-# with divined."⁵.  The text "divined" has the closer punct so I'll
-# place note 5 at "Ch'iieh® divined." (after divined.) and note 6 at
-# "Ch'iieh®" (immediately after the name).  Skip both — too uncertain.
-
-# === Chapter 2 page 40 (scan 57) ===
-# Note 57 (See, for example, sec. 3.7.4.2): the body is just a cross-ref.
-# Looking at MARK56's location and following "** This does not exclude...
-# (n. 47) ... (n. 48) ... (n. 46)" — the next inline marker is the "**"
-# right after MARK56 ends; OCR reads `<!-- /FOOTNOTE -->** This does not exclude`.
-# That ** is note 57.  Anchor after the second "*".
-# Skip: anchor would land inside the closing comment of MARK56.
-
-# === Chapter 3 page 57 (scan 74) ===
-# Note 3 (Shima 1971 preface): currently MARK2 placed at end "indicate how
-# they may be used.⟦MARK2⟧" — but body of MARK2 reads "Shima (1971)..." —
-# that's actually note 3 content (about ~1000 articles count).  And the
-# "*" at "over 970\nmonographs*" is actually the marker for note 3.
-# Skip: this is a misplacement among already-anchored notes, not really
-# our 73 unanchored category.
-
-# === Chapter 3 page 58 (scan 75) ===
-# Note 6 (about indexes/CKWP/Sōrui): marker is at "Table 9g lists the
-# commentaries which exist for the major published collections.®"
-# The "®" (=⁶) marks note 6.
 75	6	for the major published collections.
-
-# === Chapter 3 page 59 (scan 76) ===
-# Note 9 (Chin Hsiang-heng, Hsü chia-ku wen-pien): marker is at end of
-# "Hsii chia-ku wen-pien.®" (=⁹).
 76	9	supplemented. on occasion, with Hsii chia-ku wen-pien.
-
-# === Chapter 4 page 90 (scan 110) ===
-# Note 5 (Ch'en Meng-chia & "broader periodization Early/Middle/Late"):
-# marker is at "is dated not to what would logically be period VII but
-# to period IVa.⁵" — OCR reads "to period 1Va.°".
 110	5	to period 1Va.
-
-# === Chapter 4 page 91 (scan 111) ===
-# Note 9 (Tung's combined categories): marker is at "the analysis which
-# follows combines some of his categories,⁹".  OCR shows "combines some
-# of his categories,® introduces new ones".
 111	9	combines some of his categories,
-
-# === Chapter 4 page 92 (scan 112) ===
-# Note 13 (genealogical info: kings recorded in Shih-chi): marker is at
-# "...recorded in the inscriptions but not in Shih-chi.¹³" — OCR shows
-# "Shih-chi.¥" (¥ = ¹³).
 112	13	but not in Shih-chi.
-
-# === Chapter 4 page 116 (scan 134) ===
-# Note 111 (Britton, Crump on auspicious-only prognostications):
-# marker at "this routine optimism ... is a useful criterion for
-# dating.¹¹¹" — OCR shows "useful criterion for\ndating.!!'".
 134	111	useful criterion for\ndating.
-
-# === Chapter 4 page 117 (scan 135) ===
-# Note 117 (Table 26 no. 7e: graphic form of chan): marker at
-# "the change in the graphic form of chan, 'to read the cracks.'¹¹⁷".
-# OCR shows "graphic form of chan, ‘to read the cracks.”17".
 135	117	‘to read the cracks.”
-
-# === Chapter 5 page 134 (scan 151) ===
-# Note 2 (Kane 1973 on bronze inscriptions): marker at "Certain bronze
-# inscriptions, which all date from late in the historical period,²".
 151	2	all date from late in the historical\nperiod,
-
-# === Chapter 5 page 135 (scan 152) ===
-# Note 6 (Wu-ch'eng/Kao-ch'eng pottery symbols): marker at "This
-# situation may change as new finds are made,⁶".
 152	6	as new finds are made,
-# Note 7 (Kane 1974/75; Barnard & Satō 1975): marker at "promise to
-# tell us much about the evolution and extent of Shang culture.⁷".
 152	7	the evolution\nand extent of Shang culture.
-# Note 8 (Evans-Pritchard, Middleton et al. on comparative divination):
-# marker at "should only be used when it can be well supported by the
-# Shang evidence itself.⁸".
 152	8	supported by the Shang evidence itself.
-# Note 9 (Gelb 1967 on archival fallacy): marker at "the 'archival
-# fallacy' which confuses the archive with the world.⁹".
 152	9	confuses the archive with the world.
-
-# === Chapter 2 page 29 (scan 46) — divination preface examples ===
-# Note 5 (Ping-pien 1.12 source citation): marker is the ? in
-# "Ch’iieh® divined.”?".  Must precede note 6 in TSV (adjacency).
 46	5	Ch’iieh® divined.”
-# Note 8 (Chin-chang 583 source): marker * at "cracks in Sang, divined."".
 46	8	cracks in Sang, divined.”
-# Note 9 (Ch'ien-pien 2.17.3+): marker ® at "...caught\neleven foxes."®".
 46	9	eleven foxes.”
-
-# === Chapter 2 page 42 (scan 59) — temporal range of prognostications ===
-# Note 71 (Ping-pien 248.7 / fig. 13): marker 7! at end of birth-divination prediction.
 59	71	away from the dav of divination.
-# Note 72 (Yi-pien 6668/6669): marker " at end of fifty-eight-days-in-advance example.
 59	72	fifty-eight days in\nadvance.”
-
-# === Chapter 2 page 55 (scan 72) — Princeton red/black pigment analysis ===
-# Note 150 (Benedetti-Pichler / Britton): marker after carbonaceous-matter quote.
 72	150	‘some carbonaceous matter.”
-
-# === Chapter 3 page 77 (scan 96) — plastron-set translation, sentence 8 ===
-# Note 88 ("On the mao sacrifice, see n. 52."): marker 88 at end of sheep-sacrifice clause.
 96	88	a sheep.
-
-# === Chapter 4 page 101 (scan 120) — diviner's-name dating ===
-# Note 42 (Ch'en Meng-chia 1956 p. 142): marker 4* at "...(see table 6).".
 120	42	no major diviners appear in period V (see table 6).
-
-# === Chapter 4 page 106 (scan 125) — period III+IV calligraphy ===
-# Note 64 (Jimbun examples by size): marker " after "...larger design.".
 125	64	position or its relation to a larger\ndesign.
-
-# === Chapter 4 page 114 (scan 132) — postface ritual-cycle dating ===
-# Note 100 (Ho-pien 21 [D] [S493.2]; period IIb): marker ®® right after "POSTFACE:)".
 132	100	POSTFACE:)
-
-# === Chapter 4 page 117 (scan 135) — period V verifications ===
-# Note 122 (Jimbun 1373 / 1377 / Ch'ien-pien 2.27.5): marker 2 at foxes-verification example.
 135	122	caught thirteen foxes”
-# Note 123 (yün 員 verifications by period): marker 28 at sentence-end summarising freq.
 135	123	if ever, in other periods.
-
-# === Chapter 4 page 120 (scan 138) — crack-notation frequency ===
-# Note 135 (Ping-pien 1-200 count): marker 1 at end of "che #, "auspicious." 1".
 138	135	che #, “auspicious.”
-
-# === Chapter 4 page 125 (scan 143) — Hsü Chin-hsiung hollow-shape data ===
-# Note 160 (Hsü 1973a/1974, White, Menzies): marker 16 at "...tested by other scholars.".
 143	160	tested by other scholars.
-
-# === Chapter 4 page 130 (scan 147) — provenance vs. excavation reports ===
-# Note 179 (Itō 1959 / Shih Chang-ju 1959): marker !79 at "...rather than vice versa.".
 147	179	rather than vice versa.
-
-# === Chapter 5 page 150 (scan 168) — erroneous reconstructions ===
-# Note 74 (Tung 1945, Yen Yi-p'ing, Li Hsüeh-ch'in, Ch'ü Wan-li): marker at "...consequences.".
 168	74	a few with serious consequences.
-
-# === Chapter 5 page 154 (scan 172) — Evans-Pritchard quote ===
-# Note 91 (Evans-Pritchard 1937 pp. 270, 313): marker after second quote close.
 172	91	customs which invite easy explanations.”
-# Phase 6 / GV substrate: in-text markers that GV mis-OCR'd or dropped
-# (Tesseract auto-anchored these; GV needs manual rows).
 31	54	thickness (fig. 3).
 121	47	by the careers of engravers.
-# Phase 6 push: GV-substrate prose has clear markers the auto-detector missed.
-# Anchored manually after reading the prose context.
 37	84	running to the left and vice versa.
 178	1	more frequently than bone.
 178	2	ratio of 2 to 1.
@@ -215,3 +53,21 @@
 194	2	had been discontinued;
 194	4	or defensive yü rituals divined.
 195	5	[In the tenth month.]
+21	4	dendrochronologically adjusted carbon-14 date
+21	9	the eighth century.
+78	14	dictionary. Following
+96	89	The inscriptions on the back of the plastrons
+101	104	Kuo in his attack on the Pa-fang
+101	105	If I am correct in supplying this meaning,
+46	6	"Ch'üeh divined."" This form"
+46	7	postface evolved with time, see sec.
+132	99	In the (next) ten days there will be no disaster
+132	100	POSTFACE
+135	116	as the charge.
+135	117	to read the cracks.
+135	118	Royal Family group).
+135	119	evolution. Thus
+135	120	period I. And
+135	121	verifications, later
+135	122	thirteen foxes
+135	123	other periods.
