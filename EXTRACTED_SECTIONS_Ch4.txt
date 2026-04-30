@@ -1,0 +1,39 @@
+================================================================================
+EXTRACTED CHAPTER 4 SECTIONS FROM OCR FILES
+================================================================================
+All sections extracted from /Users/nathanhill/Code/Keightley/build/ocr/cleaned_with_notes/
+
+================================================================================
+EXTRACTION RESULTS
+================================================================================
+
+✓ FOUND (8 sections):
+  - 4.1.1: Five Periods Introduction (p_0110.md, scan 110, printed 90)
+  - 4.3: Physical Criteria Overview (p_0139.md, scan 139, printed 121)
+  - 4.3.1: Bone vs Shell (p_0140.md, scan 140, printed 122)
+  - 4.3.1.1: The Diviners (p_0117.md, scan 117, printed 98)
+  - 4.3.1.9: Topics and Idioms (p_0139.md, scan 139, printed 121)
+  - 4.3.2: Initial Preparation (p_0140.md, scan 140, printed 122)
+  - 4.3.3: Archaeological Criteria (p_0145.md, scan 145, printed 128)
+  - 4.3.3.1: Pit Provenance (p_0146.md, scan 146, printed 129)
+
+✗ NOT FOUND (3 sections):
+  - 4.3.2.1: Bone Structure (Does not have standalone section marker)
+  - 4.3.2.3: Hollow Shapes (Does not have standalone section marker)  
+  - 4.3.2.4: Hollow Placement (Does not have standalone section marker)
+
+NOTES:
+- Sections 4.3.2.1, 4.3.2.3, and 4.3.2.4 are mentioned in the table of contents
+  (p_0009.md) but do not have their own section headers in the main text.
+- The content for these sections is embedded within surrounding pages as
+  subsections or continuations of 4.3.2 (Initial Preparation).
+- To properly reconstruct these sections, would need to:
+  1. Manually identify content boundaries (not marked by headers)
+  2. Infer which paragraphs belong to which subsection
+  3. Cross-reference with the printed book's page breaks
+  4. Use context from footnotes and references
+
+================================================================================
+DETAILED EXTRACTION STATUS
+================================================================================
+
