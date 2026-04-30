@@ -82,3 +82,14 @@
 
 % Bibliography (Phase 5)
 \addbibresource{bibliography/keightley.bib}
+
+% Numbered list item macro (Phase 10)
+% Formats inline numbered items while preserving prose flow
+% Marks items structurally for OCR validation and text analysis
+% Usage: Among factors are \listitem{1} the density; \listitem{2} the topic; ...
+% Renders as: Among factors are (1) the density; (2) the topic; ...
+\newcommand{\listitem}[1]{%
+  \textnormal{(\textbf{#1})}%
+}
+
+
