@@ -137,12 +137,9 @@ class WadeGilesConverter:
             if not self.should_replace(match, content, match.start()):
                 continue
             
-            # Build replacement
-            if with_fallback:
-                # Include Wade-Giles in comment for verification
-                replacement = f"{pinyin} % {wade_giles}"
-            else:
-                replacement = pinyin
+            # Build replacement - NO inline comments to avoid eating LaTeX content
+            # Just use the pinyin directly; Wade-Giles is logged in replacements
+            replacement = pinyin
             
             # Record replacement
             replacements.append({
