@@ -106,7 +106,7 @@ UNITS: dict[str, dict] = {
 }
 
 
-HEADING_RE = re.compile(r"^(\d+(?:\.\d+){1,3})\s+([^\n]{2,160})$", re.MULTILINE)
+HEADING_RE = re.compile(r"^(\d+(?:\.\d+){0,3})\s+([^\n]{2,160})$", re.MULTILINE)
 COMMENT_OPEN_RE = re.compile(r"<!--\s*(.+?)\s*-->")
 SOURCE_HDR_RE = re.compile(r"<!--\s*source:\s*scan p\.\s*(\d+),\s*printed p\.\s*([^,]+),\s*section:\s*([^ ]+)\s*-->")
 PAGE_NUM_LINE_RE = re.compile(r"^\s*\d{1,3}\s*$")
@@ -239,7 +239,24 @@ def process_body_text(body: str) -> str:
     for m in HEADING_RE.finditer(body):
         if _inside_fn(m.start()):
             continue
-        repl = f"@@HEADING@@{m.group(1)}@@{latex_escape(m.group(2).rstrip(' .'))}@@"
+        heading_marker = m.group(1)
+        # If it's a markdown header (one or more #), skip it
+        # Markdown headers should only appear with embedded section numbers
+        # (where the header is added BEFORE the embedded number)
+        # Don't emit the markdown header itself as a LaTeX command
+        if heading_marker.startswith("#"):
+            # Skip markdown headers - they're paired with numbered headers
+            continue
+        repl = f"@@HEADING@@{heading_marker}@@{latex_escape(m.group(2).rstrip(' .'))}@@"
+        spans.append((m.start(), m.end(), repl))
+    
+    # Also preserve markdown headers (but don't convert them - just mark them)
+    markdown_header_re = re.compile(r"^(#{1,4})\s+([^\n]{2,160})$", re.MULTILINE)
+    for m in markdown_header_re.finditer(body):
+        if _inside_fn(m.start()):
+            continue
+        # Mark as @@MDHEADER@@ so it passes through unescaped
+        repl = f"@@MDHEADER@@{m.group(1)}@@{m.group(2)}@@"
         spans.append((m.start(), m.end(), repl))
     spans.sort()
 
@@ -250,7 +267,10 @@ def process_body_text(body: str) -> str:
         parts.append(repl)
         pos = e
     parts.append(latex_escape(body[pos:]))
-    return "".join(parts)
+    result = "".join(parts)
+    # Restore markdown headers from markers
+    result = re.sub(r"@@MDHEADER@@(#{1,4})@@(.+?)@@", r"\1 \2", result)
+    return result
 
 
 FN_MARKER_RE = re.compile(r"@@FN@@(\d+)@@([AU])@@(.*?)@@/FN@@", re.DOTALL)
