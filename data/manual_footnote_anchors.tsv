@@ -195,3 +195,7 @@
 # === Chapter 5 page 154 (scan 172) — Evans-Pritchard quote ===
 # Note 91 (Evans-Pritchard 1937 pp. 270, 313): marker after second quote close.
 172	91	customs which invite easy explanations.”
+# Phase 6 / GV substrate: in-text markers that GV mis-OCR'd or dropped
+# (Tesseract auto-anchored these; GV needs manual rows).
+31	54	thickness (fig. 3).
+121	47	by the careers of engravers.

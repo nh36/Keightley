@@ -17,17 +17,18 @@ reproduces digit prefixes cleanly (5.,6.,7.,8.,9.,10. — not 5.,6.,7.,8.,g.,10.
 preserves macrons / en-dashes, and only struggles with multi-column bodies
 (which the bibliography uses but body chapters do not).
 
-Tesseract is still used for the **prose substrate** because the column-aware
-cleanup pipeline in Phase 2 ran against Tesseract output, and we don't want
-to redo that.  GV is used for:
+As of Phase 6 the **prose substrate is Google Vision** (cleaner prose, real
+digit/superscript markers; CJK overlay supplied separately by Tesseract via
+``scripts/04b_clean_gv.py``).  GV provides:
 
   1. note-block extraction          (note numbering + body text)
   2. marker detection in prose      (digit superscripts / suffixes)
+  3. body prose itself              (was Tesseract pre-Phase-6)
 
 Anchor placement:
 
   * Build a 24-char ASCII-letter signature from GV prose ending at the marker.
-  * fuzzy-locate that signature in Tesseract prose.
+  * fuzzy-locate that signature in the cleaned prose substrate.
   * **snap the position forward to the next word boundary** so the
     \\footnote{} marker doesn't land inside an OCR'd word.
 
@@ -39,6 +40,7 @@ Outputs:
 from __future__ import annotations
 
 import csv
+import os
 import re
 import sys
 from collections import defaultdict
@@ -47,11 +49,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_CSV = ROOT / "data" / "pages.csv"
-CLEAN_DIR = ROOT / "build" / "ocr" / "cleaned"
-OUT_DIR = ROOT / "build" / "ocr" / "cleaned_with_notes"
+# Allow A/B substrate testing via env vars (Phase 6 GV substrate work).
+# When set, e.g. CLEAN_DIR=cleaned_gv OUT_DIR=cleaned_with_notes_gv
+# INVENTORY_NAME=footnote_inventory_gv.tsv LOG_NAME=phase4_footnotes_gv.md
+CLEAN_DIR = ROOT / "build" / "ocr" / os.environ.get("CLEAN_DIR", "cleaned")
+OUT_DIR = ROOT / "build" / "ocr" / os.environ.get("OUT_DIR", "cleaned_with_notes")
 GV_PATH = ROOT / "source" / "Keightley_1978.txt"
-INVENTORY = ROOT / "build" / "qa" / "footnote_inventory.tsv"
-LOG = ROOT / "build" / "logs" / "phase4_footnotes.md"
+INVENTORY = ROOT / "build" / "qa" / os.environ.get("INVENTORY_NAME", "footnote_inventory.tsv")
+LOG = ROOT / "build" / "logs" / os.environ.get("LOG_NAME", "phase4_footnotes.md")
 
 
 # Note bodies in GV are dependably "<digit(s)>. <Capital>" or, occasionally,

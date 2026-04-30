@@ -34,6 +34,7 @@ its OCR-era footnote-marker characters and (Author Year) citation strings.
 from __future__ import annotations
 
 import csv
+import os
 import re
 import sys
 from collections import defaultdict
@@ -41,7 +42,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_CSV = ROOT / "data" / "pages.csv"
-CLEAN_DIR = ROOT / "build" / "ocr" / "cleaned_with_notes"
+CLEAN_DIR = ROOT / "build" / "ocr" / os.environ.get("OUT_DIR", "cleaned_with_notes")
 if not CLEAN_DIR.exists():
     CLEAN_DIR = ROOT / "build" / "ocr" / "cleaned"
 TEX_DIR = ROOT / "tex"
