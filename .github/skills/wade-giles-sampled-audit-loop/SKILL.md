@@ -19,7 +19,7 @@ Follow these editorial constraints throughout:
    - exact sampled leftovers visible in the current PDF
    - clearly wrong simplified forms in otherwise established Chinese names or places
 5. Keep `data/wade_giles_audit.tsv` aligned with the current chapter text, but preserve curated `pinyin` and `notes` for surviving rows.
-6. Append new resolved findings to `data/wade_giles_resolved_history.tsv` so there is a cumulative record of what was found and fixed over time.
+6. When a term disappears from the live audit, retire that row into `data/wade_giles_resolved_history.tsv` so the two TSVs stay in sync.
 
 ## Standard loop
 
@@ -54,11 +54,9 @@ Follow these editorial constraints throughout:
    python3 .github/skills/wade-giles-sampled-audit-loop/refresh_wade_giles_audit.py
    ```
 
-   This regenerates the live audit using `scripts/audit_wade_giles.py` and merges it back into `data/wade_giles_audit.tsv` while preserving the existing `pinyin` and `notes` columns.
+    This regenerates the live audit using `scripts/audit_wade_giles.py`, merges it back into `data/wade_giles_audit.tsv` while preserving the existing `pinyin` and `notes` columns, and appends any rows that disappeared from the live audit into `data/wade_giles_resolved_history.tsv`.
 
-7. Record any newly resolved items in `data/wade_giles_resolved_history.tsv`. Include the commit or worktree provenance, the original form, the resolved form, and a short note about the kind of fix.
-
-8. If the user asked for the full loop, commit and push the resulting changes. Keep the commit focused on that pass. A typical message is:
+7. If the user asked for the full loop, commit and push the resulting changes. Keep the commit focused on that pass. A typical message is:
 
    ```bash
    git add tex/ data/wade_giles_audit.tsv data/wade_giles_resolved_history.tsv .github/skills/wade-giles-sampled-audit-loop
@@ -73,7 +71,7 @@ Summarize:
 - which pages were sampled
 - what safe fixes were made
 - whether the live TSV was refreshed
-- whether the cumulative resolved-history TSV was updated
+- whether rows were retired into the cumulative resolved-history TSV
 - whether commit/push was completed
 
 If a sample yields only ambiguous cases, say so plainly and do not force conversions.

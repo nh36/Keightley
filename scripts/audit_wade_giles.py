@@ -94,14 +94,15 @@ class WadeGilesAuditor:
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # More precise combined pattern
-        # Apostrophe patterns: Ch'en, T'ang, etc.
-        # Hyphenated patterns: Ping-pien, Lung-shan
-        # Specific known names: Tung, Hsü, Chang, etc.
-        combined_pattern = r"\b([A-Z][a-z]*'[a-z]+|[A-Z][a-z]+-[a-z]+(?:-[a-z]+)*|Tung|Hsü|Hu(?:\s+[A-Z][a-z]+)?|Hsin|Ting|Chia(?:ng)?|Ch'en|Ch'ien|Chou|Shang|Shih|Shima|Chin|Han|Li(?!\s+Chi)|Liu|Yen|Hsiung|Chih|Chu|Kung|Kuo|Chueh|Cheng|Fu-ho|Erh-li|Lung-shan|Shih-chi|Chang|Ping|Yi|Ch(?=i|u|o|a|e|')|Chuang|Tsao|Hsiang|Ming)\b"
+        # More precise combined pattern.
+        # Handle internal apostrophes correctly, including hyphenated forms like:
+        #   Ch'en, Ch'ien, Ts'ui-pien, Yi-p'ing
+        apostrophed = r"[A-Z][A-Za-züÜ]*['’][A-Za-züÜ]+(?:-(?:[A-Za-züÜ]+(?:['’][A-Za-züÜ]+)?))*"
+        hyphenated = r"[A-Z][A-Za-züÜ]+(?:-(?:[A-Za-züÜ]+(?:['’][A-Za-züÜ]+)?))+"
+        combined_pattern = rf"\b({apostrophed}|{hyphenated}|Tung|Hsü|Hu(?:\s+[A-Z][a-z]+)?|Hsin|Ting|Chia(?:ng)?|Ch'en|Ch'ien|Chou|Shang|Shih|Shima|Chin|Han|Li(?!\s+Chi)|Liu|Yen|Hsiung|Chih|Chu|Kung|Kuo|Chueh|Cheng|Fu-ho|Erh-li|Lung-shan|Shih-chi|Chang|Ping|Yi|Ch(?=i|u|o|a|e|')|Chuang|Tsao|Hsiang|Ming)\b"
         
         # Exclude common English words
-        english_words = {'The', 'This', 'These', 'There', 'That', 'Their', 'They', 'Then', 'Than', 'Them', 'What', 'When', 'Where', 'Why', 'How', 'Who', 'Which', 'Were', 'Ting', 'He', 'She', 'His', 'Her', 'Him', 'Or', 'And', 'For', 'From', 'Has', 'Have', 'Had', 'Can', 'Did', 'Do', 'Does', 'Ch', 'A', 'An', 'Is', 'Are', 'Be', 'Was', 'By'}
+        english_words = {'The', 'This', 'These', 'There', 'That', 'Their', 'They', 'Then', 'Than', 'Them', 'What', 'When', 'Where', 'Why', 'How', 'Who', 'Which', 'Were', 'Ting', 'He', 'She', 'His', 'Her', 'Him', 'Or', 'And', 'For', 'From', 'Has', 'Have', 'Had', 'Can', 'Did', 'Do', 'Does', 'Ch', 'A', 'An', 'Is', 'Are', 'Be', 'Was', 'By', 'Wade-Giles'}
         
         for match in re.finditer(combined_pattern, content):
             term = match.group(1).strip()
