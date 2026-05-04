@@ -83,6 +83,16 @@ class WadeGilesAuditor:
             "Kit-ming",
             "Lü's",
             "Ming",
+            "Lien-kuan",
+            "T'aishun",
+            "Shu-chi",
+            "Ya-nung",
+            "Cho-ts’un",
+            "Ch'i-chi",
+            "Chu",
+            "K'o",
+            "Ling-shih",
+            "Kung",
         }
         
         # Wade-Giles patterns to match
