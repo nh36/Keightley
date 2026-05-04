@@ -36,6 +36,52 @@ class WadeGilesAuditor:
             'ch04': self.root_dir / 'tex/chapters/ch04.tex',
             'ch05': self.root_dir / 'tex/chapters/ch05.tex',
         }
+
+        # Terms that are not Wade-Giles cleanup targets even though the broad regexes catch them.
+        self.exact_exclusions = {
+            "Shima",
+            "Barnard's",
+            "Karlgren's",
+            "Hao's",
+            "Benedetti-Pichler",
+            "Evans-Pritchard",
+            "Pyro-scapulimancy",
+            "Pyro-Scapulimancy",
+            "Attila's",
+            "Berry's",
+            "Maenchen-Helfen",
+            "Lot-Falck",
+            "Van-kiem",
+            "School's",
+            "Western-language",
+            "E's",
+            "Keng's",
+            "Peng's",
+            "Huang's",
+            "Deydier's",
+            "Boodberg's",
+            "Nivison's",
+            "Britton's",
+            "Chalfant's",
+            "Kunio's",
+            "University's",
+            "Lefeuvre's",
+            "Lindholm's",
+            "Oracle-Bone",
+            "Oracle-bone",
+            "Sino-Tibetan",
+            "Sino-Japanese",
+            "Many-such",
+            "Spill-over",
+            "III-IV",
+            "IV'a",
+            "Tui-X",
+            "Tui-diviner",
+            "Couling-Chalfant",
+            "Yat-shing",
+            "Chee-yee",
+            "Kit-ming",
+        }
         
         # Wade-Giles patterns to match
         # These patterns capture common Wade-Giles romanization characteristics
@@ -84,6 +130,28 @@ class WadeGilesAuditor:
         # Remove newlines and excessive whitespace
         context = ' '.join(context.split())
         return context
+
+    def strip_latex_comments(self, text):
+        """Remove LaTeX comments so comment-only noise does not enter the audit."""
+        stripped_lines = []
+        for line in text.splitlines():
+            comment_start = None
+            for index, char in enumerate(line):
+                if char != '%':
+                    continue
+                backslash_count = 0
+                cursor = index - 1
+                while cursor >= 0 and line[cursor] == '\\':
+                    backslash_count += 1
+                    cursor -= 1
+                if backslash_count % 2 == 0:
+                    comment_start = index
+                    break
+            if comment_start is None:
+                stripped_lines.append(line)
+            else:
+                stripped_lines.append(line[:comment_start])
+        return '\n'.join(stripped_lines)
     
     def audit_chapter(self, chapter_key):
         """Audit a single chapter for Wade-Giles terms."""
@@ -92,7 +160,7 @@ class WadeGilesAuditor:
             return
         
         with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()
+            content = self.strip_latex_comments(f.read())
         
         # More precise combined pattern.
         # Handle internal apostrophes correctly, including hyphenated forms like:
@@ -108,7 +176,7 @@ class WadeGilesAuditor:
             term = match.group(1).strip()
             
             # Skip English words
-            if term in english_words:
+            if term in english_words or term in self.exact_exclusions:
                 continue
             
             # Record this finding
