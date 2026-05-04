@@ -269,7 +269,12 @@ class WadeGilesAuditor:
         print("="*60)
         print(f"Unique Wade-Giles terms found: {total_unique}")
         print(f"Total occurrences: {total_occurrences}")
-        print(f"Average frequency per term: {total_occurrences / total_unique:.1f}")
+        if total_unique:
+            print(f"Average frequency per term: {total_occurrences / total_unique:.1f}")
+        else:
+            print("Average frequency per term: 0.0")
+            print("No Wade-Giles terms remain.")
+            return
         
         # Top 20 terms
         print("\nTop 20 Most Frequent Wade-Giles Terms:")
