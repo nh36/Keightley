@@ -81,6 +81,8 @@ class WadeGilesAuditor:
             "Yat-shing",
             "Chee-yee",
             "Kit-ming",
+            "Lü's",
+            "Ming",
         }
         
         # Wade-Giles patterns to match
