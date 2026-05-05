@@ -8,6 +8,9 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 BUILD_OUTPUT="$REPO_ROOT/build/output"
 TEX_DIR="$REPO_ROOT/tex"
 TEX_SOURCE="$TEX_DIR/main.tex"
+PINYIN_TSV="$REPO_ROOT/data/pinyin_terms.tsv"
+PINYIN_TEX="$TEX_DIR/generated/pinyin_terms.tex"
+PINYIN_SCRIPT="$REPO_ROOT/scripts/generate_pinyin_terms_tex.py"
 
 # Colors for output
 GREEN='\033[0;32m'
@@ -20,6 +23,9 @@ echo "  Output: $BUILD_OUTPUT/main.pdf"
 
 # Ensure output directory exists
 mkdir -p "$BUILD_OUTPUT"
+
+echo "Generating pinyin term registrations..."
+python3 "$PINYIN_SCRIPT" --input "$PINYIN_TSV" --output "$PINYIN_TEX" > /dev/null
 
 # Resolve xelatex from PATH or known MacTeX install location
 XELATEX_BIN="${XELATEX_BIN:-}"

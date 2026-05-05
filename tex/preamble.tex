@@ -92,4 +92,112 @@
   \textnormal{(\textbf{#1})}%
 }
 
+% Phase 13 groundwork: chapter-aware pinyin macros
+% ===============================================
+% Source of truth: data/pinyin_terms.tsv
+% Generated registrations: tex/generated/pinyin_terms.tex
+%
+% Usage:
+%   \pinyinterm{term-key}  -> first use in a chapter: 漢字 Pinyin
+%                             later uses in that chapter: Pinyin
+%   \pinyinfull{term-key}  -> always 漢字 Pinyin
+%   \pinyintext{term-key}  -> always Pinyin only
+%   \pinyinhanzi{term-key} -> always 漢字 only
+%
+% Pinyin style is data-driven:
+%   - person/place => pinyin_plain
+%   - title        => pinyin_accented
+%   - other terms  => accented if present, otherwise plain
+\ExplSyntaxOn
+\prop_new:N \g_keightley_pinyin_category_prop
+\prop_new:N \g_keightley_pinyin_hanzi_prop
+\prop_new:N \g_keightley_pinyin_plain_prop
+\prop_new:N \g_keightley_pinyin_accented_prop
+\prop_new:N \g_keightley_pinyin_seen_prop
 
+\msg_new:nnn { keightley } { unknown-pinyin-key }
+  { Unknown~pinyin~key~'#1'.~Add~it~to~data/pinyin_terms.tsv~and~rebuild. }
+
+\cs_new_protected:Npn \keightley_pinyin_register:nnnnn #1#2#3#4#5
+  {
+    \prop_gput:Nnn \g_keightley_pinyin_category_prop {#1} {#2}
+    \prop_gput:Nnn \g_keightley_pinyin_hanzi_prop {#1} {#3}
+    \prop_gput:Nnn \g_keightley_pinyin_plain_prop {#1} {#4}
+    \prop_gput:Nnn \g_keightley_pinyin_accented_prop {#1} {#5}
+  }
+
+\cs_new_protected:Npn \keightley_pinyin_assert_known:n #1
+  {
+    \prop_if_in:NnF \g_keightley_pinyin_hanzi_prop {#1}
+      { \msg_error:nnn { keightley } { unknown-pinyin-key } {#1} }
+  }
+
+\cs_new:Npn \keightley_pinyin_hanzi_value:n #1
+  {
+    \keightley_pinyin_assert_known:n {#1}
+    \prop_item:Nn \g_keightley_pinyin_hanzi_prop {#1}
+  }
+
+\cs_new:Npn \keightley_pinyin_plain_value:n #1
+  {
+    \keightley_pinyin_assert_known:n {#1}
+    \prop_item:Nn \g_keightley_pinyin_plain_prop {#1}
+  }
+
+\cs_new:Npn \keightley_pinyin_accented_value:n #1
+  {
+    \keightley_pinyin_assert_known:n {#1}
+    \prop_item:Nn \g_keightley_pinyin_accented_prop {#1}
+  }
+
+\cs_new:Npn \keightley_pinyin_text_raw_value:n #1
+  {
+    \keightley_pinyin_assert_known:n {#1}
+    \str_case:enF { \prop_item:Nn \g_keightley_pinyin_category_prop {#1} }
+      {
+        {person}{\keightley_pinyin_plain_value:n {#1}}
+        {place}{\keightley_pinyin_plain_value:n {#1}}
+        {title}{\keightley_pinyin_accented_value:n {#1}}
+      }
+      {
+        \tl_if_blank:eTF { \prop_item:Nn \g_keightley_pinyin_accented_prop {#1} }
+          { \keightley_pinyin_plain_value:n {#1} }
+          { \keightley_pinyin_accented_value:n {#1} }
+      }
+  }
+
+\cs_new:Npn \keightley_pinyin_text_value:n #1
+  {
+    \keightley_pinyin_assert_known:n {#1}
+    \str_case:enF { \prop_item:Nn \g_keightley_pinyin_category_prop {#1} }
+      {
+        {title}{\textit{\keightley_pinyin_text_raw_value:n {#1}}}
+      }
+      { \keightley_pinyin_text_raw_value:n {#1} }
+  }
+
+\cs_new:Npn \keightley_pinyin_full_value:n #1
+  { \keightley_pinyin_hanzi_value:n {#1}~\keightley_pinyin_text_value:n {#1} }
+
+\cs_new_protected:Npn \keightley_pinyin_use:n #1
+  {
+    \keightley_pinyin_assert_known:n {#1}
+    \prop_if_in:NnTF \g_keightley_pinyin_seen_prop {#1}
+      { \keightley_pinyin_text_value:n {#1} }
+      {
+        \prop_gput:Nnn \g_keightley_pinyin_seen_prop {#1} { seen }
+        \keightley_pinyin_full_value:n {#1}
+      }
+  }
+
+\AddToHook{cmd/chapter/before}{\prop_gclear:N \g_keightley_pinyin_seen_prop}
+
+\DeclareRobustCommand{\RegisterPinyinTerm}[5]
+  { \keightley_pinyin_register:nnnnn {#1}{#2}{#3}{#4}{#5} }
+\DeclareRobustCommand{\pinyinterm}[1]{ \keightley_pinyin_use:n {#1} }
+\DeclareRobustCommand{\pinyinfull}[1]{ \keightley_pinyin_full_value:n {#1} }
+\DeclareRobustCommand{\pinyintext}[1]{ \keightley_pinyin_text_value:n {#1} }
+\DeclareRobustCommand{\pinyinhanzi}[1]{ \keightley_pinyin_hanzi_value:n {#1} }
+\ExplSyntaxOff
+
+\input{./generated/pinyin_terms}
