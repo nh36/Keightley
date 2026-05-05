@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 REQUIRED_COLUMNS = ["key", "category", "hanzi", "pinyin_plain", "pinyin_accented"]
-VALID_CATEGORIES = {"person", "place", "title", "term"}
+VALID_CATEGORIES = {"person", "place", "title", "term", "day"}
 DEFAULT_INPUT = Path("data/pinyin_terms.tsv")
 DEFAULT_OUTPUT = Path("tex/generated/pinyin_terms.tex")
 
@@ -60,9 +60,9 @@ def read_rows(input_path: Path) -> list[dict[str, str]]:
                 raise ValueError(
                     f"Row {line_no}: {category} entries require pinyin_plain"
                 )
-            if category == "title" and not clean["pinyin_accented"]:
+            if category in {"title", "day"} and not clean["pinyin_accented"]:
                 raise ValueError(
-                    f"Row {line_no}: title entries require pinyin_accented"
+                    f"Row {line_no}: {category} entries require pinyin_accented"
                 )
 
             seen_keys.add(key)

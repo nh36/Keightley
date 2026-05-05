@@ -18,6 +18,7 @@ def test_generate_terms_tex_renders_expected_registrations(tmp_path):
                 "li-fanggui\tperson\t李方桂\tLi Fanggui\tLǐ Fāngguì",
                 "renmin-gongyuan\tplace\t人民公園\tRenmin Gongyuan\tRénmín Gōngyuán",
                 "dalu-zazhi\ttitle\t大陸雜誌\tDalu zazhi\tDàlù zázhì",
+                "guiyou\tday\t癸酉\tGuiyou\tGuǐyǒu",
             ]
         )
         + "\n",
@@ -39,3 +40,4 @@ def test_generate_terms_tex_renders_expected_registrations(tmp_path):
         r"\RegisterPinyinTerm{dalu-zazhi}{title}{大陸雜誌}{Dalu zazhi}{Dàlù zázhì}"
         in content
     )
+    assert r"\RegisterPinyinTerm{guiyou}{day}{癸酉}{Guiyou}{Guǐyǒu}" in content

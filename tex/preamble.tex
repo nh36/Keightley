@@ -106,7 +106,7 @@
 %
 % Pinyin style is data-driven:
 %   - person/place => pinyin_plain
-%   - title        => pinyin_accented
+%   - title/day    => pinyin_accented
 %   - other terms  => accented if present, otherwise plain
 \ExplSyntaxOn
 \prop_new:N \g_keightley_pinyin_category_prop
@@ -158,6 +158,7 @@
         {person}{\keightley_pinyin_plain_value:n {#1}}
         {place}{\keightley_pinyin_plain_value:n {#1}}
         {title}{\keightley_pinyin_accented_value:n {#1}}
+        {day}{\keightley_pinyin_accented_value:n {#1}}
       }
       {
         \tl_if_blank:eTF { \prop_item:Nn \g_keightley_pinyin_accented_prop {#1} }
@@ -179,6 +180,12 @@
 \cs_new:Npn \keightley_pinyin_full_value:n #1
   { \keightley_pinyin_hanzi_value:n {#1}~\keightley_pinyin_text_value:n {#1} }
 
+\cs_new:Npn \keightley_pinyin_possessive_text_value:n #1
+  { \keightley_pinyin_text_value:n {#1}'s }
+
+\cs_new:Npn \keightley_pinyin_possessive_full_value:n #1
+  { \keightley_pinyin_hanzi_value:n {#1}~\keightley_pinyin_text_value:n {#1}'s }
+
 \cs_new_protected:Npn \keightley_pinyin_use:n #1
   {
     \keightley_pinyin_assert_known:n {#1}
@@ -190,6 +197,17 @@
       }
   }
 
+\cs_new_protected:Npn \keightley_pinyin_possessive_use:n #1
+  {
+    \keightley_pinyin_assert_known:n {#1}
+    \prop_if_in:NnTF \g_keightley_pinyin_seen_prop {#1}
+      { \keightley_pinyin_possessive_text_value:n {#1} }
+      {
+        \prop_gput:Nnn \g_keightley_pinyin_seen_prop {#1} { seen }
+        \keightley_pinyin_possessive_full_value:n {#1}
+      }
+  }
+
 \AddToHook{cmd/chapter/before}{\prop_gclear:N \g_keightley_pinyin_seen_prop}
 
 \DeclareRobustCommand{\RegisterPinyinTerm}[5]
@@ -197,6 +215,7 @@
 \DeclareRobustCommand{\pinyinterm}[1]{ \keightley_pinyin_use:n {#1} }
 \DeclareRobustCommand{\pinyinfull}[1]{ \keightley_pinyin_full_value:n {#1} }
 \DeclareRobustCommand{\pinyintext}[1]{ \keightley_pinyin_text_value:n {#1} }
+\DeclareRobustCommand{\pinyinposs}[1]{ \keightley_pinyin_possessive_use:n {#1} }
 \DeclareRobustCommand{\pinyinhanzi}[1]{ \keightley_pinyin_hanzi_value:n {#1} }
 \ExplSyntaxOff
 
