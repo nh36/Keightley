@@ -1,4 +1,6 @@
 key	category	hanzi	pinyin_plain	pinyin_accented
+shang	person	商	Shang	Shāng
+zhou-dynasty	person	周	Zhou	Zhōu
 renmin-gongyuan	place	人民公園	Renmin Gongyuan	Rénmín Gōngyuán
 yinxu	place	殷墟	Yinxu	Yīnxū
 yinxu-title	title	殷墟	Yinxu	Yīnxū
@@ -129,3 +131,5 @@ hougang	place	後岡	Hougang	Hòugāng
 yuzao	title	玉藻	Yuzao	Yùzǎo
 kaogu	title	考古	Kaogu	Kǎogǔ
 hewen	title	合文	Hewen	Héwén
+kufang	title	庫方	Kufang	Kùfāng
+cuibian	title	崔編	Cuibian	Cuībiān
