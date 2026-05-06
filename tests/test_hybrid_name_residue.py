@@ -131,6 +131,13 @@ SUSPICIOUS_STRINGS = [
     "铁阴i",
     "铁阴ü",
     "铁阴ün 108.1",
+    "graphs 1 and 2 may be read as chia-hsü",
+    "pu shou nien",
+    "the phrase t'ien kuan",
+    "with t'ien having the sense either of \"hunt\"",
+    "the second graph is nien",
+    "he identifies as ch'iu",
+    "was ancestral to ch'ou",
 ]
 
 

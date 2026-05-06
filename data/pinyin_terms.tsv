@@ -87,6 +87,9 @@ xubian	title	續編	Xubian	Xùbiān
 xubu	title	續補	Xubu	Xùbǔ
 waibian	title	外編	Waibian	Wàibiān
 jiaguwen	term	甲骨文	Jiaguwen	Jiǎgǔwén
+tian-graph	term	田	tian	tián
+nian-harvest	term	年	nian	nián
+kaoshi	term	考釋	kaoshi	kǎoshì
 jiaguwen-bian	title	甲骨文編	Jiaguwen bian	Jiǎgǔwén biān
 jiaozheng-jiaguwen-bian	title	校正甲骨文編	Jiaozheng jiaguwen bian	Jiàozhèng Jiǎgǔwén biān
 jinwen-bian	title	金文編	Jinwen bian	Jīnwén biān
@@ -139,6 +142,7 @@ yu-xingwu	person	于省吾	Yu Xingwu	Yú Xǐngwú
 li-shi	person	李實	Li Shi	Lǐ Shí
 yangshao	place	仰韶	Yangshao	Yǎngsháo
 jiachen	day	甲辰	Jiachen	Jiǎchén
+jiaxu	day	甲戌	Jiaxu	Jiǎxū
 jiashen	day	甲申	Jiashen	Jiǎshēn
 jiazi	day	甲子	Jiazi	Jiǎzǐ
 jiawu	day	甲午	Jiawu	Jiǎwǔ
