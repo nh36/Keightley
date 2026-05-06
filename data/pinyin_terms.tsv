@@ -26,6 +26,7 @@ ling-chunsheng	person	凌純聲	Ling Chunsheng	Líng Chúnshēng
 li-xueqin	person	李學勤	Li Xueqin	Lǐ Xuéqín
 luo-zhenyu	person	羅振玉	Luo Zhenyu	Luó Zhènyù
 zhang-guangzhi	person	張光直	Zhang Guangzhi	Zhāng Guāngzhí
+jin-xiangheng	person	金祥恆	Jin Xiangheng	Jīn Xiánghéng
 yang-zhongjian	person	楊鍾健	Yang Zhongjian	Yáng Zhōngjiàn
 liu-dongsheng	person	劉東生	Liu Dongsheng	Liú Dōngshēng
 li-jingtan	person	李景聃	Li Jingtan	Lǐ Jǐngtán
@@ -85,15 +86,26 @@ hebian	title	何編	Hebian	Hébiān
 xubian	title	續編	Xubian	Xùbiān
 waibian	title	外編	Waibian	Wàibiān
 jiaguwen-bian	title	甲骨文編	Jiaguwen bian	Jiǎgǔwén biān
+jiaozheng-jiaguwen-bian	title	校正甲骨文編	Jiaozheng jiaguwen bian	Jiàozhèng Jiǎgǔwén biān
 jinwen-bian	title	金文編	Jinwen bian	Jīnwén biān
 jiaguwenzi-jishi	title	甲骨文字集釋	Jiaguwenzi jishi	Jiǎgǔwénzì jíshì
 jinwen-gulin	title	金文詁林	Jinwen gulin	Jīnwén gǔlín
 yindai-zhenbu-renwu-tongkao	title	殷代貞卜人物通考	Yindai zhenbu renwu tongkao	Yīndài zhēnbǔ rénwù tōngkǎo
 wushinian-jiaguxue-lunzhumu	title	五十年甲骨學論著目	Wushinian jiaguxue lunzhumu	Wǔshínián jiǎgǔxué lùnzhùmù
+xu-jiaguwen-bian	title	續甲骨文編	Xu jiaguwen bian	Xù Jiǎgǔwén biān
 zhouli	title	周禮	Zhouli	Zhōulǐ
 liji	title	禮記	Liji	Lǐjì
 yili	title	儀禮	Yili	Yílǐ
 shuowen	title	说文	Shuowen	Shuōwén
+shijing-ages	title	世經	Shijing	Shìjīng
+santongli	title	三統曆	Santongli	Sāntǒnglì
+shangshu	title	尚書	Shangshu	Shàngshū
+hanshu	title	漢書	Hanshu	Hànshū
+shiji	title	史記	Shiji	Shǐjì
+lu-shijia	title	魯世家	Lu shijia	Lǔ shìjiā
+guben-zhushu-jinian	title	古本竹書紀年	Guben zhushu jinian	Gǔběn Zhúshū Jìnián
+diwang-shiji	title	帝王世紀	Diwang shiji	Dìwáng shìjì
+mengzi	title	孟子	Mengzi	Mèngzǐ
 dong-zuobin	person	董 作宾	Dong Zuobin	Dǒng Zuòbīn
 dong-short	person	董	Dong	Dǒng
 xu-jinxiong	person	徐 金雄	Xu Jinxiong	Xú Jīnxióng
@@ -110,6 +122,7 @@ xu-yuxuan	person	徐余瑄	Xu Yuxuan	Xú Yúxuān
 zhu-fangpu	person	朱芳圃	Zhu Fangpu	Zhū Fāngpǔ
 lin-jieming	person	林潔明	Lin Jieming	Lín Jiémíng
 sima-qian	person	司馬遷	Sima Qian	Sīmǎ Qiān
+liu-xin	person	劉歆	Liu Xin	Liú Xīn
 yu-xingwu	person	于省吾	Yu Xingwu	Yú Xǐngwú
 li-shi	person	李實	Li Shi	Lǐ Shí
 yangshao	place	仰韶	Yangshao	Yǎngsháo

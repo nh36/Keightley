@@ -1,4 +1,4 @@
-"""Regression checks for known hybrid CJK+Latin residue in live TeX."""
+"""Regression checks for known hybrid and citation residue in live TeX."""
 
 from pathlib import Path
 
@@ -34,6 +34,39 @@ SUSPICIOUS_STRINGS = [
     "刘-lu",
     "颜 Yün",
     "李 史",
+    "金 祥-heng",
+    "徐 chia-ku wenpien",
+    "徐 chia-ku wen-pien",
+    "乙-wen",
+    "蛟城 chia-ku wen-pien",
+    "Chin Hsiang-heng",
+    "Hsü chia-ku wen-pien",
+    "Chiao-cheng chia-ku wen-pien",
+    r"\pinyinterm{jiaguwen-bian} \pinyinterm{jiaguwen-bian}",
+    "the 安陽 site",
+    "at 安陽 that",
+    "安陽 fa-chiieh pao-kao",
+    "安陽 remains",
+    "安陽 material",
+    "安陽 diviners",
+    "The excavation at 小屯",
+    "in the 小屯 area",
+    "south of 小屯",
+    "sites at 小屯",
+    "For the description of 小屯",
+    "Hsiao-t'un",
+    "Ssu-ma Ch'ien",
+    "Shih-ching",
+    "San-t'ung-li",
+    "Shang-shu",
+    "Han-shu",
+    "Shih-chi",
+    "Tso-chuan",
+    "Meng-tzu",
+    "Ku-pen chu-shu chi-nien",
+    "Ti-wang shih-chi",
+    "wang chan yüeh",
+    "wang chan pu yüeh",
 ]
 
 
