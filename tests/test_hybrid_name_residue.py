@@ -158,6 +158,14 @@ SUSPICIOUS_STRINGS = [
     "1.89",
     "10).87",
     "diviner(s. Ta",
+    "ming-tz'u",
+    "The ten-day week (hsün )",
+    "hsün wang huo",
+    "ling-kuei",
+    "ming-kuei",
+    r"\pinyinterm{shang}-shu",
+    "20. The crack notation may possibly be",
+    "21. The phrase ling-kuei",
 ]
 
 
