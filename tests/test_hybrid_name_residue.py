@@ -95,6 +95,18 @@ SUSPICIOUS_STRINGS = [
     r"\pinyinterm{jiaguwenzi-jishi} X",
     "甲骨-hsüeh cannot be divorced from chin-shih-hsüeh",
     "yüanë",
+    "島 Sōrui",
+    "島 Kunio",
+    "Shima's Sōrui",
+    "Shima Kunio. Inkyo bokuji sōrui, 2d rev. ed.",
+    "With the exception of the references to Shima's Inkyo bokuji sōrui",
+    "Bernhard Karlgren, Grammata Serica Recensa",
+    "Tōdō Akiyasu, Kanji gogen jiten",
+    "Katō Joken, Kanji no kigen",
+    "Particularly useful are Grammata Serica Recensa",
+    "Hsu chia-ku nien-piao",
+    "Hsü chia-ku nien-piao",
+    "徐 chia-ku nien-piao",
 ]
 
 
