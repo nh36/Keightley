@@ -84,7 +84,9 @@ qianbian	title	前編	Qianbian	Qiánbiān
 houbian	title	侯编	Houbian	Hòubiān
 hebian	title	何編	Hebian	Hébiān
 xubian	title	續編	Xubian	Xùbiān
+xubu	title	續補	Xubu	Xùbǔ
 waibian	title	外編	Waibian	Wàibiān
+jiaguwen	term	甲骨文	Jiaguwen	Jiǎgǔwén
 jiaguwen-bian	title	甲骨文編	Jiaguwen bian	Jiǎgǔwén biān
 jiaozheng-jiaguwen-bian	title	校正甲骨文編	Jiaozheng jiaguwen bian	Jiàozhèng Jiǎgǔwén biān
 jinwen-bian	title	金文編	Jinwen bian	Jīnwén biān
@@ -104,6 +106,7 @@ liji	title	禮記	Liji	Lǐjì
 yili	title	儀禮	Yili	Yílǐ
 shuowen	title	说文	Shuowen	Shuōwén
 shijing-ages	title	世經	Shijing	Shìjīng
+shijing-classic	title	詩經	Shijing	Shījīng
 santongli	title	三統曆	Santongli	Sāntǒnglì
 shangshu	title	尚書	Shangshu	Shàngshū
 hanshu	title	漢書	Hanshu	Hànshū
@@ -114,6 +117,7 @@ diwang-shiji	title	帝王世紀	Diwang shiji	Dìwáng shìjì
 mengzi	title	孟子	Mengzi	Mèngzǐ
 dong-zuobin	person	董 作宾	Dong Zuobin	Dǒng Zuòbīn
 dong-short	person	董	Dong	Dǒng
+dong-tonghe	person	董同龢	Dong Tonghe	Dǒng Tónghé
 xu-jinxiong	person	徐 金雄	Xu Jinxiong	Xú Jīnxióng
 xu-jinxiong-tight	person	徐金雄	Xu Jinxiong	Xú Jīnxióng
 zhou-hongxiang	person	周 洪祥	Zhou Hongxiang	Zhōu Hóngxiáng
@@ -181,6 +185,7 @@ wu-yi	person	武乙	Wu Yi	Wǔ Yǐ
 wen-wu-ding	person	文武丁	Wen Wu Ding	Wén Wǔ Dīng
 di-yi	person	帝乙	Di Yi	Dì Yǐ
 di-xin	person	帝辛	Di Xin	Dì Xīn
+di-high-god	term	帝	Di	Dì
 wu-geng	person	武庚	Wu Geng	Wǔ Gēng
 renwen	title	人文	Renwen	Rénwén
 zhuihe	title	綴合	Zhuihe	Zhuìhé
@@ -199,6 +204,7 @@ tongxuan	title	通选	Tongxuan	Tōngxuǎn
 chaocun	title	朝村	Chaocun	Cháocūn
 fujia-title	title	傅家	Fujia	Fùjiā
 chen-mengjia-spaced	person	陳 孟家	Chen Mengjia	Chén Mèngjiā
+chen-zhimai	person	陳志邁	Chen Zhimai	Chén Zhìmài
 guo-moruo-spaced	person	郭 沫若	Guo Moruo	Guō Mòruò
 li-xueqin-spaced	person	李 学琴	Li Xueqin	Lǐ Xuéqín
 gao-quxun	person	高去尋	Gao Quxun	Gāo Qùxún
