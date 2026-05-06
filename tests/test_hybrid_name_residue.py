@@ -138,6 +138,16 @@ SUSPICIOUS_STRINGS = [
     "the second graph is nien",
     "he identifies as ch'iu",
     "was ancestral to ch'ou",
+    "Quch divined:",
+    "Ch üeh divined:",
+    "Chih Kuo",
+    "Hsia Wei",
+    "Hsü-pien",
+    "Hsüan",
+    "Fu Hsi",
+    "Hsia Nai",
+    "Hsinhua-she",
+    "k'ao-shih, p. 265",
 ]
 
 
