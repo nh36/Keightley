@@ -148,6 +148,16 @@ SUSPICIOUS_STRINGS = [
     "Hsia Nai",
     "Hsinhua-she",
     "k'ao-shih, p. 265",
+    "Rénwén shakubun",
+    "人文 shakubun",
+    "upon which 董",
+    "which 董 identified as diviners' names",
+    "Ho, Ch'u, and Ta divined",
+    "1931.35",
+    "1.79",
+    "1.89",
+    "10).87",
+    "diviner(s. Ta",
 ]
 
 
