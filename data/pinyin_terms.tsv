@@ -1,6 +1,7 @@
 key	category	hanzi	pinyin_plain	pinyin_accented
 shang	person	商	Shang	Shāng
 zhou-dynasty	person	周	Zhou	Zhōu
+han-dynasty	person	漢	Han	Hàn
 renmin-gongyuan	place	人民公園	Renmin Gongyuan	Rénmín Gōngyuán
 yinxu	place	殷墟	Yinxu	Yīnxū
 yinxu-title	title	殷墟	Yinxu	Yīnxū
@@ -13,13 +14,21 @@ luogao	title	洛誥	Luogao	Luògào
 zhang-bingquan	person	張秉權	Zhang Bingquan	Zhāng Bǐngquán
 hu-houxuan	person	胡厚宣	Hu Houxuan	Hú Hòuxuān
 yan-yiping	person	顏一萍	Yan Yiping	Yán Yīpíng
+shi-zhangru	person	石璋如	Shi Zhangru	Shí Zhāngrú
 liu-yuanlin	person	劉淵臨	Liu Yuanlin	Liú Yuānlín
 chen-mengjia	person	陳孟家	Chen Mengjia	Chén Mèngjiā
+qu-wanli	person	屈萬里	Qu Wanli	Qū Wànlǐ
+xu-zhongshu	person	徐中舒	Xu Zhongshu	Xú Zhōngshū
+li-ji	person	李濟	Li Ji	Lǐ Jì
+qiu-xigui	person	裘錫圭	Qiu Xigui	Qiú Xīguī
+qiu-short	person	裘	Qiu	Qiú
 ling-chunsheng	person	凌純聲	Ling Chunsheng	Líng Chúnshēng
 li-xueqin	person	李學勤	Li Xueqin	Lǐ Xuéqín
 luo-zhenyu	person	羅振玉	Luo Zhenyu	Luó Zhènyù
 zhang-guangzhi	person	張光直	Zhang Guangzhi	Zhāng Guāngzhí
 zheng-dekun	person	鄭德坤	Zheng Dekun	Zhèng Dékūn
+tang-lan	person	唐蘭	Tang Lan	Táng Lán
+zhao-feng	person	趙峰	Zhao Feng	Zhào Fēng
 zhou-fakao	person	周法高	Zhou Fakao	Zhōu Fǎgāo
 guo-baojun	person	郭寶鈞	Guo Baojun	Guō Bǎojūn
 huang-peirong	person	黃沛榮	Huang Peirong	Huáng Pèiróng
@@ -30,6 +39,19 @@ sun-haibo	person	孫海波	Sun Haibo	Sūn Hǎibō
 anyang	place	安陽	Anyang	Ānyáng
 xiaotun	place	小屯	Xiaotun	Xiǎotún
 zhengzhou	place	鄭州	Zhengzhou	Zhèngzhōu
+hebei	place	河北	Hebei	Héběi
+henan	place	河南	Henan	Hénán
+shandong	place	山東	Shandong	Shāndōng
+shanxi-province	place	山西	Shanxi	Shānxī
+shaanxi	place	陝西	Shaanxi	Shǎnxī
+sichuan	place	四川	Sichuan	Sìchuān
+jiangsu	place	江蘇	Jiangsu	Jiāngsū
+jiangxi	place	江西	Jiangxi	Jiāngxī
+gansu	place	甘肅	Gansu	Gānsù
+liaodong	place	遼東	Liaodong	Liáodōng
+jilin	place	吉林	Jilin	Jílín
+guangdong	place	廣東	Guangdong	Guǎngdōng
+fujian	place	福建	Fujian	Fújiàn
 erligang	place	二里岡	Erligang	Èrlǐgǎng
 gaohuangmiao	place	高皇廟	Gaohuangmiao	Gāohuángmiào
 fuhegoumen	place	富河溝門	Fuhegoumen	Fùhégōumén
@@ -39,6 +61,9 @@ cixian	place	磁縣	Cixian	Cíxiàn
 ningcheng	place	寧城	Ningcheng	Níngchéng
 nanguanwai	place	南關外	Nanguanwai	Nánguānwài
 taixicun	place	台西村	Taixicun	Táixīcūn
+gaocheng	place	高城	Gaocheng	Gāochéng
+qingjiang	place	清江	Qingjiang	Qīngjiāng
+qijia	place	齊家	Qijia	Qíjiā
 kaifeng	place	開封	Kaifeng	Kāifēng
 wucheng	place	吳城	Wucheng	Wúchéng
 dahecun	place	大河村	Dahecun	Dàhécūn
@@ -64,8 +89,11 @@ zhouli	title	周禮	Zhouli	Zhōulǐ
 liji	title	禮記	Liji	Lǐjì
 shuowen	title	说文	Shuowen	Shuōwén
 dong-zuobin	person	董 作宾	Dong Zuobin	Dǒng Zuòbīn
+dong-short	person	董	Dong	Dǒng
 xu-jinxiong	person	徐 金雄	Xu Jinxiong	Xú Jīnxióng
+xu-jinxiong-tight	person	徐金雄	Xu Jinxiong	Xú Jīnxióng
 zhou-hongxiang	person	周 洪祥	Zhou Hongxiang	Zhōu Hóngxiáng
+zhou-hongxiang-tight	person	周洪祥	Zhou Hongxiang	Zhōu Hóngxiáng
 li-xiaoting	person	李 小庭	Li Xiaoting	Lǐ Xiǎotíng
 rao-zongyi	person	饒宗頤	Rao Zongyi	Ráo Zōngyí
 zhou-cezong	person	周策縱	Zhou Cezong	Zhōu Cèzòng
@@ -77,7 +105,28 @@ zhu-fangpu	person	朱芳圃	Zhu Fangpu	Zhū Fāngpǔ
 lin-jieming	person	林潔明	Lin Jieming	Lín Jiémíng
 sima-qian	person	司馬遷	Sima Qian	Sīmǎ Qiān
 yangshao	place	仰韶	Yangshao	Yǎngsháo
+jiachen	day	甲辰	Jiachen	Jiǎchén
+jiashen	day	甲申	Jiashen	Jiǎshēn
+jiazi	day	甲子	Jiazi	Jiǎzǐ
+jiawu	day	甲午	Jiawu	Jiǎwǔ
+bingchen	day	丙辰	Bingchen	Bǐngchén
+bingshen	day	丙申	Bingshen	Bǐngshēn
+bingyin	day	丙寅	Bingyin	Bǐngyín
+dinghai	day	丁亥	Dinghai	Dīnghài
+dingmao	day	丁卯	Dingmao	Dīngmǎo
+dingsi	day	丁巳	Dingsi	Dīngsì
+jihai	day	己亥	Jihai	Jǐhài
+jimao	day	己卯	Jimao	Jǐmǎo
+jisi	day	己巳	Jisi	Jǐsì
+kengshen	day	庚申	Gengshen	Gēngshēn
+kengyin	day	庚寅	Gengyin	Gēngyín
+xinmao	day	辛卯	Xinmao	Xīnmǎo
+xinwei	day	辛未	Xinwei	Xīnwèi
+xinyou	day	辛酉	Xinyou	Xīnyǒu
+renwu	day	壬午	Renwu	Rénwǔ
+renyin	day	壬寅	Renyin	Rényín
 gui	day	癸	Gui	Guǐ
+guichou	day	癸丑	Guichou	Guǐchǒu
 guiyou	day	癸酉	Guiyou	Guǐyǒu
 guihai	day	癸亥	Guihai	Guǐhài
 guimao	day	癸卯	Guimao	Guǐmǎo
@@ -88,6 +137,7 @@ fugeng	person	父庚	Fugeng	Fùgēng
 fuxin	person	父辛	Fuxin	Fùxīn
 fuyi	person	父乙	Fuyi	Fùyǐ
 fujia	person	父甲	Fujia	Fùjiǎ
+zu-xin	person	祖辛	Zu Xin	Zǔ Xīn
 zujia	person	祖甲	Zujia	Zǔjiǎ
 zugeng	person	祖庚	Zugeng	Zǔgēng
 xiaoyi	person	小乙	Xiaoyi	Xiǎoyǐ
@@ -95,6 +145,14 @@ xiaoxin	person	小辛	Xiaoxin	Xiǎoxīn
 xiaojia	person	小甲	Xiaojia	Xiǎojiǎ
 yangjia	person	陽甲	Yangjia	Yángjiǎ
 pangeng	person	盤庚	Pangeng	Pángēng
+wu-ding	person	武丁	Wu Ding	Wú Dīng
+lin-xin	person	廩辛	Lin Xin	Lǐn Xīn
+keng-ding	person	庚丁	Geng Ding	Gēng Dīng
+wu-yi	person	武乙	Wu Yi	Wǔ Yǐ
+wen-wu-ding	person	文武丁	Wen Wu Ding	Wén Wǔ Dīng
+di-yi	person	帝乙	Di Yi	Dì Yǐ
+di-xin	person	帝辛	Di Xin	Dì Xīn
+wu-geng	person	武庚	Wu Geng	Wǔ Gēng
 renwen	title	人文	Renwen	Rénwén
 zhuixin	title	追新	Zhuixin	Zhuīxīn
 jinghua	title	京華	Jinghua	Jīnghuá
@@ -116,7 +174,6 @@ li-xueqin-spaced	person	李 学琴	Li Xueqin	Lǐ Xuéqín
 gao-quxun	person	高去尋	Gao Quxun	Gāo Qùxún
 yang-junshi-spaced	person	楊 鈞史	Yang Junshi	Yáng Jūnshǐ
 li-yan-spaced	person	李 颜	Li Yan	Lǐ Yán
-wu-ding	person	吳丁	Wu Ding	Wú Dīng
 mengjia-short	person	孟家	Mengjia	Mèngjiā
 hongxiang-short	person	洪祥	Hongxiang	Hóngxiáng
 junshi-short	person	鈞史	Junshi	Jūnshǐ
