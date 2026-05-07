@@ -23,13 +23,6 @@
 \usepackage{fancybox}
 
 % Phase 3 macros
-% \origsecnum{X.Y} - prints original 1978 section number, suppressing LaTeX auto-counter
-% Usage: \section[shortname]{\origsecnum{X.Y}Full Name} will print only "X.Y Full Name"
-\newcommand{\origsecnum}[1]{%
-  \setcounter{secnumdepth}{-1}%    % Suppress section numbering temporarily
-  \textup{#1}\quad%                 % Print the original number
-  \setcounter{secnumdepth}{2}%     % Re-enable numbering for subsequent sections
-}
 \newcommand{\authorbyline}[1]{\par\noindent\emph{by #1}\par\bigskip}
 \newcommand{\ednote}[1]{\textsuperscript{[#1]}}
 \newcommand{\booktitle}[1]{\textit{#1}}
@@ -73,6 +66,7 @@
   \par\medskip
   \noindent
   \begin{minipage}{\textwidth}
+  \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
   \setlength{\parskip}{0.3\baselineskip}
   \setlength{\parindent}{0pt}
 }

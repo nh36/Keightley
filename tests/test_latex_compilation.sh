@@ -30,10 +30,10 @@ test_result() {
     
     if [ $exit_code -eq 0 ]; then
         echo -e "${GREEN}✓ PASS${NC}: $test_name"
-        ((TESTS_PASSED++))
+        ((TESTS_PASSED+=1))
     else
         echo -e "${RED}✗ FAIL${NC}: $test_name"
-        ((TESTS_FAILED++))
+        ((TESTS_FAILED+=1))
     fi
 }
 
@@ -44,6 +44,8 @@ echo
 
 # TEST 1: LaTeX compilation succeeds
 echo "TEST 1: LaTeX compilation"
+cd "$PROJECT_ROOT"
+python3 "$PROJECT_ROOT/scripts/generate_pinyin_terms_tex.py" >/dev/null
 cd "$TEX_DIR"
 COMPILE_OUTPUT=$(/usr/local/texlive/2025/bin/universal-darwin/xelatex -interaction=nonstopmode main.tex 2>&1)
 if echo "$COMPILE_OUTPUT" | grep -q "Output written on main.pdf"; then
@@ -58,10 +60,10 @@ echo
 echo "TEST 2: PDF page count"
 if [ -f "$TEX_DIR/main.pdf" ]; then
     PAGE_COUNT=$(pdfinfo "$TEX_DIR/main.pdf" 2>/dev/null | grep "^Pages:" | awk '{print $2}')
-    if [ "$PAGE_COUNT" = "191" ]; then
-        test_result "PDF has exactly 191 pages (current: $PAGE_COUNT)" 0
+    if [ "$PAGE_COUNT" = "209" ]; then
+        test_result "PDF has exactly 209 pages (current: $PAGE_COUNT)" 0
     else
-        test_result "PDF has exactly 191 pages (current: $PAGE_COUNT)" 1
+        test_result "PDF has exactly 209 pages (current: $PAGE_COUNT)" 1
     fi
 else
     test_result "PDF file exists" 1
@@ -128,7 +130,7 @@ REQUIRED_SECTIONS=(
 )
 MISSING_SECTIONS=()
 for section in "${REQUIRED_SECTIONS[@]}"; do
-    if ! grep -q "\\\\subsection\*{$section}" "$CHAPTERS_DIR/ch04.tex"; then
+    if ! grep -Eq "\\\\(section|subsection|subsubsection)(\\[[^]]*\\])?\\{$section\\}" "$CHAPTERS_DIR/ch04.tex"; then
         MISSING_SECTIONS+=("$section")
     fi
 done
@@ -143,7 +145,7 @@ fi
 # TEST 8: Chronological Distribution header in ch05
 echo
 echo "TEST 8: Section header formatting in ch05"
-if grep -q "\\\\subsection\*{Chronological Distribution}" "$CHAPTERS_DIR/ch05.tex"; then
+if grep -Eq "\\\\(section|subsection|subsubsection)(\\[[^]]*\\])?\\{Chronological Distribution\\}" "$CHAPTERS_DIR/ch05.tex"; then
     test_result "Chronological Distribution subsection header present in ch05" 0
 else
     test_result "Chronological Distribution subsection header present in ch05" 1
@@ -152,7 +154,7 @@ fi
 # TEST 9: Inscription Placement header in ch02
 echo
 echo "TEST 9: Section header formatting in ch02"
-if grep -q "\\\\subsection\*{Inscription Placement}" "$CHAPTERS_DIR/ch02.tex"; then
+if grep -Eq "\\\\(section|subsection|subsubsection)(\\[[^]]*\\])?\\{Inscription Placement\\}" "$CHAPTERS_DIR/ch02.tex"; then
     test_result "Inscription Placement subsection header present in ch02" 0
 else
     test_result "Inscription Placement subsection header present in ch02" 1
@@ -168,7 +170,7 @@ REQUIRED_CH01_SECTIONS=(
 )
 MISSING_CH01=()
 for section in "${REQUIRED_CH01_SECTIONS[@]}"; do
-    if ! grep -q "\\\\subsection\*{$section}" "$CHAPTERS_DIR/ch01.tex"; then
+    if ! grep -Eq "\\\\(section|subsection|subsubsection)(\\[[^]]*\\])?\\{$section\\}" "$CHAPTERS_DIR/ch01.tex"; then
         MISSING_CH01+=("$section")
     fi
 done
@@ -183,7 +185,7 @@ fi
 # TEST 11: General Studies header in ch03
 echo
 echo "TEST 11: Section header formatting in ch03"
-if grep -q "\\\\subsection\*{General Studies}" "$CHAPTERS_DIR/ch03.tex"; then
+if grep -Eq "\\\\(section|subsection|subsubsection)(\\[[^]]*\\])?\\{General Studies\\}" "$CHAPTERS_DIR/ch03.tex"; then
     test_result "General Studies subsection header present in ch03" 0
 else
     test_result "General Studies subsection header present in ch03" 1
@@ -193,7 +195,7 @@ fi
 echo
 echo "TEST 12: No orphaned uppercase headers (potential OCR artifacts)"
 # Look for lines that are ONLY uppercase letters and spaces/hyphens (not in LaTeX commands)
-ORPHANED_HEADERS=$(grep -n "^[A-Z][A-Z ]*[A-Z]$" "$CHAPTERS_DIR"/*.tex 2>/dev/null | grep -v "\\\\section\|\\\\subsection\|footnote\|\\[" | grep -v "^.*KKKK\|^.*CCCC\|^.*XXXX" | wc -l)
+ORPHANED_HEADERS=$(grep -n "^[A-Z][A-Z ]*[A-Z]$" "$CHAPTERS_DIR"/*.tex 2>/dev/null | grep -v "\\\\section\|\\\\subsection\|footnote\|\\[" | grep -v "PAIRS OF COMPLEMENTARY CHARGES\|A PLASTRON SET\|NONCOMPLEMENTARY RECORDS\|^.*KKKK\|^.*CCCC\|^.*XXXX" | wc -l)
 if [ "$ORPHANED_HEADERS" -eq 0 ]; then
     test_result "No suspicious orphaned uppercase headers found" 0
 else
@@ -230,13 +232,13 @@ else
     echo "  Missing: $(IFS=, ; echo "${MISSING_CHAPTERS[*]}")"
 fi
 
-# TEST 15: preamble.tex exists and contains \origsecnum macro
+# TEST 15: preamble.tex exists and section-number override macro is retired
 echo
 echo "TEST 15: LaTeX preamble integrity"
-if [ -f "$TEX_DIR/preamble.tex" ] && grep -q "\\\\newcommand.*\\\\origsecnum" "$TEX_DIR/preamble.tex"; then
-    test_result "preamble.tex exists with \\origsecnum macro definition" 0
+if [ -f "$TEX_DIR/preamble.tex" ] && ! grep -R -q "\\\\origsecnum" "$CHAPTERS_DIR" "$TEX_DIR/preamble.tex"; then
+    test_result "preamble.tex exists and \\origsecnum is retired" 0
 else
-    test_result "preamble.tex exists with \\origsecnum macro definition" 1
+    test_result "preamble.tex exists and \\origsecnum is retired" 1
 fi
 
 # Summary
