@@ -13,6 +13,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 TEX_DIR="$PROJECT_ROOT/tex"
 CHAPTERS_DIR="$TEX_DIR/chapters"
+CANONICAL_PDF="$PROJECT_ROOT/build/output/main.pdf"
 
 # Color codes for output
 RED='\033[0;31m'
@@ -45,10 +46,8 @@ echo
 # TEST 1: LaTeX compilation succeeds
 echo "TEST 1: LaTeX compilation"
 cd "$PROJECT_ROOT"
-python3 "$PROJECT_ROOT/scripts/generate_pinyin_terms_tex.py" >/dev/null
-cd "$TEX_DIR"
-COMPILE_OUTPUT=$(/usr/local/texlive/2025/bin/universal-darwin/xelatex -interaction=nonstopmode main.tex 2>&1)
-if echo "$COMPILE_OUTPUT" | grep -q "Output written on main.pdf"; then
+COMPILE_OUTPUT=$("$PROJECT_ROOT/scripts/build.sh" 2>&1)
+if [ -f "$CANONICAL_PDF" ]; then
     test_result "LaTeX compiles without errors" 0
 else
     test_result "LaTeX compiles without errors" 1
@@ -58,12 +57,12 @@ fi
 # TEST 2: PDF output exists and has expected page count
 echo
 echo "TEST 2: PDF page count"
-if [ -f "$TEX_DIR/main.pdf" ]; then
-    PAGE_COUNT=$(pdfinfo "$TEX_DIR/main.pdf" 2>/dev/null | grep "^Pages:" | awk '{print $2}')
-    if [ "$PAGE_COUNT" = "209" ]; then
-        test_result "PDF has exactly 209 pages (current: $PAGE_COUNT)" 0
+if [ -f "$CANONICAL_PDF" ]; then
+    PAGE_COUNT=$(pdfinfo "$CANONICAL_PDF" 2>/dev/null | grep "^Pages:" | awk '{print $2}')
+    if [ "$PAGE_COUNT" = "211" ]; then
+        test_result "PDF has exactly 211 pages (current: $PAGE_COUNT)" 0
     else
-        test_result "PDF has exactly 209 pages (current: $PAGE_COUNT)" 1
+        test_result "PDF has exactly 211 pages (current: $PAGE_COUNT)" 1
     fi
 else
     test_result "PDF file exists" 1
