@@ -19,6 +19,13 @@ CH01_SUSPICIOUS_STRINGS = [
 CH05_SUSPICIOUS_STRINGS = [
     "Historical Sources\\footnote[1]",
     "Before examining how the oracle-bone inscriptions function as sources",
+    "[\\textasciicircum{}7]",
+    "[\\textasciicircum{}8]",
+    "[\\textasciicircum{}9]",
+    "[\\textasciicircum{}6 \\textasciicircum{}6]:",
+    "chia-ku forms",
+    "t'ien-kan ancestral names",
+    "135 C D G D C D G D ]",
 ]
 
 
@@ -44,3 +51,12 @@ def test_ch05_opening_paragraph_carries_the_rehomed_notes():
     assert "shang} calendar\\footnote[3]{" in text
     assert "organization;\\footnote[4]{" in text
     assert "authenticity, and dating.\\footnote[5]{" in text
+
+
+def test_ch05_section52_carries_rehomed_notes():
+    text = CH05.read_text(encoding="utf-8")
+
+    assert "fallacy''\\footnote[9]{" in text
+    assert "appropriate caution,\\footnote[7]{" in text
+    assert "world view.\\footnote[8]{".replace("world view.", "world view.") in text
+    assert "}\\footnote[6]{Particularly interesting are the sixty-six" in text
