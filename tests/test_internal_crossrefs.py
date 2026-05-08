@@ -85,3 +85,39 @@ def test_appendix_crossrefs_show_ref_plus_ocr_copy():
         "appendix \\ref{app:5}, sec. \\ref{sec:appendices-app05:2} (appendix 5, sec. 2)"
         in CH05.read_text(encoding="utf-8")
     )
+
+
+def test_ch01_section_crossrefs_show_ref_plus_ocr_copy():
+    text = CH01.read_text(encoding="utf-8")
+
+    assert "\\ref{sec:chapters-ch01:1.2.2} (sec. 1.2.2)" in text
+    assert "\\ref{sec:chapters-ch01:1.4} (sec. 1.4)" in text
+    assert "\\ref{sec:chapters-ch01:1.5} (sec. 1.5)" in text
+    assert "\\ref{sec:chapters-ch01:1.5.2} (sec. 1.5.2)" in text
+    assert "\\ref{sec:chapters-ch02:2.4} (sec. 2.4)" in text
+    assert "\\ref{sec:chapters-ch02:2.7} (sec. 2.7)" in text
+    assert "\\ref{sec:chapters-ch02:2.8} (sec. 2.8)" in text
+    assert "\\ref{sec:chapters-ch02:2.9.4} (sec. 2.9.4)" in text
+    assert "\\ref{sec:chapters-ch02:2.10} (sec. 2.10)" in text
+    assert "\\ref{sec:chapters-ch04:4.3.2.5} (sec. 4.3.2.5)" in text
+
+
+def test_ch02_section_crossrefs_show_ref_plus_ocr_copy():
+    text = CH02.read_text(encoding="utf-8")
+
+    assert "\\ref{sec:chapters-ch02:2.8} (sec. 2.8)" in text
+    assert "\\ref{sec:chapters-ch02:2.7} (sec. 2.7)" in text
+    assert "\\ref{sec:chapters-ch04:4.3.1.2} (sec. 4.3.1.2)" in text
+    assert "\\ref{sec:chapters-ch03:3.3.2} (sec. 3.3.2)" in text
+    assert "\\ref{sec:chapters-ch04:4.3.1.12} (sec. 4.3.1.12)" in text
+    assert "\\ref{sec:chapters-ch02:2.4} (sec. 2.4)" in text
+    assert "\\ref{sec:chapters-ch04:4.3.1.11} (sec. 4.3.1.11)" in text
+    assert "\\ref{sec:chapters-ch03:3.7.1.2} (sec. 3.7.1.2)" in text
+    assert "\\ref{sec:chapters-ch03:3.7.4} (sec. 3.7.4)" in text
+    assert "\\ref{sec:chapters-ch04:4.3.1.8} (sec. 4.3.1.8)" in text
+    assert "\\ref{sec:chapters-ch01:1.6.3} (sec. 1.6.3)" in text
+    assert "\\ref{sec:chapters-ch05:5.7} (sec. 5.7)" in text
+    assert "\\ref{sec:chapters-ch04:4.3.1.10} (sec. 4.3.1.10)" in text
+    assert "\\ref{sec:chapters-ch02:2.12} (sec. 2.12)" in text
+    assert "\\ref{sec:chapters-ch01:1.3.3} (sec. 1.3.3)" in text
+    assert "\\ref{sec:chapters-ch02:2.10} (sec. 2.10)" in text
