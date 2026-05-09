@@ -22,6 +22,8 @@ xu-zhongshu	person	徐中舒	Xu Zhongshu	Xú Zhōngshū
 li-ji	person	李濟	Li Ji	Lǐ Jì
 qiu-xigui	person	裘錫圭	Qiu Xigui	Qiú Xīguī
 qiu-short	person	裘	Qiu	Qiú
+jiao-short	person	焦	Jiao	Jiāo
+hu-xu	person	胡 徐	Hu Xu	Hú Xú
 ling-chunsheng	person	凌純聲	Ling Chunsheng	Líng Chúnshēng
 li-xueqin	person	李學勤	Li Xueqin	Lǐ Xuéqín
 luo-zhenyu	person	羅振玉	Luo Zhenyu	Luó Zhènyù
@@ -127,6 +129,7 @@ mengzi	title	孟子	Mengzi	Mèngzǐ
 dong-zuobin	person	董 作宾	Dong Zuobin	Dǒng Zuòbīn
 dong-short	person	董	Dong	Dǒng
 dong-tonghe	person	董同龢	Dong Tonghe	Dǒng Tónghé
+xu-short	person	徐	Xu	Xú
 xu-jinxiong	person	徐 金雄	Xu Jinxiong	Xú Jīnxióng
 xu-jinxiong-tight	person	徐金雄	Xu Jinxiong	Xú Jīnxióng
 zhou-hongxiang	person	周 洪祥	Zhou Hongxiang	Zhōu Hóngxiáng

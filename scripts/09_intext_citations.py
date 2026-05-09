@@ -2,8 +2,8 @@
 """Phase 5 step C: scan tex/ for `Surname (YYYY)` style in-text citations.
 
 For every match we emit one row of `data/citations.tsv` carrying the file,
-line-number, raw match, candidate biblatex key (best-match from
-`tex/bibliography/keightley.bib`), and a confidence score.
+line-number, raw match, candidate biblatex key (best-match from the
+`tex/bibliography/*.bib` resources), and a confidence score.
 
 We do NOT rewrite the .tex files.  The conservative replacement pass is left
 for Phase 11 proofing — the brief explicitly warns against damaging readability
@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TEX_DIR = ROOT / "tex"
 DATA_DIR = ROOT / "data"
 QA_DIR = ROOT / "build" / "qa"
-BIB_FILE = TEX_DIR / "bibliography" / "keightley.bib"
+BIB_DIR = TEX_DIR / "bibliography"
 
 CITATION_RE = re.compile(
     r"""(?P<surname>[A-Z][A-Za-z'\-]+(?:\s+(?:and|et\s+al\.?)\s+[A-Z][A-Za-z'\-]+)?)
@@ -46,25 +46,26 @@ BIB_AUTHOR_RE = re.compile(
 
 def load_bib_index() -> list[dict]:
     """Return a list of {key, surname, year, suffix} dicts from the .bib."""
-    if not BIB_FILE.exists():
+    if not BIB_DIR.exists():
         return []
-    text = BIB_FILE.read_text(encoding="utf-8")
     out = []
-    for m in BIB_AUTHOR_RE.finditer(text):
-        author = (m.group("author") or m.group("editor") or "").strip()
-        if not author:
-            continue
-        surname = re.split(r"[ ,]", author.strip())[0]
-        key = m.group("key")
-        # Year suffix is encoded in the key tail (e.g., Akatsuka1955a)
-        suffix = ""
-        ks = re.match(r"^[A-Za-z]+\d{4}([a-z])", key)
-        if ks:
-            suffix = ks.group(1)
-        out.append({
-            "key": key, "surname": surname, "year": m.group("year"),
-            "suffix": suffix, "author": author,
-        })
+    for bib_file in sorted(BIB_DIR.glob("*.bib")):
+        text = bib_file.read_text(encoding="utf-8")
+        for m in BIB_AUTHOR_RE.finditer(text):
+            author = (m.group("author") or m.group("editor") or "").strip()
+            if not author:
+                continue
+            surname = re.split(r"[ ,]", author.strip())[0]
+            key = m.group("key")
+            # Year suffix is encoded in the key tail (e.g., Akatsuka1955a)
+            suffix = ""
+            ks = re.match(r"^[A-Za-z]+\d{4}([a-z])", key)
+            if ks:
+                suffix = ks.group(1)
+            out.append({
+                "key": key, "surname": surname, "year": m.group("year"),
+                "suffix": suffix, "author": author,
+            })
     return out
 
 
@@ -96,6 +97,8 @@ def main() -> None:
     unmatched_rows = []
     for tex in sorted(TEX_DIR.rglob("*.tex")):
         if tex.name.startswith(".") or "bibliography" in tex.parts:
+            continue
+        if "backmatter" in tex.parts:
             continue
         text = tex.read_text(encoding="utf-8")
         for line_num, line in enumerate(text.splitlines(), start=1):

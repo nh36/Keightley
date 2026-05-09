@@ -59,10 +59,10 @@ echo
 echo "TEST 2: PDF page count"
 if [ -f "$CANONICAL_PDF" ]; then
     PAGE_COUNT=$(pdfinfo "$CANONICAL_PDF" 2>/dev/null | grep "^Pages:" | awk '{print $2}')
-    if [ "$PAGE_COUNT" = "213" ]; then
-        test_result "PDF has exactly 213 pages (current: $PAGE_COUNT)" 0
+    if [ "$PAGE_COUNT" = "228" ]; then
+        test_result "PDF has exactly 228 pages (current: $PAGE_COUNT)" 0
     else
-        test_result "PDF has exactly 213 pages (current: $PAGE_COUNT)" 1
+        test_result "PDF has exactly 228 pages (current: $PAGE_COUNT)" 1
     fi
 else
     test_result "PDF file exists" 1

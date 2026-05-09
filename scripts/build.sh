@@ -11,6 +11,8 @@ TEX_SOURCE="$TEX_DIR/main.tex"
 PINYIN_TSV="$REPO_ROOT/data/pinyin_terms.tsv"
 PINYIN_TEX="$TEX_DIR/generated/pinyin_terms.tex"
 PINYIN_SCRIPT="$REPO_ROOT/scripts/generate_pinyin_terms_tex.py"
+ABBREVIATIONS_SCRIPT="$REPO_ROOT/scripts/render_abbreviations_tex.py"
+BIBER_BIN="${BIBER_BIN:-}"
 
 # Colors for output
 GREEN='\033[0;32m'
@@ -26,6 +28,9 @@ mkdir -p "$BUILD_OUTPUT"
 
 echo "Generating pinyin term registrations..."
 python3 "$PINYIN_SCRIPT" --input "$PINYIN_TSV" --output "$PINYIN_TEX" > /dev/null
+
+echo "Rendering bibliography A abbreviations..."
+python3 "$ABBREVIATIONS_SCRIPT" > /dev/null
 
 # Resolve xelatex from PATH or known MacTeX install location
 XELATEX_BIN="${XELATEX_BIN:-}"
@@ -43,10 +48,24 @@ if [ -z "$XELATEX_BIN" ]; then
     exit 1
 fi
 
+if [ -z "$BIBER_BIN" ]; then
+    if command -v biber &> /dev/null; then
+        BIBER_BIN="$(command -v biber)"
+    elif [ -x "/usr/local/texlive/2025/bin/universal-darwin/biber" ]; then
+        BIBER_BIN="/usr/local/texlive/2025/bin/universal-darwin/biber"
+    fi
+fi
+
+if [ -z "$BIBER_BIN" ]; then
+    echo -e "${RED}✗ biber not found${NC}"
+    echo "  Checked PATH and /usr/local/texlive/2025/bin/universal-darwin/biber"
+    exit 1
+fi
+
 # Remove any stale PDF left in tex/ from older manual builds so repo-structure tests pass.
 rm -f "$TEX_DIR/main.pdf"
 
-# Build with xelatex (run twice to resolve references)
+# Build with xelatex/biber
 cd "$TEX_DIR"
 
 run_xelatex_pass() {
@@ -65,7 +84,19 @@ run_xelatex_pass() {
 }
 
 run_xelatex_pass 1
+
+echo "Running biber..."
+set +e
+"$BIBER_BIN" --input-directory="$BUILD_OUTPUT" --output-directory="$BUILD_OUTPUT" main > /dev/null 2>&1
+status=$?
+set -e
+
+if [ "$status" -ne 0 ]; then
+    echo "  Warning: biber exited with status $status"
+fi
+
 run_xelatex_pass 2
+run_xelatex_pass 3
 
 # Verify output
 if [ -f "$BUILD_OUTPUT/main.pdf" ]; then

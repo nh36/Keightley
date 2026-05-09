@@ -35,18 +35,23 @@ sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-latex-extra
 
 This will:
 1. Validate that `xelatex` is available
-2. Run xelatex twice (to resolve cross-references)
-3. Generate output at `build/output/main.pdf`
+2. Validate that `biber` is available
+3. Regenerate `tex/generated/pinyin_terms.tex` from `data/pinyin_terms.tsv`
+4. Regenerate `tex/backmatter/abbreviations_live.tex` from `data/abbreviations.yml`
+5. Run `xelatex`, `biber`, `xelatex`, `xelatex`
+6. Generate output at `build/output/main.pdf`
 
 ### Manual build
 
 ```bash
 cd tex
-xelatex -interaction=nonstopmode main.tex
-xelatex -interaction=nonstopmode main.tex  # Second pass for references
+xelatex -interaction=nonstopmode -output-directory=../build/output main.tex
+biber --input-directory=../build/output --output-directory=../build/output main
+xelatex -interaction=nonstopmode -output-directory=../build/output main.tex
+xelatex -interaction=nonstopmode -output-directory=../build/output main.tex
 ```
 
-The output PDF will be in the `tex/` directory; copy it to `build/output/main.pdf` for consistency.
+The canonical output PDF is written directly to `build/output/main.pdf`.
 
 ## Repository Structure
 

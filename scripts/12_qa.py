@@ -344,7 +344,8 @@ def check_phase4() -> None:
 
 def check_phase5() -> None:
     """Bibliography reconstruction invariants."""
-    bib_file = ROOT / "tex" / "bibliography" / "keightley.bib"
+    bib_dir = ROOT / "tex" / "bibliography"
+    bib_files = sorted(bib_dir.glob("*.bib"))
     raw_tsv = ROOT / "data" / "bibliography_raw.tsv"
     abbr_yml = ROOT / "data" / "abbreviations.yml"
     abbr_tex = ROOT / "tex" / "backmatter" / "abbreviations.tex"
@@ -352,28 +353,32 @@ def check_phase5() -> None:
     bib_a_tex = ROOT / "tex" / "backmatter" / "biblio_a.tex"
     bib_b_tex = ROOT / "tex" / "backmatter" / "biblio_b.tex"
 
-    for f in (bib_file, raw_tsv, abbr_yml, abbr_tex, citations_tsv,
+    if not bib_files:
+        errors.append("phase5: missing artefact tex/bibliography/*.bib")
+
+    for f in (*bib_files, raw_tsv, abbr_yml, abbr_tex, citations_tsv,
               bib_a_tex, bib_b_tex):
         if not f.exists():
             errors.append(f"phase5: missing artefact {f.relative_to(ROOT)}")
 
-    if bib_file.exists():
-        text = bib_file.read_text(encoding="utf-8")
-        n_entries = len(re.findall(r"^@\w+\{", text, re.MULTILINE))
-        if n_entries < 50:
-            warn(f"phase5: keightley.bib has only {n_entries} entries "
-                 f"(expected ~250+); proofing required")
-        # Every entry must have author or editor + year + title
+    if bib_files:
+        n_entries = 0
         bad = 0
-        for m in re.finditer(r"^@\w+\{([^,]+),(.*?)\n\}\n", text,
-                             re.MULTILINE | re.DOTALL):
-            body = m.group(2)
-            if not re.search(r"\b(author|editor)\s*=", body):
-                bad += 1
-            elif not re.search(r"\byear\s*=", body):
-                bad += 1
-            elif not re.search(r"\btitle\s*=", body):
-                bad += 1
+        for bib_file in bib_files:
+            text = bib_file.read_text(encoding="utf-8")
+            n_entries += len(re.findall(r"^@\w+\{", text, re.MULTILINE))
+            for m in re.finditer(r"^@\w+\{([^,]+),(.*?)\n\}\n", text,
+                                 re.MULTILINE | re.DOTALL):
+                body = m.group(2)
+                if not re.search(r"\b(author|editor)\s*=", body):
+                    bad += 1
+                elif not re.search(r"\byear\s*=", body):
+                    bad += 1
+                elif not re.search(r"\btitle\s*=", body):
+                    bad += 1
+        if n_entries < 50:
+            warn(f"phase5: bibliography files have only {n_entries} entries "
+                 f"(expected ~250+); proofing required")
         if bad:
             errors.append(f"phase5: {bad} bib entries missing author/year/title")
 

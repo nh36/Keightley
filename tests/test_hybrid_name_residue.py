@@ -166,6 +166,11 @@ SUSPICIOUS_STRINGS = [
     r"\pinyinterm{shang}-shu",
     "20. The crack notation may possibly be",
     "21. The phrase ling-kuei",
+    "t'ao-t'ieh",
+    "董 [1965]",
+    "董 [1929b]",
+    "Qu 万",
+    "胡 徐",
 ]
 
 
@@ -173,6 +178,10 @@ def test_no_known_hybrid_name_residue_in_live_tex():
     offenders = []
 
     for path in (REPO_ROOT / "tex").rglob("*.tex"):
+        if "generated" in path.parts:
+            continue
+        if path.name in {"abbreviations.tex", "abbreviations_live.tex"}:
+            continue
         text = path.read_text(encoding="utf-8")
         for needle in SUSPICIOUS_STRINGS:
             if needle in text:
