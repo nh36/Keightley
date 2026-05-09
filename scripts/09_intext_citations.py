@@ -39,6 +39,7 @@ BIB_AUTHOR_RE = re.compile(
     r"^@(?P<type>\w+)\{(?P<key>[^,]+),"
     r"(?:[^@]*?\bauthor\s*=\s*\{(?P<author>[^}]*)\})?"
     r"(?:[^@]*?\beditor\s*=\s*\{(?P<editor>[^}]*)\})?"
+    r"(?:[^@]*?\bshortauthor\s*=\s*\{(?P<shortauthor>[^}]*)\})?"
     r"[^@]*?\byear\s*=\s*\{(?P<year>\d{4})\}",
     re.MULTILINE | re.DOTALL,
 )
@@ -55,6 +56,7 @@ def load_bib_index() -> list[dict]:
             author = (m.group("author") or m.group("editor") or "").strip()
             if not author:
                 continue
+            shortauthor = (m.group("shortauthor") or "").strip()
             surname = re.split(r"[ ,]", author.strip())[0]
             key = m.group("key")
             # Year suffix is encoded in the key tail (e.g., Akatsuka1955a)
@@ -64,7 +66,7 @@ def load_bib_index() -> list[dict]:
                 suffix = ks.group(1)
             out.append({
                 "key": key, "surname": surname, "year": m.group("year"),
-                "suffix": suffix, "author": author,
+                "suffix": suffix, "author": author, "shortauthor": shortauthor,
             })
     return out
 
@@ -79,11 +81,12 @@ def find_candidates(bib: list[dict], surname: str, year: str,
         if suffix and e["suffix"] != suffix:
             continue
         es = e["surname"].lower()
-        if es == sl:
+        sa = e.get("shortauthor", "").lower()
+        if es == sl or sa == sl:
             results.append((0, e))
-        elif es.startswith(sl) or sl.startswith(es):
+        elif es.startswith(sl) or sl.startswith(es) or (sa and (sa.startswith(sl) or sl.startswith(sa))):
             results.append((1, e))
-        elif sl in e["author"].lower():
+        elif sl in e["author"].lower() or (sa and sl in sa):
             results.append((2, e))
     results.sort(key=lambda x: x[0])
     return [r[1] for r in results]

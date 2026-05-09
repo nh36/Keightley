@@ -51,6 +51,7 @@ def test_citation_inventory_skips_backmatter():
 
     assert 'if "backmatter" in tex.parts:' in script
     assert 'for bib_file in sorted(BIB_DIR.glob("*.bib")):' in script
+    assert 'shortauthor' in script
 
 
 def test_keightley_1975b_entry_exists():
@@ -65,12 +66,36 @@ def test_manual_bibliography_entries_exist():
 
     assert "@book{Shima1958Inkyo," in bib
     assert "@book{Barnard1975First," in bib
+    assert "@article{Barnard1960aReview," in bib
+    assert "@article{Barnard1960bReview," in bib
+    assert "@article{Bishop1932Scapulimancy," in bib
+    assert "@article{Clark1975Calibration," in bib
     assert "@book{Kaizuka1946Chiigoku," in bib
     assert "@book{Kaizuka1967Kodai," in bib
+    assert "@article{Eisenberger1938Das," in bib
+    assert "@book{EvansPritchard1937Witchcraft," in bib
+    assert "@article{Fujino1960Kiboku," in bib
     assert "@article{Hultkrantz1968La," in bib
+    assert "@book{Ho1975Cradle," in bib
+    assert "@book{Ikeda1964Inkyo," in bib
+    assert "@article{Kane1973Chronological," in bib
+    assert "@article{Kane1975Reexamination," in bib
+    assert "@article{Lefeuvre1975Les," in bib
+    assert "@book{Li1972Kuei," in bib
+    assert "shortauthor = {Daliang}" in bib
     assert "@phdthesis{Mickel1976Semantic," in bib
+    assert "@book{Noda1945Kanjo," in bib
+    assert "shortauthor = {Noda and Yabuuchi}" in bib
     assert "@book{Smith1931Fauna," in bib
+    assert "@book{Speck1935Naskapi," in bib
+    assert "@article{Satow1879Ancient," in bib
     assert "@book{Shirakawa1972Kokotsubun," in bib
+    assert "@phdthesis{Takashima1973Negatives," in bib
+    assert "@unpublished{Takashima1976Subordinate," in bib
+    assert "@book{Tung1945Yin," in bib
+    assert "@article{Tung1953Chia," in bib
     assert "@article{Nivison1977Three," in bib
     assert "@book{Wheatley1971Pivot," in bib
     assert "@book{Woodhead1967Study," in bib
+    assert "@book{Zhang1970Der," in bib
+    assert "shortauthor = {Zongdong}" in bib
