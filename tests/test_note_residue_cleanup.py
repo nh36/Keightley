@@ -4,6 +4,8 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+CH01 = REPO_ROOT / "tex" / "chapters" / "ch01.tex"
+CH02 = REPO_ROOT / "tex" / "chapters" / "ch02.tex"
 CH03 = REPO_ROOT / "tex" / "chapters" / "ch03.tex"
 CH04 = REPO_ROOT / "tex" / "chapters" / "ch04.tex"
 APP04 = REPO_ROOT / "tex" / "appendices" / "app04.tex"
@@ -54,6 +56,30 @@ def test_ch04_no_calligraphy_note_block_spill():
     assert "\\pinyinterm{dong-short} found the style of period IV" in text
     assert "\\pinyinterm{dong-short} described the style of period V" in text
     assert "Yi Kung (1957)" in text
+
+
+def test_ch01_and_ch02_long_note_sentinel_runs_removed():
+    ch01 = CH01.read_text(encoding="utf-8")
+    ch02 = CH02.read_text(encoding="utf-8")
+
+    assert "535455565758" not in ch01
+    assert "146147148149150151152153" not in ch02
+
+    assert "smoothed.\\footnote[53]{" in ch01
+    assert "thickness (fig. 3).\\footnote[54]{" in ch01
+    assert "written on.\\footnote[55]{" in ch01
+    assert "tie them together.\\footnote[56]{" in ch01
+    assert "period V.\\footnote[57]{" in ch01
+    assert "had been formed\\footnote[58]{" in ch01
+
+    assert "black.\\footnote[146]{" in ch02
+    assert "with brown.\\footnote[147]{" in ch02
+    assert "clear.\\footnote[148]{" in ch02
+    assert "beautiful.''\\footnote[149]{" in ch02
+    assert "matter.''\\footnote[150]{" in ch02
+    assert "divining rod.\\footnote[151]{" in ch02
+    assert "notations were.\\footnote[152]{" in ch02
+    assert "determined.\\footnote[153]{" in ch02
 
 
 def test_appendix_note_reference_residue_removed():
