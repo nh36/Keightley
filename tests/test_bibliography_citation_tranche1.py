@@ -59,6 +59,12 @@ def test_first_tranche_citations_are_wired():
     assert r"Park and Wormell (\citeyear{ParkeWormell1956Delphic}), p. 33." in ch05
     assert "Zhou Lin (1970); (1972);" not in ch05
     assert r"Zhou Lin (\citeyear{Chao1970Marriage}); (\citeyear{Chao1972ShangGovernment});" in ch05
+    assert "David Nivison (1977)" not in ch03
+    assert r"David Nivison (\citeyear{Nivison1977aPronominal})" in ch03
+    assert "史 Changju (1959), p. 321." not in ch05
+    assert r"\pinyinterm{shi-zhangru} (\citeyear{Shih1959Hsiao}), p. 321." in ch05
+    assert "Wang Ziyu (1933)" not in ch05
+    assert r"Wang Ziyu (\citeyear{Wang1933Chia})" in ch05
 
 
 def test_citation_inventory_skips_backmatter():
@@ -211,7 +217,17 @@ def test_manual_bibliography_entries_exist():
     assert "@book{Speck1935Naskapi," in bib
     assert "@article{Satow1879Ancient," in bib
     assert "@book{Shirakawa1972Kokotsubun," in bib
+    assert "@article{Hayashi1909Shinkoku," in bib
+    assert "shortauthor  = {Taisuke}" in bib
+    assert "@article{Ke1939Shuo," in bib
+    assert "shortauthor  = {Yiqing}" in bib
+    assert "@unpublished{Nivison1973Ritual," in bib
+    assert "@article{Pulleyblank1968Review," in bib
+    assert "@unpublished{Pulleyblank1975Chinese," in bib
+    assert "@article{Schafer1972Review," in bib
     assert "@phdthesis{Takashima1973Negatives," in bib
+    assert "@unpublished{Takashima1977aExistence," in bib
+    assert "@book{Thompson1969ChineseReligion," in bib
     assert "@unpublished{Takashima1976Subordinate," in bib
     assert "@book{Tung1945Yin," in bib
     assert "@article{Tung1953Chia," in bib
@@ -224,7 +240,11 @@ def test_manual_bibliography_entries_exist():
     assert "@article{Su1969Shuo," in bib
     assert "shortauthor  = {Su}" in bib
     assert "@book{Wheatley1971Pivot," in bib
+    assert "@book{Wieger1923Textes," in bib
+    assert "@collection{Wilson1970Rationality," in bib
+    assert "@article{Winch1964Understanding," in bib
     assert "@book{Woodhead1967Study," in bib
+    assert "@article{Wu1943Notes," in bib
     assert "@inproceedings{Wu1955Broken," in bib
     assert "shortauthor = {Shih-ch'ang}" in bib
     assert "@article{Young1936Fossil," in bib

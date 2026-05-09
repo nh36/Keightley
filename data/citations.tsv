@@ -1,5 +1,6 @@
 file	line	raw	surname	year	pages	candidate_count	candidate_key
 tex/appendices/app01.tex	18	Su (1969)	Su	1969		1	Su1969Shuo
+tex/appendices/app01.tex	87	Wu (1943)	Wu	1943		1	Wu1943Notes
 tex/appendices/app01.tex	107	Smith (1931)	Smith	1931		1	Smith1931Fauna
 tex/appendices/app01.tex	107	Pritchard (1967)	Pritchard	1967		1	Pritchard1967Living
 tex/appendices/app01.tex	115	Ping (1930)	Ping	1930		1	Ping1930Notes
@@ -64,6 +65,7 @@ tex/chapters/ch01.tex	23	Eisenberger (1938), pp. 105, 111-112, 	Eisenberger	1938
 tex/chapters/ch01.tex	23	Cooper (1936), pp. 39-40, 	Cooper	1936	39-40,	1	Cooper1936Scapulimancy
 tex/chapters/ch01.tex	31	Wheatley (1971), pp. 27-28	Wheatley	1971	27-28	1	Wheatley1971Pivot
 tex/chapters/ch01.tex	38	Yagimoto (1966)	Yagimoto	1966		1	Yagimoto1966Kiboku
+tex/chapters/ch01.tex	38	Taisuke (1909), pp. 1243-1244, 	Taisuke	1909	1243-1244,	1	Hayashi1909Shinkoku
 tex/chapters/ch01.tex	38	Fujino (1960), p. 22, 	Fujino	1960	22,	1	Fujino1960Kiboku
 tex/chapters/ch01.tex	38	Tsunoda (1951), p. 12	Tsunoda	1951	12	1	Tsunoda1951Japan
 tex/chapters/ch01.tex	38	Chamberlain (1883), p. 	Chamberlain	1883		1	Chamberlain1883Kojiki
@@ -76,6 +78,7 @@ tex/chapters/ch01.tex	38	Eisenberger (1938), p. 50	Eisenberger	1938	50	1	Eisenbe
 tex/chapters/ch01.tex	38	Satow (1879), p. 431	Satow	1879	431	1	Satow1879Ancient
 tex/chapters/ch01.tex	38	Eisenberger (1938), p. 81	Eisenberger	1938	81	1	Eisenberger1938Das
 tex/chapters/ch01.tex	38	Rockhill (1900), pp. 187–188	Rockhill	1900	187–188	1	Rockhill1900Journey
+tex/chapters/ch01.tex	38	Wieger (1923), pp. 1676-1677	Wieger	1923	1676-1677	1	Wieger1923Textes
 tex/chapters/ch01.tex	38	Cooper (1936), p. 29	Cooper	1936	29	1	Cooper1936Scapulimancy
 tex/chapters/ch01.tex	38	Speck (1935), p. 128	Speck	1935	128	1	Speck1935Naskapi
 tex/chapters/ch01.tex	38	Cooper (1936), pp. 3031, 38	Cooper	1936	3031, 38	1	Cooper1936Scapulimancy
@@ -165,6 +168,7 @@ tex/chapters/ch02.tex	487	Zongdong (1970), p. 71, 	Zongdong	1970	71,	1	Zhang1970
 tex/chapters/ch02.tex	487	Serruys (1974), p. 70	Serruys	1974	70	1	Serruys1974The
 tex/chapters/ch02.tex	506	Shirakawa (1972), p. 26	Shirakawa	1972	26	1	Shirakawa1972Kokotsubun
 tex/chapters/ch02.tex	517	Britton (1940), pp. 7-8	Britton	1940	7-8	1	Britton1940Fifty
+tex/chapters/ch02.tex	517	Thompson (1969), p. 34	Thompson	1969	34	1	Thompson1969ChineseReligion
 tex/chapters/ch02.tex	517	Wilkinson (1973), p. 60	Wilkinson	1973	60	1	Wilkinson1973The
 tex/chapters/ch02.tex	573	Chu (1935)	Chu	1935		1	Chu1935Shangshi
 tex/chapters/ch02.tex	591	Matsumaru (1959), p. 8, 	Matsumaru	1959	8,	1	Matsumaru1959Kokotsu
@@ -198,14 +202,17 @@ tex/chapters/ch03.tex	25	Matsumaru (1973), pp. 19-22, 	Matsumaru	1973	19-22,	1	M
 tex/chapters/ch03.tex	65	CKWP (1965)	CKWP	1965		1	CKWP1965Chia
 tex/chapters/ch03.tex	96	Teng and Biggerstaff (1971), p. 47	Teng and Biggerstaff	1971	47	1	Teng1971Annotated
 tex/chapters/ch03.tex	106	Mattos (1976)	Mattos	1976		1	Mattos1976Reference
+tex/chapters/ch03.tex	123	Pulleyblank (1968)	Pulleyblank	1968		1	Pulleyblank1968Review
 tex/chapters/ch03.tex	151	Keightley (1969a)	Keightley	1969a		1	Keightley1969aBook
 tex/chapters/ch03.tex	191	Shigeki (1967)	Shigeki	1967		1	Kaizuka1967Kodai
 tex/chapters/ch03.tex	191	Shizuka (1972)	Shizuka	1972		1	Shirakawa1972Kokotsubun
 tex/chapters/ch03.tex	194	Akatsuka (1977)	Akatsuka	1977		1	Akatsuka1977Rev
 tex/chapters/ch03.tex	209	Smith (1972)	Smith	1972		1	Smith1972Parrot
 tex/chapters/ch03.tex	211	Lukes (1967)	Lukes	1967		1	Lukes1967Problems
+tex/chapters/ch03.tex	211	Wilson (1970)	Wilson	1970		1	Wilson1970Rationality
 tex/chapters/ch03.tex	211	Rorty (1972)	Rorty	1972		1	Rorty1972World
 tex/chapters/ch03.tex	226	Britton (1936), p. 207	Britton	1936	207	1	Britton1936Sinological
+tex/chapters/ch03.tex	230	Schafer (1972), pp. 150-151	Schafer	1972	150-151	1	Schafer1972Review
 tex/chapters/ch03.tex	270	Takashima (1973), pp. 267-305	Takashima	1973	267-305	1	Takashima1973Negatives
 tex/chapters/ch03.tex	270	Serruys (1974), pp. 24, 46-58	Serruys	1974	24, 46-58	1	Serruys1974The
 tex/chapters/ch03.tex	270	Takashima (1976), p. 24, 	Takashima	1976	24,	1	Takashima1976Subordinate
@@ -217,6 +224,7 @@ tex/chapters/ch03.tex	333	Takashima (1976)	Takashima	1976		1	Takashima1976Subord
 tex/chapters/ch03.tex	349	Barnard (1963), pp. 220-221	Barnard	1963	220-221	1	Barnard1963Reviews
 tex/chapters/ch03.tex	353	Karlgren (1963), p. 2	Karlgren	1963	2	1	Karlgren1963Loan
 tex/chapters/ch03.tex	382	Takashima (1973), pp. 30-31	Takashima	1973	30-31	1	Takashima1973Negatives
+tex/chapters/ch03.tex	402	Pulleyblank (1975)	Pulleyblank	1975		1	Pulleyblank1975Chinese
 tex/chapters/ch03.tex	415	Eisenberger (1938), p. 67 	Eisenberger	1938	67	1	Eisenberger1938Das
 tex/chapters/ch03.tex	415	Wang (1972), p. 53 	Wang	1972	53	1	Wang1972The
 tex/chapters/ch03.tex	446	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
@@ -224,9 +232,11 @@ tex/chapters/ch03.tex	520	Keightley (1973a)	Keightley	1973a		1	Keightley1973aSha
 tex/chapters/ch03.tex	520	Takashima (1976)	Takashima	1976		1	Takashima1976Subordinate
 tex/chapters/ch03.tex	582	Takashima (1973), pp. 336-338	Takashima	1973	336-338	1	Takashima1973Negatives
 tex/chapters/ch03.tex	582	Serruys (1974), pp. 29-30	Serruys	1974	29-30	1	Serruys1974The
+tex/chapters/ch03.tex	582	Nivison (1973)	Nivison	1973		1	Nivison1973Ritual
 tex/chapters/ch03.tex	601	Daliang (1972), pp. 134-169	Daliang	1972	134-169	1	Li1972Kuei
 tex/chapters/ch03.tex	620	Takashima (1973), pp. 246–253, 399, 	Takashima	1973	246–253, 399,	1	Takashima1973Negatives
 tex/chapters/ch03.tex	620	Serruys (1974), pp. 24-25, 74, 	Serruys	1974	24-25, 74,	1	Serruys1974The
+tex/chapters/ch03.tex	620	Takashima (1977), pp. 11-18, 	Takashima	1977	11-18,	1	Takashima1977aExistence
 tex/chapters/ch03.tex	636	Takashima (1973), pp. 243, 394,	Takashima	1973	243, 394,	1	Takashima1973Negatives
 tex/chapters/ch03.tex	660	Serruys (1974), p. 76	Serruys	1974	76	1	Serruys1974The
 tex/chapters/ch03.tex	704	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
@@ -312,6 +322,7 @@ tex/chapters/ch05.tex	796	Evans-Pritchard (1937), pp. 270, 313	Evans-Pritchard	1
 tex/chapters/ch05.tex	796	Strauss (1969), p. 10	Strauss	1969	10	1	LeviStrauss1969Raw
 tex/chapters/ch05.tex	796	Kluckhohn and Leighton (1970), p. 348	Kluckhohn and Leighton	1970	348	1	Kluckhohn1970The
 tex/chapters/ch05.tex	796	Bloch (1953), p. 151	Bloch	1953	151	1	Bloch1953The
+tex/chapters/ch05.tex	796	Winch (1964)	Winch	1964		1	Winch1964Understanding
 tex/chapters/ch05.tex	808	Serruys (1974), pp. 15-19, 	Serruys	1974	15-19,	1	Serruys1974The
 tex/chapters/ch05.tex	809	Zongdong (1970)	Zongdong	1970		1	Zhang1970Der
 tex/chapters/ch05.tex	809	Takashima (1973)	Takashima	1973		1	Takashima1973Negatives
@@ -334,6 +345,7 @@ tex/frontmatter/preface.tex	27	Masaaki (1966), pp. 420-433	Masaaki	1966	420-433	
 tex/frontmatter/preface.tex	27	Wheatley (1971), pp. 1314, 420	Wheatley	1971	1314, 420	1	Wheatley1971Pivot
 tex/frontmatter/preface.tex	27	Ho (1975), p. 307, 	Ho	1975	307,	1	Ho1975Cradle
 tex/frontmatter/preface.tex	42	Barnard (1960b), pp. 499-500, 	Barnard	1960b	499-500,	1	Barnard1960bReview
+tex/frontmatter/preface.tex	42	Yiqing (1939)	Yiqing	1939		1	Ke1939Shuo
 tex/frontmatter/preface.tex	157	Kwang-chih (1977)	Kwang-chih	1977		1	Chang1977The
 tex/frontmatter/preface.tex	157	Chang (1968)	Chang	1968		1	Chang1968Archaeology
 tex/frontmatter/preface.tex	161	Nivison (1977a)	Nivison	1977a		1	Nivison1977aPronominal
