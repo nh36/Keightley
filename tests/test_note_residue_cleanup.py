@@ -8,6 +8,7 @@ CH01 = REPO_ROOT / "tex" / "chapters" / "ch01.tex"
 CH02 = REPO_ROOT / "tex" / "chapters" / "ch02.tex"
 CH03 = REPO_ROOT / "tex" / "chapters" / "ch03.tex"
 CH04 = REPO_ROOT / "tex" / "chapters" / "ch04.tex"
+CH05 = REPO_ROOT / "tex" / "chapters" / "ch05.tex"
 APP04 = REPO_ROOT / "tex" / "appendices" / "app04.tex"
 APP05 = REPO_ROOT / "tex" / "appendices" / "app05.tex"
 
@@ -22,6 +23,12 @@ def test_ch03_no_long_note_spills():
         "104105106107108109",
         "inscriptionless cracks identified in sec.\\footnote[119]",
         "87 U U ]",
+        'it will be inauspicious."92',
+        "be inauspicious.93",
+        "In Tuan (?).94",
+        "(cf. sec.\\footnote[92]",
+        "carved. more",
+        "CCC C D U 0 81",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -32,6 +39,11 @@ def test_ch03_no_long_note_spills():
     assert "Guo\\footnote[104]{" in text
     assert "routine abbreviation.\\footnote[106]{" in text
     assert "sec. 3.7.2\\footnote[119]{" in text
+    assert "it will be inauspicious.\\footnote[92]{" in text
+    assert "be inauspicious.\\footnote[93]{" in text
+    assert "In Tuan (?).\\footnote[94]{" in text
+    assert "sec. 1.6.4).\\footnote[95]{" in text
+    assert "cracks were left numberless.\\footnote[96]{" in text
 
 
 def test_ch04_no_calligraphy_note_block_spill():
@@ -45,6 +57,7 @@ def test_ch04_no_calligraphy_note_block_spill():
         "upon}",
         "107 U 11 |",
         "(sec. 4.3.1.2).49",
+        "*135",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -57,6 +70,21 @@ def test_ch04_no_calligraphy_note_block_spill():
     assert "\\pinyinterm{dong-short} described the style of period V" in text
     assert "Yi Kung (1957)" not in text
     assert r"Yi Kung (\citeyear{Yi1957Mantan})" in text
+    assert "periods III and V.\\footnote[63]{" in text
+    assert "corners than curves.\\footnote[65]{" in text
+    assert "any period.\\footnote[66]{" in text
+    assert "fig. 10).\\footnote[67]{" in text
+    assert "epigraphic traditions).\\footnote[68]{" in text
+    assert "tsai ming\\footnote[135]{" in text
+    assert "charge (?),''\\footnote[134]{" in text
+    assert "period II.\\footnote[136]{" in text
+    assert "recorded.\\footnote[137]{" in text
+    assert "shape changes;\\footnote[159]{" in text
+    assert "other scholars.\\footnote[160]{" in text
+    assert "need revision.\\footnote[161]{" in text
+    assert "marks behind them.\\footnote[162]{" in text
+    assert "disordered;\\footnote[163]{" in text
+    assert "sites.\\footnote[164]{" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
@@ -64,7 +92,9 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     ch02 = CH02.read_text(encoding="utf-8")
 
     assert "535455565758" not in ch01
+    assert "848586878889" not in ch01
     assert "146147148149150151152153" not in ch02
+    assert "6970717273" not in ch02
 
     assert "smoothed.\\footnote[53]{" in ch01
     assert "thickness (fig. 3).\\footnote[54]{" in ch01
@@ -72,6 +102,16 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "tie them together.\\footnote[56]{" in ch01
     assert "period V.\\footnote[57]{" in ch01
     assert "had been formed\\footnote[58]{" in ch01
+    assert "vice versa.\\footnote[84]{" in ch01
+    assert "vice versa.\\footnote[85]{" in ch01
+    assert "bureaucratic works of art.\\footnote[86]{" in ch01
+    assert "left scapula.\\footnote[87]{" in ch01
+    assert "marginal notations.\\footnote[88]{" in ch01
+    assert "consistently followed.\\footnote[89]{" in ch01
+    assert "continuing a tradition first recorded in Kojiki" in ch01
+    assert "Unlike this unprepared, Neolithic scapulimancy," in ch01
+    assert "23 \\{] | J}" not in ch01
+    assert "appeared behind the semicircular side hollow,\\footnote[102]{" in ch01
 
     assert "black.\\footnote[146]{" in ch02
     assert "with brown.\\footnote[147]{" in ch02
@@ -86,6 +126,11 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "exercise sheets.''\\footnote[100]{" in ch02
     assert "shell.\\footnote[102]{" in ch02
     assert "Ti 乙" not in ch02
+    assert "Royal Family group.\\footnote[69]{" in ch02
+    assert "ten-day week.\\footnote[70]{" in ch02
+    assert "day of divination.\\footnote[71]{" in ch02
+    assert "advance.\\footnote[72]{" in ch02
+    assert "to stress.\\footnote[73]{" in ch02
 
 
 def test_appendix_note_reference_residue_removed():
@@ -126,6 +171,8 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "Wang Yi-jung and Liu E" in ch03
 
     assert "vice versa.¹ 179" not in ch04
+    assert "110111112113114115" not in ch04
+    assert "116117118119120121122123" not in ch04
     assert "(V).8 These dating" not in ch04
     assert "significant.\\footnote[179]" not in ch04
     assert "董 concluded that the pit" not in ch04
@@ -138,3 +185,41 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "Late (V).\\footnote[8]{" in ch04
     assert "comparative certainty.\\footnote[10]{" in ch04
     assert "historical terms.\\footnote[11]{" in ch04
+    assert "inauspicious.\\footnote[110]{" in ch04
+    assert "changed radically.\\footnote[111]{" in ch04
+    assert "lacked them altogether.\\footnote[112]{" in ch04
+    assert "commoner by period V.\\footnote[113]{" in ch04
+    assert "period I,\\footnote[114]{" in ch04
+    assert "only the chi.\\footnote[115]{" in ch04
+    assert "as the charge.\\footnote[116]{" in ch04
+    assert "the cracks.''\\footnote[117]{" in ch04
+    assert "Royal Family group).\\footnote[118]{" in ch04
+    assert "shared a similar evolution.\\footnote[119]{" in ch04
+    assert "period I.\\footnote[120]{" in ch04
+    assert "detailed verifications,\\footnote[121]{" in ch04
+    assert "thirteen foxes''\\footnote[122]{" in ch04
+    assert "other periods.\\footnote[123]{" in ch04
+
+
+def test_ch05_reconstruction_note_runs_removed():
+    ch05 = CH05.read_text(encoding="utf-8")
+
+    assert "7071727374757677" not in ch05
+    assert "mirror together\\footnote[69]" not in ch05
+    assert "'' 69 should remind us" not in ch05
+    assert "151 0 ]" not in ch05
+
+    assert "mirror together''\\footnote[69]{" in ch05
+    assert "question.\\footnote[70]{" in ch05
+    assert "2.9.4).\\footnote[71]{" in ch05
+    assert "fig. 30),\\footnote[72]{" in ch05
+    assert "to be wrong.\\footnote[73]{" in ch05
+    assert "serious consequences.\\footnote[74]{" in ch05
+    assert "completed.\\footnote[75]{" in ch05
+    assert "features matched.\\footnote[76]{" in ch05
+    assert "fig. 30).\\footnote[77]{" in ch05
+    assert "role of the historian.\\footnote[90]{" in ch05
+    assert "silenced.''\\footnote[91]{" in ch05
+    assert "unreason''\\footnote[92]{" in ch05
+    assert "history.''\\footnote[93]{" in ch05
+    assert "extend our own.\\footnote[94]{" in ch05
