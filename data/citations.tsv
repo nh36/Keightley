@@ -2,6 +2,7 @@ file	line	raw	surname	year	pages	candidate_count	candidate_key
 tex/appendices/app01.tex	18	Su (1969)	Su	1969		1	Su1969Shuo
 tex/appendices/app01.tex	107	Smith (1931)	Smith	1931		1	Smith1931Fauna
 tex/appendices/app01.tex	107	Pritchard (1967)	Pritchard	1967		1	Pritchard1967Living
+tex/appendices/app01.tex	115	Ping (1930)	Ping	1930		1	Ping1930Notes
 tex/appendices/app01.tex	115	Lindholm (1931)	Lindholm	1931		1	Lindholm1931Uber
 tex/appendices/app02.tex	84	Tung (1933), p. 420	Tung	1933	420	1	Tung1933Chia
 tex/appendices/app02.tex	161	Hultkrantz (1968), p. 78	Hultkrantz	1968	78	1	Hultkrantz1968La
@@ -51,6 +52,7 @@ tex/appendices/app05.tex	68	Takashima (1976)	Takashima	1976		1	Takashima1976Subo
 tex/appendices/app05.tex	68	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
 tex/appendices/app05.tex	123	Tung (1965), pp. 91-92	Tung	1965	91-92	1	Tung1965Chia
 tex/appendices/app05.tex	123	Shima (1958)	Shima	1958		1	Shima1958Inkyo
+tex/appendices/app05.tex	186	Meng-chia (1956), p. 273	Meng-chia	1956	273	1	Chen1956Yin
 tex/appendices/app05.tex	186	Tung (1965)	Tung	1965		1	Tung1965Chia
 tex/appendices/app05.tex	189	Shima (1958), p. 409, 	Shima	1958	409,	1	Shima1958Inkyo
 tex/appendices/app05.tex	205	Tung (1965), p. 98,	Tung	1965	98,	1	Tung1965Chia
@@ -73,6 +75,7 @@ tex/chapters/ch01.tex	38	Cooper (1936), p. 34	Cooper	1936	34	1	Cooper1936Scapuli
 tex/chapters/ch01.tex	38	Eisenberger (1938), p. 50	Eisenberger	1938	50	1	Eisenberger1938Das
 tex/chapters/ch01.tex	38	Satow (1879), p. 431	Satow	1879	431	1	Satow1879Ancient
 tex/chapters/ch01.tex	38	Eisenberger (1938), p. 81	Eisenberger	1938	81	1	Eisenberger1938Das
+tex/chapters/ch01.tex	38	Rockhill (1900), pp. 187–188	Rockhill	1900	187–188	1	Rockhill1900Journey
 tex/chapters/ch01.tex	38	Cooper (1936), p. 29	Cooper	1936	29	1	Cooper1936Scapulimancy
 tex/chapters/ch01.tex	38	Speck (1935), p. 128	Speck	1935	128	1	Speck1935Naskapi
 tex/chapters/ch01.tex	38	Cooper (1936), pp. 3031, 38	Cooper	1936	3031, 38	1	Cooper1936Scapulimancy
@@ -109,9 +112,11 @@ tex/chapters/ch01.tex	203	Kaizuka (1967), p. 199	Kaizuka	1967	199	1	Kaizuka1967K
 tex/chapters/ch01.tex	203	Shirakawa (1972), p. 19	Shirakawa	1972	19	1	Shirakawa1972Kokotsubun
 tex/chapters/ch01.tex	211	Levine (1919), p. 37	Levine	1919	37	1	Levine1919Farm
 tex/chapters/ch01.tex	233	Minao (1971), pp. 43-45 	Minao	1971	43-45	1	Hayashi1971Chosa
+tex/chapters/ch01.tex	259	Sisson (1953), pp. 84-86, 126, 145–146	Sisson	1953	84-86, 126, 145–146	1	Sisson1953Anatomy
 tex/chapters/ch01.tex	279	Su (1969), p. 107 	Su	1969	107	1	Su1969Shuo
 tex/chapters/ch01.tex	282	Smith (1931)	Smith	1931		1	Smith1931Fauna
 tex/chapters/ch01.tex	282	Carr (1952), pp. 37-39	Carr	1952	37-39	1	Carr1952Handbook
+tex/chapters/ch01.tex	282	Romer (1956), p. 32	Romer	1956	32	1	Romer1956Osteology
 tex/chapters/ch01.tex	286	Smith (1931), p. 50	Smith	1931	50	1	Smith1931Fauna
 tex/chapters/ch01.tex	304	Creel (1935), p. 176, 	Creel	1935	176,	1	Creel1935Dragon
 tex/chapters/ch01.tex	322	Takashima (1973), p. 370, 	Takashima	1973	370,	1	Takashima1973Negatives
@@ -151,6 +156,7 @@ tex/chapters/ch02.tex	361	Daliang (1972), pp. 100-103	Daliang	1972	100-103	1	Li1
 tex/chapters/ch02.tex	371	Daliang (1972), pp. 166-169, 	Daliang	1972	166-169,	1	Li1972Kuei
 tex/chapters/ch02.tex	390	Gadd (1948), pp. 56-57	Gadd	1948	56-57	1	Gadd1948Ideas
 tex/chapters/ch02.tex	390	Parke and Wormell (1956), pp. 39-40	Parke and Wormell	1956	39-40	1	ParkeWormell1956Delphic
+tex/chapters/ch02.tex	390	Oppenheim (1964), pp. 214, 227	Oppenheim	1964	214, 227	1	Oppenheim1964Ancient
 tex/chapters/ch02.tex	414	Hopkins (1938), p. 416, 	Hopkins	1938	416,	1	Hopkins1938The
 tex/chapters/ch02.tex	414	Keightley (1973a), pp. 3–6	Keightley	1973a	3–6	1	Keightley1973aShang
 tex/chapters/ch02.tex	487	Takashima (1973), pp. 91-114	Takashima	1973	91-114	1	Takashima1973Negatives
@@ -191,11 +197,14 @@ tex/chapters/ch03.tex	19	Lefeuvre (1975)	Lefeuvre	1975		1	Lefeuvre1975Les
 tex/chapters/ch03.tex	25	Matsumaru (1973), pp. 19-22, 	Matsumaru	1973	19-22,	1	Matsumaru1973Oracle
 tex/chapters/ch03.tex	65	CKWP (1965)	CKWP	1965		1	CKWP1965Chia
 tex/chapters/ch03.tex	96	Teng and Biggerstaff (1971), p. 47	Teng and Biggerstaff	1971	47	1	Teng1971Annotated
+tex/chapters/ch03.tex	106	Mattos (1976)	Mattos	1976		1	Mattos1976Reference
 tex/chapters/ch03.tex	151	Keightley (1969a)	Keightley	1969a		1	Keightley1969aBook
 tex/chapters/ch03.tex	191	Shigeki (1967)	Shigeki	1967		1	Kaizuka1967Kodai
 tex/chapters/ch03.tex	191	Shizuka (1972)	Shizuka	1972		1	Shirakawa1972Kokotsubun
 tex/chapters/ch03.tex	194	Akatsuka (1977)	Akatsuka	1977		1	Akatsuka1977Rev
+tex/chapters/ch03.tex	209	Smith (1972)	Smith	1972		1	Smith1972Parrot
 tex/chapters/ch03.tex	211	Lukes (1967)	Lukes	1967		1	Lukes1967Problems
+tex/chapters/ch03.tex	211	Rorty (1972)	Rorty	1972		1	Rorty1972World
 tex/chapters/ch03.tex	226	Britton (1936), p. 207	Britton	1936	207	1	Britton1936Sinological
 tex/chapters/ch03.tex	270	Takashima (1973), pp. 267-305	Takashima	1973	267-305	1	Takashima1973Negatives
 tex/chapters/ch03.tex	270	Serruys (1974), pp. 24, 46-58	Serruys	1974	24, 46-58	1	Serruys1974The
@@ -213,7 +222,6 @@ tex/chapters/ch03.tex	415	Wang (1972), p. 53 	Wang	1972	53	1	Wang1972The
 tex/chapters/ch03.tex	446	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
 tex/chapters/ch03.tex	520	Keightley (1973a)	Keightley	1973a		1	Keightley1973aShang
 tex/chapters/ch03.tex	520	Takashima (1976)	Takashima	1976		1	Takashima1976Subordinate
-tex/chapters/ch03.tex	582	Nivison (1977)	Nivison	1977		1	Nivison1977Three
 tex/chapters/ch03.tex	582	Takashima (1973), pp. 336-338	Takashima	1973	336-338	1	Takashima1973Negatives
 tex/chapters/ch03.tex	582	Serruys (1974), pp. 29-30	Serruys	1974	29-30	1	Serruys1974The
 tex/chapters/ch03.tex	601	Daliang (1972), pp. 134-169	Daliang	1972	134-169	1	Li1972Kuei
@@ -236,6 +244,7 @@ tex/chapters/ch04.tex	304	Miyazaki (1970), pp. 277-278, 	Miyazaki	1970	277-278,	
 tex/chapters/ch04.tex	381	Wan (1948), p. 223	Wan	1948	223	1	Chti1948Shih
 tex/chapters/ch04.tex	443	Hopkins (1934), pp. 80-81, 	Hopkins	1934	80-81,	1	Hopkins1934Archaic
 tex/chapters/ch04.tex	443	Kaizuka (1946), pp. 208209 	Kaizuka	1946	208209	1	Kaizuka1946Chiigoku
+tex/chapters/ch04.tex	465	Shih-hsien (1961), p. 72	Shih-hsien	1961	72	1	Lu1961Yinchi
 tex/chapters/ch04.tex	636	Keightley (1973a), pp. 48-49	Keightley	1973a	48-49	1	Keightley1973aShang
 tex/chapters/ch04.tex	636	Kaizuka (1946), p. 237, 	Kaizuka	1946	237,	1	Kaizuka1946Chiigoku
 tex/chapters/ch04.tex	646	Zongdong (1970), p. 25	Zongdong	1970	25	1	Zhang1970Der
@@ -295,11 +304,12 @@ tex/chapters/ch05.tex	669	Mickel (1976b)	Mickel	1976b		1	Mickel1976bReview
 tex/chapters/ch05.tex	669	Mickel (1974)	Mickel	1974		1	Mickel1974aIndex
 tex/chapters/ch05.tex	749	Creel (1970), p. 31	Creel	1970	31	1	Creel1970Origins
 tex/chapters/ch05.tex	749	Gulik (1961), p. 4	Gulik	1961	4	1	Van1961Sexual
+tex/chapters/ch05.tex	769	Zongdong (1970)	Zongdong	1970		1	Zhang1970Der
 tex/chapters/ch05.tex	769	Wheatley (1971)	Wheatley	1971		1	Wheatley1971Pivot
 tex/chapters/ch05.tex	769	Vandermeersch (1975)	Vandermeersch	1975		1	Vandermeersch1975Wangdao
-tex/chapters/ch05.tex	769	Nivison (1977)	Nivison	1977		1	Nivison1977Three
 tex/chapters/ch05.tex	779	Hughes (1961), p. 9	Hughes	1961	9	1	Hughes1961Consciousness
 tex/chapters/ch05.tex	796	Evans-Pritchard (1937), pp. 270, 313	Evans-Pritchard	1937	270, 313	1	EvansPritchard1937Witchcraft
+tex/chapters/ch05.tex	796	Strauss (1969), p. 10	Strauss	1969	10	1	LeviStrauss1969Raw
 tex/chapters/ch05.tex	796	Kluckhohn and Leighton (1970), p. 348	Kluckhohn and Leighton	1970	348	1	Kluckhohn1970The
 tex/chapters/ch05.tex	796	Bloch (1953), p. 151	Bloch	1953	151	1	Bloch1953The
 tex/chapters/ch05.tex	808	Serruys (1974), pp. 15-19, 	Serruys	1974	15-19,	1	Serruys1974The
@@ -309,6 +319,7 @@ tex/chapters/ch05.tex	820	Serruys (1974), pp. 15-19	Serruys	1974	15-19	1	Serruys
 tex/chapters/ch05.tex	820	Woodhead (1967), pp. 67-76, 	Woodhead	1967	67-76,	1	Woodhead1967Study
 tex/chapters/ch05.tex	822	Mickel (1976b)	Mickel	1976b		1	Mickel1976bReview
 tex/chapters/ch05.tex	822	Mickel (1974)	Mickel	1974		1	Mickel1974aIndex
+tex/chapters/ch05.tex	840	Pope (1935)	Pope	1935		1	Pope1935Reptiles
 tex/chapters/ch05.tex	855	McDowell (1964)	McDowell	1964		1	McDowell1964Partition
 tex/frontmatter/book-preamble.tex	64	Karlbeck (1957), pp. 174-192	Karlbeck	1957	174-192	1	Karlbeck1957Treasure
 tex/frontmatter/book-preamble.tex	64	Tung (1965), pp. 14-15	Tung	1965	14-15	1	Tung1965Chia
@@ -325,8 +336,10 @@ tex/frontmatter/preface.tex	27	Ho (1975), p. 307, 	Ho	1975	307,	1	Ho1975Cradle
 tex/frontmatter/preface.tex	42	Barnard (1960b), pp. 499-500, 	Barnard	1960b	499-500,	1	Barnard1960bReview
 tex/frontmatter/preface.tex	157	Kwang-chih (1977)	Kwang-chih	1977		1	Chang1977The
 tex/frontmatter/preface.tex	157	Chang (1968)	Chang	1968		1	Chang1968Archaeology
+tex/frontmatter/preface.tex	161	Nivison (1977a)	Nivison	1977a		1	Nivison1977aPronominal
 tex/frontmatter/preface.tex	163	Hao-liang (1977)	Hao-liang	1977		1	Yu1977Computer
 tex/frontmatter/preface.tex	165	Mickel (1977a)	Mickel	1977a		1	Mickel1977aIndex
 tex/frontmatter/preface.tex	165	Britton (1935)	Britton	1935		1	Britton1935Yin
 tex/frontmatter/preface.tex	166	Creel (1937)	Creel	1937		1	Creel1937Birth
 tex/frontmatter/preface.tex	172	Hung (1976)	Hung	1976		1	Hung1976Panlongcheng
+tex/frontmatter/preface.tex	174	Wen-cho (1977)	Wen-cho	1977		1	Shen1977Fuyu

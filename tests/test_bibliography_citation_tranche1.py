@@ -55,6 +55,10 @@ def test_first_tranche_citations_are_wired():
     assert r"\textcite[pp.~149--158]{Mickel1976Semantic}" in ch03
     assert r"\textcite{Mickel1976Semantic}" in ch05
     assert r"\textcite[pp.~28, 39, 56, 59--60, 119, 121]{Linduff1972Tradition}" in ch05
+    assert "Park and Wormell (1956), p. 33" not in ch05
+    assert r"Park and Wormell (\citeyear{ParkeWormell1956Delphic}), p. 33." in ch05
+    assert "Zhou Lin (1970); (1972);" not in ch05
+    assert r"Zhou Lin (\citeyear{Chao1970Marriage}); (\citeyear{Chao1972ShangGovernment});" in ch05
 
 
 def test_citation_inventory_skips_backmatter():
@@ -95,6 +99,8 @@ def test_manual_bibliography_entries_exist():
     assert "@book{Carr1952Handbook," in bib
     assert "@book{Chang1968Archaeology," in bib
     assert "shortauthor = {Kwang-chih}" in bib
+    assert "@phdthesis{Chao1972ShangGovernment," in bib
+    assert "shortauthor = {Zhou Lin}" in bib
     assert "@book{Chienshou1917Yinxu," in bib
     assert "shortauthor = {Chien-shou}" in bib
     assert "@book{CKWP1965Chia," in bib
@@ -107,6 +113,8 @@ def test_manual_bibliography_entries_exist():
     assert "@article{Chavannes1911Divination," in bib
     assert "@article{Clark1975Calibration," in bib
     assert "@article{Clavier1968Resurgences," in bib
+    assert "@book{Chen1956Yin," in bib
+    assert "shortauthor = {Meng-chia}" in bib
     assert "@book{Creel1937Birth," in bib
     assert "@book{Creel1970Origins," in bib
     assert "@book{Crump1963Dragon," in bib
@@ -160,6 +168,7 @@ def test_manual_bibliography_entries_exist():
     assert "@incollection{Matsumaru1970Inshu," in bib
     assert "@incollection{Matsumaru1973Oracle," in bib
     assert "@book{Matsumoto1966Shunju," in bib
+    assert "@article{Mattos1976Reference," in bib
     assert "@article{McDowell1964Partition," in bib
     assert "@article{Mickel1976bReview," in bib
     assert "@article{Mickel1977aIndex," in bib
@@ -170,19 +179,34 @@ def test_manual_bibliography_entries_exist():
     assert "@book{Noda1945Kanjo," in bib
     assert "shortauthor = {Noda and Yabuuchi}" in bib
     assert "@book{Needham1971Science," in bib
+    assert "@article{Nivison1977aPronominal," in bib
+    assert "@book{Oppenheim1964Ancient," in bib
     assert "@book{ParkeWormell1956Delphic," in bib
     assert "shortauthor = {Parke and Wormell}" in bib
     assert "@book{Philippi1968Kojiki," in bib
+    assert "@article{Ping1930Notes," in bib
+    assert "@book{Pope1935Reptiles," in bib
     assert "@book{Pritchard1967Living," in bib
     assert "@article{Roux1968Divination," in bib
     assert "shortauthor  = {Roux and Boratav}" in bib
+    assert "@book{Rockhill1900Journey," in bib
+    assert "@book{Romer1956Osteology," in bib
+    assert "@article{Rorty1972World," in bib
     assert "@article{Saussure1924Chronologie," in bib
     assert "shortauthor  = {Saussure}" in bib
+    assert "@article{Lu1961Yinchi," in bib
+    assert "shortauthor  = {Shih-hsien}" in bib
+    assert "@book{LeviStrauss1969Raw," in bib
+    assert "shortauthor = {Strauss}" in bib
+    assert "@article{Shen1977Fuyu," in bib
+    assert "shortauthor  = {Wen-cho}" in bib
     assert "@article{Shima1960TiYi," in bib
     assert "@article{Shima1966Bokuji," in bib
     assert "@book{Shirakawa1971Kimbun," in bib
     assert "@article{Sivin1969Cosmos," in bib
+    assert "@book{Sisson1953Anatomy," in bib
     assert "@book{Smith1931Fauna," in bib
+    assert "@article{Smith1972Parrot," in bib
     assert "@article{Soper1966Early," in bib
     assert "@book{Speck1935Naskapi," in bib
     assert "@article{Satow1879Ancient," in bib
