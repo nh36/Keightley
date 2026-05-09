@@ -61,14 +61,22 @@ def test_first_tranche_citations_are_wired():
     assert r"Zhou Lin (\citeyear{Chao1970Marriage}); (\citeyear{Chao1972ShangGovernment});" in ch05
     assert "David Nivison (1977)" not in ch03
     assert r"David Nivison (\citeyear{Nivison1977aPronominal})" in ch03
+    assert "Nivison (1977)." not in ch05
+    assert r"Nivison (\citeyear{Nivison1977Interpretation})." in ch05
     assert "Wu Tse (1953)" not in ch03
     assert r"Wu Tse (\citeyear{Wu1953Kutai})" in ch03
     assert "Ting Shan (1956), p. 125" not in ch01
     assert r"Ting Shan (\citeyear{TingShan1956Chia}), p. 125" in ch01
+    assert "Chan Pingleung (1972), pp. 39-41" not in ch01
+    assert r"Chan Ping-leung (\citeyear{Chan1972Chutzu}), pp. 39-41" in ch01
     assert "史 Changju (1959), p. 321." not in ch05
     assert r"\pinyinterm{shi-zhangru} (\citeyear{Shih1959Hsiao}), p. 321." in ch05
     assert "Wang Ziyu (1933)" not in ch05
     assert r"Wang Ziyu (\citeyear{Wang1933Chia})" in ch05
+    assert "Lefeuvre (1971)" not in ch03
+    assert r"Lefeuvre (\citeyear{Lefeuvre1971SerieH})" in ch03
+    assert "Kuo Mo-jo (1972), p. 5" not in app04
+    assert r"Kuo Mo-jo (\citeyear{Kuo1972Anyang}), p. 5" in app04
 
 
 def test_citation_inventory_skips_backmatter():
@@ -229,6 +237,8 @@ def test_manual_bibliography_entries_exist():
     assert "@article{Pulleyblank1968Review," in bib
     assert "@unpublished{Pulleyblank1975Chinese," in bib
     assert "@article{Schafer1972Review," in bib
+    assert "@unpublished{Nivison1977Interpretation," in bib
+    assert "@unpublished{Lefeuvre1971SerieH," in bib
     assert "@phdthesis{Takashima1973Negatives," in bib
     assert "@unpublished{Takashima1977aExistence," in bib
     assert "@book{Thompson1969ChineseReligion," in bib
@@ -238,6 +248,9 @@ def test_manual_bibliography_entries_exist():
     assert "@article{Tung1949aYin," in bib
     assert "@article{Tung1953Chia," in bib
     assert "@book{TingShan1956Chia," in bib
+    assert "@phdthesis{Chan1972Chutzu," in bib
+    assert "@article{Kuo1972Anyang," in bib
+    assert "@article{Kuo1972aFachan," in bib
     assert "@article{Nivison1977Three," in bib
     assert "@incollection{Vandermeersch1974Tortue," in bib
     assert "@phdthesis{Vandermeersch1975Wangdao," in bib
