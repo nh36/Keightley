@@ -95,7 +95,25 @@ def test_appendix_note_reference_residue_removed():
     assert "table\\footnote[28]" not in app04
     assert "table 2.\\footnote[28]{" in app04
     assert "described in sec.\\footnote[1]" not in app05
-    assert "described in sec. 4.3.1.12.\\footnote[1]{" in app05
+    assert "described in sec. 4.3.1.12. Changes" in app05
+    assert "period I.\\footnote[1]{" in app05
+    assert "(day\\footnote[5]" not in app05
+    assert "[In the tenth month].\\footnote[5]{" in app05
+    assert "no fault.\\footnote[6]{Chui-hsin 304." in app05
+    assert "ritual, may also be established.8" not in app05
+    assert "I inscriptions. 10 The names" not in app05
+    assert "statelets. 15 Divinations" not in app05
+    assert "periods II to V.30 Divinations" not in app05
+    assert "period V.31 Divinations" not in app05
+    assert "criteria. 32" not in app05
+    assert "period I inscriptions.33" not in app05
+    assert "7. E.g., Hou-pien" not in app05
+    assert "30. See the inscriptions listed at S169.3" not in app05
+    assert "established.\\footnote[8]{" in app05
+    assert "group.\\footnote[9]{" in app05
+    assert "statelets.\\footnote[15]{" in app05
+    assert "periods II to V.\\footnote[30]{" in app05
+    assert "group, but never in period V.\\footnote[31]{" in app05
 
 
 def test_cross_chapter_footnote_and_name_residue_removed():
