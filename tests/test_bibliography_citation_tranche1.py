@@ -61,6 +61,10 @@ def test_first_tranche_citations_are_wired():
     assert r"Zhou Lin (\citeyear{Chao1970Marriage}); (\citeyear{Chao1972ShangGovernment});" in ch05
     assert "David Nivison (1977)" not in ch03
     assert r"David Nivison (\citeyear{Nivison1977aPronominal})" in ch03
+    assert "Wu Tse (1953)" not in ch03
+    assert r"Wu Tse (\citeyear{Wu1953Kutai})" in ch03
+    assert "Ting Shan (1956), p. 125" not in ch01
+    assert r"Ting Shan (\citeyear{TingShan1956Chia}), p. 125" in ch01
     assert "史 Changju (1959), p. 321." not in ch05
     assert r"\pinyinterm{shi-zhangru} (\citeyear{Shih1959Hsiao}), p. 321." in ch05
     assert "Wang Ziyu (1933)" not in ch05
@@ -230,7 +234,10 @@ def test_manual_bibliography_entries_exist():
     assert "@book{Thompson1969ChineseReligion," in bib
     assert "@unpublished{Takashima1976Subordinate," in bib
     assert "@book{Tung1945Yin," in bib
+    assert "@article{Tung1929bHsin," in bib
+    assert "@article{Tung1949aYin," in bib
     assert "@article{Tung1953Chia," in bib
+    assert "@book{TingShan1956Chia," in bib
     assert "@article{Nivison1977Three," in bib
     assert "@incollection{Vandermeersch1974Tortue," in bib
     assert "@phdthesis{Vandermeersch1975Wangdao," in bib
@@ -243,9 +250,11 @@ def test_manual_bibliography_entries_exist():
     assert "@book{Wieger1923Textes," in bib
     assert "@collection{Wilson1970Rationality," in bib
     assert "@article{Winch1964Understanding," in bib
+    assert "@book{Wu1953Kutai," in bib
     assert "@book{Woodhead1967Study," in bib
     assert "@article{Wu1943Notes," in bib
     assert "@inproceedings{Wu1955Broken," in bib
+    assert "@article{Yi1957Mantan," in bib
     assert "shortauthor = {Shih-ch'ang}" in bib
     assert "@article{Young1936Fossil," in bib
     assert "@article{Yu1977Computer," in bib

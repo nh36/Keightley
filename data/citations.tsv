@@ -6,12 +6,14 @@ tex/appendices/app01.tex	107	Pritchard (1967)	Pritchard	1967		1	Pritchard1967Liv
 tex/appendices/app01.tex	115	Ping (1930)	Ping	1930		1	Ping1930Notes
 tex/appendices/app01.tex	115	Lindholm (1931)	Lindholm	1931		1	Lindholm1931Uber
 tex/appendices/app02.tex	84	Tung (1933), p. 420	Tung	1933	420	1	Tung1933Chia
+tex/appendices/app02.tex	118	Tung (1949a), p. 259, 	Tung	1949a	259,	1	Tung1949aYin
 tex/appendices/app02.tex	161	Hultkrantz (1968), p. 78	Hultkrantz	1968	78	1	Hultkrantz1968La
 tex/appendices/app03.tex	27	Tung (1953), p. 375	Tung	1953	375	1	Tung1953Chia
 tex/appendices/app03.tex	27	Tung (1953), p. 378	Tung	1953	378	1	Tung1953Chia
 tex/appendices/app03.tex	27	Chien-shou (1917)	Chien-shou	1917		1	Chienshou1917Yinxu
 tex/appendices/app03.tex	27	Fu-yin (1925)	Fu-yin	1925		1	Fuyin1925Zhengwen
 tex/appendices/app03.tex	27	Tung (1953), pp. 380, 381, 	Tung	1953	380, 381,	1	Tung1953Chia
+tex/appendices/app03.tex	33	Tung (1929b)	Tung	1929b		1	Tung1929bHsin
 tex/appendices/app03.tex	214	Tung (1945)	Tung	1945		1	Tung1945Yin
 tex/appendices/app03.tex	218	Tung (1945)	Tung	1945		1	Tung1945Yin
 tex/appendices/app04.tex	19	Barnard (1975), pp. 16-17, 	Barnard	1975	16-17,	1	Barnard1975First
@@ -110,32 +112,32 @@ tex/chapters/ch01.tex	157	Su (1969)	Su	1969		1	Su1969Shuo
 tex/chapters/ch01.tex	160	Crump (1963), p. 170	Crump	1963	170	1	Crump1963Dragon
 tex/chapters/ch01.tex	160	Vandermeersch (1974), p. 38	Vandermeersch	1974	38	1	Vandermeersch1974Tortue
 tex/chapters/ch01.tex	165	Shima (1958)	Shima	1958		1	Shima1958Inkyo
-tex/chapters/ch01.tex	181	Liu-lu (1945)	Liu-lu	1945		1	LiuLu1945Jiaku
-tex/chapters/ch01.tex	203	Kaizuka (1967), p. 199	Kaizuka	1967	199	1	Kaizuka1967Kodai
-tex/chapters/ch01.tex	203	Shirakawa (1972), p. 19	Shirakawa	1972	19	1	Shirakawa1972Kokotsubun
-tex/chapters/ch01.tex	211	Levine (1919), p. 37	Levine	1919	37	1	Levine1919Farm
-tex/chapters/ch01.tex	233	Minao (1971), pp. 43-45 	Minao	1971	43-45	1	Hayashi1971Chosa
-tex/chapters/ch01.tex	259	Sisson (1953), pp. 84-86, 126, 145–146	Sisson	1953	84-86, 126, 145–146	1	Sisson1953Anatomy
-tex/chapters/ch01.tex	279	Su (1969), p. 107 	Su	1969	107	1	Su1969Shuo
-tex/chapters/ch01.tex	282	Smith (1931)	Smith	1931		1	Smith1931Fauna
-tex/chapters/ch01.tex	282	Carr (1952), pp. 37-39	Carr	1952	37-39	1	Carr1952Handbook
-tex/chapters/ch01.tex	282	Romer (1956), p. 32	Romer	1956	32	1	Romer1956Osteology
-tex/chapters/ch01.tex	286	Smith (1931), p. 50	Smith	1931	50	1	Smith1931Fauna
-tex/chapters/ch01.tex	304	Creel (1935), p. 176, 	Creel	1935	176,	1	Creel1935Dragon
-tex/chapters/ch01.tex	322	Takashima (1973), p. 370, 	Takashima	1973	370,	1	Takashima1973Negatives
-tex/chapters/ch01.tex	342	Kaizuka (1967), pp. 199–200	Kaizuka	1967	199–200	1	Kaizuka1967Kodai
-tex/chapters/ch01.tex	342	Shirakawa (1972), p. 19	Shirakawa	1972	19	1	Shirakawa1972Kokotsubun
-tex/chapters/ch01.tex	346	Minao (1968), pp. 50-67	Minao	1968	50-67	1	Hayashi1968BIE
-tex/chapters/ch01.tex	346	Matsumaru (1970), pp. 77–78, 	Matsumaru	1970	77–78,	1	Matsumaru1970Inshu
-tex/chapters/ch01.tex	393	Kan (1957)	Kan	1957		1	Lao1957Shih
-tex/chapters/ch01.tex	445	Gibson (1938), p. 13, 	Gibson	1938	13,	1	Gibson1938Domestic
-tex/chapters/ch01.tex	481	Ju (1969), p. 81	Ju	1969	81	1	Ju1969Metaphysical
-tex/chapters/ch01.tex	485	Chavannes (1911), p. 132	Chavannes	1911	132	1	Chavannes1911Divination
-tex/chapters/ch01.tex	486	Fujino (1960), pp. 13, 25	Fujino	1960	13, 25	1	Fujino1960Kiboku
-tex/chapters/ch01.tex	486	Kaizuka (1967), p. 201, 	Kaizuka	1967	201,	1	Kaizuka1967Kodai
-tex/chapters/ch01.tex	486	Jochelson (1905), pp. 73-74	Jochelson	1905	73-74	1	Jochelson1905Religion
-tex/chapters/ch01.tex	584	Daliang (1972), pp. 8–30,	Daliang	1972	8–30,	1	Li1972Kuei
-tex/chapters/ch01.tex	618	Daliang (1972), pp. 27-30, 	Daliang	1972	27-30,	1	Li1972Kuei
+tex/chapters/ch01.tex	180	Liu-lu (1945)	Liu-lu	1945		1	LiuLu1945Jiaku
+tex/chapters/ch01.tex	202	Kaizuka (1967), p. 199	Kaizuka	1967	199	1	Kaizuka1967Kodai
+tex/chapters/ch01.tex	202	Shirakawa (1972), p. 19	Shirakawa	1972	19	1	Shirakawa1972Kokotsubun
+tex/chapters/ch01.tex	210	Levine (1919), p. 37	Levine	1919	37	1	Levine1919Farm
+tex/chapters/ch01.tex	232	Minao (1971), pp. 43-45 	Minao	1971	43-45	1	Hayashi1971Chosa
+tex/chapters/ch01.tex	258	Sisson (1953), pp. 84-86, 126, 145–146	Sisson	1953	84-86, 126, 145–146	1	Sisson1953Anatomy
+tex/chapters/ch01.tex	278	Su (1969), p. 107 	Su	1969	107	1	Su1969Shuo
+tex/chapters/ch01.tex	281	Smith (1931)	Smith	1931		1	Smith1931Fauna
+tex/chapters/ch01.tex	281	Carr (1952), pp. 37-39	Carr	1952	37-39	1	Carr1952Handbook
+tex/chapters/ch01.tex	281	Romer (1956), p. 32	Romer	1956	32	1	Romer1956Osteology
+tex/chapters/ch01.tex	285	Smith (1931), p. 50	Smith	1931	50	1	Smith1931Fauna
+tex/chapters/ch01.tex	303	Creel (1935), p. 176, 	Creel	1935	176,	1	Creel1935Dragon
+tex/chapters/ch01.tex	321	Takashima (1973), p. 370, 	Takashima	1973	370,	1	Takashima1973Negatives
+tex/chapters/ch01.tex	341	Kaizuka (1967), pp. 199–200	Kaizuka	1967	199–200	1	Kaizuka1967Kodai
+tex/chapters/ch01.tex	341	Shirakawa (1972), p. 19	Shirakawa	1972	19	1	Shirakawa1972Kokotsubun
+tex/chapters/ch01.tex	345	Minao (1968), pp. 50-67	Minao	1968	50-67	1	Hayashi1968BIE
+tex/chapters/ch01.tex	345	Matsumaru (1970), pp. 77–78, 	Matsumaru	1970	77–78,	1	Matsumaru1970Inshu
+tex/chapters/ch01.tex	392	Kan (1957)	Kan	1957		1	Lao1957Shih
+tex/chapters/ch01.tex	444	Gibson (1938), p. 13, 	Gibson	1938	13,	1	Gibson1938Domestic
+tex/chapters/ch01.tex	480	Ju (1969), p. 81	Ju	1969	81	1	Ju1969Metaphysical
+tex/chapters/ch01.tex	484	Chavannes (1911), p. 132	Chavannes	1911	132	1	Chavannes1911Divination
+tex/chapters/ch01.tex	485	Fujino (1960), pp. 13, 25	Fujino	1960	13, 25	1	Fujino1960Kiboku
+tex/chapters/ch01.tex	485	Kaizuka (1967), p. 201, 	Kaizuka	1967	201,	1	Kaizuka1967Kodai
+tex/chapters/ch01.tex	485	Jochelson (1905), pp. 73-74	Jochelson	1905	73-74	1	Jochelson1905Religion
+tex/chapters/ch01.tex	583	Daliang (1972), pp. 8–30,	Daliang	1972	8–30,	1	Li1972Kuei
+tex/chapters/ch01.tex	617	Daliang (1972), pp. 27-30, 	Daliang	1972	27-30,	1	Li1972Kuei
 tex/chapters/ch02.tex	37	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
 tex/chapters/ch02.tex	37	Miyazaki (1970)	Miyazaki	1970		1	Miyazaki1970Chiigoku
 tex/chapters/ch02.tex	37	Daliang (1972), pp. 120-126	Daliang	1972	120-126	1	Li1972Kuei

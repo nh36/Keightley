@@ -55,7 +55,8 @@ def test_ch04_no_calligraphy_note_block_spill():
     assert "\\pinyinterm{dong-short} found the style of period III" in text
     assert "\\pinyinterm{dong-short} found the style of period IV" in text
     assert "\\pinyinterm{dong-short} described the style of period V" in text
-    assert "Yi Kung (1957)" in text
+    assert "Yi Kung (1957)" not in text
+    assert r"Yi Kung (\citeyear{Yi1957Mantan})" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
