@@ -514,6 +514,90 @@ def test_ik_pinyin_audit_updates_late_l_chinese_cluster():
     assert "title        = {Yun-nan Yung-sheng-hsien Yi-tsu (T'a-lu jen) 'yang ku-pu' ti tiao-ch'a ho yen-chiu}" not in manual_bib
 
 
+def test_ik_pinyin_audit_updates_ling_liu_luo_cluster():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "author       = {Ling, Shunsheng}" in manual_bib
+    assert "title        = {Songhuajiang xiayou de Hezhe zu}" in manual_bib
+    assert "journaltitle = {Guoli zhongyang yanjiuyuan lishi yuyan yanjiusuo dankan jiazhong}" in manual_bib
+    assert "title        = {Zhongguo gudai de guiji wenhua}" in manual_bib
+    assert "author       = {Liu, Yuanlin}" in manual_bib
+    assert "title        = {Yinxu 'gujian' ji qi youguan wenti}" in manual_bib
+    assert "title        = {Bugu de gongzhi jishu yanjin guocheng zhi tantao}" in manual_bib
+    assert "author      = {Luo, Zhenyu}" in manual_bib
+    assert "title       = {Yinxu shuqi kaoshi}" in manual_bib
+    assert "title        = {Goso bokuji ni tsuite no kosatsu}" in manual_bib
+    assert "journaltitle = {Chutetsu bungaku kaiho}" in manual_bib
+
+    assert "author       = {Ling Shun-sheng}" not in manual_bib
+    assert "title        = {Sung-hua-chiang hsia-yu ti Ho-che tsu}" not in manual_bib
+    assert "journaltitle = {Kuo-li chung-yang yen-chiu-yuan li-shih yu-yen yen-chiu-so tan-k'an chia-chung}" not in manual_bib
+    assert "title        = {Chung-kuo ku-tai ti kuei-chi wen-hua}" not in manual_bib
+    assert "author       = {Liu Yuan-lin}" not in manual_bib
+    assert "title        = {Yin-hsu 'ku-chien' chi ch'i yu-kuan wen-t'i}" not in manual_bib
+    assert "title        = {Pu-ku ti kung-chih chi-shu yen-chin kuo-ch'eng chih t'an-t'ao}" not in manual_bib
+    assert "author      = {Lo Chen-yu}" not in manual_bib
+    assert "title       = {Yin-hsu shu-ch'i k'ao-shih}" not in manual_bib
+
+
+def test_ik_pinyin_audit_updates_late_l_tail_cluster():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "author       = {Tong, Enzheng and Zhang, Shengkai and Chen, Jingchun}" in manual_bib
+    assert "title        = {Guanyu shiyong dianzi jisuanji zhuihe Shangdai bujia suipian de chubu baogao}" in manual_bib
+    assert "author       = {Yu, Haoliang}" in manual_bib
+    assert "shortauthor  = {Haoliang}" in manual_bib
+    assert "title        = {Shuo 'yin' zi}" in manual_bib
+    assert "author       = {Lu, Shixian}" in manual_bib
+    assert "shortauthor  = {Shixian}" in manual_bib
+    assert "title        = {Yinqi xinquan zhi er: shipian}" in manual_bib
+    assert "journaltitle = {Donghai xuebao}" in manual_bib
+    assert "author      = {Long, Yuchun}" in manual_bib
+    assert "title       = {Shi jiaguwen xi(?) zi jianjie xicun}" in manual_bib
+    assert "booktitle   = {Shen Gangbo xiansheng baji rongqing lunwenji}" in manual_bib
+
+    assert "author       = {T'ung, En-cheng and Chang, Sheng-k'ai and Ch'en, Ching-ch'un}" not in manual_bib
+    assert "title        = {Kuan-yu shih-yung tien-tzu chi-suan-chi chui-ho Shang-tai pu-chia sui-p'ien ti ch'u-pu pao-kao}" not in manual_bib
+    assert "author       = {Yu, Hao-liang}" not in manual_bib
+    assert "shortauthor  = {Hao-liang}" not in manual_bib
+    assert "title        = {Shuo 'yin' tzu}" not in manual_bib
+    assert "author       = {Lu, Shih-hsien}" not in manual_bib
+    assert "shortauthor  = {Shih-hsien}" not in manual_bib
+    assert "title        = {Yin-ch'i hsin-ch'uan chih erh: shih pien}" not in manual_bib
+    assert "journaltitle = {Tung-hai hsueh-pao}" not in manual_bib
+    assert "author      = {Lung, Yu-ch'un}" not in manual_bib
+    assert "title       = {Shih chia-ku-wen hsi(?) tzu chien-chieh hsi-tsun}" not in manual_bib
+    assert "booktitle   = {Shen Kang-po hsien-sheng pa-chih jung-ch'ing lun-wen-chi}" not in manual_bib
+
+
+def test_ik_pinyin_audit_resolves_mixed_li_ji_block():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "author       = {Li, Ji}" in manual_bib
+    assert "author      = {Li, Ji}" in manual_bib
+    assert "title        = {Minguo shiba nian qiuji fajue Yinxu zhi jingguo ji qi zhongyao faxian}" in manual_bib
+    assert "title        = {Anyang zuijin fajue baogao ji liuci gongzuo zhi zong guji}" in manual_bib
+    assert "title       = {Chengziyai}" in manual_bib
+    assert "location    = {Nanjing}" in manual_bib
+    assert "title        = {Ba Yantang zixu}" in manual_bib
+    assert "journaltitle = {Zhongguo kaogu xuebao}" in manual_bib
+    assert "editor      = {Chen, Hao}" in manual_bib
+    assert "title       = {Liji jishuo}" in manual_bib
+
+    assert "@book{LiChi1956Chengtzuyai," in manual_bib
+    assert "author      = {Li, Chi and Liang, Ssu-yang and Tung, Tso-pin}" in manual_bib
+    assert "@book{LiChi1977Anyang," in manual_bib
+    assert "title       = {Anyang}" in manual_bib
+
+    assert "author      = {Li, Chi}" in manual_bib
+    assert "title        = {Min-kuo shih-pa-nien ch'iu-chi fa-chueh Yin-hsu chih ching-kuo chi ch'i chung-yao fa-hsien}" not in manual_bib
+    assert "title        = {An-yang tsui-chin fa-chueh pao-kao chi liu-tz'u kung-tso chih tsung ku-chi}" not in manual_bib
+    assert "title       = {Ch'eng-tzu-yai}" not in manual_bib
+    assert "title        = {Pa Yen-t'ang tzu-hsu}" not in manual_bib
+    assert "editor      = {Ch'en, Hao}" not in manual_bib
+    assert "title       = {Li-chi chi-shuo}" not in manual_bib
+
+
 def test_second_manual_override_tranche_replaces_corrupted_c_block():
     manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
     generated_bib = GENERATED_BIB.read_text(encoding="utf-8")
@@ -929,6 +1013,8 @@ def test_nineteenth_manual_override_tranche_replaces_postscript_block():
     assert "Collections Published 1935-1939" in manual_bib
     assert "{Nivison1977aPronominal," in manual_bib
     assert "{Shen1977Fuyu," in manual_bib
+    assert "author       = {Shen, Wenzhuo}" in manual_bib
+    assert "shortauthor  = {Wenzhuo}" in manual_bib
     assert "{Takashima1977aExistence," in manual_bib
     assert "{TungEncheng1977Computer," in manual_bib
     assert "{Yu1977Shuo," in manual_bib

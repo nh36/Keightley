@@ -213,11 +213,11 @@ def test_manual_bibliography_entries_exist():
     assert "@article{Saussure1924Chronologie," in bib
     assert "shortauthor  = {Saussure}" in bib
     assert "@article{Lu1961Yinchi," in bib
-    assert "shortauthor  = {Shih-hsien}" in bib
+    assert "shortauthor  = {Shixian}" in bib
     assert "@book{LeviStrauss1969Raw," in bib
     assert "shortauthor = {Strauss}" in bib
     assert "@article{Shen1977Fuyu," in bib
-    assert "shortauthor  = {Wen-cho}" in bib
+    assert "shortauthor  = {Wenzhuo}" in bib
     assert "@article{Shima1960TiYi," in bib
     assert "@article{Shima1966Bokuji," in bib
     assert "@book{Shirakawa1971Kimbun," in bib
