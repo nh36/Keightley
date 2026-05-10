@@ -87,6 +87,10 @@
 \addbibresource{bibliography/keightley.bib}
 \addbibresource{bibliography/keightley_manual.bib}
 
+% Internal bibliography QA notes live in bib fields while extraction remains in progress.
+% Keep them out of the printed bibliography so visible cleanup can proceed entry by entry.
+\AtEveryBibitem{\clearfield{note}}
+
 % Numbered list item macro (Phase 10)
 % Formats inline numbered items while preserving prose flow
 % Marks items structurally for OCR validation and text analysis
