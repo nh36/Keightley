@@ -109,6 +109,156 @@ def test_ab_pinyin_audit_updates_chinese_language_entries_only():
     assert "Chia-ku wu-shih p'ien" not in manual_bib
 
 
+def test_c_pinyin_audit_updates_high_confidence_chinese_cluster():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "author      = {Zhongguo kexueyuan kaogu yanjiusuo}" in manual_bib
+    assert "title       = {Jiagu wenbian}" in manual_bib
+    assert "author      = {Guoli zhongyang yanjiuyuan lishi yuyan yanjiusuo}" in manual_bib
+    assert "title       = {Anyang fajue baogao}" in manual_bib
+    assert "author      = {Ji, Fotuo}" in manual_bib
+    assert "title       = {Jianshoutang suocang Yinxu wenzi}" in manual_bib
+    assert "author       = {Chen, Mengjia}" in manual_bib
+    assert "shortauthor  = {Mengjia}" in manual_bib
+    assert "title        = {Jiagu duantaixue jiabian}" in manual_bib
+    assert "title        = {Jiefanghou jiagu de xin ziliao he zhengli yanjiu}" in manual_bib
+    assert "title        = {Shang Yin yu Xia Zhou de niandai wenti}" in manual_bib
+    assert "title       = {Yinxu buci zongshu}" in manual_bib
+    assert "author      = {Jin, Xiangheng}" in manual_bib
+    assert "title       = {Xu jiagu wenbian}" in manual_bib
+    assert "title        = {Jiaguwen tongjietzi juyu}" in manual_bib
+    assert "title        = {Jiaguwen youzi yinyi kao}" in manual_bib
+    assert "author      = {Qu, Wanli}" in manual_bib
+    assert "title       = {Xiaotun dier ben: Yinxu wenzi: Jiabian kaoshi}" in manual_bib
+
+    assert "author      = {Chung-kuo k'e-hsueh-yuan k'ao-ku yen-chiu-so}" not in manual_bib
+    assert "title       = {An-yang fa-chieh pao-kao}" not in manual_bib
+    assert "author      = {Chi, Fo-t'o}" not in manual_bib
+    assert "author       = {Ch'en Meng-chia}" not in manual_bib
+    assert "author      = {Ch'en Meng-chia}" not in manual_bib
+    assert "title       = {Hsu chia-ku wen-pien}" not in manual_bib
+    assert "title        = {Shih yu-cheng yu-cheng}" not in manual_bib
+    assert "title        = {Chia-ku-wen t'ung-chieh-tzu chü-yü}" not in manual_bib
+    assert "title        = {Chia-ku-wen yu-tzu yin-yi k'ao}" not in manual_bib
+    assert "title        = {Fu-jen ta-hsueh so-ts'ang chia-ku wen-tzu hou-yen}" not in manual_bib
+    assert "title        = {Shih-fa lan-shang yu Yin-tai lun}" not in manual_bib
+    assert "title        = {Yueh-yi chi-ku}" not in manual_bib
+    assert "title       = {Yin-hsu pu-tz'u tsung-shu}" not in manual_bib
+    assert "Hsiao-t'un ti-erh-pen: Yin-hsu wen-tzu: chia-pien k'ao-shih" not in manual_bib
+
+
+def test_c_pinyin_audit_updates_zhang_henan_zheng_subcluster():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "author       = {Zhang, Guangzhi}" in manual_bib
+    assert "shortauthor  = {Guangzhi}" in manual_bib
+    assert 'title        = {Shang wang miaohao xinkao}' in manual_bib
+    assert 'title        = {Guanyu "Shang wang miaohao xinkao" yiwen de buchong yijian}' in manual_bib
+    assert "title        = {Shang Zhou qingtongqi qixing zhuangshi huawen yu mingwen zonghe}" in manual_bib
+    assert "title        = {Tan Wang Hai yu Yi Yin de jiri bing zai lun Yin Shang wangzhi}" in manual_bib
+    assert "title       = {Shang Zhou qingtongqi yu mingwen de zonghe yanjiu}" in manual_bib
+    assert "author       = {Zhang, Bingquan}" in manual_bib
+    assert "author      = {Henan sheng wenhuachu wenwu gongzuodui}" in manual_bib
+    assert "title       = {Zhengzhou Erligang}" in manual_bib
+    assert "author       = {Zheng, Dekun}" in manual_bib
+    assert "title        = {Gaocheng Taixi Shangdai yizhi faxian de taoqi wenzi}" in manual_bib
+    assert "journaltitle = {Wenwu}" in manual_bib
+
+    assert "title        = {Shang wang miao-hao hsin-k'ao}" not in manual_bib
+    assert "title        = {Kuan-yu 'Shang-wang miao-hao hsin-k'ao' yi-wen ti pu-ch'ung yi-chien}" not in manual_bib
+    assert "title        = {Shang-Chou ch'ing-t'ung-ch'i ch'i-hsing chuang-shih hua-wen yü ming-wen tsung-ho}" not in manual_bib
+    assert "title        = {T'an Wang Hai yü Yi Yin ti chi-jih ping tsai-lun Yin-Shang wang-chih}" not in manual_bib
+    assert "title       = {Shang-Chou ch'ing-t'ung-ch'i yü ming-wen ti tsung-ho yen-chiu}" not in manual_bib
+    assert "author       = {Chang, Ping-ch'uan}" not in manual_bib
+    assert "author      = {Ho-nan sheng wen-hua-chu wen-wu kung-tso-tui}" not in manual_bib
+    assert "title       = {Cheng-chou Erh-li-kang}" not in manual_bib
+    assert "title        = {Kao-ch'eng T'ai-hsi Shang-tai yi-chih fa-hsien ti t'ao-ch'i wen-tzu}" not in manual_bib
+
+
+def test_c_pinyin_audit_updates_remaining_zhang_cluster():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "author      = {Zhang, Guangyu}" in manual_bib
+    assert "title       = {Weizuo xian Qin yiqi mingwen shuyao}" in manual_bib
+    assert "author       = {Zhang, Guangyuan}" in manual_bib
+    assert "title        = {Yin Shang jiagu wenzi qiuzhen (xia)}" in manual_bib
+    assert "journaltitle = {Gongzhong zazhi}" in manual_bib
+    assert "title        = {Yinxu bugui zhi buzhao ji qi youguan wenti}" in manual_bib
+    assert "title        = {Bugui fujiadi xushu}" in manual_bib
+    assert "title        = {Buci guiwei yueshi de xin zhengju}" in manual_bib
+    assert "title       = {Xiaotun dierben: Yinxu wenzi: bingbian. Vol. 1, pt. 1}" in manual_bib
+    assert "title        = {Lun chengtao buci}" in manual_bib
+    assert "title        = {Jiaguwen de faxian yu gubu xiguan de kaozheng}" in manual_bib
+    assert "journaltitle = {Guoli zhongyang yanjiuyuan yuankan}" in manual_bib
+
+    assert "author      = {Chang, Kuang-yu}" not in manual_bib
+    assert "title       = {Wei-tso hsien-Ch'in yi-ch'i ming-wen shu-yao}" not in manual_bib
+    assert "author       = {Chang, Kuang-yuan}" not in manual_bib
+    assert "title        = {Yin-Shang chia-ku wen-tzu ch'iu-chen (hsia)}" not in manual_bib
+    assert "journaltitle = {Kung-chung tsa-chih}" not in manual_bib
+    assert "title        = {Yin-hsü pu-kuei chih pu-chao chi ch'i yu-kuan wen-ti}" not in manual_bib
+    assert "title        = {Pu-kuei fu-chia-ti hsü-shu}" not in manual_bib
+    assert "title        = {Pu-tz'u kuei-wei yüeh-shih ti hsin cheng-chü}" not in manual_bib
+    assert "title       = {Hsiao-t'un ti-erh-pen: Yin-hsü wen-tzu: ping-pien. Vol. 1, pt. 1}" not in manual_bib
+    assert "title        = {Lun ch'eng-t'ao pu-tz'u}" not in manual_bib
+    assert "title        = {Chia-ku-wen ti fa-hsien yü ku-pu hsi-kuan ti k'ao-cheng}" not in manual_bib
+
+
+def test_dh_pinyin_audit_updates_huang_hsiao_hsu_cluster():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "author       = {Huang, Jingxin}" in manual_bib
+    assert 'title        = {Qin Han yiqian gu Hanyu zhong de foudingci "fu" "bu" yanjiu}' in manual_bib
+    assert "journaltitle = {Yuyan yanjiu}" in manual_bib
+    assert "author      = {Huang, Ranwei}" in manual_bib
+    assert "title       = {Yinli kaoshi}" in manual_bib
+    assert "series      = {Guoli Taiwan daxue wenshi congkan}" in manual_bib
+    assert "author       = {Huang, Peirong}" in manual_bib
+    assert 'title        = {Jiawen "pu-tsai-ming" (?) yi ci de jiantao}' in manual_bib
+    assert "journaltitle = {Zhongguo wenzi}" in manual_bib
+    assert "author       = {Huang, Caijun}" in manual_bib
+    assert "journaltitle = {Zhongguo yuwen}" in manual_bib
+    assert "author       = {Xiao, Nan}" in manual_bib
+    assert 'title        = {Anyang Xiaotun nandi faxian de "Duizu bujia"---Jian lun "Duizu buci" de shidai ji qi xiangguan wenti}' in manual_bib
+    assert "author       = {Xu, Jingcan}" in manual_bib
+    assert "author       = {Xu, Zhongshu}" in manual_bib
+    assert "author       = {Xu, Jinxiong}" in manual_bib
+    assert "title        = {Shi yu}" in manual_bib
+    assert 'title        = {Dui Zhang Guangzhi xiansheng de "Shang wang miaohao xinkao" de jidian yijian}' in manual_bib
+    assert "title       = {Yin buci zhong wuzhong jisi de yanjiu}" in manual_bib
+    assert "title        = {Zuanzuo dui buci duandai de zhongyaoxing}" in manual_bib
+    assert "title        = {Yin buci zhong wuzhong jisi yanjiu de xin guannian}" in manual_bib
+    assert "title        = {Wuzhong jisi de xin guannian yu Yinli de tantao}" in manual_bib
+    assert "title        = {Lue tan zhenren de zaizhi niandai}" in manual_bib
+    assert "title        = {Tan zhenren He de niandai}" in manual_bib
+    assert "title        = {Cong changzuo de peizhi shifen disan yu disi qi de bugu}" in manual_bib
+    assert "title       = {Bugu shang de zuozuan xingtai}" in manual_bib
+
+    assert "author       = {Huang, Ching-hsin}" not in manual_bib
+    assert "title        = {Ch'in-Han yi-ch'ien ku Han-yu chung ti fou-ting-tz'u 'fu' 'pu' yen-chiu}" not in manual_bib
+    assert "journaltitle = {Yu-yen yen-chiu}" not in manual_bib
+    assert "author      = {Huang, Jan-wei}" not in manual_bib
+    assert "title       = {Yin-li k'ao-shih}" not in manual_bib
+    assert "series      = {Kuo-li T'ai-wan ta-hsueh wen-shih ts'ung-k'an}" not in manual_bib
+    assert "author       = {Huang, P'ei-jung}" not in manual_bib
+    assert "title        = {Chia-wen 'pu-tsai-ming' (?) yi-tz'u ti chien-t'ao}" not in manual_bib
+    assert "author       = {Huang, Tsai-chun}" not in manual_bib
+    assert "journaltitle = {Chung-kuo yu-wen}" not in manual_bib
+    assert "author       = {Hsiao Nan}" not in manual_bib
+    assert "author       = {Hsu, Ching-ts'an}" not in manual_bib
+    assert "author       = {Hsu, Chung-shu}" not in manual_bib
+    assert "title        = {Shih yu}" not in manual_bib
+    assert "title        = {Tui Chang Kuang-chih hsien-sheng ti 'Shang-wang miao-hao hsin-k'ao' ti chi-tien yi-chien}" not in manual_bib
+    assert "title       = {Yin pu-tzu chung wu-chung chi-ssu ti yen-chiu}" not in manual_bib
+    assert "title        = {Tsuan-tso tui pu-tz'u tuan-tai ti chung-yao-hsing}" not in manual_bib
+    assert "title        = {Yin pu-tz'u chung wu-chung chi-ssu yen-chiu ti hsin kuan-nien}" not in manual_bib
+    assert "title        = {Wu-chung chi-ssu ti hsin kuan-nien yu Yin-li ti t'an-t'ao}" not in manual_bib
+    assert "title        = {Lueh-t'an chen-jen ti tsai-chih nien-tai}" not in manual_bib
+    assert "title        = {T'an chen-jen Ho ti nien-tai}" not in manual_bib
+    assert "title        = {Ts'ung ch'ang-tso ti p'ei-chih shih-fen ti-san yu ti-ssu ch'i ti pu-ku}" not in manual_bib
+    assert "title       = {Pu-ku shang ti tso-tsuan hsing-t'ai}" not in manual_bib
+
+
 def test_second_manual_override_tranche_replaces_corrupted_c_block():
     manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
     generated_bib = GENERATED_BIB.read_text(encoding="utf-8")
