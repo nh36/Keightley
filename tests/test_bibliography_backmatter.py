@@ -85,6 +85,30 @@ def test_first_manual_override_tranche_replaces_corrupted_top_block():
     assert "@book{Britton1968Divination," not in generated_bib
 
 
+def test_ab_pinyin_audit_updates_chinese_language_entries_only():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "Rao Zongyi, Yindai zhengbu renwu tongkao" in manual_bib
+    assert "Zhou Hongxiang, Shang Yin diwang benji" in manual_bib
+    assert "author       = {An, Zhimin}" in manual_bib
+    assert "title        = {1952 nian qiuji Zhengzhou Erligang fajue ji}" in manual_bib
+    assert "title        = {Zhengzhou shi Renmin gongyuan fujin di Yindai yicun}" in manual_bib
+    assert "journaltitle = {Wenwu cankao ziliao}" in manual_bib
+    assert "Yinxu jiagu xiangpian" in manual_bib
+    assert "Yinxu jiagu tapian" in manual_bib
+    assert "Jiagu wushi pian" in manual_bib
+
+    assert "Jao Tsung-yi, Yin-tai cheng-pu jen-wu t'ung-k'ao" not in manual_bib
+    assert "Chou Hung-hsiang, Shang-Yin ti-wang pen-chi" not in manual_bib
+    assert "author       = {An, Chih-min}" not in manual_bib
+    assert "Yi-chiu-wu-erh-nien ch'iu-chi Cheng-chou Erh-li-kang fa-chueh chi" not in manual_bib
+    assert "Cheng-chou-shih Jen-min kung-yuan fu-chin ti Yin-tai yi-ts'un" not in manual_bib
+    assert "Wen-wu ts'an-k'ao tzu-liao" not in manual_bib
+    assert "Yin-hsu chia-ku hsiang-p'ien" not in manual_bib
+    assert "Yin-hsu chia-ku t'a-p'ien" not in manual_bib
+    assert "Chia-ku wu-shih p'ien" not in manual_bib
+
+
 def test_second_manual_override_tranche_replaces_corrupted_c_block():
     manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
     generated_bib = GENERATED_BIB.read_text(encoding="utf-8")
