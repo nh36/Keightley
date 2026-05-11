@@ -147,6 +147,7 @@ MANUAL_OVERRIDE_KEYS = {
     "Knoblock1968Work",
     "Kuan1957Liang",
     "Lao1957Shih",
+    "Lao1974Chou",
     "Lao1974Chung",
     "Lao1936Work",
     "Lao1938Work",

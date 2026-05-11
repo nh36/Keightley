@@ -87,9 +87,124 @@
 \addbibresource{bibliography/keightley.bib}
 \addbibresource{bibliography/keightley_manual.bib}
 
+% Bibliography B bilingual formatting
+% Curated bibliography entries use:
+%   - usera: Han author/editor form
+%   - userb: Han title form
+%   - userc: Han container title form
+% The generated bibliography currently emits noisy *addon OCR residue, so suppress those
+% fields and print only the curated bilingual fields from the manual bibliography.
+\DeclareFieldFormat{usera}{#1}
+\DeclareFieldFormat{userb}{#1}
+\DeclareFieldFormat{userc}{#1}
+
+\newbibmacro*{keightley:han-author}{%
+  \iffieldundef{usera}
+    {}
+    {\setunit{\addspace}%
+     \printfield{usera}}}
+
+\renewbibmacro*{author}{%
+  \ifboolexpr{
+    test \ifuseauthor
+    and
+    not test {\ifnameundef{author}}
+  }
+    {\printnames{author}%
+     \usebibmacro{keightley:han-author}%
+     \iffieldundef{authortype}
+       {}
+       {\setunit{\printdelim{authortypedelim}}%
+        \usebibmacro{authorstrg}}}
+    {}}
+
+\renewbibmacro*{editor}{%
+  \ifboolexpr{
+    test \ifuseeditor
+    and
+    not test {\ifnameundef{editor}}
+  }
+    {\printnames{editor}%
+     \usebibmacro{keightley:han-author}%
+     \setunit{\printdelim{editortypedelim}}%
+     \usebibmacro{editorstrg}%
+     \clearname{editor}}
+    {}}
+
+\renewbibmacro*{editor+others}{%
+  \ifboolexpr{
+    test \ifuseeditor
+    and
+    not test {\ifnameundef{editor}}
+  }
+    {\printnames{editor}%
+     \usebibmacro{keightley:han-author}%
+     \setunit{\printdelim{editortypedelim}}%
+     \usebibmacro{editor+othersstrg}%
+     \clearname{editor}}
+    {}}
+
+\renewbibmacro*{title}{%
+  \ifboolexpr{
+    test {\iffieldundef{title}}
+    and
+    test {\iffieldundef{subtitle}}
+  }
+    {}
+    {\printtext[title]{%
+       \printfield[titlecase]{title}%
+       \setunit{\subtitlepunct}%
+       \printfield[titlecase]{subtitle}%
+       \iffieldundef{userb}
+         {}
+         {\setunit*{\addspace}%
+          \printfield{userb}}}%
+     \newunit}}
+
+\renewbibmacro*{booktitle}{%
+  \ifboolexpr{
+    test {\iffieldundef{booktitle}}
+    and
+    test {\iffieldundef{booksubtitle}}
+  }
+    {}
+    {\printtext[booktitle]{%
+       \printfield[titlecase]{booktitle}%
+       \setunit{\subtitlepunct}%
+       \printfield[titlecase]{booksubtitle}%
+       \iffieldundef{userc}
+         {}
+         {\setunit*{\addspace}%
+          \printfield{userc}}}%
+     \newunit}}
+
+\renewbibmacro*{journal}{%
+  \ifboolexpr{
+    test {\iffieldundef{journaltitle}}
+    and
+    test {\iffieldundef{journalsubtitle}}
+  }
+    {}
+    {\printtext[journaltitle]{%
+       \printfield[titlecase]{journaltitle}%
+       \setunit{\subtitlepunct}%
+       \printfield[titlecase]{journalsubtitle}%
+       \iffieldundef{userc}
+         {}
+         {\setunit*{\addspace}%
+          \printfield{userc}}}%
+     \newunit}}
+
 % Internal bibliography QA notes live in bib fields while extraction remains in progress.
 % Keep them out of the printed bibliography so visible cleanup can proceed entry by entry.
-\AtEveryBibitem{\clearfield{note}}
+\AtEveryBibitem{%
+  \clearfield{note}%
+  \clearfield{nameaddon}%
+  \clearfield{titleaddon}%
+  \clearfield{booktitleaddon}%
+  \clearfield{maintitleaddon}%
+  \clearfield{journaltitleaddon}%
+}
 
 % Numbered list item macro (Phase 10)
 % Formats inline numbered items while preserving prose flow

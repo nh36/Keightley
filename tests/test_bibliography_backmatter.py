@@ -39,7 +39,20 @@ def test_manual_bibliography_resource_is_loaded():
 
     assert r"\addbibresource{bibliography/keightley.bib}" in preamble
     assert r"\addbibresource{bibliography/keightley_manual.bib}" in preamble
-    assert r"\AtEveryBibitem{\clearfield{note}}" in preamble
+    assert r"\DeclareFieldFormat{usera}{#1}" in preamble
+    assert r"\DeclareFieldFormat{userb}{#1}" in preamble
+    assert r"\DeclareFieldFormat{userc}{#1}" in preamble
+    assert r"\renewbibmacro*{author}{" in preamble
+    assert r"\renewbibmacro*{editor}{" in preamble
+    assert r"\renewbibmacro*{title}{" in preamble
+    assert r"\renewbibmacro*{booktitle}{" in preamble
+    assert r"\renewbibmacro*{journal}{" in preamble
+    assert r"\clearfield{note}%" in preamble
+    assert r"\clearfield{nameaddon}%" in preamble
+    assert r"\clearfield{titleaddon}%" in preamble
+    assert r"\clearfield{booktitleaddon}%" in preamble
+    assert r"\clearfield{maintitleaddon}%" in preamble
+    assert r"\clearfield{journaltitleaddon}%" in preamble
     assert MANUAL_BIB.exists()
 
 
@@ -63,6 +76,7 @@ def test_generated_bibliography_qa_uses_annotation_not_note():
     assert '"Keightley1975Legitimation"' in extract_script
     assert '"LPR1959Some"' in extract_script
     assert '"Lao1969Yin"' in extract_script
+    assert '"Lao1974Chou"' in extract_script
     assert '"Linduff1972Tradition"' in extract_script
     assert '"Britton1968Divination"' in extract_script
     assert '"  annotation   = {CHECK: bibliography extraction artifacts retained "' in extract_script
@@ -272,14 +286,17 @@ def test_dh_pinyin_audit_updates_hu_cluster():
     assert "title       = {Jiaguxue xulun}" in manual_bib
     assert "booktitle   = {Jiaguxue Shangshi luncong erji}" in manual_bib
     assert "title        = {Buci tongwen li}" in manual_bib
+    assert "@article{Hu1948Putzu,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣}," in manual_bib
     assert "title        = {Buci jishi wenzi shiguan qianming li}" in manual_bib
     assert "title       = {Wushinian jiaguwen faxian de zongjie}" in manual_bib
     assert "title       = {Wushinian jiaguxue lunzhumu}" in manual_bib
     assert "title       = {Yinxu fajue}" in manual_bib
     assert "title        = {Yin buci zhong de Shang Di he Wang Di}" in manual_bib
     assert "journaltitle = {Lishi yanjiu}" in manual_bib
+    assert "@article{Hu1964Chiakuwen,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣}," in manual_bib
     assert "title        = {Jiaguwen Shangzu niao tuteng de yizhi}" in manual_bib
     assert "journaltitle = {Lishi luncong}" in manual_bib
+    assert "userc        = {歷史論叢}" in manual_bib
     assert "title        = {Yindai de cansang he sizhi}" in manual_bib
     assert "journaltitle = {Wenwu}" in manual_bib
     assert "title        = {Zhui ji}" in manual_bib
@@ -700,6 +717,236 @@ def test_late_u_z_pinyin_audit_normalizes_ww_wang_block():
     assert "booktitle   = {Hsu An-yang hsien-chih}" not in manual_bib
 
 
+def test_bibliography_bilingual_fields_use_curated_user_slots():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "usera        = {安志敏}" in manual_bib
+    assert "userb        = {一九五二年秋季鄭州二里岡發掘記}" in manual_bib
+    assert "userb        = {鄭州市人民公園附近的殷代遺存}" in manual_bib
+    assert "userc        = {文物參考資料}" in manual_bib
+    assert "usera       = {中國科學院考古研究所}" in manual_bib
+    assert "userb       = {甲骨文編}" in manual_bib
+    assert "usera        = {郭寶鈞}" in manual_bib
+    assert "userb        = {一九五〇年春殷墟發掘報告}" in manual_bib
+    assert "userc        = {中國考古學報}" in manual_bib
+    assert "usera        = {勞榦}" in manual_bib
+    assert "userb        = {周初年代問題與月相問題的新看法}" in manual_bib
+    assert "userc        = {香港中文大學中國文化研究所學報}" in manual_bib
+    assert "userb        = {第七次殷墟發掘：戊區工作報告}" in manual_bib
+    assert "userb       = {小屯後五次發掘的重要發現}" in manual_bib
+    assert "userb        = {小屯C區的墓葬群}" in manual_bib
+    assert "userb        = {骨卜與龜卜探源：黑陶與白陶的關係}" in manual_bib
+    assert "userb        = {殷墟最近之重要發現，附論小屯地層}" in manual_bib
+    assert "userb        = {河南安陽小屯殷墓中的動物遺骸}" in manual_bib
+    assert "userc        = {國立臺灣大學文史哲學報}" in manual_bib
+    assert "usera       = {石璋如}" in manual_bib
+    assert "userb       = {小屯第一本：遺址的發現與發掘，乙編：建築遺存}" in manual_bib
+    assert "userb       = {十三經注疏}" in manual_bib
+    assert "usera       = {董作賓}" in manual_bib
+    assert "userb        = {甲骨文材料的總估計}" in manual_bib
+    assert "userb        = {新獲卜辭寫本後記}" in manual_bib
+    assert "userb        = {商代龜卜之推測}" in manual_bib
+    assert "userb        = {新獲卜辭寫本}" in manual_bib
+    assert "userb        = {民國十七年十月試掘安陽小屯報告書}" in manual_bib
+    assert "userb        = {大龜四版考釋}" in manual_bib
+    assert "userb        = {安陽侯家莊出土之甲骨文字}" in manual_bib
+    assert "userc        = {田野考古學報}" in manual_bib
+    assert "userb        = {古文例}" in manual_bib
+    assert "userb       = {小屯第二本：殷墟文字：甲編}" in manual_bib
+    assert "userb        = {殷曆譜後記}" in manual_bib
+    assert "userb        = {殷墟文字乙編序}" in manual_bib
+    assert "userb       = {殷曆譜}" in manual_bib
+    assert "userb        = {甲骨文斷代研究例}" in manual_bib
+    assert "userb        = {殷墟文字甲編自序}" in manual_bib
+    assert "userb        = {論商人以十日為名}" in manual_bib
+    assert "userb        = {中國古代文化的認識}" in manual_bib
+    assert "userb        = {武王伐紂年月日今考}" in manual_bib
+    assert "userb        = {中國古曆與世界古曆}" in manual_bib
+    assert "userb        = {殷曆譜的自我檢討}" in manual_bib
+    assert "userb        = {大龜甲骨絕非象骨之證}" in manual_bib
+    assert "userb        = {殷墟文字乙編摹寫本事例四續}" in manual_bib
+    assert "userb        = {殷墟文字乙編摹寫本事例續十一}" in manual_bib
+    assert "userb       = {甲骨學六十年}" in manual_bib
+    assert "userb       = {董作賓學術論著}" in manual_bib
+    assert "usera       = {董作賓、黃然偉}" in manual_bib
+    assert "userb       = {續甲骨年表}" in manual_bib
+    assert "usera        = {董作賓、金祥恆}" in manual_bib
+    assert "userb        = {本系所藏甲骨文字}" in manual_bib
+    assert "userc        = {國立臺灣大學考古人類學刊}" in manual_bib
+    assert "usera       = {丁山}" in manual_bib
+    assert "userb       = {甲骨文所見氏族及其制度}" in manual_bib
+    assert "usera        = {鄭德坤}" in manual_bib
+    assert "userb        = {藁城台西商代遺址發現的陶器文字}" in manual_bib
+    assert "userc        = {文物}" in manual_bib
+    assert "usera        = {陳夢家}" in manual_bib
+    assert "userb        = {甲骨斷代學甲編}" in manual_bib
+    assert "userc        = {燕京學報}" in manual_bib
+    assert "userb        = {解放後甲骨的新資料和整理研究}" in manual_bib
+    assert "userb        = {商殷與夏周的年代問題}" in manual_bib
+    assert "userc        = {歷史研究}" in manual_bib
+    assert "usera       = {河南省文化處文物工作隊}" in manual_bib
+    assert "userb       = {鄭州二里岡}" in manual_bib
+    assert "usera       = {金祥恆}" in manual_bib
+    assert "userb       = {續甲骨文編}" in manual_bib
+    assert "userb        = {釋又正與正}" in manual_bib
+    assert "userb        = {甲骨文通借字舉隅}" in manual_bib
+    assert "userb        = {甲骨文又字引義考}" in manual_bib
+    assert "userb        = {輔仁大學所藏甲骨文字後言}" in manual_bib
+    assert "usera        = {徐中舒}" in manual_bib
+    assert "userb        = {再論小屯與仰韶}" in manual_bib
+    assert "usera        = {徐敬參}" in manual_bib
+    assert "userb        = {簡壽堂殷墟文字考釋補正}" in manual_bib
+    assert "userc        = {考古學社社刊}" in manual_bib
+    assert "usera        = {許進雄}" in manual_bib
+    assert "userb        = {釋又}" in manual_bib
+    assert "userb        = {對張光直先生的《商王廟號新考》的幾點意見}" in manual_bib
+    assert "userb       = {殷卜辭中五種祭祀的研究}" in manual_bib
+    assert "userb        = {鑽鑿對卜辭斷代的重要性}" in manual_bib
+    assert "userb        = {殷卜辭中五種祭祀研究的新觀念}" in manual_bib
+    assert "userb        = {五種祭祀的新觀念與殷曆的探討}" in manual_bib
+    assert "userb        = {略談貞人的在職年代}" in manual_bib
+    assert "userb        = {談貞人何的年代}" in manual_bib
+    assert "userb        = {從常作的配置試分第三與第四期的卜骨}" in manual_bib
+    assert "userb       = {卜骨上的鑽鑿形態}" in manual_bib
+    assert "usera       = {國立中央研究院歷史語言研究所}" in manual_bib
+    assert "userb       = {安陽發掘報告}" in manual_bib
+    assert "usera        = {容庚}" in manual_bib
+    assert "userb        = {甲骨學概況}" in manual_bib
+    assert "userc        = {嶺南學報}" in manual_bib
+    assert "usera        = {李方桂}" in manual_bib
+    assert "userb        = {上古音研究}" in manual_bib
+    assert "userc        = {清華學報}" in manual_bib
+    assert "usera       = {李孝定}" in manual_bib
+    assert "userb       = {甲骨文字集釋}" in manual_bib
+    assert "userb        = {從六書的觀點看甲骨文字}" in manual_bib
+    assert "userc        = {南洋大學學報}" in manual_bib
+    assert "usera        = {高去尋}" in manual_bib
+    assert "userb        = {殷墟出土之牛豬骨刻字}" in manual_bib
+    assert "usera       = {管燮初}" in manual_bib
+    assert "userb       = {殷墟甲骨刻辭的語法研究}" in manual_bib
+    assert "usera       = {黃然偉}" in manual_bib
+    assert "userb       = {殷曆考釋}" in manual_bib
+    assert "usera        = {張光遠}" in manual_bib
+    assert "userb        = {殷商甲骨文字求真（下）}" in manual_bib
+    assert "userc        = {公眾雜誌}" in manual_bib
+    assert "usera        = {張光直}" in manual_bib
+    assert "userb        = {商周青銅器器形裝飾花紋與銘文綜合}" in manual_bib
+    assert "userb        = {談王亥與伊尹的祭日並再論殷商王制}" in manual_bib
+    assert "userb       = {商周青銅器與銘文的綜合研究}" in manual_bib
+    assert "usera        = {張宗董}" in manual_bib
+    assert "userb        = {殷墟卜龜之卜兆及其有關問題}" in manual_bib
+    assert "userb        = {卜辭龜為月食的新證據}" in manual_bib
+    assert "userb       = {小屯第二本：殷墟文字：丙編}" in manual_bib
+    assert "userb        = {論成套卜辭}" in manual_bib
+    assert "userb        = {甲骨文的發現與骨卜習慣的考證}" in manual_bib
+    assert "userb        = {甲文“pu-tsai-ming(?)”一詞的檢討}" in manual_bib
+    assert "userb        = {從甲文、金文量詞的應用考察漢語量詞的起源與發展}" in manual_bib
+    assert "userc        = {中國語文}" in manual_bib
+    assert "userb        = {庫方二氏甲骨卜辭第一五〇六篇辨偽兼論陳氏二祭譜說}" in manual_bib
+    assert "usera        = {郭沫若}" in manual_bib
+    assert "userb        = {安陽新出土的牛脛骨及其刻辭}" in manual_bib
+    assert "userb        = {古代文字之辨證的發展}" in manual_bib
+    assert "usera        = {考古}" in manual_bib
+    assert "userb        = {殷墟考古發掘的一個重要新收穫——小屯發現一座保存完整的殷代王室墓葬}" in manual_bib
+    assert "userb        = {安陽殷墟五號墓葬探記要}" in manual_bib
+    assert "userb        = {一九七三年安陽小屯南地發掘簡報}" in manual_bib
+    assert "usera        = {饒宗頤}" in manual_bib
+    assert "userb        = {由卜兆基數推求殷人對於數的觀念——龜卜象數論}" in manual_bib
+    assert "usera        = {考古學報}" in manual_bib
+    assert "userb        = {一九五五年秋安陽小屯殷墟的發掘}" in manual_bib
+    assert "usera        = {李成甫}" in manual_bib
+    assert "userb        = {古文字上之天地象義溯源}" in manual_bib
+    assert "usera        = {李濟}" in manual_bib
+    assert "userb        = {民國十八年秋季發掘殷墟之經過及其重要發現}" in manual_bib
+    assert "userb        = {跋彥堂自序}" in manual_bib
+    assert "userb        = {安陽最近發掘報告及六次工作之總估計}" in manual_bib
+    assert "userb        = {豫東商邱永城調查及草廬台黑古堆草橋三處小發掘}" in manual_bib
+    assert "userb        = {中國文字的原始與演變}" in manual_bib
+    assert "usera        = {李學勤}" in manual_bib
+    assert "userb        = {談安陽小屯以外出土的有字甲骨}" in manual_bib
+    assert "userb        = {評陳夢家《殷墟卜辭綜述》}" in manual_bib
+    assert "userb        = {帝乙時代的非王卜辭}" in manual_bib
+    assert "userb        = {關於甲骨的基礎知識}" in manual_bib
+    assert "userb        = {卜辭貞人何在銅盤中的異體}" in manual_bib
+    assert "userb        = {讀《殷墟卜辭總類》與島邦男博士商榷}" in manual_bib
+    assert "userb        = {北美所見甲骨選粹考釋}" in manual_bib
+    assert "userc        = {香港中文大學中國文化研究所學報}" in manual_bib
+    assert "usera        = {劉源林}" in manual_bib
+    assert "userb        = {殷墟「骨鑑」及其有關問題}" in manual_bib
+    assert "usera        = {凌純聲}" in manual_bib
+    assert "userb        = {松花江下游的赫哲族}" in manual_bib
+    assert "usera       = {羅振玉}" in manual_bib
+    assert "userb       = {殷墟書契考釋}" in manual_bib
+    assert "usera        = {楊鍾健、劉東生}" in manual_bib
+    assert "userb        = {安陽殷墟之哺乳動物群補遺}" in manual_bib
+    assert "usera       = {葉玉森}" in manual_bib
+    assert "userb       = {殷墟書契前編集釋}" in manual_bib
+    assert "usera        = {嚴一萍}" in manual_bib
+    assert "userb        = {甲骨文斷代研究新例}" in manual_bib
+    assert "userb        = {關於文武丁時代一片附甲的兩種綴合}" in manual_bib
+    assert "userb        = {甲骨研究辨偽助例}" in manual_bib
+    assert "userb        = {關於戰後殷墟出土的新大龜七版}" in manual_bib
+    assert "userb        = {說又}" in manual_bib
+    assert "userb        = {甲骨卜辭綴集中孫氏藏甲骨的真偽問題}" in manual_bib
+    assert "userb       = {甲骨古文字研究}" in manual_bib
+    assert "usera        = {嚴雲}" in manual_bib
+    assert "userb        = {商代卜辭中的業主史料}" in manual_bib
+    assert "usera        = {于省吾}" in manual_bib
+    assert "userb        = {從甲骨文看商代的農田耕治}" in manual_bib
+    assert "userb        = {漫談甲骨文字的書法}" in manual_bib
+    assert "userb        = {甲骨六錄}" in manual_bib
+    assert "userb        = {殷契新詮之二：釋篇}" in manual_bib
+    assert "usera        = {丁山}" in manual_bib
+    assert "userb        = {釋豕}" in manual_bib
+    assert "userb        = {契文獸類及獸形字釋}" in manual_bib
+    assert "userb        = {安陽小屯南地發現的「對組卜甲」——兼論「對組卜辭」的時代及其相關問題}" in manual_bib
+    assert "usera        = {屈萬里}" in manual_bib
+    assert "@article{Chu1948Shihfa,\n  author       = {Qu, Wanli},\n  usera        = {屈萬里}," in manual_bib
+    assert "@article{Chu1960Yuehyi,\n  author       = {Qu, Wanli},\n  usera        = {屈萬里}," in manual_bib
+    assert "@article{Chu1960Yuehyi,\n  author       = {Qu, Wanli},\n  usera        = {屈萬里},\n  year         = {1960},\n  title        = {Yueyi jigu},\n  journaltitle = {Qinghua xuebao},\n  userc        = {清華學報}," in manual_bib
+    assert "userb        = {釋河}" in manual_bib
+    assert "userb       = {小屯第二本：殷墟文字：甲編考釋}" in manual_bib
+    assert "userb        = {史記殷本紀及其他記錄中所在殷商時代的史實}" in manual_bib
+    assert "usera       = {季佛陀}" in manual_bib
+    assert "userb       = {簡壽堂所藏殷墟文字}" in manual_bib
+    assert "usera        = {胡厚宣}" in manual_bib
+    assert "userb       = {武丁時五種記事刻辭考}" in manual_bib
+    assert "userb       = {殷代卜龜之來源}" in manual_bib
+    assert "userb       = {甲骨學緒論}" in manual_bib
+    assert "userb       = {五十年甲骨文發現的總結}" in manual_bib
+    assert "userb       = {五十年甲骨學論著目}" in manual_bib
+    assert "userb       = {殷墟發掘}" in manual_bib
+    assert "userb        = {殷卜辭中的上帝和王帝}" in manual_bib
+    assert "userc        = {歷史研究}" in manual_bib
+    assert "userb        = {殷代的蠶桑和絲織}" in manual_bib
+    assert "userb        = {臨淄孫氏舊藏甲骨文字考辨}" in manual_bib
+    assert "userb        = {甲骨文所見殷代奴隸的反壓迫鬥爭}" in manual_bib
+    assert "userb        = {甲骨文所見商族鳥圖騰的新證據}" in manual_bib
+    assert "usera        = {沈文倬}" in manual_bib
+    assert "usera        = {文物}" in manual_bib
+    assert "userb        = {江西清江吴城商代遗址发掘简报}" in manual_bib
+    assert "usera       = {王國維}" in manual_bib
+    assert "userb       = {觀堂集林}" in manual_bib
+    assert "usera       = {王子玉}" in manual_bib
+    assert "userb       = {甲骨文}" in manual_bib
+    assert "userc       = {續安陽縣志}" in manual_bib
+    assert "usera        = {唐建元}" in manual_bib
+    assert "userb        = {殷墟文字乙編丙編編號對照表}" in manual_bib
+    assert "userb        = {續殷墟文字乙編丙編編號對照表}" in manual_bib
+    assert "userc        = {中國文字}" in manual_bib
+    assert "usera        = {江鴻}" in manual_bib
+    assert "userb        = {盤龍城與商朝的南土}" in manual_bib
+    assert "usera        = {夏鼐}" in manual_bib
+    assert "userb        = {談14C測定年代和中國史前考古學}" in manual_bib
+    assert "usera        = {新華社}" in manual_bib
+    assert "userb        = {陝西周原發現珍貴甲骨}" in manual_bib
+    assert "userc        = {大公報}" in manual_bib
+    assert "usera       = {唐蘭}" in manual_bib
+    assert "userb       = {古文字導論}" in manual_bib
+    assert "userb        = {關於江西清江吳城文化遺址與文字的初步探索}" in manual_bib
+    assert "userb        = {何尊銘文解釋}" in manual_bib
+
+
 def test_bibliography_qa_cleans_remaining_shih_and_dong_residue():
     manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
 
@@ -1103,6 +1350,7 @@ def test_sixteenth_manual_override_tranche_replaces_tung_block():
     assert "{Tung1948Hsiaotun," in manual_bib
     assert "{Tung1951cChinese," in manual_bib
     assert "{Tung1954Work," in manual_bib
+    assert "@article{Tung1954Work,\n  author       = {Dong, Zuobin},\n  usera        = {董作賓}," in manual_bib
     assert "{Tung1964Fifty," in manual_bib
     assert "{Tung1967Hsueshu," in manual_bib
     assert "{Tung1967Hsii," in manual_bib
@@ -1191,6 +1439,7 @@ def test_nineteenth_manual_override_tranche_replaces_postscript_block():
     assert "{KK1977Yinhsu," in manual_bib
     assert "{KK1977aAnyang," in manual_bib
     assert "{Lung1976Shih," in manual_bib
+    assert "userc       = {沈剛伯先生八秩榮慶論文集}" in manual_bib
     assert "Collections Published 1935-1939" in manual_bib
     assert "{Nivison1977aPronominal," in manual_bib
     assert "{Shen1977Fuyu," in manual_bib
