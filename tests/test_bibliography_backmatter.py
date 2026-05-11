@@ -286,15 +286,13 @@ def test_dh_pinyin_audit_updates_hu_cluster():
     assert "title       = {Jiaguxue xulun}" in manual_bib
     assert "booktitle   = {Jiaguxue Shangshi luncong erji}" in manual_bib
     assert "title        = {Buci tongwen li}" in manual_bib
-    assert "@article{Hu1948Putzu,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣}," in manual_bib
-    assert "title        = {Buci jishi wenzi shiguan qianming li}" in manual_bib
+    assert "@article{Hu1948Putzu,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1948},\n  title        = {Buci jishi wenzi shiguan qianming li},\n  userb        = {卜辭記事文字史官簽名例}," in manual_bib
     assert "title       = {Wushinian jiaguwen faxian de zongjie}" in manual_bib
     assert "title       = {Wushinian jiaguxue lunzhumu}" in manual_bib
     assert "title       = {Yinxu fajue}" in manual_bib
     assert "title        = {Yin buci zhong de Shang Di he Wang Di}" in manual_bib
     assert "journaltitle = {Lishi yanjiu}" in manual_bib
-    assert "@article{Hu1964Chiakuwen,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣}," in manual_bib
-    assert "title        = {Jiaguwen Shangzu niao tuteng de yizhi}" in manual_bib
+    assert "@article{Hu1964Chiakuwen,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1964},\n  title        = {Jiaguwen Shangzu niao tuteng de yiji},\n  userb        = {甲骨文商族鳥圖騰的遺跡},\n  journaltitle = {Lishi luncong},\n  userc        = {歷史論叢}," in manual_bib
     assert "journaltitle = {Lishi luncong}" in manual_bib
     assert "userc        = {歷史論叢}" in manual_bib
     assert "title        = {Yindai de cansang he sizhi}" in manual_bib
@@ -571,7 +569,8 @@ def test_ik_pinyin_audit_updates_late_l_tail_cluster():
     assert "title        = {Yinqi xinquan zhi er: shipian}" in manual_bib
     assert "journaltitle = {Donghai xuebao}" in manual_bib
     assert "author      = {Long, Yuchun}" in manual_bib
-    assert "title       = {Shi jiaguwen xi(?) zi jianjie xicun}" in manual_bib
+    assert "title       = {Shi jiaguwen chong zi jianjie xizun}" in manual_bib
+    assert "userb       = {釋甲骨文虫字兼解犧尊}" in manual_bib
     assert "booktitle   = {Shen Gangbo xiansheng baji rongqing lunwenji}" in manual_bib
 
     assert "author       = {T'ung, En-cheng and Chang, Sheng-k'ai and Ch'en, Ching-ch'un}" not in manual_bib
@@ -901,9 +900,10 @@ def test_bibliography_bilingual_fields_use_curated_user_slots():
     assert "userb        = {契文獸類及獸形字釋}" in manual_bib
     assert "userb        = {安陽小屯南地發現的「對組卜甲」——兼論「對組卜辭」的時代及其相關問題}" in manual_bib
     assert "usera        = {屈萬里}" in manual_bib
-    assert "@article{Chu1948Shihfa,\n  author       = {Qu, Wanli},\n  usera        = {屈萬里}," in manual_bib
+    assert "@article{Chu1948Shihfa,\n  author       = {Qu, Wanli},\n  usera        = {屈萬里},\n  year         = {1948},\n  title        = {Shifa lanshang yu Yindai lun},\n  userb        = {謚法濫觴於殷代論}," in manual_bib
     assert "@article{Chu1960Yuehyi,\n  author       = {Qu, Wanli},\n  usera        = {屈萬里}," in manual_bib
-    assert "@article{Chu1960Yuehyi,\n  author       = {Qu, Wanli},\n  usera        = {屈萬里},\n  year         = {1960},\n  title        = {Yueyi jigu},\n  journaltitle = {Qinghua xuebao},\n  userc        = {清華學報}," in manual_bib
+    assert "@article{Chu1960Yuehyi,\n  author       = {Qu, Wanli},\n  usera        = {屈萬里},\n  year         = {1960},\n  title        = {Yueyi jigu},\n  userb        = {岳義稽古},\n  journaltitle = {Qinghua xuebao},\n  userc        = {清華學報}," in manual_bib
+    assert "userb        = {岳義稽古}" in manual_bib
     assert "userb        = {釋河}" in manual_bib
     assert "userb       = {小屯第二本：殷墟文字：甲編考釋}" in manual_bib
     assert "userb        = {史記殷本紀及其他記錄中所在殷商時代的史實}" in manual_bib
@@ -1350,7 +1350,7 @@ def test_sixteenth_manual_override_tranche_replaces_tung_block():
     assert "{Tung1948Hsiaotun," in manual_bib
     assert "{Tung1951cChinese," in manual_bib
     assert "{Tung1954Work," in manual_bib
-    assert "@article{Tung1954Work,\n  author       = {Dong, Zuobin},\n  usera        = {董作賓}," in manual_bib
+    assert "@article{Tung1954Work,\n  author       = {Dong, Zuobin},\n  usera        = {董作賓},\n  year         = {1954},\n  title        = {Gujiu keci zaikao},\n  userb        = {古舊刻辭再考}," in manual_bib
     assert "{Tung1964Fifty," in manual_bib
     assert "{Tung1967Hsueshu," in manual_bib
     assert "{Tung1967Hsii," in manual_bib
@@ -1439,7 +1439,7 @@ def test_nineteenth_manual_override_tranche_replaces_postscript_block():
     assert "{KK1977Yinhsu," in manual_bib
     assert "{KK1977aAnyang," in manual_bib
     assert "{Lung1976Shih," in manual_bib
-    assert "userc       = {沈剛伯先生八秩榮慶論文集}" in manual_bib
+    assert "@incollection{Lung1976Shih,\n  author      = {Long, Yuchun},\n  year        = {1976},\n  title       = {Shi jiaguwen chong zi jianjie xizun},\n  userb       = {釋甲骨文虫字兼解犧尊},\n  booktitle   = {Shen Gangbo xiansheng baji rongqing lunwenji},\n  userc       = {沈剛伯先生八秩榮慶論文集},\n  pages       = {1--16}," in manual_bib
     assert "Collections Published 1935-1939" in manual_bib
     assert "{Nivison1977aPronominal," in manual_bib
     assert "{Shen1977Fuyu," in manual_bib
