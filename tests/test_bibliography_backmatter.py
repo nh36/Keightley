@@ -301,7 +301,7 @@ def test_dh_pinyin_audit_updates_hu_cluster():
     assert "userc        = {歷史論叢}" in manual_bib
     assert "title        = {Yindai de cansang he sizhi}" in manual_bib
     assert "journaltitle = {Wenwu}" in manual_bib
-    assert "title        = {Zhui ji}" in manual_bib
+    assert "@article{Hu1972aChuichi,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1972},\n  title        = {Zhui ji},\n  userb        = {追記},\n  journaltitle = {KK},\n  userc        = {考古}," in manual_bib
     assert "title        = {Yindai de yuexing}" in manual_bib
     assert "@article{Hu1973Yintai,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1973},\n  title        = {Yindai de yuexing},\n  userb        = {殷代的刖刑},\n  journaltitle = {KK},\n  userc        = {考古}," in manual_bib
     assert "title        = {Lintzu Sunshi jiucang jiagu wenzi kaobian}" in manual_bib
@@ -518,9 +518,10 @@ def test_ik_pinyin_audit_updates_late_l_chinese_cluster():
         "@article{Lao1957Shih,\n"
         "  author       = {Lao, Gan},\n"
         "  usera        = {勞榦},\n"
-        "  year         = {1957},"
+        "  year         = {1957},\n"
+        "  title        = {Shizi de jiegou ji shiguan de yuanshi zhiwu},\n"
+        "  userb        = {史字的結構及史官的原始職務},"
     ) in manual_bib
-    assert "title        = {Shizi de jiegou ji shiguan de yuanshi zhiwu}" in manual_bib
     assert "title        = {Zhouchu niandai wenti yu yuexiang wenti de xin kanfa}" in manual_bib
     assert "journaltitle = {Xianggang Zhongwen daxue Zhongguo wenhua yanjiusuo xuebao}" in manual_bib
     assert "author      = {Li, Shi}" in manual_bib
@@ -911,7 +912,7 @@ def test_bibliography_bilingual_fields_use_curated_user_slots():
     assert "userb        = {關於文武丁時代一片附甲的兩種綴合}" in manual_bib
     assert "userb        = {甲骨研究辨偽助例}" in manual_bib
     assert "userb        = {關於戰後殷墟出土的新大龜七版}" in manual_bib
-    assert "userb        = {說又}" in manual_bib
+    assert "userb        = {說「又」}" in manual_bib
     assert "userb        = {甲骨卜辭綴集中孫氏藏甲骨的真偽問題}" in manual_bib
     assert "userb       = {甲骨古文字研究}" in manual_bib
     assert "usera        = {嚴雲}" in manual_bib
@@ -1181,8 +1182,11 @@ def test_ninth_manual_override_tranche_replaces_jung_and_kk_spillover():
     assert "@book{Jung1959Chinwen," in manual_bib
     assert "@book{JungYuanJung1936Chinshishu," in manual_bib
     assert "@article{KK1959Shanhsi," in manual_bib
+    assert "userb        = {山西十年來考古與文物工作的概況}" in manual_bib
     assert "@article{KK1975aJufa," in manual_bib
+    assert "userb        = {河南偃師二里頭早商宮殿遺址發掘簡報}" in manual_bib
     assert "@article{KKHP1975bKansu," in manual_bib
+    assert "userb        = {鄭州克拉王村遺址發掘報告}" in manual_bib
     assert "@incollection{KaizukaIto1953Kokotsubun," in manual_bib
     assert "@article{Kane1974Independent," in manual_bib
     assert "@article{Kao1949Yinhsu," in manual_bib
@@ -1207,7 +1211,7 @@ def test_tenth_manual_override_tranche_replaces_k_block():
     assert "@article{Kryukov1968Differential," in manual_bib
     assert "@book{Kryukov1973Iazyk," in manual_bib
     assert "@book{Kuan1953Yufa," in manual_bib
-    assert "@book{Kuo1957Liang," in manual_bib
+    assert "@book{Kuo1957Liang,\n  author      = {Guo, Moruo},\n  usera        = {郭沫若},\n  year        = {1957},\n  title       = {Liang Zhou jinwenci daxi tulu kaoshi},\n  userb        = {兩周金文辭大系圖錄考釋}," in manual_bib
 
     assert "@book{Kato1970Kanji," not in generated_bib
     assert "@book{Kato1939Shuo," not in generated_bib
@@ -1444,9 +1448,10 @@ def test_eighteenth_manual_override_tranche_replaces_y_block():
     assert "{Yetts1933Shang," in manual_bib
     assert "{Yetts1954Shang," in manual_bib
     assert "{Yin1962Chiangsu," in manual_bib
-    assert "{Yu1940Shuang," in manual_bib
+    assert "@book{Yu1940Shuang,\n  author      = {Yu, Xingwu},\n  usera        = {于省吾},\n  year        = {1940},\n  title       = {Shuangjianchi Yinqi pinzhi},\n  userb        = {雙劍誃殷契駢枝}," in manual_bib
     assert "{Yu1972Tsung," in manual_bib
     assert "{Yu1929Hsin," in manual_bib
+    assert "userb        = {說「又」}" in manual_bib
 
     assert "{Bent1974Chia," not in generated_bib
     assert "{Bent1957Man," not in generated_bib
