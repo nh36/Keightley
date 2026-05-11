@@ -104,6 +104,7 @@
 \DeclareFieldFormat{usera}{#1}
 \DeclareFieldFormat{userb}{#1}
 \DeclareFieldFormat{userc}{#1}
+\DeclareFieldFormat{series}{#1\iffieldundef{userc}{}{\addspace\printfield{userc}}}
 
 \newbibmacro*{keightley:han-author}{%
   \iffieldundef{usera}

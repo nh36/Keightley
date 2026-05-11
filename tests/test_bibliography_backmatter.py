@@ -42,6 +42,7 @@ def test_manual_bibliography_resource_is_loaded():
     assert r"\DeclareFieldFormat{usera}{#1}" in preamble
     assert r"\DeclareFieldFormat{userb}{#1}" in preamble
     assert r"\DeclareFieldFormat{userc}{#1}" in preamble
+    assert r"\DeclareFieldFormat{series}{#1\iffieldundef{userc}{}{\addspace\printfield{userc}}}" in preamble
     assert r"\renewbibmacro*{author}{" in preamble
     assert r"\renewbibmacro*{editor}{" in preamble
     assert r"\renewbibmacro*{title}{" in preamble
@@ -167,7 +168,9 @@ def test_c_pinyin_audit_updates_zhang_henan_zheng_subcluster():
     assert "author       = {Zhang, Guangzhi}" in manual_bib
     assert "shortauthor  = {Guangzhi}" in manual_bib
     assert 'title        = {Shang wang miaohao xinkao}' in manual_bib
+    assert "userb        = {商王廟號新考}" in manual_bib
     assert 'title        = {Guanyu "Shang wang miaohao xinkao" yiwen de buchong yijian}' in manual_bib
+    assert "userb        = {關於《商王廟號新考》一文的補充意見}" in manual_bib
     assert "title        = {Shang Zhou qingtongqi qixing zhuangshi huawen yu mingwen zonghe}" in manual_bib
     assert "title        = {Tan Wang Hai yu Yi Yin de jiri bing zai lun Yin Shang wangzhi}" in manual_bib
     assert "title       = {Shang Zhou qingtongqi yu mingwen de zonghe yanjiu}" in manual_bib
@@ -227,6 +230,7 @@ def test_dh_pinyin_audit_updates_huang_hsiao_hsu_cluster():
     assert "author      = {Huang, Ranwei}" in manual_bib
     assert "title       = {Yinli kaoshi}" in manual_bib
     assert "series      = {Guoli Taiwan daxue wenshi congkan}" in manual_bib
+    assert "@book{Huang1967Yinli,\n  author      = {Huang, Ranwei},\n  usera       = {黃然偉},\n  year        = {1967},\n  title       = {Yinli kaoshi},\n  userb       = {殷曆考釋},\n  series      = {Guoli Taiwan daxue wenshi congkan},\n  userc        = {國立臺灣大學文史叢刊}," in manual_bib
     assert "author       = {Huang, Peirong}" in manual_bib
     assert 'title        = {Jiawen "pu-tsai-ming" (?) yi ci de jiantao}' in manual_bib
     assert "journaltitle = {Zhongguo wenzi}" in manual_bib
@@ -278,14 +282,14 @@ def test_dh_pinyin_audit_updates_hu_cluster():
 
     assert "author       = {Hu, Houxuan}" in manual_bib
     assert "author      = {Hu, Houxuan}" in manual_bib
-    assert "title        = {Buci zali}" in manual_bib
+    assert "@article{Hu1939Putzu,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1939},\n  title        = {Buci zali},\n  userb        = {卜辭雜例},\n  journaltitle = {BIHP},\n  userc        = {中央研究院歷史語言研究所集刊}," in manual_bib
     assert "title        = {Shi ziyong ziyou}" in manual_bib
     assert "title       = {Wuding shi wuzhong jishi kezi kao}" in manual_bib
     assert "booktitle   = {Jiaguxue Shangshi luncong chuji}" in manual_bib
     assert "title       = {Yindai bugui zhi laiyuan}" in manual_bib
     assert "title       = {Jiaguxue xulun}" in manual_bib
     assert "booktitle   = {Jiaguxue Shangshi luncong erji}" in manual_bib
-    assert "title        = {Buci tongwen li}" in manual_bib
+    assert "@article{Hu1947Putzu,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1947},\n  title        = {Buci tongwen li},\n  userb        = {卜辭同文例},\n  journaltitle = {BIHP},\n  userc        = {中央研究院歷史語言研究所集刊}," in manual_bib
     assert "@article{Hu1948Putzu,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1948},\n  title        = {Buci jishi wenzi shiguan qianming li},\n  userb        = {卜辭記事文字史官簽名例}," in manual_bib
     assert "title       = {Wushinian jiaguwen faxian de zongjie}" in manual_bib
     assert "title       = {Wushinian jiaguxue lunzhumu}" in manual_bib
@@ -299,6 +303,7 @@ def test_dh_pinyin_audit_updates_hu_cluster():
     assert "journaltitle = {Wenwu}" in manual_bib
     assert "title        = {Zhui ji}" in manual_bib
     assert "title        = {Yindai de yuexing}" in manual_bib
+    assert "@article{Hu1973Yintai,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1973},\n  title        = {Yindai de yuexing},\n  userb        = {殷代的刖刑},\n  journaltitle = {KK},\n  userc        = {考古}," in manual_bib
     assert "title        = {Lintzu Sunshi jiucang jiagu wenzi kaobian}" in manual_bib
     assert "title        = {Jiaguwen suojian Yindai nuli de fan yapo douzheng}" in manual_bib
     assert "author      = {Hu, Xu}" in manual_bib
@@ -381,6 +386,7 @@ def test_ik_pinyin_audit_updates_rao_and_rong_cluster():
     assert "title        = {Yu buchao jishu tuiqiu Yinren duiyu shu de guannian---guibu xiangshu lun}" in manual_bib
     assert "journaltitle = {Zhongyang yanjiuyuan lishi yuyan yanjiusuo waibian}" in manual_bib
     assert "title        = {Lun buci duandai wenti--da Tao Bangnan xiansheng}" in manual_bib
+    assert "userb        = {論卜辭斷代問題——答陶邦南先生}" in manual_bib
     assert "author       = {Rong, Geng}" in manual_bib
     assert "title        = {Jiaguxue gaikuang}" in manual_bib
     assert "journaltitle = {Lingnan xuebao}" in manual_bib
@@ -428,8 +434,10 @@ def test_ik_pinyin_audit_updates_early_k_chinese_cluster():
     assert "author      = {Guo, Moruo}" in manual_bib
     assert "title       = {Gujiu kezi zhi yi kaocha}" in manual_bib
     assert "booktitle   = {Gudai mingke huikao xubian}" in manual_bib
+    assert "userc        = {古代銘刻彙考續編}" in manual_bib
     assert "title       = {Liang Zhou jinwenci daxi tulu kaoshi}" in manual_bib
     assert "author       = {Guo, Baojun}" in manual_bib
+    assert "@article{KuoBaojun1933Bchu,\n  author       = {Guo, Baojun},\n  usera        = {郭寶鈞},\n  year         = {1933},\n  title        = {B chu fajueji zhi yi},\n  userb        = {B區發掘記之一},\n  journaltitle = {AYFC},\n  userc        = {安陽發掘報告}," in manual_bib
     assert "title        = {B chu fajueji zhi yi}" in manual_bib
     assert "title        = {B chu fajueji zhi er}" in manual_bib
     assert "title        = {Yijiuwulingnian chun Yinxu fajue baogao}" in manual_bib
@@ -464,6 +472,7 @@ def test_ik_pinyin_audit_updates_li_chinese_scholarship_cluster():
     assert "author       = {Li, Xiaoding}" in manual_bib
     assert "title       = {Jiagu wenzi jishi}" in manual_bib
     assert "series      = {Zhongyang yanjiuyuan lishi yuyan yanjiusuo zhuankan zhi wushi}" in manual_bib
+    assert "userc        = {中央研究院歷史語言研究所專刊之五十}" in manual_bib
     assert "location    = {Nangang}" in manual_bib
     assert "title        = {Cong liushu de guandian kan jiagu wenzi}" in manual_bib
     assert "journaltitle = {Nanyang daxue xuebao}" in manual_bib
@@ -1365,9 +1374,11 @@ def test_sixteenth_manual_override_tranche_replaces_tung_block():
     assert "{Tung1931Takuei," in manual_bib
     assert "{Tung1933Chia," in manual_bib
     assert "{Tung1948Hsiaotun," in manual_bib
+    assert "@article{Tung1952Putzu,\n  author       = {Dong, Zuobin},\n  usera        = {董作賓},\n  year         = {1952},\n  title        = {Buci zhong bayue yiyou yueshi kao},\n  userb        = {卜辭中八月乙酉月食考},\n  journaltitle = {Dalu zazhi tekan},\n  userc        = {大陸雜誌特刊}," in manual_bib
     assert "{Tung1951cChinese," in manual_bib
     assert "{Tung1954Work," in manual_bib
     assert "@article{Tung1954Work,\n  author       = {Dong, Zuobin},\n  usera        = {董作賓},\n  year         = {1954},\n  title        = {Gujiu keci zaikao},\n  userb        = {古舊刻辭再考}," in manual_bib
+    assert "@article{Tung1962aPutzu,\n  author       = {Dong, Zuobin},\n  usera        = {董作賓},\n  year         = {1962},\n  title        = {Buci zhong zhi daxiao cai yu daxiao shi shuo},\n  userb        = {卜辭中之大小材與大小食說},\n  journaltitle = {Dalu zazhi tekan},\n  userc        = {大陸雜誌特刊}," in manual_bib
     assert "{Tung1964Fifty," in manual_bib
     assert "{Tung1967Hsueshu," in manual_bib
     assert "{Tung1967Hsii," in manual_bib
