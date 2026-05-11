@@ -374,7 +374,9 @@ def test_ik_pinyin_audit_updates_rao_and_rong_cluster():
     assert "shortauthor  = {Rao}" in manual_bib
     assert "shortauthor = {Rao}" in manual_bib
     assert "title        = {Haiwai jiagulu yiyu}" in manual_bib
+    assert "userb        = {海外甲骨錄遺}" in manual_bib
     assert "title       = {Yindai zhenbu renwu tongkao}" in manual_bib
+    assert "userb        = {殷代貞卜人物通考}" in manual_bib
     assert "location    = {Hong Kong}" in manual_bib
     assert "title        = {Yu buchao jishu tuiqiu Yinren duiyu shu de guannian---guibu xiangshu lun}" in manual_bib
     assert "journaltitle = {Zhongyang yanjiuyuan lishi yuyan yanjiusuo waibian}" in manual_bib
@@ -384,10 +386,13 @@ def test_ik_pinyin_audit_updates_rao_and_rong_cluster():
     assert "journaltitle = {Lingnan xuebao}" in manual_bib
     assert "author      = {Rong, Geng}" in manual_bib
     assert "title       = {Jinwenbian}" in manual_bib
+    assert "userb        = {金文編}" in manual_bib
     assert "location    = {Beijing}" in manual_bib
     assert "location    = {Nangang}" in manual_bib
     assert "author      = {Rong, Yuan and Rong, Geng}" in manual_bib
     assert "title       = {Jinshishu lumu}" in manual_bib
+    assert "usera        = {容媛、容庚}" in manual_bib
+    assert "userb        = {金石書錄目}" in manual_bib
 
     assert "author       = {Jao, Tsung-yi}" not in manual_bib
     assert "shortauthor  = {Jao}" not in manual_bib
@@ -411,6 +416,12 @@ def test_ik_pinyin_audit_updates_early_k_chinese_cluster():
 
     assert "author       = {Gao, Quxun}" in manual_bib
     assert "title        = {Yinxu chutu zhi niuzhugu kezi}" in manual_bib
+    assert (
+        "@incollection{Kuo1934Kuchiu,\n"
+        "  author      = {Guo, Moruo},\n"
+        "  usera        = {郭沫若},\n"
+        "  year        = {1934},"
+    ) in manual_bib
     assert "author       = {Ke, Yiqing}" in manual_bib
     assert "author      = {Guan, Xiechu}" in manual_bib
     assert "title       = {Yinxu jiagu keci de yufa yanjiu}" in manual_bib
@@ -494,6 +505,12 @@ def test_ik_pinyin_audit_updates_late_l_chinese_cluster():
     manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
 
     assert "author       = {Lao, Gan}" in manual_bib
+    assert (
+        "@article{Lao1957Shih,\n"
+        "  author       = {Lao, Gan},\n"
+        "  usera        = {勞榦},\n"
+        "  year         = {1957},"
+    ) in manual_bib
     assert "title        = {Shizi de jiegou ji shiguan de yuanshi zhiwu}" in manual_bib
     assert "title        = {Zhouchu niandai wenti yu yuexiang wenti de xin kanfa}" in manual_bib
     assert "journaltitle = {Xianggang Zhongwen daxue Zhongguo wenhua yanjiusuo xuebao}" in manual_bib
