@@ -6,6 +6,7 @@ abbreviations:
     scan: 275
   - abbr: "Ch'eng-chai"
     body: "Sun Hai-po. Ch'eng-chai Yin-hsü wen-tzu. Peking, 1940."
+    cjk: "誠齋殷墟文字"
     scan: 275
   - abbr: "Chi-ch'eng I"
     body: "Yen Yi-p'ing. Chia-ku chi-ch'eng. Vol. I. [Taipei], 1975."
@@ -13,6 +14,7 @@ abbreviations:
     scan: 275
   - abbr: "Ch'i-chi"
     body: "Fang Fa-han [Frank H. Chalfant] and Po Jui-hua [Roswell S. Britton]. Chia-ku pu-tz'u ch'i-chi (Seven Collections of Inscribed Oracle Bone). New York, 1938. Reprint, Taipei, 1966."
+    cjk: "甲骨卜辭七集"
     scan: 275
   - abbr: "Chia-pien"
     body: "Tung Tso-pin. Hsiao-t'un ti-erh-pen: Yin-hsü wen-tzu: chia-pien. Nanking, 1948. Reprint, Taipei, 1977."
@@ -113,12 +115,15 @@ abbreviations:
     scan: 276
   - abbr: "K'u-fang"
     body: "Fang Fa-lien [Frank H. Chalfant] and Po Jui-hua [Roswell S. Britton]. K'u-Fang erh-shih-ts'ang chia-ku pu-tz'u (The Couling-Chalfant Collection of Inscribed Oracle Bone). Shanghai, 1935. Reprint, Taipei, 1966."
+    cjk: "庫方二氏藏甲骨卜辭"
     scan: 276
   - abbr: "Ling-shih"
     body: "Ch'en Pang-huai. Chia-ku-wen ling-shih. Tientsin, 1959. Reprint, Tokyo, 1970."
+    cjk: "甲骨文零拾"
     scan: 276
   - abbr: "Liu-lu"
     body: "Hu Hou-hsüan. Chia-ku liu-lu. In Chia-ku-hsüeh Shang-shih lun-ts'ung san-chi. Ch'eng-tu, 1945."
+    cjk: "甲骨六錄"
     scan: 276
   - abbr: "Menzies"
     body: "Hsü Chin-hsiung. The Menzies Collection of Shang Dynasty Oracle Bones. Volume I: A Catalogue. Toronto [1972]; Volume II: The Text. Toronto (1977). [Unless otherwise indicated, references to Menzies in this book are to Volume I.]"
@@ -131,18 +136,22 @@ abbreviations:
     scan: 276
   - abbr: "Nan-pei"
     body: "Hu Hou-hsüan. Chan-hou nan-pei so-chien chia-ku-lu. Peking and Shanghai, 1951."
+    cjk: "戰後南北所見甲骨錄"
     scan: 276
   - abbr: "Ning-hu"
     body: "Hu Hou-hsüan. Chan-hou Ning-hu hsin-huo chia-ku-chi. Peking, 1951."
+    cjk: "戰後寧滬新獲甲骨集"
     scan: 276
   - abbr: "Ogawa"
     body: "Itō Michiharu. Ko Ogawa Chikanosuke shi zō kōkotsu monji. Tōhō gakuhō 37 (1966), pp. 249-263."
     scan: 276
   - abbr: "Pa-li"
     body: "Jao Tsung-yi. Pa-li so-chien chia-ku-lu. Hongkong, 1956."
+    cjk: "巴黎所見甲骨錄"
     scan: 276
   - abbr: "Pai-ken"
     body: "Ming Yi-shih [James M. Menzies]. Pai-ken-shih chiu-ts'ang chia-ku wen-tzu (The Paul D. Bergen Collection: Chinese Oracle Bone Characters). Ch'i-ta chi-k'an 6 and 7 (1935)."
+    cjk: "柏根氏舊藏甲骨文字"
     scan: 276
   - abbr: "Ping-pien"
     body: "Chang Ping-ch'üan. Hsiao-t'un ti-erh-pen: Yin-hsü wen-tzu: ping-pien. Taipei. Vol. 1, pt. 1 (1957); pt. 2 (1959). Vol. 2, pt. 1 (1962); pt. 2 (1965). Vol. 3, pt. 1 (1967); pt. 2 (1972)."
@@ -150,6 +159,7 @@ abbreviations:
     scan: 276
   - abbr: "Pu-tz'u"
     body: "Jung Keng and Ch'ü Jun-min. Yin-ch'i pu-tz'u. Peiping, 1933. Reprint, Taipei, 1970."
+    cjk: "殷契卜辭"
     scan: 276
   - abbr: "ROM"
     body: "Royal Ontario Museum. [Used to refer to oracle bones in that collection; also used by some as an abbreviation equivalent to Menzies.]"

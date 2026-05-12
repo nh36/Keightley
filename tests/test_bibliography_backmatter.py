@@ -41,7 +41,10 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
     abbreviations_live = ABBREVIATIONS_LIVE.read_text(encoding="utf-8")
 
     assert 'abbr: "Chi-ch\'eng I"' in abbreviations_yml
+    assert 'cjk: "誠齋殷墟文字"' in abbreviations_yml
+    assert 'cjk: "甲骨卜辭七集"' in abbreviations_yml
     assert 'cjk: "甲骨集成"' in abbreviations_yml
+    assert 'cjk: "柏根氏舊藏甲骨文字"' in abbreviations_yml
     assert 'cjk: "小屯第二本：殷墟文字：甲編"' in abbreviations_yml
     assert 'cjk: "海外甲骨錄遺"' in abbreviations_yml
     assert 'cjk: "小屯第二本：殷墟文字：乙編"' in abbreviations_yml
@@ -50,6 +53,7 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
     assert 'cjk: "甲骨續補"' in abbreviations_yml
     assert 'cjk: "廈門大學所藏甲骨文字"' in abbreviations_yml
     assert 'cjk: "金璋所藏甲骨卜辭"' in abbreviations_yml
+    assert 'cjk: "甲骨文零拾"' in abbreviations_yml
     assert 'cjk: "傅氏所藏甲骨文字"' in abbreviations_yml
     assert 'cjk: "傅氏殷契徵文"' in abbreviations_yml
     assert 'cjk: "殷契摭佚"' in abbreviations_yml
@@ -69,6 +73,8 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
 
     assert r"\item[Chi-ch'eng I] Yen Yi-p'ing. Chia-ku chi-ch'eng. Vol. I. [Taipei], 1975. \textit{[甲骨集成]}" in abbreviations_live
     assert r"\item[Chia-pien] Tung Tso-pin. Hsiao-t'un ti-erh-pen: Yin-hsü wen-tzu: chia-pien. Nanking, 1948. Reprint, Taipei, 1977. \textit{[小屯第二本：殷墟文字：甲編]}" in abbreviations_live
+    assert r"\item[Ch'eng-chai] Sun Hai-po. Ch'eng-chai Yin-hsü wen-tzu. Peking, 1940. \textit{[誠齋殷墟文字]}" in abbreviations_live
+    assert r"\item[Ch'i-chi] Fang Fa-han [Frank H. Chalfant] and Po Jui-hua [Roswell S. Britton]. Chia-ku pu-tz'u ch'i-chi (Seven Collections of Inscribed Oracle Bone). New York, 1938. Reprint, Taipei, 1966. \textit{[甲骨卜辭七集]}" in abbreviations_live
     assert r"\item[Chih-hsü] Li Ya-nung. Yin-ch'i chih-yi hsü-pien. Peking, 1950. \textit{[殷契摭佚續編]}" in abbreviations_live
     assert r"\item[Chih-yi] Li Tan-ch'iu. Yin-ch'i chih-yi. Peking, 1941. \textit{[殷契摭佚]}" in abbreviations_live
     assert r"\item[Chin-chang] Fang Fa-han [Frank H. Chalfant] and Po Jui-hua [Roswell S. Britton]. Chin-chang so-ts'ang chia-ku pu-tz'u (The Hopkins Collection of Inscribed Oracle Bone). New York, 1939. Reprint, Taipei, 1966. \textit{[金璋所藏甲骨卜辭]}" in abbreviations_live
@@ -82,6 +88,14 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
     assert r"\item[Hsü-pien] Lo Chen-yü. Yin-hsü shu-ch'i hsü-pien. N.p., 1933. Reprint, [Taipei], n.d. \textit{[殷墟書契續編]}" in abbreviations_live
     assert r"\item[Hsü-pu] Hu Hou-hsüan. Chia-ku hsü-pu [unpublished collection, title uncertain]. \textit{[甲骨續補]}" in abbreviations_live
     assert r"\item[Ping-pien] Chang Ping-ch'üan. Hsiao-t'un ti-erh-pen: Yin-hsü wen-tzu: ping-pien. Taipei. Vol. 1, pt. 1 (1957); pt. 2 (1959). Vol. 2, pt. 1 (1962); pt. 2 (1965). Vol. 3, pt. 1 (1967); pt. 2 (1972). \textit{[小屯第二本：殷墟文字：丙編]}" in abbreviations_live
+    assert r"\item[K'u-fang] Fang Fa-lien [Frank H. Chalfant] and Po Jui-hua [Roswell S. Britton]. K'u-Fang erh-shih-ts'ang chia-ku pu-tz'u (The Couling-Chalfant Collection of Inscribed Oracle Bone). Shanghai, 1935. Reprint, Taipei, 1966. \textit{[庫方二氏藏甲骨卜辭]}" in abbreviations_live
+    assert r"\item[Ling-shih] Ch'en Pang-huai. Chia-ku-wen ling-shih. Tientsin, 1959. Reprint, Tokyo, 1970. \textit{[甲骨文零拾]}" in abbreviations_live
+    assert r"\item[Liu-lu] Hu Hou-hsüan. Chia-ku liu-lu. In Chia-ku-hsüeh Shang-shih lun-ts'ung san-chi. Ch'eng-tu, 1945. \textit{[甲骨六錄]}" in abbreviations_live
+    assert r"\item[Nan-pei] Hu Hou-hsüan. Chan-hou nan-pei so-chien chia-ku-lu. Peking and Shanghai, 1951. \textit{[戰後南北所見甲骨錄]}" in abbreviations_live
+    assert r"\item[Ning-hu] Hu Hou-hsüan. Chan-hou Ning-hu hsin-huo chia-ku-chi. Peking, 1951. \textit{[戰後寧滬新獲甲骨集]}" in abbreviations_live
+    assert r"\item[Pa-li] Jao Tsung-yi. Pa-li so-chien chia-ku-lu. Hongkong, 1956. \textit{[巴黎所見甲骨錄]}" in abbreviations_live
+    assert r"\item[Pai-ken] Ming Yi-shih [James M. Menzies]. Pai-ken-shih chiu-ts'ang chia-ku wen-tzu (The Paul D. Bergen Collection: Chinese Oracle Bone Characters). Ch'i-ta chi-k'an 6 and 7 (1935). \textit{[柏根氏舊藏甲骨文字]}" in abbreviations_live
+    assert r"\item[Pu-tz'u] Jung Keng and Ch'ü Jun-min. Yin-ch'i pu-tz'u. Peiping, 1933. Reprint, Taipei, 1970. \textit{[殷契卜辭]}" in abbreviations_live
     assert r"\item[T'ieh-hsin] Yen Yi-p'ing. Tieh-yün ts'ang-kuei hsin-pien. Taipei, 1975. \textit{[鐵雲藏龜新編]}" in abbreviations_live
     assert r"\item[T'ieh-shih] Li Tan-ch'iu. Tieh-yün ts'ang-kuei ling-shih. Shanghai, 1939. \textit{[鐵雲藏龜零拾]}" in abbreviations_live
     assert r"\item[T'ieh-yi] Yeh Yü-sen. Tieh-yün ts'ang-kuei shih-yi. N.p., 1925. \textit{[鐵雲藏龜拾遺]}" in abbreviations_live
