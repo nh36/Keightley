@@ -109,9 +109,11 @@ abbreviations:
     scan: 276
   - abbr: "Jimbun"
     body: "Kaizuka Shigeki. Kyōto daigaku jimbun kagaku kenkyūjo zō kōkotsu monji. 2 vols. Kyoto, 1959. Shakubun. Kyoto, 1960. Sakuin. Kyoto, 1968."
+    cjk: "京都大學人文科學研究所藏甲骨文字"
     scan: 276
   - abbr: "Kikkō"
     body: "Hayashi Taisuke. Kikkō jūkotsu monji. N.p., 1921. Reprint, Taipei, 1970."
+    cjk: "龜甲獸骨文字"
     scan: 276
   - abbr: "K'u-fang"
     body: "Fang Fa-lien [Frank H. Chalfant] and Po Jui-hua [Roswell S. Britton]. K'u-Fang erh-shih-ts'ang chia-ku pu-tz'u (The Couling-Chalfant Collection of Inscribed Oracle Bone). Shanghai, 1935. Reprint, Taipei, 1966."
@@ -130,9 +132,11 @@ abbreviations:
     scan: 276
   - abbr: "Ming-hou"
     body: "Ming Yi-shih [James M. Menzies]. Yin-hsü pu-tz'u hou-pien. Edited by Hsü Chin-hsiung. 2 vols. Taipei, 1972."
+    cjk: "殷墟卜辭後編"
     scan: 276
   - abbr: "Na-erh"
     body: "Yen Yi-p'ing. Mei-kuo Na-erh-sen mei-shu-kuan ts'ang chia-ku pu-tz'u k'ao-shih. Taipei, 1973. (Originally published in Chung-kuo wen-tzu 22-25, 29 [1966-1968].)"
+    cjk: "美國納爾森美術舘藏甲骨卜辭考釋"
     scan: 276
   - abbr: "Nan-pei"
     body: "Hu Hou-hsüan. Chan-hou nan-pei so-chien chia-ku-lu. Peking and Shanghai, 1951."
@@ -144,6 +148,7 @@ abbreviations:
     scan: 276
   - abbr: "Ogawa"
     body: "Itō Michiharu. Ko Ogawa Chikanosuke shi zō kōkotsu monji. Tōhō gakuhō 37 (1966), pp. 249-263."
+    cjk: "故小川睦之輔氏藏甲骨文字"
     scan: 276
   - abbr: "Pa-li"
     body: "Jao Tsung-yi. Pa-li so-chien chia-ku-lu. Hongkong, 1956."
@@ -169,12 +174,15 @@ abbreviations:
     scan: 276
   - abbr: "Shih-to"
     body: "Kuo Jo-yü. Yin-ch'i shih-to. Vol. 1. Shanghai, 1951. Vol. 2. Peking, 1953."
+    cjk: "殷契拾掇"
     scan: 276
   - abbr: "T'ai-ta I"
     body: "Tung Tso-pin. Tai-wan ta-hsüeh so-ts'ang chia-ku wen-tzu fu-k'ao-shih. Kuo-li T'ai-wan ta-hsüeh k'ao-ku jen-lei hsüeh-k'an 1 (1953), pp. 22-46."
+    cjk: "臺灣大學所藏甲骨文字附考釋"
     scan: 276
   - abbr: "T'ai-ta 2"
     body: "Tung Tso-pin and Chin Hsiang-heng. Pen-hsi so-ts'ang chia-ku wen-tzu. Kuo-li T'ai-wan ta-hsüeh k'ao-ku jen-lei hsüeh-k'an 17-18 (1961), pp. 71-84."
+    cjk: "本系所藏甲骨文字"
     scan: 276
   - abbr: "T'ieh-hsin"
     body: "Yen Yi-p'ing. Tieh-yün ts'ang-kuei hsin-pien. Taipei, 1975."
@@ -198,6 +206,7 @@ abbreviations:
     scan: 277
   - abbr: "T'ien-jang"
     body: "T'ang Lan. T'ien-jang-ke chia-ku wen-ts'un. Peiping, 1939."
+    cjk: "天壤閣甲骨文存并考釋"
     scan: 277
   - abbr: "Ts'ui-pien"
     body: "Kuo Mo-jo. Yin-ch'i ts'ui-pien. Tokyo, 1937. Rev. ed., Peking, 1959. Reprint, Taipei, 1971."
@@ -227,9 +236,11 @@ abbreviations:
     scan: 277
   - abbr: "Yeh-ch'u"
     body: "Huang Chün. Yeh-chung p'ien-yü ch'u-chi. Peiping, 1935. [The oracle-bone rubbings are reprinted in Yeh-chung p'ien-yü. Taipei, 1972.]"
+    cjk: "鄴中片羽初集"
     scan: 277
   - abbr: "Yeh-san"
     body: "Huang Chün. Yeh-chung p'ien-yü san-chi. Peiping, 1939. [The oracle-bone rubbings are reprinted in Yeh-chung p'ien-yü. Taipei, 1972.]"
+    cjk: "鄴中片羽三集"
     scan: 277
   - abbr: "Yi-chu"
     body: "Chin Tsu-t'ung. Yin-ch'i yi-chu. Shanghai, 1939. Reprint, Taipei, 1975."
@@ -245,4 +256,5 @@ abbreviations:
     scan: 277
   - abbr: "Yin-hsü"
     body: "Ming Yi-shih [James Mellon Menzies]. Yin-hsü pu-tz'u (Oracle Records from the Waste of Yin). Shanghai, 1917. Reprint, Taipei, 1972."
+    cjk: "殷墟卜辭"
     scan: 277
