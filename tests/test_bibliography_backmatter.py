@@ -1387,6 +1387,7 @@ def test_sixteenth_manual_override_tranche_replaces_tung_block():
     assert "{Tung1951cChinese," in manual_bib
     assert "{Tung1954Work," in manual_bib
     assert "@article{Tung1954Work,\n  author       = {Dong, Zuobin},\n  usera        = {董作賓},\n  year         = {1954},\n  title        = {Gujiu keci zaikao},\n  userb        = {古舊刻辭再考}," in manual_bib
+    assert "@article{Tung1954bWuTing,\n  author       = {Dong, Zuobin},\n  usera        = {董作賓},\n  year         = {1954},\n  title        = {Wu Ding shougui buci qianshuo},\n  userb        = {武丁狩龜卜辭淺說},\n  journaltitle = {TLTC},\n  userc        = {大陸雜誌}," in manual_bib
     assert "@article{Tung1962aPutzu,\n  author       = {Dong, Zuobin},\n  usera        = {董作賓},\n  year         = {1962},\n  title        = {Buci zhong zhi daxiao cai yu daxiao shi shuo},\n  userb        = {卜辭中之大小材與大小食說},\n  journaltitle = {Dalu zazhi tekan},\n  userc        = {大陸雜誌特刊}," in manual_bib
     assert "{Tung1964Fifty," in manual_bib
     assert "{Tung1967Hsueshu," in manual_bib
