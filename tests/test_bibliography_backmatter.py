@@ -433,6 +433,7 @@ def test_ik_pinyin_audit_updates_early_k_chinese_cluster():
     assert "author       = {Ke, Yiqing}" in manual_bib
     assert "author      = {Guan, Xiechu}" in manual_bib
     assert "title       = {Yinxu jiagu keci de yufa yanjiu}" in manual_bib
+    assert "@incollection{Shih1945Hsiaotun,\n  author      = {Shih, Chang-ju},\n  usera       = {石璋如},\n  year        = {1945},\n  title       = {Xiaotun hou wu ci fajue de zhongyao faxian},\n  userb       = {小屯後五次發掘的重要發現},\n  booktitle   = {Liutong bielu shang},\n  userc       = {六同別錄上}," in manual_bib
     assert "author      = {Guo, Moruo}" in manual_bib
     assert "title       = {Gujiu kezi zhi yi kaocha}" in manual_bib
     assert "booktitle   = {Gudai mingke huikao xubian}" in manual_bib
@@ -1163,6 +1164,7 @@ def test_eighth_manual_override_tranche_replaces_ito_jao_block():
     assert "@article{Ito1956Bokuji," in manual_bib
     assert "@book{Ito1975Chugoku," in manual_bib
     assert "@article{Jao1957Haiwai," in manual_bib
+    assert "@article{Jao1957Haiwai,\n  author       = {Rao, Zongyi},\n  usera        = {饒宗頤},\n  shortauthor  = {Rao},\n  year         = {1957/58},\n  sortyear     = {1957},\n  title        = {Haiwai jiagulu yiyu},\n  userb        = {海外甲骨錄遺},\n  journaltitle = {Journal of Oriental Studies},\n  userc        = {東方文化}," in manual_bib
     assert "@article{Jao1961aLun,\n  author       = {Rao, Zongyi},\n  usera        = {饒宗頤},\n  shortauthor  = {Rao},\n  year         = {1961},\n  title        = {Lun buci duandai wenti--da Tao Bangnan xiansheng},\n  userb        = {論卜辭斷代問題——答陶邦南先生},\n  journaltitle = {Toyo gaku},\n  userc        = {東洋學}," in manual_bib
 
     assert "@book{Hughes1964Inkyo," not in generated_bib
@@ -1448,6 +1450,7 @@ def test_eighteenth_manual_override_tranche_replaces_y_block():
     assert "@article{Yen1954Payueh,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1954},\n  title        = {Bayue yiyou yueshi fujia de pinhe yu kaozheng de jingguo},\n  userb        = {八月乙酉月食腹甲的拼合與考證的經過}," in manual_bib
     assert "@article{Yen1959Shih,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1959},\n  title        = {Shi sizuding},\n  userb        = {釋四足鼎}," in manual_bib
     assert "@article{Yen1961Chiaku,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1961},\n  title        = {Jiaguwen duandai yanjiu xinli},\n  userb        = {甲骨文斷代研究新例},\n  journaltitle = {Lishi yuyan yanjiusuo jikan waibian},\n  userc        = {中央研究院歷史語言研究所集刊外編}," in manual_bib
+    assert "@article{Yen1967Chiaku,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1967},\n  title        = {Jiagu yanjiu bianwei zhuli},\n  userb        = {甲骨研究辨偽助例},\n  journaltitle = {Yushi xuezhi},\n  userc        = {語史學誌}," in manual_bib
     assert "{Yen1974Chia," in manual_bib
     assert "{Yen1976Chiaku," in manual_bib
     assert "{YenYun1973Shangtai," in manual_bib
