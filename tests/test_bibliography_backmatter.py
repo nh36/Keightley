@@ -283,7 +283,7 @@ def test_dh_pinyin_audit_updates_hu_cluster():
     assert "author       = {Hu, Houxuan}" in manual_bib
     assert "author      = {Hu, Houxuan}" in manual_bib
     assert "@article{Hu1939Putzu,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1939},\n  title        = {Buci zali},\n  userb        = {卜辭雜例},\n  journaltitle = {BIHP},\n  userc        = {中央研究院歷史語言研究所集刊}," in manual_bib
-    assert "title        = {Shi ziyong ziyou}" in manual_bib
+    assert "@article{Hu1939aShih,\n  author       = {Hu, Houxuan},\n  usera        = {胡厚宣},\n  year         = {1939},\n  title        = {Shi ziyong ziyou},\n  userb        = {釋字用字由},\n  journaltitle = {BIHP},\n  userc        = {中央研究院歷史語言研究所集刊}," in manual_bib
     assert "title       = {Wuding shi wuzhong jishi kezi kao}" in manual_bib
     assert "booktitle   = {Jiaguxue Shangshi luncong chuji}" in manual_bib
     assert "title       = {Yindai bugui zhi laiyuan}" in manual_bib
@@ -1408,6 +1408,7 @@ def test_seventeenth_manual_override_tranche_replaces_post_tung_vw_block():
     generated_bib = GENERATED_BIB.read_text(encoding="utf-8")
 
     assert "author      = {Dong, Zuobin and Huang, Ranwei}" in manual_bib
+    assert "@article{Zhang1956Pu,\n  author       = {Zhang, Zongdong},\n  usera        = {張宗董},\n  shortauthor  = {Zongdong},\n  year         = {1956},\n  title        = {Bugui fujiadi xushu},\n  userb        = {卜龜腹甲的序數}," in manual_bib
     assert "{TungChin1961Penhsi," in manual_bib
     assert "{Umehara1964Inkyo," in manual_bib
     assert "{Van1961Sexual," in manual_bib
@@ -1448,6 +1449,7 @@ def test_eighteenth_manual_override_tranche_replaces_y_block():
     assert "@article{Yen1951Yinli,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1951},\n  title        = {Yinlipu xunpu bu},\n  userb        = {殷曆譜「訓譜」補},\n  journaltitle = {TLTC},\n  userc        = {大陸雜誌}," in manual_bib
     assert "@article{Yen1952Cheng,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1952},\n  title        = {Zheng Riben Sounei Qing shi dui Yinli de wujie},\n  userb        = {正日本藪內清氏對殷曆的誤解}," in manual_bib
     assert "@article{Yen1954Payueh,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1954},\n  title        = {Bayue yiyou yueshi fujia de pinhe yu kaozheng de jingguo},\n  userb        = {八月乙酉月食腹甲的拼合與考證的經過}," in manual_bib
+    assert "@article{Yen1955Yilun,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1955},\n  title        = {Yilun Yinlipu jiujiao},\n  userb        = {一論「殷曆譜舊校」},\n  journaltitle = {TLTC},\n  userc        = {大陸雜誌}," in manual_bib
     assert "@article{Yen1959Shih,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1959},\n  title        = {Shi sizuding},\n  userb        = {釋四足鼎}," in manual_bib
     assert "@article{Yen1961Chiaku,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1961},\n  title        = {Jiaguwen duandai yanjiu xinli},\n  userb        = {甲骨文斷代研究新例},\n  journaltitle = {Lishi yuyan yanjiusuo jikan waibian},\n  userc        = {中央研究院歷史語言研究所集刊外編}," in manual_bib
     assert "@article{Yen1967Chiaku,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1967},\n  title        = {Jiagu yanjiu bianwei zhuli},\n  userb        = {甲骨研究辨偽助例},\n  journaltitle = {Yushi xuezhi},\n  userc        = {語史學誌}," in manual_bib
