@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 INPUT = ROOT / "data" / "abbreviations.yml"
 OUTPUT = ROOT / "tex" / "backmatter" / "abbreviations_live.tex"
 
-FIELD_RE = re.compile(r"^\s{4}(body|body_tesseract|gv_excerpt|gv_cjk):\s*(.*)$")
+FIELD_RE = re.compile(r"^\s{4}(body|body_tesseract|gv_excerpt|gv_cjk|cjk):\s*(.*)$")
 ABBR_RE = re.compile(r"^\s{2}- abbr:\s*(.*)$")
 
 
@@ -67,11 +67,14 @@ def load_entries() -> list[dict[str, str]]:
 
 def render_entry(entry: dict[str, str]) -> str:
     body = entry.get("body") or entry.get("body_tesseract") or entry.get("gv_excerpt") or "[description pending]"
-    cjk = entry.get("gv_cjk", "")
+    cjk = entry.get("cjk", "")
+    gv_cjk = entry.get("gv_cjk", "")
 
     rendered = f"  \\item[{escape_tex(entry['abbr'])}] {escape_tex(body)}"
-    if cjk and "body" not in entry:
-        rendered += rf" \hfill\textit{{[CJK: {escape_tex(cjk)}]}}"
+    if cjk:
+        rendered += rf" \textit{{[{escape_tex(cjk)}]}}"
+    elif gv_cjk and "body" not in entry:
+        rendered += rf" \hfill\textit{{[CJK: {escape_tex(gv_cjk)}]}}"
     return rendered
 
 

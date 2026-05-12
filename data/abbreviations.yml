@@ -9,78 +9,101 @@ abbreviations:
     scan: 275
   - abbr: "Chi-ch'eng I"
     body: "Yen Yi-p'ing. Chia-ku chi-ch'eng. Vol. I. [Taipei], 1975."
+    cjk: "甲骨集成"
     scan: 275
   - abbr: "Ch'i-chi"
     body: "Fang Fa-han [Frank H. Chalfant] and Po Jui-hua [Roswell S. Britton]. Chia-ku pu-tz'u ch'i-chi (Seven Collections of Inscribed Oracle Bone). New York, 1938. Reprint, Taipei, 1966."
     scan: 275
   - abbr: "Chia-pien"
     body: "Tung Tso-pin. Hsiao-t'un ti-erh-pen: Yin-hsü wen-tzu: chia-pien. Nanking, 1948. Reprint, Taipei, 1977."
+    cjk: "小屯第二本：殷墟文字：甲編"
     scan: 275
   - abbr: "Chia-pien k'ao-shih"
     body: "Ch'ü Wan-li. Hsiao-t'un ti-erh-pen: Yin-hsü wen-tzu: chia-pien k'ao-shih. Taipei, 1961."
+    cjk: "小屯第二本：殷墟文字：甲編考釋"
     scan: 275
   - abbr: "Chia-t'u"
     body: "T'u-pan (Plates 1-50 at the rear of Chia-pien k'ao-shih)."
     scan: 275
   - abbr: "Chien-shou"
     body: "Chi Fo-t'o. Chien-shou-t'ang so-ts'ang Yin-hsü wen-tzu. Shanghai, 1917. Reprint, [Taipei], n.d."
+    cjk: "簡壽堂所藏殷墟文字"
     scan: 275
   - abbr: "Ch'ien-pien"
     body: "Lo Chen-yü. Yin-hsü shu-ch'i ch'ien-pien. N.p., 1913. Reprint, [Shanghai], 1932; [Taipei], n.d."
+    cjk: "殷墟書契前編"
     scan: 275
   - abbr: "Chih-hsü"
     body: "Li Ya-nung. Yin-ch'i chih-yi hsü-pien. Peking, 1950."
+    cjk: "殷契摭佚續編"
     scan: 275
   - abbr: "Chih-yi"
     body: "Li Tan-ch'iu. Yin-ch'i chih-yi. Peking, 1941."
+    cjk: "殷契摭佚"
     scan: 275
   - abbr: "Chin-chang"
     body: "Fang Fa-han [Frank H. Chalfant] and Po Jui-hua [Roswell S. Britton]. Chin-chang so-ts'ang chia-ku pu-tz'u (The Hopkins Collection of Inscribed Oracle Bone). New York, 1939. Reprint, Taipei, 1966."
+    cjk: "金璋所藏甲骨卜辭"
     scan: 275
   - abbr: "Ching-chin"
     body: "Hu Hou-hsüan. Chan-hou Ching-chin hsin-huo chia-ku-chi. Shanghai, 1954."
+    cjk: "戰後京津薪穫甲骨集"
     scan: 275
   - abbr: "Ching-hua"
     body: "Lo Chen-yü. Yin-hsü shu-ch'i ching-hua. N.p., 1914."
+    cjk: "殷墟書契菁華"
     scan: 275
   - abbr: "Cho-ts'un"
     body: "Tseng Yi-kung. Chia-ku cho-ts'un. N.p., 1939."
+    cjk: "甲骨綴存"
     scan: 275
   - abbr: "Chui-ho"
     body: "Kuo Jo-yü, Tseng Yi-kung, and Li Hsüeh-ch'in. Yin-hsü wen-tzu chui-ho. Peking, 1955."
+    cjk: "殷墟文字綴合"
     scan: 275
   - abbr: "Chui-hsin"
     body: "Yen Yi-p'ing. Chia-ku chui-ho hsin-pien. Taipei, 1975."
+    cjk: "甲骨綴合新編"
     scan: 275
   - abbr: "Fu-chia"
     body: "Shang Ch'eng-tso. Fu-shih so-ts'ang chia-ku wen-tzu. Nanking, 1933."
+    cjk: "傅氏所藏甲骨文字"
     scan: 275
   - abbr: "Fu-yin"
     body: "Wang Hsiang. Fu-shih Yin-ch'i cheng-wen. Tientsin, 1925."
+    cjk: "傅氏殷契徵文"
     scan: 275
   - abbr: "Hai-wai"
     body: "Jao Tsung-yi. Hai-wai chia-ku lu-i. Journal of Oriental Studies 4.1-2 (1957/58), pp. 1-22."
+    cjk: "海外甲骨錄遺"
     scan: 275
   - abbr: "Han-ch'eng"
     body: "Tung Tso-pin. Han-ch'eng ta-hsüeh so-ts'ang ta-chia-ku k'e-tz'u k'ao-shih. BIHP 28.2 (1957), pp. 825-840."
+    cjk: "漢城大學所藏大胛骨刻辭考釋"
     scan: 275
   - abbr: "Ho-pien"
     body: "Tseng Yi-kung. Chia-ku chui-ho-pien. N.p., 1950."
+    cjk: "甲骨綴合編"
     scan: 275
   - abbr: "Hou-pien"
     body: "Lo Chen-yü. Yin-hsü shu-ch'i hou-pien. N.p., 1916. Reprint, [Taipei], n.d."
+    cjk: "殷墟書契後編"
     scan: 275
   - abbr: "Hsia-men"
     body: "Hu Hou-hsüan. Hsia-men ta-hsüeh so-ts'ang chia-ku wen-tzu. In Chia-ku-hsüeh Shang-shih lun-ts'ung ch'u-chi. Ch'eng-tu, 1944."
+    cjk: "廈門大學所藏甲骨文字"
     scan: 276
   - abbr: "Hsü-pien"
     body: "Lo Chen-yü. Yin-hsü shu-ch'i hsü-pien. N.p., 1933. Reprint, [Taipei], n.d."
+    cjk: "殷墟書契續編"
     scan: 276
   - abbr: "Hsü-pu"
     body: "Hu Hou-hsüan. Chia-ku hsü-pu [unpublished collection, title uncertain]."
+    cjk: "甲骨續補"
     scan: 276
   - abbr: "Hsü-ts'un"
     body: "Hu Hou-hsüan. Chia-ku hsü-ts'un. Shanghai, 1955."
+    cjk: "甲骨續存"
     scan: 276
   - abbr: "Jimbun"
     body: "Kaizuka Shigeki. Kyōto daigaku jimbun kagaku kenkyūjo zō kōkotsu monji. 2 vols. Kyoto, 1959. Shakubun. Kyoto, 1960. Sakuin. Kyoto, 1968."
@@ -123,6 +146,7 @@ abbreviations:
     scan: 276
   - abbr: "Ping-pien"
     body: "Chang Ping-ch'üan. Hsiao-t'un ti-erh-pen: Yin-hsü wen-tzu: ping-pien. Taipei. Vol. 1, pt. 1 (1957); pt. 2 (1959). Vol. 2, pt. 1 (1962); pt. 2 (1965). Vol. 3, pt. 1 (1967); pt. 2 (1972)."
+    cjk: "小屯第二本：殷墟文字：丙編"
     scan: 276
   - abbr: "Pu-tz'u"
     body: "Jung Keng and Ch'ü Jun-min. Yin-ch'i pu-tz'u. Peiping, 1933. Reprint, Taipei, 1970."
@@ -144,39 +168,49 @@ abbreviations:
     scan: 276
   - abbr: "T'ieh-hsin"
     body: "Yen Yi-p'ing. Tieh-yün ts'ang-kuei hsin-pien. Taipei, 1975."
+    cjk: "鐵雲藏龜新編"
     scan: 277
   - abbr: "T'ieh-shih"
     body: "Li Tan-ch'iu. Tieh-yün ts'ang-kuei ling-shih. Shanghai, 1939."
+    cjk: "鐵雲藏龜零拾"
     scan: 277
   - abbr: "T'ieh-yi"
     body: "Yeh Yü-sen. Tieh-yün ts'ang-kuei shih-yi. N.p., 1925."
+    cjk: "鐵雲藏龜拾遺"
     scan: 277
   - abbr: "T'ieh-yü"
     body: "Lo Chen-yü. Tieh-yün ts'ang-kuei chih-yü. N.p., 1915. Reprint, Hongkong, 1972."
+    cjk: "鐵雲藏龜之餘"
     scan: 277
   - abbr: "T'ieh-yün"
     body: "Liu E. Tieh-yün ts'ang-kuei. N.p., 1903. Reprint, [Taipei], 1959."
+    cjk: "鐵雲藏龜"
     scan: 277
   - abbr: "T'ien-jang"
     body: "T'ang Lan. T'ien-jang-ke chia-ku wen-ts'un. Peiping, 1939."
     scan: 277
   - abbr: "Ts'ui-pien"
     body: "Kuo Mo-jo. Yin-ch'i ts'ui-pien. Tokyo, 1937. Rev. ed., Peking, 1959. Reprint, Taipei, 1971."
+    cjk: "殷契粹編"
     scan: 277
   - abbr: "Ts'un-chen"
     body: "Kuan Pai-yi. Yin-hsü wen-tzu ts'un-chen. Vols. 1-5, 8. K'ai-feng, 1931-1938."
+    cjk: "殷墟文字存真"
     scan: 277
   - abbr: "T'ung-tsuan"
     body: "Kuo Mo-jo. Pu-tz'u t'ung-tsuan. Tokyo, 1933."
+    cjk: "卜辭通纂"
     scan: 277
   - abbr: "US"
     body: "Chou Hung-hsiang. Oracle Bone Collections in the United States. Occasional Papers in Archaeology, no. 10. Berkeley and Los Angeles, 1976. [USB refers to a bone fragment in this collection, USS refers to a shell fragment.]"
     scan: 277
   - abbr: "Wai-pien"
     body: "Tung Tso-pin. Yin-hsü wen-tzu wai-pien. Taipei, 1956."
+    cjk: "殷墟文字外編"
     scan: 277
   - abbr: "Wen-lu"
     body: "Sun Hai-po. Chia-ku wen-lu. Honan, 1938. Reprint, Taipei, 1971."
+    cjk: "甲骨文錄"
     scan: 277
   - abbr: "White"
     body: "Hsü Chin-hsiung. Oracle Bones from the White and Other Collections [Forthcoming.]"
@@ -189,12 +223,15 @@ abbreviations:
     scan: 277
   - abbr: "Yi-chu"
     body: "Chin Tsu-t'ung. Yin-ch'i yi-chu. Shanghai, 1939. Reprint, Taipei, 1975."
+    cjk: "殷契遺珠"
     scan: 277
   - abbr: "Yi-pien"
     body: "Tung Tso-pin. Hsiao-t'un ti-erh-pen: Yin-hsü wen-tzu: yi-pien. Pt. 1 [Nanking], 1948. Pt. 2 [Nanking], 1949. Pt. 3, Taipei, 1953."
+    cjk: "小屯第二本：殷墟文字：乙編"
     scan: 277
   - abbr: "Yi-ts'un"
     body: "Shang Ch'eng-tso. Yin-ch'i yi-ts'un. Nanking, 1933. Reprint, Tokyo, 1966."
+    cjk: "殷契遺存"
     scan: 277
   - abbr: "Yin-hsü"
     body: "Ming Yi-shih [James Mellon Menzies]. Yin-hsü pu-tz'u (Oracle Records from the Waste of Yin). Shanghai, 1917. Reprint, Taipei, 1972."
