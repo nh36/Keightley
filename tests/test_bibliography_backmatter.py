@@ -1203,6 +1203,7 @@ def test_fourth_manual_override_tranche_replaces_corrupted_d_to_h_block():
     assert "@article{Gelb1967Approaches," in manual_bib
     assert "@article{Gibson1934Picture," in manual_bib
     assert "@article{Hayashi1968Inshu," in manual_bib
+    assert "@article{Hayashi1968Inshu,\n  author       = {Hayashi Minao},\n  year         = {1968},\n  title        = {Inshu jidai no zuzo kigo},\n  journaltitle = {Toho gakuhd},\n  userc        = {東方學報}," in manual_bib
     assert "@article{Hopkins1938Ancestral," in manual_bib
     assert "@article{Hsiao1976Anyang," in manual_bib
 
@@ -1266,6 +1267,8 @@ def test_eighth_manual_override_tranche_replaces_ito_jao_block():
     assert "@article{Ikeda1951Keikeiji," in manual_bib
     assert "@article{Ishida1960Teitei," in manual_bib
     assert "@article{Ito1956Bokuji," in manual_bib
+    assert "@article{Ikeda1951Keikeiji,\n  author       = {Ikeda, Suetoshi},\n  year         = {1951},\n  title        = {Kei kei ji ko},\n  journaltitle = {Kokotsugaku},\n  userc        = {甲骨學}," in manual_bib
+    assert "@article{Ito1956Bokuji,\n  author       = {Ito, Michiharu},\n  shortauthor  = {Ito},\n  year         = {1956},\n  title        = {Bokuji ni mieru sorei kannen ni tsuite},\n  journaltitle = {Toho gakuho},\n  userc        = {東方學報}," in manual_bib
     assert "@book{Ito1975Chugoku," in manual_bib
     assert "@article{Jao1957Haiwai," in manual_bib
     assert "@article{Jao1957Haiwai,\n  author       = {Rao, Zongyi},\n  usera        = {饒宗頤},\n  shortauthor  = {Rao},\n  year         = {1957/58},\n  sortyear     = {1957},\n  title        = {Haiwai jiagulu yiyu},\n  userb        = {海外甲骨錄遺},\n  journaltitle = {Journal of Oriental Studies},\n  userc        = {東方文化}," in manual_bib
@@ -1361,6 +1364,7 @@ def test_twelfth_manual_override_tranche_replaces_late_l_and_m_block():
     assert "@incollection{LotFalck1968Divination," in manual_bib
     assert "@book{Mao1971Turtles," in manual_bib
     assert "@article{Matsumaru1976Seishu," in manual_bib
+    assert "@article{Matsumaru1976Seishu,\n  author       = {Matsumaru, Michio},\n  nameaddon    = {ed.},\n  year         = {1976},\n  title        = {Seishu kimbun no bengi o megutte},\n  journaltitle = {Kokotsugaku},\n  userc        = {甲骨學}," in manual_bib
     assert "@article{Matsumoto1915Fossil," in manual_bib
     assert "@article{Mattos1964Partition," in manual_bib
     assert "@book{Michels1973Dating," in manual_bib
