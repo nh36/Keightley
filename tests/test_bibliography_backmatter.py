@@ -6,6 +6,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BIBLIO_A = REPO_ROOT / "tex" / "backmatter" / "biblio_a.tex"
 BIBLIO_B = REPO_ROOT / "tex" / "backmatter" / "biblio_b.tex"
+ABBREVIATIONS_YML = REPO_ROOT / "data" / "abbreviations.yml"
+ABBREVIATIONS_LIVE = REPO_ROOT / "tex" / "backmatter" / "abbreviations_live.tex"
 BUILD_SCRIPT = REPO_ROOT / "scripts" / "build.sh"
 EXTRACT_SCRIPT = REPO_ROOT / "scripts" / "08_extract_bibliography.py"
 PREAMBLE = REPO_ROOT / "tex" / "preamble.tex"
@@ -32,6 +34,25 @@ def test_build_script_runs_biber():
     assert '--input-directory="$BUILD_OUTPUT"' in build_script
     assert 'run_xelatex_pass 3' in build_script
     assert "render_abbreviations_tex.py" in build_script
+
+
+def test_bibliography_a_uses_curated_abbreviation_entries():
+    abbreviations_yml = ABBREVIATIONS_YML.read_text(encoding="utf-8")
+    abbreviations_live = ABBREVIATIONS_LIVE.read_text(encoding="utf-8")
+
+    assert 'abbr: "Chi-ch\'eng I"' in abbreviations_yml
+    assert 'abbr: "Hsü-pu"' in abbreviations_yml
+    assert 'abbr: "US"' in abbreviations_yml
+    assert 'abbr: "Yi-pien"' in abbreviations_yml
+
+    assert r"\item[Chi-ch'eng I] Yen Yi-p'ing. Chia-ku chi-ch'eng. Vol. I. [Taipei], 1975." in abbreviations_live
+    assert r"\item[Hsü-pu] Hu Hou-hsüan. Chia-ku hsü-pu [unpublished collection, title uncertain]." in abbreviations_live
+    assert r"\item[US] Chou Hung-hsiang. Oracle Bone Collections in the United States." in abbreviations_live
+    assert r"\item[Yin-hsü] Ming Yi-shih [James Mellon Menzies]. Yin-hsü pu-tz'u (Oracle Records from the Waste of Yin)." in abbreviations_live
+
+    assert "[CJK:" not in abbreviations_live
+    assert "Ghi-ch" not in abbreviations_live
+    assert "ACE AE AINE SEAR" not in abbreviations_live
 
 
 def test_manual_bibliography_resource_is_loaded():
@@ -953,6 +974,7 @@ def test_bibliography_bilingual_fields_use_curated_user_slots():
     assert "userb        = {甲骨文所見殷代奴隸的反壓迫鬥爭}" in manual_bib
     assert "userb        = {甲骨文所見商族鳥圖騰的新證據}" in manual_bib
     assert "usera        = {沈文倬}" in manual_bib
+    assert "userb        = {𠬝与耤}" in manual_bib
     assert "usera        = {文物}" in manual_bib
     assert "userb        = {江西清江吴城商代遗址发掘简报}" in manual_bib
     assert "usera       = {王國維}" in manual_bib
@@ -1488,8 +1510,7 @@ def test_nineteenth_manual_override_tranche_replaces_postscript_block():
     assert "Collections Published 1935-1939" in manual_bib
     assert "{Nivison1977aPronominal," in manual_bib
     assert "{Shen1977Fuyu," in manual_bib
-    assert "author       = {Shen, Wenzhuo}" in manual_bib
-    assert "shortauthor  = {Wenzhuo}" in manual_bib
+    assert "@article{Shen1977Fuyu,\n  author       = {Shen, Wenzhuo},\n  usera        = {沈文倬},\n  shortauthor  = {Wenzhuo},\n  year         = {1977},\n  title        = {Fu yu chi},\n  userb        = {𠬝与耤},\n  journaltitle = {KK},\n  userc        = {考古},\n  volume       = {1977.5},\n  pages        = {335--338, 358}," in manual_bib
     assert "{Takashima1977aExistence," in manual_bib
     assert "{TungEncheng1977Computer," in manual_bib
     assert "{Yu1977Shuo," in manual_bib
