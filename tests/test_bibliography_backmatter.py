@@ -426,7 +426,9 @@ def test_ik_pinyin_audit_updates_early_k_chinese_cluster():
         "@incollection{Kuo1934Kuchiu,\n"
         "  author      = {Guo, Moruo},\n"
         "  usera        = {郭沫若},\n"
-        "  year        = {1934},"
+        "  year        = {1934},\n"
+        "  title       = {Gujiu kezi zhi yi kaocha},\n"
+        "  userb       = {骨臼刻辭之一考察},\n"
     ) in manual_bib
     assert "author       = {Ke, Yiqing}" in manual_bib
     assert "author      = {Guan, Xiechu}" in manual_bib
@@ -1161,7 +1163,7 @@ def test_eighth_manual_override_tranche_replaces_ito_jao_block():
     assert "@article{Ito1956Bokuji," in manual_bib
     assert "@book{Ito1975Chugoku," in manual_bib
     assert "@article{Jao1957Haiwai," in manual_bib
-    assert "@article{Jao1961aLun," in manual_bib
+    assert "@article{Jao1961aLun,\n  author       = {Rao, Zongyi},\n  usera        = {饒宗頤},\n  shortauthor  = {Rao},\n  year         = {1961},\n  title        = {Lun buci duandai wenti--da Tao Bangnan xiansheng},\n  userb        = {論卜辭斷代問題——答陶邦南先生},\n  journaltitle = {Toyo gaku},\n  userc        = {東洋學}," in manual_bib
 
     assert "@book{Hughes1964Inkyo," not in generated_bib
     assert "@book{Hughes1960Tei," not in generated_bib
@@ -1247,7 +1249,8 @@ def test_twelfth_manual_override_tranche_replaces_late_l_and_m_block():
     generated_bib = GENERATED_BIB.read_text(encoding="utf-8")
 
     assert "@article{Ling1934Sunghua," in manual_bib
-    assert "@article{Liu1974Puku," in manual_bib
+    assert "@article{Ling1971Kueichi,\n  author       = {Ling, Shunsheng},\n  usera        = {凌純聲},\n  year         = {1971},\n  title        = {Zhongguo gudai de guiji wenhua},\n  userb        = {中國古代的龜祭文化},\n  journaltitle = {BIE},\n  userc        = {中央研究院民族學研究所集刊}," in manual_bib
+    assert "@article{Liu1974Puku,\n  author       = {Liu, Yuanlin},\n  usera        = {劉源林},\n  year         = {1974},\n  title        = {Bugu de gongzhi jishu yanjin guocheng zhi tantao},\n  userb        = {卜骨的攻治技術演進過程之探討},\n  journaltitle = {BIHP},\n  userc        = {中央研究院歷史語言研究所集刊}," in manual_bib
     assert "@book{Lo1914Yinhsu," in manual_bib
     assert "@incollection{LotFalck1968Divination," in manual_bib
     assert "@book{Mao1971Turtles," in manual_bib
@@ -1440,8 +1443,11 @@ def test_eighteenth_manual_override_tranche_replaces_y_block():
     assert "{Yang1977Tsung," in manual_bib
     assert "{Yeh1929Yinchi," in manual_bib
     assert "{Yeh1934Yinhsu," in manual_bib
-    assert "{Yen1951Yinli," in manual_bib
-    assert "{Yen1961Chiaku," in manual_bib
+    assert "@article{Yen1951Yinli,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1951},\n  title        = {Yinlipu xunpu bu},\n  userb        = {殷曆譜「訓譜」補},\n  journaltitle = {TLTC},\n  userc        = {大陸雜誌}," in manual_bib
+    assert "@article{Yen1952Cheng,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1952},\n  title        = {Zheng Riben Sounei Qing shi dui Yinli de wujie},\n  userb        = {正日本藪內清氏對殷曆的誤解}," in manual_bib
+    assert "@article{Yen1954Payueh,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1954},\n  title        = {Bayue yiyou yueshi fujia de pinhe yu kaozheng de jingguo},\n  userb        = {八月乙酉月食腹甲的拼合與考證的經過}," in manual_bib
+    assert "@article{Yen1959Shih,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1959},\n  title        = {Shi sizuding},\n  userb        = {釋四足鼎}," in manual_bib
+    assert "@article{Yen1961Chiaku,\n  author       = {Yan, Yiping},\n  usera        = {嚴一萍},\n  year         = {1961},\n  title        = {Jiaguwen duandai yanjiu xinli},\n  userb        = {甲骨文斷代研究新例},\n  journaltitle = {Lishi yuyan yanjiusuo jikan waibian},\n  userc        = {中央研究院歷史語言研究所集刊外編}," in manual_bib
     assert "{Yen1974Chia," in manual_bib
     assert "{Yen1976Chiaku," in manual_bib
     assert "{YenYun1973Shangtai," in manual_bib
