@@ -1270,6 +1270,7 @@ def test_eighth_manual_override_tranche_replaces_ito_jao_block():
     assert "@article{Ikeda1951Keikeiji,\n  author       = {Ikeda, Suetoshi},\n  year         = {1951},\n  title        = {Kei kei ji ko},\n  journaltitle = {Kokotsugaku},\n  userc        = {甲骨學}," in manual_bib
     assert "@article{Ito1956Bokuji,\n  author       = {Ito, Michiharu},\n  shortauthor  = {Ito},\n  year         = {1956},\n  title        = {Bokuji ni mieru sorei kannen ni tsuite},\n  journaltitle = {Toho gakuho},\n  userc        = {東方學報}," in manual_bib
     assert "@book{Ito1975Chugoku," in manual_bib
+    assert "@book{Ito1975Chugoku,\n  author      = {Ito, Michiharu},\n  shortauthor = {Ito},\n  year        = {1975},\n  title       = {Chugoku kodai ocho no keisei--shutsudo shiryo o chushin to suru Inshushi no kenkyu},\n  userb       = {中国古代王朝の形成：出土資料を中心とする殷周史の研究}," in manual_bib
     assert "@article{Jao1957Haiwai," in manual_bib
     assert "@article{Jao1957Haiwai,\n  author       = {Rao, Zongyi},\n  usera        = {饒宗頤},\n  shortauthor  = {Rao},\n  year         = {1957/58},\n  sortyear     = {1957},\n  title        = {Haiwai jiagulu yiyu},\n  userb        = {海外甲骨錄遺},\n  journaltitle = {Journal of Oriental Studies},\n  userc        = {東方文化}," in manual_bib
     assert "@article{Jao1961aLun,\n  author       = {Rao, Zongyi},\n  usera        = {饒宗頤},\n  shortauthor  = {Rao},\n  year         = {1961},\n  title        = {Lun buci duandai wenti--da Tao Bangnan xiansheng},\n  userb        = {論卜辭斷代問題——答陶邦南先生},\n  journaltitle = {Toyo gaku},\n  userc        = {東洋學}," in manual_bib
@@ -1429,9 +1430,14 @@ def test_fourteenth_manual_override_tranche_replaces_s_page_block():
     assert "@article{Shih1954Kupu," in manual_bib
     assert "@book{Shih1959Hsiao," in manual_bib
     assert "@book{Shihsanching1965Chushu," in manual_bib
+    assert "@book{Shima1958Inkyo,\n  author      = {Shima, Kunio},\n  year        = {1958},\n  title       = {Inkyo bokuji kenkyu},\n  userb       = {殷墟卜辞研究}," in manual_bib
     assert "@book{Shima1967Inkyo," in manual_bib
+    assert "@book{Shima1967Inkyo,\n  author      = {Shima, Kunio},\n  year        = {1967},\n  title       = {Inkyo bokuji sorui},\n  userb       = {殷墟卜辭綜類}," in manual_bib
+    assert "@book{Shima1971Inkyo,\n  author      = {Shima, Kunio},\n  year        = {1971},\n  title       = {Inkyo bokuji sorui},\n  userb       = {殷墟卜辭綜類},\n  edition     = {2d rev. ed.}," in manual_bib
     assert "@article{Shirakawa1948Bokuji," in manual_bib
     assert "@book{Shirakawa1970Setsubun," in manual_bib
+    assert "@book{Shirakawa1971Kimbun,\n  author      = {Shirakawa, Shizuka},\n  year        = {1971},\n  title       = {Kimbun no sekai},\n  userb       = {金文の世界}," in manual_bib
+    assert "@book{Shirakawa1972Kokotsubun,\n  author      = {Shirakawa, Shizuka},\n  year        = {1972},\n  title       = {Kokotsubun no sekai---kodai In ocho no kozo},\n  userb       = {甲骨文の世界：古代殷王朝の構造}," in manual_bib
     assert "@article{Shirakawa1976Teishin," in manual_bib
 
     assert "@book{Serruys1969Negatives," not in generated_bib
