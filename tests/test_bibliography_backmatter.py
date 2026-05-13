@@ -40,7 +40,7 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
     abbreviations_yml = ABBREVIATIONS_YML.read_text(encoding="utf-8")
     abbreviations_live = ABBREVIATIONS_LIVE.read_text(encoding="utf-8")
 
-    assert 'abbr: "Chi-ch\'eng I"' in abbreviations_yml
+    assert 'abbr: "Jicheng I"' in abbreviations_yml
     assert 'cjk: "誠齋殷墟文字"' in abbreviations_yml
     assert 'cjk: "甲骨卜辭七集"' in abbreviations_yml
     assert 'cjk: "甲骨集成"' in abbreviations_yml
@@ -76,64 +76,118 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
     assert 'cjk: "臺灣大學所藏甲骨文字附考釋"' in abbreviations_yml
     assert 'cjk: "卜辭通纂"' in abbreviations_yml
     assert 'cjk: "殷墟卜辭"' in abbreviations_yml
-    assert 'abbr: "Hsü-pu"' in abbreviations_yml
+    assert 'abbr: "Xubu"' in abbreviations_yml
     assert 'abbr: "US"' in abbreviations_yml
-    assert 'abbr: "Yi-pien"' in abbreviations_yml
+    assert 'abbr: "Yibian"' in abbreviations_yml
 
-    assert r"\item[Chi-ch'eng I] Yan Yiping. Jiagu jicheng. Vol. I. [Taipei], 1975. \textit{[甲骨集成]}" in abbreviations_live
-    assert r"\item[Chia-pien] Dong Zuobin. Xiaotun dier ben: Yinxu wenzi: jiabian. Nanjing, 1948. Reprint, Taipei, 1977. \textit{[小屯第二本：殷墟文字：甲編]}" in abbreviations_live
-    assert r"\item[Ch'eng-chai] Sun Haibo. Chengzhai Yinxu wenzi. Beijing, 1940. \textit{[誠齋殷墟文字]}" in abbreviations_live
-    assert r"\item[Ch'i-chi] Fang Fahan [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. Jiagu buci qiji (Seven Collections of Inscribed Oracle Bone). New York, 1938. Reprint, Taipei, 1966. \textit{[甲骨卜辭七集]}" in abbreviations_live
-    assert r"\item[Chih-hsü] Li Yanong. Yinqi zhiyi xubian. Beijing, 1950. \textit{[殷契摭佚續編]}" in abbreviations_live
-    assert r"\item[Chih-yi] Li Danqiu. Yinqi zhiyi. Beijing, 1941. \textit{[殷契摭佚]}" in abbreviations_live
-    assert r"\item[Chin-chang] Fang Fahan [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. Jinzhang suo cang jiagu buci (The Hopkins Collection of Inscribed Oracle Bone). New York, 1939. Reprint, Taipei, 1966. \textit{[金璋所藏甲骨卜辭]}" in abbreviations_live
-    assert r"\item[Ching-chin] Hu Houxuan. Zhanhou Jingjin xinhuo jiaguji. Shanghai, 1954. \textit{[戰後京津薪穫甲骨集]}" in abbreviations_live
-    assert r"\item[Cho-ts'un] Zeng Yigong. Jiagu zhuicun. N.p., 1939. \textit{[甲骨綴存]}" in abbreviations_live
-    assert r"\item[Chui-hsin] Yan Yiping. Jiagu zhuihe xinbian. Taipei, 1975. \textit{[甲骨綴合新編]}" in abbreviations_live
-    assert r"\item[Fu-chia] Shang Chengzuo. Fu shi suo cang jiagu wenzi. Nanjing, 1933. \textit{[傅氏所藏甲骨文字]}" in abbreviations_live
-    assert r"\item[Fu-yin] Wang Xiang. Fu shi Yinqi zhengwen. Tianjin, 1925. \textit{[傅氏殷契徵文]}" in abbreviations_live
-    assert r"\item[Hai-wai] Rao Zongyi. Haiwai jiagu luyi. Journal of Oriental Studies 4.1-2 (1957/58), pp. 1-22. \textit{[海外甲骨錄遺]}" in abbreviations_live
-    assert r"\item[Chia-t'u] Tuban (Plates 1-50 at the rear of Jiabian kaoshi)." in abbreviations_live
-    assert r"\item[Hsia-men] Hu Houxuan. Xiamen daxue suo cang jiagu wenzi. In Jiaguxue Shangshi luncong chuji. Chengdu, 1944. \textit{[廈門大學所藏甲骨文字]}" in abbreviations_live
-    assert r"\item[Hsü-pien] Luo Zhenyu. Yinxu shuqi xubian. N.p., 1933. Reprint, [Taipei], n.d. \textit{[殷墟書契續編]}" in abbreviations_live
-    assert r"\item[Hsü-pu] Hu Houxuan. Jiagu xubu [unpublished collection, title uncertain]. \textit{[甲骨續補]}" in abbreviations_live
-    assert r"\item[Ping-pien] Zhang Bingquan. Xiaotun dier ben: Yinxu wenzi: pingbian. Taipei. Vol. 1, pt. 1 (1957); pt. 2 (1959). Vol. 2, pt. 1 (1962); pt. 2 (1965). Vol. 3, pt. 1 (1967); pt. 2 (1972). \textit{[小屯第二本：殷墟文字：丙編]}" in abbreviations_live
+    assert r"\item[Jicheng I] Yan Yiping. Jiagu jicheng. Vol. I. [Taipei], 1975. \textit{[甲骨集成]}" in abbreviations_live
+    assert r"\item[Jiabian] Dong Zuobin. Xiaotun dier ben: Yinxu wenzi: jiabian. Nanjing, 1948. Reprint, Taipei, 1977. \textit{[小屯第二本：殷墟文字：甲編]}" in abbreviations_live
+    assert r"\item[Chengzhai] Sun Haibo. Chengzhai Yinxu wenzi. Beijing, 1940. \textit{[誠齋殷墟文字]}" in abbreviations_live
+    assert r"\item[Qiji] Fang Fahan [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. Jiagu buci qiji (Seven Collections of Inscribed Oracle Bone). New York, 1938. Reprint, Taipei, 1966. \textit{[甲骨卜辭七集]}" in abbreviations_live
+    assert r"\item[Zhiyi xubian] Li Yanong. Yinqi zhiyi xubian. Beijing, 1950. \textit{[殷契摭佚續編]}" in abbreviations_live
+    assert r"\item[Zhiyi] Li Danqiu. Yinqi zhiyi. Beijing, 1941. \textit{[殷契摭佚]}" in abbreviations_live
+    assert r"\item[Jinzhang] Fang Fahan [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. Jinzhang suo cang jiagu buci (The Hopkins Collection of Inscribed Oracle Bone). New York, 1939. Reprint, Taipei, 1966. \textit{[金璋所藏甲骨卜辭]}" in abbreviations_live
+    assert r"\item[Jingjin] Hu Houxuan. Zhanhou Jingjin xinhuo jiaguji. Shanghai, 1954. \textit{[戰後京津薪穫甲骨集]}" in abbreviations_live
+    assert r"\item[Zhuicun] Zeng Yigong. Jiagu zhuicun. N.p., 1939. \textit{[甲骨綴存]}" in abbreviations_live
+    assert r"\item[Zhuixin] Yan Yiping. Jiagu zhuihe xinbian. Taipei, 1975. \textit{[甲骨綴合新編]}" in abbreviations_live
+    assert r"\item[Fujia] Shang Chengzuo. Fu shi suo cang jiagu wenzi. Nanjing, 1933. \textit{[傅氏所藏甲骨文字]}" in abbreviations_live
+    assert r"\item[Fuyin] Wang Xiang. Fu shi Yinqi zhengwen. Tianjin, 1925. \textit{[傅氏殷契徵文]}" in abbreviations_live
+    assert r"\item[Haiwai] Rao Zongyi. Haiwai jiagu luyi. Journal of Oriental Studies 4.1-2 (1957/58), pp. 1-22. \textit{[海外甲骨錄遺]}" in abbreviations_live
+    assert r"\item[Jiatu] Tuban (Plates 1-50 at the rear of Jiabian kaoshi)." in abbreviations_live
+    assert r"\item[Xiamen] Hu Houxuan. Xiamen daxue suo cang jiagu wenzi. In Jiaguxue Shangshi luncong chuji. Chengdu, 1944. \textit{[廈門大學所藏甲骨文字]}" in abbreviations_live
+    assert r"\item[Xubian] Luo Zhenyu. Yinxu shuqi xubian. N.p., 1933. Reprint, [Taipei], n.d. \textit{[殷墟書契續編]}" in abbreviations_live
+    assert r"\item[Xubu] Hu Houxuan. Jiagu xubu [unpublished collection, title uncertain]. \textit{[甲骨續補]}" in abbreviations_live
+    assert r"\item[Pingbian] Zhang Bingquan. Xiaotun dier ben: Yinxu wenzi: pingbian. Taipei. Vol. 1, pt. 1 (1957); pt. 2 (1959). Vol. 2, pt. 1 (1962); pt. 2 (1965). Vol. 3, pt. 1 (1967); pt. 2 (1972). \textit{[小屯第二本：殷墟文字：丙編]}" in abbreviations_live
     assert r"\item[Jimbun] Kaizuka Shigeki. Kyōto daigaku jimbun kagaku kenkyūjo zō kōkotsu monji. 2 vols. Kyoto, 1959. Shakubun. Kyoto, 1960. Sakuin. Kyoto, 1968. \textit{[京都大學人文科學研究所藏甲骨文字]}" in abbreviations_live
     assert r"\item[Kikkō] Hayashi Taisuke. Kikkō jūkotsu monji. N.p., 1921. Reprint, Taipei, 1970. \textit{[龜甲獸骨文字]}" in abbreviations_live
-    assert r"\item[K'u-fang] Fang Falien [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. Kufang ershi cang jiagu buci (The Couling-Chalfant Collection of Inscribed Oracle Bone). Shanghai, 1935. Reprint, Taipei, 1966. \textit{[庫方二氏藏甲骨卜辭]}" in abbreviations_live
-    assert r"\item[Ling-shih] Chen Banghuai. Jiaguwen lingshi. Tianjin, 1959. Reprint, Tokyo, 1970. \textit{[甲骨文零拾]}" in abbreviations_live
-    assert r"\item[Liu-lu] Hu Houxuan. Jiagu liulu. In Jiaguxue Shangshi luncong sanji. Chengdu, 1945. \textit{[甲骨六錄]}" in abbreviations_live
+    assert r"\item[Kufang] Fang Falien [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. Kufang ershi cang jiagu buci (The Couling-Chalfant Collection of Inscribed Oracle Bone). Shanghai, 1935. Reprint, Taipei, 1966. \textit{[庫方二氏藏甲骨卜辭]}" in abbreviations_live
+    assert r"\item[Lingshi] Chen Banghuai. Jiaguwen lingshi. Tianjin, 1959. Reprint, Tokyo, 1970. \textit{[甲骨文零拾]}" in abbreviations_live
+    assert r"\item[Liulu] Hu Houxuan. Jiagu liulu. In Jiaguxue Shangshi luncong sanji. Chengdu, 1945. \textit{[甲骨六錄]}" in abbreviations_live
     assert r"\item[Menzies] Xu Jinxiong. The Menzies Collection of Shang Dynasty Oracle Bones. Volume I: A Catalogue. Toronto [1972]; Volume II: The Text. Toronto (1977). [Unless otherwise indicated, references to Menzies in this book are to Volume I.]" in abbreviations_live
-    assert r"\item[Ming-hou] Ming Yishi [James M. Menzies]. Yinxu buci houbian. Edited by Xu Jinxiong. 2 vols. Taipei, 1972. \textit{[殷墟卜辭後編]}" in abbreviations_live
-    assert r"\item[Nan-pei] Hu Houxuan. Zhanhou nanbei suojian jiagulu. Beijing and Shanghai, 1951. \textit{[戰後南北所見甲骨錄]}" in abbreviations_live
-    assert r"\item[Na-erh] Yan Yiping. Meiguo Naersen meishuguan cang jiagu buci kaoshi. Taipei, 1973. (Originally published in Zhongguo wenzi 22-25, 29 [1966-1968].) \textit{[美國納爾森美術舘藏甲骨卜辭考釋]}" in abbreviations_live
-    assert r"\item[Ning-hu] Hu Houxuan. Zhanhou Ninghu xinhuo jiaguji. Beijing, 1951. \textit{[戰後寧滬新獲甲骨集]}" in abbreviations_live
+    assert r"\item[Minghou] Ming Yishi [James M. Menzies]. Yinxu buci houbian. Edited by Xu Jinxiong. 2 vols. Taipei, 1972. \textit{[殷墟卜辭後編]}" in abbreviations_live
+    assert r"\item[Nanbei] Hu Houxuan. Zhanhou nanbei suojian jiagulu. Beijing and Shanghai, 1951. \textit{[戰後南北所見甲骨錄]}" in abbreviations_live
+    assert r"\item[Naersen] Yan Yiping. Meiguo Naersen meishuguan cang jiagu buci kaoshi. Taipei, 1973. (Originally published in Zhongguo wenzi 22-25, 29 [1966-1968].) \textit{[美國納爾森美術舘藏甲骨卜辭考釋]}" in abbreviations_live
+    assert r"\item[Ninghu] Hu Houxuan. Zhanhou Ninghu xinhuo jiaguji. Beijing, 1951. \textit{[戰後寧滬新獲甲骨集]}" in abbreviations_live
     assert r"\item[Ogawa] Itō Michiharu. Ko Ogawa Chikanosuke shi zō kōkotsu monji. Tōhō gakuhō 37 (1966), pp. 249-263. \textit{[故小川睦之輔氏藏甲骨文字]}" in abbreviations_live
-    assert r"\item[Pa-li] Rao Zongyi. Bali suojian jiagulu. Hong Kong, 1956. \textit{[巴黎所見甲骨錄]}" in abbreviations_live
-    assert r"\item[Pai-ken] Ming Yishi [James M. Menzies]. Baigen shi jiucang jiagu wenzi (The Paul D. Bergen Collection: Chinese Oracle Bone Characters). Qida jikan 6 and 7 (1935). \textit{[柏根氏舊藏甲骨文字]}" in abbreviations_live
-    assert r"\item[Pu-tz'u] Rong Geng and Qu Runmin. Yinqi buci. Beijing, 1933. Reprint, Taipei, 1970. \textit{[殷契卜辭]}" in abbreviations_live
-    assert r"\item[Shan-chai] Liu Tizhi. Shanzhai jiucang taben. Unpublished." in abbreviations_live
-    assert r"\item[Shih-to] Guo Ruoyu. Yinqi shiduo. Vol. 1. Shanghai, 1951. Vol. 2. Beijing, 1953. \textit{[殷契拾掇]}" in abbreviations_live
-    assert r"\item[T'ai-ta I] Dong Zuobin. Taiwan daxue suo cang jiagu wenzi fu kaoshi. Guoli Taiwan daxue kaogu renlei xuekan 1 (1953), pp. 22-46. \textit{[臺灣大學所藏甲骨文字附考釋]}" in abbreviations_live
-    assert r"\item[T'ai-ta 2] Dong Zuobin and Jin Xiangheng. Benxi suo cang jiagu wenzi. Guoli Taiwan daxue kaogu renlei xuekan 17-18 (1961), pp. 71-84. \textit{[本系所藏甲骨文字]}" in abbreviations_live
-    assert r"\item[T'ien-jang] Tang Lan. Tianrangge jiagu wencun. Beijing, 1939. \textit{[天壤閣甲骨文存并考釋]}" in abbreviations_live
-    assert r"\item[T'ieh-hsin] Yan Yiping. Tieyun canggui xinbian. Taipei, 1975. \textit{[鐵雲藏龜新編]}" in abbreviations_live
-    assert r"\item[T'ieh-shih] Li Danqiu. Tieyun canggui lingshi. Shanghai, 1939. \textit{[鐵雲藏龜零拾]}" in abbreviations_live
-    assert r"\item[T'ieh-yi] Ye Yusen. Tieyun canggui shiyi. N.p., 1925. \textit{[鐵雲藏龜拾遺]}" in abbreviations_live
-    assert r"\item[T'ieh-yü] Luo Zhenyu. Tieyun canggui zhiyu. N.p., 1915. Reprint, Hong Kong, 1972. \textit{[鐵雲藏龜之餘]}" in abbreviations_live
-    assert r"\item[T'ieh-yün] Liu E. Tieyun canggui. N.p., 1903. Reprint, [Taipei], 1959. \textit{[鐵雲藏龜]}" in abbreviations_live
-    assert r"\item[Ts'ui-pien] Guo Moruo. Yinqi cuibian. Tokyo, 1937. Rev. ed., Beijing, 1959. Reprint, Taipei, 1971. \textit{[殷契粹編]}" in abbreviations_live
+    assert r"\item[Bali] Rao Zongyi. Bali suojian jiagulu. Hong Kong, 1956. \textit{[巴黎所見甲骨錄]}" in abbreviations_live
+    assert r"\item[Baigen] Ming Yishi [James M. Menzies]. Baigen shi jiucang jiagu wenzi (The Paul D. Bergen Collection: Chinese Oracle Bone Characters). Qida jikan 6 and 7 (1935). \textit{[柏根氏舊藏甲骨文字]}" in abbreviations_live
+    assert r"\item[Buci] Rong Geng and Qu Runmin. Yinqi buci. Beijing, 1933. Reprint, Taipei, 1970. \textit{[殷契卜辭]}" in abbreviations_live
+    assert r"\item[Shanzhai] Liu Tizhi. Shanzhai jiucang taben. Unpublished." in abbreviations_live
+    assert r"\item[Shiduo] Guo Ruoyu. Yinqi shiduo. Vol. 1. Shanghai, 1951. Vol. 2. Beijing, 1953. \textit{[殷契拾掇]}" in abbreviations_live
+    assert r"\item[Taida I] Dong Zuobin. Taiwan daxue suo cang jiagu wenzi fu kaoshi. Guoli Taiwan daxue kaogu renlei xuekan 1 (1953), pp. 22-46. \textit{[臺灣大學所藏甲骨文字附考釋]}" in abbreviations_live
+    assert r"\item[Taida 2] Dong Zuobin and Jin Xiangheng. Benxi suo cang jiagu wenzi. Guoli Taiwan daxue kaogu renlei xuekan 17-18 (1961), pp. 71-84. \textit{[本系所藏甲骨文字]}" in abbreviations_live
+    assert r"\item[Tianrang] Tang Lan. Tianrangge jiagu wencun. Beijing, 1939. \textit{[天壤閣甲骨文存并考釋]}" in abbreviations_live
+    assert r"\item[Tiexin] Yan Yiping. Tieyun canggui xinbian. Taipei, 1975. \textit{[鐵雲藏龜新編]}" in abbreviations_live
+    assert r"\item[Tieshi] Li Danqiu. Tieyun canggui lingshi. Shanghai, 1939. \textit{[鐵雲藏龜零拾]}" in abbreviations_live
+    assert r"\item[Tieyi] Ye Yusen. Tieyun canggui shiyi. N.p., 1925. \textit{[鐵雲藏龜拾遺]}" in abbreviations_live
+    assert r"\item[Tieyu] Luo Zhenyu. Tieyun canggui zhiyu. N.p., 1915. Reprint, Hong Kong, 1972. \textit{[鐵雲藏龜之餘]}" in abbreviations_live
+    assert r"\item[Tieyun] Liu E. Tieyun canggui. N.p., 1903. Reprint, [Taipei], 1959. \textit{[鐵雲藏龜]}" in abbreviations_live
+    assert r"\item[Cuibian] Guo Moruo. Yinqi cuibian. Tokyo, 1937. Rev. ed., Beijing, 1959. Reprint, Taipei, 1971. \textit{[殷契粹編]}" in abbreviations_live
     assert r"\item[US] Zhou Hongxiang. Oracle Bone Collections in the United States." in abbreviations_live
-    assert r"\item[T'ung-tsuan] Guo Moruo. Buci tongzuan. Tokyo, 1933. \textit{[卜辭通纂]}" in abbreviations_live
-    assert r"\item[Wai-pien] Dong Zuobin. Yinxu wenzi waibian. Taipei, 1956. \textit{[殷墟文字外編]}" in abbreviations_live
-    assert r"\item[Wen-lu] Sun Haibo. Jiagu wenlu. Henan, 1938. Reprint, Taipei, 1971. \textit{[甲骨文錄]}" in abbreviations_live
-    assert r"\item[Yeh-ch'u] Huang Jun. Yezhong pianyu chuji. Beijing, 1935. [The oracle-bone rubbings are reprinted in Yezhong pianyu. Taipei, 1972.] \textit{[鄴中片羽初集]}" in abbreviations_live
-    assert r"\item[Yeh-san] Huang Jun. Yezhong pianyu sanji. Beijing, 1939. [The oracle-bone rubbings are reprinted in Yezhong pianyu. Taipei, 1972.] \textit{[鄴中片羽三集]}" in abbreviations_live
-    assert r"\item[Yin-hsü] Ming Yishi [James Mellon Menzies]. Yinxu buci (Oracle Records from the Waste of Yin)." in abbreviations_live
-    assert r"\item[Yin-hsü] Ming Yishi [James Mellon Menzies]. Yinxu buci (Oracle Records from the Waste of Yin). Shanghai, 1917. Reprint, Taipei, 1972. \textit{[殷墟卜辭]}" in abbreviations_live
-    assert r"\item[Yi-chu] Jin Zutong. Yinqi yizhu. Shanghai, 1939. Reprint, Taipei, 1975. \textit{[殷契遺珠]}" in abbreviations_live
-    assert r"\item[Yi-pien] Dong Zuobin. Xiaotun dier ben: Yinxu wenzi: yibian. Pt. 1 [Nanjing], 1948. Pt. 2 [Nanjing], 1949. Pt. 3, Taipei, 1953. \textit{[小屯第二本：殷墟文字：乙編]}" in abbreviations_live
-    assert r"\item[Yi-ts'un] Shang Chengzuo. Yinqi yicun. Nanjing, 1933. Reprint, Tokyo, 1966. \textit{[殷契遺存]}" in abbreviations_live
+    assert r"\item[Tongzuan] Guo Moruo. Buci tongzuan. Tokyo, 1933. \textit{[卜辭通纂]}" in abbreviations_live
+    assert r"\item[Waibian] Dong Zuobin. Yinxu wenzi waibian. Taipei, 1956. \textit{[殷墟文字外編]}" in abbreviations_live
+    assert r"\item[Wenlu] Sun Haibo. Jiagu wenlu. Henan, 1938. Reprint, Taipei, 1971. \textit{[甲骨文錄]}" in abbreviations_live
+    assert r"\item[Yechu] Huang Jun. Yezhong pianyu chuji. Beijing, 1935. [The oracle-bone rubbings are reprinted in Yezhong pianyu. Taipei, 1972.] \textit{[鄴中片羽初集]}" in abbreviations_live
+    assert r"\item[Yesan] Huang Jun. Yezhong pianyu sanji. Beijing, 1939. [The oracle-bone rubbings are reprinted in Yezhong pianyu. Taipei, 1972.] \textit{[鄴中片羽三集]}" in abbreviations_live
+    assert r"\item[Yinxu] Ming Yishi [James Mellon Menzies]. Yinxu buci (Oracle Records from the Waste of Yin)." in abbreviations_live
+    assert r"\item[Yinxu] Ming Yishi [James Mellon Menzies]. Yinxu buci (Oracle Records from the Waste of Yin). Shanghai, 1917. Reprint, Taipei, 1972. \textit{[殷墟卜辭]}" in abbreviations_live
+    assert r"\item[Yizhu] Jin Zutong. Yinqi yizhu. Shanghai, 1939. Reprint, Taipei, 1975. \textit{[殷契遺珠]}" in abbreviations_live
+    assert r"\item[Yibian] Dong Zuobin. Xiaotun dier ben: Yinxu wenzi: yibian. Pt. 1 [Nanjing], 1948. Pt. 2 [Nanjing], 1949. Pt. 3, Taipei, 1953. \textit{[小屯第二本：殷墟文字：乙編]}" in abbreviations_live
+    assert r"\item[Yicun] Shang Chengzuo. Yinqi yicun. Nanjing, 1933. Reprint, Tokyo, 1966. \textit{[殷契遺存]}" in abbreviations_live
+
+    old_wade_giles_labels = (
+        "Ch'eng-chai",
+        "Chi-ch'eng I",
+        "Ch'i-chi",
+        "Chia-pien",
+        "Chia-pien k'ao-shih",
+        "Chia-t'u",
+        "Chien-shou",
+        "Ch'ien-pien",
+        "Chih-hsü",
+        "Chih-yi",
+        "Chin-chang",
+        "Ching-chin",
+        "Cho-ts'un",
+        "Chui-hsin",
+        "Fu-chia",
+        "Fu-yin",
+        "Hai-wai",
+        "Hsia-men",
+        "Hsü-pien",
+        "Hsü-pu",
+        "K'u-fang",
+        "Ming-hou",
+        "Na-erh",
+        "Nan-pei",
+        "Pa-li",
+        "Pai-ken",
+        "Ping-pien",
+        "Pu-tz'u",
+        "Shan-chai",
+        "Shih-to",
+        "T'ai-ta I",
+        "T'ai-ta 2",
+        "T'ien-jang",
+        "T'ieh-hsin",
+        "T'ieh-shih",
+        "T'ieh-yi",
+        "T'ieh-yü",
+        "T'ieh-yün",
+        "Ts'ui-pien",
+        "T'ung-tsuan",
+        "Wai-pien",
+        "Wen-lu",
+        "Yeh-ch'u",
+        "Yeh-san",
+        "Yi-chu",
+        "Yi-pien",
+        "Yi-ts'un",
+        "Yin-hsü",
+    )
+    for old_label in old_wade_giles_labels:
+        assert f'abbr: "{old_label}"' not in abbreviations_yml
+        assert f"\\item[{old_label}]" not in abbreviations_live
 
     assert "[CJK:" not in abbreviations_live
     assert "Ghi-ch" not in abbreviations_live

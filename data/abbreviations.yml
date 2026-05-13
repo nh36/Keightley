@@ -4,106 +4,106 @@ abbreviations:
   - abbr: "Bone"
     body: "White, William Charles. Bone Culture of Ancient China. Toronto, 1945."
     scan: 275
-  - abbr: "Ch'eng-chai"
+  - abbr: "Chengzhai"
     body: "Sun Haibo. Chengzhai Yinxu wenzi. Beijing, 1940."
     cjk: "誠齋殷墟文字"
     scan: 275
-  - abbr: "Chi-ch'eng I"
+  - abbr: "Jicheng I"
     body: "Yan Yiping. Jiagu jicheng. Vol. I. [Taipei], 1975."
     cjk: "甲骨集成"
     scan: 275
-  - abbr: "Ch'i-chi"
+  - abbr: "Qiji"
     body: "Fang Fahan [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. Jiagu buci qiji (Seven Collections of Inscribed Oracle Bone). New York, 1938. Reprint, Taipei, 1966."
     cjk: "甲骨卜辭七集"
     scan: 275
-  - abbr: "Chia-pien"
+  - abbr: "Jiabian"
     body: "Dong Zuobin. Xiaotun dier ben: Yinxu wenzi: jiabian. Nanjing, 1948. Reprint, Taipei, 1977."
     cjk: "小屯第二本：殷墟文字：甲編"
     scan: 275
-  - abbr: "Chia-pien k'ao-shih"
+  - abbr: "Jiabian kaoshi"
     body: "Qu Wanli. Xiaotun dier ben: Yinxu wenzi: jiabian kaoshi. Taipei, 1961."
     cjk: "小屯第二本：殷墟文字：甲編考釋"
     scan: 275
-  - abbr: "Chia-t'u"
+  - abbr: "Jiatu"
     body: "Tuban (Plates 1-50 at the rear of Jiabian kaoshi)."
     scan: 275
-  - abbr: "Chien-shou"
+  - abbr: "Jianshou"
     body: "Ji Fotuo. Jianshoutang suo cang Yinxu wenzi. Shanghai, 1917. Reprint, [Taipei], n.d."
     cjk: "簡壽堂所藏殷墟文字"
     scan: 275
-  - abbr: "Ch'ien-pien"
+  - abbr: "Qianbian"
     body: "Luo Zhenyu. Yinxu shuqi qianbian. N.p., 1913. Reprint, [Shanghai], 1932; [Taipei], n.d."
     cjk: "殷墟書契前編"
     scan: 275
-  - abbr: "Chih-hsü"
+  - abbr: "Zhiyi xubian"
     body: "Li Yanong. Yinqi zhiyi xubian. Beijing, 1950."
     cjk: "殷契摭佚續編"
     scan: 275
-  - abbr: "Chih-yi"
+  - abbr: "Zhiyi"
     body: "Li Danqiu. Yinqi zhiyi. Beijing, 1941."
     cjk: "殷契摭佚"
     scan: 275
-  - abbr: "Chin-chang"
+  - abbr: "Jinzhang"
     body: "Fang Fahan [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. Jinzhang suo cang jiagu buci (The Hopkins Collection of Inscribed Oracle Bone). New York, 1939. Reprint, Taipei, 1966."
     cjk: "金璋所藏甲骨卜辭"
     scan: 275
-  - abbr: "Ching-chin"
+  - abbr: "Jingjin"
     body: "Hu Houxuan. Zhanhou Jingjin xinhuo jiaguji. Shanghai, 1954."
     cjk: "戰後京津薪穫甲骨集"
     scan: 275
-  - abbr: "Ching-hua"
+  - abbr: "Jinghua"
     body: "Luo Zhenyu. Yinxu shuqi jinghua. N.p., 1914."
     cjk: "殷墟書契菁華"
     scan: 275
-  - abbr: "Cho-ts'un"
+  - abbr: "Zhuicun"
     body: "Zeng Yigong. Jiagu zhuicun. N.p., 1939."
     cjk: "甲骨綴存"
     scan: 275
-  - abbr: "Chui-ho"
+  - abbr: "Zhuihe"
     body: "Guo Ruoyu, Zeng Yigong, and Li Xueqin. Yinxu wenzi zhuihe. Beijing, 1955."
     cjk: "殷墟文字綴合"
     scan: 275
-  - abbr: "Chui-hsin"
+  - abbr: "Zhuixin"
     body: "Yan Yiping. Jiagu zhuihe xinbian. Taipei, 1975."
     cjk: "甲骨綴合新編"
     scan: 275
-  - abbr: "Fu-chia"
+  - abbr: "Fujia"
     body: "Shang Chengzuo. Fu shi suo cang jiagu wenzi. Nanjing, 1933."
     cjk: "傅氏所藏甲骨文字"
     scan: 275
-  - abbr: "Fu-yin"
+  - abbr: "Fuyin"
     body: "Wang Xiang. Fu shi Yinqi zhengwen. Tianjin, 1925."
     cjk: "傅氏殷契徵文"
     scan: 275
-  - abbr: "Hai-wai"
+  - abbr: "Haiwai"
     body: "Rao Zongyi. Haiwai jiagu luyi. Journal of Oriental Studies 4.1-2 (1957/58), pp. 1-22."
     cjk: "海外甲骨錄遺"
     scan: 275
-  - abbr: "Han-ch'eng"
+  - abbr: "Hancheng"
     body: "Dong Zuobin. Hancheng daxue suo cang dajiagu keci kaoshi. BIHP 28.2 (1957), pp. 825-840."
     cjk: "漢城大學所藏大胛骨刻辭考釋"
     scan: 275
-  - abbr: "Ho-pien"
+  - abbr: "Hebian"
     body: "Zeng Yigong. Jiagu zhuihebian. N.p., 1950."
     cjk: "甲骨綴合編"
     scan: 275
-  - abbr: "Hou-pien"
+  - abbr: "Houbian"
     body: "Luo Zhenyu. Yinxu shuqi houbian. N.p., 1916. Reprint, [Taipei], n.d."
     cjk: "殷墟書契後編"
     scan: 275
-  - abbr: "Hsia-men"
+  - abbr: "Xiamen"
     body: "Hu Houxuan. Xiamen daxue suo cang jiagu wenzi. In Jiaguxue Shangshi luncong chuji. Chengdu, 1944."
     cjk: "廈門大學所藏甲骨文字"
     scan: 276
-  - abbr: "Hsü-pien"
+  - abbr: "Xubian"
     body: "Luo Zhenyu. Yinxu shuqi xubian. N.p., 1933. Reprint, [Taipei], n.d."
     cjk: "殷墟書契續編"
     scan: 276
-  - abbr: "Hsü-pu"
+  - abbr: "Xubu"
     body: "Hu Houxuan. Jiagu xubu [unpublished collection, title uncertain]."
     cjk: "甲骨續補"
     scan: 276
-  - abbr: "Hsü-ts'un"
+  - abbr: "Xucun"
     body: "Hu Houxuan. Jiagu xucun. Shanghai, 1955."
     cjk: "甲骨續存"
     scan: 276
@@ -115,34 +115,34 @@ abbreviations:
     body: "Hayashi Taisuke. Kikkō jūkotsu monji. N.p., 1921. Reprint, Taipei, 1970."
     cjk: "龜甲獸骨文字"
     scan: 276
-  - abbr: "K'u-fang"
+  - abbr: "Kufang"
     body: "Fang Falien [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. Kufang ershi cang jiagu buci (The Couling-Chalfant Collection of Inscribed Oracle Bone). Shanghai, 1935. Reprint, Taipei, 1966."
     cjk: "庫方二氏藏甲骨卜辭"
     scan: 276
-  - abbr: "Ling-shih"
+  - abbr: "Lingshi"
     body: "Chen Banghuai. Jiaguwen lingshi. Tianjin, 1959. Reprint, Tokyo, 1970."
     cjk: "甲骨文零拾"
     scan: 276
-  - abbr: "Liu-lu"
+  - abbr: "Liulu"
     body: "Hu Houxuan. Jiagu liulu. In Jiaguxue Shangshi luncong sanji. Chengdu, 1945."
     cjk: "甲骨六錄"
     scan: 276
   - abbr: "Menzies"
     body: "Xu Jinxiong. The Menzies Collection of Shang Dynasty Oracle Bones. Volume I: A Catalogue. Toronto [1972]; Volume II: The Text. Toronto (1977). [Unless otherwise indicated, references to Menzies in this book are to Volume I.]"
     scan: 276
-  - abbr: "Ming-hou"
+  - abbr: "Minghou"
     body: "Ming Yishi [James M. Menzies]. Yinxu buci houbian. Edited by Xu Jinxiong. 2 vols. Taipei, 1972."
     cjk: "殷墟卜辭後編"
     scan: 276
-  - abbr: "Na-erh"
+  - abbr: "Naersen"
     body: "Yan Yiping. Meiguo Naersen meishuguan cang jiagu buci kaoshi. Taipei, 1973. (Originally published in Zhongguo wenzi 22-25, 29 [1966-1968].)"
     cjk: "美國納爾森美術舘藏甲骨卜辭考釋"
     scan: 276
-  - abbr: "Nan-pei"
+  - abbr: "Nanbei"
     body: "Hu Houxuan. Zhanhou nanbei suojian jiagulu. Beijing and Shanghai, 1951."
     cjk: "戰後南北所見甲骨錄"
     scan: 276
-  - abbr: "Ning-hu"
+  - abbr: "Ninghu"
     body: "Hu Houxuan. Zhanhou Ninghu xinhuo jiaguji. Beijing, 1951."
     cjk: "戰後寧滬新獲甲骨集"
     scan: 276
@@ -150,111 +150,111 @@ abbreviations:
     body: "Itō Michiharu. Ko Ogawa Chikanosuke shi zō kōkotsu monji. Tōhō gakuhō 37 (1966), pp. 249-263."
     cjk: "故小川睦之輔氏藏甲骨文字"
     scan: 276
-  - abbr: "Pa-li"
+  - abbr: "Bali"
     body: "Rao Zongyi. Bali suojian jiagulu. Hong Kong, 1956."
     cjk: "巴黎所見甲骨錄"
     scan: 276
-  - abbr: "Pai-ken"
+  - abbr: "Baigen"
     body: "Ming Yishi [James M. Menzies]. Baigen shi jiucang jiagu wenzi (The Paul D. Bergen Collection: Chinese Oracle Bone Characters). Qida jikan 6 and 7 (1935)."
     cjk: "柏根氏舊藏甲骨文字"
     scan: 276
-  - abbr: "Ping-pien"
+  - abbr: "Pingbian"
     body: "Zhang Bingquan. Xiaotun dier ben: Yinxu wenzi: pingbian. Taipei. Vol. 1, pt. 1 (1957); pt. 2 (1959). Vol. 2, pt. 1 (1962); pt. 2 (1965). Vol. 3, pt. 1 (1967); pt. 2 (1972)."
     cjk: "小屯第二本：殷墟文字：丙編"
     scan: 276
-  - abbr: "Pu-tz'u"
+  - abbr: "Buci"
     body: "Rong Geng and Qu Runmin. Yinqi buci. Beijing, 1933. Reprint, Taipei, 1970."
     cjk: "殷契卜辭"
     scan: 276
   - abbr: "ROM"
     body: "Royal Ontario Museum. [Used to refer to oracle bones in that collection; also used by some as an abbreviation equivalent to Menzies.]"
     scan: 276
-  - abbr: "Shan-chai"
+  - abbr: "Shanzhai"
     body: "Liu Tizhi. Shanzhai jiucang taben. Unpublished."
     scan: 276
-  - abbr: "Shih-to"
+  - abbr: "Shiduo"
     body: "Guo Ruoyu. Yinqi shiduo. Vol. 1. Shanghai, 1951. Vol. 2. Beijing, 1953."
     cjk: "殷契拾掇"
     scan: 276
-  - abbr: "T'ai-ta I"
+  - abbr: "Taida I"
     body: "Dong Zuobin. Taiwan daxue suo cang jiagu wenzi fu kaoshi. Guoli Taiwan daxue kaogu renlei xuekan 1 (1953), pp. 22-46."
     cjk: "臺灣大學所藏甲骨文字附考釋"
     scan: 276
-  - abbr: "T'ai-ta 2"
+  - abbr: "Taida 2"
     body: "Dong Zuobin and Jin Xiangheng. Benxi suo cang jiagu wenzi. Guoli Taiwan daxue kaogu renlei xuekan 17-18 (1961), pp. 71-84."
     cjk: "本系所藏甲骨文字"
     scan: 276
-  - abbr: "T'ieh-hsin"
+  - abbr: "Tiexin"
     body: "Yan Yiping. Tieyun canggui xinbian. Taipei, 1975."
     cjk: "鐵雲藏龜新編"
     scan: 277
-  - abbr: "T'ieh-shih"
+  - abbr: "Tieshi"
     body: "Li Danqiu. Tieyun canggui lingshi. Shanghai, 1939."
     cjk: "鐵雲藏龜零拾"
     scan: 277
-  - abbr: "T'ieh-yi"
+  - abbr: "Tieyi"
     body: "Ye Yusen. Tieyun canggui shiyi. N.p., 1925."
     cjk: "鐵雲藏龜拾遺"
     scan: 277
-  - abbr: "T'ieh-yü"
+  - abbr: "Tieyu"
     body: "Luo Zhenyu. Tieyun canggui zhiyu. N.p., 1915. Reprint, Hong Kong, 1972."
     cjk: "鐵雲藏龜之餘"
     scan: 277
-  - abbr: "T'ieh-yün"
+  - abbr: "Tieyun"
     body: "Liu E. Tieyun canggui. N.p., 1903. Reprint, [Taipei], 1959."
     cjk: "鐵雲藏龜"
     scan: 277
-  - abbr: "T'ien-jang"
+  - abbr: "Tianrang"
     body: "Tang Lan. Tianrangge jiagu wencun. Beijing, 1939."
     cjk: "天壤閣甲骨文存并考釋"
     scan: 277
-  - abbr: "Ts'ui-pien"
+  - abbr: "Cuibian"
     body: "Guo Moruo. Yinqi cuibian. Tokyo, 1937. Rev. ed., Beijing, 1959. Reprint, Taipei, 1971."
     cjk: "殷契粹編"
     scan: 277
-  - abbr: "Ts'un-chen"
+  - abbr: "Cunzhen"
     body: "Guan Baiyi. Yinxu wenzi cunzhen. Vols. 1-5, 8. Kaifeng, 1931-1938."
     cjk: "殷墟文字存真"
     scan: 277
-  - abbr: "T'ung-tsuan"
+  - abbr: "Tongzuan"
     body: "Guo Moruo. Buci tongzuan. Tokyo, 1933."
     cjk: "卜辭通纂"
     scan: 277
   - abbr: "US"
     body: "Zhou Hongxiang. Oracle Bone Collections in the United States. Occasional Papers in Archaeology, no. 10. Berkeley and Los Angeles, 1976. [USB refers to a bone fragment in this collection, USS refers to a shell fragment.]"
     scan: 277
-  - abbr: "Wai-pien"
+  - abbr: "Waibian"
     body: "Dong Zuobin. Yinxu wenzi waibian. Taipei, 1956."
     cjk: "殷墟文字外編"
     scan: 277
-  - abbr: "Wen-lu"
+  - abbr: "Wenlu"
     body: "Sun Haibo. Jiagu wenlu. Henan, 1938. Reprint, Taipei, 1971."
     cjk: "甲骨文錄"
     scan: 277
   - abbr: "White"
     body: "Xu Jinxiong. Oracle Bones from the White and Other Collections [Forthcoming.]"
     scan: 277
-  - abbr: "Yeh-ch'u"
+  - abbr: "Yechu"
     body: "Huang Jun. Yezhong pianyu chuji. Beijing, 1935. [The oracle-bone rubbings are reprinted in Yezhong pianyu. Taipei, 1972.]"
     cjk: "鄴中片羽初集"
     scan: 277
-  - abbr: "Yeh-san"
+  - abbr: "Yesan"
     body: "Huang Jun. Yezhong pianyu sanji. Beijing, 1939. [The oracle-bone rubbings are reprinted in Yezhong pianyu. Taipei, 1972.]"
     cjk: "鄴中片羽三集"
     scan: 277
-  - abbr: "Yi-chu"
+  - abbr: "Yizhu"
     body: "Jin Zutong. Yinqi yizhu. Shanghai, 1939. Reprint, Taipei, 1975."
     cjk: "殷契遺珠"
     scan: 277
-  - abbr: "Yi-pien"
+  - abbr: "Yibian"
     body: "Dong Zuobin. Xiaotun dier ben: Yinxu wenzi: yibian. Pt. 1 [Nanjing], 1948. Pt. 2 [Nanjing], 1949. Pt. 3, Taipei, 1953."
     cjk: "小屯第二本：殷墟文字：乙編"
     scan: 277
-  - abbr: "Yi-ts'un"
+  - abbr: "Yicun"
     body: "Shang Chengzuo. Yinqi yicun. Nanjing, 1933. Reprint, Tokyo, 1966."
     cjk: "殷契遺存"
     scan: 277
-  - abbr: "Yin-hsü"
+  - abbr: "Yinxu"
     body: "Ming Yishi [James Mellon Menzies]. Yinxu buci (Oracle Records from the Waste of Yin). Shanghai, 1917. Reprint, Taipei, 1972."
     cjk: "殷墟卜辭"
     scan: 277
