@@ -1299,6 +1299,7 @@ def test_ninth_manual_override_tranche_replaces_jung_and_kk_spillover():
     assert "userb        = {河南偃師二里頭早商宮殿遺址發掘簡報}" in manual_bib
     assert "@article{KKHP1975bKansu," in manual_bib
     assert "userb        = {鄭州克拉王村遺址發掘報告}" in manual_bib
+    assert "@book{Kaizuka1946Chiigoku,\n  author      = {Kaizuka, Shigeki},\n  year        = {1946},\n  title       = {Chiigoku kodai shigaku no hatten},\n  userb       = {中國古代史學の發展}," in manual_bib
     assert "@incollection{KaizukaIto1953Kokotsubun," in manual_bib
     assert "@article{Kane1974Independent," in manual_bib
     assert "@article{Kao1949Yinhsu," in manual_bib
