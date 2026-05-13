@@ -1303,6 +1303,7 @@ def test_ninth_manual_override_tranche_replaces_jung_and_kk_spillover():
     assert "@incollection{KaizukaIto1953Kokotsubun," in manual_bib
     assert "@article{Kane1974Independent," in manual_bib
     assert "@article{Kao1949Yinhsu," in manual_bib
+    assert "@article{Hayashi1909Shinkoku,\n  author       = {Hayashi, Taisuke},\n  shortauthor  = {Taisuke},\n  year         = {1909},\n  title        = {Shinkoku Kanansho Toin ken hakken no kikko gyukotsu ni tsukite},\n  userb        = {淸國河南省湯陰縣發見の龜甲牛骨に就て}," in manual_bib
 
     assert "@book{Jung1947Chia," not in generated_bib
     assert "@book{Jung1936Chin," not in generated_bib
