@@ -6,7 +6,7 @@ This document explains how to build the LaTeX document from source and understan
 
 You need a complete TeX Live or MacTeX installation with:
 - `xelatex` - XeTeX LaTeX engine (for Unicode and Chinese character support)
-- `biber` - Bibliography processor
+- `bibtex` - Bibliography processor used by the current biblatex setup
 - XeTeX packages (typically included with full TeX installations)
 
 ### Installation
@@ -35,10 +35,10 @@ sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-latex-extra
 
 This will:
 1. Validate that `xelatex` is available
-2. Validate that `biber` is available
+2. Validate that `bibtex` is available
 3. Regenerate `tex/generated/pinyin_terms.tex` from `data/pinyin_terms.tsv`
 4. Regenerate `tex/backmatter/abbreviations_live.tex` from `data/abbreviations.yml`
-5. Run `xelatex`, `biber`, `xelatex`, `xelatex`
+5. Run `xelatex`, `bibtex`, `xelatex`, `xelatex`
 6. Generate output at `build/output/main.pdf`
 
 ### Manual build
@@ -46,7 +46,9 @@ This will:
 ```bash
 cd tex
 xelatex -interaction=nonstopmode -output-directory=../build/output main.tex
-biber --input-directory=../build/output --output-directory=../build/output main
+cd ../build/output
+BIBINPUTS=../tex: bibtex main
+cd ../tex
 xelatex -interaction=nonstopmode -output-directory=../build/output main.tex
 xelatex -interaction=nonstopmode -output-directory=../build/output main.tex
 ```

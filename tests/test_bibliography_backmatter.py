@@ -27,11 +27,11 @@ def test_backmatter_bibliography_files_are_live():
     assert r"\nocite{*}" in biblio_b
 
 
-def test_build_script_runs_biber():
+def test_build_script_runs_bibtex():
     build_script = BUILD_SCRIPT.read_text(encoding="utf-8")
 
-    assert "command -v biber" in build_script
-    assert '--input-directory="$BUILD_OUTPUT"' in build_script
+    assert "command -v bibtex" in build_script
+    assert 'BIBINPUTS="$TEX_DIR:" "$BIBTEX_BIN" main' in build_script
     assert 'run_xelatex_pass 3' in build_script
     assert "render_abbreviations_tex.py" in build_script
 
