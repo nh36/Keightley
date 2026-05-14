@@ -195,6 +195,15 @@ def test_chapter_3_mid_note_block_restored():
     assert "``receive harvest.''77" not in text
 
 
+def test_chapter_3_note_52_restored():
+    text = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
+
+    assert "than serving as word signs,\\footnote[52]{" in text
+    assert "full or transitional form of the graph is found in similar context." in text
+    assert "[\\textasciicircum{}52]" not in text
+    assert "This approach cannot always yield certain results." in text
+
+
 def test_chapter_3_opening_source_block_restored():
     text = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
 
