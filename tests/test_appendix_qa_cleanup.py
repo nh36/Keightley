@@ -89,3 +89,7 @@ def test_appendix_1_opening_restored():
     assert ":L" not in text
     assert "Only relationships between scute seams (fig. 3) will be considered here" in text
     assert "which were scraped clean (sec. 1.3.2) so that only the bone seams are visible" in text
+    assert "Blackith and Reyment [1971]).\\footnote[1]{" in text
+    assert "(R - \\lambda I)v = 0" in text
+    assert "yielding a set of eigenvalues ($\\lambda$)" in text
+    assert "1. With the technique of principal component" not in text
