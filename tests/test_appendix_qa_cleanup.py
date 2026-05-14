@@ -56,3 +56,7 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     text = Path("tex/appendices/app05.tex").read_text(encoding="utf-8")
 
     assert "戬五面中a:文中干館ㄜ十九:(繪五)" not in text
+    assert "(1)\n(2)\n\\inscriptionsection{INSCRIPTION}" in text
+    assert "(I)\n(2)\n\\inscriptionsection{INSCRIPTION}" not in text
+    assert "[Hsing] divined:" in text
+    assert "[Xing] divined:" not in text
