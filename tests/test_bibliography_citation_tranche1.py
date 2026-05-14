@@ -47,7 +47,7 @@ def test_first_tranche_citations_are_wired():
     assert r"\textcite[p. 86, n. 3]{Serruys1974The}" in ch02
     assert r"\textcite{Serruys1974The}" in ch03
     assert r"\textcite[esp. pp. 19-21]{Serruys1974The}" in ch03
-    assert r"\textcite{Mickel1973Book}" in app02
+    assert r"\textcite{Mickel1973Review}" in app02
     assert r"\textcite[pp.~79--94, 100--110, 240]{Mickel1976Semantic}" in ch02
     assert r"\textcite[pp.~174--178]{Mickel1976Semantic}" in ch02
     assert r"\textcite[pp.~72--75]{Mickel1976Semantic}" in ch03
