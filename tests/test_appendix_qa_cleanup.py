@@ -74,3 +74,5 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     assert "Other divinations contain the wang t'ien E" not in text
     assert "``encountering great rain'' (kou ta yü) or ``encountering great wind'' (kou ta feng), which" in text
     assert "``encountering great rain'' (kou ta yü or “encountering great wind'' (kou ta feng), which" not in text
+    assert "One of the disaster words---thought to refer to drought or dearth---appears only in period I inscriptions." in text
+    assert "One of the disaster words-thought to refer to drought or dearth-appears only in period I inscriptions." not in text
