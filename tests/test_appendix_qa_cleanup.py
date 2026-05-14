@@ -55,6 +55,27 @@ def test_appendix_4_opening_note_block_restored():
     assert "1028 B.C.³" not in text
 
 
+def test_appendix_4_mid_note_block_restored():
+    text = APP04.read_text(encoding="utf-8")
+
+    assert "1180 B.C.\\footnote[19]{" in text
+    assert "of \\pinyinterm{di-yi} and \\pinyinterm{di-xin}" in text
+    assert "thirty-three years.\\footnote[20]{" in text
+    assert "state rulers of Chou.\\footnote[21]{" in text
+    assert "(if not shorter).\\footnote[22]{" in text
+    assert "were nine).\\footnote[23]{" in text
+    assert "1041 B.C.\\footnote[24]{" in text
+    assert "\\pinyinterm{lin-xin}),\\footnote[25]{" in text
+    assert "assigned to \\pinyinterm{wu-ding}\\footnote[26]{" in text
+    assert "new interpretation of the ritual cycle derived from inscriptions not used by Shima" in text
+    assert "(1200 - [7 x 25]) = ca. 1025 B.C." in text
+    assert "T₁ Yi" not in text
+    assert "19. This canon, which has now been published" not in text
+    assert "20. Ch'en Meng-chia (1955), p. 59." not in text
+    assert "21. Bishop (1932), pp. 234-235." not in text
+    assert "26. See table 37, note d." not in text
+
+
 def test_appendix_2_ratios_and_footnote_stubs_restored():
     text = Path("tex/appendices/app02.tex").read_text(encoding="utf-8")
 
