@@ -195,6 +195,21 @@ def test_chapter_3_mid_note_block_restored():
     assert "``receive harvest.''77" not in text
 
 
+def test_chapter_3_opening_source_block_restored():
+    text = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
+
+    assert "form of rubbings.\\footnote[4]{" in text
+    assert "(\\ref{sec:chapters-ch05:5.5} (see sec. 5.5)), these rubbings are the primary sources" in text
+    assert "historians.''\\footnote[5]{" in text
+    assert "published collections.\\footnote[6]{" in text
+    assert "study of the inscriptions.\\footnote[7]{" in text
+    assert "57 ] U L U" not in text
+    assert "sec.\\footnote[5]{" not in text
+    assert "[\\textasciicircum{}6 \\textasciicircum{}6]" not in text
+    assert "Over\\footnote[7]{" not in text
+    assert "长 春术 [1972]" not in text
+
+
 def test_chapter_5_authenticity_note_block_restored():
     text = Path("tex/chapters/ch05.tex").read_text(encoding="utf-8")
 
