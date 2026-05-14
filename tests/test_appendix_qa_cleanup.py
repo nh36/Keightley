@@ -230,6 +230,15 @@ def test_chapter_5_authenticity_note_block_restored():
     assert "40. The Musée Guimet, for example, possesses" not in text
 
 
+def test_chapter_5_transcription_tail_cleanup():
+    text = Path("tex/chapters/ch05.tex").read_text(encoding="utf-8")
+
+    assert "\\footnote[63]{E.g., \\pinyinterm{jiabian} kǎoshì, ``凡例,'' p. 9.}" in text
+    assert "to the left or downward and to the right, respectively.\n% source: scan 167, printed 149" in text
+    assert "conclusions@@" not in text
+    assert "149 0 U" not in text
+
+
 def test_chapter_2_mid_note_block_restored():
     text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
 
