@@ -187,3 +187,22 @@ def test_chapter_5_authenticity_note_block_restored():
     assert "satisfy).\\footnote[45]{" in text
     assert "36. For the extensive career of one master" not in text
     assert "40. The Musée Guimet, for example, possesses" not in text
+
+
+def test_chapter_2_mid_note_block_restored():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "Tribute payments.\\footnote[25]{" in text
+    assert "not yet been made.\\footnote[26]{" in text
+    assert "other topic.\\footnote[27]{" in text
+    assert "sacrifice itself.\\footnote[28]{" in text
+    assert "ten-day week.\\footnote[29]{" in text
+    assert "days in advance,\\footnote[30]{" in text
+    assert "prognostications.\\footnote[31]{" in text
+    assert "sec. 2.5)).\\footnote[32]{" in text
+    assert "\\textit{xushu})\\footnote[33]{" in text
+    assert "1 to 10.\\footnote[34]{" in text
+    assert "itself was carved.\\footnote[35]{" in text
+    assert "25. But cf." not in text
+    assert "29. Period I divinations enquiring whether it" not in text
+    assert "35. I see no way to tell whether" not in text
