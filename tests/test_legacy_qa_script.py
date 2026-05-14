@@ -20,3 +20,4 @@ def test_legacy_qa_script_matches_current_phase3_structure():
     assert "phase3: preamble.tex missing \\origsecnum macro" not in output
     assert "phase3: main.tex doesn't \\input{preamble}" not in output
     assert "phase3: chapters/ch01.tex missing \\chapter{...}" not in output
+    assert "phase4: appendix/1 first note is 2 (not 1)" not in output

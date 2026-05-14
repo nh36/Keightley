@@ -45,6 +45,38 @@ def warn(msg: str) -> None:
     warnings.append(msg)
 
 
+def expected_phase3_files() -> dict[str, str]:
+    expected_files = {
+        "frontmatter/half-title": "frontmatter/halftitle.tex",
+        "frontmatter/title": "frontmatter/title.tex",
+        "frontmatter/copyright": "frontmatter/copyright.tex",
+        "frontmatter/dedication": "frontmatter/dedication.tex",
+        "frontmatter/epigraph": "frontmatter/epigraph.tex",
+        "frontmatter/contents": "frontmatter/contents.tex",
+        "frontmatter/list-of-figures-tables": "frontmatter/list-figures-tables.tex",
+        "frontmatter/abbreviations": "frontmatter/abbreviations.tex",
+        "frontmatter/preface": "frontmatter/preface.tex",
+        "frontmatter/preamble": "frontmatter/book-preamble.tex",
+        "plates/figures": "plates/figures.tex",
+        "plates/tables": "plates/tables.tex",
+        "backmatter/bibliography-a": "backmatter/biblio_a.tex",
+        "backmatter/bibliography-b": "backmatter/biblio_b.tex",
+        "backmatter/finding-list": "backmatter/finding_list.tex",
+        "backmatter/index": "backmatter/index.tex",
+    }
+    for n in range(1, 6):
+        expected_files[f"chapter/{n}"] = f"chapters/ch{n:02d}.tex"
+        expected_files[f"appendix/{n}"] = f"appendices/app{n:02d}.tex"
+    return expected_files
+
+
+def tex_path_for_unit(unit_id: str) -> Path | None:
+    rel = expected_phase3_files().get(unit_id)
+    if rel is None:
+        return None
+    return ROOT / "tex" / rel
+
+
 def check_phase1(rows: list[dict]) -> None:
     if len(rows) != 326:
         fail(f"expected 326 pages, got {len(rows)}")
@@ -200,27 +232,7 @@ def check_phase3() -> None:
     import re as _re
     toc_text = (ROOT / "data" / "toc.yml").read_text()
     ids_in_toc = set(_re.findall(r"^  - id:\s*(\S+)", toc_text, _re.MULTILINE))
-    expected_files = {
-        "frontmatter/half-title": "frontmatter/halftitle.tex",
-        "frontmatter/title": "frontmatter/title.tex",
-        "frontmatter/copyright": "frontmatter/copyright.tex",
-        "frontmatter/dedication": "frontmatter/dedication.tex",
-        "frontmatter/epigraph": "frontmatter/epigraph.tex",
-        "frontmatter/contents": "frontmatter/contents.tex",
-        "frontmatter/list-of-figures-tables": "frontmatter/list-figures-tables.tex",
-        "frontmatter/abbreviations": "frontmatter/abbreviations.tex",
-        "frontmatter/preface": "frontmatter/preface.tex",
-        "frontmatter/preamble": "frontmatter/book-preamble.tex",
-        "plates/figures": "plates/figures.tex",
-        "plates/tables": "plates/tables.tex",
-        "backmatter/bibliography-a": "backmatter/biblio_a.tex",
-        "backmatter/bibliography-b": "backmatter/biblio_b.tex",
-        "backmatter/finding-list": "backmatter/finding_list.tex",
-        "backmatter/index": "backmatter/index.tex",
-    }
-    for n in range(1, 6):
-        expected_files[f"chapter/{n}"] = f"chapters/ch{n:02d}.tex"
-        expected_files[f"appendix/{n}"] = f"appendices/app{n:02d}.tex"
+    expected_files = expected_phase3_files()
 
     ids_in_toc = set(_re.findall(r"^  - id:\s*(\S+)", toc_text, _re.MULTILINE))
     TEX = ROOT / "tex"
@@ -334,9 +346,15 @@ def check_phase4() -> None:
         fail(f"phase4: leftover sentinels in {len(leftovers)} files: "
              f"{', '.join(leftovers[:3])}")
 
-    # Per-unit note numbering: warn on gaps > 5.
+    # Per-unit note numbering: prefer live tex note numbers when available,
+    # since OCR-derived inventory may lag behind source-backed repairs.
     for unit, nums in notes_per_unit.items():
-        nums_sorted = sorted(set(nums))
+        tex_path = tex_path_for_unit(unit)
+        if tex_path and tex_path.exists():
+            tex_text = tex_path.read_text(errors="replace")
+            nums_sorted = sorted({int(n) for n in re.findall(r"\\footnote\[(\d+)\]\{", tex_text)})
+        else:
+            nums_sorted = sorted(set(nums))
         if not nums_sorted:
             continue
         if nums_sorted[0] != 1:
