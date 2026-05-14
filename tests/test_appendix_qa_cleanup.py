@@ -61,3 +61,4 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     assert "[Hsing] divined:" in text
     assert "[Xing] divined:" not in text
     assert "\\inscriptionref{\\pinyinterm{jisi} divination}\n\n(1)\n(PREFACE:)" in text
+    assert "(POSTFACE:) In the [seventh month].\n\n(2)\n(PREFACE:) Crack-making on ping-shen" in text
