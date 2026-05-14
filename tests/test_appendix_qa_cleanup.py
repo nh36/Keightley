@@ -167,3 +167,23 @@ def test_chapter_3_mid_note_block_restored():
     assert "``receive harvest.''\\footnote[77]{" in text
     assert "have indeed identified our two fragments-\\pinyinterm{yibian} 603 + 605.72" not in text
     assert "``receive harvest.''77" not in text
+
+
+def test_chapter_5_authenticity_note_block_restored():
+    text = Path("tex/chapters/ch05.tex").read_text(encoding="utf-8")
+
+    assert "buy these bones he may encounter a hundred forgeries for every genuine piece" in text
+    assert "\\footnote[34]{For an introduction to authenticating criteria, see White (1945), pp. 75, 77; \\pinyinterm{yan-yiping} (1967), 1, pp. 2-6." in text
+    assert "As Yetts (1954), p. xix, concludes, ``Their words in jest were only too true." in text
+    assert "recognized.\\footnote[36]{" in text
+    assert "inscription.\\footnote[37]{" in text
+    assert "forgery;\\footnote[38]{" in text
+    assert "confidence.\\footnote[39]{" in text
+    assert "mind.\\footnote[40]{" in text
+    assert "same time,\\footnote[41]{" in text
+    assert "our guard.\\footnote[42]{" in text
+    assert "identified.\\footnote[43]{" in text
+    assert "1973 finds,\\footnote[44]{" in text
+    assert "satisfy).\\footnote[45]{" in text
+    assert "36. For the extensive career of one master" not in text
+    assert "40. The Musée Guimet, for example, possesses" not in text
