@@ -202,6 +202,8 @@ def render_entry(entry: dict[str, str]) -> str:
     gv_cjk = entry.get("gv_cjk", "")
 
     rendered_body = format_structured_body(body, cjk)
+    if entry.get("abbr") == "Jinzhang":
+        rendered_body = rendered_body.replace(". \\booktitle{", r". \allowbreak\booktitle{", 1)
     rendered = f"  \\item[{escape_tex(entry['abbr'])}] {rendered_body}"
     if cjk:
         return rendered

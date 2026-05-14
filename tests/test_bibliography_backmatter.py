@@ -25,6 +25,7 @@ def test_backmatter_bibliography_files_are_live():
     assert r"\input{backmatter/abbreviations_live}" in biblio_a
     assert r"\printbibliography[heading=none]" in biblio_b
     assert r"\nocite{*}" in biblio_b
+    assert r"\emergencystretch=2em" in biblio_b
 
 
 def test_build_script_runs_bibtex():
@@ -92,6 +93,7 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
     assert r"\item[Xubu] Hu Houxuan. \booktitle{Jiagu xubu 甲骨續補}. [unpublished collection, title uncertain]." in abbreviations_live
     assert r"\item[Jimbun] Kaizuka Shigeki. \booktitle{Kyōto daigaku jimbun kagaku kenkyūjo zō kōkotsu monji 京都大學人文科學研究所藏甲骨文字}. 2 vols. Kyoto, 1959. Shakubun. Kyoto, 1960. Sakuin. Kyoto, 1968." in abbreviations_live
     assert r"\item[Menzies] Xu Jinxiong. \booktitle{The Menzies Collection of Shang Dynasty Oracle Bones}. Volume I: A Catalogue. Toronto [1972]; Volume II: The Text. Toronto (1977). [Unless otherwise indicated, references to Menzies in this book are to Volume I.]" in abbreviations_live
+    assert r"\item[Jinzhang] Fang Fahan [Frank H. Chalfant] and Bo Ruihua [Roswell S. Britton]. \allowbreak\booktitle{Jinzhang suo cang jiagu buci (The Hopkins Collection of Inscribed Oracle Bone) 金璋所藏甲骨卜辭}. New York, 1939. Reprint, Taipei, 1966." in abbreviations_live
     assert r"\item[Taida I] Dong Zuobin. \booktitle{Taiwan daxue suo cang jiagu wenzi fu kaoshi 臺灣大學所藏甲骨文字附考釋}. \booktitle{Guoli Taiwan daxue kaogu renlei xuekan} 1 (1953), pp. 22-46." in abbreviations_live
     assert r"\item[Tieyun] Liu E. \booktitle{Tieyun canggui 鐵雲藏龜}. N.p., 1903. Reprint, [Taipei], 1959." in abbreviations_live
     assert r"\item[US] Zhou Hongxiang. \booktitle{Oracle Bone Collections in the United States}. \booktitle{Occasional Papers in Archaeology}, no. 10. Berkeley and Los Angeles, 1976. [USB refers to a bone fragment in this collection, USS refers to a shell fragment.]" in abbreviations_live
@@ -161,6 +163,7 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
 
 def test_manual_bibliography_resource_is_loaded():
     preamble = PREAMBLE.read_text(encoding="utf-8")
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
 
     assert r"\addbibresource{bibliography/keightley.bib}" in preamble
     assert r"\addbibresource{bibliography/keightley_manual.bib}" in preamble
@@ -180,6 +183,8 @@ def test_manual_bibliography_resource_is_loaded():
     assert r"\clearfield{maintitleaddon}%" in preamble
     assert r"\clearfield{journaltitleaddon}%" in preamble
     assert MANUAL_BIB.exists()
+    assert r"author      = {{Hiroshima daigaku bungakubu Chugoku tetsugaku kenkyushitsu}}" in manual_bib
+    assert r"title       = {Kimbunkankei bunken\allowbreak\ mokuroku}" in manual_bib
 
 
 def test_generated_bibliography_qa_uses_annotation_not_note():
