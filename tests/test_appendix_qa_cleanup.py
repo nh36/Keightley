@@ -93,3 +93,17 @@ def test_appendix_1_opening_restored():
     assert "(R - \\lambda I)v = 0" in text
     assert "yielding a set of eigenvalues ($\\lambda$)" in text
     assert "1. With the technique of principal component" not in text
+
+
+def test_chapter_4_opening_note_block_restored():
+    text = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
+
+    assert "groups of kings.\\footnote[3]{" in text
+    assert "to \\pinyinterm{di-xin}.\\footnote[4]{" in text
+    assert "period IVa.\\footnote[5]{" in text
+    assert "periods III and IV.\\footnote[6]{" in text
+    assert "the New (V).\\footnote[7]{" in text
+    assert "[\\textasciicircum{}5]" not in text
+    assert "U U J" not in text
+    assert "3. In some cases, two or more inscriptions may" not in text
+    assert "Shima apology ([1960], p. 49" not in text
