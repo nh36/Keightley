@@ -242,17 +242,22 @@ def check_phase3() -> None:
             fail(f"phase3: main_body.tex missing {token}")
 
     # preamble + main.tex sanity
-    if "\\origsecnum" not in (TEX / "preamble.tex").read_text():
-        fail("phase3: preamble.tex missing \\origsecnum macro")
-    if "\\input{preamble}" not in (TEX / "main.tex").read_text():
+    preamble = (TEX / "preamble.tex").read_text()
+    if "\\documentclass" not in preamble:
+        fail("phase3: preamble.tex missing \\documentclass")
+    if "\\appendixsectionlabel" not in preamble:
+        fail("phase3: preamble.tex missing \\appendixsectionlabel macro")
+
+    main_tex = (TEX / "main.tex").read_text()
+    if not re.search(r"\\input\{(?:\./)?preamble\}", main_tex):
         fail("phase3: main.tex doesn't \\input{preamble}")
 
     # Each chapter must have a \chapter heading and at least one numbered section.
     for n in range(1, 6):
         ch = (TEX / f"chapters/ch{n:02d}.tex").read_text()
-        if "\\chapter{" not in ch:
+        if not re.search(r"\\chapter(?:\[|\{)", ch):
             fail(f"phase3: chapters/ch{n:02d}.tex missing \\chapter{{...}}")
-        if "\\section[" not in ch:
+        if not re.search(r"\\section(?:\[|\{)", ch):
             fail(f"phase3: chapters/ch{n:02d}.tex has no numbered \\section")
 
     # Heading inventory must exist and cover all chapters
