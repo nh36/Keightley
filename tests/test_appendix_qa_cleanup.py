@@ -66,3 +66,4 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     assert "(POSTFACE:) In the eighth month.\n\n(4)\n(PREFACE:) Crack-making on hsin-ch'ou" in text
     assert "(CHARGE:) The king entertains; performs the chui ritual.\n\n(5)\n(PREFACE:) Crack-making on jen-yin" in text
     assert "ritual; no fault.\n\n(6)\n(PREFACE:) Crack-making on jen-yin" in text
+    assert "(POSTFACE:) In the eighth month.\n\n(7)\n(PREFACE:) Crack-making on jen-tzu" in text
