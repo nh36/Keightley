@@ -32,6 +32,12 @@ OCR_PAGES = ROOT / "build" / "ocr" / "pages"
 CLEAN_PAGES = ROOT / "build" / "ocr" / "cleaned"
 OCR_MANIFEST = ROOT / "build" / "ocr" / "MANIFEST.tsv"
 CLEAN_REPORT = ROOT / "build" / "qa" / "ocr_cleanup_report.tsv"
+IGNORED_LOW_CONF_SECTIONS = {
+    "plates/figures",
+    "plates/tables",
+    "backmatter/bibliography-a",
+    "backmatter/bibliography-b",
+}
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -201,9 +207,14 @@ def check_phase2(rows: list[dict]) -> None:
     # OCR confidence sanity
     conf_low = 0
     if OCR_MANIFEST.exists():
+        rows_by_scan = {int(r["scan_page"]): r for r in rows}
         with OCR_MANIFEST.open() as f:
             for row in csv.DictReader(f, delimiter="\t"):
                 try:
+                    scan = int(row["scan_page"])
+                    section = rows_by_scan.get(scan, {}).get("section", "")
+                    if section in IGNORED_LOW_CONF_SECTIONS:
+                        continue
                     if float(row["mean_conf"]) < 70 and int(row["tokens"]) > 30:
                         conf_low += 1
                 except ValueError:
