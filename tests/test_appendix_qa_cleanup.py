@@ -206,3 +206,17 @@ def test_chapter_2_mid_note_block_restored():
     assert "25. But cf." not in text
     assert "29. Period I divinations enquiring whether it" not in text
     assert "35. I see no way to tell whether" not in text
+
+
+def test_chapter_2_late_note_block_restored():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "period I.\\footnote[135]{" in text
+    assert "fan-chao situation.\\footnote[136]{" in text
+    assert "inscription was engraved.\\footnote[137]{" in text
+    assert "more visible.\\footnote[138]{" in text
+    assert "fig. 7).\\footnote[139]{" in text
+    assert "were carved\\footnote[140]{" in text
+    assert "135. E.g., \\pinyinterm{pinbian} 57;" not in text
+    assert "140. The unique example of \\pinyinterm{pinbian} 390.5," not in text
+    assert "\nline had been carved prior to the inscription\n" not in text
