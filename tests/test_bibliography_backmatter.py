@@ -82,21 +82,21 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
 
     assert r"\newlength{\keightleyabbrevlabelwidth}" in abbreviations_live
     assert r"\begin{list}{}{%" in abbreviations_live
-    assert r"\renewcommand{\makelabel}[1]{\textbf{##1}\hfill}%" in abbreviations_live
+    assert r"\renewcommand{\makelabel}[1]{\textbf{#1}\hfill}%" in abbreviations_live
 
     assert r"\item[Bone] White, William Charles. \booktitle{Bone Culture of Ancient China}. Toronto, 1945." in abbreviations_live
-    assert r"\item[Chengzhai] Sun Haibo. \booktitle{Chengzhai Yinxu wenzi [誠齋殷墟文字]}. Beijing, 1940." in abbreviations_live
-    assert r"\item[Jicheng I] Yan Yiping. \booktitle{Jiagu jicheng [甲骨集成]}. Vol. I. [Taipei], 1975." in abbreviations_live
-    assert r"\item[Haiwai] Rao Zongyi. \booktitle{Haiwai jiagu luyi [海外甲骨錄遺]}. \booktitle{Journal of Oriental Studies} 4.1-2 (1957/58), pp. 1-22." in abbreviations_live
-    assert r"\item[Xiamen] Hu Houxuan. \booktitle{Xiamen daxue suo cang jiagu wenzi [廈門大學所藏甲骨文字]}. In \booktitle{Jiaguxue Shangshi luncong chuji}. Chengdu, 1944." in abbreviations_live
-    assert r"\item[Xubu] Hu Houxuan. \booktitle{Jiagu xubu [甲骨續補]}. [unpublished collection, title uncertain]." in abbreviations_live
-    assert r"\item[Jimbun] Kaizuka Shigeki. \booktitle{Kyōto daigaku jimbun kagaku kenkyūjo zō kōkotsu monji [京都大學人文科學研究所藏甲骨文字]}. 2 vols. Kyoto, 1959. Shakubun. Kyoto, 1960. Sakuin. Kyoto, 1968." in abbreviations_live
+    assert r"\item[Chengzhai] Sun Haibo. \booktitle{Chengzhai Yinxu wenzi 誠齋殷墟文字}. Beijing, 1940." in abbreviations_live
+    assert r"\item[Jicheng I] Yan Yiping. \booktitle{Jiagu jicheng 甲骨集成}. Vol. I. [Taipei], 1975." in abbreviations_live
+    assert r"\item[Haiwai] Rao Zongyi. \booktitle{Haiwai jiagu luyi 海外甲骨錄遺}. \booktitle{Journal of Oriental Studies} 4.1-2 (1957/58), pp. 1-22." in abbreviations_live
+    assert r"\item[Xiamen] Hu Houxuan. \booktitle{Xiamen daxue suo cang jiagu wenzi 廈門大學所藏甲骨文字}. In \booktitle{Jiaguxue Shangshi luncong chuji}. Chengdu, 1944." in abbreviations_live
+    assert r"\item[Xubu] Hu Houxuan. \booktitle{Jiagu xubu 甲骨續補}. [unpublished collection, title uncertain]." in abbreviations_live
+    assert r"\item[Jimbun] Kaizuka Shigeki. \booktitle{Kyōto daigaku jimbun kagaku kenkyūjo zō kōkotsu monji 京都大學人文科學研究所藏甲骨文字}. 2 vols. Kyoto, 1959. Shakubun. Kyoto, 1960. Sakuin. Kyoto, 1968." in abbreviations_live
     assert r"\item[Menzies] Xu Jinxiong. \booktitle{The Menzies Collection of Shang Dynasty Oracle Bones}. Volume I: A Catalogue. Toronto [1972]; Volume II: The Text. Toronto (1977). [Unless otherwise indicated, references to Menzies in this book are to Volume I.]" in abbreviations_live
-    assert r"\item[Taida I] Dong Zuobin. \booktitle{Taiwan daxue suo cang jiagu wenzi fu kaoshi [臺灣大學所藏甲骨文字附考釋]}. \booktitle{Guoli Taiwan daxue kaogu renlei xuekan} 1 (1953), pp. 22-46." in abbreviations_live
-    assert r"\item[Tieyun] Liu E. \booktitle{Tieyun canggui [鐵雲藏龜]}. N.p., 1903. Reprint, [Taipei], 1959." in abbreviations_live
+    assert r"\item[Taida I] Dong Zuobin. \booktitle{Taiwan daxue suo cang jiagu wenzi fu kaoshi 臺灣大學所藏甲骨文字附考釋}. \booktitle{Guoli Taiwan daxue kaogu renlei xuekan} 1 (1953), pp. 22-46." in abbreviations_live
+    assert r"\item[Tieyun] Liu E. \booktitle{Tieyun canggui 鐵雲藏龜}. N.p., 1903. Reprint, [Taipei], 1959." in abbreviations_live
     assert r"\item[US] Zhou Hongxiang. \booktitle{Oracle Bone Collections in the United States}. \booktitle{Occasional Papers in Archaeology}, no. 10. Berkeley and Los Angeles, 1976. [USB refers to a bone fragment in this collection, USS refers to a shell fragment.]" in abbreviations_live
     assert r"\item[White] Xu Jinxiong. \booktitle{Oracle Bones from the White and Other Collections}. [Forthcoming.]" in abbreviations_live
-    assert r"\item[Yinxu] Ming Yishi [James Mellon Menzies]. \booktitle{Yinxu buci (Oracle Records from the Waste of Yin) [殷墟卜辭]}. Shanghai, 1917. Reprint, Taipei, 1972." in abbreviations_live
+    assert r"\item[Yinxu] Ming Yishi [James Mellon Menzies]. \booktitle{Yinxu buci (Oracle Records from the Waste of Yin) 殷墟卜辭}. Shanghai, 1917. Reprint, Taipei, 1972." in abbreviations_live
 
     old_wade_giles_labels = (
         "Ch'eng-chai",
@@ -153,6 +153,7 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
         assert f"\\item[{old_label}]" not in abbreviations_live
 
     assert r"\textit{[" not in abbreviations_live
+    assert "[誠齋殷墟文字]" not in abbreviations_live
     assert "[CJK:" not in abbreviations_live
     assert "Ghi-ch" not in abbreviations_live
     assert "ACE AE AINE SEAR" not in abbreviations_live

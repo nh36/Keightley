@@ -158,14 +158,14 @@ def format_structured_body(body: str, cjk: str) -> str:
     if split_body is None:
         rendered = escape_tex(body)
         if cjk:
-            rendered += f" {wrap_booktitle(f'[{cjk}]')}"
+            rendered += f" {wrap_booktitle(cjk)}"
         return rendered
 
     author_text, title_text, rest_parts = split_body
     author = escape_tex(author_text)
     title, title_note = split_title_note(strip_period(title_text))
     if cjk:
-        title = f"{title} [{cjk}]"
+        title = f"{title} {cjk}"
 
     formatted_parts = [author, f"{wrap_booktitle(title)}."]
     if title_note:
@@ -230,7 +230,7 @@ def main() -> None:
         r"  \setlength{\itemsep}{0.5\baselineskip}%",
         r"  \setlength{\parsep}{0pt}%",
         r"  \setlength{\topsep}{0.5\baselineskip}%",
-        r"  \renewcommand{\makelabel}[1]{\textbf{##1}\hfill}%",
+        r"  \renewcommand{\makelabel}[1]{\textbf{#1}\hfill}%",
         r"}",
     ]
     lines.extend(render_entry(entry) for entry in entries if entry.get("abbr"))
