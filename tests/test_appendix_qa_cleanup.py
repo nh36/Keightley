@@ -107,3 +107,16 @@ def test_chapter_4_opening_note_block_restored():
     assert "U U J" not in text
     assert "3. In some cases, two or more inscriptions may" not in text
     assert "Shima apology ([1960], p. 49" not in text
+
+
+def test_chapter_3_mid_note_block_restored():
+    text = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
+
+    assert "have indeed identified our two fragments-\\pinyinterm{yibian} 603 + 605.\\footnote[72]{" in text
+    assert "used for hunting and farming.\\footnote[73]{" in text
+    assert "Graphs 4 and 5, therefore, may be taken to mean ``in Chi.''\\footnote[74]{" in text
+    assert "used for kuan, ``to observe.''\\footnote[75]{" in text
+    assert "transcribe the inscription in this preliminary way.\\footnote[76]{" in text
+    assert "``receive harvest.''\\footnote[77]{" in text
+    assert "have indeed identified our two fragments-\\pinyinterm{yibian} 603 + 605.72" not in text
+    assert "``receive harvest.''77" not in text
