@@ -244,9 +244,14 @@ def test_chapter_2_mid_note_block_restored():
     assert "\\textit{xushu})\\footnote[33]{" in text
     assert "1 to 10.\\footnote[34]{" in text
     assert "itself was carved.\\footnote[35]{" in text
+    assert "study of sets (sec. 2.5).\\footnote[37]{" in text
+    assert "fan-chao\\footnote[38]{" in text
+    assert "}), the crack numbers were commonly erased" in text
     assert "25. But cf." not in text
     assert "29. Period I divinations enquiring whether it" not in text
     assert "35. I see no way to tell whether" not in text
+    assert "(sec.\\footnote[37]{" not in text
+    assert "}), 38 the crack numbers" not in text
 
 
 def test_chapter_2_late_note_block_restored():
