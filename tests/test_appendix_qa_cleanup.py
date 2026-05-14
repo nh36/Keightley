@@ -29,6 +29,32 @@ def test_appendix_4_heading_debris_and_note_splice_removed():
     assert "The possibility that the charcoal was older than the burial has already been mentioned." in text
 
 
+def test_appendix_4_opening_note_block_restored():
+    text = APP04.read_text(encoding="utf-8")
+
+    assert "appendixes 2 and 3 depend upon" in text
+    assert "appendixes\\footnote[2]" not in text
+    assert "we possess.\\footnote[2]{" in text
+    assert "1028 B.C.\\footnote[3]{" in text
+    assert "Triple Concordance System,''\\footnote[5]{" in text
+    assert "the conquest.\\footnote[6]{" in text
+    assert "Han times.\\footnote[7]{" in text
+    assert "its preface.\\footnote[8]{" in text
+    assert "257 years.”\\footnote[9]{" in text
+    assert "Western Chou records.\\footnote[10]{" in text
+    assert "flawed accordingly.\\footnote[11]{" in text
+    assert "5. This is the translation given by Sivin" not in text
+    assert "6. The passage in question reads" not in text
+    assert "7. Eberhard, Müller, and Henseling (1970)," not in text
+    assert "10. The chronological problems are discussed" not in text
+    assert "68 percent (or one-sigma) confidence intervals" in text
+    assert "corresponding confidence intervals.'' or" not in text
+    assert "5,568 ± 30 years" in text
+    assert "pp. 252, 258-259.} %18" in text
+    assert "we possess.2" not in text
+    assert "1028 B.C.³" not in text
+
+
 def test_appendix_2_ratios_and_footnote_stubs_restored():
     text = Path("tex/appendices/app02.tex").read_text(encoding="utf-8")
 
