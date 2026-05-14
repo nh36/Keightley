@@ -15,6 +15,32 @@ def test_appendix_3_page_marker_debris_removed():
     assert "109,617" in text
 
 
+def test_appendix_3_note_block_restored():
+    text = APP03.read_text(encoding="utf-8")
+
+    assert "150 years\\footnote[9]{" in text
+    assert "every 16 days.”\\footnote[8]{" in text
+    assert "original corpus.''\\footnote[10]{" in text
+    assert "from pit YH127.\\footnote[11]{" in text
+    assert "same notation,\\footnote[12]{" in text
+    assert "1,000 (shells)''\\footnote[13]{" in text
+    assert "been discovered.\\footnote[14]{" in text
+    assert "likely to have\\footnote[15]{" in text
+    assert "average size was 88.\\footnote[16]{" in text
+    assert "to the Shang.\\footnote[17]{" in text
+    assert "20 years,\\footnote[18]{" in text
+    assert "ritual divinations.\\footnote[19]{" in text
+    assert "the original.\\footnote[20]{" in text
+    assert "50 years,\\footnote[21]{" in text
+    assert "each cycle,\\footnote[22]{" in text
+    assert "2 percent.\\footnote[23]{" in text
+    assert "7 percent.\\footnote[24]{" in text
+    assert "Shima's Sörui.\\footnote[25]{" in text
+    assert "8. Presumably, the rate of use varied from" not in text
+    assert "15. The records of ritual preparation" not in text
+    assert "20. This approach was pioneered by Tung" not in text
+
+
 def test_appendix_4_heading_debris_and_note_splice_removed():
     text = APP04.read_text(encoding="utf-8")
 
