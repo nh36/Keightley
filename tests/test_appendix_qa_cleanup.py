@@ -186,6 +186,21 @@ def test_chapter_4_opening_note_block_restored():
     assert "Shima apology ([1960], p. 49" not in text
 
 
+def test_chapter_4_calligraphy_note_band_restored():
+    text = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
+
+    assert "of a new king.\\footnote[47]{See \\ref{ch:2} (see ch. 2), nn. 104, 108.}" in text
+    assert "same shell,\\footnote[48]{" in text
+    assert "most\nprefaces.\\footnote[50]{" in text
+    assert "below 6 mm. in length.\\footnote[51]{" in text
+    assert "may be compared.\\footnote[52]{" in text
+    assert "[\\textasciicircum{}47 \\textasciicircum{}47]" not in text
+    assert "\n48. Table 19 indicates the variety of styles on\n" not in text
+    assert "\n49. On touchstone inscriptions, see n. 1.\n" not in text
+    assert "\n50. See \\ref{ch:2} (see ch. 2), n. 7." not in text
+    assert "\n52. For display inscriptions, see \\ref{ch:2} (see ch. 2), n. 9o.\n" not in text
+
+
 def test_chapter_3_mid_note_block_restored():
     text = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
 
