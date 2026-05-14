@@ -76,3 +76,16 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     assert "``encountering great rain'' (kou ta yü or “encountering great wind'' (kou ta feng), which" not in text
     assert "One of the disaster words---thought to refer to drought or dearth---appears only in period I inscriptions." in text
     assert "One of the disaster words-thought to refer to drought or dearth-appears only in period I inscriptions." not in text
+
+
+def test_appendix_1_opening_restored():
+    text = Path("tex/appendices/app01.tex").read_text(encoding="utf-8")
+
+    assert "There have been a number of limited attempts at identifying the turtle remains from the\narchaeological site at \\pinyinterm{anyang}." in text
+    assert "\\appendixsectionlabel{sec:appendices-app01:1}{1}" in text
+    assert "Ting Su (1969) has made the only attempt to date to identify the \\pinyinterm{anyang} turtle shells quantitatively." in text
+    assert "\n2.\n\\appendixsectionlabel{sec:appendices-app01:2}{2}\nMaterial and Methods\n" in text
+    assert "[\\textasciicircum{}2]" not in text
+    assert ":L" not in text
+    assert "Only relationships between scute seams (fig. 3) will be considered here" in text
+    assert "which were scraped clean (sec. 1.3.2) so that only the bone seams are visible" in text
