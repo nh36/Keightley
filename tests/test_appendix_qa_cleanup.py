@@ -69,3 +69,4 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     assert "(POSTFACE:) In the eighth month.\n\n(7)\n(PREFACE:) Crack-making on jen-tzu" in text
     assert "wish that no fault or misfortune would occur.''\\footnote[7]{" in text
     assert "Royal Family group inscriptions.\\footnote[7]" not in text
+    assert "\\footnote[13]{See the inscriptions listed at S43.1-3; Shih-to 2.82, to III + IV; the rest are either RFG or, in my opinion, undatable.}" in text
