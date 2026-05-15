@@ -398,3 +398,13 @@ def test_chapter_2_note_99_local_cleanup():
     assert "(I) practice inscriptions" not in text
     assert "台-ta 2, 7" not in text
     assert "徐 Chungshu [1931], p. 528" not in text
+
+
+def test_chapter_2_note_84_spill_removed():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "\\footnote[84]{\\listitem{1} \\pinyinterm{jinghua} 1 (S307.3);" in text
+    assert "% source: scan 063, printed 46\ntell.89 And it is not certain whether all the units of an inscription" in text
+    assert "\n84. \\listitem{1} \\pinyinterm{jinghua} 1 (\\$307.3);" not in text
+    assert "that 焦@@" not in text
+    assert "translated in\\ref{sec:chapters-ch02:2.8} (see sec. 2.8)); \\listitem{5} 乙-chu 620 (S91.1);" not in text
