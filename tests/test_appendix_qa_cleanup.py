@@ -201,6 +201,13 @@ def test_chapter_4_calligraphy_note_band_restored():
     assert "\n52. For display inscriptions, see \\ref{ch:2} (see ch. 2), n. 9o.\n" not in text
 
 
+def test_chapter_4_note_144_tail_cleaned():
+    text = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
+
+    assert "pp. 99-112.} %144" in text
+    assert "123 == C D D ]" not in text
+
+
 def test_chapter_3_mid_note_block_restored():
     text = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
 
