@@ -438,3 +438,10 @@ def test_chapter_2_note_54_hybrid_cleaned():
 
     assert "For similar examples, see \\pinyinterm{xucun} 1.2580; 1.2684; Yi-chu 246.} %54" in text
     assert "For similar examples, see \\pinyinterm{xucun} 1.2580; 1.2684; 乙-chu 246.} %54" not in text
+
+
+def test_chapter_2_note_100_hybrid_cleaned():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "\\footnote[100]{Kuo detects in one fragment a row of graphs written by the teacher;" in text
+    assert "\\footnote[100]{郭 detects in one fragment a row of graphs written by the teacher;" not in text
