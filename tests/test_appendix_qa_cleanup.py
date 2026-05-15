@@ -212,6 +212,13 @@ def test_chapter_4_note_144_tail_cleaned():
     assert "123 == C D D ]" not in text
 
 
+def test_chapter_4_note_83_tail_cleaned():
+    text = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
+
+    assert "single diviner.} %83" in text
+    assert "III U C D" not in text
+
+
 def test_chapter_3_mid_note_block_restored():
     text = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
 
