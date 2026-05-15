@@ -408,3 +408,10 @@ def test_chapter_2_note_84_spill_removed():
     assert "\n84. \\listitem{1} \\pinyinterm{jinghua} 1 (\\$307.3);" not in text
     assert "that 焦@@" not in text
     assert "translated in\\ref{sec:chapters-ch02:2.8} (see sec. 2.8)); \\listitem{5} 乙-chu 620 (S91.1);" not in text
+
+
+def test_chapter_2_note_143_hybrid_cleaned():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "with Chih-hsü 64 and \\pinyinterm{cuibian} 79" in text
+    assert "with 知-hsü 64 and \\pinyinterm{cuibian} 79" not in text
