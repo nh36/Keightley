@@ -431,3 +431,10 @@ def test_chapter_2_note_142_hybrid_cleaned():
 
     assert "see the \\pinyintext{kaoshi} to Yi-chu 27 and 73" in text
     assert "see the \\pinyintext{kaoshi} to 乙-chu 27 and 73" not in text
+
+
+def test_chapter_2_note_54_hybrid_cleaned():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "For similar examples, see \\pinyinterm{xucun} 1.2580; 1.2684; Yi-chu 246.} %54" in text
+    assert "For similar examples, see \\pinyinterm{xucun} 1.2580; 1.2684; 乙-chu 246.} %54" not in text
