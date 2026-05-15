@@ -107,14 +107,26 @@ def test_ch02_section_crossrefs_show_ref_plus_ocr_copy():
 
     assert "\\ref{sec:chapters-ch02:2.8} (sec. 2.8)" in text
     assert "\\ref{sec:chapters-ch02:2.7} (sec. 2.7)" in text
+    assert "\\ref{sec:chapters-ch02:2.7.1} (sec. 2.7.1)" in text
     assert "\\ref{sec:chapters-ch04:4.3.1.2} (sec. 4.3.1.2)" in text
     assert "\\ref{sec:chapters-ch03:3.3.2} (sec. 3.3.2)" in text
     assert "\\ref{sec:chapters-ch04:4.3.1.12} (sec. 4.3.1.12)" in text
     assert "\\ref{sec:chapters-ch02:2.4} (sec. 2.4)" in text
+    assert "\\ref{sec:chapters-ch02:2.5} (sec. 2.5)" in text
     assert "\\ref{sec:chapters-ch04:4.3.1.11} (sec. 4.3.1.11)" in text
+    assert (
+        "\\ref{sec:chapters-ch01:1.5.1}; \\ref{sec:chapters-ch01:1.6.2}; "
+        "\\ref{sec:chapters-ch01:1.6.3} (secs. 1.5.1; 1.6.2; 1.6.3)"
+    ) in text
     assert "\\ref{sec:chapters-ch03:3.7.1.2} (sec. 3.7.1.2)" in text
+    assert "\\ref{sec:chapters-ch03:3.7} (see sec. 3.7)" in text
     assert "\\ref{sec:chapters-ch03:3.7.4} (sec. 3.7.4)" in text
     assert "\\ref{sec:chapters-ch04:4.3.1.8} (sec. 4.3.1.8)" in text
+    assert "\\ref{sec:chapters-ch04:4.3.1.3} (sec. 4.3.1.3)" in text
+    assert (
+        "\\ref{sec:chapters-ch04:4.3.1.3} and \\ref{sec:chapters-ch04:4.3.1.4} "
+        "(secs. 4.3.1.3 and 4.3.1.4)"
+    ) in text
     assert "\\ref{sec:chapters-ch01:1.6.3} (sec. 1.6.3)" in text
     assert "\\ref{sec:chapters-ch05:5.7} (sec. 5.7)" in text
     assert "\\ref{sec:chapters-ch04:4.3.1.10} (sec. 4.3.1.10)" in text

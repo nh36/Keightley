@@ -41,10 +41,10 @@ test_multiple_inscriptionblocks() {
   echo $?
 }
 
-# Test 7: Verify both Ping-pien 235 and Ping-pien 1 references are converted
+# Test 7: Verify both Pinbian 235 and Pinbian 1 references are converted
 test_ping_pien_references() {
-  grep -q "\\\\inscriptionref{Ping-pien 235.2}" tex/chapters/ch02.tex && \
-  grep -q "\\\\inscriptionref{Ping-pien 1.4}" tex/chapters/ch02.tex
+  grep -q "\\\\inscriptionref{\\\\pinyinterm{pinbian} 235.2}" tex/chapters/ch02.tex && \
+  grep -q "\\\\inscriptionref{\\\\pinyinterm{pinbian} 1.4}" tex/chapters/ch02.tex
   echo $?
 }
 
@@ -75,6 +75,15 @@ test_inscriptionblock_closed() {
 test_inscriptionsection_valid() {
   # inscriptionsection should not create environments, just formatting
   ! grep -q "\\\\end{inscriptionsection}" tex/chapters/ch02.tex
+  echo $?
+}
+
+# Test 12: Verify inscriptionlabel markup is used in the dialogue tranche
+test_inscriptionlabel_examples() {
+  grep -q "\\\\inscriptionlabel{Preface}" tex/appendices/app05.tex && \
+  grep -q "\\\\inscriptionlabel{Postface}" tex/appendices/app05.tex && \
+  grep -q "\\\\inscriptionlabel{Prognostication}" tex/chapters/ch03.tex && \
+  grep -q "\\\\inscriptionlabel{Verification}" tex/chapters/ch03.tex
   echo $?
 }
 
@@ -114,19 +123,21 @@ result=$(test_inscriptionblock_closed)
 result=$(test_inscriptionsection_valid)
 [ "$result" -eq 0 ] && echo "✓ Test 11: inscriptionsection used correctly" || echo "✗ Test 11: inscriptionsection misused"
 
+result=$(test_inscriptionlabel_examples)
+[ "$result" -eq 0 ] && echo "✓ Test 12: inscriptionlabel markup used in dialogue tranche" || echo "✗ Test 12: inscriptionlabel markup missing"
+
 echo ""
 echo "=== LaTeX Compilation Test ==="
-echo -n "Test 12: LaTeX compilation... "
-cd tex && /usr/local/texlive/2025/bin/universal-darwin/xelatex -interaction=nonstopmode main.tex > /tmp/xelatex_test.log 2>&1
-if grep -q "Output written on main.pdf" /tmp/xelatex_test.log; then
+echo -n "Test 13: LaTeX compilation... "
+./scripts/build.sh > /tmp/inscription_build.log 2>&1
+if [ -f build/output/main.pdf ]; then
   echo "✓ LaTeX compilation successful"
 else
   echo "✗ LaTeX compilation failed"
 fi
-cd ..
 
-echo -n "Test 13: PDF validation... "
-if file tex/main.pdf | grep -q "PDF document"; then
+echo -n "Test 14: PDF validation... "
+if file build/output/main.pdf | grep -q "PDF document"; then
   echo "✓ Valid PDF generated"
 else
   echo "✗ PDF invalid or missing"

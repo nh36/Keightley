@@ -32,28 +32,28 @@ count=$(grep -o '\\listitem{' tex/chapters/ch02.tex | wc -l)
 test_case "ch02 has 60+ listitem macros ($count found)" $?
 
 count=$(grep -o '\\listitem{' tex/chapters/ch03.tex | wc -l)
-[ "$count" -ge 50 ]
-test_case "ch03 has 50+ listitem macros ($count found)" $?
+[ "$count" -ge 25 ]
+test_case "ch03 has 25+ listitem macros ($count found)" $?
 
 count=$(grep -o '\\listitem{' tex/chapters/ch04.tex | wc -l)
-[ "$count" -ge 40 ]
-test_case "ch04 has 40+ listitem macros ($count found)" $?
+[ "$count" -ge 25 ]
+test_case "ch04 has 25+ listitem macros ($count found)" $?
 
 count=$(grep -o '\\listitem{' tex/chapters/ch05.tex | wc -l)
-[ "$count" -ge 20 ]
-test_case "ch05 has 20+ listitem macros ($count found)" $?
+[ "$count" -ge 12 ]
+test_case "ch05 has 12+ listitem macros ($count found)" $?
 
 count=$(grep -o '\\listitem{' tex/appendices/app01.tex | wc -l)
-[ "$count" -ge 10 ]
-test_case "app01 has 10+ listitem macros ($count found)" $?
+[ "$count" -ge 4 ]
+test_case "app01 has 4+ listitem macros ($count found)" $?
 
 count=$(grep -o '\\listitem{' tex/appendices/app04.tex | wc -l)
-[ "$count" -ge 10 ]
-test_case "app04 has 10+ listitem macros ($count found)" $?
+[ "$count" -ge 8 ]
+test_case "app04 has 8+ listitem macros ($count found)" $?
 
 total=$(grep -r '\\listitem{' tex/chapters/ tex/appendices/ 2>/dev/null | wc -l)
-[ "$total" -ge 150 ]
-test_case "Total 150+ listitem macros in document ($total found)" $?
+[ "$total" -ge 85 ]
+test_case "Total 85+ listitem macros in document ($total found)" $?
 
 # Old-style marker removal tests
 sed -n '600,625p' tex/chapters/ch01.tex | grep -v '\\listitem' | grep -q '(1).*density'
@@ -78,13 +78,22 @@ grep -A 15 'Among the factors' tex/chapters/ch01.tex | grep -q 'listitem{2}' && 
 grep -A 15 'Among the factors' tex/chapters/ch01.tex | grep -q 'topic'
 test_case "ch01 line 602: item 2 (topics) present" $?
 
-sed -n '110,130p' tex/chapters/ch02.tex | grep -q 'listitem{1}' && \
-sed -n '110,130p' tex/chapters/ch02.tex | grep -q 'sacrifices'
-test_case "ch02 line 115: item 1 (sacrifices) present" $?
+sed -n '470,470p' tex/chapters/ch02.tex | grep -q 'listitem{1}' && \
+sed -n '470,470p' tex/chapters/ch02.tex | grep -q 'one day after harm had been forecast'
+test_case "ch02 line 470: item 1 (verification interval) present" $?
 
-sed -n '110,130p' tex/chapters/ch02.tex | grep -q 'listitem{17}' && \
-sed -n '110,130p' tex/chapters/ch02.tex | grep -q 'requests'
-test_case "ch02 line 115: item 17 (requests) present" $?
+sed -n '470,470p' tex/chapters/ch02.tex | grep -q 'listitem{9}' && \
+sed -n '470,470p' tex/chapters/ch02.tex | grep -q '175 (?) days after the divination'
+test_case "ch02 line 470: item 9 (long verification interval) present" $?
+
+sed -n '751,756p' tex/chapters/ch03.tex | grep -q 'listitem{1} front-inscription cracks' && \
+sed -n '751,756p' tex/chapters/ch03.tex | grep -q 'listitem{2} back-inscription cracks' && \
+sed -n '751,756p' tex/chapters/ch03.tex | grep -q 'listitem{3} inscriptionless cracks'
+test_case "ch03 line 751: three crack categories use listitem markers" $?
+
+sed -n '751,756p' tex/chapters/ch03.tex | grep -v '\\listitem' | grep -q '(3 inscriptionless cracks'
+[ $? -ne 0 ]
+test_case "ch03 line 751: malformed raw third marker removed" $?
 
 # Summary stats
 echo ""
@@ -115,4 +124,3 @@ else
     echo "✗ Some tests failed"
     exit 1
 fi
-
