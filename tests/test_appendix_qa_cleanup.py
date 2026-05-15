@@ -326,3 +326,10 @@ def test_chapter_2_note_101_tail_cleaned():
 
     assert "p. 13.} %101" in text
     assert "47 C D J 1 U" not in text
+
+
+def test_chapter_2_note_88_tail_cleaned():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "see sec. 3.7.2).} %88" in text
+    assert "45 Q D E L U [" not in text
