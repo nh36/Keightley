@@ -424,3 +424,10 @@ def test_chapter_2_note_145_hybrids_cleaned():
     assert "6274; \\pinyinterm{jinghua} 2 (fig. 14)." in text
     assert "diviner 韦 on \\pinyinterm{jiabian} 3339" not in text
     assert "6274; 京-hua 2 (fig. 14)." not in text
+
+
+def test_chapter_2_note_142_hybrid_cleaned():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "see the \\pinyintext{kaoshi} to Yi-chu 27 and 73" in text
+    assert "see the \\pinyintext{kaoshi} to 乙-chu 27 and 73" not in text
