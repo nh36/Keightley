@@ -363,3 +363,18 @@ def test_chapter_2_note_115_tail_cleaned():
     assert "right in order for the writing to be read.} %115" in text
     assert "(see ch. 1). n. 46." not in text
     assert "394.} %115" not in text
+
+
+def test_chapter_2_notes_116_to_124_restored():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "(1951a), p. 304.} %116" in text
+    assert "For the symbols \\_ or \\_, \\ref{sec:chapters-ch05:5.6} (see sec. 5.6).} %121" in text
+    assert "has made an exhaustive study of inscription patterns on various parts of the shell, both front and back." in text
+    assert "center.\\footnote[123]{It was frequently the case that columns on a left scapula ran to the right and vice versa;" in text
+    assert "vice versa.\\footnote[124]{\\pinyinterm{zhou-hongxiang} (1969), pp. 37-52," in text
+    assert "The remains of the wished-for, negative charge, ``Tzu [\\pinyinterm{shang}] will not have sickness,''" in text
+    assert "123. It was frequently the case that columns" not in text
+    assert "124. \\pinyinterm{zhou-hongxiang} (1969), pp. 37-52," not in text
+    assert "4130@@" not in text
+    assert "库 fang 1595" not in text
