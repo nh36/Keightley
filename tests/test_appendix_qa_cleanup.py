@@ -173,6 +173,9 @@ def test_chapter_4_opening_note_block_restored():
 
     assert "but not in 史赤.\\footnote[13]{" in text
     assert "\\pinyinterm{zu-xin}, ``Grand-\n% source: scan 113, printed 93\nfather Hsin'';" in text
+    assert "brothers.\\footnote[28]{" in text
+    assert "\\booktitle{Jimbun shakubun}, English preface, p. 15;" in text
+    assert "\\pinyinterm{pinbian} 12--21 (sec. 3.7)." in text
     assert "groups of kings.\\footnote[3]{" in text
     assert "to \\pinyinterm{di-xin}.\\footnote[4]{" in text
     assert "period IVa.\\footnote[5]{" in text
@@ -180,6 +183,7 @@ def test_chapter_4_opening_note_block_restored():
     assert "the New (V).\\footnote[7]{" in text
     assert "[\\textasciicircum{}13]" not in text
     assert "father 新''" not in text
+    assert "99 99 U C C C U 11" not in text
     assert "[\\textasciicircum{}5]" not in text
     assert "U U J" not in text
     assert "3. In some cases, two or more inscriptions may" not in text
