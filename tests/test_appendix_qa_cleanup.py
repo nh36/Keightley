@@ -415,3 +415,12 @@ def test_chapter_2_note_143_hybrid_cleaned():
 
     assert "with Chih-hsü 64 and \\pinyinterm{cuibian} 79" in text
     assert "with 知-hsü 64 and \\pinyinterm{cuibian} 79" not in text
+
+
+def test_chapter_2_note_145_hybrids_cleaned():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "the inscription of diviner Wei on \\pinyinterm{jiabian} 3339 was colored red" in text
+    assert "6274; \\pinyinterm{jinghua} 2 (fig. 14)." in text
+    assert "diviner 韦 on \\pinyinterm{jiabian} 3339" not in text
+    assert "6274; 京-hua 2 (fig. 14)." not in text
