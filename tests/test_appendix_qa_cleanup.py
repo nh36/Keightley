@@ -241,6 +241,7 @@ def test_chapter_3_opening_source_block_restored():
 def test_chapter_5_authenticity_note_block_restored():
     text = Path("tex/chapters/ch05.tex").read_text(encoding="utf-8")
 
+    assert "See too n. 34.} %47" in text
     assert "buy these bones he may encounter a hundred forgeries for every genuine piece" in text
     assert "\\footnote[34]{For an introduction to authenticating criteria, see White (1945), pp. 75, 77; \\pinyinterm{yan-yiping} (1967), 1, pp. 2-6." in text
     assert "As Yetts (1954), p. xix, concludes, ``Their words in jest were only too true." in text
@@ -255,6 +256,7 @@ def test_chapter_5_authenticity_note_block_restored():
     assert "1973 finds,\\footnote[44]{" in text
     assert "satisfy).\\footnote[45]{" in text
     assert "36. For the extensive career of one master" not in text
+    assert "145 L C U" not in text
     assert "40. The Musée Guimet, for example, possesses" not in text
 
 
