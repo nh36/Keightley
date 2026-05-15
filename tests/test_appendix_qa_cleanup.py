@@ -344,3 +344,13 @@ def test_chapter_2_note_88_tail_cleaned():
 
     assert "see sec. 3.7.2).} %88" in text
     assert "45 Q D E L U [" not in text
+
+
+def test_chapter_2_note_111_restored():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "intentional abbreviation; cf. \\ref{sec:chapters-ch03:3.7.1.1} (see sec. 3.7.1.1));" in text
+    assert "\\pinyinterm{yan-yiping} [1959], pp. 230, 233;" in text
+    assert "\\pinyinterm{qiu-short} (1972), p. 43.} %111" in text
+    assert "see  cf. sec. 3.7.1.1" not in text
+    assert "49 1 U U" not in text
