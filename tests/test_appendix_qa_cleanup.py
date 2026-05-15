@@ -385,3 +385,16 @@ def test_chapter_2_note_130_hybrid_cleaned():
 
     assert "Li Daliang [1972], p. 29" in text
     assert "李 Taliang [1972], p. 29" not in text
+
+
+def test_chapter_2_note_99_local_cleanup():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "\\listitem{1} practice inscriptions carved on unprepared or unburned bone (e.g., KK [1975.1], p. 45, citing H99:3);" in text
+    assert "Taida 2, 7; see \\pinyinterm{liu-yuanlin} [1974], p. 121" in text
+    assert "see \\pinyinterm{xu-zhongshu} [1931], p. 528, for a drawing" in text
+    assert "\\pinyinterm{jiatu} 125/126); \\listitem{5}" in text
+    assert "\\listitem{6} kan-chih tables (n. 100).} %99" in text
+    assert "(I) practice inscriptions" not in text
+    assert "台-ta 2, 7" not in text
+    assert "徐 Chungshu [1931], p. 528" not in text
