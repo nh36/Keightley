@@ -238,6 +238,13 @@ def test_chapter_3_opening_source_block_restored():
     assert "长 春术 [1972]" not in text
 
 
+def test_chapter_3_note_32_tail_cleaned():
+    text = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
+
+    assert "n. 87.} %32" in text
+    assert "63 U U CEE U 0" not in text
+
+
 def test_chapter_5_authenticity_note_block_restored():
     text = Path("tex/chapters/ch05.tex").read_text(encoding="utf-8")
 
