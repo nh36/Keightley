@@ -378,3 +378,10 @@ def test_chapter_2_notes_116_to_124_restored():
     assert "124. \\pinyinterm{zhou-hongxiang} (1969), pp. 37-52," not in text
     assert "4130@@" not in text
     assert "库 fang 1595" not in text
+
+
+def test_chapter_2_note_130_hybrid_cleaned():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "Li Daliang [1972], p. 29" in text
+    assert "李 Taliang [1972], p. 29" not in text
