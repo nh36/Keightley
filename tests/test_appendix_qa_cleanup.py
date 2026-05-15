@@ -312,3 +312,10 @@ def test_chapter_2_late_note_block_restored():
     assert "135. E.g., \\pinyinterm{pinbian} 57;" not in text
     assert "140. The unique example of \\pinyinterm{pinbian} 390.5," not in text
     assert "\nline had been carved prior to the inscription\n" not in text
+
+
+def test_chapter_2_note_101_tail_cleaned():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "p. 13.} %101" in text
+    assert "47 C D J 1 U" not in text
