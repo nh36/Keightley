@@ -354,3 +354,12 @@ def test_chapter_2_note_111_restored():
     assert "\\pinyinterm{qiu-short} (1972), p. 43.} %111" in text
     assert "see  cf. sec. 3.7.1.1" not in text
     assert "49 1 U U" not in text
+
+
+def test_chapter_2_note_115_tail_cleaned():
+    text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+
+    assert "\\ref{ch:1} (see ch. 1), n. 46." in text
+    assert "right in order for the writing to be read.} %115" in text
+    assert "(see ch. 1). n. 46." not in text
+    assert "394.} %115" not in text
