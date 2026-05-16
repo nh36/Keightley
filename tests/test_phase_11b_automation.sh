@@ -82,15 +82,15 @@ run_test "Cross-chapter reference ch01->ch02 automated" \
 
 # Test 14: Self-references are included (ch04 referencing ch04)
 run_test "Self-references included (ch references within same chapter)" \
-    'grep "\\\\ref{ch:4}" tex/chapters/ch04.tex | wc -l | grep -qE "[1-9]"'
+    'grep -q "\\\\ref{ch:4}" tex/chapters/ch04.tex'
 
 # Test 15: Multiple references to same chapter are all updated
 run_test "All references to chapter 2 are updated in ch01" \
-    '! grep -E "(see ch\. 2[^0-9]|see ch\. 2})" tex/chapters/ch01.tex || grep -q "\\\\ref{ch:2}" tex/chapters/ch01.tex'
+    '! grep -Eq "(see ch\. 2[^0-9]|see ch\. 2})" tex/chapters/ch01.tex || grep -q "\\\\ref{ch:2}" tex/chapters/ch01.tex'
 
 # Test 16: Verify fallback text format is consistent
 run_test "Fallback text uses consistent format (see ch. N)" \
-    'grep "\\\\ref{ch:[1-5]}" tex/chapters/ch01.tex | grep -q "(see ch\. [1-5])"'
+    'grep -Eq "\\\\ref{ch:[1-5]}.*\\(see ch\\. [1-5]\\)" tex/chapters/ch01.tex'
 
 # Test 17: Original labels still present and unchanged  
 run_test "Original chapter labels unchanged (ch:1 exists)" \
