@@ -1,19 +1,5 @@
 file	line	raw	surname	year	pages	source_kind	term_key	term_category	candidate_count	candidate_key
-tex/appendices/app03.tex	27	\pinyinterm{xubian} (1933)	Xubian	1933		pinyinterm	xubian	title	0	
-tex/chapters/ch01.tex	58	\pinyinterm{junshi-short} (1963), p. 192	Junshi	1963	192	pinyinterm	junshi-short	person	0	
-tex/chapters/ch01.tex	105	\pinyinterm{xu-yuxuan} (1957), pp. 460, 462	Xu Yuxuan	1957	460, 462	pinyinterm	xu-yuxuan	person	0	
-tex/chapters/ch01.tex	111	\pinyinterm{junshi-short} (1963), p. 195	Junshi	1963	195	pinyinterm	junshi-short	person	0	
 tex/chapters/ch02.tex	115	\pinyinterm{jiao-short} (1961a), p. 95	Jiao	1961a	95	pinyinterm	jiao-short	person	0	
 tex/chapters/ch02.tex	354	\pinyinterm{huang-peirong} [1975], pp. 3a	Huang Peirong	1975	3a	pinyinterm	huang-peirong	person	0	
-tex/chapters/ch02.tex	464	\pinyinterm{zhou-cezong} (1968), p. 168	Zhou Cezong	1968	168	pinyinterm	zhou-cezong	person	0	
 tex/chapters/ch02.tex	570	\pinyinterm{zhou-hongxiang} (1970), pp. 49-52	Zhou Hongxiang	1970	49-52	pinyinterm	zhou-hongxiang	person	0	
 tex/chapters/ch02.tex	736	\pinyinterm{jiao-short} [1961], p. 953	Jiao	1961	953	pinyinterm	jiao-short	person	0	
-tex/chapters/ch03.tex	43	\pinyinterm{hu-houxuan} (1945), p. 5b	Hu Houxuan	1945	5b	pinyinterm	hu-houxuan	person	2	Hu1945Chiakuhsueh
-tex/chapters/ch03.tex	281	\pinyinterm{zhou-fakao} (1973)	Zhou Fakao	1973		pinyinterm	zhou-fakao	person	0	
-tex/chapters/ch03.tex	408	\pinyinterm{zhou-fakao} (1973)	Zhou Fakao	1973		pinyinterm	zhou-fakao	person	0	
-tex/chapters/ch03.tex	620	\pinyinterm{zhao-feng} (1976), p. 222	Zhao Feng	1976	222	pinyinterm	zhao-feng	person	0	
-tex/chapters/ch03.tex	841	\pinyinterm{zhou-cezong} [1968], pp. 174-175	Zhou Cezong	1968	174-175	pinyinterm	zhou-cezong	person	0	
-tex/chapters/ch04.tex	418	\pinyinterm{zhang-bingquan} [1967a]	Zhang Bingquan	1967a		pinyinterm	zhang-bingquan	person	0	
-tex/chapters/ch04.tex	422	\pinyinterm{zhang-bingquan} (1967a), p. 774	Zhang Bingquan	1967a	774	pinyinterm	zhang-bingquan	person	0	
-tex/chapters/ch05.tex	28	\pinyinterm{zhao-feng} [1976]	Zhao Feng	1976		pinyinterm	zhao-feng	person	0	
-tex/chapters/ch05.tex	438	\pinyinterm{zhou-dynasty} [1976]	Zhou	1976		pinyinterm	zhou-dynasty	person	0	

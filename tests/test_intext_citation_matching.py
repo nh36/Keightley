@@ -332,6 +332,142 @@ def test_pinyinterm_new_sun_haibo_entry_is_indexed():
     assert keys == ["Sun1937Fushi"]
 
 
+def test_pinyinterm_xubian_title_entry_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["xubian"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1933",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Luo1933Xubian"]
+
+
+def test_pinyinterm_junshi_short_alias_matches_yang_1963_entry():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["junshi-short"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1963",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Yang1963Broken"]
+
+
+def test_pinyinterm_xu_yuxuan_alias_matches_1957_entry():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["xu-yuxuan"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1957",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Chou1957Mengxian"]
+
+
+def test_pinyinterm_zhou_cezong_editor_volume_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["zhou-cezong"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1968",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Chow1968WenLin"]
+
+
+def test_pinyinterm_zhou_fakao_1973_editor_entry_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["zhou-fakao"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1973",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Chou1973Hantzu"]
+
+
+def test_pinyinterm_zhang_bingquan_1967a_entry_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["zhang-bingquan"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1967",
+            "a",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Zhang1967aTongming"]
+
+
+def test_pinyinterm_zhao_feng_1976_entry_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["zhao-feng"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1976",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Zhao1976Qingjiang"]
+
+
+def test_pinyinterm_zhou_hongxiang_1976_book_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["zhou-hongxiang"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1976",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Chou1976OracleBone"]
+
+
 def test_bracketed_pinyinterm_year_is_detected():
     pinyin_terms = intext_citations.load_pinyin_terms()
     matches = intext_citations.iter_line_citation_matches(

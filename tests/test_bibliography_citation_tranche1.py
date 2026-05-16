@@ -82,6 +82,9 @@ def test_first_tranche_citations_are_wired():
     assert r"\pinyinterm{shi-zhangru} (\citeyear{Shih1959Hsiao}), p. 321." in ch05
     assert "Wang Ziyu (1933)" not in ch05
     assert r"Wang Ziyu (\citeyear{Wang1933Chia})" in ch05
+    assert r"cf. \pinyinterm{zhou-hongxiang} [1976]," in ch05
+    assert r"\pinyinterm{zhou-dynasty} [1976]" not in ch05
+    assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1945Chiakuhsueh}), p. 5b," in ch03
     assert "Lefeuvre (1971)" not in ch03
     assert r"Lefeuvre (\citeyear{Lefeuvre1971SerieH})" in ch03
     assert "Kuo Mo-jo (1972), p. 5" not in app04
@@ -196,6 +199,7 @@ def test_manual_bibliography_entries_exist():
     assert "shortauthor  = {Hong}" in bib
     assert "@article{Huang1964Measure," in bib
     assert "shortauthor  = {Caijun}" in bib
+    assert "@book{Chou1976OracleBone," in bib
     assert "@article{Ito1959Anyo," in bib
     assert "shortauthor  = {Ito}" in bib
     assert "@article{Ju1969Metaphysical," in bib
