@@ -186,6 +186,8 @@ def test_ch01_section_crossrefs_show_ref_plus_ocr_copy():
     text = CH01.read_text(encoding="utf-8")
 
     assert "\\ref{sec:chapters-ch01:1.2.2} (sec. 1.2.2)" in text
+    assert "appendix \\ref{app:1} (appendix 1)" in text
+    assert "appendix \\ref{app:2} (appendix 2)" in text
     assert (
         "\\ref{sec:chapters-ch01:1.3}; \\ref{sec:chapters-ch01:1.5} "
         "(secs. 1.3; 1.5)"
