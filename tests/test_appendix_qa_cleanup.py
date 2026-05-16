@@ -208,8 +208,6 @@ def test_chapter_4_opening_note_block_restored():
     assert "U U J" not in text
     assert "3. In some cases, two or more inscriptions may" not in text
     assert "Shima apology ([1960], p. 49" not in text
-
-
 def test_chapter_4_calligraphy_note_band_restored():
     text = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
 
@@ -223,6 +221,15 @@ def test_chapter_4_calligraphy_note_band_restored():
     assert "\n49. On touchstone inscriptions, see n. 1.\n" not in text
     assert "\n50. See \\ref{ch:2} (see ch. 2), n. 7." not in text
     assert "\n52. For display inscriptions, see \\ref{ch:2} (see ch. 2), n. 9o.\n" not in text
+
+
+def test_chapter_4_note_24_page_turn_residue_cleaned():
+    text = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
+
+    assert "But this has not been confirmed by the ancestral titles.} %24" in text
+    assert "\\pinyinterm{di-xin} (K28) may be excluded in" in text
+    assert "57 97 C C C C D C D C" not in text
+    assert "KHHD+" not in text
 
 
 def test_chapter_4_note_144_tail_cleaned():
