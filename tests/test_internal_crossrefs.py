@@ -1,6 +1,7 @@
 """Regression checks for appendix anchors and duplicated internal crossrefs."""
 
 from pathlib import Path
+import re
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -21,6 +22,13 @@ CH05 = REPO_ROOT / "tex" / "chapters" / "ch05.tex"
 FIGURES = REPO_ROOT / "tex" / "plates" / "figures.tex"
 PREFACE = REPO_ROOT / "tex" / "frontmatter" / "preface.tex"
 BOOK_PREAMBLE = REPO_ROOT / "tex" / "frontmatter" / "book-preamble.tex"
+
+NONCHAPTER_CROSSREF_DIRS = [
+    REPO_ROOT / "tex" / "appendices",
+    REPO_ROOT / "tex" / "frontmatter",
+    REPO_ROOT / "tex" / "plates",
+]
+PLAIN_INTERNAL_REF_RE = re.compile(r"\bsecs?\.\s+[0-9]|\bappendix\s+[1-5]\b")
 
 
 def test_appendix_internal_section_labels_exist():
@@ -65,6 +73,20 @@ def test_no_malformed_double_section_refs_remain():
             offenders.append(str(path.relative_to(REPO_ROOT)))
 
     assert not offenders, "Malformed duplicated section refs remain:\n" + "\n".join(offenders)
+
+
+def test_nonchapter_surfaces_have_no_plain_internal_refs():
+    offenders = []
+
+    for directory in NONCHAPTER_CROSSREF_DIRS:
+        for path in sorted(directory.glob("*.tex")):
+            for line_no, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+                if "\\ref{" in line:
+                    continue
+                if PLAIN_INTERNAL_REF_RE.search(line):
+                    offenders.append(f"{path.relative_to(REPO_ROOT)}:{line_no}:{line.strip()}")
+
+    assert not offenders, "Plain internal refs remain in non-chapter surfaces:\n" + "\n".join(offenders)
 
 
 def test_appendix_crossrefs_show_ref_plus_ocr_copy():
