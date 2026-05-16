@@ -281,6 +281,23 @@ def test_pinyinterm_new_zhou_hongxiang_book_entry_is_indexed():
     assert keys == ["Chou1969Putzu"]
 
 
+def test_pinyinterm_zhou_hongxiang_1970_chapter_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["zhou-hongxiang"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1970",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Chou1970Jiagu"]
+
+
 def test_pinyinterm_new_zhou_hongxiang_article_entry_is_indexed():
     bib = intext_citations.load_bib_index()
     term = intext_citations.load_pinyin_terms()["zhou-hongxiang"]
