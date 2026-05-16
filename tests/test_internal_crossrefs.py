@@ -75,6 +75,16 @@ def test_no_malformed_double_section_refs_remain():
     assert not offenders, "Malformed duplicated section refs remain:\n" + "\n".join(offenders)
 
 
+def test_external_chapter_citations_remain_plain():
+    ch01 = CH01.read_text(encoding="utf-8")
+    ch05 = CH05.read_text(encoding="utf-8")
+
+    assert "see 史赤, ch. 128." in ch01
+    assert "SKK, ch. 128, pp. 26-27; CLCY, ch. 48, pp. 2a-b" in ch01
+    assert "pt. 2, ch. 5, pp. 22a ff.; ch. 8, pp. 12a-13a;" in ch05
+    assert "\\pinyinterm{zhuixin}, ch. 10, passim," in ch05
+
+
 def test_nonchapter_surfaces_have_no_plain_internal_refs():
     offenders = []
 
