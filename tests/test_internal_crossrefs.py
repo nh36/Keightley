@@ -132,6 +132,8 @@ def test_app05_section_crossrefs_show_ref_plus_ocr_copy():
     assert "\\ref{sec:chapters-ch03:3.7.4.2} (sec. 3.7.4.2)" in text
     assert "\\ref{sec:chapters-ch04:4.3.1.5} (cf. sec. 4.3.1.5)" in text
     assert "\\ref{sec:chapters-ch04:4.3.1.7} (sec. 4.3.1.7)" in text
+    assert "\\ref{sec:chapters-ch03:3.3.2} (sec. 3.3.2)" in text
+    assert "\\ref{sec:chapters-ch04:4.1.1} (sec. 4.1.1)" in text
 
 
 def test_ch01_section_crossrefs_show_ref_plus_ocr_copy():
