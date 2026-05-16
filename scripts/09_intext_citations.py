@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import csv
 import re
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,15 +24,40 @@ TEX_DIR = ROOT / "tex"
 DATA_DIR = ROOT / "data"
 QA_DIR = ROOT / "build" / "qa"
 BIB_DIR = TEX_DIR / "bibliography"
+PINYIN_TERMS_TSV = DATA_DIR / "pinyin_terms.tsv"
+PAGE_PATTERN = (
+    r"\d+[A-Za-z]?"
+    r"(?:\s*[-–]+\s*\d+[A-Za-z]?)?"
+    r"(?:\s*,\s*\d+[A-Za-z]?(?:\s*[-–]+\s*\d+[A-Za-z]?)?)*"
+)
 
 CITATION_RE = re.compile(
-    r"""(?P<surname>[A-Z][A-Za-z'\-]+(?:\s+(?:(?:and|et\s+al\.?)\s+)?[A-Z][A-Za-z'\-]+)*)
-        \s*
-        \(
-        (?P<year>(?:18|19|20)\d{2})(?P<suffix>[a-z]?)
-        \)
-        (?:\s*,?\s*pp?\.\s*(?P<pages>[\d\s,–\-]+))?
-    """,
+    rf"""(?P<surname>[A-Z][A-Za-z'\-]+(?:\s+(?:(?:and|et\s+al\.?)\s+)?[A-Z][A-Za-z'\-]+)*)
+         \s*
+         \(
+         (?P<year>(?:18|19|20)\d{{2}})(?P<suffix>[a-z]?)
+         \)
+         (?:\s*,?\s*pp?\.\s*(?P<pages>{PAGE_PATTERN}))?
+     """,
+    re.VERBOSE,
+)
+PINYINTERM_CITATION_RE = re.compile(
+    rf"""\\pinyinterm\{{(?P<term_key>[^}}]+)\}}
+         \s*
+         \(
+         (?P<year>(?:18|19|20)\d{{2}})(?P<suffix>[a-z]?)
+         \)
+         (?:\s*,?\s*(?:\d+(?:\.\d+)?,\s*)?pp?\.\s*(?P<pages>{PAGE_PATTERN}))?
+     """,
+    re.VERBOSE,
+)
+PINYINTERM_BRACKETED_CITATION_RE = re.compile(
+    rf"""\\pinyinterm\{{(?P<term_key>[^}}]+)\}}
+         \s*
+         (?:\(\[(?P<year_in_parens>(?:18|19|20)\d{{2}})(?P<suffix_in_parens>[a-z]?)\]
+           |\[(?P<year_bracketed>(?:18|19|20)\d{{2}})(?P<suffix_bracketed>[a-z]?)\])
+         (?:\s*,?\s*(?:\d+(?:\.\d+)?,\s*)?pp?\.\s*(?P<pages>{PAGE_PATTERN}))?
+     """,
     re.VERBOSE,
 )
 KEY_RE = re.compile(r"^@\w+\{(?P<key>[^,]+),", re.MULTILINE)
@@ -39,10 +65,23 @@ ENTRY_RE = re.compile(
     r"^@(?P<type>\w+)\{(?P<key>[^,]+),(?P<body>.*?)^}\s*$",
     re.MULTILINE | re.DOTALL,
 )
+PAGE_FRAGMENT_RE = re.compile(
+    r"^\s*("
+    r"[0-9A-Za-z]+(?:\s*[-–]+\s*[0-9A-Za-z]+)?"
+    r"(?:\s*,\s*[0-9A-Za-z]+(?:\s*[-–]+\s*[0-9A-Za-z]+)?)*"
+    r")"
+)
 
 
 def normalize_token(value: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "", value.lower())
+    ascii_value = (
+        unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    )
+    return re.sub(r"[^a-z0-9]+", "", ascii_value.lower())
+
+
+def normalize_hanzi(value: str) -> str:
+    return re.sub(r"\s+", "", (value or "").strip())
 
 
 def citation_aliases(value: str) -> list[tuple[int, str]]:
@@ -77,6 +116,23 @@ def extract_field(body: str, name: str) -> str:
     return (match.group("value") if match else "").strip()
 
 
+def load_pinyin_terms() -> dict[str, dict[str, str]]:
+    if not PINYIN_TERMS_TSV.exists():
+        return {}
+    with PINYIN_TERMS_TSV.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        return {row["key"]: row for row in reader if row.get("key")}
+
+
+def pinyin_term_citation_name(term: dict[str, str]) -> str:
+    return (term.get("pinyin_plain") or term.get("pinyin_accented") or "").strip()
+
+
+def clean_pages(value: str) -> str:
+    match = PAGE_FRAGMENT_RE.match((value or "").strip())
+    return (match.group(1) if match else "").strip()
+
+
 def entry_aliases(entry: dict) -> set[str]:
     aliases = set()
     primary_name = entry.get("author", "")
@@ -84,8 +140,10 @@ def entry_aliases(entry: dict) -> set[str]:
         aliases.add(normalize_token(entry.get("surname", "")))
     for raw in (
         entry.get("shortauthor", ""),
+        entry.get("userd", ""),
         primary_name,
         key_stem(entry["key"]),
+        entry.get("title", ""),
     ):
         normalized = normalize_token(raw)
         if normalized:
@@ -122,8 +180,11 @@ def load_bib_index() -> list[dict]:
                 "year": year,
                 "suffix": suffix,
                 "author": author,
+                "usera": extract_field(body, "usera"),
+                "userd": extract_field(body, "userd"),
                 "shortauthor": shortauthor,
                 "pages": extract_field(body, "pages"),
+                "title": extract_field(body, "title"),
             })
     return out
 
@@ -151,9 +212,11 @@ def filter_candidates_by_pages(candidates: list[dict], cited_pages: str) -> list
     return filtered or candidates
 
 
-def find_candidates(bib: list[dict], surname: str, year: str,
-                    suffix: str) -> list[dict]:
+def find_candidates(
+    bib: list[dict], surname: str, year: str, suffix: str, term_hanzi: str = ""
+) -> list[dict]:
     citation_forms = citation_aliases(surname)
+    normalized_term_hanzi = normalize_hanzi(term_hanzi)
     results = []
     for e in bib:
         if e["year"] != year:
@@ -162,6 +225,8 @@ def find_candidates(bib: list[dict], surname: str, year: str,
             continue
         aliases = entry_aliases(e)
         best_score = None
+        if normalized_term_hanzi and normalize_hanzi(e.get("usera", "")) == normalized_term_hanzi:
+            best_score = -1
         for priority, citation in citation_forms:
             if citation in aliases:
                 score = priority * 10
@@ -189,8 +254,70 @@ def find_candidates(bib: list[dict], surname: str, year: str,
     return best_entries
 
 
+def iter_plain_citation_matches(line: str) -> list[dict[str, str]]:
+    matches: list[dict[str, str]] = []
+    for m in CITATION_RE.finditer(line):
+        matches.append({
+            "raw": m.group(0),
+            "surname": m.group("surname"),
+            "year": m.group("year"),
+            "suffix": m.group("suffix") or "",
+            "pages": clean_pages(m.group("pages") or ""),
+            "source_kind": "plain",
+            "term_key": "",
+            "term_category": "",
+        })
+    return matches
+
+
+def iter_pinyinterm_citation_matches(
+    line: str, pinyin_terms: dict[str, dict[str, str]]
+) -> list[dict[str, str]]:
+    matches: list[dict[str, str]] = []
+    patterns = [
+        PINYINTERM_CITATION_RE,
+        PINYINTERM_BRACKETED_CITATION_RE,
+    ]
+    for pattern in patterns:
+        for m in pattern.finditer(line):
+            term_key = m.group("term_key")
+            term = pinyin_terms.get(term_key, {})
+            year = (
+                m.groupdict().get("year")
+                or m.groupdict().get("year_in_parens")
+                or m.groupdict().get("year_bracketed")
+                or ""
+            )
+            suffix = (
+                m.groupdict().get("suffix")
+                or m.groupdict().get("suffix_in_parens")
+                or m.groupdict().get("suffix_bracketed")
+                or ""
+            )
+            matches.append({
+                "raw": m.group(0),
+                "surname": pinyin_term_citation_name(term) or term_key.replace("-", " "),
+                "year": year,
+                "suffix": suffix,
+                "pages": clean_pages(m.group("pages") or ""),
+                "source_kind": "pinyinterm",
+                "term_key": term_key,
+                "term_category": term.get("category", ""),
+            })
+    return matches
+
+
+def iter_line_citation_matches(
+    line: str, pinyin_terms: dict[str, dict[str, str]]
+) -> list[dict[str, str]]:
+    return iter_plain_citation_matches(line) + iter_pinyinterm_citation_matches(
+        line, pinyin_terms
+    )
+
+
 def main() -> None:
     bib = load_bib_index()
+    pinyin_terms = load_pinyin_terms()
     QA_DIR.mkdir(parents=True, exist_ok=True)
     DATA_DIR.mkdir(exist_ok=True)
     matched_rows = []
@@ -202,20 +329,26 @@ def main() -> None:
             continue
         text = tex.read_text(encoding="utf-8")
         for line_num, line in enumerate(text.splitlines(), start=1):
-            for m in CITATION_RE.finditer(line):
-                surname = m.group("surname")
-                year = m.group("year")
-                suffix = m.group("suffix") or ""
-                pages = (m.group("pages") or "").strip()
-                cands = find_candidates(bib, surname, year, suffix)
+            for match in iter_line_citation_matches(line, pinyin_terms):
+                surname = match["surname"]
+                year = match["year"]
+                suffix = match["suffix"]
+                pages = match["pages"]
+                term_hanzi = ""
+                if match["source_kind"] == "pinyinterm":
+                    term_hanzi = pinyin_terms.get(match["term_key"], {}).get("hanzi", "")
+                cands = find_candidates(bib, surname, year, suffix, term_hanzi=term_hanzi)
                 cands = filter_candidates_by_pages(cands, pages)
                 row = {
                     "file": str(tex.relative_to(ROOT)),
                     "line": line_num,
-                    "raw": m.group(0).replace("\t", " "),
+                    "raw": match["raw"].replace("\t", " "),
                     "surname": surname,
                     "year": year + suffix,
                     "pages": pages,
+                    "source_kind": match["source_kind"],
+                    "term_key": match["term_key"],
+                    "term_category": match["term_category"],
                     "candidate_count": len(cands),
                     "candidate_key": cands[0]["key"] if cands else "",
                 }
@@ -224,8 +357,19 @@ def main() -> None:
                 else:
                     unmatched_rows.append(row)
 
-    fields = ["file", "line", "raw", "surname", "year", "pages",
-              "candidate_count", "candidate_key"]
+    fields = [
+        "file",
+        "line",
+        "raw",
+        "surname",
+        "year",
+        "pages",
+        "source_kind",
+        "term_key",
+        "term_category",
+        "candidate_count",
+        "candidate_key",
+    ]
 
     citations_tsv = DATA_DIR / "citations.tsv"
     with citations_tsv.open("w", encoding="utf-8", newline="") as fh:

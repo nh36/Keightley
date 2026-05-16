@@ -10,6 +10,8 @@ CH01 = REPO_ROOT / "tex" / "chapters" / "ch01.tex"
 CH02 = REPO_ROOT / "tex" / "chapters" / "ch02.tex"
 CH03 = REPO_ROOT / "tex" / "chapters" / "ch03.tex"
 CH05 = REPO_ROOT / "tex" / "chapters" / "ch05.tex"
+PREFACE = REPO_ROOT / "tex" / "frontmatter" / "preface.tex"
+FIGURES = REPO_ROOT / "tex" / "plates" / "figures.tex"
 BIB = REPO_ROOT / "tex" / "bibliography" / "keightley.bib"
 MANUAL_BIB = REPO_ROOT / "tex" / "bibliography" / "keightley_manual.bib"
 CITATION_SCRIPT = REPO_ROOT / "scripts" / "09_intext_citations.py"
@@ -22,6 +24,8 @@ def test_first_tranche_citations_are_wired():
     ch02 = CH02.read_text(encoding="utf-8")
     ch03 = CH03.read_text(encoding="utf-8")
     ch05 = CH05.read_text(encoding="utf-8")
+    preface = PREFACE.read_text(encoding="utf-8")
+    figures = FIGURES.read_text(encoding="utf-8")
 
     assert "Lin Sheng (1963) records" not in ch01
     assert r"\textcite{Lin1963Chi} records" in ch01
@@ -82,6 +86,17 @@ def test_first_tranche_citations_are_wired():
     assert r"Lefeuvre (\citeyear{Lefeuvre1971SerieH})" in ch03
     assert "Kuo Mo-jo (1972), p. 5" not in app04
     assert r"Kuo Mo-jo (\citeyear{Kuo1972Anyang}), p. 5" in app04
+    assert r"\pinyinterm{chen-mengjia} (\citeyear{Chen1955ShangYin}), pp. 67-72." in app04
+    assert r"\pinyinterm{chen-mengjia} (\citeyear{Chen1955ShangYin}), p. 59." in app04
+    assert r"\pinyinterm{chen-mengjia} ([\citeyear{Chen1955ShangYin}], pp. 55-56) has shown" in app04
+    assert r"\pinyinterm{chen-mengjia} (\citeyear{Chen1956Yin}), p. 251;" in preface
+    assert r"\pinyinterm{chen-mengjia} [\citeyear{Chen1956Yin}], p. 252;" in preface
+    assert r"\pinyinterm{tang-lan} [\citeyear{TangLan1976Hotsun}], p. 60" in preface
+    assert r"\pinyinterm{qu-wanli} (\citeyear{Chu1965aShihchi}), pp. 88-89," in preface
+    assert r"\pinyinterm{yan-yiping} (\citeyear{Yen1961Chiaku}), pp. 207-215" in preface
+    assert "\\pinyinterm{yan-yiping} (\\citeyear{Yen1961Chiaku}),\n207-217." in preface
+    assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1977Niao})," in preface
+    assert r"from \pinyinterm{yan-yiping} (\citeyear{Yen1961Chiaku}), 1." in figures
 
 
 def test_citation_inventory_skips_backmatter():
@@ -90,6 +105,8 @@ def test_citation_inventory_skips_backmatter():
     assert 'if "backmatter" in tex.parts:' in script
     assert 'for bib_file in sorted(BIB_DIR.glob("*.bib")):' in script
     assert 'shortauthor' in script
+    assert 'PINYIN_TERMS_TSV = DATA_DIR / "pinyin_terms.tsv"' in script
+    assert '"source_kind"' in script
 
 
 def test_keightley_1975b_entry_exists():

@@ -1,415 +1,1083 @@
-file	line	raw	surname	year	pages	candidate_count	candidate_key
-tex/appendices/app01.tex	14	Ping (1930)	Ping	1930		1	Ping1930Notes
-tex/appendices/app01.tex	15	Lindholm (1931)	Lindholm	1931		1	Lindholm1931Uber
-tex/appendices/app01.tex	17	Pope (1935)	Pope	1935		1	Pope1935Reptiles
-tex/appendices/app01.tex	26	Wu (1943)	Wu	1943		1	Wu1943Notes
-tex/appendices/app01.tex	31	Auffenberg (1962)	Auffenberg	1962		1	Auffenberg1962Status
-tex/appendices/app01.tex	35	McDowell (1964)	McDowell	1964		1	McDowell1964Partition
-tex/appendices/app01.tex	43	Ting Su (1969)	Ting Su	1969		1	Su1969Shuo
-tex/appendices/app01.tex	52	Ting Su (1969)	Ting Su	1969		1	Su1969Shuo
-tex/appendices/app01.tex	68	Sokal (1965)	Sokal	1965		1	THES1965Statistical
-tex/appendices/app01.tex	87	Nakamura (1934)	Nakamura	1934		1	Nakamura1934Clemmys
-tex/appendices/app01.tex	87	Mao (1971)	Mao	1971		1	Mao1971Turtles
-tex/appendices/app01.tex	103	Wu (1943)	Wu	1943		1	Wu1943Notes
-tex/appendices/app01.tex	123	Smith (1931)	Smith	1931		1	Smith1931Fauna
-tex/appendices/app01.tex	123	Pritchard (1967)	Pritchard	1967		1	Pritchard1967Living
-tex/appendices/app01.tex	129	Bien (1937)	Bien	1937		1	Bien1937Turtle
-tex/appendices/app01.tex	130	McDowell (1964)	McDowell	1964		1	McDowell1964Partition
-tex/appendices/app01.tex	131	Mao (1971)	Mao	1971		1	Mao1971Turtles
-tex/appendices/app01.tex	131	Ping (1930)	Ping	1930		1	Ping1930Notes
-tex/appendices/app01.tex	131	Lindholm (1931)	Lindholm	1931		1	Lindholm1931Uber
-tex/appendices/app01.tex	132	Bien (1937)	Bien	1937		1	Bien1937Turtle
-tex/appendices/app02.tex	44	Tung (1933), p. 420	Tung	1933	420	1	Tung1933Chia
-tex/appendices/app02.tex	113	Tung (1949a), p. 259, 	Tung	1949a	259,	1	Tung1949aYin
-tex/appendices/app02.tex	142	Hultkrantz (1968), p. 78	Hultkrantz	1968	78	1	Hultkrantz1968La
-tex/appendices/app03.tex	27	Tung (1953), p. 375	Tung	1953	375	1	Tung1953Chia
-tex/appendices/app03.tex	27	Tung (1953), p. 378	Tung	1953	378	1	Tung1953Chia
-tex/appendices/app03.tex	27	Jianshou (1917)	Jianshou	1917		1	Chienshou1917Yinxu
-tex/appendices/app03.tex	27	Fuyin (1925)	Fuyin	1925		1	Fuyin1925Zhengwen
-tex/appendices/app03.tex	27	Tung (1953), pp. 380, 381, 	Tung	1953	380, 381,	1	Tung1953Chia
-tex/appendices/app03.tex	33	Tung (1929b)	Tung	1929b		1	Tung1929bHsin
-tex/appendices/app03.tex	96	Tung (1945)	Tung	1945		1	Tung1945Yin
-tex/appendices/app03.tex	102	Tung (1945)	Tung	1945		1	Tung1945Yin
-tex/appendices/app03.tex	106	Tung (1945)	Tung	1945		1	Tung1945Yin
-tex/appendices/app04.tex	28	Barnard (1975), pp. 16-17, 	Barnard	1975	16-17,	1	Barnard1975First
-tex/appendices/app04.tex	28	Barnard (1972), pp. 	Barnard	1972		1	Barnard1972Early
-tex/appendices/app04.tex	28	Tung (1945)	Tung	1945		1	Tung1945Yin
-tex/appendices/app04.tex	28	Shima (1966)	Shima	1966		1	Shima1966Bokuji
-tex/appendices/app04.tex	28	Shirakawa (1971), pp. 280–281	Shirakawa	1971	280–281	1	Shirakawa1971Kimbun
-tex/appendices/app04.tex	30	Chavannes (1895), pp. 	Chavannes	1895		1	Chavannes1895Memoires
-tex/appendices/app04.tex	30	Gardner (1961), p. 26, 	Gardner	1961	26,	1	Gardner1961Chinese
-tex/appendices/app04.tex	33	Saussure (1924), pp. 322-339	Saussure	1924	322-339	1	Saussure1924Chronologie
-tex/appendices/app04.tex	33	Noda and Yabuuchi (1945), pp. 137-179 	Noda and Yabuuchi	1945	137-179	1	Noda1945Kanjo
-tex/appendices/app04.tex	36	Sivin (1969), p. 12	Sivin	1969	12	1	Sivin1969Cosmos
-tex/appendices/app04.tex	39	Saussure (1924), pp. 330-331	Saussure	1924	330-331	1	Saussure1924Chronologie
-tex/appendices/app04.tex	39	Noda and Yabuuchi (1945), p. 289	Noda and Yabuuchi	1945	289	1	Noda1945Kanjo
-tex/appendices/app04.tex	42	Henseling (1970), pp. 949-979	Henseling	1970	949-979	1	Eberhard1970Astronomie
-tex/appendices/app04.tex	42	Noda and Yabuuchi (1945), pp. 161-164	Noda and Yabuuchi	1945	161-164	1	Noda1945Kanjo
-tex/appendices/app04.tex	47	Saussure (1924), pp. 330-331	Saussure	1924	330-331	1	Saussure1924Chronologie
-tex/appendices/app04.tex	47	Noda and Yabuuchi (1945), p. 289	Noda and Yabuuchi	1945	289	1	Noda1945Kanjo
-tex/appendices/app04.tex	50	Fan (1962), p. 35	Fan	1962	35	1	Fan1962Kuben
-tex/appendices/app04.tex	56	Barnard (1960b)	Barnard	1960b		1	Barnard1960bReview
-tex/appendices/app04.tex	61	Barnard (1975), pp. 30-31	Barnard	1975	30-31	1	Barnard1975First
-tex/appendices/app04.tex	68	Michels (1973), pp. 158-159	Michels	1973	158-159	1	Michels1973Dating
-tex/appendices/app04.tex	71	Barnard (1975), p. 31, 	Barnard	1975	31,	1	Barnard1975First
-tex/appendices/app04.tex	71	Kane (1975), p. 109, 	Kane	1975	109,	1	Kane1975Reexamination
-tex/appendices/app04.tex	72	Ch'iu (1972)	Ch'iu	1972		1	Chiu1972DuAnyang
-tex/appendices/app04.tex	76	Clark (1975), pp. 265-266	Clark	1975	265-266	1	Clark1975Calibration
-tex/appendices/app04.tex	77	Goodyear (1971), p. 181	Goodyear	1971	181	1	Goodyear1971Archaeological
-tex/appendices/app04.tex	77	Clark (1975)	Clark	1975		1	Clark1975Calibration
-tex/appendices/app04.tex	77	Barnard (1975)	Barnard	1975		1	Barnard1975First
-tex/appendices/app04.tex	80	Barnard (1975), p. 38	Barnard	1975	38	1	Barnard1975First
-tex/appendices/app04.tex	80	Kigoshi and Hasegawa (1966)	Kigoshi and Hasegawa	1966		1	Kigoshi1966Secular
-tex/appendices/app04.tex	80	Clark (1975), p. 260, 	Clark	1975	260,	1	Clark1975Calibration
-tex/appendices/app04.tex	83	Barnard (1975), pp. 	Barnard	1975		1	Barnard1975First
-tex/appendices/app04.tex	83	Clark (1975), pp. 252, 258-259	Clark	1975	252, 258-259	1	Clark1975Calibration
-tex/appendices/app04.tex	100	Dubs (1947)	Dubs	1947		1	Dubs1947Canon
-tex/appendices/app04.tex	111	Shima (1960), p. 51, 	Shima	1960	51,	1	Shima1960TiYi
-tex/appendices/app04.tex	111	Tung (1945)	Tung	1945		1	Tung1945Yin
-tex/appendices/app04.tex	111	Shima (1960), p. 52, 	Shima	1960	52,	1	Shima1960TiYi
-tex/appendices/app04.tex	111	Tung (1945)	Tung	1945		1	Tung1945Yin
-tex/appendices/app04.tex	117	Bishop (1932), pp. 234-235	Bishop	1932	234-235	1	Bishop1932Chronology
-tex/appendices/app04.tex	117	Lei (1931)	Lei	1931		1	Lei1931Yinzhou
-tex/appendices/app04.tex	124	Bishop (1932), pp. 232-237	Bishop	1932	232-237	1	Bishop1932Chronology
-tex/appendices/app04.tex	141	Knoblock (1964)	Knoblock	1964		1	Knoblock1964The
-tex/appendices/app05.tex	58	Takashima (1976)	Takashima	1976		1	Takashima1976Subordinate
-tex/appendices/app05.tex	97	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/appendices/app05.tex	121	Tung (1965), pp. 91-92	Tung	1965	91-92	1	Tung1965Chia
-tex/appendices/app05.tex	121	Shima (1958), pp. 452-454, 	Shima	1958	452-454,	1	Shima1958Inkyo
-tex/appendices/app05.tex	141	Tung (1965), p. 90	Tung	1965	90	1	Tung1965Chia
-tex/appendices/app05.tex	142	Ch'eng Meng-chia (1956), p. 273	Ch'eng Meng-chia	1956	273	1	Chen1956Yin
-tex/appendices/app05.tex	142	Tung (1965), p. 90	Tung	1965	90	1	Tung1965Chia
-tex/appendices/app05.tex	142	Shima (1958), p. 409, 	Shima	1958	409,	1	Shima1958Inkyo
-tex/appendices/app05.tex	142	Tung (1945)	Tung	1945		1	Tung1945Yin
-tex/appendices/app05.tex	145	Tung (1965), p. 98, 	Tung	1965	98,	1	Tung1965Chia
-tex/appendices/app05.tex	149	Tung (1965), p. 93 	Tung	1965	93	1	Tung1965Chia
-tex/appendices/app05.tex	162	See Shima (1958), p. 192	See Shima	1958	192	1	Shima1958Inkyo
-tex/appendices/app05.tex	162	Mickel (1976), pp. 158-168	Mickel	1976	158-168	1	Mickel1976Semantic
-tex/chapters/ch01.tex	17	Eisenberger (1938)	Eisenberger	1938		1	Eisenberger1938Das
-tex/chapters/ch01.tex	17	Caquot and Leibovici (1968)	Caquot and Leibovici	1968		1	CaquotLeibovici1968Divination
-tex/chapters/ch01.tex	23	Cooper (1936), pp. 34, 38	Cooper	1936	34, 38	1	Cooper1936Scapulimancy
-tex/chapters/ch01.tex	23	Eisenberger (1938), pp. 105, 111-112, 	Eisenberger	1938	105, 111-112,	1	Eisenberger1938Das
-tex/chapters/ch01.tex	23	Cooper (1936), pp. 39-40, 	Cooper	1936	39-40,	1	Cooper1936Scapulimancy
-tex/chapters/ch01.tex	31	Wheatley (1971), pp. 27-28	Wheatley	1971	27-28	1	Wheatley1971Pivot
-tex/chapters/ch01.tex	36	Yagimoto (1966)	Yagimoto	1966		1	Yagimoto1966Kiboku
-tex/chapters/ch01.tex	36	Hayashi Taisuke (1909), pp. 1243-1244, 	Hayashi Taisuke	1909	1243-1244,	1	Hayashi1909Shinkoku
-tex/chapters/ch01.tex	36	Fujino (1960), p. 22, 	Fujino	1960	22,	1	Fujino1960Kiboku
-tex/chapters/ch01.tex	37	Tsunoda (1951), p. 12	Tsunoda	1951	12	1	Tsunoda1951Japan
-tex/chapters/ch01.tex	38	Chamberlain (1883), p. 	Chamberlain	1883		1	Chamberlain1883Kojiki
-tex/chapters/ch01.tex	38	Satow (1879), pp. 429-433	Satow	1879	429-433	1	Satow1879Ancient
-tex/chapters/ch01.tex	38	Philippi (1968), p. 52, 	Philippi	1968	52,	1	Philippi1968Kojiki
-tex/chapters/ch01.tex	39	Maenchen-Helfen (1973), pp. 268-270, 	Maenchen-Helfen	1973	268-270,	1	MaenchenHelfen1973World
-tex/chapters/ch01.tex	39	Eisenberger (1938), p. 81, 	Eisenberger	1938	81,	1	Eisenberger1938Das
-tex/chapters/ch01.tex	39	Cooper (1936), p. 34	Cooper	1936	34	1	Cooper1936Scapulimancy
-tex/chapters/ch01.tex	39	Eisenberger (1938), p. 50	Eisenberger	1938	50	1	Eisenberger1938Das
-tex/chapters/ch01.tex	39	Satow (1879), p. 431	Satow	1879	431	1	Satow1879Ancient
-tex/chapters/ch01.tex	39	Eisenberger (1938), p. 81	Eisenberger	1938	81	1	Eisenberger1938Das
-tex/chapters/ch01.tex	39	Rockhill (1900), pp. 187–188	Rockhill	1900	187–188	1	Rockhill1900Journey
-tex/chapters/ch01.tex	39	Wieger (1923), pp. 1676-1677	Wieger	1923	1676-1677	1	Wieger1923Textes
-tex/chapters/ch01.tex	40	Cooper (1936), p. 29	Cooper	1936	29	1	Cooper1936Scapulimancy
-tex/chapters/ch01.tex	41	Speck (1935), p. 128	Speck	1935	128	1	Speck1935Naskapi
-tex/chapters/ch01.tex	41	Cooper (1936), pp. 3031, 38	Cooper	1936	3031, 38	1	Cooper1936Scapulimancy
-tex/chapters/ch01.tex	41	Hultkrantz (1968), p. 82	Hultkrantz	1968	82	1	Hultkrantz1968La
-tex/chapters/ch01.tex	41	Needham (1971), p. 544	Needham	1971	544	1	Needham1971Science
-tex/chapters/ch01.tex	45	Eisenberger (1938), p. 91	Eisenberger	1938	91	1	Eisenberger1938Das
-tex/chapters/ch01.tex	45	Eisenberger (1938), pp. 8189	Eisenberger	1938	8189	1	Eisenberger1938Das
-tex/chapters/ch01.tex	45	Montell (1945), pp. 380-381	Montell	1945	380-381	1	Montell1945Ethnographer
-tex/chapters/ch01.tex	45	Bawden (1958)	Bawden	1958		1	Bawden1958Practice
-tex/chapters/ch01.tex	45	Roux and Boratav (1968), pp. 302-306	Roux and Boratav	1968	302-306	1	Roux1968Divination
-tex/chapters/ch01.tex	45	Bogoras (1907), pp. 487-490	Bogoras	1907	487-490	1	Bogoras1907Chukchee
-tex/chapters/ch01.tex	45	Eisenberger (1938), pp. 78-79	Eisenberger	1938	78-79	1	Eisenberger1938Das
-tex/chapters/ch01.tex	45	Fujino (1960)	Fujino	1960		1	Fujino1960Kiboku
-tex/chapters/ch01.tex	45	Lot-Falck (1968), pp. 255-256	Lot-Falck	1968	255-256	1	LotFalck1968Divination
-tex/chapters/ch01.tex	45	Speck (1935), pp. 127-159	Speck	1935	127-159	1	Speck1935Naskapi
-tex/chapters/ch01.tex	45	Hultkrantz (1968), pp. 74–83	Hultkrantz	1968	74–83	1	Hultkrantz1968La
-tex/chapters/ch01.tex	56	Eisenberger (1938), pp. 101-106, 	Eisenberger	1938	101-106,	1	Eisenberger1938Das
-tex/chapters/ch01.tex	56	Roux and Boratav (1968), p. 302, 	Roux and Boratav	1968	302,	1	Roux1968Divination
-tex/chapters/ch01.tex	56	Hultkrantz (1968), p. 83, 	Hultkrantz	1968	83,	1	Hultkrantz1968La
-tex/chapters/ch01.tex	56	Ho (1975), p. 285	Ho	1975	285	1	Ho1975Cradle
-tex/chapters/ch01.tex	98	Hopwood (1925)	Hopwood	1925		1	Hopwood1925New
-tex/chapters/ch01.tex	98	Chardin and Young (1936), pp. 44-52, 56, 58 	Chardin and Young	1936	44-52, 56, 58	1	ChardinYoung1936Mammalian
-tex/chapters/ch01.tex	101	MacGregor (1941), p. 444, 	MacGregor	1941	444,	1	MacGregor1941Domestic
-tex/chapters/ch01.tex	105	De Chardin and Young (1936), pp. 56, 58	De Chardin and Young	1936	56, 58	1	ChardinYoung1936Mammalian
-tex/chapters/ch01.tex	111	Gibson (1934)	Gibson	1934		1	Gibson1934Picture
-tex/chapters/ch01.tex	130	Kaizuka (1967), p. 197	Kaizuka	1967	197	1	Kaizuka1967Kodai
-tex/chapters/ch01.tex	130	Ho (1975), p. 283, 	Ho	1975	283,	1	Ho1975Cradle
-tex/chapters/ch01.tex	137	Ting Su (1969)	Ting Su	1969		1	Su1969Shuo
-tex/chapters/ch01.tex	140	Crump (1963), p. 170	Crump	1963	170	1	Crump1963Dragon
-tex/chapters/ch01.tex	140	Vandermeersch (1974), p. 38	Vandermeersch	1974	38	1	Vandermeersch1974Tortue
-tex/chapters/ch01.tex	148	Shima (1958), p. 464, 	Shima	1958	464,	1	Shima1958Inkyo
-tex/chapters/ch01.tex	148	Shirakawa (1957), pp. 14, 33, 	Shirakawa	1957	14, 33,	1	Shirakawa1957Indai
-tex/chapters/ch01.tex	163	Liulu (1945)	Liulu	1945		1	LiuLu1945Jiaku
-tex/chapters/ch01.tex	185	Kaizuka (1967), p. 199	Kaizuka	1967	199	1	Kaizuka1967Kodai
-tex/chapters/ch01.tex	185	Shirakawa (1972), p. 19	Shirakawa	1972	19	1	Shirakawa1972Kokotsubun
-tex/chapters/ch01.tex	193	Levine (1919), p. 37	Levine	1919	37	1	Levine1919Farm
-tex/chapters/ch01.tex	215	Hayashi Minao (1971), pp. 43-45 	Hayashi Minao	1971	43-45	1	Hayashi1971Chosa
-tex/chapters/ch01.tex	241	Sisson (1953), pp. 84-86, 126, 145–146	Sisson	1953	84-86, 126, 145–146	1	Sisson1953Anatomy
-tex/chapters/ch01.tex	261	Ting Su (1969), p. 107 	Ting Su	1969	107	1	Su1969Shuo
-tex/chapters/ch01.tex	264	Smith (1931)	Smith	1931		1	Smith1931Fauna
-tex/chapters/ch01.tex	264	Carr (1952), pp. 37-39	Carr	1952	37-39	1	Carr1952Handbook
-tex/chapters/ch01.tex	264	Romer (1956), p. 32	Romer	1956	32	1	Romer1956Osteology
-tex/chapters/ch01.tex	268	Smith (1931), p. 50	Smith	1931	50	1	Smith1931Fauna
-tex/chapters/ch01.tex	286	Creel (1935), p. 176, 	Creel	1935	176,	1	Creel1935Dragon
-tex/chapters/ch01.tex	304	Takashima (1973), p. 370, 	Takashima	1973	370,	1	Takashima1973Negatives
-tex/chapters/ch01.tex	324	Kaizuka (1967), pp. 199–200	Kaizuka	1967	199–200	1	Kaizuka1967Kodai
-tex/chapters/ch01.tex	324	Shirakawa (1972), p. 19	Shirakawa	1972	19	1	Shirakawa1972Kokotsubun
-tex/chapters/ch01.tex	328	Hayashi Minao (1968), pp. 50-67	Hayashi Minao	1968	50-67	1	Hayashi1968Inshu
-tex/chapters/ch01.tex	328	Matsumaru (1970), pp. 77–78, 	Matsumaru	1970	77–78,	1	Matsumaru1970Inshu
-tex/chapters/ch01.tex	375	Lao Kan (1957)	Lao Kan	1957		1	Lao1957Shih
-tex/chapters/ch01.tex	431	Gibson (1938), p. 13, 	Gibson	1938	13,	1	Gibson1938Domestic
-tex/chapters/ch01.tex	484	Ju (1969), p. 81	Ju	1969	81	1	Ju1969Metaphysical
-tex/chapters/ch01.tex	488	Chavannes (1911), p. 132	Chavannes	1911	132	1	Chavannes1911Divination
-tex/chapters/ch01.tex	489	Fujino (1960), pp. 13, 25	Fujino	1960	13, 25	1	Fujino1960Kiboku
-tex/chapters/ch01.tex	489	Kaizuka (1967), p. 201, 	Kaizuka	1967	201,	1	Kaizuka1967Kodai
-tex/chapters/ch01.tex	489	Jochelson (1905), pp. 73-74	Jochelson	1905	73-74	1	Jochelson1905Religion
-tex/chapters/ch01.tex	489	Fujino (1960), p. 15	Fujino	1960	15	1	Fujino1960Kiboku
-tex/chapters/ch01.tex	573	Li Daliang (1972), pp. 8–30,	Li Daliang	1972	8–30,	1	Li1972Kuei
-tex/chapters/ch01.tex	607	Li Daliang (1972), pp. 27-30, 	Li Daliang	1972	27-30,	1	Li1972Kuei
-tex/chapters/ch02.tex	34	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch02.tex	34	Miyazaki (1970)	Miyazaki	1970		1	Miyazaki1970Chiigoku
-tex/chapters/ch02.tex	37	Li Daliang (1972), pp. 120-126	Li Daliang	1972	120-126	1	Li1972Kuei
-tex/chapters/ch02.tex	43	See Takashima (1973), p. 324, 	See Takashima	1973	324,	1	Takashima1973Negatives
-tex/chapters/ch02.tex	43	Takashima (1973)	Takashima	1973		1	Takashima1973Negatives
-tex/chapters/ch02.tex	43	Serruys (1974)	Serruys	1974		1	Serruys1974The
-tex/chapters/ch02.tex	49	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch02.tex	52	Matsumaru (1963)	Matsumaru	1963		1	Matsumaru1963Inkyo
-tex/chapters/ch02.tex	67	Keightley (1973a)	Keightley	1973a		1	Keightley1973aShang
-tex/chapters/ch02.tex	77	Shima (1958), p. 34, 	Shima	1958	34,	1	Shima1958Inkyo
-tex/chapters/ch02.tex	106	Kaizuka (1946), p. 236	Kaizuka	1946	236	1	Kaizuka1946Chiigoku
-tex/chapters/ch02.tex	115	Matsumaru (1963)	Matsumaru	1963		1	Matsumaru1963Inkyo
-tex/chapters/ch02.tex	115	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch02.tex	115	Zhang Zongdong (1970), pp. 23, 27, 	Zhang Zongdong	1970	23, 27,	1	Zhang1970Der
-tex/chapters/ch02.tex	115	Shirakawa (1972), p. 125	Shirakawa	1972	125	1	Shirakawa1972Kokotsubun
-tex/chapters/ch02.tex	115	Maekawa (1974)	Maekawa	1974		1	Maekawa1974Koken
-tex/chapters/ch02.tex	117	Matsumaru (1963), pp. 62-66, 72, 	Matsumaru	1963	62-66, 72,	1	Matsumaru1963Inkyo
-tex/chapters/ch02.tex	130	Eisenberger (1938), p. 109	Eisenberger	1938	109	1	Eisenberger1938Das
-tex/chapters/ch02.tex	212	Kaizuka (1947), p. 468, 	Kaizuka	1947	468,	1	Kaizuka1947Kiboku
-tex/chapters/ch02.tex	224	Keightley (1972), pp. 35-37	Keightley	1972	35-37	1	Keightley1972New
-tex/chapters/ch02.tex	291	Keightley (1973a), pp. 13-19, 37-38, 45-49	Keightley	1973a	13-19, 37-38, 45-49	1	Keightley1973aShang
-tex/chapters/ch02.tex	291	As Li Daliang (1972), pp. 104-107, 	As Li Daliang	1972	104-107,	1	Li1972Kuei
-tex/chapters/ch02.tex	309	Li Daliang (1972), pp. 100-103	Li Daliang	1972	100-103	1	Li1972Kuei
-tex/chapters/ch02.tex	319	Li Daliang (1972), pp. 166-169, 	Li Daliang	1972	166-169,	1	Li1972Kuei
-tex/chapters/ch02.tex	338	Gadd (1948), pp. 56-57	Gadd	1948	56-57	1	Gadd1948Ideas
-tex/chapters/ch02.tex	338	Parke and Wormell (1956), pp. 39-40	Parke and Wormell	1956	39-40	1	ParkeWormell1956Delphic
-tex/chapters/ch02.tex	338	Oppenheim (1964), pp. 214, 227	Oppenheim	1964	214, 227	1	Oppenheim1964Ancient
-tex/chapters/ch02.tex	362	Hopkins (1938), p. 416, 	Hopkins	1938	416,	1	Hopkins1938Ancestral
-tex/chapters/ch02.tex	362	Keightley (1973a), pp. 3–6	Keightley	1973a	3–6	1	Keightley1973aShang
-tex/chapters/ch02.tex	443	Takashima (1973), pp. 91-114	Takashima	1973	91-114	1	Takashima1973Negatives
-tex/chapters/ch02.tex	448	Takashima (1973), p. 110, 	Takashima	1973	110,	1	Takashima1973Negatives
-tex/chapters/ch02.tex	449	Zhang Zongdong (1970), p. 71, 	Zhang Zongdong	1970	71,	1	Zhang1970Der
-tex/chapters/ch02.tex	449	Serruys (1974), p. 70	Serruys	1974	70	1	Serruys1974The
-tex/chapters/ch02.tex	470	Shirakawa (1972), p. 26	Shirakawa	1972	26	1	Shirakawa1972Kokotsubun
-tex/chapters/ch02.tex	481	Britton (1940), pp. 7-8	Britton	1940	7-8	1	Britton1940Fifty
-tex/chapters/ch02.tex	481	Thompson (1969), p. 34	Thompson	1969	34	1	Thompson1969ChineseReligion
-tex/chapters/ch02.tex	481	Wilkinson (1973), p. 60	Wilkinson	1973	60	1	Wilkinson1973The
-tex/chapters/ch02.tex	518	Chu (1935)	Chu	1935		1	Chu1935Shangshi
-tex/chapters/ch02.tex	536	Matsumaru (1959), p. 8, 	Matsumaru	1959	8,	1	Matsumaru1959Kokotsu
-tex/chapters/ch02.tex	536	Britton (1940), p. 3, 	Britton	1940	3,	1	Britton1940Fifty
-tex/chapters/ch02.tex	536	Watson (1963), p. 42	Watson	1963	42	1	Watson1963Handbook
-tex/chapters/ch02.tex	536	Barnard (1960a), p. 482, 	Barnard	1960a	482,	1	Barnard1960aReview
-tex/chapters/ch02.tex	545	Barnard (1960a), p. 485	Barnard	1960a	485	1	Barnard1960aReview
-tex/chapters/ch02.tex	553	Barnard (1973), p. 26, 	Barnard	1973	26,	1	Barnard1973Chu
-tex/chapters/ch02.tex	558	Matsumaru (1959), p. 8	Matsumaru	1959	8	1	Matsumaru1959Kokotsu
-tex/chapters/ch02.tex	608	Serruys (1974), pp. 16-17, 	Serruys	1974	16-17,	1	Serruys1974The
-tex/chapters/ch02.tex	608	Li Daliang (1972), pp. 31-52, 	Li Daliang	1972	31-52,	1	Li1972Kuei
-tex/chapters/ch02.tex	616	Li Daliang (1972), pp. 89-94	Li Daliang	1972	89-94	1	Li1972Kuei
-tex/chapters/ch02.tex	632	Li Daliang (1972), pp. 8-30, 	Li Daliang	1972	8-30,	1	Li1972Kuei
-tex/chapters/ch02.tex	642	Shirakawa (1972), pp. 21, 30, 	Shirakawa	1972	21, 30,	1	Shirakawa1972Kokotsubun
-tex/chapters/ch02.tex	642	Matsumaru (1963), pp. 36, 51-52	Matsumaru	1963	36, 51-52	1	Matsumaru1963Inkyo
-tex/chapters/ch02.tex	678	Li Daliang (1972), p. 122, 	Li Daliang	1972	122,	1	Li1972Kuei
-tex/chapters/ch02.tex	696	Britton (1937), p. 1, 	Britton	1937	1,	1	Britton1937Oracle
-tex/chapters/ch02.tex	699	Britton (1940), p. 7, 	Britton	1940	7,	1	Britton1940Fifty
-tex/chapters/ch02.tex	699	Britton (1940), pp. 15-16, 	Britton	1940	15-16,	1	Britton1940Fifty
-tex/chapters/ch02.tex	706	Britton (1937), p. 1	Britton	1937	1	1	Britton1937Oracle
-tex/chapters/ch02.tex	716	Benedetti-Pichler (1937), p. 152	Benedetti-Pichler	1937	152	1	BenedettiPichler1937Microchemical
-tex/chapters/ch02.tex	721	Lin Sheng (1964), pp. 99, 101	Lin Sheng	1964	99, 101	1	Lin1964Work
-tex/chapters/ch02.tex	736	Britton (1940), p. 7	Britton	1940	7	1	Britton1940Fifty
-tex/chapters/ch02.tex	738	Shirakawa (1972), p. 29, 	Shirakawa	1972	29,	1	Shirakawa1972Kokotsubun
-tex/chapters/ch03.tex	14	Lefeuvre (1975), p. 17, 	Lefeuvre	1975	17,	1	Lefeuvre1975Les
-tex/chapters/ch03.tex	19	Kaizuka (1946), pp. 191-201	Kaizuka	1946	191-201	1	Kaizuka1946Chiigoku
-tex/chapters/ch03.tex	19	Jung Keng (1947)	Jung Keng	1947		1	Jung1947Chiaku
-tex/chapters/ch03.tex	19	Creel (1938), pp. 1-16	Creel	1938	1-16	1	Creel1938Studies
-tex/chapters/ch03.tex	19	Lefeuvre (1975)	Lefeuvre	1975		1	Lefeuvre1975Les
-tex/chapters/ch03.tex	25	Matsumaru (1973), pp. 19--22, 	Matsumaru	1973	19--22,	1	Matsumaru1973Oracle
-tex/chapters/ch03.tex	25	Jung Keng (1947), pp. 15--30	Jung Keng	1947	15--30	1	Jung1947Chiaku
-tex/chapters/ch03.tex	25	Lefeuvre (1975)	Lefeuvre	1975		1	Lefeuvre1975Les
-tex/chapters/ch03.tex	51	CKWP (1965)	CKWP	1965		1	CKWP1965Chia
-tex/chapters/ch03.tex	82	Teng and Biggerstaff (1971), p. 47	Teng and Biggerstaff	1971	47	1	Teng1971Annotated
-tex/chapters/ch03.tex	92	Mattos (1976)	Mattos	1976		1	Mattos1976Reference
-tex/chapters/ch03.tex	109	Pulleyblank (1968)	Pulleyblank	1968		1	Pulleyblank1968Review
-tex/chapters/ch03.tex	137	Keightley (1969a)	Keightley	1969a		1	Keightley1969aBook
-tex/chapters/ch03.tex	177	Kaizuka Shigeki (1967)	Kaizuka Shigeki	1967		1	Kaizuka1967Kodai
-tex/chapters/ch03.tex	177	Shirakawa Shizuka (1972)	Shirakawa Shizuka	1972		1	Shirakawa1972Kokotsubun
-tex/chapters/ch03.tex	177	Ya-nung (1955)	Ya-nung	1955		1	LiYanung1955Yintai
-tex/chapters/ch03.tex	180	Akatsuka (1977)	Akatsuka	1977		1	Akatsuka1977Chugoku
-tex/chapters/ch03.tex	180	Zhang Zongdong (1970)	Zhang Zongdong	1970		1	Zhang1970Der
-tex/chapters/ch03.tex	195	Smith (1972)	Smith	1972		1	Smith1972Parrot
-tex/chapters/ch03.tex	197	Winch (1964)	Winch	1964		1	Winch1964Understanding
-tex/chapters/ch03.tex	197	Lukes (1967)	Lukes	1967		1	Lukes1967Problems
-tex/chapters/ch03.tex	197	Wilson (1970)	Wilson	1970		1	Wilson1970Rationality
-tex/chapters/ch03.tex	197	Rorty (1972)	Rorty	1972		1	Rorty1972World
-tex/chapters/ch03.tex	212	Britton (1936), p. 207	Britton	1936	207	1	Britton1936Sinological
-tex/chapters/ch03.tex	216	Schafer (1972), pp. 150-151	Schafer	1972	150-151	1	Schafer1972Review
-tex/chapters/ch03.tex	233	Mickel (1976)	Mickel	1976		1	Mickel1976Semantic
-tex/chapters/ch03.tex	256	Takashima (1973), pp. 267-305	Takashima	1973	267-305	1	Takashima1973Negatives
-tex/chapters/ch03.tex	256	Serruys (1974), pp. 24, 46-58	Serruys	1974	24, 46-58	1	Serruys1974The
-tex/chapters/ch03.tex	256	Takashima (1976), p. 24, 	Takashima	1976	24,	1	Takashima1976Subordinate
-tex/chapters/ch03.tex	263	Takashima (1973)	Takashima	1973		1	Takashima1973Negatives
-tex/chapters/ch03.tex	263	Serruys (1974)	Serruys	1974		1	Serruys1974The
-tex/chapters/ch03.tex	264	Kryukov (1968)	Kryukov	1968		1	Kryukov1968Differential
-tex/chapters/ch03.tex	264	Huang Caijun (1964)	Huang Caijun	1964		1	Huang1964Measure
-tex/chapters/ch03.tex	264	Huang Jingxin (1958)	Huang Jingxin	1958		1	Huang1958Negatives
-tex/chapters/ch03.tex	264	Guan Xiechu (1953)	Guan Xiechu	1953		1	Kuan1953Yufa
-tex/chapters/ch03.tex	266	Takashima (1973), p. 190, 	Takashima	1973	190,	1	Takashima1973Negatives
-tex/chapters/ch03.tex	274	Serruys (1974), p. 92, 	Serruys	1974	92,	1	Serruys1974The
-tex/chapters/ch03.tex	281	Takashima (1973)	Takashima	1973		1	Takashima1973Negatives
-tex/chapters/ch03.tex	319	Takashima (1976)	Takashima	1976		1	Takashima1976Subordinate
-tex/chapters/ch03.tex	335	Barnard (1963), pp. 220-221	Barnard	1963	220-221	1	Barnard1963Reviews
-tex/chapters/ch03.tex	339	Karlgren (1963), p. 2	Karlgren	1963	2	1	Karlgren1963Loan
-tex/chapters/ch03.tex	367	Takashima (1973), pp. 30-31	Takashima	1973	30-31	1	Takashima1973Negatives
-tex/chapters/ch03.tex	408	Pulleyblank (1975)	Pulleyblank	1975		1	Pulleyblank1975Chinese
-tex/chapters/ch03.tex	412	Takashima (1973)	Takashima	1973		1	Takashima1973Negatives
-tex/chapters/ch03.tex	427	Eisenberger (1938), p. 67 	Eisenberger	1938	67	1	Eisenberger1938Das
-tex/chapters/ch03.tex	427	Wang (1972), p. 53 	Wang	1972	53	1	Wang1972The
-tex/chapters/ch03.tex	458	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch03.tex	497	CKWT (1965)	CKWT	1965		1	LiHsiaoting1965Chiaku
-tex/chapters/ch03.tex	558	Keightley (1973a)	Keightley	1973a		1	Keightley1973aShang
-tex/chapters/ch03.tex	558	Takashima (1976)	Takashima	1976		1	Takashima1976Subordinate
-tex/chapters/ch03.tex	620	Takashima (1973), pp. 336-338	Takashima	1973	336-338	1	Takashima1973Negatives
-tex/chapters/ch03.tex	620	Serruys (1974), pp. 29-30	Serruys	1974	29-30	1	Serruys1974The
-tex/chapters/ch03.tex	620	Nivison (1973)	Nivison	1973		1	Nivison1973Existence
-tex/chapters/ch03.tex	639	Li Daliang (1972), pp. 134-169	Li Daliang	1972	134-169	1	Li1972Kuei
-tex/chapters/ch03.tex	658	Takashima (1973), pp. 246–253, 399, 	Takashima	1973	246–253, 399,	1	Takashima1973Negatives
-tex/chapters/ch03.tex	658	Serruys (1974), pp. 24-25, 74, 	Serruys	1974	24-25, 74,	1	Serruys1974The
-tex/chapters/ch03.tex	658	Takashima (1977), pp. 11-18, 	Takashima	1977	11-18,	1	Takashima1977aExistence
-tex/chapters/ch03.tex	674	Takashima (1973), pp. 243, 394,	Takashima	1973	243, 394,	1	Takashima1973Negatives
-tex/chapters/ch03.tex	696	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch03.tex	698	Serruys (1974), p. 76	Serruys	1974	76	1	Serruys1974The
-tex/chapters/ch03.tex	754	Li Daliang (1972), pp. 69-79, 	Li Daliang	1972	69-79,	1	Li1972Kuei
-tex/chapters/ch03.tex	816	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch03.tex	816	Serruys (1974), p. 107, 	Serruys	1974	107,	1	Serruys1974The
-tex/chapters/ch03.tex	821	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch03.tex	821	Serruys (1974), pp. 113-114	Serruys	1974	113-114	1	Serruys1974The
-tex/chapters/ch03.tex	881	Zhang Zongdong (1970), pp. 34-45	Zhang Zongdong	1970	34-45	1	Zhang1970Der
-tex/chapters/ch04.tex	64	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch04.tex	86	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch04.tex	86	Zhang Zongdong (1970), p. 21, 	Zhang Zongdong	1970	21,	1	Zhang1970Der
-tex/chapters/ch04.tex	162	Ho (1975), p. 292	Ho	1975	292	1	Ho1975Cradle
-tex/chapters/ch04.tex	195	Ho (1975), p. 292	Ho	1975	292	1	Ho1975Cradle
-tex/chapters/ch04.tex	244	Takashima (1973), p. 358, 	Takashima	1973	358,	1	Takashima1973Negatives
-tex/chapters/ch04.tex	261	Miyazaki (1970), pp. 277-278, 	Miyazaki	1970	277-278,	1	Miyazaki1970Chiigoku
-tex/chapters/ch04.tex	338	Qu Wan (1948), p. 223	Qu Wan	1948	223	1	Chu1948Shihfa
-tex/chapters/ch04.tex	400	Hopkins (1934), pp. 80-81, 	Hopkins	1934	80-81,	1	Hopkins1934Archaic
-tex/chapters/ch04.tex	400	Kaizuka (1946), pp. 208209 	Kaizuka	1946	208209	1	Kaizuka1946Chiigoku
-tex/chapters/ch04.tex	422	Lu Shih-hsien (1961), p. 72	Lu Shih-hsien	1961	72	1	Lu1961Yinchi
-tex/chapters/ch04.tex	586	Ikeda (1964)	Ikeda	1964		1	Ikeda1964Inkyo
-tex/chapters/ch04.tex	604	Keightley (1973a), pp. 48-49	Keightley	1973a	48-49	1	Keightley1973aShang
-tex/chapters/ch04.tex	612	Kaizuka (1946), p. 237, 	Kaizuka	1946	237,	1	Kaizuka1946Chiigoku
-tex/chapters/ch04.tex	622	Zhang Zongdong (1970), p. 25	Zhang Zongdong	1970	25	1	Zhang1970Der
-tex/chapters/ch04.tex	626	Kaizuka (1946), p. 222	Kaizuka	1946	222	1	Kaizuka1946Chiigoku
-tex/chapters/ch04.tex	642	Ting Su (1966), p. 2	Ting Su	1966	2	1	Su1966Chiwen
-tex/chapters/ch04.tex	666	Kane (1973), pp. 340-342	Kane	1973	340-342	1	Kane1973Chronological
-tex/chapters/ch04.tex	748	Keightley (1973a), pp. 46-49	Keightley	1973a	46-49	1	Keightley1973aShang
-tex/chapters/ch04.tex	774	CKWP (1934)	CKWP	1934		1	CKWP1934Anyang
-tex/chapters/ch04.tex	774	CKWP (1965)	CKWP	1965		1	CKWP1965Chia
-tex/chapters/ch04.tex	804	Shima (1958)	Shima	1958		1	Shima1958Inkyo
-tex/chapters/ch04.tex	836	Shima (1966)	Shima	1966		1	Shima1966Bokuji
-tex/chapters/ch04.tex	942	Keightley (1973a), pp. 37-38,46-48,57	Keightley	1973a	37-38,46-48,57	1	Keightley1973aShang
-tex/chapters/ch04.tex	962	Wu Shih-ch'ang (1955)	Wu Shih-ch'ang	1955		1	Wu1955Broken
-tex/chapters/ch04.tex	962	Wu Shih-ch'ang (1955), p. 48, 	Wu Shih-ch'ang	1955	48,	1	Wu1955Broken
-tex/chapters/ch04.tex	1144	Ito (1959)	Ito	1959		1	Ito1959Anyo
-tex/chapters/ch04.tex	1223	Xiao Nan (1976)	Xiao Nan	1976		1	Hsiao1976Anyang
-tex/chapters/ch04.tex	1294	Karlbeck (1957)	Karlbeck	1957		1	Karlbeck1957Treasure
-tex/chapters/ch04.tex	1303	Jung Keng (1947), pp. 24,	Jung Keng	1947	24,	1	Jung1947Chiaku
-tex/chapters/ch05.tex	18	Kane (1973)	Kane	1973		1	Kane1973Chronological
-tex/chapters/ch05.tex	18	Britton (1940), p. 5, 	Britton	1940	5,	1	Britton1940Fifty
-tex/chapters/ch05.tex	18	Kane (1975), p. 99, 	Kane	1975	99,	1	Kane1975Reexamination
-tex/chapters/ch05.tex	18	Barnard (1959)	Barnard	1959		1	Barnard1959Remarks
-tex/chapters/ch05.tex	18	Akatsuka (1955)	Akatsuka	1955		1	Akatsuka1955Kohon
-tex/chapters/ch05.tex	18	Hayashi Minao (1968)	Hayashi Minao	1968		1	Hayashi1968Inshu
-tex/chapters/ch05.tex	24	Gelb (1967), p. 4	Gelb	1967	4	1	Gelb1967Approaches
-tex/chapters/ch05.tex	24	Fischer (1970), pp. 104-130	Fischer	1970	104-130	1	Fischer1970Historians
-tex/chapters/ch05.tex	28	Evans-Pritchard (1937)	Evans-Pritchard	1937		1	EvansPritchard1937Witchcraft
-tex/chapters/ch05.tex	28	Middleton (1960)	Middleton	1960		1	Middleton1960Lugbara
-tex/chapters/ch05.tex	28	Beattie (1967)	Beattie	1967		1	Beattie1967Divination
-tex/chapters/ch05.tex	28	Park (1967)	Park	1967		1	Park1967Divination
-tex/chapters/ch05.tex	28	Turner (1975)	Turner	1975		1	Turner1975Revelation
-tex/chapters/ch05.tex	28	Monroe (1974)	Monroe	1974		1	Monroe1974Ritual
-tex/chapters/ch05.tex	28	Ho (1975), pp. 223-235	Ho	1975	223-235	1	Ho1975Cradle
-tex/chapters/ch05.tex	43	Evans-Pritchard (1937), pp. 258-368 	Evans-Pritchard	1937	258-368	1	EvansPritchard1937Witchcraft
-tex/chapters/ch05.tex	43	Hultkrantz (1968), pp. 75, 86	Hultkrantz	1968	75, 86	1	Hultkrantz1968La
-tex/chapters/ch05.tex	43	Roux and Boratav (1968), p. 282	Roux and Boratav	1968	282	1	Roux1968Divination
-tex/chapters/ch05.tex	57	Vernant (1974), p. 10	Vernant	1974	10	1	Vernant1974Parole
-tex/chapters/ch05.tex	57	Keightley (1972)	Keightley	1972		1	Keightley1972New
-tex/chapters/ch05.tex	82	Clavier (1968)	Clavier	1968		1	Clavier1968Resurgences
-tex/chapters/ch05.tex	86	Waterbury (1942), pp. 1-3, 129	Waterbury	1942	1-3, 129	1	Waterbury1942Early
-tex/chapters/ch05.tex	120	Keightley (1973a), pp. 13-25, 37-38	Keightley	1973a	13-25, 37-38	1	Keightley1973aShang
-tex/chapters/ch05.tex	163	Keightley (1973a), pp. 13-25, 37-38	Keightley	1973a	13-25, 37-38	1	Keightley1973aShang
-tex/chapters/ch05.tex	189	Lefeuvre (1975), p. 16	Lefeuvre	1975	16	1	Lefeuvre1975Les
-tex/chapters/ch05.tex	208	Creel (1938), p. 2	Creel	1938	2	1	Creel1938Studies
-tex/chapters/ch05.tex	214	Karlbeck (1957), pp. 174--192	Karlbeck	1957	174--192	1	Karlbeck1957Treasure
-tex/chapters/ch05.tex	221	Barnard (1968), p. 114, 	Barnard	1968	114,	1	Barnard1968Incidence
-tex/chapters/ch05.tex	221	Barnard (1960a), p. 481	Barnard	1960a	481	1	Barnard1960aReview
-tex/chapters/ch05.tex	232	Yetts (1954), p. 	Yetts	1954		1	Yetts1954Shang
-tex/chapters/ch05.tex	233	White (1945), pp. 75, 77	White	1945	75, 77	1	White1945Bone
-tex/chapters/ch05.tex	238	As Yetts (1954), p. 	As Yetts	1954		1	Yetts1954Shang
-tex/chapters/ch05.tex	401	Zhang Zongdong (1970), pp. 30-33	Zhang Zongdong	1970	30-33	1	Zhang1970Der
-tex/chapters/ch05.tex	456	Lefeuvre (1975), pp. 27-28,	Lefeuvre	1975	27-28,	1	Lefeuvre1975Les
-tex/chapters/ch05.tex	473	Woodhead (1967), pp. 78-83	Woodhead	1967	78-83	1	Woodhead1967Study
-tex/chapters/ch05.tex	491	Mickel (1974)	Mickel	1974		1	Mickel1974Reduplicated
-tex/chapters/ch05.tex	491	Jung Keng (1947), p. 22, 	Jung Keng	1947	22,	1	Jung1947Chiaku
-tex/chapters/ch05.tex	497	Britton (1935), pp. 1, 13	Britton	1935	1, 13	1	Britton1935Yin
-tex/chapters/ch05.tex	520	Serruys (1974), pp. 15-19, 	Serruys	1974	15-19,	1	Serruys1974The
-tex/chapters/ch05.tex	526	Zhang Zongdong (1970)	Zhang Zongdong	1970		1	Zhang1970Der
-tex/chapters/ch05.tex	526	Takashima (1973)	Takashima	1973		1	Takashima1973Negatives
-tex/chapters/ch05.tex	570	Serruys (1974), pp. 15-19	Serruys	1974	15-19	1	Serruys1974The
-tex/chapters/ch05.tex	570	Woodhead (1967), pp. 67-76, 	Woodhead	1967	67-76,	1	Woodhead1967Study
-tex/chapters/ch05.tex	577	Mickel (1976b)	Mickel	1976b		1	Mickel1976bThree
-tex/chapters/ch05.tex	577	Mickel (1974)	Mickel	1974		1	Mickel1974Reduplicated
-tex/chapters/ch05.tex	676	Creel (1970), p. 31	Creel	1970	31	1	Creel1970Origins
-tex/chapters/ch05.tex	676	Van Gulik (1961), p. 4	Van Gulik	1961	4	1	Van1961Sexual
-tex/chapters/ch05.tex	696	Zhang Zongdong (1970)	Zhang Zongdong	1970		1	Zhang1970Der
-tex/chapters/ch05.tex	696	Wheatley (1971)	Wheatley	1971		1	Wheatley1971Pivot
-tex/chapters/ch05.tex	696	Vandermeersch (1975)	Vandermeersch	1975		1	Vandermeersch1975Wangdao
-tex/chapters/ch05.tex	706	Hughes (1961), p. 9	Hughes	1961	9	1	Hughes1961Consciousness
-tex/chapters/ch05.tex	734	Evans-Pritchard (1937), pp. 270, 313	Evans-Pritchard	1937	270, 313	1	EvansPritchard1937Witchcraft
-tex/chapters/ch05.tex	744	Strauss (1969), p. 10	Strauss	1969	10	1	LeviStrauss1969Raw
-tex/chapters/ch05.tex	744	Kluckhohn and Leighton (1970), p. 348	Kluckhohn and Leighton	1970	348	1	Kluckhohn1970The
-tex/chapters/ch05.tex	751	Bloch (1953), p. 151	Bloch	1953	151	1	Bloch1953Craft
-tex/chapters/ch05.tex	756	Winch (1964)	Winch	1964		1	Winch1964Understanding
-tex/chapters/ch05.tex	770	Serruys (1974), pp. 15-19, 	Serruys	1974	15-19,	1	Serruys1974The
-tex/chapters/ch05.tex	771	Zhang Zongdong (1970)	Zhang Zongdong	1970		1	Zhang1970Der
-tex/chapters/ch05.tex	771	Takashima (1973)	Takashima	1973		1	Takashima1973Negatives
-tex/chapters/ch05.tex	782	Serruys (1974), pp. 15-19	Serruys	1974	15-19	1	Serruys1974The
-tex/chapters/ch05.tex	782	Woodhead (1967), pp. 67-76, 	Woodhead	1967	67-76,	1	Woodhead1967Study
-tex/chapters/ch05.tex	784	Mickel (1976b)	Mickel	1976b		1	Mickel1976bThree
-tex/chapters/ch05.tex	784	Mickel (1974)	Mickel	1974		1	Mickel1974Reduplicated
-tex/chapters/ch05.tex	799	Lindholm (1931)	Lindholm	1931		1	Lindholm1931Uber
-tex/chapters/ch05.tex	801	Pope (1935)	Pope	1935		1	Pope1935Reptiles
-tex/chapters/ch05.tex	808	Wu (1943)	Wu	1943		1	Wu1943Notes
-tex/chapters/ch05.tex	812	Auffenberg (1962)	Auffenberg	1962		1	Auffenberg1962Status
-tex/chapters/ch05.tex	816	McDowell (1964)	McDowell	1964		1	McDowell1964Partition
-tex/chapters/ch05.tex	822	Ting Su (1969)	Ting Su	1969		1	Su1969Shuo
-tex/frontmatter/book-preamble.tex	64	Karlbeck (1957), pp. 174-192	Karlbeck	1957	174-192	1	Karlbeck1957Treasure
-tex/frontmatter/book-preamble.tex	64	Tung (1965), pp. 14-15	Tung	1965	14-15	1	Tung1965Chia
-tex/frontmatter/book-preamble.tex	64	Wheatley (1971), pp. 39-47	Wheatley	1971	39-47	1	Wheatley1971Pivot
-tex/frontmatter/book-preamble.tex	64	Tung (1945)	Tung	1945		1	Tung1945Yin
-tex/frontmatter/book-preamble.tex	64	Pope (1955), p. 66	Pope	1955	66	1	Pope1955ReptileWorld
-tex/frontmatter/preface.tex	27	Soper (1966)	Soper	1966		1	Soper1966Early
-tex/frontmatter/preface.tex	27	Kane (1973), pp. 356-358	Kane	1973	356-358	1	Kane1973Chronological
-tex/frontmatter/preface.tex	27	Chang Kwang-chih (1968), p. 234	Chang Kwang-chih	1968	234	1	Chang1968Archaeology
-tex/frontmatter/preface.tex	27	Creel (1938), pp. 63-69	Creel	1938	63-69	1	Creel1938Studies
-tex/frontmatter/preface.tex	27	Matsumoto Masaaki (1966), pp. 420-433	Matsumoto Masaaki	1966	420-433	1	Matsumoto1966Shunju
-tex/frontmatter/preface.tex	27	Wheatley (1971), pp. 1314, 420	Wheatley	1971	1314, 420	1	Wheatley1971Pivot
-tex/frontmatter/preface.tex	27	Ho (1975), p. 307, 	Ho	1975	307,	1	Ho1975Cradle
-tex/frontmatter/preface.tex	42	Barnard (1960b), pp. 499-500, 	Barnard	1960b	499-500,	1	Barnard1960bReview
-tex/frontmatter/preface.tex	42	Ke Yiqing (1939)	Ke Yiqing	1939		1	Ke1939Shuo
-tex/frontmatter/preface.tex	157	Chang Kwang-chih (1977)	Chang Kwang-chih	1977		1	Chang1977Archaeology
-tex/frontmatter/preface.tex	157	Chang (1968)	Chang	1968		1	Chang1968Archaeology
-tex/frontmatter/preface.tex	161	Nivison (1977a)	Nivison	1977a		1	Nivison1977aPronominal
-tex/frontmatter/preface.tex	163	Hao-liang (1977)	Hao-liang	1977		1	Yu1977Shuo
-tex/frontmatter/preface.tex	165	Mickel (1977a)	Mickel	1977a		1	Mickel1977aIndex
-tex/frontmatter/preface.tex	165	Britton (1935)	Britton	1935		1	Britton1935Yin
-tex/frontmatter/preface.tex	166	Creel (1937)	Creel	1937		1	Creel1937Birth
-tex/frontmatter/preface.tex	172	Chiang Hung (1976)	Chiang Hung	1976		1	Hung1976Panlongcheng
-tex/frontmatter/preface.tex	174	Shen Wenzhuo (1977)	Shen Wenzhuo	1977		1	Shen1977Fuyu
+file	line	raw	surname	year	pages	source_kind	term_key	term_category	candidate_count	candidate_key
+tex/appendices/app01.tex	14	Ping (1930)	Ping	1930		plain			1	Ping1930Notes
+tex/appendices/app01.tex	15	Lindholm (1931)	Lindholm	1931		plain			1	Lindholm1931Uber
+tex/appendices/app01.tex	17	Pope (1935)	Pope	1935		plain			1	Pope1935Reptiles
+tex/appendices/app01.tex	26	Wu (1943)	Wu	1943		plain			1	Wu1943Notes
+tex/appendices/app01.tex	31	Auffenberg (1962)	Auffenberg	1962		plain			1	Auffenberg1962Status
+tex/appendices/app01.tex	35	McDowell (1964)	McDowell	1964		plain			1	McDowell1964Partition
+tex/appendices/app01.tex	43	Ting Su (1969)	Ting Su	1969		plain			1	Su1969Shuo
+tex/appendices/app01.tex	52	Ting Su (1969)	Ting Su	1969		plain			1	Su1969Shuo
+tex/appendices/app01.tex	68	Sokal (1965)	Sokal	1965		plain			1	THES1965Statistical
+tex/appendices/app01.tex	87	Nakamura (1934)	Nakamura	1934		plain			1	Nakamura1934Clemmys
+tex/appendices/app01.tex	87	Mao (1971)	Mao	1971		plain			1	Mao1971Turtles
+tex/appendices/app01.tex	103	Wu (1943)	Wu	1943		plain			1	Wu1943Notes
+tex/appendices/app01.tex	123	Smith (1931)	Smith	1931		plain			1	Smith1931Fauna
+tex/appendices/app01.tex	123	Pritchard (1967)	Pritchard	1967		plain			1	Pritchard1967Living
+tex/appendices/app01.tex	129	Bien (1937)	Bien	1937		plain			1	Bien1937Turtle
+tex/appendices/app01.tex	130	McDowell (1964)	McDowell	1964		plain			1	McDowell1964Partition
+tex/appendices/app01.tex	131	Mao (1971)	Mao	1971		plain			1	Mao1971Turtles
+tex/appendices/app01.tex	131	Ping (1930)	Ping	1930		plain			1	Ping1930Notes
+tex/appendices/app01.tex	131	Lindholm (1931)	Lindholm	1931		plain			1	Lindholm1931Uber
+tex/appendices/app01.tex	132	Bien (1937)	Bien	1937		plain			1	Bien1937Turtle
+tex/appendices/app02.tex	19	\pinyinterm{zhang-bingquan} (1954), p. 218	Zhang Bingquan	1954	218	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/appendices/app02.tex	20	\pinyinterm{shi-zhangru} (1947), p. 45	Shi Zhangru	1947	45	pinyinterm	shi-zhangru	person	1	Shih1947Yinhsu
+tex/appendices/app02.tex	22	\pinyinterm{zhou-hongxiang-tight} (1973), p. 177	Zhou Hongxiang	1973	177	pinyinterm	zhou-hongxiang-tight	person	1	Chou1973Computer
+tex/appendices/app02.tex	25	\pinyinterm{hu-houxuan} (1944a), p. 5b	Hu Houxuan	1944a	5b	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/appendices/app02.tex	44	Tung (1933), p. 420	Tung	1933	420	plain			1	Tung1933Chia
+tex/appendices/app02.tex	44	\pinyinterm{chen-mengjia} (1956), p. 8	Chen Mengjia	1956	8	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/appendices/app02.tex	47	\pinyinterm{chen-mengjia} (1956), p. 8	Chen Mengjia	1956	8	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/appendices/app02.tex	47	\pinyinterm{xu-jinxiong-tight} (1973a), pp. 26, 126	Xu Jinxiong	1973a	26, 126	pinyinterm	xu-jinxiong-tight	person	1	Hsu1973aPuku
+tex/appendices/app02.tex	50	\pinyinterm{xu-jinxiong-tight} (1973a), pp. 2-3, 48-49	Xu Jinxiong	1973a	2-3, 48-49	pinyinterm	xu-jinxiong-tight	person	1	Hsu1973aPuku
+tex/appendices/app02.tex	62	\pinyinterm{shi-zhangru} (1947), p. 45	Shi Zhangru	1947	45	pinyinterm	shi-zhangru	person	1	Shih1947Yinhsu
+tex/appendices/app02.tex	63	\pinyinterm{hu-houxuan} (1944a), p. 5b	Hu Houxuan	1944a	5b	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/appendices/app02.tex	113	Tung (1949a), p. 259	Tung	1949a	259	plain			1	Tung1949aYin
+tex/appendices/app02.tex	113	\pinyinterm{shi-zhangru} (1959), p. 322	Shi Zhangru	1959	322	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/appendices/app02.tex	113	\pinyinterm{chen-mengjia} (1956), p. 156	Chen Mengjia	1956	156	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/appendices/app02.tex	127	\pinyinterm{luo-zhenyu} (1914), p. 107b	Luo Zhenyu	1914	107b	pinyinterm	luo-zhenyu	person	1	Lo1914Yinhsu
+tex/appendices/app02.tex	142	Hultkrantz (1968), p. 78	Hultkrantz	1968	78	plain			1	Hultkrantz1968La
+tex/appendices/app03.tex	27	Tung (1953), p. 375	Tung	1953	375	plain			1	Tung1953Chia
+tex/appendices/app03.tex	27	Tung (1953), p. 378	Tung	1953	378	plain			1	Tung1953Chia
+tex/appendices/app03.tex	27	Jianshou (1917)	Jianshou	1917		plain			1	Chienshou1917Yinxu
+tex/appendices/app03.tex	27	Fuyin (1925)	Fuyin	1925		plain			1	Fuyin1925Zhengwen
+tex/appendices/app03.tex	27	Tung (1953), pp. 380, 381	Tung	1953	380, 381	plain			1	Tung1953Chia
+tex/appendices/app03.tex	27	\pinyinterm{hu-houxuan} (1951), p. 65	Hu Houxuan	1951	65	pinyinterm	hu-houxuan	person	1	Hu1951Wushihnien
+tex/appendices/app03.tex	27	\pinyinterm{chen-mengjia} (1956), p. 47	Chen Mengjia	1956	47	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/appendices/app03.tex	27	\pinyinterm{zhang-bingquan} [1967], p. 831	Zhang Bingquan	1967	831	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/appendices/app03.tex	33	Tung (1929b)	Tung	1929b		plain			1	Tung1929bHsin
+tex/appendices/app03.tex	33	\pinyinterm{liu-yuanlin} (1974), p. 128	Liu Yuanlin	1974	128	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/appendices/app03.tex	33	\pinyinterm{shi-zhangru} (1959), pp. 320-323	Shi Zhangru	1959	320-323	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/appendices/app03.tex	33	\pinyinterm{hu-houxuan} (1944a), pp. 4a-5b	Hu Houxuan	1944a	4a-5b	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/appendices/app03.tex	33	\pinyinterm{chen-mengjia} [1956], p. 655	Chen Mengjia	1956	655	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/appendices/app03.tex	33	\pinyinterm{li-ji} [1933], p. 575	Li Ji	1933	575	pinyinterm	li-ji	person	1	LiChi1933Anyang
+tex/appendices/app03.tex	33	\pinyinterm{hu-houxuan} [1944a], pp. 4b-5a	Hu Houxuan	1944a	4b-5a	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/appendices/app03.tex	33	\pinyinterm{hu-houxuan} [1944a], p. 4b	Hu Houxuan	1944a	4b	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/appendices/app03.tex	76	\pinyinterm{hu-houxuan} (1944a), pp. 11b-12b	Hu Houxuan	1944a	11b-12b	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/appendices/app03.tex	96	Tung (1945)	Tung	1945		plain			1	Tung1945Yin
+tex/appendices/app03.tex	102	Tung (1945)	Tung	1945		plain			1	Tung1945Yin
+tex/appendices/app03.tex	106	Tung (1945)	Tung	1945		plain			1	Tung1945Yin
+tex/appendices/app03.tex	108	\pinyinterm{xu-jinxiong-tight} (1970b)	Xu Jinxiong	1970b		pinyinterm	xu-jinxiong-tight	person	1	Hsu1970bYenjiu
+tex/appendices/app04.tex	28	Barnard (1975), pp. 16-17	Barnard	1975	16-17	plain			1	Barnard1975First
+tex/appendices/app04.tex	28	Barnard (1972)	Barnard	1972		plain			1	Barnard1972Early
+tex/appendices/app04.tex	28	Tung (1945)	Tung	1945		plain			1	Tung1945Yin
+tex/appendices/app04.tex	28	Shima (1966)	Shima	1966		plain			1	Shima1966Bokuji
+tex/appendices/app04.tex	28	Shirakawa (1971), pp. 280–281	Shirakawa	1971	280–281	plain			1	Shirakawa1971Kimbun
+tex/appendices/app04.tex	30	Chavannes (1895)	Chavannes	1895		plain			1	Chavannes1895Memoires
+tex/appendices/app04.tex	30	Gardner (1961), p. 26	Gardner	1961	26	plain			1	Gardner1961Chinese
+tex/appendices/app04.tex	33	Saussure (1924), pp. 322-339	Saussure	1924	322-339	plain			1	Saussure1924Chronologie
+tex/appendices/app04.tex	33	Noda and Yabuuchi (1945), pp. 137-179	Noda and Yabuuchi	1945	137-179	plain			1	Noda1945Kanjo
+tex/appendices/app04.tex	36	Sivin (1969), p. 12	Sivin	1969	12	plain			1	Sivin1969Cosmos
+tex/appendices/app04.tex	39	Saussure (1924), pp. 330-331	Saussure	1924	330-331	plain			1	Saussure1924Chronologie
+tex/appendices/app04.tex	39	Noda and Yabuuchi (1945), p. 289	Noda and Yabuuchi	1945	289	plain			1	Noda1945Kanjo
+tex/appendices/app04.tex	42	Henseling (1970), pp. 949-979	Henseling	1970	949-979	plain			1	Eberhard1970Astronomie
+tex/appendices/app04.tex	42	Noda and Yabuuchi (1945), pp. 161-164	Noda and Yabuuchi	1945	161-164	plain			1	Noda1945Kanjo
+tex/appendices/app04.tex	47	Saussure (1924), pp. 330-331	Saussure	1924	330-331	plain			1	Saussure1924Chronologie
+tex/appendices/app04.tex	47	Noda and Yabuuchi (1945), p. 289	Noda and Yabuuchi	1945	289	plain			1	Noda1945Kanjo
+tex/appendices/app04.tex	50	Fan (1962), p. 35	Fan	1962	35	plain			1	Fan1962Kuben
+tex/appendices/app04.tex	56	Barnard (1960b)	Barnard	1960b		plain			1	Barnard1960bReview
+tex/appendices/app04.tex	61	Barnard (1975), pp. 30-31	Barnard	1975	30-31	plain			1	Barnard1975First
+tex/appendices/app04.tex	68	Michels (1973), pp. 158-159	Michels	1973	158-159	plain			1	Michels1973Dating
+tex/appendices/app04.tex	71	Barnard (1975), p. 31	Barnard	1975	31	plain			1	Barnard1975First
+tex/appendices/app04.tex	71	Kane (1975), p. 109	Kane	1975	109	plain			1	Kane1975Reexamination
+tex/appendices/app04.tex	72	Ch'iu (1972)	Ch'iu	1972		plain			1	Chiu1972DuAnyang
+tex/appendices/app04.tex	76	Clark (1975), pp. 265-266	Clark	1975	265-266	plain			1	Clark1975Calibration
+tex/appendices/app04.tex	77	Goodyear (1971), p. 181	Goodyear	1971	181	plain			1	Goodyear1971Archaeological
+tex/appendices/app04.tex	77	Clark (1975)	Clark	1975		plain			1	Clark1975Calibration
+tex/appendices/app04.tex	77	Barnard (1975)	Barnard	1975		plain			1	Barnard1975First
+tex/appendices/app04.tex	80	Barnard (1975), p. 38	Barnard	1975	38	plain			1	Barnard1975First
+tex/appendices/app04.tex	80	Kigoshi and Hasegawa (1966)	Kigoshi and Hasegawa	1966		plain			1	Kigoshi1966Secular
+tex/appendices/app04.tex	80	Clark (1975), p. 260	Clark	1975	260	plain			1	Clark1975Calibration
+tex/appendices/app04.tex	83	Barnard (1975)	Barnard	1975		plain			1	Barnard1975First
+tex/appendices/app04.tex	83	Clark (1975), pp. 252, 258-259	Clark	1975	252, 258-259	plain			1	Clark1975Calibration
+tex/appendices/app04.tex	100	Dubs (1947)	Dubs	1947		plain			1	Dubs1947Canon
+tex/appendices/app04.tex	111	Shima (1960), p. 51	Shima	1960	51	plain			1	Shima1960TiYi
+tex/appendices/app04.tex	111	Tung (1945)	Tung	1945		plain			1	Tung1945Yin
+tex/appendices/app04.tex	111	Shima (1960), p. 52	Shima	1960	52	plain			1	Shima1960TiYi
+tex/appendices/app04.tex	111	Tung (1945)	Tung	1945		plain			1	Tung1945Yin
+tex/appendices/app04.tex	111	\pinyinterm{xu-jinxiong-tight} (1970), p. 26	Xu Jinxiong	1970	26	pinyinterm	xu-jinxiong-tight	person	1	Hsu1970New
+tex/appendices/app04.tex	117	Bishop (1932), pp. 234-235	Bishop	1932	234-235	plain			1	Bishop1932Chronology
+tex/appendices/app04.tex	117	Lei (1931)	Lei	1931		plain			1	Lei1931Yinzhou
+tex/appendices/app04.tex	124	Bishop (1932), pp. 232-237	Bishop	1932	232-237	plain			1	Bishop1932Chronology
+tex/appendices/app04.tex	141	Knoblock (1964)	Knoblock	1964		plain			1	Knoblock1964The
+tex/appendices/app05.tex	29	\pinyinterm{yan-yiping} [1961], p. 526	Yan Yiping	1961	526	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/appendices/app05.tex	58	Takashima (1976)	Takashima	1976		plain			1	Takashima1976Subordinate
+tex/appendices/app05.tex	97	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/appendices/app05.tex	121	Tung (1965), pp. 91-92	Tung	1965	91-92	plain			1	Tung1965Chia
+tex/appendices/app05.tex	121	Shima (1958), pp. 452-454	Shima	1958	452-454	plain			1	Shima1958Inkyo
+tex/appendices/app05.tex	141	Tung (1965), p. 90	Tung	1965	90	plain			1	Tung1965Chia
+tex/appendices/app05.tex	141	\pinyinterm{chen-mengjia} (1956), pp. 272-273	Chen Mengjia	1956	272-273	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/appendices/app05.tex	142	Ch'eng Meng-chia (1956), p. 273	Ch'eng Meng-chia	1956	273	plain			1	Chen1956Yin
+tex/appendices/app05.tex	142	Tung (1965), p. 90	Tung	1965	90	plain			1	Tung1965Chia
+tex/appendices/app05.tex	142	Shima (1958), p. 409	Shima	1958	409	plain			1	Shima1958Inkyo
+tex/appendices/app05.tex	142	Tung (1945)	Tung	1945		plain			1	Tung1945Yin
+tex/appendices/app05.tex	142	\pinyinterm{chen-mengjia} (1956), pp. 309-310	Chen Mengjia	1956	309-310	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/appendices/app05.tex	142	\pinyinterm{qu-wanli} (1948), p. 225	Qu Wanli	1948	225	pinyinterm	qu-wanli	person	1	Chu1948Shihfa
+tex/appendices/app05.tex	142	\pinyinterm{chen-mengjia} (1955), p. 59	Chen Mengjia	1955	59	pinyinterm	chen-mengjia	person	1	Chen1955ShangYin
+tex/appendices/app05.tex	145	Tung (1965), p. 98	Tung	1965	98	plain			1	Tung1965Chia
+tex/appendices/app05.tex	149	Tung (1965), p. 93	Tung	1965	93	plain			1	Tung1965Chia
+tex/appendices/app05.tex	158	\pinyinterm{yan-yiping} (1961), p. 536	Yan Yiping	1961	536	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/appendices/app05.tex	162	See Shima (1958), p. 192	See Shima	1958	192	plain			1	Shima1958Inkyo
+tex/appendices/app05.tex	162	Mickel (1976), pp. 158-168	Mickel	1976	158-168	plain			1	Mickel1976Semantic
+tex/chapters/ch01.tex	17	Eisenberger (1938)	Eisenberger	1938		plain			1	Eisenberger1938Das
+tex/chapters/ch01.tex	17	Caquot and Leibovici (1968)	Caquot and Leibovici	1968		plain			1	CaquotLeibovici1968Divination
+tex/chapters/ch01.tex	23	Cooper (1936), pp. 34, 38	Cooper	1936	34, 38	plain			1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	23	Eisenberger (1938), pp. 105, 111-112	Eisenberger	1938	105, 111-112	plain			1	Eisenberger1938Das
+tex/chapters/ch01.tex	23	Cooper (1936), pp. 39-40	Cooper	1936	39-40	plain			1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	31	Wheatley (1971), pp. 27-28	Wheatley	1971	27-28	plain			1	Wheatley1971Pivot
+tex/chapters/ch01.tex	31	\pinyinterm{zhang-bingquan} (1967), pp. 842-851	Zhang Bingquan	1967	842-851	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	31	\pinyinterm{liu-yuanlin} (1974)	Liu Yuanlin	1974		pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	31	\pinyinterm{zhang-guangzhi} (1962), p. 1843	Zhang Guangzhi	1962	1843	pinyinterm	zhang-guangzhi	person	1	Chang1962China
+tex/chapters/ch01.tex	36	Yagimoto (1966)	Yagimoto	1966		plain			1	Yagimoto1966Kiboku
+tex/chapters/ch01.tex	36	Hayashi Taisuke (1909), pp. 1243-1244	Hayashi Taisuke	1909	1243-1244	plain			1	Hayashi1909Shinkoku
+tex/chapters/ch01.tex	36	Fujino (1960), p. 22	Fujino	1960	22	plain			1	Fujino1960Kiboku
+tex/chapters/ch01.tex	37	Tsunoda (1951), p. 12	Tsunoda	1951	12	plain			1	Tsunoda1951Japan
+tex/chapters/ch01.tex	38	Chamberlain (1883)	Chamberlain	1883		plain			1	Chamberlain1883Kojiki
+tex/chapters/ch01.tex	38	Satow (1879), pp. 429-433	Satow	1879	429-433	plain			1	Satow1879Ancient
+tex/chapters/ch01.tex	38	Philippi (1968), p. 52	Philippi	1968	52	plain			1	Philippi1968Kojiki
+tex/chapters/ch01.tex	39	Maenchen-Helfen (1973), pp. 268-270	Maenchen-Helfen	1973	268-270	plain			1	MaenchenHelfen1973World
+tex/chapters/ch01.tex	39	Eisenberger (1938), p. 81	Eisenberger	1938	81	plain			1	Eisenberger1938Das
+tex/chapters/ch01.tex	39	Cooper (1936), p. 34	Cooper	1936	34	plain			1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	39	Eisenberger (1938), p. 50	Eisenberger	1938	50	plain			1	Eisenberger1938Das
+tex/chapters/ch01.tex	39	Satow (1879), p. 431	Satow	1879	431	plain			1	Satow1879Ancient
+tex/chapters/ch01.tex	39	Eisenberger (1938), p. 81	Eisenberger	1938	81	plain			1	Eisenberger1938Das
+tex/chapters/ch01.tex	39	Rockhill (1900), pp. 187–188	Rockhill	1900	187–188	plain			1	Rockhill1900Journey
+tex/chapters/ch01.tex	39	Wieger (1923), pp. 1676-1677	Wieger	1923	1676-1677	plain			1	Wieger1923Textes
+tex/chapters/ch01.tex	40	Cooper (1936), p. 29	Cooper	1936	29	plain			1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	41	Speck (1935), p. 128	Speck	1935	128	plain			1	Speck1935Naskapi
+tex/chapters/ch01.tex	41	Cooper (1936), pp. 3031, 38	Cooper	1936	3031, 38	plain			1	Cooper1936Scapulimancy
+tex/chapters/ch01.tex	41	Hultkrantz (1968), p. 82	Hultkrantz	1968	82	plain			1	Hultkrantz1968La
+tex/chapters/ch01.tex	41	Needham (1971), p. 544	Needham	1971	544	plain			1	Needham1971Science
+tex/chapters/ch01.tex	45	Eisenberger (1938), p. 91	Eisenberger	1938	91	plain			1	Eisenberger1938Das
+tex/chapters/ch01.tex	45	Eisenberger (1938), pp. 8189	Eisenberger	1938	8189	plain			1	Eisenberger1938Das
+tex/chapters/ch01.tex	45	Montell (1945), pp. 380-381	Montell	1945	380-381	plain			1	Montell1945Ethnographer
+tex/chapters/ch01.tex	45	Bawden (1958)	Bawden	1958		plain			1	Bawden1958Practice
+tex/chapters/ch01.tex	45	Roux and Boratav (1968), pp. 302-306	Roux and Boratav	1968	302-306	plain			1	Roux1968Divination
+tex/chapters/ch01.tex	45	Bogoras (1907), pp. 487-490	Bogoras	1907	487-490	plain			1	Bogoras1907Chukchee
+tex/chapters/ch01.tex	45	Eisenberger (1938), pp. 78-79	Eisenberger	1938	78-79	plain			1	Eisenberger1938Das
+tex/chapters/ch01.tex	45	Fujino (1960)	Fujino	1960		plain			1	Fujino1960Kiboku
+tex/chapters/ch01.tex	45	Lot-Falck (1968), pp. 255-256	Lot-Falck	1968	255-256	plain			1	LotFalck1968Divination
+tex/chapters/ch01.tex	45	Speck (1935), pp. 127-159	Speck	1935	127-159	plain			1	Speck1935Naskapi
+tex/chapters/ch01.tex	45	Hultkrantz (1968), pp. 74–83	Hultkrantz	1968	74–83	plain			1	Hultkrantz1968La
+tex/chapters/ch01.tex	45	\pinyinterm{ling-chunsheng} (1934), pp. 130-140	Ling Chunsheng	1934	130-140	pinyinterm	ling-chunsheng	person	1	Ling1934Sunghua
+tex/chapters/ch01.tex	56	Eisenberger (1938), pp. 101-106	Eisenberger	1938	101-106	plain			1	Eisenberger1938Das
+tex/chapters/ch01.tex	56	Roux and Boratav (1968), p. 302	Roux and Boratav	1968	302	plain			1	Roux1968Divination
+tex/chapters/ch01.tex	56	Hultkrantz (1968), p. 83	Hultkrantz	1968	83	plain			1	Hultkrantz1968La
+tex/chapters/ch01.tex	56	Ho (1975), p. 285	Ho	1975	285	plain			1	Ho1975Cradle
+tex/chapters/ch01.tex	56	\pinyinterm{zhang-bingquan} (1967), p. 851	Zhang Bingquan	1967	851	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	56	\pinyinterm{li-ji} [1933], p. 576	Li Ji	1933	576	pinyinterm	li-ji	person	1	LiChi1933Anyang
+tex/chapters/ch01.tex	56	\pinyinterm{shi-zhangru} [1954], p. 265	Shi Zhangru	1954	265	pinyinterm	shi-zhangru	person	1	Shih1954Kupu
+tex/chapters/ch01.tex	56	\pinyinterm{zhang-bingquan} [1967], pp. 842844	Zhang Bingquan	1967	842844	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	56	\pinyinterm{liu-yuanlin} [1974], p. 103	Liu Yuanlin	1974	103	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	93	\pinyinterm{zhang-bingquan} (1967), pp. 842-848	Zhang Bingquan	1967	842-848	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	93	\pinyinterm{liu-yuanlin} (1974)	Liu Yuanlin	1974		pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	98	Hopwood (1925)	Hopwood	1925		plain			1	Hopwood1925New
+tex/chapters/ch01.tex	98	Chardin and Young (1936), pp. 44-52, 56, 58	Chardin and Young	1936	44-52, 56, 58	plain			1	ChardinYoung1936Mammalian
+tex/chapters/ch01.tex	98	\pinyinterm{chen-mengjia} [1956], p. 5	Chen Mengjia	1956	5	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch01.tex	101	MacGregor (1941), p. 444	MacGregor	1941	444	plain			1	MacGregor1941Domestic
+tex/chapters/ch01.tex	101	\pinyinterm{shi-zhangru} (1953), p. 9	Shi Zhangru	1953	9	pinyinterm	shi-zhangru	person	1	Shih1953Hsiao
+tex/chapters/ch01.tex	103	\pinyinterm{liu-dongsheng} (1949), p. 147	Liu Dongsheng	1949	147	pinyinterm	liu-dongsheng	person	1	Yang1949Anyang
+tex/chapters/ch01.tex	105	De Chardin and Young (1936), pp. 56, 58	De Chardin and Young	1936	56, 58	plain			1	ChardinYoung1936Mammalian
+tex/chapters/ch01.tex	111	Gibson (1934)	Gibson	1934		plain			1	Gibson1934Picture
+tex/chapters/ch01.tex	111	\pinyinterm{rao-short} (1959), pp. 12-14	Rao	1959	12-14	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch01.tex	111	\pinyinterm{gao-quxun} (1949), p. 155	Gao Quxun	1949	155	pinyinterm	gao-quxun	person	1	Kao1949Yinhsu
+tex/chapters/ch01.tex	111	\pinyinterm{chen-mengjia-spaced} (1956), pp. 5-6	Chen Mengjia	1956	5-6	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	111	\pinyinterm{li-yan-spaced} (1966)	Li Yan	1966		pinyinterm	li-yan-spaced	person	1	LiYen1966Yenchai
+tex/chapters/ch01.tex	111	\pinyinterm{yan-yiping} (1955), p. 24	Yan Yiping	1955	24	pinyinterm	yan-yiping	person	1	Yen1955Yilun
+tex/chapters/ch01.tex	111	\pinyinterm{dong-zuobin} (1961)	Dong Zuobin	1961		pinyinterm	dong-zuobin	person	1	Tung1961Tachien
+tex/chapters/ch01.tex	111	\pinyinterm{qu-wanli} [1961], p. 5	Qu Wanli	1961	5	pinyinterm	qu-wanli	person	1	Chu1961Hsiaotun
+tex/chapters/ch01.tex	111	\pinyinterm{chen-mengjia-spaced} [1956]	Chen Mengjia	1956		pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	111	\pinyinterm{hu-houxuan} [1973], p. 60	Hu Houxuan	1973	60	pinyinterm	hu-houxuan	person	1	Hu1973Yintai
+tex/chapters/ch01.tex	111	\pinyinterm{zhou-hongxiang} [1976], pp. 1, 7-8	Zhou Hongxiang	1976	1, 7-8	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch01.tex	120	\pinyinterm{liu-yuanlin} (1974), p. 109	Liu Yuanlin	1974	109	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	122	\pinyinterm{shi-zhangru} (1954), pp. 267-268	Shi Zhangru	1954	267-268	pinyinterm	shi-zhangru	person	1	Shih1954Kupu
+tex/chapters/ch01.tex	122	\pinyinterm{zhang-bingquan} (1967), pp. 844, 846	Zhang Bingquan	1967	844, 846	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	122	\pinyinterm{li-jingtan} [1947], p. 118	Li Jingtan	1947	118	pinyinterm	li-jingtan	person	1	LiChingtan1947Yutung
+tex/chapters/ch01.tex	130	Kaizuka (1967), p. 197	Kaizuka	1967	197	plain			1	Kaizuka1967Kodai
+tex/chapters/ch01.tex	130	Ho (1975), p. 283	Ho	1975	283	plain			1	Ho1975Cradle
+tex/chapters/ch01.tex	130	\pinyinterm{shi-zhangru} (1954), pp. 268–269	Shi Zhangru	1954	268–269	pinyinterm	shi-zhangru	person	1	Shih1954Kupu
+tex/chapters/ch01.tex	130	\pinyinterm{li-ji} [1934]	Li Ji	1934		pinyinterm	li-ji	person	1	LiChi1934Chengtzuyai
+tex/chapters/ch01.tex	130	\pinyinterm{ling-chunsheng} [1971], p. 22	Ling Chunsheng	1971	22	pinyinterm	ling-chunsheng	person	1	Ling1971Kueichi
+tex/chapters/ch01.tex	137	Ting Su (1969)	Ting Su	1969		plain			1	Su1969Shuo
+tex/chapters/ch01.tex	137	\pinyinterm{ling-chunsheng} (1971), pp. 27-29	Ling Chunsheng	1971	27-29	pinyinterm	ling-chunsheng	person	1	Ling1971Kueichi
+tex/chapters/ch01.tex	137	\pinyinterm{xu-zhongshu} (1931), pp. 530-531	Xu Zhongshu	1931	530-531	pinyinterm	xu-zhongshu	person	1	HsuChungshu1931Tsailun
+tex/chapters/ch01.tex	140	Crump (1963), p. 170	Crump	1963	170	plain			1	Crump1963Dragon
+tex/chapters/ch01.tex	140	Vandermeersch (1974), p. 38	Vandermeersch	1974	38	plain			1	Vandermeersch1974Tortue
+tex/chapters/ch01.tex	148	Shima (1958), p. 464	Shima	1958	464	plain			1	Shima1958Inkyo
+tex/chapters/ch01.tex	148	Shirakawa (1957), pp. 14, 33	Shirakawa	1957	14, 33	plain			1	Shirakawa1957Indai
+tex/chapters/ch01.tex	148	\pinyinterm{hu-houxuan} (1944), p. 55	Hu Houxuan	1944	55	pinyinterm	hu-houxuan	person	1	Hu1944Wuting
+tex/chapters/ch01.tex	148	\pinyinterm{mengjia-short} (1956), p. 298	Mengjia	1956	298	pinyinterm	mengjia-short	person	1	Chen1956Yin
+tex/chapters/ch01.tex	156	\pinyinterm{zhang-guangzhi} (1972), p. 22	Zhang Guangzhi	1972	22	pinyinterm	zhang-guangzhi	person	1	Chang1972Prehistoric
+tex/chapters/ch01.tex	163	Liulu (1945)	Liulu	1945		plain			1	LiuLu1945Jiaku
+tex/chapters/ch01.tex	163	\pinyinterm{dong-short} [1949], p. 2	Dong	1949	2	pinyinterm	dong-short	person	1	Tung1949Yinhsu
+tex/chapters/ch01.tex	171	\pinyinterm{chen-mengjia-spaced} (1956), p. 142	Chen Mengjia	1956	142	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	171	\pinyinterm{xu-jinxiong} (1973a), pp. 2-3, 48-49	Xu Jinxiong	1973a	2-3, 48-49	pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch01.tex	183	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch01.tex	185	Kaizuka (1967), p. 199	Kaizuka	1967	199	plain			1	Kaizuka1967Kodai
+tex/chapters/ch01.tex	185	Shirakawa (1972), p. 19	Shirakawa	1972	19	plain			1	Shirakawa1972Kokotsubun
+tex/chapters/ch01.tex	185	\pinyinterm{ling-chunsheng} (1971), pp. 24, 33, 34	Ling Chunsheng	1971	24, 33, 34	pinyinterm	ling-chunsheng	person	1	Ling1971Kueichi
+tex/chapters/ch01.tex	193	Levine (1919), p. 37	Levine	1919	37	plain			1	Levine1919Farm
+tex/chapters/ch01.tex	193	\pinyinterm{hu-houxuan} (1944), pp. 55a, 59b-60a	Hu Houxuan	1944	55a, 59b-60a	pinyinterm	hu-houxuan	person	1	Hu1944Wuting
+tex/chapters/ch01.tex	193	\pinyinterm{shi-zhangru} [1953], p. 9	Shi Zhangru	1953	9	pinyinterm	shi-zhangru	person	1	Shih1953Hsiao
+tex/chapters/ch01.tex	197	\pinyinterm{hu-houxuan} (1944a), pp. 35a-44b	Hu Houxuan	1944a	35a-44b	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/chapters/ch01.tex	197	\pinyinterm{zhang-guangzhi} (1975)	Zhang Guangzhi	1975		pinyinterm	zhang-guangzhi	person	1	Chang1975Ancient
+tex/chapters/ch01.tex	200	\pinyinterm{dong-short} (1929b), p. 212	Dong	1929b	212	pinyinterm	dong-short	person	1	Tung1929bHsin
+tex/chapters/ch01.tex	210	\pinyinterm{zhang-bingquan} (1967), pp. 852-853	Zhang Bingquan	1967	852-853	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	212	\pinyinterm{hu-houxuan} (1944), p. 55b	Hu Houxuan	1944	55b	pinyinterm	hu-houxuan	person	1	Hu1944Wuting
+tex/chapters/ch01.tex	215	Hayashi Minao (1971), pp. 43-45	Hayashi Minao	1971	43-45	plain			1	Hayashi1971Chosa
+tex/chapters/ch01.tex	215	\pinyinterm{hu-houxuan} (1944a), pp. 6b-8a	Hu Houxuan	1944a	6b-8a	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/chapters/ch01.tex	215	\pinyinterm{shi-zhangru} (1954), p. 269	Shi Zhangru	1954	269	pinyinterm	shi-zhangru	person	1	Shih1954Kupu
+tex/chapters/ch01.tex	219	\pinyinterm{hu-houxuan} (1944a), pp. 8a-9a	Hu Houxuan	1944a	8a-9a	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/chapters/ch01.tex	219	\pinyinterm{ling-chunsheng} (1971), pp. 22-24	Ling Chunsheng	1971	22-24	pinyinterm	ling-chunsheng	person	1	Ling1971Kueichi
+tex/chapters/ch01.tex	229	\pinyinterm{dong-short} [1929b], p. 209	Dong	1929b	209	pinyinterm	dong-short	person	1	Tung1929bHsin
+tex/chapters/ch01.tex	241	Sisson (1953), pp. 84-86, 126, 145–146	Sisson	1953	84-86, 126, 145–146	plain			1	Sisson1953Anatomy
+tex/chapters/ch01.tex	241	\pinyinterm{xu-jinxiong} [1974], pp. 209, 254-255	Xu Jinxiong	1974	209, 254-255	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch01.tex	247	\pinyinterm{dong-short} (1954), p. 458	Dong	1954	458	pinyinterm	dong-short	person	1	Tung1954Work
+tex/chapters/ch01.tex	247	\pinyinterm{chen-mengjia-spaced} [1956], p. 10	Chen Mengjia	1956	10	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	248	\pinyinterm{liu-yuanlin} (1974), p. 128	Liu Yuanlin	1974	128	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	248	\pinyinterm{zhou-hongxiang} [1976], p. 8	Zhou Hongxiang	1976	8	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch01.tex	253	\pinyinterm{liu-yuanlin} (1969)	Liu Yuanlin	1969		pinyinterm	liu-yuanlin	person	1	Liu1969Kuchien
+tex/chapters/ch01.tex	261	Ting Su (1969), p. 107	Ting Su	1969	107	plain			1	Su1969Shuo
+tex/chapters/ch01.tex	261	\pinyinterm{ling-chunsheng} [1971], p. 28	Ling Chunsheng	1971	28	pinyinterm	ling-chunsheng	person	1	Ling1971Kueichi
+tex/chapters/ch01.tex	264	Smith (1931)	Smith	1931		plain			1	Smith1931Fauna
+tex/chapters/ch01.tex	264	Carr (1952), pp. 37-39	Carr	1952	37-39	plain			1	Carr1952Handbook
+tex/chapters/ch01.tex	264	Romer (1956), p. 32	Romer	1956	32	plain			1	Romer1956Osteology
+tex/chapters/ch01.tex	264	\pinyinterm{dong-short} (1929), p. 84	Dong	1929	84	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch01.tex	264	\pinyinterm{dong-short} (1958), pp. 909-911	Dong	1958	909-911	pinyinterm	dong-short	person	1	Tung1958Chiaku
+tex/chapters/ch01.tex	268	Smith (1931), p. 50	Smith	1931	50	plain			1	Smith1931Fauna
+tex/chapters/ch01.tex	270	\pinyinterm{dong-short} (1929), pp. 83–87	Dong	1929	83–87	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch01.tex	270	\pinyinterm{chen-mengjia} (1956), p. 10	Chen Mengjia	1956	10	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch01.tex	270	\pinyinterm{zhou-hongxiang} (1969), p. 35	Zhou Hongxiang	1969	35	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch01.tex	270	\pinyinterm{zhang-bingquan} [1956], pp. 229–230	Zhang Bingquan	1956	229–230	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch01.tex	275	\pinyinterm{chen-mengjia} (1956)	Chen Mengjia	1956		pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch01.tex	275	\pinyinterm{zhou-hongxiang} (1969)	Zhou Hongxiang	1969		pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch01.tex	275	\pinyinterm{dong-short} (1949a), p. 265	Dong	1949a	265	pinyinterm	dong-short	person	1	Tung1949aYin
+tex/chapters/ch01.tex	275	\pinyinterm{yan-yiping} [1967], pp. 6-8	Yan Yiping	1967	6-8	pinyinterm	yan-yiping	person	1	Yen1967Chiaku
+tex/chapters/ch01.tex	277	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch01.tex	277	\pinyinterm{li-xueqin} [1958], pp. 61, 68	Li Xueqin	1958	61, 68	pinyinterm	li-xueqin	person	1	LiHsuehchin1958Ti
+tex/chapters/ch01.tex	277	\pinyinterm{dong-short} [1945]	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch01.tex	283	\pinyinterm{zhang-bingquan} (1954), p. 225	Zhang Bingquan	1954	225	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	286	Creel (1935), p. 176	Creel	1935	176	plain			1	Creel1935Dragon
+tex/chapters/ch01.tex	286	\pinyinterm{dong-short} (1929b), p. 193	Dong	1929b	193	pinyinterm	dong-short	person	1	Tung1929bHsin
+tex/chapters/ch01.tex	286	\pinyinterm{zhang-bingquan} (1954), p. 225	Zhang Bingquan	1954	225	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	286	\pinyinterm{liu-yuanlin} [1974], p. 118	Liu Yuanlin	1974	118	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	296	\pinyinterm{dong-short} (1954)	Dong	1954		pinyinterm	dong-short	person	1	Tung1954Work
+tex/chapters/ch01.tex	296	\pinyinterm{dong-short} [1954], p. 467	Dong	1954	467	pinyinterm	dong-short	person	1	Tung1954Work
+tex/chapters/ch01.tex	296	\pinyinterm{chen-mengjia} [1956], p. 18	Chen Mengjia	1956	18	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch01.tex	301	\pinyinterm{dong-short} (1949a), pp. 267–268	Dong	1949a	267–268	pinyinterm	dong-short	person	1	Tung1949aYin
+tex/chapters/ch01.tex	301	\pinyinterm{chen-mengjia-spaced} (1956), p. 13	Chen Mengjia	1956	13	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	304	Takashima (1973), p. 370	Takashima	1973	370	plain			1	Takashima1973Negatives
+tex/chapters/ch01.tex	304	\pinyinterm{hu-houxuan} (1944a), pp. 10b	Hu Houxuan	1944a	10b	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/chapters/ch01.tex	305	\pinyinterm{hu-houxuan} (1944), p. 55b	Hu Houxuan	1944	55b	pinyinterm	hu-houxuan	person	1	Hu1944Wuting
+tex/chapters/ch01.tex	316	\pinyinterm{hu-houxuan} [1944], pp. 64a, 68a	Hu Houxuan	1944	64a, 68a	pinyinterm	hu-houxuan	person	1	Hu1944Wuting
+tex/chapters/ch01.tex	316	\pinyinterm{guo-moruo-spaced} [1934], pp. 9-10	Guo Moruo	1934	9-10	pinyinterm	guo-moruo-spaced	person	1	Kuo1934Kuchiu
+tex/chapters/ch01.tex	322	\pinyinterm{hu-houxuan} (1944), pp. 60a	Hu Houxuan	1944	60a	pinyinterm	hu-houxuan	person	1	Hu1944Wuting
+tex/chapters/ch01.tex	324	Kaizuka (1967), pp. 199–200	Kaizuka	1967	199–200	plain			1	Kaizuka1967Kodai
+tex/chapters/ch01.tex	324	Shirakawa (1972), p. 19	Shirakawa	1972	19	plain			1	Shirakawa1972Kokotsubun
+tex/chapters/ch01.tex	324	\pinyinterm{hu-houxuan} (1944), p. 63	Hu Houxuan	1944	63	pinyinterm	hu-houxuan	person	1	Hu1944Wuting
+tex/chapters/ch01.tex	324	\pinyinterm{chen-mengjia-spaced} [1956], p. 18	Chen Mengjia	1956	18	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	328	Hayashi Minao (1968), pp. 50-67	Hayashi Minao	1968	50-67	plain			1	Hayashi1968Inshu
+tex/chapters/ch01.tex	328	Matsumaru (1970), pp. 77–78	Matsumaru	1970	77–78	plain			1	Matsumaru1970Inshu
+tex/chapters/ch01.tex	338	\pinyinterm{chen-mengjia-spaced} (1956), p. 18	Chen Mengjia	1956	18	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	338	\pinyinterm{li-xueqin} [1959], p. 20	Li Xueqin	1959	20	pinyinterm	li-xueqin	person	1	LiHsuehchin1959Kuan
+tex/chapters/ch01.tex	339	\pinyinterm{chen-mengjia-spaced} (1956), pp. 314, 315	Chen Mengjia	1956	314, 315	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	339	\pinyinterm{rao-short} (1959), pp. 705-706	Rao	1959	705-706	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch01.tex	353	\pinyinterm{hu-houxuan} (1948), p. 317	Hu Houxuan	1948	317	pinyinterm	hu-houxuan	person	1	Hu1948Putzu
+tex/chapters/ch01.tex	365	\pinyinterm{guo-moruo-spaced} (1972), pp. 8-11	Guo Moruo	1972	8-11	pinyinterm	guo-moruo-spaced	person	1	Kuo1972Anyang
+tex/chapters/ch01.tex	365	\pinyinterm{chen-mengjia-spaced} [1956], p. 11	Chen Mengjia	1956	11	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	365	\pinyinterm{zhang-bingquan} [1967], p. 854	Zhang Bingquan	1967	854	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	375	Lao Kan (1957)	Lao Kan	1957		plain			1	Lao1957Shih
+tex/chapters/ch01.tex	375	\pinyinterm{zhang-bingquan} (1954), p. 219	Zhang Bingquan	1954	219	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	375	\pinyinterm{an-zhimin} [1954], p. 91	An Zhimin	1954	91	pinyinterm	an-zhimin	person	1	An1954Yichiu
+tex/chapters/ch01.tex	375	\pinyinterm{chen-mengjia-spaced} [1956], p. 12	Chen Mengjia	1956	12	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	375	\pinyinterm{liu-yuanlin} [1974], pp. 125–126	Liu Yuanlin	1974	125–126	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	375	\pinyinterm{zhang-bingquan} [1954], pp. 219-220	Zhang Bingquan	1954	219-220	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	379	\pinyinterm{zhang-bingquan} (1967), p. 855	Zhang Bingquan	1967	855	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	382	\pinyinterm{zhang-bingquan} (1954), p. 220	Zhang Bingquan	1954	220	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	393	\pinyinterm{dong-short} (1929), p. 96	Dong	1929	96	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch01.tex	393	\pinyinterm{zhang-bingquan} (1954), p. 220	Zhang Bingquan	1954	220	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	400	\pinyinterm{xu-jinxiong} (1974), p. 12	Xu Jinxiong	1974	12	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch01.tex	400	\pinyinterm{liu-yuanlin} (1974), p. 129	Liu Yuanlin	1974	129	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	408	\pinyinterm{xu-jinxiong} (1974), pp. 6, 10-11, 13, 42, 65	Xu Jinxiong	1974	6, 10-11, 13, 42, 65	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch01.tex	408	\pinyinterm{liu-yuanlin} (1974), pp. 125–127	Liu Yuanlin	1974	125–127	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	427	\pinyinterm{zhang-bingquan} (1956), pp. 240-241	Zhang Bingquan	1956	240-241	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch01.tex	427	\pinyinterm{dong-short} (1958), pp. 916-917	Dong	1958	916-917	pinyinterm	dong-short	person	1	Tung1958Chiaku
+tex/chapters/ch01.tex	429	\pinyinterm{dong-short} (1949a), p. 266	Dong	1949a	266	pinyinterm	dong-short	person	1	Tung1949aYin
+tex/chapters/ch01.tex	431	Gibson (1938), p. 13	Gibson	1938	13	plain			1	Gibson1938Domestic
+tex/chapters/ch01.tex	431	\pinyinterm{liu-yuanlin} [1974], p. 117	Liu Yuanlin	1974	117	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch01.tex	447	\pinyinterm{dong-short} (1936a)	Dong	1936a		pinyinterm	dong-short	person	1	Tung1936aKuwen
+tex/chapters/ch01.tex	447	\pinyinterm{xu-jinxiong} (1973a)	Xu Jinxiong	1973a		pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch01.tex	453	\pinyinterm{dong-short} [1948a], p. 122	Dong	1948a	122	pinyinterm	dong-short	person	1	Tung1948aTen
+tex/chapters/ch01.tex	453	\pinyinterm{chen-mengjia} [1956], p. 8	Chen Mengjia	1956	8	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch01.tex	482	\pinyinterm{zhang-bingquan} (1954), p. 222	Zhang Bingquan	1954	222	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	482	\pinyinterm{xu-jinxiong} (1974), pp. 210-211	Xu Jinxiong	1974	210-211	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch01.tex	484	Ju (1969), p. 81	Ju	1969	81	plain			1	Ju1969Metaphysical
+tex/chapters/ch01.tex	488	Chavannes (1911), p. 132	Chavannes	1911	132	plain			1	Chavannes1911Divination
+tex/chapters/ch01.tex	488	\pinyinterm{dong-short} (1929)	Dong	1929		pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch01.tex	488	\pinyinterm{zhang-bingquan} (1967), p. 858	Zhang Bingquan	1967	858	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	489	Fujino (1960), pp. 13, 25	Fujino	1960	13, 25	plain			1	Fujino1960Kiboku
+tex/chapters/ch01.tex	489	Kaizuka (1967), p. 201	Kaizuka	1967	201	plain			1	Kaizuka1967Kodai
+tex/chapters/ch01.tex	489	Jochelson (1905), pp. 73-74	Jochelson	1905	73-74	plain			1	Jochelson1905Religion
+tex/chapters/ch01.tex	489	Fujino (1960), p. 15	Fujino	1960	15	plain			1	Fujino1960Kiboku
+tex/chapters/ch01.tex	489	\pinyinterm{chen-mengjia-spaced} (1956), p. 12	Chen Mengjia	1956	12	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch01.tex	489	\pinyinterm{zhang-bingquan} (1967), p. 858	Zhang Bingquan	1967	858	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch01.tex	489	\pinyinterm{dong-short} (1929), pp. 102-103	Dong	1929	102-103	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch01.tex	489	\pinyinterm{ling-chunsheng} (1934), p. 136	Ling Chunsheng	1934	136	pinyinterm	ling-chunsheng	person	1	Ling1934Sunghua
+tex/chapters/ch01.tex	489	\pinyinterm{dong-short} [1929], pp. 103-105	Dong	1929	103-105	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch01.tex	525	\pinyinterm{xu-jinxiong} (1974), p. 256	Xu Jinxiong	1974	256	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch01.tex	533	\pinyinterm{xu-jinxiong} [1973], pp. 15, 89	Xu Jinxiong	1973	15, 89	pinyinterm	xu-jinxiong	person	1	Hsu1973Tsung
+tex/chapters/ch01.tex	535	\pinyinterm{dong-short} (1929), pp. 96, 112	Dong	1929	96, 112	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch01.tex	535	\pinyinterm{zhang-bingquan} (1954), p. 222	Zhang Bingquan	1954	222	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	535	\pinyinterm{xu-jinxiong} (1973a), pp. 19, 102	Xu Jinxiong	1973a	19, 102	pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch01.tex	535	\pinyinterm{xu-short} [1974], p. 82	Xu	1974	82	pinyinterm	xu-short	person	1	Hsu1974Scapulimantic
+tex/chapters/ch01.tex	542	\pinyinterm{chen-mengjia} (1956), p. 11	Chen Mengjia	1956	11	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch01.tex	543	\pinyinterm{xu-jinxiong} (1973a), pp. 19, 102	Xu Jinxiong	1973a	19, 102	pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch01.tex	551	\pinyinterm{xu-short} [1974]	Xu	1974		pinyinterm	xu-short	person	1	Hsu1974Scapulimantic
+tex/chapters/ch01.tex	563	\pinyinterm{zhang-bingquan} (1954)	Zhang Bingquan	1954		pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	572	\pinyinterm{zhang-bingquan} (1956), pp. 231–236	Zhang Bingquan	1956	231–236	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch01.tex	573	Li Daliang (1972), pp. 8–30	Li Daliang	1972	8–30	plain			1	Li1972Kuei
+tex/chapters/ch01.tex	584	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch01.tex	607	Li Daliang (1972), pp. 27-30	Li Daliang	1972	27-30	plain			1	Li1972Kuei
+tex/chapters/ch01.tex	627	\pinyinterm{dong-short} (1948a), p. 122	Dong	1948a	122	pinyinterm	dong-short	person	1	Tung1948aTen
+tex/chapters/ch01.tex	632	\pinyinterm{zhang-bingquan} (1954), p. 225	Zhang Bingquan	1954	225	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch01.tex	639	\pinyinterm{xu-jinxiong-tight} (1974)	Xu Jinxiong	1974		pinyinterm	xu-jinxiong-tight	person	1	Hsu1974Scapulimantic
+tex/chapters/ch01.tex	642	\pinyinterm{liu-yuanlin} (1974), p. 117	Liu Yuanlin	1974	117	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch02.tex	34	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch02.tex	34	Miyazaki (1970)	Miyazaki	1970		plain			1	Miyazaki1970Chiigoku
+tex/chapters/ch02.tex	37	Li Daliang (1972), pp. 120-126	Li Daliang	1972	120-126	plain			1	Li1972Kuei
+tex/chapters/ch02.tex	37	\pinyinterm{zhou-hongxiang} (1969), pp. 60-67	Zhou Hongxiang	1969	60-67	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch02.tex	43	See Takashima (1973), p. 324	See Takashima	1973	324	plain			1	Takashima1973Negatives
+tex/chapters/ch02.tex	43	Takashima (1973)	Takashima	1973		plain			1	Takashima1973Negatives
+tex/chapters/ch02.tex	43	Serruys (1974)	Serruys	1974		plain			1	Serruys1974The
+tex/chapters/ch02.tex	43	\pinyinterm{rao-short} [1959]	Rao	1959		pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch02.tex	49	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch02.tex	49	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	52	Matsumaru (1963)	Matsumaru	1963		plain			1	Matsumaru1963Inkyo
+tex/chapters/ch02.tex	56	\pinyinterm{rao-short} (1959), pp. 73-240	Rao	1959	73-240	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch02.tex	67	Keightley (1973a)	Keightley	1973a		plain			1	Keightley1973aShang
+tex/chapters/ch02.tex	77	Shima (1958), p. 34	Shima	1958	34	plain			1	Shima1958Inkyo
+tex/chapters/ch02.tex	77	\pinyinterm{chen-mengjia-spaced} (1956), p. 202	Chen Mengjia	1956	202	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	77	\pinyinterm{rao-short} (1959), p. 1202	Rao	1959	1202	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch02.tex	77	\pinyinterm{li-xueqin-spaced} (1957), pp. 125-126	Li Xueqin	1957	125-126	pinyinterm	li-xueqin-spaced	person	1	LiHsuehchin1957Ping
+tex/chapters/ch02.tex	77	\pinyinterm{yan-yiping} (1961), p. 521	Yan Yiping	1961	521	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch02.tex	97	\pinyinterm{li-yan-spaced} (1972)	Li Yan	1972		pinyinterm	li-yan-spaced	person	1	LiYen1972Tu
+tex/chapters/ch02.tex	106	Kaizuka (1946), p. 236	Kaizuka	1946	236	plain			1	Kaizuka1946Chiigoku
+tex/chapters/ch02.tex	106	\pinyinterm{chen-mengjia} (1956), p. 148	Chen Mengjia	1956	148	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch02.tex	106	\pinyinterm{qiu-short} (1972), p. 43	Qiu	1972	43	pinyinterm	qiu-short	person	1	Chiu1972DuAnyang
+tex/chapters/ch02.tex	115	Matsumaru (1963)	Matsumaru	1963		plain			1	Matsumaru1963Inkyo
+tex/chapters/ch02.tex	115	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch02.tex	115	Zhang Zongdong (1970), pp. 23, 27	Zhang Zongdong	1970	23, 27	plain			1	Zhang1970Der
+tex/chapters/ch02.tex	115	Shirakawa (1972), p. 125	Shirakawa	1972	125	plain			1	Shirakawa1972Kokotsubun
+tex/chapters/ch02.tex	115	Maekawa (1974)	Maekawa	1974		plain			1	Maekawa1974Koken
+tex/chapters/ch02.tex	115	\pinyinterm{chen-mengjia-spaced} (1956), pp. 145-155, 158-167	Chen Mengjia	1956	145-155, 158-167	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	115	\pinyinterm{rao-short} (1959), pp. 657-658, 678, 687, 747	Rao	1959	657-658, 678, 687, 747	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch02.tex	115	\pinyinterm{li-xueqin} [1957]	Li Xueqin	1957		pinyinterm	li-xueqin	person	1	LiHsuehchin1957Ping
+tex/chapters/ch02.tex	115	\pinyinterm{yan-yiping} [1961]	Yan Yiping	1961		pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch02.tex	115	\pinyinterm{xu-jinxiong} [1973]	Xu Jinxiong	1973		pinyinterm	xu-jinxiong	person	1	Hsu1973Tsung
+tex/chapters/ch02.tex	117	Matsumaru (1963), pp. 62-66, 72	Matsumaru	1963	62-66, 72	plain			1	Matsumaru1963Inkyo
+tex/chapters/ch02.tex	130	Eisenberger (1938), p. 109	Eisenberger	1938	109	plain			1	Eisenberger1938Das
+tex/chapters/ch02.tex	140	\pinyinterm{dong-short} (1965), p. 116	Dong	1965	116	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch02.tex	140	\pinyinterm{zhang-bingquan} (1967), p. 857	Zhang Bingquan	1967	857	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch02.tex	212	Kaizuka (1947), p. 468	Kaizuka	1947	468	plain			1	Kaizuka1947Kiboku
+tex/chapters/ch02.tex	212	\pinyinterm{li-ji} (1977), pp. 28-29	Li Ji	1977	28-29	pinyinterm	li-ji	person	1	Hu1977Niao
+tex/chapters/ch02.tex	212	\pinyinterm{zhang-bingquan} [1956], pp. 247, 256-257	Zhang Bingquan	1956	247, 256-257	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	224	Keightley (1972), pp. 35-37	Keightley	1972	35-37	plain			1	Keightley1972New
+tex/chapters/ch02.tex	249	\pinyinterm{zhang-bingquan} (1956), p. 237	Zhang Bingquan	1956	237	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	249	\pinyinterm{yan-yiping} [1973], p. 7a	Yan Yiping	1973	7a	pinyinterm	yan-yiping	person	1	Yen1973Kuanyu
+tex/chapters/ch02.tex	251	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	251	\pinyinterm{zhang-bingquan} (1954), p. 226	Zhang Bingquan	1954	226	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	252	\pinyinterm{yan-yiping} (1961), p. 486	Yan Yiping	1961	486	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch02.tex	258	\pinyinterm{zhang-bingquan} (1954), pp. 226, 227	Zhang Bingquan	1954	226, 227	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	258	\pinyinterm{zhang-bingquan} [1954], p. 226	Zhang Bingquan	1954	226	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	261	\pinyinterm{zhang-bingquan} (1956), pp. 240-241	Zhang Bingquan	1956	240-241	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	263	\pinyinterm{zhang-bingquan} (1954), p. 230	Zhang Bingquan	1954	230	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	265	\pinyinterm{zhang-bingquan} (1954), pp. 226, 230	Zhang Bingquan	1954	226, 230	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	268	\pinyinterm{zhang-bingquan} (1954), p. 230	Zhang Bingquan	1954	230	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	287	\pinyinterm{zhang-bingquan} (1960)	Zhang Bingquan	1960		pinyinterm	zhang-bingquan	person	1	Zhang1960Lun
+tex/chapters/ch02.tex	291	Keightley (1973a), pp. 13-19, 37-38, 45-49	Keightley	1973a	13-19, 37-38, 45-49	plain			1	Keightley1973aShang
+tex/chapters/ch02.tex	291	As Li Daliang (1972), pp. 104-107	As Li Daliang	1972	104-107	plain			1	Li1972Kuei
+tex/chapters/ch02.tex	291	\pinyinterm{zhou-hongxiang} (1969), pp. 37-52	Zhou Hongxiang	1969	37-52	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch02.tex	291	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	291	\pinyinterm{zhang-bingquan} [1967], p. 868	Zhang Bingquan	1967	868	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch02.tex	309	Li Daliang (1972), pp. 100-103	Li Daliang	1972	100-103	plain			1	Li1972Kuei
+tex/chapters/ch02.tex	319	Li Daliang (1972), pp. 166-169	Li Daliang	1972	166-169	plain			1	Li1972Kuei
+tex/chapters/ch02.tex	319	\pinyinterm{zhang-bingquan} (1956), p. 253	Zhang Bingquan	1956	253	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	319	\pinyinterm{guo-moruo-spaced} (1972), pp. 2, 3	Guo Moruo	1972	2, 3	pinyinterm	guo-moruo-spaced	person	1	Kuo1972Anyang
+tex/chapters/ch02.tex	319	\pinyinterm{hu-houxuan} (1972a), pp. 5-6	Hu Houxuan	1972a	5-6	pinyinterm	hu-houxuan	person	1	Hu1972aChuichi
+tex/chapters/ch02.tex	319	\pinyinterm{qiu-short} (1972)	Qiu	1972		pinyinterm	qiu-short	person	1	Chiu1972DuAnyang
+tex/chapters/ch02.tex	322	\pinyinterm{zhang-bingquan} (1956), pp. 246, 253-254	Zhang Bingquan	1956	246, 253-254	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	322	\pinyinterm{zhou-hongxiang} (1969), pp. 60-69	Zhou Hongxiang	1969	60-69	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch02.tex	324	\pinyinterm{zhang-bingquan} (1957), p. 10	Zhang Bingquan	1957	10	pinyinterm	zhang-bingquan	person	1	Zhang1957Hsiaotun
+tex/chapters/ch02.tex	333	\pinyinterm{zhang-bingquan} [1957], p. 10	Zhang Bingquan	1957	10	pinyinterm	zhang-bingquan	person	1	Zhang1957Hsiaotun
+tex/chapters/ch02.tex	338	Gadd (1948), pp. 56-57	Gadd	1948	56-57	plain			1	Gadd1948Ideas
+tex/chapters/ch02.tex	338	Parke and Wormell (1956), pp. 39-40	Parke and Wormell	1956	39-40	plain			1	ParkeWormell1956Delphic
+tex/chapters/ch02.tex	338	Oppenheim (1964), pp. 214, 227	Oppenheim	1964	214, 227	plain			1	Oppenheim1964Ancient
+tex/chapters/ch02.tex	354	\pinyinterm{zhang-bingquan} (1952), p. 621	Zhang Bingquan	1952	621	pinyinterm	zhang-bingquan	person	1	Chang1952Shuo
+tex/chapters/ch02.tex	354	\pinyinterm{zhang-bingquan} (1954), p. 227	Zhang Bingquan	1954	227	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	354	\pinyinterm{zhang-bingquan} (1967), p. 861	Zhang Bingquan	1967	861	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch02.tex	354	\pinyinterm{zhang-bingquan} (1954), p. 227	Zhang Bingquan	1954	227	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	359	\pinyinterm{zhou-hongxiang} (1969), p. 37	Zhou Hongxiang	1969	37	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch02.tex	362	Hopkins (1938), p. 416	Hopkins	1938	416	plain			1	Hopkins1938Ancestral
+tex/chapters/ch02.tex	362	Keightley (1973a), pp. 3–6	Keightley	1973a	3–6	plain			1	Keightley1973aShang
+tex/chapters/ch02.tex	391	\pinyinterm{rao-short} (1961), p. 971	Rao	1961	971	pinyinterm	rao-short	person	1	Jao1961Yupuchao
+tex/chapters/ch02.tex	443	Takashima (1973), pp. 91-114	Takashima	1973	91-114	plain			1	Takashima1973Negatives
+tex/chapters/ch02.tex	448	Takashima (1973), p. 110	Takashima	1973	110	plain			1	Takashima1973Negatives
+tex/chapters/ch02.tex	449	Zhang Zongdong (1970), p. 71	Zhang Zongdong	1970	71	plain			1	Zhang1970Der
+tex/chapters/ch02.tex	449	Serruys (1974), p. 70	Serruys	1974	70	plain			1	Serruys1974The
+tex/chapters/ch02.tex	464	\pinyinterm{li-yan-spaced} [1969], p. 195	Li Yan	1969	195	pinyinterm	li-yan-spaced	person	1	LiYen1969Tu
+tex/chapters/ch02.tex	470	Shirakawa (1972), p. 26	Shirakawa	1972	26	plain			1	Shirakawa1972Kokotsubun
+tex/chapters/ch02.tex	470	\pinyinterm{yan-yiping} [1952], p. 296	Yan Yiping	1952	296	pinyinterm	yan-yiping	person	1	Yen1952Cheng
+tex/chapters/ch02.tex	481	Britton (1940), pp. 7-8	Britton	1940	7-8	plain			1	Britton1940Fifty
+tex/chapters/ch02.tex	481	Thompson (1969), p. 34	Thompson	1969	34	plain			1	Thompson1969ChineseReligion
+tex/chapters/ch02.tex	481	Wilkinson (1973), p. 60	Wilkinson	1973	60	plain			1	Wilkinson1973The
+tex/chapters/ch02.tex	483	\pinyinterm{chen-mengjia-spaced} (1956), p. 13	Chen Mengjia	1956	13	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	483	\pinyinterm{zhang-bingquan} (1967), p. 866	Zhang Bingquan	1967	866	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch02.tex	486	\pinyinterm{zhang-bingquan} (1956), p. 239	Zhang Bingquan	1956	239	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	489	\pinyinterm{hu-houxuan} (1939), pp. 412-413, 425	Hu Houxuan	1939	412-413, 425	pinyinterm	hu-houxuan	person	1	Hu1939Putzu
+tex/chapters/ch02.tex	492	\pinyinterm{dong-short} [1954b], p. 359	Dong	1954b	359	pinyinterm	dong-short	person	1	Tung1954bWuTing
+tex/chapters/ch02.tex	504	\pinyinterm{chen-mengjia} (1956), p. 14	Chen Mengjia	1956	14	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch02.tex	504	\pinyinterm{zhang-bingquan} (1954), p. 231	Zhang Bingquan	1954	231	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	504	\pinyinterm{dong-short} [1948a], p. 124	Dong	1948a	124	pinyinterm	dong-short	person	1	Tung1948aTen
+tex/chapters/ch02.tex	506	\pinyinterm{chen-mengjia} (1956), p. 13	Chen Mengjia	1956	13	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch02.tex	506	\pinyinterm{yan-yiping} [1973], p. 2a	Yan Yiping	1973	2a	pinyinterm	yan-yiping	person	1	Yen1973Kuanyu
+tex/chapters/ch02.tex	508	\pinyinterm{dong-short} (1948a), p. 127	Dong	1948a	127	pinyinterm	dong-short	person	1	Tung1948aTen
+tex/chapters/ch02.tex	511	\pinyinterm{su-yinghui} (1957)	Su Yinghui	1957		pinyinterm	su-yinghui	person	1	Su1957Zhongguo
+tex/chapters/ch02.tex	515	\pinyinterm{dong-short} (1965)	Dong	1965		pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch02.tex	515	\pinyinterm{dong-short} [1933]	Dong	1933		pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch02.tex	518	Chu (1935)	Chu	1935		plain			1	Chu1935Shangshi
+tex/chapters/ch02.tex	518	\pinyinterm{chen-mengjia-spaced} (1956), p. 14	Chen Mengjia	1956	14	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	525	\pinyinterm{chen-mengjia-spaced} (1956), p. 15	Chen Mengjia	1956	15	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	525	\pinyinterm{dong-short} [1949a], p. 263	Dong	1949a	263	pinyinterm	dong-short	person	1	Tung1949aYin
+tex/chapters/ch02.tex	527	\pinyinterm{liu-yuanlin} [1974], p. 121	Liu Yuanlin	1974	121	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch02.tex	527	\pinyinterm{xu-zhongshu} [1931], p. 528	Xu Zhongshu	1931	528	pinyinterm	xu-zhongshu	person	1	HsuChungshu1931Tsailun
+tex/chapters/ch02.tex	530	\pinyinterm{guo-moruo-spaced} [1972a], pp. 4-5	Guo Moruo	1972a	4-5	pinyinterm	guo-moruo-spaced	person	1	Kuo1972aFachan
+tex/chapters/ch02.tex	530	\pinyinterm{zhou-hongxiang} [1976], pp. 7, 8	Zhou Hongxiang	1976	7, 8	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch02.tex	531	\pinyinterm{zhang-bingquan} (1954), p. 231	Zhang Bingquan	1954	231	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	531	\pinyinterm{chen-mengjia-spaced} (1956), p. 13	Chen Mengjia	1956	13	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	536	Matsumaru (1959), p. 8	Matsumaru	1959	8	plain			1	Matsumaru1959Kokotsu
+tex/chapters/ch02.tex	536	Britton (1940), p. 3	Britton	1940	3	plain			1	Britton1940Fifty
+tex/chapters/ch02.tex	536	Watson (1963), p. 42	Watson	1963	42	plain			1	Watson1963Handbook
+tex/chapters/ch02.tex	536	Barnard (1960a), p. 482	Barnard	1960a	482	plain			1	Barnard1960aReview
+tex/chapters/ch02.tex	536	\pinyinterm{xu-jinxiong} (1974), p. 283	Xu Jinxiong	1974	283	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch02.tex	536	\pinyinterm{guo-baojun} (1951), pp. 26-27	Guo Baojun	1951	26-27	pinyinterm	guo-baojun	person	1	KuoBaojun1951Yichiu
+tex/chapters/ch02.tex	536	\pinyinterm{dong-short} (1965)	Dong	1965		pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch02.tex	536	\pinyinterm{zhou-hongxiang} (1976), p. 12	Zhou Hongxiang	1976	12	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch02.tex	539	\pinyinterm{guo-moruo-spaced} (1972a), p. 4	Guo Moruo	1972a	4	pinyinterm	guo-moruo-spaced	person	1	Kuo1972aFachan
+tex/chapters/ch02.tex	545	Barnard (1960a), p. 485	Barnard	1960a	485	plain			1	Barnard1960aReview
+tex/chapters/ch02.tex	545	\pinyinterm{rao-short} (1959), pp. 1188-1189	Rao	1959	1188-1189	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch02.tex	545	\pinyinterm{qu-wanli} (1960a), p. 189	Qu Wanli	1960a	189	pinyinterm	qu-wanli	person	1	Chu1960aShih
+tex/chapters/ch02.tex	545	\pinyinterm{yan-yiping} (1961), p. 506	Yan Yiping	1961	506	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch02.tex	545	\pinyinterm{dong-short} (1936), pp. 107-113	Dong	1936	107-113	pinyinterm	dong-short	person	1	Tung1936Anyang
+tex/chapters/ch02.tex	545	\pinyinterm{zheng-dekun} [1971], p. 146	Zheng Dekun	1971	146	pinyinterm	zheng-dekun	person	1	Cheng1971Inconstancy
+tex/chapters/ch02.tex	545	\pinyinterm{chen-mengjia} [1956], p. 16	Chen Mengjia	1956	16	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch02.tex	553	Barnard (1973), p. 26	Barnard	1973	26	plain			1	Barnard1973Chu
+tex/chapters/ch02.tex	553	\pinyinterm{chen-mengjia-spaced} (1956), p. 16	Chen Mengjia	1956	16	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	553	\pinyinterm{dong-short} (1936), pp. 107-113	Dong	1936	107-113	pinyinterm	dong-short	person	1	Tung1936Anyang
+tex/chapters/ch02.tex	558	Matsumaru (1959), p. 8	Matsumaru	1959	8	plain			1	Matsumaru1959Kokotsu
+tex/chapters/ch02.tex	564	\pinyinterm{dong-short} (1929), p. 75	Dong	1929	75	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch02.tex	566	\pinyinterm{zhou-hongxiang} (1976), p. 1	Zhou Hongxiang	1976	1	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch02.tex	566	\pinyinterm{dong-short} (1936), p. 114	Dong	1936	114	pinyinterm	dong-short	person	1	Tung1936Anyang
+tex/chapters/ch02.tex	566	\pinyinterm{chen-mengjia} (1956)	Chen Mengjia	1956		pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch02.tex	566	\pinyinterm{ye-yusen} [1929], p. 10a	Ye Yusen	1929	10a	pinyinterm	ye-yusen	person	1	Yeh1929Yinchi
+tex/chapters/ch02.tex	566	\pinyinterm{dong-short} [1933], p. 418	Dong	1933	418	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch02.tex	566	\pinyinterm{guo-moruo-spaced} [1972a], p. 4	Guo Moruo	1972a	4	pinyinterm	guo-moruo-spaced	person	1	Kuo1972aFachan
+tex/chapters/ch02.tex	566	\pinyinterm{zhang-bingquan} [1956], p. 255	Zhang Bingquan	1956	255	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	566	\pinyinterm{dong-short} [1933], p. 418	Dong	1933	418	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch02.tex	570	\pinyinterm{guo-moruo-spaced} (1972), p. 3	Guo Moruo	1972	3	pinyinterm	guo-moruo-spaced	person	1	Kuo1972Anyang
+tex/chapters/ch02.tex	570	\pinyinterm{qiu-short} (1972), p. 43	Qiu	1972	43	pinyinterm	qiu-short	person	1	Chiu1972DuAnyang
+tex/chapters/ch02.tex	570	\pinyinterm{hu-houxuan} [1939], pp. 401-421	Hu Houxuan	1939	401-421	pinyinterm	hu-houxuan	person	1	Hu1939Putzu
+tex/chapters/ch02.tex	570	\pinyinterm{qu-wanli} [1961], p. 5	Qu Wanli	1961	5	pinyinterm	qu-wanli	person	1	Chu1961Hsiaotun
+tex/chapters/ch02.tex	570	\pinyinterm{yan-yiping} [1959], pp. 230, 233	Yan Yiping	1959	230, 233	pinyinterm	yan-yiping	person	1	Yen1959Shih
+tex/chapters/ch02.tex	588	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	591	\pinyinterm{guo-baojun} (1951)	Guo Baojun	1951		pinyinterm	guo-baojun	person	1	KuoBaojun1951Yichiu
+tex/chapters/ch02.tex	591	\pinyinterm{dong-short} [1962]	Dong	1962		pinyinterm	dong-short	person	1	Tung1962Mohsieh
+tex/chapters/ch02.tex	593	\pinyinterm{dong-short} (1933), pp. 420-421	Dong	1933	420-421	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch02.tex	608	Serruys (1974), pp. 16-17	Serruys	1974	16-17	plain			1	Serruys1974The
+tex/chapters/ch02.tex	608	Li Daliang (1972), pp. 31-52	Li Daliang	1972	31-52	plain			1	Li1972Kuei
+tex/chapters/ch02.tex	610	\pinyinterm{zhou-hongxiang} (1969), pp. 12-36	Zhou Hongxiang	1969	12-36	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch02.tex	614	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	614	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	614	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	616	Li Daliang (1972), pp. 89-94	Li Daliang	1972	89-94	plain			1	Li1972Kuei
+tex/chapters/ch02.tex	616	\pinyinterm{zhou-hongxiang} (1969), pp. 37-52	Zhou Hongxiang	1969	37-52	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch02.tex	616	\pinyinterm{zhou-hongxiang} (1969), pp. 54-57	Zhou Hongxiang	1969	54-57	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch02.tex	616	\pinyinterm{zhang-bingquan} [1956], pp. 241-243	Zhang Bingquan	1956	241-243	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	616	\pinyinterm{zhou-hongxiang} [1969], pp. 55-57	Zhou Hongxiang	1969	55-57	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch02.tex	621	\pinyinterm{chen-mengjia-spaced} [1956], p. 13	Chen Mengjia	1956	13	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	623	\pinyinterm{dong-short} (1936), p. 115	Dong	1936	115	pinyinterm	dong-short	person	1	Tung1936Anyang
+tex/chapters/ch02.tex	632	Li Daliang (1972), pp. 8-30	Li Daliang	1972	8-30	plain			1	Li1972Kuei
+tex/chapters/ch02.tex	635	\pinyinterm{zhang-bingquan} [1956], p. 244	Zhang Bingquan	1956	244	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	635	\pinyinterm{zhou-hongxiang} [1969], pp. 60–62	Zhou Hongxiang	1969	60–62	pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch02.tex	639	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	642	Shirakawa (1972), pp. 21, 30	Shirakawa	1972	21, 30	plain			1	Shirakawa1972Kokotsubun
+tex/chapters/ch02.tex	642	Matsumaru (1963), pp. 36, 51-52	Matsumaru	1963	36, 51-52	plain			1	Matsumaru1963Inkyo
+tex/chapters/ch02.tex	642	\pinyinterm{dong-short} (1929), p. 75	Dong	1929	75	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch02.tex	642	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	645	\pinyinterm{dong-short} [1945]	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	659	\pinyinterm{dong-short} (1949a), p. 261	Dong	1949a	261	pinyinterm	dong-short	person	1	Tung1949aYin
+tex/chapters/ch02.tex	659	\pinyinterm{chen-mengjia-spaced} (1956), p. 16	Chen Mengjia	1956	16	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	663	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch02.tex	665	\pinyinterm{zhang-bingquan} (1967), p. 861	Zhang Bingquan	1967	861	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch02.tex	676	\pinyinterm{dong-short} (1929), p. 59	Dong	1929	59	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch02.tex	678	Li Daliang (1972), p. 122	Li Daliang	1972	122	plain			1	Li1972Kuei
+tex/chapters/ch02.tex	678	\pinyinterm{zhang-bingquan} [1956], p. 240	Zhang Bingquan	1956	240	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch02.tex	685	\pinyinterm{zhang-bingquan} (1954), p. 229	Zhang Bingquan	1954	229	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch02.tex	696	Britton (1937), p. 1	Britton	1937	1	plain			1	Britton1937Oracle
+tex/chapters/ch02.tex	699	Britton (1940), p. 7	Britton	1940	7	plain			1	Britton1940Fifty
+tex/chapters/ch02.tex	699	Britton (1940), pp. 15-16	Britton	1940	15-16	plain			1	Britton1940Fifty
+tex/chapters/ch02.tex	699	\pinyinterm{chen-mengjia-spaced} (1956), p. 16	Chen Mengjia	1956	16	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	699	\pinyinterm{dong-short} (1933), p. 421	Dong	1933	421	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch02.tex	699	\pinyinterm{li-yan} (1970)	Li Yan	1970		pinyinterm	li-yan	person	1	LiYen1970PeiMei
+tex/chapters/ch02.tex	699	\pinyinterm{chen-mengjia-spaced} [1956], p. 15	Chen Mengjia	1956	15	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	706	Britton (1937), p. 1	Britton	1937	1	plain			1	Britton1937Oracle
+tex/chapters/ch02.tex	706	\pinyinterm{zhang-bingquan} (1957), p. 4	Zhang Bingquan	1957	4	pinyinterm	zhang-bingquan	person	1	Zhang1957Hsiaotun
+tex/chapters/ch02.tex	706	\pinyinterm{li-yan-spaced} (1966), p. 2	Li Yan	1966	2	pinyinterm	li-yan-spaced	person	1	LiYen1966Yenchai
+tex/chapters/ch02.tex	708	\pinyinterm{zhang-bingquan} (1967), p. 865	Zhang Bingquan	1967	865	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch02.tex	712	\pinyinterm{dong-short} (1948a), p. 127	Dong	1948a	127	pinyinterm	dong-short	person	1	Tung1948aTen
+tex/chapters/ch02.tex	712	\pinyinterm{dong-short} (1965), p. 47	Dong	1965	47	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch02.tex	716	Benedetti-Pichler (1937), p. 152	Benedetti-Pichler	1937	152	plain			1	BenedettiPichler1937Microchemical
+tex/chapters/ch02.tex	721	Lin Sheng (1964), pp. 99, 101	Lin Sheng	1964	99, 101	plain			1	Lin1964Work
+tex/chapters/ch02.tex	721	\pinyinterm{chen-mengjia-spaced} (1956), p. 16	Chen Mengjia	1956	16	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	728	\pinyinterm{zhang-bingquan} (1967), p. 865	Zhang Bingquan	1967	865	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch02.tex	729	\pinyinterm{chen-mengjia-spaced} (1956), p. 15	Chen Mengjia	1956	15	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch02.tex	729	\pinyinterm{zhang-bingquan} (1967), p. 866	Zhang Bingquan	1967	866	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch02.tex	729	\pinyinterm{zhu-fangpu} [1935]	Zhu Fangpu	1935		pinyinterm	zhu-fangpu	person	1	Chu1935Shangshi
+tex/chapters/ch02.tex	733	\pinyinterm{dong-short} [1949a], p. 265	Dong	1949a	265	pinyinterm	dong-short	person	1	Tung1949aYin
+tex/chapters/ch02.tex	736	Britton (1940), p. 7	Britton	1940	7	plain			1	Britton1940Fifty
+tex/chapters/ch02.tex	738	Shirakawa (1972), p. 29	Shirakawa	1972	29	plain			1	Shirakawa1972Kokotsubun
+tex/chapters/ch02.tex	738	\pinyinterm{dong-short} (1948a), p. 124	Dong	1948a	124	pinyinterm	dong-short	person	1	Tung1948aTen
+tex/chapters/ch02.tex	738	\pinyinterm{zhang-guangzhi} [1968], p. 70	Zhang Guangzhi	1968	70	pinyinterm	zhang-guangzhi	person	1	Chang1968Archaeology
+tex/chapters/ch02.tex	738	\pinyinterm{shi-zhangru} [1952], pp. 466, 468–485	Shi Zhangru	1952	466, 468–485	pinyinterm	shi-zhangru	person	1	Shih1952Hsiaotun
+tex/chapters/ch03.tex	14	Lefeuvre (1975), p. 17	Lefeuvre	1975	17	plain			1	Lefeuvre1975Les
+tex/chapters/ch03.tex	14	\pinyinterm{li-ji} (1977), pp. 7-11	Li Ji	1977	7-11	pinyinterm	li-ji	person	1	Hu1977Niao
+tex/chapters/ch03.tex	19	Kaizuka (1946), pp. 191-201	Kaizuka	1946	191-201	plain			1	Kaizuka1946Chiigoku
+tex/chapters/ch03.tex	19	Jung Keng (1947)	Jung Keng	1947		plain			1	Jung1947Chiaku
+tex/chapters/ch03.tex	19	Creel (1938), pp. 1-16	Creel	1938	1-16	plain			1	Creel1938Studies
+tex/chapters/ch03.tex	19	Lefeuvre (1975)	Lefeuvre	1975		plain			1	Lefeuvre1975Les
+tex/chapters/ch03.tex	19	\pinyinterm{shima-short} (1971)	Shima	1971		pinyinterm	shima-short	person	1	Shima1971Inkyo
+tex/chapters/ch03.tex	19	\pinyinterm{zhang-bingquan} (1967), p. 841	Zhang Bingquan	1967	841	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch03.tex	19	\pinyinterm{hu-houxuan} (1955), pp. 35-42	Hu Houxuan	1955	35-42	pinyinterm	hu-houxuan	person	1	Hu1955Yinhsu
+tex/chapters/ch03.tex	19	\pinyinterm{chen-mengjia-spaced} (1956), pp. 50-54	Chen Mengjia	1956	50-54	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch03.tex	19	\pinyinterm{dong-short} (1965), pp. 46-118	Dong	1965	46-118	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch03.tex	19	\pinyinterm{li-ji} (1977)	Li Ji	1977		pinyinterm	li-ji	person	1	Hu1977Niao
+tex/chapters/ch03.tex	25	Matsumaru (1973), pp. 19--22	Matsumaru	1973	19--22	plain			1	Matsumaru1973Oracle
+tex/chapters/ch03.tex	25	Jung Keng (1947), pp. 15--30	Jung Keng	1947	15--30	plain			1	Jung1947Chiaku
+tex/chapters/ch03.tex	25	Lefeuvre (1975)	Lefeuvre	1975		plain			1	Lefeuvre1975Les
+tex/chapters/ch03.tex	25	\pinyinterm{hu-houxuan} (1955), pp. 13--35	Hu Houxuan	1955	13--35	pinyinterm	hu-houxuan	person	1	Hu1955Yinhsu
+tex/chapters/ch03.tex	43	\pinyinterm{zhang-bingquan} (1967), p. 829	Zhang Bingquan	1967	829	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch03.tex	51	CKWP (1965)	CKWP	1965		plain			1	CKWP1965Chia
+tex/chapters/ch03.tex	61	\pinyinterm{jiaguwen-bian} (1934)	Jiaguwen bian	1934		pinyinterm	jiaguwen-bian	title	1	Yeh1934Yinhsu
+tex/chapters/ch03.tex	61	\pinyinterm{xu-jiaguwen-bian} (1959)	Xu jiaguwen bian	1959		pinyinterm	xu-jiaguwen-bian	title	1	Chin1959Hsu
+tex/chapters/ch03.tex	82	Teng and Biggerstaff (1971), p. 47	Teng and Biggerstaff	1971	47	plain			1	Teng1971Annotated
+tex/chapters/ch03.tex	92	Mattos (1976)	Mattos	1976		plain			1	Mattos1976Reference
+tex/chapters/ch03.tex	92	\pinyinterm{jinwen-bian} (1959)	Jinwen bian	1959		pinyinterm	jinwen-bian	title	1	Jung1959Chinwen
+tex/chapters/ch03.tex	94	\pinyinterm{jinwen-bian} (1959)	Jinwen bian	1959		pinyinterm	jinwen-bian	title	1	Jung1959Chinwen
+tex/chapters/ch03.tex	94	\pinyinterm{guo-moruo-spaced} (1957)	Guo Moruo	1957		pinyinterm	guo-moruo-spaced	person	1	Kuo1957Liang
+tex/chapters/ch03.tex	109	Pulleyblank (1968)	Pulleyblank	1968		plain			1	Pulleyblank1968Review
+tex/chapters/ch03.tex	137	Keightley (1969a)	Keightley	1969a		plain			1	Keightley1969aBook
+tex/chapters/ch03.tex	177	Kaizuka Shigeki (1967)	Kaizuka Shigeki	1967		plain			1	Kaizuka1967Kodai
+tex/chapters/ch03.tex	177	Shirakawa Shizuka (1972)	Shirakawa Shizuka	1972		plain			1	Shirakawa1972Kokotsubun
+tex/chapters/ch03.tex	177	Ya-nung (1955)	Ya-nung	1955		plain			1	LiYanung1955Yintai
+tex/chapters/ch03.tex	180	Akatsuka (1977)	Akatsuka	1977		plain			1	Akatsuka1977Chugoku
+tex/chapters/ch03.tex	180	Zhang Zongdong (1970)	Zhang Zongdong	1970		plain			1	Zhang1970Der
+tex/chapters/ch03.tex	180	\pinyinterm{chen-mengjia-spaced} (1956)	Chen Mengjia	1956		pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch03.tex	195	Smith (1972)	Smith	1972		plain			1	Smith1972Parrot
+tex/chapters/ch03.tex	197	Winch (1964)	Winch	1964		plain			1	Winch1964Understanding
+tex/chapters/ch03.tex	197	Lukes (1967)	Lukes	1967		plain			1	Lukes1967Problems
+tex/chapters/ch03.tex	197	Wilson (1970)	Wilson	1970		plain			1	Wilson1970Rationality
+tex/chapters/ch03.tex	197	Rorty (1972)	Rorty	1972		plain			1	Rorty1972World
+tex/chapters/ch03.tex	212	Britton (1936), p. 207	Britton	1936	207	plain			1	Britton1936Sinological
+tex/chapters/ch03.tex	216	Schafer (1972), pp. 150-151	Schafer	1972	150-151	plain			1	Schafer1972Review
+tex/chapters/ch03.tex	233	Mickel (1976)	Mickel	1976		plain			1	Mickel1976Semantic
+tex/chapters/ch03.tex	235	\pinyinterm{dong-short} [1954a], p. 127	Dong	1954a	127	pinyinterm	dong-short	person	1	Tung1954aYinli
+tex/chapters/ch03.tex	235	\pinyinterm{hu-houxuan} [1973], p. 113	Hu Houxuan	1973	113	pinyinterm	hu-houxuan	person	1	Hu1973Yintai
+tex/chapters/ch03.tex	249	\pinyinterm{chen-mengjia-spaced} (1956), pp. 13213465	Chen Mengjia	1956	13213465	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch03.tex	256	Takashima (1973), pp. 267-305	Takashima	1973	267-305	plain			1	Takashima1973Negatives
+tex/chapters/ch03.tex	256	Serruys (1974), pp. 24, 46-58	Serruys	1974	24, 46-58	plain			1	Serruys1974The
+tex/chapters/ch03.tex	256	Takashima (1976), p. 24	Takashima	1976	24	plain			1	Takashima1976Subordinate
+tex/chapters/ch03.tex	261	\pinyinterm{chen-mengjia} (1956), pp. 85–134	Chen Mengjia	1956	85–134	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch03.tex	263	Takashima (1973)	Takashima	1973		plain			1	Takashima1973Negatives
+tex/chapters/ch03.tex	263	Serruys (1974)	Serruys	1974		plain			1	Serruys1974The
+tex/chapters/ch03.tex	264	Kryukov (1968)	Kryukov	1968		plain			1	Kryukov1968Differential
+tex/chapters/ch03.tex	264	Huang Caijun (1964)	Huang Caijun	1964		plain			1	Huang1964Measure
+tex/chapters/ch03.tex	264	Huang Jingxin (1958)	Huang Jingxin	1958		plain			1	Huang1958Negatives
+tex/chapters/ch03.tex	264	Guan Xiechu (1953)	Guan Xiechu	1953		plain			1	Kuan1953Yufa
+tex/chapters/ch03.tex	264	\pinyinterm{zhou-hongxiang} (1969)	Zhou Hongxiang	1969		pinyinterm	zhou-hongxiang	person	1	Chou1969Putzu
+tex/chapters/ch03.tex	266	Takashima (1973), p. 190	Takashima	1973	190	plain			1	Takashima1973Negatives
+tex/chapters/ch03.tex	274	Serruys (1974), p. 92	Serruys	1974	92	plain			1	Serruys1974The
+tex/chapters/ch03.tex	281	Takashima (1973)	Takashima	1973		plain			1	Takashima1973Negatives
+tex/chapters/ch03.tex	281	\pinyinterm{li-fanggui} (1971)	Li Fanggui	1971		pinyinterm	li-fanggui	person	1	LiFangkuei1971Shangku
+tex/chapters/ch03.tex	319	Takashima (1976)	Takashima	1976		plain			1	Takashima1976Subordinate
+tex/chapters/ch03.tex	335	Barnard (1963), pp. 220-221	Barnard	1963	220-221	plain			1	Barnard1963Reviews
+tex/chapters/ch03.tex	335	\pinyinterm{li-xiaoting} (1968), pp. 91-95	Li Xiaoting	1968	91-95	pinyinterm	li-xiaoting	person	1	LiHsiaoting1968Tsung
+tex/chapters/ch03.tex	339	Karlgren (1963), p. 2	Karlgren	1963	2	plain			1	Karlgren1963Loan
+tex/chapters/ch03.tex	342	\pinyinterm{li-xiaoting} (1968), pp. 93-94	Li Xiaoting	1968	93-94	pinyinterm	li-xiaoting	person	1	LiHsiaoting1968Tsung
+tex/chapters/ch03.tex	357	\pinyinterm{li-yan-spaced} (1969)	Li Yan	1969		pinyinterm	li-yan-spaced	person	1	LiYen1969Tu
+tex/chapters/ch03.tex	357	\pinyinterm{jin-xiangheng} (1967), p. 12a	Jin Xiangheng	1967	12a	pinyinterm	jin-xiangheng	person	1	Chin1967Yutzu
+tex/chapters/ch03.tex	363	\pinyinterm{li-yan-spaced} [1969], p. 197	Li Yan	1969	197	pinyinterm	li-yan-spaced	person	1	LiYen1969Tu
+tex/chapters/ch03.tex	363	\pinyinterm{ye-yusen} [1934]	Ye Yusen	1934		pinyinterm	ye-yusen	person	1	Yeh1934Yinhsu
+tex/chapters/ch03.tex	363	\pinyinterm{li-xueqin} [1958], p. 53	Li Xueqin	1958	53	pinyinterm	li-xueqin	person	1	LiHsuehchin1958Ti
+tex/chapters/ch03.tex	367	Takashima (1973), pp. 30-31	Takashima	1973	30-31	plain			1	Takashima1973Negatives
+tex/chapters/ch03.tex	367	\pinyinterm{chen-mengjia-spaced} (1956), pp. 108I	Chen Mengjia	1956	108I	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch03.tex	382	\pinyinterm{li-yan-spaced} (1967), pp. 21-26	Li Yan	1967	21-26	pinyinterm	li-yan-spaced	person	1	Yen1967Chiaku
+tex/chapters/ch03.tex	408	Pulleyblank (1975)	Pulleyblank	1975		plain			1	Pulleyblank1975Chinese
+tex/chapters/ch03.tex	412	Takashima (1973)	Takashima	1973		plain			1	Takashima1973Negatives
+tex/chapters/ch03.tex	427	Eisenberger (1938), p. 67	Eisenberger	1938	67	plain			1	Eisenberger1938Das
+tex/chapters/ch03.tex	427	Wang (1972), p. 53	Wang	1972	53	plain			1	Wang1972The
+tex/chapters/ch03.tex	427	\pinyinterm{chen-zhimai} (1966)	Chen Zhimai	1966		pinyinterm	chen-zhimai	person	1	Chen1966Chinese
+tex/chapters/ch03.tex	458	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch03.tex	465	\pinyinterm{rao-short} [1959], pp. 241-253	Rao	1959	241-253	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch03.tex	497	CKWT (1965)	CKWT	1965		plain			1	LiHsiaoting1965Chiaku
+tex/chapters/ch03.tex	500	\pinyinterm{rao-short} (1959)	Rao	1959		pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch03.tex	529	\pinyinterm{rao-short} (1959)	Rao	1959		pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch03.tex	558	Keightley (1973a)	Keightley	1973a		plain			1	Keightley1973aShang
+tex/chapters/ch03.tex	558	Takashima (1976)	Takashima	1976		plain			1	Takashima1976Subordinate
+tex/chapters/ch03.tex	620	Takashima (1973), pp. 336-338	Takashima	1973	336-338	plain			1	Takashima1973Negatives
+tex/chapters/ch03.tex	620	Serruys (1974), pp. 29-30	Serruys	1974	29-30	plain			1	Serruys1974The
+tex/chapters/ch03.tex	620	Nivison (1973)	Nivison	1973		plain			1	Nivison1973Existence
+tex/chapters/ch03.tex	620	\pinyinterm{yu-xingwu} (1940), pp. 6a-8b	Yu Xingwu	1940	6a-8b	pinyinterm	yu-xingwu	person	1	Yu1940Shuang
+tex/chapters/ch03.tex	620	\pinyinterm{jin-xiangheng} (1967)	Jin Xiangheng	1967		pinyinterm	jin-xiangheng	person	1	Chin1967Yutzu
+tex/chapters/ch03.tex	620	\pinyinterm{yan-yiping} (1973a)	Yan Yiping	1973a		pinyinterm	yan-yiping	person	1	Yen1973aShuo
+tex/chapters/ch03.tex	620	\pinyinterm{chen-mengjia} ([1956], pp. 96-97	Chen Mengjia	1956	96-97	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch03.tex	639	Li Daliang (1972), pp. 134-169	Li Daliang	1972	134-169	plain			1	Li1972Kuei
+tex/chapters/ch03.tex	639	\pinyinterm{hongxiang-short} (1969), pp. 60-69	Hongxiang	1969	60-69	pinyinterm	hongxiang-short	person	1	Chou1969Putzu
+tex/chapters/ch03.tex	658	Takashima (1973), pp. 246–253, 399	Takashima	1973	246–253, 399	plain			1	Takashima1973Negatives
+tex/chapters/ch03.tex	658	Serruys (1974), pp. 24-25, 74	Serruys	1974	24-25, 74	plain			1	Serruys1974The
+tex/chapters/ch03.tex	658	Takashima (1977), pp. 11-18	Takashima	1977	11-18	plain			1	Takashima1977aExistence
+tex/chapters/ch03.tex	674	Takashima (1973), pp. 243, 394	Takashima	1973	243, 394	plain			1	Takashima1973Negatives
+tex/chapters/ch03.tex	696	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch03.tex	698	Serruys (1974), p. 76	Serruys	1974	76	plain			1	Serruys1974The
+tex/chapters/ch03.tex	726	\pinyinterm{rao-short} (1959), p. 138	Rao	1959	138	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch03.tex	728	\pinyinterm{shima-short} ([1958], p. 278	Shima	1958	278	pinyinterm	shima-short	person	1	Shima1958Inkyo
+tex/chapters/ch03.tex	742	\pinyinterm{zhang-bingquan} [1956], p. 241	Zhang Bingquan	1956	241	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch03.tex	754	Li Daliang (1972), pp. 69-79	Li Daliang	1972	69-79	plain			1	Li1972Kuei
+tex/chapters/ch03.tex	816	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch03.tex	816	Serruys (1974), p. 107	Serruys	1974	107	plain			1	Serruys1974The
+tex/chapters/ch03.tex	816	\pinyinterm{yu-xingwu} (1940), pp. 22a	Yu Xingwu	1940	22a	pinyinterm	yu-xingwu	person	1	Yu1940Shuang
+tex/chapters/ch03.tex	816	\pinyinterm{shima-short} (1958), pp. 389-390	Shima	1958	389-390	pinyinterm	shima-short	person	1	Shima1958Inkyo
+tex/chapters/ch03.tex	816	\pinyinterm{chen-mengjia-spaced} (1956), p. 284	Chen Mengjia	1956	284	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch03.tex	816	\pinyinterm{shima-short} (1958), pp. 390-391	Shima	1958	390-391	pinyinterm	shima-short	person	1	Shima1958Inkyo
+tex/chapters/ch03.tex	821	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch03.tex	821	Serruys (1974), pp. 113-114	Serruys	1974	113-114	plain			1	Serruys1974The
+tex/chapters/ch03.tex	821	\pinyinterm{shima-short} (1958), pp. 387, 391	Shima	1958	387, 391	pinyinterm	shima-short	person	1	Shima1958Inkyo
+tex/chapters/ch03.tex	829	\pinyinterm{hu-houxuan} (1959), pp. 37-39	Hu Houxuan	1959	37-39	pinyinterm	hu-houxuan	person	1	Hu1959Yinputzu
+tex/chapters/ch03.tex	841	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch03.tex	841	\pinyinterm{dong-short} [1945]	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch03.tex	881	Zhang Zongdong (1970), pp. 34-45	Zhang Zongdong	1970	34-45	plain			1	Zhang1970Der
+tex/chapters/ch04.tex	59	\pinyinterm{rao-short} (1959), p. 922	Rao	1959	922	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch04.tex	64	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch04.tex	66	\pinyinterm{rao-short} (1959), p. 1029	Rao	1959	1029	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch04.tex	82	\pinyinterm{chen-mengjia-spaced} (1956), p. 138	Chen Mengjia	1956	138	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	86	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch04.tex	86	Zhang Zongdong (1970), p. 21	Zhang Zongdong	1970	21	plain			1	Zhang1970Der
+tex/chapters/ch04.tex	86	\pinyinterm{xu-jinxiong} (1974), p. 211	Xu Jinxiong	1974	211	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	90	\pinyinterm{yan-yiping} (1961), pp. 485-486	Yan Yiping	1961	485-486	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch04.tex	90	\pinyinterm{chen-mengjia-spaced} (1956), p. 139	Chen Mengjia	1956	139	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	93	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch04.tex	97	\pinyinterm{chen-mengjia} (1956), pp. 138, 142	Chen Mengjia	1956	138, 142	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch04.tex	105	\pinyinterm{li-xueqin} (1957), p. 124	Li Xueqin	1957	124	pinyinterm	li-xueqin	person	1	LiHsuehchin1957Ping
+tex/chapters/ch04.tex	114	\pinyinterm{chen-mengjia-spaced} (1956), pp. 367-501	Chen Mengjia	1956	367-501	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	114	\pinyinterm{wang-guowei} ([1923]	Wang Guowei	1923		pinyinterm	wang-guowei	person	1	Wang1923Kuantang
+tex/chapters/ch04.tex	114	\pinyinterm{hu-houxuan} [1952]	Hu Houxuan	1952		pinyinterm	hu-houxuan	person	1	Hu1952Wushihnien
+tex/chapters/ch04.tex	148	\pinyinterm{yan-yiping} (1961), pp. 516, 519	Yan Yiping	1961	516, 519	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch04.tex	150	\pinyinterm{dong-short} (1933)	Dong	1933		pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch04.tex	150	\pinyinterm{chen-mengjia-spaced} (1956), p. 156	Chen Mengjia	1956	156	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	162	Ho (1975), p. 292	Ho	1975	292	plain			1	Ho1975Cradle
+tex/chapters/ch04.tex	162	\pinyinterm{chen-mengjia-spaced} (1956), pp. 460-468	Chen Mengjia	1956	460-468	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	162	\pinyinterm{zheng-dekun} (1960), p. 221	Zheng Dekun	1960	221	pinyinterm	zheng-dekun	person	1	Cheng1960ShangChina
+tex/chapters/ch04.tex	162	\pinyinterm{huang-ranwei} (1967), pp. 89-119	Huang Ranwei	1967	89-119	pinyinterm	huang-ranwei	person	1	Huang1967Yinli
+tex/chapters/ch04.tex	168	\pinyinterm{chen-mengjia} (1956), pp. 386-392	Chen Mengjia	1956	386-392	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch04.tex	183	\pinyinterm{yan-yiping} (1961), pp. 516, 519	Yan Yiping	1961	516, 519	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch04.tex	184	\pinyinterm{dong-short} (1933)	Dong	1933		pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch04.tex	186	\pinyinterm{chen-mengjia-spaced} (1956), p. 156	Chen Mengjia	1956	156	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	193	\pinyinterm{chen-mengjia-spaced} (1956), pp. 460-468	Chen Mengjia	1956	460-468	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	194	\pinyinterm{huang-ranwei} (1967)	Huang Ranwei	1967		pinyinterm	huang-ranwei	person	1	Huang1967Yinli
+tex/chapters/ch04.tex	195	Ho (1975), p. 292	Ho	1975	292	plain			1	Ho1975Cradle
+tex/chapters/ch04.tex	244	Takashima (1973), p. 358	Takashima	1973	358	plain			1	Takashima1973Negatives
+tex/chapters/ch04.tex	244	\pinyinterm{shima-short} (1958), p. 72	Shima	1958	72	pinyinterm	shima-short	person	1	Shima1958Inkyo
+tex/chapters/ch04.tex	261	Miyazaki (1970), pp. 277-278	Miyazaki	1970	277-278	plain			1	Miyazaki1970Chiigoku
+tex/chapters/ch04.tex	300	\pinyinterm{liu-yuanlin} (1974), pp. 119-121	Liu Yuanlin	1974	119-121	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	320	\pinyinterm{zhang-guangzhi} [1964], pp. 46-47	Zhang Guangzhi	1964	46-47	pinyinterm	zhang-guangzhi	person	1	Chang1964Some
+tex/chapters/ch04.tex	326	\pinyinterm{chen-mengjia-spaced} (1956), p. 456	Chen Mengjia	1956	456	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	326	\pinyinterm{yan-yiping} (1961), p. 528	Yan Yiping	1961	528	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch04.tex	338	Qu Wan (1948), p. 223	Qu Wan	1948	223	plain			1	Chu1948Shihfa
+tex/chapters/ch04.tex	338	\pinyinterm{yan-yiping} (1961), pp. 487-488	Yan Yiping	1961	487-488	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch04.tex	338	\pinyinterm{dong-short} (1951), p. 9	Dong	1951	9	pinyinterm	dong-short	person	1	Tung1951Lun
+tex/chapters/ch04.tex	340	\pinyinterm{wang-guowei} [1923]	Wang Guowei	1923		pinyinterm	wang-guowei	person	1	Wang1923Kuantang
+tex/chapters/ch04.tex	371	\pinyinterm{guo-moruo-spaced} (1972), p. 3	Guo Moruo	1972	3	pinyinterm	guo-moruo-spaced	person	1	Kuo1972Anyang
+tex/chapters/ch04.tex	371	\pinyinterm{qiu-short} [1972], p. 43	Qiu	1972	43	pinyinterm	qiu-short	person	1	Chiu1972DuAnyang
+tex/chapters/ch04.tex	377	\pinyinterm{wang-guowei} [1923]	Wang Guowei	1923		pinyinterm	wang-guowei	person	1	Wang1923Kuantang
+tex/chapters/ch04.tex	388	\pinyinterm{rao-short} (1959), pp. 241-344, 345-443	Rao	1959	241-344, 345-443	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch04.tex	392	\pinyinterm{rao-short} (1959), pp. 1213-1236	Rao	1959	1213-1236	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch04.tex	397	\pinyinterm{dong-short} (1931)	Dong	1931		pinyinterm	dong-short	person	1	Tung1931Takuei
+tex/chapters/ch04.tex	400	Hopkins (1934), pp. 80-81	Hopkins	1934	80-81	plain			1	Hopkins1934Archaic
+tex/chapters/ch04.tex	400	Kaizuka (1946), pp. 208209	Kaizuka	1946	208209	plain			1	Kaizuka1946Chiigoku
+tex/chapters/ch04.tex	418	\pinyinterm{xu-jinxiong} [1974], pp. 154, 196-202	Xu Jinxiong	1974	154, 196-202	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	422	Lu Shih-hsien (1961), p. 72	Lu Shih-hsien	1961	72	plain			1	Lu1961Yinchi
+tex/chapters/ch04.tex	422	\pinyinterm{xu-jinxiong} (1974), p. 203	Xu Jinxiong	1974	203	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	431	\pinyinterm{xu-jinxiong} (1974), p. 203	Xu Jinxiong	1974	203	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	431	\pinyinterm{xu-jinxiong} (1974), p. 86	Xu Jinxiong	1974	86	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	431	\pinyinterm{xu-jinxiong} [1974], p. 91	Xu Jinxiong	1974	91	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	431	\pinyinterm{chen-mengjia-spaced} [1956], p. 199	Chen Mengjia	1956	199	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	431	\pinyinterm{xu-jinxiong} [1972], p. 4a	Xu Jinxiong	1972	4a	pinyinterm	xu-jinxiong	person	1	Hsu1972Luehtan
+tex/chapters/ch04.tex	431	\pinyinterm{yan-yiping} [1961], p. 521	Yan Yiping	1961	521	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch04.tex	431	\pinyinterm{xu-jinxiong} [1974], pp. 92-93, 172-184, 193-196	Xu Jinxiong	1974	92-93, 172-184, 193-196	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	431	\pinyinterm{dong-short} [1952], p. 288	Dong	1952	288	pinyinterm	dong-short	person	1	Tung1952Putzu
+tex/chapters/ch04.tex	431	\pinyinterm{yan-yiping} [1961], p. 506	Yan Yiping	1961	506	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch04.tex	435	\pinyinterm{rao-short} (1959)	Rao	1959		pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch04.tex	435	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch04.tex	435	\pinyinterm{xu-jinxiong} (1974), p. 91	Xu Jinxiong	1974	91	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	435	\pinyinterm{chen-mengjia-spaced} (1956), p. 142	Chen Mengjia	1956	142	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	435	\pinyinterm{xu-jinxiong} (1974), p. 9	Xu Jinxiong	1974	9	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	435	\pinyinterm{xu-jinxiong} (1974), p. 9	Xu Jinxiong	1974	9	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	450	\pinyinterm{dong-short} (1933), pp. 421-423	Dong	1933	421-423	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch04.tex	471	\pinyinterm{dong-short} [1945]	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch04.tex	487	\pinyinterm{dong-short} (1933), pp. 421-423	Dong	1933	421-423	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch04.tex	503	\pinyinterm{li-yan-spaced} [1967], pp. 2	Li Yan	1967	2	pinyinterm	li-yan-spaced	person	1	Yen1967Chiaku
+tex/chapters/ch04.tex	556	\pinyinterm{zhou-hongxiang} (1973), p. 181	Zhou Hongxiang	1973	181	pinyinterm	zhou-hongxiang	person	1	Chou1973Computer
+tex/chapters/ch04.tex	566	\pinyinterm{dong-short} ([1965], p. 101	Dong	1965	101	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch04.tex	583	\pinyinterm{chen-mengjia-spaced} (1956), p. 152	Chen Mengjia	1956	152	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	586	Ikeda (1964)	Ikeda	1964		plain			1	Ikeda1964Inkyo
+tex/chapters/ch04.tex	586	\pinyinterm{yan-yiping} (1961), p. 528	Yan Yiping	1961	528	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch04.tex	586	\pinyinterm{yan-yiping} [1961], p. 515	Yan Yiping	1961	515	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch04.tex	604	Keightley (1973a), pp. 48-49	Keightley	1973a	48-49	plain			1	Keightley1973aShang
+tex/chapters/ch04.tex	612	Kaizuka (1946), p. 237	Kaizuka	1946	237	plain			1	Kaizuka1946Chiigoku
+tex/chapters/ch04.tex	620	\pinyinterm{dong-short} (1933), pp. 410-417	Dong	1933	410-417	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch04.tex	620	\pinyinterm{li-xiaoting} (1968), pp. 96-97	Li Xiaoting	1968	96-97	pinyinterm	li-xiaoting	person	1	LiHsiaoting1968Tsung
+tex/chapters/ch04.tex	620	\pinyinterm{tang-lan} (1965)	Tang Lan	1965		pinyinterm	tang-lan	person	1	TangLan1965Kuwentzu
+tex/chapters/ch04.tex	620	\pinyinterm{li-xiaoting} (1974)	Li Xiaoting	1974		pinyinterm	li-xiaoting	person	1	LiHsiaoting1974Chungkuo
+tex/chapters/ch04.tex	622	Zhang Zongdong (1970), p. 25	Zhang Zongdong	1970	25	plain			1	Zhang1970Der
+tex/chapters/ch04.tex	626	Kaizuka (1946), p. 222	Kaizuka	1946	222	plain			1	Kaizuka1946Chiigoku
+tex/chapters/ch04.tex	626	\pinyinterm{zheng-dekun} (1960), p. 193	Zheng Dekun	1960	193	pinyinterm	zheng-dekun	person	1	Cheng1960ShangChina
+tex/chapters/ch04.tex	626	\pinyinterm{dong-short} (1965)	Dong	1965		pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch04.tex	641	\pinyinterm{zhang-bingquan} (1952), p. 626	Zhang Bingquan	1952	626	pinyinterm	zhang-bingquan	person	1	Chang1952Shuo
+tex/chapters/ch04.tex	642	Ting Su (1966), p. 2b	Ting Su	1966	2b	plain			1	Su1966Chiwen
+tex/chapters/ch04.tex	645	\pinyinterm{dong-short} (1965), pp. 99-100	Dong	1965	99-100	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch04.tex	666	Kane (1973), pp. 340-342	Kane	1973	340-342	plain			1	Kane1973Chronological
+tex/chapters/ch04.tex	727	\pinyinterm{yan-yiping} (1951), p. 212	Yan Yiping	1951	212	pinyinterm	yan-yiping	person	1	Yen1951Yinli
+tex/chapters/ch04.tex	733	\pinyinterm{hu-houxuan} (1939), pp. 432-439	Hu Houxuan	1939	432-439	pinyinterm	hu-houxuan	person	1	Hu1939Putzu
+tex/chapters/ch04.tex	745	\pinyinterm{hu-houxuan} (1944), p. 67a	Hu Houxuan	1944	67a	pinyinterm	hu-houxuan	person	1	Hu1944Wuting
+tex/chapters/ch04.tex	745	\pinyinterm{dong-short} (1954), p. 467	Dong	1954	467	pinyinterm	dong-short	person	1	Tung1954Work
+tex/chapters/ch04.tex	745	\pinyinterm{chen-mengjia-spaced} [1956], p. 13	Chen Mengjia	1956	13	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	748	Keightley (1973a), pp. 46-49	Keightley	1973a	46-49	plain			1	Keightley1973aShang
+tex/chapters/ch04.tex	761	\pinyinterm{rao-short} (1959), p. 658	Rao	1959	658	pinyinterm	rao-short	person	1	Jao1959Yintai
+tex/chapters/ch04.tex	774	CKWP (1934)	CKWP	1934		plain			1	CKWP1934Anyang
+tex/chapters/ch04.tex	774	CKWP (1965)	CKWP	1965		plain			1	CKWP1965Chia
+tex/chapters/ch04.tex	774	\pinyinterm{chen-mengjia-spaced} [1956], p. 236	Chen Mengjia	1956	236	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	774	\pinyinterm{dong-short} [1965], p. 96	Dong	1965	96	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch04.tex	774	\pinyinterm{chen-mengjia-spaced} [1956], p. 236	Chen Mengjia	1956	236	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	804	Shima (1958)	Shima	1958		plain			1	Shima1958Inkyo
+tex/chapters/ch04.tex	804	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch04.tex	804	\pinyinterm{chen-mengjia-spaced} (1956), pp. 385-392	Chen Mengjia	1956	385-392	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	804	\pinyinterm{xu-jinxiong} (1968)	Xu Jinxiong	1968		pinyinterm	xu-jinxiong	person	1	Hsu1968Yin
+tex/chapters/ch04.tex	836	Shima (1966)	Shima	1966		plain			1	Shima1966Bokuji
+tex/chapters/ch04.tex	836	\pinyinterm{chen-mengjia} (1956), pp. 233-235	Chen Mengjia	1956	233-235	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch04.tex	836	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch04.tex	836	\pinyinterm{xu-jinxiong} (1968)	Xu Jinxiong	1968		pinyinterm	xu-jinxiong	person	1	Hsu1968Yin
+tex/chapters/ch04.tex	858	\pinyinterm{chen-mengjia-spaced} (1956)	Chen Mengjia	1956		pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	890	\pinyinterm{hu-houxuan} (1939a)	Hu Houxuan	1939a		pinyinterm	hu-houxuan	person	1	Hu1939aShih
+tex/chapters/ch04.tex	890	\pinyinterm{chen-mengjia-spaced} [1956], p. 327	Chen Mengjia	1956	327	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	921	\pinyinterm{hu-houxuan} (1939a), p. 484	Hu Houxuan	1939a	484	pinyinterm	hu-houxuan	person	1	Hu1939aShih
+tex/chapters/ch04.tex	938	\pinyinterm{qiu-short} (1972), p. 44	Qiu	1972	44	pinyinterm	qiu-short	person	1	Chiu1972DuAnyang
+tex/chapters/ch04.tex	942	Keightley (1973a), pp. 37-38,46-48,57	Keightley	1973a	37-38,46-48,57	plain			1	Keightley1973aShang
+tex/chapters/ch04.tex	942	\pinyinterm{chen-mengjia-spaced} [1956], p. 128	Chen Mengjia	1956	128	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	957	\pinyinterm{huang-peirong} (1969)	Huang Peirong	1969		pinyinterm	huang-peirong	person	1	Huang1969Putsaiming
+tex/chapters/ch04.tex	957	\pinyinterm{xu-jinxiong} (1973a), pp. 48, 92	Xu Jinxiong	1973a	48, 92	pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch04.tex	959	\pinyinterm{xu-jinxiong} (1974), pp. 175-177	Xu Jinxiong	1974	175-177	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	959	\pinyinterm{xu-jinxiong-tight} [1973], pp. 5, 58	Xu Jinxiong	1973	5, 58	pinyinterm	xu-jinxiong-tight	person	1	Hsu1973Tsung
+tex/chapters/ch04.tex	962	Wu Shih-ch'ang (1955)	Wu Shih-ch'ang	1955		plain			1	Wu1955Broken
+tex/chapters/ch04.tex	962	Wu Shih-ch'ang (1955), p. 48	Wu Shih-ch'ang	1955	48	plain			1	Wu1955Broken
+tex/chapters/ch04.tex	962	\pinyinterm{chen-mengjia} (1956), p. 142	Chen Mengjia	1956	142	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch04.tex	962	\pinyinterm{xu-jinxiong} [1974], pp. 13, 49, 197-198	Xu Jinxiong	1974	13, 49, 197-198	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	962	\pinyinterm{xu-jinxiong-tight} [1973], pp. 4, 7, 57, 68	Xu Jinxiong	1973	4, 7, 57, 68	pinyinterm	xu-jinxiong-tight	person	1	Hsu1973Tsung
+tex/chapters/ch04.tex	1009	\pinyinterm{liu-yuanlin} (1974), pp. 113-115	Liu Yuanlin	1974	113-115	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1022	\pinyinterm{liu-yuanlin} (1974)	Liu Yuanlin	1974		pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1036	\pinyinterm{liu-yuanlin} (1974), pp. 99-112	Liu Yuanlin	1974	99-112	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1041	\pinyinterm{liu-yuanlin} (1974), p. 118	Liu Yuanlin	1974	118	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1043	\pinyinterm{liu-yuanlin} (1974), pp. 99-112	Liu Yuanlin	1974	99-112	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1046	\pinyinterm{liu-yuanlin} (1974), pp. 104-112, 129	Liu Yuanlin	1974	104-112, 129	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1046	\pinyinterm{dong-short} (1956), p. 272	Dong	1956	272	pinyinterm	dong-short	person	1	Tung1956Chunchiu
+tex/chapters/ch04.tex	1046	\pinyinterm{xu-jinxiong} [1974], pp. 20-21	Xu Jinxiong	1974	20-21	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1046	\pinyinterm{li-ji} [1934], pp. 86, 88	Li Ji	1934	86, 88	pinyinterm	li-ji	person	1	LiChi1934Chengtzuyai
+tex/chapters/ch04.tex	1048	\pinyinterm{an-zhimin} (1954a), p. 34	An Zhimin	1954a	34	pinyinterm	an-zhimin	person	1	An1954aChengzhou
+tex/chapters/ch04.tex	1050	\pinyinterm{zhang-guangzhi} (1968), p. 231	Zhang Guangzhi	1968	231	pinyinterm	zhang-guangzhi	person	1	Chang1968Archaeology
+tex/chapters/ch04.tex	1053	\pinyinterm{liu-yuanlin} (1974), pp. 113-114	Liu Yuanlin	1974	113-114	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1057	\pinyinterm{liu-yuanlin} (1974), p. 118	Liu Yuanlin	1974	118	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1057	\pinyinterm{xu-jinxiong} (1973a), pp. 17, 93–94	Xu Jinxiong	1973a	17, 93–94	pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch04.tex	1065	\pinyinterm{xu-jinxiong} [1974], pp. 12, 41	Xu Jinxiong	1974	12, 41	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1067	\pinyinterm{xu-jinxiong} (1970a)	Xu Jinxiong	1970a		pinyinterm	xu-jinxiong	person	1	Hsu1970aTsuan
+tex/chapters/ch04.tex	1067	\pinyinterm{chen-mengjia-spaced} (1956), pp. 10-11	Chen Mengjia	1956	10-11	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	1067	\pinyinterm{xu-jinxiong-tight} (1974), p. 280	Xu Jinxiong	1974	280	pinyinterm	xu-jinxiong-tight	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1067	\pinyinterm{xu-jinxiong-tight} (1974), pp. 86-87	Xu Jinxiong	1974	86-87	pinyinterm	xu-jinxiong-tight	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1072	\pinyinterm{xu-jinxiong} [1974], p. 256	Xu Jinxiong	1974	256	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1074	\pinyinterm{xu-jinxiong-tight} (1974)	Xu Jinxiong	1974		pinyinterm	xu-jinxiong-tight	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1074	\pinyinterm{xu-jinxiong} [1973], pp. 25, 123	Xu Jinxiong	1973	25, 123	pinyinterm	xu-jinxiong	person	1	Hsu1973Tsung
+tex/chapters/ch04.tex	1079	\pinyinterm{xu-jinxiong} (1974), pp. 207-257	Xu Jinxiong	1974	207-257	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1080	\pinyinterm{xu-jinxiong} (1973a)	Xu Jinxiong	1973a		pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch04.tex	1083	\pinyinterm{xu-jinxiong} [1974], pp. 58, 83, 92, 97	Xu Jinxiong	1974	58, 83, 92, 97	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1084	\pinyinterm{xu-jinxiong} (1973a)	Xu Jinxiong	1973a		pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch04.tex	1090	\pinyinterm{xu-jinxiong} (1973a)	Xu Jinxiong	1973a		pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch04.tex	1100	\pinyinterm{liu-yuanlin} (1974), pp. 99-112	Liu Yuanlin	1974	99-112	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1100	\pinyinterm{liu-yuanlin} [1974], p. 109	Liu Yuanlin	1974	109	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1100	\pinyinterm{zhang-bingquan} [1954], pp. 216, 217	Zhang Bingquan	1954	216, 217	pinyinterm	zhang-bingquan	person	1	Zhang1954Yin
+tex/chapters/ch04.tex	1100	\pinyinterm{li-ji} [1956], pp. 148-149	Li Ji	1956	148-149	pinyinterm	li-ji	person	1	TingShan1956Chia
+tex/chapters/ch04.tex	1101	\pinyinterm{liu-yuanlin} (1974)	Liu Yuanlin	1974		pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1110	\pinyinterm{xu-jinxiong} (1974), p. 209	Xu Jinxiong	1974	209	pinyinterm	xu-jinxiong	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1110	\pinyinterm{xu-short} [1974], pp. 212-240	Xu	1974	212-240	pinyinterm	xu-short	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1117	\pinyinterm{liu-yuanlin} (1974), pp. 99-119	Liu Yuanlin	1974	99-119	pinyinterm	liu-yuanlin	person	1	Liu1974Puku
+tex/chapters/ch04.tex	1125	\pinyinterm{xu-jinxiong} (1973a), pp. 19, 101	Xu Jinxiong	1973a	19, 101	pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch04.tex	1125	\pinyinterm{xu-short} [1973]	Xu	1973		pinyinterm	xu-short	person	1	Hsu1973Tsung
+tex/chapters/ch04.tex	1125	\pinyinterm{xu-short} [1973]	Xu	1973		pinyinterm	xu-short	person	1	Hsu1973Tsung
+tex/chapters/ch04.tex	1125	\pinyinterm{xu-short} [1974], pp. 255-256	Xu	1974	255-256	pinyinterm	xu-short	person	1	Hsu1974Scapulimantic
+tex/chapters/ch04.tex	1131	\pinyinterm{xu-jinxiong} (1973a), pp. 40-41	Xu Jinxiong	1973a	40-41	pinyinterm	xu-jinxiong	person	1	Hsu1973aPuku
+tex/chapters/ch04.tex	1144	Ito (1959)	Ito	1959		plain			1	Ito1959Anyo
+tex/chapters/ch04.tex	1144	\pinyinterm{guo-baojun} (1933)	Guo Baojun	1933		pinyinterm	guo-baojun	person	1	KuoBaojun1933Bchu
+tex/chapters/ch04.tex	1144	\pinyinterm{li-ji} (1930)	Li Ji	1930		pinyinterm	li-ji	person	1	LiChi1930Minkuo
+tex/chapters/ch04.tex	1144	\pinyinterm{shi-zhangru} (1933)	Shi Zhangru	1933		pinyinterm	shi-zhangru	person	1	Shih1933Tich
+tex/chapters/ch04.tex	1144	\pinyinterm{dong-short} (1929a)	Dong	1929a		pinyinterm	dong-short	person	1	Tung1929aHsin
+tex/chapters/ch04.tex	1144	\pinyinterm{hu-houxuan} (1955), pp. 43-121	Hu Houxuan	1955	43-121	pinyinterm	hu-houxuan	person	1	Hu1955Yinhsu
+tex/chapters/ch04.tex	1144	\pinyinterm{chen-mengjia} (1956), pp. 35-42	Chen Mengjia	1956	35-42	pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch04.tex	1144	\pinyinterm{shi-zhangru} (1959), pp. 319-329	Shi Zhangru	1959	319-329	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/chapters/ch04.tex	1144	\pinyinterm{zhang-bingquan} (1967), pp. 831-851	Zhang Bingquan	1967	831-851	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch04.tex	1144	\pinyinterm{dong-short} (1965), pp. 14-15	Dong	1965	14-15	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch04.tex	1144	\pinyinterm{li-ji} (1977)	Li Ji	1977		pinyinterm	li-ji	person	1	Hu1977Niao
+tex/chapters/ch04.tex	1166	\pinyinterm{dong-short} [1933], p. 361	Dong	1933	361	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch04.tex	1172	\pinyinterm{shi-zhangru} [1947], pp. 4142	Shi Zhangru	1947	4142	pinyinterm	shi-zhangru	person	1	Shih1947Yinhsu
+tex/chapters/ch04.tex	1175	\pinyinterm{li-ji} [1949], p. 251	Li Ji	1949	251	pinyinterm	li-ji	person	1	LiChi1949Pa
+tex/chapters/ch04.tex	1175	\pinyinterm{dong-short} [1929], p. 180	Dong	1929	180	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch04.tex	1175	\pinyinterm{shi-zhangru} [1959], pp. 320, 321	Shi Zhangru	1959	320, 321	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/chapters/ch04.tex	1187	\pinyinterm{dong-short} [1933], p. 361	Dong	1933	361	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch04.tex	1203	\pinyinterm{shi-zhangru} [1947], pp. 41	Shi Zhangru	1947	41	pinyinterm	shi-zhangru	person	1	Shih1947Yinhsu
+tex/chapters/ch04.tex	1208	\pinyinterm{li-ji} [1949], p. 251	Li Ji	1949	251	pinyinterm	li-ji	person	1	LiChi1949Pa
+tex/chapters/ch04.tex	1214	\pinyinterm{dong-short} [1929], p. 180	Dong	1929	180	pinyinterm	dong-short	person	1	Tung1929Shang
+tex/chapters/ch04.tex	1216	\pinyinterm{shi-zhangru} [1959], pp. 320, 321	Shi Zhangru	1959	320, 321	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/chapters/ch04.tex	1223	Xiao Nan (1976)	Xiao Nan	1976		plain			1	Hsiao1976Anyang
+tex/chapters/ch04.tex	1223	\pinyinterm{shi-zhangru} (1959), pp. 319-320	Shi Zhangru	1959	319-320	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/chapters/ch04.tex	1236	\pinyinterm{dong-short} (1933), p. 351	Dong	1933	351	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch04.tex	1239	\pinyinterm{dong-short} (1949), p. 240	Dong	1949	240	pinyinterm	dong-short	person	1	Tung1949Yinhsu
+tex/chapters/ch04.tex	1239	\pinyinterm{shi-zhangru} (1959)	Shi Zhangru	1959		pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/chapters/ch04.tex	1241	\pinyinterm{chen-mengjia} [1956]	Chen Mengjia	1956		pinyinterm	chen-mengjia	person	1	Chen1956Yin
+tex/chapters/ch04.tex	1244	\pinyinterm{dong-short} (1949), p. 229	Dong	1949	229	pinyinterm	dong-short	person	1	Tung1949Yinhsu
+tex/chapters/ch04.tex	1247	\pinyinterm{dong-short} (1929a), pp. 180, 181	Dong	1929a	180, 181	pinyinterm	dong-short	person	1	Tung1929aHsin
+tex/chapters/ch04.tex	1247	\pinyinterm{shi-zhangru} [1959], p. 321	Shi Zhangru	1959	321	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/chapters/ch04.tex	1247	\pinyinterm{dong-short} [1929b], p. 182	Dong	1929b	182	pinyinterm	dong-short	person	1	Tung1929bHsin
+tex/chapters/ch04.tex	1249	\pinyinterm{shi-zhangru} (1947), p. 11	Shi Zhangru	1947	11	pinyinterm	shi-zhangru	person	1	Shih1947Yinhsu
+tex/chapters/ch04.tex	1249	\pinyinterm{shi-zhangru} (1959), p. 322	Shi Zhangru	1959	322	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/chapters/ch04.tex	1249	\pinyinterm{dong-short} (1949a), p. 288	Dong	1949a	288	pinyinterm	dong-short	person	1	Tung1949aYin
+tex/chapters/ch04.tex	1249	\pinyinterm{dong-short} (1949a), p. 288	Dong	1949a	288	pinyinterm	dong-short	person	1	Tung1949aYin
+tex/chapters/ch04.tex	1267	\pinyinterm{shi-zhangru} [1959], pp. 317, 318, 330	Shi Zhangru	1959	317, 318, 330	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/chapters/ch04.tex	1274	\pinyinterm{shi-zhangru} (1959), p. 322	Shi Zhangru	1959	322	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/chapters/ch04.tex	1278	\pinyinterm{chen-mengjia-spaced} (1956), p. 156	Chen Mengjia	1956	156	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch04.tex	1282	\pinyinterm{dong-short} ([1949a], p. 288	Dong	1949a	288	pinyinterm	dong-short	person	1	Tung1949aYin
+tex/chapters/ch04.tex	1294	Karlbeck (1957)	Karlbeck	1957		plain			1	Karlbeck1957Treasure
+tex/chapters/ch04.tex	1302	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch04.tex	1303	Jung Keng (1947), pp. 24	Jung Keng	1947	24	plain			1	Jung1947Chiaku
+tex/chapters/ch04.tex	1304	\pinyinterm{li-yan-spaced} (1966), p. 3	Li Yan	1966	3	pinyinterm	li-yan-spaced	person	1	LiYen1966Yenchai
+tex/chapters/ch04.tex	1314	\pinyinterm{li-ji} (1977), p. 116	Li Ji	1977	116	pinyinterm	li-ji	person	1	Hu1977Niao
+tex/chapters/ch04.tex	1314	\pinyinterm{shi-zhangru} [1947], p. 8	Shi Zhangru	1947	8	pinyinterm	shi-zhangru	person	1	Shih1947Yinhsu
+tex/chapters/ch05.tex	18	Kane (1973)	Kane	1973		plain			1	Kane1973Chronological
+tex/chapters/ch05.tex	18	Britton (1940), p. 5	Britton	1940	5	plain			1	Britton1940Fifty
+tex/chapters/ch05.tex	18	Kane (1975), p. 99	Kane	1975	99	plain			1	Kane1975Reexamination
+tex/chapters/ch05.tex	18	Barnard (1959)	Barnard	1959		plain			1	Barnard1959Remarks
+tex/chapters/ch05.tex	18	Akatsuka (1955)	Akatsuka	1955		plain			1	Akatsuka1955Kohon
+tex/chapters/ch05.tex	18	Hayashi Minao (1968)	Hayashi Minao	1968		plain			1	Hayashi1968Inshu
+tex/chapters/ch05.tex	18	\pinyinterm{chen-mengjia-spaced} (1956), pp. 44-46	Chen Mengjia	1956	44-46	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch05.tex	18	\pinyinterm{su-yinghui} (1957), p. 268	Su Yinghui	1957	268	pinyinterm	su-yinghui	person	1	Su1957Zhongguo
+tex/chapters/ch05.tex	18	\pinyinterm{zheng-dekun} (1960), pp. 185-191	Zheng Dekun	1960	185-191	pinyinterm	zheng-dekun	person	1	Cheng1960ShangChina
+tex/chapters/ch05.tex	18	\pinyinterm{dong-short} (1948b), pp. 198–207	Dong	1948b	198–207	pinyinterm	dong-short	person	1	Tung1948bYinli
+tex/chapters/ch05.tex	18	\pinyinterm{shima-short} (1966), pp. 12, 15-16	Shima	1966	12, 15-16	pinyinterm	shima-short	person	1	Shima1966Bokuji
+tex/chapters/ch05.tex	18	\pinyinterm{xu-jinxiong} (1971), p. 5a	Xu Jinxiong	1971	5a	pinyinterm	xu-jinxiong	person	1	Hsu1971Wuchung
+tex/chapters/ch05.tex	18	\pinyinterm{zhang-guangzhi} (1973), p. 116	Zhang Guangzhi	1973	116	pinyinterm	zhang-guangzhi	person	1	Chang1973Tan
+tex/chapters/ch05.tex	18	\pinyinterm{zhang-guangzhi} (1974)	Zhang Guangzhi	1974		pinyinterm	zhang-guangzhi	person	1	Chang1974Urbanism
+tex/chapters/ch05.tex	18	\pinyinterm{zhang-guangzhi} (1970)	Zhang Guangzhi	1970		pinyinterm	zhang-guangzhi	person	1	Chang1970Shang
+tex/chapters/ch05.tex	18	\pinyinterm{zhang-guangzhi} [1973], p. 116	Zhang Guangzhi	1973	116	pinyinterm	zhang-guangzhi	person	1	Chang1973Tan
+tex/chapters/ch05.tex	24	Gelb (1967), p. 4	Gelb	1967	4	plain			1	Gelb1967Approaches
+tex/chapters/ch05.tex	24	Fischer (1970), pp. 104-130	Fischer	1970	104-130	plain			1	Fischer1970Historians
+tex/chapters/ch05.tex	28	Evans-Pritchard (1937)	Evans-Pritchard	1937		plain			1	EvansPritchard1937Witchcraft
+tex/chapters/ch05.tex	28	Middleton (1960)	Middleton	1960		plain			1	Middleton1960Lugbara
+tex/chapters/ch05.tex	28	Beattie (1967)	Beattie	1967		plain			1	Beattie1967Divination
+tex/chapters/ch05.tex	28	Park (1967)	Park	1967		plain			1	Park1967Divination
+tex/chapters/ch05.tex	28	Turner (1975)	Turner	1975		plain			1	Turner1975Revelation
+tex/chapters/ch05.tex	28	Monroe (1974)	Monroe	1974		plain			1	Monroe1974Ritual
+tex/chapters/ch05.tex	28	Ho (1975), pp. 223-235	Ho	1975	223-235	plain			1	Ho1975Cradle
+tex/chapters/ch05.tex	28	\pinyinterm{tang-lan} [1975]	Tang Lan	1975		pinyinterm	tang-lan	person	1	TangLan1975Jiangxi
+tex/chapters/ch05.tex	43	Evans-Pritchard (1937), pp. 258-368	Evans-Pritchard	1937	258-368	plain			1	EvansPritchard1937Witchcraft
+tex/chapters/ch05.tex	43	Hultkrantz (1968), pp. 75, 86	Hultkrantz	1968	75, 86	plain			1	Hultkrantz1968La
+tex/chapters/ch05.tex	43	Roux and Boratav (1968), p. 282	Roux and Boratav	1968	282	plain			1	Roux1968Divination
+tex/chapters/ch05.tex	57	Vernant (1974), p. 10	Vernant	1974	10	plain			1	Vernant1974Parole
+tex/chapters/ch05.tex	57	Keightley (1972)	Keightley	1972		plain			1	Keightley1972New
+tex/chapters/ch05.tex	82	Clavier (1968)	Clavier	1968		plain			1	Clavier1968Resurgences
+tex/chapters/ch05.tex	86	Waterbury (1942), pp. 1-3, 129	Waterbury	1942	1-3, 129	plain			1	Waterbury1942Early
+tex/chapters/ch05.tex	86	\pinyinterm{zhang-guangzhi} (1973b), pp. 516-518	Zhang Guangzhi	1973b	516-518	pinyinterm	zhang-guangzhi	person	1	Chang1973bFood
+tex/chapters/ch05.tex	120	Keightley (1973a), pp. 13-25, 37-38	Keightley	1973a	13-25, 37-38	plain			1	Keightley1973aShang
+tex/chapters/ch05.tex	138	\pinyinterm{chen-mengjia-spaced} (1956), p. 143	Chen Mengjia	1956	143	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch05.tex	138	\pinyinterm{dong-short} (1933), pp. 355-356	Dong	1933	355-356	pinyinterm	dong-short	person	1	Tung1933Chia
+tex/chapters/ch05.tex	138	\pinyinterm{chen-mengjia-spaced} (1956), pp. 140143	Chen Mengjia	1956	140143	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch05.tex	163	Keightley (1973a), pp. 13-25, 37-38	Keightley	1973a	13-25, 37-38	plain			1	Keightley1973aShang
+tex/chapters/ch05.tex	176	\pinyinterm{chen-mengjia-spaced} [1956], p. 6	Chen Mengjia	1956	6	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch05.tex	176	\pinyinterm{li-xueqin-spaced} [1956], p. 17	Li Xueqin	1956	17	pinyinterm	li-xueqin-spaced	person	1	LiHsuehchin1956Tan
+tex/chapters/ch05.tex	189	Lefeuvre (1975), p. 16	Lefeuvre	1975	16	plain			1	Lefeuvre1975Les
+tex/chapters/ch05.tex	208	Creel (1938), p. 2	Creel	1938	2	plain			1	Creel1938Studies
+tex/chapters/ch05.tex	208	\pinyinterm{hu-houxuan} (1955), pp. 15-22	Hu Houxuan	1955	15-22	pinyinterm	hu-houxuan	person	1	Hu1955Yinhsu
+tex/chapters/ch05.tex	208	\pinyinterm{zhang-bingquan} (1967), pp. 834-835	Zhang Bingquan	1967	834-835	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch05.tex	211	\pinyinterm{dong-short} [1929b], p. 212	Dong	1929b	212	pinyinterm	dong-short	person	1	Tung1929bHsin
+tex/chapters/ch05.tex	213	\pinyinterm{jin-xiangheng} [1962], pp. 189–191	Jin Xiangheng	1962	189–191	pinyinterm	jin-xiangheng	person	1	Chin1962Shih
+tex/chapters/ch05.tex	213	\pinyinterm{li-yan-spaced} [1970], p. 283	Li Yan	1970	283	pinyinterm	li-yan-spaced	person	1	LiYen1970PeiMei
+tex/chapters/ch05.tex	214	Karlbeck (1957), pp. 174--192	Karlbeck	1957	174--192	plain			1	Karlbeck1957Treasure
+tex/chapters/ch05.tex	214	\pinyinterm{li-yan-spaced} [1966], p. 3	Li Yan	1966	3	pinyinterm	li-yan-spaced	person	1	LiYen1966Yenchai
+tex/chapters/ch05.tex	221	Barnard (1968), p. 114	Barnard	1968	114	plain			1	Barnard1968Incidence
+tex/chapters/ch05.tex	221	Barnard (1960a), p. 481	Barnard	1960a	481	plain			1	Barnard1960aReview
+tex/chapters/ch05.tex	222	\pinyinterm{dong-short} [1965], pp. 56-60	Dong	1965	56-60	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch05.tex	232	Yetts (1954)	Yetts	1954		plain			1	Yetts1954Shang
+tex/chapters/ch05.tex	233	White (1945), pp. 75, 77	White	1945	75, 77	plain			1	White1945Bone
+tex/chapters/ch05.tex	233	\pinyinterm{yan-yiping} (1967), 1, pp. 2-6	Yan Yiping	1967	2-6	pinyinterm	yan-yiping	person	1	Yen1967Chiaku
+tex/chapters/ch05.tex	238	As Yetts (1954)	As Yetts	1954		plain			1	Yetts1954Shang
+tex/chapters/ch05.tex	238	\pinyinterm{chen-mengjia-spaced} (1956), pp. 652--653	Chen Mengjia	1956	652--653	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch05.tex	238	\pinyinterm{dong-short} [1965], p. 61	Dong	1965	61	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch05.tex	238	\pinyinterm{dong-short} [1965], p. 61	Dong	1965	61	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch05.tex	238	\pinyinterm{zhang-bingquan} [1967], p. 834	Zhang Bingquan	1967	834	pinyinterm	zhang-bingquan	person	1	Zhang1967Kao
+tex/chapters/ch05.tex	238	\pinyinterm{li-yan-spaced} [1970], p. 320	Li Yan	1970	320	pinyinterm	li-yan-spaced	person	1	LiYen1970PeiMei
+tex/chapters/ch05.tex	238	\pinyinterm{yan-yiping} [1967], p. 5	Yan Yiping	1967	5	pinyinterm	yan-yiping	person	1	Yen1967Chiaku
+tex/chapters/ch05.tex	238	\pinyinterm{dong-short} [1953], p. 378	Dong	1953	378	pinyinterm	dong-short	person	1	Tung1953Chia
+tex/chapters/ch05.tex	238	\pinyinterm{chen-mengjia-spaced} [1956], p. 49	Chen Mengjia	1956	49	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch05.tex	238	\pinyinterm{dong-short} [1965], p. 61	Dong	1965	61	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch05.tex	260	\pinyinterm{li-yan-spaced} [1967]	Li Yan	1967		pinyinterm	li-yan-spaced	person	1	Yen1967Chiaku
+tex/chapters/ch05.tex	261	\pinyinterm{zheng-dekun} [1971]	Zheng Dekun	1971		pinyinterm	zheng-dekun	person	1	Cheng1971Inconstancy
+tex/chapters/ch05.tex	281	\pinyinterm{li-yan-spaced} (1967)	Li Yan	1967		pinyinterm	li-yan-spaced	person	1	Yen1967Chiaku
+tex/chapters/ch05.tex	321	\pinyinterm{jin-xiangheng} [1962a], p. 176	Jin Xiangheng	1962a	176	pinyinterm	jin-xiangheng	person	1	Chin1962aKufang
+tex/chapters/ch05.tex	323	\pinyinterm{dong-short} (1965), p. 60	Dong	1965	60	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch05.tex	333	\pinyinterm{hongxiang-short} [1976], p. 21	Hongxiang	1976	21	pinyinterm	hongxiang-short	person	1	Hung1976Panlongcheng
+tex/chapters/ch05.tex	343	\pinyinterm{dong-short} (1951c), pp. 6-7	Dong	1951c	6-7	pinyinterm	dong-short	person	1	Tung1951cChinese
+tex/chapters/ch05.tex	358	\pinyinterm{li-xueqin} (1957), p. 123	Li Xueqin	1957	123	pinyinterm	li-xueqin	person	1	LiHsuehchin1957Ping
+tex/chapters/ch05.tex	358	\pinyinterm{mengjia-short} (1956)	Mengjia	1956		pinyinterm	mengjia-short	person	1	Chen1956Yin
+tex/chapters/ch05.tex	358	\pinyinterm{jin-xiangheng} (1962a)	Jin Xiangheng	1962a		pinyinterm	jin-xiangheng	person	1	Chin1962aKufang
+tex/chapters/ch05.tex	368	\pinyinterm{guo-moruo-spaced} (1972)	Guo Moruo	1972		pinyinterm	guo-moruo-spaced	person	1	Kuo1972Anyang
+tex/chapters/ch05.tex	401	Zhang Zongdong (1970), pp. 30-33	Zhang Zongdong	1970	30-33	plain			1	Zhang1970Der
+tex/chapters/ch05.tex	401	\pinyinterm{jin-xiangheng} (1962a)	Jin Xiangheng	1962a		pinyinterm	jin-xiangheng	person	1	Chin1962aKufang
+tex/chapters/ch05.tex	401	\pinyinterm{yan-yiping} (1967)	Yan Yiping	1967		pinyinterm	yan-yiping	person	1	Yen1967Chiaku
+tex/chapters/ch05.tex	401	\pinyinterm{hu-houxuan} (1973a)	Hu Houxuan	1973a		pinyinterm	hu-houxuan	person	1	Hu1973aLintzu
+tex/chapters/ch05.tex	456	Lefeuvre (1975), pp. 27-28	Lefeuvre	1975	27-28	plain			1	Lefeuvre1975Les
+tex/chapters/ch05.tex	459	\pinyinterm{zhou-hongxiang} (1976)	Zhou Hongxiang	1976		pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch05.tex	465	\pinyinterm{dong-short} (1953), pp. 375-378	Dong	1953	375-378	pinyinterm	dong-short	person	1	Tung1953Chia
+tex/chapters/ch05.tex	473	Woodhead (1967), pp. 78-83	Woodhead	1967	78-83	plain			1	Woodhead1967Study
+tex/chapters/ch05.tex	474	\pinyinterm{zhou-hongxiang} (1976), pp. 5, 18	Zhou Hongxiang	1976	5, 18	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch05.tex	483	\pinyinterm{dong-short} (1931)	Dong	1931		pinyinterm	dong-short	person	1	Tung1931Takuei
+tex/chapters/ch05.tex	486	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch05.tex	488	\pinyinterm{zhou-hongxiang} (1976)	Zhou Hongxiang	1976		pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch05.tex	491	Mickel (1974)	Mickel	1974		plain			1	Mickel1974Reduplicated
+tex/chapters/ch05.tex	491	Jung Keng (1947), p. 22	Jung Keng	1947	22	plain			1	Jung1947Chiaku
+tex/chapters/ch05.tex	491	\pinyinterm{chen-mengjia-spaced} (1956), p. 48	Chen Mengjia	1956	48	pinyinterm	chen-mengjia-spaced	person	1	Chen1956Yin
+tex/chapters/ch05.tex	491	\pinyinterm{dong-short} (1958), pp. 918-920	Dong	1958	918-920	pinyinterm	dong-short	person	1	Tung1958Chiaku
+tex/chapters/ch05.tex	491	\pinyinterm{zhou-hongxiang} (1976), pp. 2-7, 18	Zhou Hongxiang	1976	2-7, 18	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch05.tex	491	\pinyinterm{sun-haibo} (1937)	Sun Haibo	1937		pinyinterm	sun-haibo	person	1	Sun1937Fushi
+tex/chapters/ch05.tex	491	\pinyinterm{dong-short} [1952], p. 284	Dong	1952	284	pinyinterm	dong-short	person	1	Tung1952Putzu
+tex/chapters/ch05.tex	497	Britton (1935), pp. 1, 13	Britton	1935	1, 13	plain			1	Britton1935Yin
+tex/chapters/ch05.tex	497	\pinyinterm{li-yan-spaced} (1970)	Li Yan	1970		pinyinterm	li-yan-spaced	person	1	LiYen1970PeiMei
+tex/chapters/ch05.tex	497	\pinyinterm{zhou-hongxiang} (1976), pp. 3, 5, 22	Zhou Hongxiang	1976	3, 5, 22	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch05.tex	497	\pinyinterm{zhou-hongxiang} (1976), pp. 2-7	Zhou Hongxiang	1976	2-7	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch05.tex	497	\pinyinterm{zhang-bingquan} (1956), p. 241	Zhang Bingquan	1956	241	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch05.tex	500	\pinyinterm{zhou-hongxiang} (1976), pp. 2, 3	Zhou Hongxiang	1976	2, 3	pinyinterm	zhou-hongxiang	person	1	Hung1976Panlongcheng
+tex/chapters/ch05.tex	500	\pinyinterm{jin-xiangheng} [1961], p. 72	Jin Xiangheng	1961	72	pinyinterm	jin-xiangheng	person	1	TungChin1961Penhsi
+tex/chapters/ch05.tex	500	\pinyinterm{dong-short} [1945]	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch05.tex	500	\pinyinterm{zhou-hongxiang} [1973], p. 181	Zhou Hongxiang	1973	181	pinyinterm	zhou-hongxiang	person	1	Chou1973Computer
+tex/chapters/ch05.tex	507	\pinyinterm{hu-houxuan} (1973a)	Hu Houxuan	1973a		pinyinterm	hu-houxuan	person	1	Hu1973aLintzu
+tex/chapters/ch05.tex	513	\pinyinterm{hu-houxuan} (1964), p. 138	Hu Houxuan	1964	138	pinyinterm	hu-houxuan	person	1	Hu1964Chiakuwen
+tex/chapters/ch05.tex	513	\pinyinterm{liu-yuanlin} (1969), pp. 237–243	Liu Yuanlin	1969	237–243	pinyinterm	liu-yuanlin	person	1	Liu1969Kuchien
+tex/chapters/ch05.tex	515	\pinyinterm{yan-yiping} (1961), pp. 516-520	Yan Yiping	1961	516-520	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch05.tex	520	Serruys (1974), pp. 15-19	Serruys	1974	15-19	plain			1	Serruys1974The
+tex/chapters/ch05.tex	526	Zhang Zongdong (1970)	Zhang Zongdong	1970		plain			1	Zhang1970Der
+tex/chapters/ch05.tex	526	Takashima (1973)	Takashima	1973		plain			1	Takashima1973Negatives
+tex/chapters/ch05.tex	526	\pinyinterm{shima-short} (1958)	Shima	1958		pinyinterm	shima-short	person	1	Shima1958Inkyo
+tex/chapters/ch05.tex	570	Serruys (1974), pp. 15-19	Serruys	1974	15-19	plain			1	Serruys1974The
+tex/chapters/ch05.tex	570	Woodhead (1967), pp. 67-76	Woodhead	1967	67-76	plain			1	Woodhead1967Study
+tex/chapters/ch05.tex	570	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch05.tex	570	\pinyinterm{zhang-bingquan} (1956a), pp. 242-243	Zhang Bingquan	1956a	242-243	pinyinterm	zhang-bingquan	person	1	Zhang1956aPutzu
+tex/chapters/ch05.tex	575	\pinyinterm{yan-yiping} (1973), pp. 2b, 6a, 6b-7a	Yan Yiping	1973	2b, 6a, 6b-7a	pinyinterm	yan-yiping	person	1	Yen1973Kuanyu
+tex/chapters/ch05.tex	577	Mickel (1976b)	Mickel	1976b		plain			1	Mickel1976bThree
+tex/chapters/ch05.tex	577	Mickel (1974)	Mickel	1974		plain			1	Mickel1974Reduplicated
+tex/chapters/ch05.tex	577	\pinyinterm{dong-short} (1929a)	Dong	1929a		pinyinterm	dong-short	person	1	Tung1929aHsin
+tex/chapters/ch05.tex	584	\pinyinterm{zhou-hongxiang} (1973)	Zhou Hongxiang	1973		pinyinterm	zhou-hongxiang	person	1	Chou1973Computer
+tex/chapters/ch05.tex	587	\pinyinterm{dong-short} (1954a), p. 120	Dong	1954a	120	pinyinterm	dong-short	person	1	Tung1954aYinli
+tex/chapters/ch05.tex	602	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch05.tex	602	\pinyinterm{zhang-bingquan} (1956), pp. 240, 243	Zhang Bingquan	1956	240, 243	pinyinterm	zhang-bingquan	person	1	Zhang1956Pu
+tex/chapters/ch05.tex	602	\pinyinterm{yan-yiping} (1967), pp. 1	Yan Yiping	1967	1	pinyinterm	yan-yiping	person	1	Yen1967Chiaku
+tex/chapters/ch05.tex	603	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch05.tex	605	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch05.tex	605	\pinyinterm{yan-yiping} (1954)	Yan Yiping	1954		pinyinterm	yan-yiping	person	1	Yen1954Payueh
+tex/chapters/ch05.tex	605	\pinyinterm{li-xueqin} (1956), p. 16	Li Xueqin	1956	16	pinyinterm	li-xueqin	person	1	LiHsuehchin1956Tan
+tex/chapters/ch05.tex	605	\pinyinterm{qu-wanli} (1965), pp. 73-74	Qu Wanli	1965	73-74	pinyinterm	qu-wanli	person	1	Chu1965aShihchi
+tex/chapters/ch05.tex	605	\pinyinterm{zhang-bingquan} (1956a), p. 244	Zhang Bingquan	1956a	244	pinyinterm	zhang-bingquan	person	1	Zhang1956aPutzu
+tex/chapters/ch05.tex	605	\pinyinterm{yan-yiping} (1961)	Yan Yiping	1961		pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch05.tex	605	\pinyinterm{dong-short} (1952), pp. 282-286	Dong	1952	282-286	pinyinterm	dong-short	person	1	Tung1952Putzu
+tex/chapters/ch05.tex	605	\pinyinterm{zhang-bingquan} (1956a), pp. 244–245	Zhang Bingquan	1956a	244–245	pinyinterm	zhang-bingquan	person	1	Zhang1956aPutzu
+tex/chapters/ch05.tex	616	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch05.tex	674	\pinyinterm{dong-short} (1949), pp. 241-242	Dong	1949	241-242	pinyinterm	dong-short	person	1	Tung1949Yinhsu
+tex/chapters/ch05.tex	674	\pinyinterm{dong-short} (1951)	Dong	1951		pinyinterm	dong-short	person	1	Tung1951Lun
+tex/chapters/ch05.tex	674	\pinyinterm{li-xueqin-spaced} (1959), p. 22	Li Xueqin	1959	22	pinyinterm	li-xueqin-spaced	person	1	LiHsuehchin1959Kuan
+tex/chapters/ch05.tex	676	Creel (1970), p. 31	Creel	1970	31	plain			1	Creel1970Origins
+tex/chapters/ch05.tex	676	Van Gulik (1961), p. 4	Van Gulik	1961	4	plain			1	Van1961Sexual
+tex/chapters/ch05.tex	696	Zhang Zongdong (1970)	Zhang Zongdong	1970		plain			1	Zhang1970Der
+tex/chapters/ch05.tex	696	Wheatley (1971)	Wheatley	1971		plain			1	Wheatley1971Pivot
+tex/chapters/ch05.tex	696	Vandermeersch (1975)	Vandermeersch	1975		plain			1	Vandermeersch1975Wangdao
+tex/chapters/ch05.tex	696	\pinyinterm{zhang-guangzhi} (1964)	Zhang Guangzhi	1964		pinyinterm	zhang-guangzhi	person	1	Chang1964Some
+tex/chapters/ch05.tex	696	\pinyinterm{zhou-hongxiang} (1968)	Zhou Hongxiang	1968		pinyinterm	zhou-hongxiang	person	1	Chou1968SomeAspects
+tex/chapters/ch05.tex	696	\pinyinterm{yu-xingwu} [1972]	Yu Xingwu	1972		pinyinterm	yu-xingwu	person	1	Yu1972Tsung
+tex/chapters/ch05.tex	696	\pinyinterm{zhang-guangzhi} [1973]	Zhang Guangzhi	1973		pinyinterm	zhang-guangzhi	person	1	Chang1973Tan
+tex/chapters/ch05.tex	696	\pinyinterm{hu-houxuan} [1973]	Hu Houxuan	1973		pinyinterm	hu-houxuan	person	1	Hu1973Yintai
+tex/chapters/ch05.tex	696	\pinyinterm{hu-houxuan} [1972]	Hu Houxuan	1972		pinyinterm	hu-houxuan	person	1	Hu1972Yintai
+tex/chapters/ch05.tex	696	\pinyinterm{li-shi} [1976]	Li Shi	1976		pinyinterm	li-shi	person	1	LiShih1976Yu
+tex/chapters/ch05.tex	696	\pinyinterm{hu-houxuan} [1976]	Hu Houxuan	1976		pinyinterm	hu-houxuan	person	1	Hu1976Chiakuwen
+tex/chapters/ch05.tex	706	Hughes (1961), p. 9	Hughes	1961	9	plain			1	Hughes1961Consciousness
+tex/chapters/ch05.tex	719	\pinyinterm{hu-houxuan} (1944a), p. 2a	Hu Houxuan	1944a	2a	pinyinterm	hu-houxuan	person	1	Hu1944aYintai
+tex/chapters/ch05.tex	719	\pinyinterm{dong-short} (1965), p. 117	Dong	1965	117	pinyinterm	dong-short	person	1	Tung1965Chia
+tex/chapters/ch05.tex	734	Evans-Pritchard (1937), pp. 270, 313	Evans-Pritchard	1937	270, 313	plain			1	EvansPritchard1937Witchcraft
+tex/chapters/ch05.tex	744	Strauss (1969), p. 10	Strauss	1969	10	plain			1	LeviStrauss1969Raw
+tex/chapters/ch05.tex	744	Kluckhohn and Leighton (1970), p. 348	Kluckhohn and Leighton	1970	348	plain			1	Kluckhohn1970The
+tex/chapters/ch05.tex	751	Bloch (1953), p. 151	Bloch	1953	151	plain			1	Bloch1953Craft
+tex/chapters/ch05.tex	756	Winch (1964)	Winch	1964		plain			1	Winch1964Understanding
+tex/chapters/ch05.tex	770	Serruys (1974), pp. 15-19	Serruys	1974	15-19	plain			1	Serruys1974The
+tex/chapters/ch05.tex	771	Zhang Zongdong (1970)	Zhang Zongdong	1970		plain			1	Zhang1970Der
+tex/chapters/ch05.tex	771	Takashima (1973)	Takashima	1973		plain			1	Takashima1973Negatives
+tex/chapters/ch05.tex	771	\pinyinterm{shima-short} (1958)	Shima	1958		pinyinterm	shima-short	person	1	Shima1958Inkyo
+tex/chapters/ch05.tex	774	\pinyinterm{hu-houxuan} (1964), p. 138	Hu Houxuan	1964	138	pinyinterm	hu-houxuan	person	1	Hu1964Chiakuwen
+tex/chapters/ch05.tex	774	\pinyinterm{liu-yuanlin} (1969), pp. 237-243	Liu Yuanlin	1969	237-243	pinyinterm	liu-yuanlin	person	1	Liu1969Kuchien
+tex/chapters/ch05.tex	775	\pinyinterm{yan-yiping} (1961), pp. 516-520	Yan Yiping	1961	516-520	pinyinterm	yan-yiping	person	1	Yen1961Chiaku
+tex/chapters/ch05.tex	782	Serruys (1974), pp. 15-19	Serruys	1974	15-19	plain			1	Serruys1974The
+tex/chapters/ch05.tex	782	Woodhead (1967), pp. 67-76	Woodhead	1967	67-76	plain			1	Woodhead1967Study
+tex/chapters/ch05.tex	782	\pinyinterm{dong-short} (1945)	Dong	1945		pinyinterm	dong-short	person	1	Tung1945Yin
+tex/chapters/ch05.tex	782	\pinyinterm{zhang-bingquan} (1956a), pp. 242-243	Zhang Bingquan	1956a	242-243	pinyinterm	zhang-bingquan	person	1	Zhang1956aPutzu
+tex/chapters/ch05.tex	783	\pinyinterm{yan-yiping} (1973), pp. 2b, 6a, 6b-7a	Yan Yiping	1973	2b, 6a, 6b-7a	pinyinterm	yan-yiping	person	1	Yen1973Kuanyu
+tex/chapters/ch05.tex	784	Mickel (1976b)	Mickel	1976b		plain			1	Mickel1976bThree
+tex/chapters/ch05.tex	784	Mickel (1974)	Mickel	1974		plain			1	Mickel1974Reduplicated
+tex/chapters/ch05.tex	784	\pinyinterm{dong-short} (1929a)	Dong	1929a		pinyinterm	dong-short	person	1	Tung1929aHsin
+tex/chapters/ch05.tex	788	\pinyinterm{dong-short} (1954a), p. 120	Dong	1954a	120	pinyinterm	dong-short	person	1	Tung1954aYinli
+tex/chapters/ch05.tex	788	\pinyinterm{zhou-hongxiang} (1973)	Zhou Hongxiang	1973		pinyinterm	zhou-hongxiang	person	1	Chou1973Computer
+tex/chapters/ch05.tex	799	Lindholm (1931)	Lindholm	1931		plain			1	Lindholm1931Uber
+tex/chapters/ch05.tex	801	Pope (1935)	Pope	1935		plain			1	Pope1935Reptiles
+tex/chapters/ch05.tex	808	Wu (1943)	Wu	1943		plain			1	Wu1943Notes
+tex/chapters/ch05.tex	812	Auffenberg (1962)	Auffenberg	1962		plain			1	Auffenberg1962Status
+tex/chapters/ch05.tex	816	McDowell (1964)	McDowell	1964		plain			1	McDowell1964Partition
+tex/chapters/ch05.tex	822	Ting Su (1969)	Ting Su	1969		plain			1	Su1969Shuo
+tex/frontmatter/book-preamble.tex	64	Karlbeck (1957), pp. 174-192	Karlbeck	1957	174-192	plain			1	Karlbeck1957Treasure
+tex/frontmatter/book-preamble.tex	64	Tung (1965), pp. 14-15	Tung	1965	14-15	plain			1	Tung1965Chia
+tex/frontmatter/book-preamble.tex	64	Wheatley (1971), pp. 39-47	Wheatley	1971	39-47	plain			1	Wheatley1971Pivot
+tex/frontmatter/book-preamble.tex	64	Tung (1945)	Tung	1945		plain			1	Tung1945Yin
+tex/frontmatter/book-preamble.tex	64	Pope (1955), p. 66	Pope	1955	66	plain			1	Pope1955ReptileWorld
+tex/frontmatter/book-preamble.tex	64	\pinyinterm{shi-zhangru} [1959], pp. 89-99	Shi Zhangru	1959	89-99	pinyinterm	shi-zhangru	person	1	Shih1959Hsiao
+tex/frontmatter/preface.tex	27	Soper (1966)	Soper	1966		plain			1	Soper1966Early
+tex/frontmatter/preface.tex	27	Kane (1973), pp. 356-358	Kane	1973	356-358	plain			1	Kane1973Chronological
+tex/frontmatter/preface.tex	27	Chang Kwang-chih (1968), p. 234	Chang Kwang-chih	1968	234	plain			1	Chang1968Archaeology
+tex/frontmatter/preface.tex	27	Creel (1938), pp. 63-69	Creel	1938	63-69	plain			1	Creel1938Studies
+tex/frontmatter/preface.tex	27	Matsumoto Masaaki (1966), pp. 420-433	Matsumoto Masaaki	1966	420-433	plain			1	Matsumoto1966Shunju
+tex/frontmatter/preface.tex	27	Wheatley (1971), pp. 1314, 420	Wheatley	1971	1314, 420	plain			1	Wheatley1971Pivot
+tex/frontmatter/preface.tex	27	Ho (1975), p. 307	Ho	1975	307	plain			1	Ho1975Cradle
+tex/frontmatter/preface.tex	30	\pinyinterm{zhou-hongxiang-tight} [1958], p. 22	Zhou Hongxiang	1958	22	pinyinterm	zhou-hongxiang-tight	person	1	Chou1958ShangYin
+tex/frontmatter/preface.tex	42	Barnard (1960b), pp. 499-500	Barnard	1960b	499-500	plain			1	Barnard1960bReview
+tex/frontmatter/preface.tex	42	Ke Yiqing (1939)	Ke Yiqing	1939		plain			1	Ke1939Shuo
+tex/frontmatter/preface.tex	157	Chang Kwang-chih (1977)	Chang Kwang-chih	1977		plain			1	Chang1977Archaeology
+tex/frontmatter/preface.tex	157	Chang (1968)	Chang	1968		plain			1	Chang1968Archaeology
+tex/frontmatter/preface.tex	161	Nivison (1977a)	Nivison	1977a		plain			1	Nivison1977aPronominal
+tex/frontmatter/preface.tex	163	Hao-liang (1977)	Hao-liang	1977		plain			1	Yu1977Shuo
+tex/frontmatter/preface.tex	165	Mickel (1977a)	Mickel	1977a		plain			1	Mickel1977aIndex
+tex/frontmatter/preface.tex	165	Britton (1935)	Britton	1935		plain			1	Britton1935Yin
+tex/frontmatter/preface.tex	166	Creel (1937)	Creel	1937		plain			1	Creel1937Birth
+tex/frontmatter/preface.tex	172	Chiang Hung (1976)	Chiang Hung	1976		plain			1	Hung1976Panlongcheng
+tex/frontmatter/preface.tex	174	Shen Wenzhuo (1977)	Shen Wenzhuo	1977		plain			1	Shen1977Fuyu

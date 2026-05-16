@@ -165,3 +165,187 @@ def test_unsuffixed_mickel_1976_citation_prefers_unsuffixed_key():
     keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Mickel", "1976", "")]
 
     assert keys == ["Mickel1976Semantic"]
+
+
+def test_pinyinterm_qiu_short_citation_maps_to_manual_entry():
+    bib = intext_citations.load_bib_index()
+    pinyin_terms = intext_citations.load_pinyin_terms()
+    matches = intext_citations.iter_line_citation_matches(
+        r"The study of \pinyinterm{qiu-short} (1972) remains relevant.",
+        pinyin_terms,
+    )
+
+    assert matches == [{
+        "raw": r"\pinyinterm{qiu-short} (1972)",
+        "surname": "Qiu",
+        "year": "1972",
+        "suffix": "",
+        "pages": "",
+        "source_kind": "pinyinterm",
+        "term_key": "qiu-short",
+        "term_category": "person",
+    }]
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, matches[0]["surname"], matches[0]["year"], matches[0]["suffix"])]
+
+    assert keys == ["Chiu1972DuAnyang"]
+
+
+def test_pinyinterm_xu_jinxiong_suffix_maps_to_suffixed_entry():
+    bib = intext_citations.load_bib_index()
+    pinyin_terms = intext_citations.load_pinyin_terms()
+    matches = intext_citations.iter_line_citation_matches(
+        r"See \pinyinterm{xu-jinxiong-tight} (1973a) for the book-length version.",
+        pinyin_terms,
+    )
+
+    assert matches == [{
+        "raw": r"\pinyinterm{xu-jinxiong-tight} (1973a)",
+        "surname": "Xu Jinxiong",
+        "year": "1973",
+        "suffix": "a",
+        "pages": "",
+        "source_kind": "pinyinterm",
+        "term_key": "xu-jinxiong-tight",
+        "term_category": "person",
+    }]
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, matches[0]["surname"], matches[0]["year"], matches[0]["suffix"])]
+
+    assert keys == ["Hsu1973aPuku"]
+
+
+def test_pinyinterm_hanzi_bridge_matches_shih_entry():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["shi-zhangru"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1959",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Shih1959Hsiao"]
+
+
+def test_pinyinterm_alias_field_matches_hsu_1974_dissertation():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["xu-jinxiong"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1974",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Hsu1974Scapulimantic"]
+
+
+def test_pinyinterm_alias_field_matches_li_hsiaoting_entry():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["li-xiaoting"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1968",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["LiHsiaoting1968Tsung"]
+
+
+def test_pinyinterm_new_zhou_hongxiang_book_entry_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["zhou-hongxiang"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1969",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Chou1969Putzu"]
+
+
+def test_pinyinterm_new_zhou_hongxiang_article_entry_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["zhou-hongxiang"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1973",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Chou1973Computer"]
+
+
+def test_pinyinterm_new_su_yinghui_entry_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["su-yinghui"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1957",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Su1957Zhongguo"]
+
+
+def test_pinyinterm_new_sun_haibo_entry_is_indexed():
+    bib = intext_citations.load_bib_index()
+    term = intext_citations.load_pinyin_terms()["sun-haibo"]
+    keys = [
+        entry["key"]
+        for entry in intext_citations.find_candidates(
+            bib,
+            term["pinyin_plain"],
+            "1937",
+            "",
+            term_hanzi=term["hanzi"],
+        )
+    ]
+
+    assert keys == ["Sun1937Fushi"]
+
+
+def test_bracketed_pinyinterm_year_is_detected():
+    pinyin_terms = intext_citations.load_pinyin_terms()
+    matches = intext_citations.iter_line_citation_matches(
+        r"As \pinyinterm{yan-yiping} [1959], pp. 230, 233 already observed, the reading is secure.",
+        pinyin_terms,
+    )
+
+    assert matches == [{
+        "raw": r"\pinyinterm{yan-yiping} [1959], pp. 230, 233",
+        "surname": "Yan Yiping",
+        "year": "1959",
+        "suffix": "",
+        "pages": "230, 233",
+        "source_kind": "pinyinterm",
+        "term_key": "yan-yiping",
+        "term_category": "person",
+    }]
