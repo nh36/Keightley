@@ -20,6 +20,7 @@ CH04 = REPO_ROOT / "tex" / "chapters" / "ch04.tex"
 CH05 = REPO_ROOT / "tex" / "chapters" / "ch05.tex"
 FIGURES = REPO_ROOT / "tex" / "plates" / "figures.tex"
 PREFACE = REPO_ROOT / "tex" / "frontmatter" / "preface.tex"
+BOOK_PREAMBLE = REPO_ROOT / "tex" / "frontmatter" / "book-preamble.tex"
 
 
 def test_appendix_internal_section_labels_exist():
@@ -274,3 +275,13 @@ def test_preface_internal_crossrefs_show_ref_plus_ocr_copy():
     ) in text
     assert "\\ref{sec:chapters-ch05:5.6} (sec. 5.6)" in text
     assert "appendix \\ref{app:1} (appendix 1)" in text
+
+
+def test_book_preamble_internal_crossrefs_show_ref_plus_ocr_copy():
+    text = BOOK_PREAMBLE.read_text(encoding="utf-8")
+
+    assert "\\ref{sec:chapters-ch03:3.7} (sec. 3.7)" in text
+    assert (
+        "\\ref{sec:chapters-ch02:2.6} and \\ref{sec:chapters-ch02:2.7} "
+        "(secs. 2.6 and 2.7)"
+    ) in text
