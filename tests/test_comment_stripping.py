@@ -1,11 +1,15 @@
 """Regression test: ensure comments don't appear in LaTeX output."""
-import sys
+import importlib.util
 from pathlib import Path
 
-# Add scripts to path
-sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
+EMIT_STRUCTURE_PATH = Path(__file__).parent.parent / "scripts" / "06_emit_structure.py"
+SPEC = importlib.util.spec_from_file_location("emit_structure", EMIT_STRUCTURE_PATH)
+emit_structure = importlib.util.module_from_spec(SPEC)
+assert SPEC and SPEC.loader
+SPEC.loader.exec_module(emit_structure)
 
-from emit_structure import parse_page, process_body_text
+parse_page = emit_structure.parse_page
+process_body_text = emit_structure.process_body_text
 
 def test_parse_page_strips_metadata_comments():
     """Test that parse_page skips leading metadata comments."""

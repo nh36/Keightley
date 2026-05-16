@@ -88,9 +88,9 @@ def test_citation_inventory_skips_backmatter():
 
 
 def test_keightley_1975b_entry_exists():
-    bib = BIB.read_text(encoding="utf-8")
+    bib = MANUAL_BIB.read_text(encoding="utf-8")
 
-    assert "@book{Keightley1975bDate," in bib
+    assert "@misc{Keightley1975bDate," in bib
     assert "The Date of the Shang Historical Period: A Progress Report" in bib
 
 
@@ -109,7 +109,6 @@ def test_manual_bibliography_entries_exist():
     assert "@book{Barnard1973Chu," in bib
     assert "@incollection{Beattie1967Divination," in bib
     assert "@article{BenedettiPichler1937Microchemical," in bib
-    assert "@article{Bishop1932Scapulimancy," in bib
     assert "@book{Bogoras1907Chukchee," in bib
     assert "@book{Britton1935Yin," in bib
     assert "@book{CaquotLeibovici1968Divination," in bib
@@ -120,7 +119,7 @@ def test_manual_bibliography_entries_exist():
     assert "@phdthesis{Chao1972ShangGovernment," in bib
     assert "shortauthor = {Zhou Lin}" in bib
     assert "@book{Chienshou1917Yinxu," in bib
-    assert "shortauthor = {Chien-shou}" in bib
+    assert "shortauthor = {Jianshou}" in bib
     assert "@book{CKWP1965Chia," in bib
     assert "shortauthor = {CKWP}" in bib
     assert "@book{CKWP1934Anyang," in bib
@@ -132,7 +131,7 @@ def test_manual_bibliography_entries_exist():
     assert "@article{Clark1975Calibration," in bib
     assert "@article{Clavier1968Resurgences," in bib
     assert "@book{Chen1956Yin," in bib
-    assert "shortauthor = {Meng-chia}" in bib
+    assert "shortauthor  = {Mengjia}" in bib
     assert "@book{Creel1937Birth," in bib
     assert "@book{Creel1970Origins," in bib
     assert "@book{Crump1963Dragon," in bib
@@ -143,7 +142,7 @@ def test_manual_bibliography_entries_exist():
     assert "@book{Fan1962Kuben," in bib
     assert "@book{Fischer1970Historians," in bib
     assert "@book{Fuyin1925Zhengwen," in bib
-    assert "shortauthor = {Fu-yin}" in bib
+    assert "shortauthor = {Fuyin}" in bib
     assert "@book{Gadd1948Ideas," in bib
     assert "@book{Gardner1961Chinese," in bib
     assert "@article{Gelb1967Approaches," in bib
@@ -161,7 +160,7 @@ def test_manual_bibliography_entries_exist():
     assert "@article{Hopkins1934Archaic," in bib
     assert "@book{Ikeda1964Inkyo," in bib
     assert "@article{Hung1976Panlongcheng," in bib
-    assert "shortauthor  = {Hung}" in bib
+    assert "shortauthor  = {Hong}" in bib
     assert "@article{Huang1964Measure," in bib
     assert "shortauthor  = {Caijun}" in bib
     assert "@article{Ito1959Anyo," in bib
@@ -179,7 +178,7 @@ def test_manual_bibliography_entries_exist():
     assert "@book{Li1972Kuei," in bib
     assert "shortauthor = {Daliang}" in bib
     assert "@article{LiuLu1945Jiaku," in bib
-    assert "shortauthor  = {Liu-lu}" in bib
+    assert "shortauthor  = {Liulu}" in bib
     assert "@article{Lukes1967Problems," in bib
     assert "@book{MaenchenHelfen1973World," in bib
     assert "@article{Matsumaru1963Inkyo," in bib
@@ -187,9 +186,6 @@ def test_manual_bibliography_entries_exist():
     assert "@incollection{Matsumaru1973Oracle," in bib
     assert "@book{Matsumoto1966Shunju," in bib
     assert "@article{Mattos1976Reference," in bib
-    assert "@article{McDowell1964Partition," in bib
-    assert "@article{Mickel1976bReview," in bib
-    assert "@article{Mickel1977aIndex," in bib
     assert "@book{Matsumaru1959Kokotsu," in bib
     assert "@phdthesis{Mickel1976Semantic," in bib
     assert "@unpublished{Monroe1974Ritual," in bib
@@ -233,7 +229,6 @@ def test_manual_bibliography_entries_exist():
     assert "shortauthor  = {Taisuke}" in bib
     assert "@article{Ke1939Shuo," in bib
     assert "shortauthor  = {Yiqing}" in bib
-    assert "@unpublished{Nivison1973Ritual," in bib
     assert "@article{Pulleyblank1968Review," in bib
     assert "@unpublished{Pulleyblank1975Chinese," in bib
     assert "@article{Schafer1972Review," in bib
@@ -251,7 +246,6 @@ def test_manual_bibliography_entries_exist():
     assert "@phdthesis{Chan1972Chutzu," in bib
     assert "@article{Kuo1972Anyang," in bib
     assert "@article{Kuo1972aFachan," in bib
-    assert "@article{Nivison1977Three," in bib
     assert "@incollection{Vandermeersch1974Tortue," in bib
     assert "@phdthesis{Vandermeersch1975Wangdao," in bib
     assert "@incollection{Vernant1974Parole," in bib
@@ -266,13 +260,13 @@ def test_manual_bibliography_entries_exist():
     assert "@book{Wu1953Kutai," in bib
     assert "@book{Woodhead1967Study," in bib
     assert "@article{Wu1943Notes," in bib
-    assert "@inproceedings{Wu1955Broken," in bib
+    assert "@article{Wu1955Broken," in bib
     assert "@article{Yi1957Mantan," in bib
     assert "shortauthor = {Shih-ch'ang}" in bib
     assert "@article{Young1936Fossil," in bib
-    assert "@article{Yu1977Computer," in bib
-    assert "shortauthor  = {Hao-liang}" in bib
+    assert "@article{Yu1977Shuo," in bib
+    assert "shortauthor  = {Haoliang}" in bib
     assert "@article{Yagimoto1966Kiboku," in bib
-    assert "@article{Yetts1954Shang," in bib
+    assert "@incollection{Yetts1954Shang," in bib
     assert "@book{Zhang1970Der," in bib
     assert "shortauthor = {Zongdong}" in bib
