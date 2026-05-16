@@ -85,6 +85,16 @@ def test_external_chapter_citations_remain_plain():
     assert "\\pinyinterm{zhuixin}, ch. 10, passim," in ch05
 
 
+def test_appendix_note_citations_remain_plain():
+    ch01 = CH01.read_text(encoding="utf-8")
+    ch05 = CH05.read_text(encoding="utf-8")
+
+    assert "(appendix 3, n. 11)" in ch01
+    assert "See appendix 3, nn. 12, 14." in ch01
+    assert "see appendix 3, n. 5." in ch05
+    assert "see appendix 3, n. 2." in ch05
+
+
 def test_nonchapter_surfaces_have_no_plain_internal_refs():
     offenders = []
 
