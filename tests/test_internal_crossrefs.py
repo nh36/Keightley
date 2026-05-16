@@ -120,6 +120,12 @@ def test_app03_section_crossrefs_show_ref_plus_ocr_copy():
         "appendix \\ref{app:4}, sec. \\ref{sec:appendices-app04:5} "
         "(appendix 4, sec. 5)"
     ) in text
+    assert (
+        "\\ref{sec:appendices-app03:1} and \\ref{sec:appendices-app03:2} "
+        "(sec. 1 and 2 above)"
+    ) in text
+    assert "\\ref{sec:appendices-app03:3} (sec. 3)" in text
+    assert "\\ref{sec:appendices-app03:1} (sec. 1)" in text
 
 
 def test_app04_section_crossrefs_show_ref_plus_ocr_copy():
