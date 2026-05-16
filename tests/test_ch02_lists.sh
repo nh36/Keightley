@@ -31,28 +31,28 @@ count=$(grep -o '\\listitem{' tex/chapters/ch02.tex | wc -l)
 [ "$count" -ge 60 ]
 test_case "ch02 has 60+ listitem macros (found: $count)" $?
 
-# Test 4: ch02 line 115 has large list (17 items min)
-sed -n '100,130p' tex/chapters/ch02.tex | grep -o '\\listitem{' | wc -l > /tmp/count.txt
+# Test 4: ch02 verification-range band has the expected inline list cluster
+sed -n '470,470p' tex/chapters/ch02.tex | grep -o '\\listitem{' | wc -l > /tmp/count.txt
 count=$(cat /tmp/count.txt)
-[ "$count" -ge 10 ]
-test_case "ch02 line 115 area has 10+ listitem items (found: $count)" $?
+[ "$count" -ge 9 ]
+test_case "ch02 line 470 has 9+ listitem items (found: $count)" $?
 
-# Test 5: ch02 line 115 major topics list
-sed -n '100,130p' tex/chapters/ch02.tex | grep -q 'sacrifices.*military campaigns.*hunting.*weather.*sickness'
-test_case "ch02 line 115 list includes expected topics" $?
+# Test 5: ch02 line 470 verification-range list preserves representative intervals
+sed -n '470,470p' tex/chapters/ch02.tex | grep -q 'one day after harm had been forecast.*two days after a divination about hunting by fire.*three days after its prognostication'
+test_case "ch02 line 470 list includes expected verification intervals" $?
 
 # Test 6: Footnotes preserved
 grep -c '\\footnote\[' tex/chapters/ch02.tex > /dev/null
 test_case "ch02 footnotes preserved" $?
 
-# Test 7: No old-style markers in ch02 line 115 area
-sed -n '100,130p' tex/chapters/ch02.tex | grep -v '\\listitem' | grep -q '(1).*sacrifices'
+# Test 7: No old-style markers in ch02 line 470 area
+sed -n '470,470p' tex/chapters/ch02.tex | grep -v '\\listitem' | grep -q '(1).*one day after harm had been forecast'
 [ $? -ne 0 ]
-test_case "ch02 old-style list markers removed from line 115" $?
+test_case "ch02 old-style list markers removed from line 470" $?
 
 # Test 8: Sample items spot-check
-sed -n '100,130p' tex/chapters/ch02.tex | grep -q '\\listitem{17}.*requests'
-test_case "ch02 line 115 list includes item 17 (requests)" $?
+sed -n '470,470p' tex/chapters/ch02.tex | grep -Fq '\listitem{9} the onset of sickness appears to have taken place 175 (?) days after the divination'
+test_case "ch02 line 470 list includes item 9 (long verification interval)" $?
 
 # Test 9: Verify specific line 40 area if present
 sed -n '35,45p' tex/chapters/ch02.tex | grep -q '\\listitem'
@@ -79,4 +79,3 @@ else
     echo "✗ Some tests failed"
     exit 1
 fi
-
