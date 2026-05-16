@@ -38,11 +38,11 @@ def test_ch03_no_long_note_spills():
     assert "vessels,\\footnote[15]{" in text
     assert "Guo\\footnote[104]{" in text
     assert "routine abbreviation.\\footnote[106]{" in text
-    assert "sec. 3.7.2\\footnote[119]{" in text
+    assert "inscriptionless cracks identified in \\ref{sec:chapters-ch03:3.7.2} (sec. 3.7.2)\\footnote[119]{" in text
     assert "it will be inauspicious.\\footnote[92]{" in text
     assert "be inauspicious.\\footnote[93]{" in text
     assert "In Tuan (?).\\footnote[94]{" in text
-    assert "sec. 1.6.4).\\footnote[95]{" in text
+    assert "\\ref{sec:chapters-ch01:1.6.4} (sec. 1.6.4)).\\footnote[95]{" in text
     assert "cracks were left numberless.\\footnote[96]{" in text
 
 
@@ -140,11 +140,11 @@ def test_appendix_note_reference_residue_removed():
     assert "table\\footnote[28]" not in app04
     assert "table 2.\\footnote[28]{" in app04
     assert "described in sec.\\footnote[1]" not in app05
-    assert "described in sec. 4.3.1.12. Changes" in app05
+    assert "described in \\ref{sec:chapters-ch04:4.3.1.12} (sec. 4.3.1.12). Changes" in app05
     assert "period I.\\footnote[1]{" in app05
     assert "(day\\footnote[5]" not in app05
     assert "[In the tenth month].\\footnote[5]{" in app05
-    assert "no fault.\\footnote[6]{Chui-hsin 304." in app05
+    assert "no fault.\\footnote[6]{Zhuixin 304." in app05
     assert "ritual, may also be established.8" not in app05
     assert "I inscriptions. 10 The names" not in app05
     assert "statelets. 15 Divinations" not in app05
@@ -181,7 +181,7 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "vice versa.\\footnote[179]{" in ch04
     assert "significant.\\footnote[180]{" in ch04
     assert "appeared.\\footnote[181]{" in ch04
-    assert "Chia-pien.\\footnote[182]{" in ch04
+    assert "Jiabian.\\footnote[182]{" in ch04
     assert "Late (V).\\footnote[8]{" in ch04
     assert "comparative certainty.\\footnote[10]{" in ch04
     assert "historical terms.\\footnote[11]{" in ch04
@@ -211,7 +211,7 @@ def test_ch05_reconstruction_note_runs_removed():
 
     assert "mirror together''\\footnote[69]{" in ch05
     assert "question.\\footnote[70]{" in ch05
-    assert "2.9.4).\\footnote[71]{" in ch05
+    assert "\\ref{sec:chapters-ch02:2.9.4} (secs. 1.5.1; 2.4; 2.6; 2.9.4)).\\footnote[71]{" in ch05
     assert "fig. 30),\\footnote[72]{" in ch05
     assert "to be wrong.\\footnote[73]{" in ch05
     assert "serious consequences.\\footnote[74]{" in ch05

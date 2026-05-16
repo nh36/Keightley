@@ -1,5 +1,6 @@
 """Regression test: ensure comments don't appear in LaTeX output."""
 import importlib.util
+import sys
 from pathlib import Path
 
 EMIT_STRUCTURE_PATH = Path(__file__).parent.parent / "scripts" / "06_emit_structure.py"
@@ -48,30 +49,28 @@ Some text here."""
 
 def test_latex_output_no_html_comments():
     """Test that LaTeX output contains no HTML comments."""
-    # This would need to load actual tex files
     import glob
-    
+    import re
+
+    offenders = []
     for tex_file in glob.glob("tex/**/*.tex", recursive=True):
         content = Path(tex_file).read_text(errors="replace")
-        # Allow % comments (LaTeX) but not <!-- comments (HTML)
         if "<!-- " in content and content.count("<!--") > 0:
-            # Count actual occurrences of HTML comments (excluding those in strings)
-            import re
             comments = re.findall(r"<!--\s*(?!.*\)\s*-->)", content)
             if comments:
-                print(f"✗ Found HTML comments in {tex_file}:")
-                for comment in comments[:3]:
-                    print(f"  {comment}")
-                return False
-    print("✓ latex_output_no_html_comments passed")
-    return True
+                offenders.append((tex_file, comments[:3]))
+
+    assert not offenders, "Found HTML comments in:\n" + "\n".join(
+        f"{tex_file}: {comments}" for tex_file, comments in offenders
+    )
 
 
 if __name__ == "__main__":
-    test_parse_page_strips_metadata_comments()
-    test_process_body_text_removes_orphaned_comments()
-    if test_latex_output_no_html_comments():
+    try:
+        test_parse_page_strips_metadata_comments()
+        test_process_body_text_removes_orphaned_comments()
+        test_latex_output_no_html_comments()
         print("\n✓ All regression tests passed")
-    else:
+    except AssertionError:
         print("\n✗ Regression test failed")
         sys.exit(1)
