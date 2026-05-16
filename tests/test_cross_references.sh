@@ -65,10 +65,10 @@ total=$(grep -rh '\\label{' tex/ 2>/dev/null | wc -l)
 [ "$total" -gt 50 ]
 test_case "50+ labels exist across document ($total found)" $?
 
-# Test 10: Cross-references haven't been auto-replaced yet (no early \ref commands)
+# Test 10: Automated cross-references are now present in chapter text
 auto_refs=$(grep -rh '\\ref{' tex/chapters/*.tex 2>/dev/null | wc -l)
-[ "$auto_refs" -eq 0 ]
-test_case "Section references not yet automated (\\\ref commands not yet applied)" $?
+[ "$auto_refs" -ge 100 ]
+test_case "100+ automated cross-references present in chapters ($auto_refs found)" $?
 
 # Summary
 echo ""
@@ -84,4 +84,3 @@ else
     echo "✗ Some tests failed"
     exit 1
 fi
-
