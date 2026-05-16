@@ -318,6 +318,7 @@ def test_ch04_section_crossrefs_show_ref_plus_ocr_copy():
     assert "\\ref{sec:chapters-ch02:2.8} (sec. 2.8)" in text
     assert "\\ref{sec:chapters-ch04:4.3.1.11} (sec. 4.3.1.11)" in text
     assert "\\ref{sec:chapters-ch02:2.5} (sec. 2.5)" in text
+    assert "period (appendix \\ref{app:3} (appendix 3)) must consider" in text
     assert "\\ref{sec:chapters-ch04:4.3.2.3} (sec. 4.3.2.3)" in text
     assert "\\ref{sec:chapters-ch01:1.2.3} (sec. 1.2.3)" in text
     assert "\\ref{sec:chapters-ch01:1.3.1} (sec. 1.3.1)" in text
