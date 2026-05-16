@@ -214,6 +214,7 @@ def test_ch05_section_crossrefs_show_ref_plus_ocr_copy():
     text = CH05.read_text(encoding="utf-8")
 
     assert "\\ref{sec:chapters-ch02:2.3.1} (sec. 2.3.1)" in text
+    assert text.count("\\ref{sec:chapters-ch02:2.3.1} (sec. 2.3.1)") >= 2
     assert "\\ref{sec:chapters-ch05:5.3.2} (sec. 5.3.2)" in text
     assert "\\ref{sec:chapters-ch05:5.3.1} (sec. 5.3.1)" in text
     assert "\\ref{sec:chapters-ch03:3.3.2} (sec. 3.3.2)" in text
