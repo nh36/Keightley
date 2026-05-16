@@ -18,6 +18,7 @@ CH02 = REPO_ROOT / "tex" / "chapters" / "ch02.tex"
 CH03 = REPO_ROOT / "tex" / "chapters" / "ch03.tex"
 CH04 = REPO_ROOT / "tex" / "chapters" / "ch04.tex"
 CH05 = REPO_ROOT / "tex" / "chapters" / "ch05.tex"
+FIGURES = REPO_ROOT / "tex" / "plates" / "figures.tex"
 
 
 def test_appendix_internal_section_labels_exist():
@@ -241,4 +242,22 @@ def test_ch05_section_crossrefs_show_ref_plus_ocr_copy():
     assert (
         "\\ref{sec:chapters-ch02:2.6}, \\ref{sec:chapters-ch02:2.8} "
         "(secs. 2.6, 2.8)"
+    ) in text
+
+
+def test_figure_caption_section_crossrefs_show_ref_plus_ocr_copy():
+    text = FIGURES.read_text(encoding="utf-8")
+
+    assert (
+        "For a translation of 拼編 235.1-2, \\ref{sec:chapters-ch02:2.8} "
+        "(see sec. 2.8)."
+    ) in text
+    assert (
+        "For a translation of 拼編 248.7, \\ref{sec:chapters-ch02:2.7} "
+        "(see sec. 2.7)"
+    ) in text
+    assert "For a translation \\ref{sec:chapters-ch02:2.8} (see sec. 2.8)." in text
+    assert (
+        "For a translation, \\ref{sec:chapters-ch03:3.6.3} "
+        "(see sec. 3.6.3)."
     ) in text
