@@ -153,13 +153,13 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     assert "(I)\n(2)\n\\inscriptionsection{INSCRIPTION}" not in text
     assert "[Hsing] divined:" in text
     assert "[Xing] divined:" not in text
-    assert "\\inscriptionref{\\pinyinterm{jisi} divination}\n\n(1)\n(PREFACE:)" in text
-    assert "(POSTFACE:) In the [seventh month].\n\n(2)\n(PREFACE:) Crack-making on ping-shen" in text
-    assert "(POSTFACE:) In the eighth month.\n\n(3)\n(PREFACE:) Crack-making on hsin-ch'ou" in text
-    assert "(POSTFACE:) In the eighth month.\n\n(4)\n(PREFACE:) Crack-making on hsin-ch'ou" in text
-    assert "(CHARGE:) The king entertains; performs the chui ritual.\n\n(5)\n(PREFACE:) Crack-making on jen-yin" in text
-    assert "ritual; no fault.\n\n(6)\n(PREFACE:) Crack-making on jen-yin" in text
-    assert "(POSTFACE:) In the eighth month.\n\n(7)\n(PREFACE:) Crack-making on jen-tzu" in text
+    assert "\\inscriptionref{\\pinyinterm{jisi} divination}\n\n(1)\n\\inscriptionlabel{Preface} [Crack-making] on \\pinyinterm{jisi}" in text
+    assert "\\inscriptionlabel{Postface} In the [seventh month].\n\n(2)\n\\inscriptionlabel{Preface} Crack-making on ping-shen" in text
+    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n(3)\n\\inscriptionlabel{Preface} Crack-making on hsin-ch'ou" in text
+    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n(4)\n\\inscriptionlabel{Preface} Crack-making on hsin-ch'ou" in text
+    assert "\\inscriptionlabel{Charge} The king entertains; performs the chui ritual.\n\n(5)\n\\inscriptionlabel{Preface} Crack-making on jen-yin" in text
+    assert "ritual; no fault.\n\n(6)\n\\inscriptionlabel{Preface} Crack-making on jen-yin" in text
+    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n(7)\n\\inscriptionlabel{Preface} Crack-making on jen-tzu" in text
     assert "wish that no fault or misfortune would occur.''\\footnote[7]{" in text
     assert "Royal Family group inscriptions.\\footnote[7]" not in text
     assert "\\footnote[13]{See the inscriptions listed at S43.1-3; Shih-to 2.82, to III + IV; the rest are either RFG or, in my opinion, undatable.}" in text
@@ -181,7 +181,7 @@ def test_appendix_1_opening_restored():
     assert "[\\textasciicircum{}2]" not in text
     assert ":L" not in text
     assert "Only relationships between scute seams (fig. 3) will be considered here" in text
-    assert "which were scraped clean (sec. 1.3.2) so that only the bone seams are visible" in text
+    assert "which were scraped clean (\\ref{sec:chapters-ch01:1.3.2} (sec. 1.3.2)) so that only the bone seams are visible" in text
     assert "Blackith and Reyment [1971]).\\footnote[1]{" in text
     assert "(R - \\lambda I)v = 0" in text
     assert "yielding a set of eigenvalues ($\\lambda$)" in text
@@ -195,7 +195,7 @@ def test_chapter_4_opening_note_block_restored():
     assert "\\pinyinterm{zu-xin}, ``Grand-\n% source: scan 113, printed 93\nfather Hsin'';" in text
     assert "brothers.\\footnote[28]{" in text
     assert "\\booktitle{Jimbun shakubun}, English preface, p. 15;" in text
-    assert "\\pinyinterm{pinbian} 12--21 (sec. 3.7)." in text
+    assert "\\pinyinterm{pinbian} 12--21 (\\ref{sec:chapters-ch03:3.7} (sec. 3.7))." in text
     assert "groups of kings.\\footnote[3]{" in text
     assert "to \\pinyinterm{di-xin}.\\footnote[4]{" in text
     assert "period IVa.\\footnote[5]{" in text
@@ -335,7 +335,7 @@ def test_chapter_2_mid_note_block_restored():
     assert "\\textit{xushu})\\footnote[33]{" in text
     assert "1 to 10.\\footnote[34]{" in text
     assert "itself was carved.\\footnote[35]{" in text
-    assert "study of sets (sec. 2.5).\\footnote[37]{" in text
+    assert "study of sets (\\ref{sec:chapters-ch02:2.5} (sec. 2.5)).\\footnote[37]{" in text
     assert "fan-chao\\footnote[38]{" in text
     assert "}), the crack numbers were commonly erased" in text
     assert "25. But cf." not in text
