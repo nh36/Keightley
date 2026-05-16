@@ -89,6 +89,8 @@ def test_first_tranche_citations_are_wired():
     assert r"(\pinyinterm{rao-short}, loc. cit.;" in ch01
     assert r"\pinyinterm{jiao-short}" not in ch01
     assert r"\pinyinterm{jiao-short}" not in ch02
+    assert r"\pinyinterm{huang-peirong} [1969], pp. 3a-b" in ch02
+    assert r"\pinyinterm{huang-peirong} [1975]" not in ch02
     assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1945Chiakuhsueh}), p. 5b," in ch03
     assert "Lefeuvre (1971)" not in ch03
     assert r"Lefeuvre (\citeyear{Lefeuvre1971SerieH})" in ch03
