@@ -651,6 +651,7 @@ def test_ik_pinyin_audit_updates_late_l_chinese_cluster():
         "@article{Lao1957Shih,\n"
         "  author       = {Lao, Gan},\n"
         "  usera        = {勞榦},\n"
+        "  shortauthor  = {Kan},\n"
         "  year         = {1957},\n"
         "  title        = {Shizi de jiegou ji shiguan de yuanshi zhiwu},\n"
         "  userb        = {史字的結構及史官的原始職務},"
@@ -725,7 +726,7 @@ def test_ik_pinyin_audit_updates_late_l_tail_cluster():
     assert "shortauthor  = {Haoliang}" in manual_bib
     assert "title        = {Shuo 'yin' zi}" in manual_bib
     assert "author       = {Lu, Shixian}" in manual_bib
-    assert "shortauthor  = {Shixian}" in manual_bib
+    assert "shortauthor  = {Shih-hsien}" in manual_bib
     assert "title        = {Yinqi xinquan zhi er: shipian}" in manual_bib
     assert "journaltitle = {Donghai xuebao}" in manual_bib
     assert "author      = {Long, Yuchun}" in manual_bib
@@ -739,7 +740,7 @@ def test_ik_pinyin_audit_updates_late_l_tail_cluster():
     assert "shortauthor  = {Hao-liang}" not in manual_bib
     assert "title        = {Shuo 'yin' tzu}" not in manual_bib
     assert "author       = {Lu, Shih-hsien}" not in manual_bib
-    assert "shortauthor  = {Shih-hsien}" not in manual_bib
+    assert "shortauthor  = {Shixian}" not in manual_bib
     assert "title        = {Yin-ch'i hsin-ch'uan chih erh: shih pien}" not in manual_bib
     assert "journaltitle = {Tung-hai hsueh-pao}" not in manual_bib
     assert "author      = {Lung, Yu-ch'un}" not in manual_bib

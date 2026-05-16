@@ -35,6 +35,11 @@ def test_first_tranche_citations_are_wired():
     assert "Keightley (1975), pp. 132-1740; (1975b);" not in app04
     assert r"\textcite[pp.~132--174]{Keightley1975The};" in app04
     assert r"\textcite{Keightley1975bDate};" in app04
+    assert "Keightley (1975) and (1975b)." not in app04
+    assert (
+        r"Keightley (\citeyear{Keightley1975The}) and "
+        r"(\citeyear{Keightley1975bDate})."
+    ) in app04
 
     assert "Keightley (1975), pp. 142144" not in ch02
     assert r"\textcite[pp.~142--144]{Keightley1975The}" in ch02
@@ -92,6 +97,17 @@ def test_keightley_1975b_entry_exists():
 
     assert "@misc{Keightley1975bDate," in bib
     assert "The Date of the Shang Historical Period: A Progress Report" in bib
+
+
+def test_zero_candidate_citation_entries_exist():
+    bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "@article{McDowell1964Partition," in bib
+    assert "@article{Nakamura1934Clemmys," in bib
+    assert "@article{Chiu1972DuAnyang," in bib
+    assert "@book{LiHsiaoting1965Chiaku," in bib
+    assert "shortauthor = {CKWT}" in bib
+    assert "@article{Mickel1977aIndex," in bib
 
 
 def test_manual_bibliography_entries_exist():
@@ -209,7 +225,7 @@ def test_manual_bibliography_entries_exist():
     assert "@article{Saussure1924Chronologie," in bib
     assert "shortauthor  = {Saussure}" in bib
     assert "@article{Lu1961Yinchi," in bib
-    assert "shortauthor  = {Shixian}" in bib
+    assert "shortauthor  = {Shih-hsien}" in bib
     assert "@book{LeviStrauss1969Raw," in bib
     assert "shortauthor = {Strauss}" in bib
     assert "@article{Shen1977Fuyu," in bib

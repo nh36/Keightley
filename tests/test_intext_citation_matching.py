@@ -45,3 +45,123 @@ def test_lead_in_word_is_ignored_for_see_shima_citation():
     keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "See Shima", "1958", "")]
 
     assert keys == ["Shima1958Inkyo"]
+
+
+def test_missing_mcdowell_entry_is_now_indexed():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "McDowell", "1964", "")]
+
+    assert keys == ["McDowell1964Partition"]
+
+
+def test_missing_nakamura_entry_is_now_indexed():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Nakamura", "1934", "")]
+
+    assert keys == ["Nakamura1934Clemmys"]
+
+
+def test_chiu_shortauthor_alias_matches_manual_entry():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Ch'iu", "1972", "")]
+
+    assert keys == ["Chiu1972DuAnyang"]
+
+
+def test_ckwt_shortauthor_alias_matches_li_hsiaoting_entry():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "CKWT", "1965", "")]
+
+    assert keys == ["LiHsiaoting1965Chiaku"]
+
+
+def test_suffix_preserving_mickel_1977a_entry_is_indexed():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Mickel", "1977", "a")]
+
+    assert keys == ["Mickel1977aIndex"]
+
+
+def test_best_score_prefers_li_daliang_entry():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Li Daliang", "1972", "")]
+
+    assert keys == ["Li1972Kuei"]
+
+
+def test_best_score_prefers_wrapped_li_daliang_entry():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "As Li Daliang", "1972", "")]
+
+    assert keys == ["Li1972Kuei"]
+
+
+def test_best_score_prefers_zhang_zongdong_entry():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Zhang Zongdong", "1970", "")]
+
+    assert keys == ["Zhang1970Der"]
+
+
+def test_best_score_prefers_chardin_and_young_entry():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "De Chardin and Young", "1936", "")]
+
+    assert keys == ["ChardinYoung1936Mammalian"]
+
+
+def test_lao_kan_alias_matches_existing_entry():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Lao Kan", "1957", "")]
+
+    assert keys == ["Lao1957Shih"]
+
+
+def test_lu_shih_hsien_alias_matches_existing_entry():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Lu Shih-hsien", "1961", "")]
+
+    assert keys == ["Lu1961Yinchi"]
+
+
+def test_single_author_barnard_citation_does_not_tie_multi_author_volume():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Barnard", "1975", "")]
+
+    assert keys == ["Barnard1975First"]
+
+
+def test_page_range_filters_mickel_1976_to_dissertation():
+    bib = intext_citations.load_bib_index()
+    candidates = intext_citations.find_candidates(bib, "Mickel", "1976", "")
+    keys = [entry["key"] for entry in intext_citations.filter_candidates_by_pages(candidates, "158-168")]
+
+    assert keys == ["Mickel1976Semantic"]
+
+
+def test_unsuffixed_britton_citation_prefers_unsuffixed_key():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Britton", "1937", "")]
+
+    assert keys == ["Britton1937Oracle"]
+
+
+def test_unsuffixed_barnard_citation_prefers_unsuffixed_key():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Barnard", "1959", "")]
+
+    assert keys == ["Barnard1959Remarks"]
+
+
+def test_unsuffixed_mickel_1974_citation_prefers_unsuffixed_key():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Mickel", "1974", "")]
+
+    assert keys == ["Mickel1974Reduplicated"]
+
+
+def test_unsuffixed_mickel_1976_citation_prefers_unsuffixed_key():
+    bib = intext_citations.load_bib_index()
+    keys = [entry["key"] for entry in intext_citations.find_candidates(bib, "Mickel", "1976", "")]
+
+    assert keys == ["Mickel1976Semantic"]

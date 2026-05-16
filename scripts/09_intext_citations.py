@@ -35,12 +35,8 @@ CITATION_RE = re.compile(
     re.VERBOSE,
 )
 KEY_RE = re.compile(r"^@\w+\{(?P<key>[^,]+),", re.MULTILINE)
-BIB_AUTHOR_RE = re.compile(
-    r"^@(?P<type>\w+)\{(?P<key>[^,]+),"
-    r"(?:[^@]*?\bauthor\s*=\s*\{(?P<author>[^}]*)\})?"
-    r"(?:[^@]*?\beditor\s*=\s*\{(?P<editor>[^}]*)\})?"
-    r"(?:[^@]*?\bshortauthor\s*=\s*\{(?P<shortauthor>[^}]*)\})?"
-    r"[^@]*?\byear\s*=\s*\{(?P<year>\d{4})\}",
+ENTRY_RE = re.compile(
+    r"^@(?P<type>\w+)\{(?P<key>[^,]+),(?P<body>.*?)^}\s*$",
     re.MULTILINE | re.DOTALL,
 )
 
@@ -72,12 +68,23 @@ def key_stem(key: str) -> str:
     return match.group(1) if match else key
 
 
+def extract_field(body: str, name: str) -> str:
+    match = re.search(
+        rf"^\s*{name}\s*=\s*\{{(?P<value>.+?)\}}\s*,?\s*$",
+        body,
+        re.MULTILINE,
+    )
+    return (match.group("value") if match else "").strip()
+
+
 def entry_aliases(entry: dict) -> set[str]:
     aliases = set()
+    primary_name = entry.get("author", "")
+    if " and " not in primary_name.lower():
+        aliases.add(normalize_token(entry.get("surname", "")))
     for raw in (
-        entry.get("surname", ""),
         entry.get("shortauthor", ""),
-        entry.get("author", ""),
+        primary_name,
         key_stem(entry["key"]),
     ):
         normalized = normalize_token(raw)
@@ -93,11 +100,12 @@ def load_bib_index() -> list[dict]:
     out = []
     for bib_file in sorted(BIB_DIR.glob("*.bib")):
         text = bib_file.read_text(encoding="utf-8")
-        for m in BIB_AUTHOR_RE.finditer(text):
-            author = (m.group("author") or m.group("editor") or "").strip()
+        for m in ENTRY_RE.finditer(text):
+            body = m.group("body")
+            author = extract_field(body, "author") or extract_field(body, "editor")
             if not author:
                 continue
-            shortauthor = (m.group("shortauthor") or "").strip()
+            shortauthor = extract_field(body, "shortauthor")
             surname = re.split(r"[ ,]", author.strip())[0]
             key = m.group("key")
             # Year suffix is encoded in the key tail (e.g., Akatsuka1955a)
@@ -105,11 +113,42 @@ def load_bib_index() -> list[dict]:
             ks = re.match(r"^[A-Za-z]+\d{4}([a-z])", key)
             if ks:
                 suffix = ks.group(1)
+            year = extract_field(body, "year")
+            if not year:
+                continue
             out.append({
-                "key": key, "surname": surname, "year": m.group("year"),
-                "suffix": suffix, "author": author, "shortauthor": shortauthor,
+                "key": key,
+                "surname": surname,
+                "year": year,
+                "suffix": suffix,
+                "author": author,
+                "shortauthor": shortauthor,
+                "pages": extract_field(body, "pages"),
             })
     return out
+
+
+def filter_candidates_by_pages(candidates: list[dict], cited_pages: str) -> list[dict]:
+    if len(candidates) <= 1 or not cited_pages:
+        return candidates
+    cited_numbers = [int(part) for part in re.findall(r"\d+", cited_pages)]
+    if not cited_numbers:
+        return candidates
+
+    filtered = []
+    for entry in candidates:
+        entry_pages = entry.get("pages", "")
+        if not entry_pages:
+            filtered.append(entry)
+            continue
+        entry_numbers = [int(part) for part in re.findall(r"\d+", entry_pages)]
+        if not entry_numbers:
+            filtered.append(entry)
+            continue
+        if min(cited_numbers) >= min(entry_numbers) and max(cited_numbers) <= max(entry_numbers):
+            filtered.append(entry)
+
+    return filtered or candidates
 
 
 def find_candidates(bib: list[dict], surname: str, year: str,
@@ -127,6 +166,8 @@ def find_candidates(bib: list[dict], surname: str, year: str,
             if citation in aliases:
                 score = priority * 10
             elif any(alias.startswith(citation) or citation.startswith(alias) for alias in aliases):
+                if not any(len(alias) >= 4 and (alias.startswith(citation) or citation.startswith(alias)) for alias in aliases):
+                    continue
                 score = priority * 10 + 1
             elif len(citation) >= 4 and any(citation in alias for alias in aliases):
                 score = priority * 10 + 2
@@ -137,7 +178,15 @@ def find_candidates(bib: list[dict], surname: str, year: str,
         if best_score is not None:
             results.append((best_score, e))
     results.sort(key=lambda x: x[0])
-    return [r[1] for r in results]
+    if not results:
+        return []
+    best = results[0][0]
+    best_entries = [entry for score, entry in results if score == best]
+    if not suffix:
+        unsuffixed = [entry for entry in best_entries if not entry.get("suffix")]
+        if unsuffixed:
+            return unsuffixed
+    return best_entries
 
 
 def main() -> None:
@@ -159,6 +208,7 @@ def main() -> None:
                 suffix = m.group("suffix") or ""
                 pages = (m.group("pages") or "").strip()
                 cands = find_candidates(bib, surname, year, suffix)
+                cands = filter_candidates_by_pages(cands, pages)
                 row = {
                     "file": str(tex.relative_to(ROOT)),
                     "line": line_num,
