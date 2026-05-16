@@ -95,6 +95,18 @@ def test_appendix_note_citations_remain_plain():
     assert "see appendix 3, n. 2." in ch05
 
 
+def test_chapter_note_citations_remain_plain():
+    preface = PREFACE.read_text(encoding="utf-8")
+    book_preamble = BOOK_PREAMBLE.read_text(encoding="utf-8")
+
+    assert "See ch. 4, n. 24." in preface
+    assert "See ch. 2, n. 2." in preface
+    assert "see ch. 3, nn. 85, 98." in book_preamble
+    assert "see ch. 3, n. 98." in book_preamble
+    assert "see ch. 1, n. 97." in book_preamble
+    assert "see the works cited in ch. 5, n. 8." in book_preamble
+
+
 def test_nonchapter_surfaces_have_no_plain_internal_refs():
     offenders = []
 
