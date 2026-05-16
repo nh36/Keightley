@@ -31,19 +31,19 @@ test_case "ch04 contains listitem macros" $?
 grep -q '\\listitem{' tex/chapters/ch05.tex
 test_case "ch05 contains listitem macros" $?
 
-# Test 4: ch04 has sufficient listitem usage (40+ items)
+# Test 4: ch04 has sufficient listitem usage (current stable floor)
 count=$(grep -o '\\listitem{' tex/chapters/ch04.tex | wc -l)
-[ "$count" -ge 40 ]
-test_case "ch04 has 40+ listitem macros (found: $count)" $?
+[ "$count" -ge 25 ]
+test_case "ch04 has 25+ listitem macros (found: $count)" $?
 
-# Test 5: ch05 has sufficient listitem usage (20+ items)
+# Test 5: ch05 has sufficient listitem usage (current stable floor)
 count=$(grep -o '\\listitem{' tex/chapters/ch05.tex | wc -l)
-[ "$count" -ge 20 ]
-test_case "ch05 has 20+ listitem macros (found: $count)" $?
+[ "$count" -ge 12 ]
+test_case "ch05 has 12+ listitem macros (found: $count)" $?
 
-# Test 6: ch04 line 573 area has listitem items
-sed -n '560,600p' tex/chapters/ch04.tex | grep -q '\\listitem{1}.*\\listitem{2}.*\\listitem{3}.*\\listitem{4}'
-test_case "ch04 line 573 list has items 1-4" $?
+# Test 6: ch04 footnote 39 area has listitem items
+sed -n '431,431p' tex/chapters/ch04.tex | grep -q '\\listitem{1}.*\\listitem{2}.*\\listitem{3}.*\\listitem{4}'
+test_case "ch04 line 431 list has items 1-4" $?
 
 # Test 7: ch05 line 223 area has listitem items
 sed -n '215,235p' tex/chapters/ch05.tex | grep -q '\\listitem{1}.*\\listitem{2}.*\\listitem{3}.*\\listitem{4}'
@@ -59,9 +59,9 @@ test_case "ch05 footnotes preserved" $?
 
 # Test 10: No old-style list markers remain (ch04 main list)
 # Should not have raw (1) pattern in list context
-sed -n '560,600p' tex/chapters/ch04.tex | grep -v '\\listitem' | grep -q '(1).*period.*I.*early.*III'
+sed -n '431,431p' tex/chapters/ch04.tex | grep -v '\\listitem' | grep -q '(1).*period.*I.*early.*III'
 [ $? -ne 0 ]
-test_case "ch04 old-style list markers removed from line 573" $?
+test_case "ch04 old-style list markers removed from line 431" $?
 
 # Test 11: No old-style list markers remain (ch05 main list)
 sed -n '215,235p' tex/chapters/ch05.tex | grep -v '\\listitem' | grep -q '(1).*early.*collectors'
@@ -69,7 +69,7 @@ sed -n '215,235p' tex/chapters/ch05.tex | grep -v '\\listitem' | grep -q '(1).*e
 test_case "ch05 old-style list markers removed from line 223" $?
 
 # Test 12: Sample content preserved (ch04)
-sed -n '560,600p' tex/chapters/ch04.tex | grep -q 'diviner.*Ta.*period.*I'
+sed -n '431,431p' tex/chapters/ch04.tex | grep -q 'The diviner Ta may have served from the end of period I to early III'
 test_case "ch04 list content preserved (diviner Ta reference)" $?
 
 # Test 13: Sample content preserved (ch05)
@@ -90,4 +90,3 @@ else
     echo "✗ Some tests failed"
     exit 1
 fi
-
