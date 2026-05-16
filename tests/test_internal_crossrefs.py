@@ -389,7 +389,7 @@ def test_figure_caption_section_crossrefs_show_ref_plus_ocr_copy():
         "For a translation of 拼編 248.7, \\ref{sec:chapters-ch02:2.7} "
         "(see sec. 2.7)"
     ) in text
-    assert "For a translation \\ref{sec:chapters-ch02:2.8} (see sec. 2.8)." in text
+    assert "For a translation, \\ref{sec:chapters-ch02:2.8} (see sec. 2.8)." in text
     assert (
         "For a translation, \\ref{sec:chapters-ch03:3.6.3} "
         "(see sec. 3.6.3)."
