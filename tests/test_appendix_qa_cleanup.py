@@ -102,6 +102,26 @@ def test_appendix_4_mid_note_block_restored():
     assert "26. See table 37, note d." not in text
 
 
+def test_missing_character_glyph_residue_cleaned():
+    ch02 = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+    ch03 = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
+    ch04 = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
+    app04 = APP04.read_text(encoding="utf-8")
+
+    assert "nature of the ailment---\ntoothache" in ch02
+    assert "estimates are---and they are probably conservative---\nthey indicate" in ch03
+    assert "Specific changes in topics and idioms---changes" in ch04
+    assert "general evolution\n---are presented in appendix \\ref{app:5} (appendix 5)." in ch04
+    assert "The topic---which has led 徐 to" in ch04
+    assert "\n---is technical and the conclusions still tentative." in ch04
+    assert "to Ta Chia (K3 9)." in ch04
+    assert "yüeh yu chih (*fiak)." in app04
+    assert "―" not in ch02 + ch03 + ch04
+    assert "⑨" not in ch04
+    assert "Ƒ" not in app04
+    assert "×âÌ" not in app04
+
+
 def test_appendix_2_ratios_and_footnote_stubs_restored():
     text = Path("tex/appendices/app02.tex").read_text(encoding="utf-8")
 
