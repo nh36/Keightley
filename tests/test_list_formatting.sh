@@ -54,13 +54,12 @@ echo ""
 echo "=== LaTeX Compilation Tests ==="
 
 # Test 7: LaTeX compilation successful
-cd tex && /usr/local/texlive/2025/bin/universal-darwin/xelatex -interaction=nonstopmode main.tex > /tmp/test_compile.log 2>&1
-grep -q "Output written on main.pdf" /tmp/test_compile.log
+./scripts/build.sh > /tmp/test_compile.log 2>&1
+grep -q "Build successful" /tmp/test_compile.log
 test_result "Test 7: LaTeX compilation successful" $?
-cd ..
 
 # Test 8: Valid PDF generated
-file tex/main.pdf | grep -q "PDF document"
+file build/output/main.pdf | grep -q "PDF document"
 test_result "Test 8: Valid PDF generated" $?
 
 echo ""
