@@ -90,6 +90,13 @@ def test_appendix_crossrefs_show_ref_plus_ocr_copy():
     )
 
 
+def test_app01_section_crossrefs_show_ref_plus_ocr_copy():
+    text = APPENDICES["app01"].read_text(encoding="utf-8")
+
+    assert "\\ref{sec:chapters-ch05:5.4} (sec. 5.4)" in text
+    assert "\\ref{sec:chapters-ch01:1.3.2} (sec. 1.3.2)" in text
+
+
 def test_app02_section_crossrefs_show_ref_plus_ocr_copy():
     text = APPENDICES["app02"].read_text(encoding="utf-8")
 
