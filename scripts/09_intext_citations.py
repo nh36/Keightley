@@ -25,7 +25,7 @@ QA_DIR = ROOT / "build" / "qa"
 BIB_DIR = TEX_DIR / "bibliography"
 
 CITATION_RE = re.compile(
-    r"""(?P<surname>[A-Z][A-Za-z'\-]+(?:\s+(?:and|et\s+al\.?)\s+[A-Z][A-Za-z'\-]+)?)
+    r"""(?P<surname>[A-Z][A-Za-z'\-]+(?:\s+(?:(?:and|et\s+al\.?)\s+)?[A-Z][A-Za-z'\-]+)*)
         \s*
         \(
         (?P<year>(?:18|19|20)\d{2})(?P<suffix>[a-z]?)
@@ -43,6 +43,47 @@ BIB_AUTHOR_RE = re.compile(
     r"[^@]*?\byear\s*=\s*\{(?P<year>\d{4})\}",
     re.MULTILINE | re.DOTALL,
 )
+
+
+def normalize_token(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", value.lower())
+
+
+def citation_aliases(value: str) -> list[tuple[int, str]]:
+    tokens = value.split()
+    aliases: list[tuple[int, str]] = []
+    seen: set[str] = set()
+
+    def add(priority: int, raw: str) -> None:
+        normalized = normalize_token(raw)
+        if normalized and normalized not in seen:
+            aliases.append((priority, normalized))
+            seen.add(normalized)
+
+    add(0, value)
+    if len(tokens) > 1:
+        add(1, " ".join(tokens[1:]))
+        add(2, tokens[-1])
+    return aliases
+
+
+def key_stem(key: str) -> str:
+    match = re.match(r"^([A-Za-z]+)\d{4}[a-z]?", key)
+    return match.group(1) if match else key
+
+
+def entry_aliases(entry: dict) -> set[str]:
+    aliases = set()
+    for raw in (
+        entry.get("surname", ""),
+        entry.get("shortauthor", ""),
+        entry.get("author", ""),
+        key_stem(entry["key"]),
+    ):
+        normalized = normalize_token(raw)
+        if normalized:
+            aliases.add(normalized)
+    return aliases
 
 
 def load_bib_index() -> list[dict]:
@@ -73,21 +114,28 @@ def load_bib_index() -> list[dict]:
 
 def find_candidates(bib: list[dict], surname: str, year: str,
                     suffix: str) -> list[dict]:
-    sl = surname.lower()
+    citation_forms = citation_aliases(surname)
     results = []
     for e in bib:
         if e["year"] != year:
             continue
         if suffix and e["suffix"] != suffix:
             continue
-        es = e["surname"].lower()
-        sa = e.get("shortauthor", "").lower()
-        if es == sl or sa == sl:
-            results.append((0, e))
-        elif es.startswith(sl) or sl.startswith(es) or (sa and (sa.startswith(sl) or sl.startswith(sa))):
-            results.append((1, e))
-        elif sl in e["author"].lower() or (sa and sl in sa):
-            results.append((2, e))
+        aliases = entry_aliases(e)
+        best_score = None
+        for priority, citation in citation_forms:
+            if citation in aliases:
+                score = priority * 10
+            elif any(alias.startswith(citation) or citation.startswith(alias) for alias in aliases):
+                score = priority * 10 + 1
+            elif len(citation) >= 4 and any(citation in alias for alias in aliases):
+                score = priority * 10 + 2
+            else:
+                continue
+            if best_score is None or score < best_score:
+                best_score = score
+        if best_score is not None:
+            results.append((best_score, e))
     results.sort(key=lambda x: x[0])
     return [r[1] for r in results]
 
