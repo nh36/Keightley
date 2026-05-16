@@ -208,3 +208,16 @@ def test_ch04_section_crossrefs_show_ref_plus_ocr_copy():
         "\\ref{sec:chapters-ch02:2.4}, \\ref{sec:chapters-ch02:2.5} "
         "(secs. 2.4, 2.5)"
     ) in text
+
+
+def test_ch05_section_crossrefs_show_ref_plus_ocr_copy():
+    text = CH05.read_text(encoding="utf-8")
+
+    assert "\\ref{sec:chapters-ch02:2.3.1} (sec. 2.3.1)" in text
+    assert "\\ref{sec:chapters-ch04:4.3.1.7} (sec. 4.3.1.7)" in text
+    assert (
+        "\\ref{sec:chapters-ch04:4.3.1.8}, \\ref{sec:chapters-ch04:4.3.1.9} "
+        "(secs. 4.3.1.8, 4.3.1.9)"
+    ) in text
+    assert "\\ref{sec:chapters-ch04:4.3.1.11} (sec. 4.3.1.11)" in text
+    assert "\\ref{sec:chapters-ch04:4.3.1.10} (sec. 4.3.1.10)" in text
