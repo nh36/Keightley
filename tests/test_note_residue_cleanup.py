@@ -173,6 +173,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "``verification notations, their presence",
         "pu yung T",
         "period II (n. 101 -\\listitem{4}",
+        "wanted to have happen-``there will be no disaster,” “today",
+        'it will not rain"-with the crack numbers',
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -243,6 +245,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "which we may refer to as ``verification notations,'' their presence in an inscription provides a clue to its relative date." in text
     assert "The notations tzu puyung 茲不用, pu yung 不用, or tzu wu yung 茲毋用 appear rarely" in text
     assert "date should be considered a verification (see n. 99)\n---if so, such verifications also appeared, rarely, in\nperiod II (n. 101)---\\listitem{4} uncertainty about the" in text
+    assert "wanted to have happen---``there will be no disaster,'' ``today\nit will not rain''---with the crack numbers running from 1 to 5" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
