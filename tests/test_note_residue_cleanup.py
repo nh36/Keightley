@@ -163,6 +163,13 @@ def test_ch04_mid_and_late_note_residue_removed():
         "\\$417.2",
         "``Ming” 395 [D]",
         "Xplace",
+        "\\pinyinterm{xu-jinxiong} 1963)",
+        "胡, ibid., p. 481",
+        "徐, ibid., p. 9a",
+        "胡, ibid., p. 471",
+        "originally meant here (at this point in the divination process)",
+        "徐. ibid., p. gb",
+        "Ogawa 6, shakubun, p. 263, n. 5. It is hard",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -225,6 +232,11 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "recorded only in period V (S417.2; 431.2-432.1; 478.4-479.2)." in text
     assert "period II: \\pinyinterm{nanbei}, ``Ming'' 395 [D]; period V: \\pinyinterm{qianbian} 2.8.7)." in text
     assert 'occurrences of the phrase tsai mou, ``at X-place,\'\' may be found at S498;' in text
+    assert "\\pinyinterm{xu-jinxiong} (1963), pp. 8a-11b." in text
+    assert "equivalent phrases (e.g., Hu, ibid., p. 481; Ikeda [1964], 2.18.13);" in text
+    assert "and campaigning (the inscriptions cited by Xu, ibid., p. 9a)." in text
+    assert "originally meant ``here (at this point in the divination process) we offered sacrifice,''" in text
+    assert "caught so many animals (Xu, ibid., p. 9b; cf. Ogawa 6, shakubun, p. 263, n. 5)." in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
