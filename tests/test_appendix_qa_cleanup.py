@@ -21,9 +21,11 @@ def test_appendix_3_note_block_restored():
     assert r"\pinyinterm{yibian} 7758, for example, is a fragment;" in text
     assert r"\pinyinterm{pinbian} 45 (formed by joining \pinyinterm{yibian} 4864 and 7758) is a piece." in text
     assert r"were published in \pinyinterm{jiabian} and \pinyinterm{yibian}" in text
+    assert "ch. 1, n. 71" in text
     assert "易編 7758, for example, is a fragment;" not in text
     assert "拼編 45 (formed by joining 易編 4864 and 7758) is a piece." not in text
     assert "were published in 甲編 and 易編" not in text
+    assert "ch. I, n. 71" not in text
     assert "150 years\\footnote[9]{" in text
     assert "every 16 days.”\\footnote[8]{" in text
     assert "original corpus.''\\footnote[10]{" in text
@@ -298,6 +300,16 @@ def test_chapter_4_note_83_tail_cleaned():
 
     assert "single diviner.} %83" in text
     assert "III U C D" not in text
+
+
+def test_ch01_and_ch04_roman_ref_display_cleaned():
+    ch01 = Path("tex/chapters/ch01.tex").read_text(encoding="utf-8")
+    ch04 = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
+
+    assert r"appendix \ref{app:1}, sec. \ref{sec:appendices-app01:4} (appendix 1, sec. 4)" in ch01
+    assert "(appendix I, sec. 4)" not in ch01
+    assert "appendix 3, sec. 1" in ch04
+    assert "appendix 3, sec. I" not in ch04
 
 
 def test_chapter_3_mid_note_block_restored():
