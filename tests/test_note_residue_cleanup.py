@@ -151,6 +151,13 @@ def test_ch04_mid_and_late_note_residue_removed():
         "yi yue A, ``the first month,''",
         "cheng-yüeh",
         "zheng yue iE. A,",
+        "Yipien 1834",
+        "[D all S441.3]",
+        "S442.4443.2",
+        "Ninghu 1.331 [D]",
+        "\\$417.2",
+        "``Ming” 395 [D]",
+        "Xplace",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -203,6 +210,11 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "The term yi yue 一月, ``the first month,'' was used in all periods; the term zheng yue 正月" in text
     assert "For examples by period: Yi yue: period I:" in text
     assert "Zheng yue: period IIb:" in text
+    assert "RFG: \\pinyinterm{yibian} 1834; \\pinyinterm{qianbian} 8.6.3; \\pinyinterm{xucun} 2.586 [D] [all S441.3]" in text
+    assert "appears mainly, if not exclusively, in period V (S442.4-443.2; possible exceptions are \\pinyinterm{renwen} 2141; \\pinyinterm{ninghu} 1.331 [D]; 葉三 43.2)." in text
+    assert "recorded only in period V (S417.2; 431.2-432.1; 478.4-479.2)." in text
+    assert "period II: \\pinyinterm{nanbei}, ``Ming'' 395 [D]; period V: \\pinyinterm{qianbian} 2.8.7)." in text
+    assert 'occurrences of the phrase tsai mou, ``at X-place,\'\' may be found at S498;' in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
