@@ -186,6 +186,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "Hsü also argues that",
         "Chang Ping-ch'üan (1952)",
         "there is I shang-chi and I hsiao-chi",
+        "error.} pu\n% source: scan 138, printed 120\ntsai ming",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -265,6 +266,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "\\pinyinterm{xu-jinxiong} also argues that \\pinyinterm{jiabian} 27+2 and \\pinyinterm{wenlu} 78" in text
     assert "The basic study is \\pinyinterm{zhang-bingquan} (1952); in English, see Wu Shih-ch'ang (1955)." in text
     assert "on RFG fragments there is 1 shang-chi and 1 hsiao-chi; in period II, there are no crack notations;" in text
+    assert "hsiao-chi, “slightly auspicious,”\\footnote[133]{\\pinyinterm{yibian} 7767 (left hyoplastron) contains a unique hsia-chi F, probably an engraver's error.} pu tsai ming\\footnote[135]{" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
