@@ -102,10 +102,20 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "tie them together.\\footnote[56]{" in ch01
     assert "period V.\\footnote[57]{" in ch01
     assert "had been formed\\footnote[58]{" in ch01
+    assert "\\pinyinterm{hu-houxuan} (1944), p. 55b" in ch01
+    assert "see 胡 (1944), p. 55b" not in ch01
+    assert "\\pinyinterm{xu-jinxiong} stresses" in ch01
+    assert "scapulas, 徐 stresses" not in ch01
+    assert "cf. \\pinyinterm{xu-jinxiong} (1973a), pp. 6, 40-41, 64-65." in ch01
+    assert "cf. 徐 (1973a), pp. 6, 40-41, 64-65." not in ch01
+    assert "cf. \\pinyinterm{xu-jinxiong} (1973a), pp. 15, 40-41, 88-89;" in ch01
+    assert "cf. 徐 (1973a), pp. 15, 40-41, 88-89;" not in ch01
     assert "vice versa.\\footnote[84]{" in ch01
     assert "vice versa.\\footnote[85]{" in ch01
     assert "pp. 125–127.} %83" in ch01
     assert "n 0 ] 0 0" not in ch01
+    assert "\\footnote[95]{\\pinyinterm{xu-jinxiong} (1973a), pp. 15, 88-89;" in ch01
+    assert "\\footnote[95]{徐 (1973a), pp. 15, 88-89;" not in ch01
     assert "bureaucratic works of art.\\footnote[86]{" in ch01
     assert "left scapula.\\footnote[87]{" in ch01
     assert "marginal notations.\\footnote[88]{" in ch01
