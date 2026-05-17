@@ -181,6 +181,12 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     text = Path("tex/appendices/app05.tex").read_text(encoding="utf-8")
 
     assert "戬五面中a:文中干館ㄜ十九:(繪五)" not in text
+    assert r"e.g., \pinyinterm{jiabian} 1656; \pinyinterm{jingjin} 4418" in text
+    assert r"\pinyinterm{qu-wanli}, in fact, dates the relevant \pinyinterm{jiabian} inscriptions to period III." in text
+    assert r"e.g., \pinyinterm{jiabian} 1651, kǎoshì, p. 218; \pinyinterm{renwen} 1996, shakubun, p. 504" in text
+    assert "e.g., 甲編 1656; \\pinyinterm{jingjin} 4418" not in text
+    assert "dates the relevant 甲編 inscriptions to period III." not in text
+    assert "e.g., 甲編 1651, kǎoshì, p. 218; 人文 1996, shakubun, p. 504" not in text
     assert "(1)\n(2)\n\\inscriptionsection{INSCRIPTION}" in text
     assert "(I)\n(2)\n\\inscriptionsection{INSCRIPTION}" not in text
     assert "[Hsing] divined:" in text
