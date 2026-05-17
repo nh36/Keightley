@@ -84,6 +84,16 @@ def test_first_tranche_citations_are_wired():
     assert "Notes on the habits of these turtles can be found in Smith (1931), Pritchard (1967), and Mao" not in app01
     assert r"Notes on the habits of these turtles can be found in Smith (\citeyear{Smith1931Fauna}), Pritchard (\citeyear{Pritchard1967Living}), and Mao" in app01
     assert r"(\citeyear{Mao1971Turtles}). Individuals of Ocadia" in app01
+    assert "Boulenger [1889]; Bourret [1941]; Smith [1931]; and Wermuth and Mertens [1961]" not in app01
+    assert r"Boulenger [\citeyear{Boulenger1889Catalogue}]; Bourret [\citeyear{Bourret1941Tortues}]; Smith [\citeyear{Smith1931Fauna}]; and Wermuth and Mertens [\citeyear{Wermuth1961Schildkroten}]" in app01
+    assert "Schmidt [1927]; Pope [1935]; McDowell [1964]" not in app01
+    assert r"Schmidt [\citeyear{Schmidt1927Reptiles}]; Pope [\citeyear{Pope1935Reptiles}]; McDowell [\citeyear{McDowell1964Partition}]" in app01
+    assert "Stejneger [1907]; Pope [1935]; McDowell [1964]; Mao [1971]" not in app01
+    assert r"Stejneger [1907]; Pope [\citeyear{Pope1935Reptiles}]; McDowell [\citeyear{McDowell1964Partition}]; Mao [\citeyear{Mao1971Turtles}]" in app01
+    assert "Stejneger [1907]; Pope [1935]; McDowell [1964]; and Mao [1971]" not in app01
+    assert r"Stejneger [1907]; Pope [\citeyear{Pope1935Reptiles}]; McDowell [\citeyear{McDowell1964Partition}]; and Mao [\citeyear{Mao1971Turtles}]" in app01
+    assert "Smith [1931]; Pope [1935]" not in app01
+    assert r"Smith [\citeyear{Smith1931Fauna}]; Pope [\citeyear{Pope1935Reptiles}]" in app01
 
     assert r"\textcite[p. 98, n. 13]{Serruys1974The}" in ch01
     assert r"\textcite[p. 515, n.~1]{Young1936Fossil}" in ch01
