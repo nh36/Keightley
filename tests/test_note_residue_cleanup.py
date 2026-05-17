@@ -92,6 +92,10 @@ def test_ch04_no_calligraphy_note_block_spill():
 def test_ch04_mid_and_late_note_residue_removed():
     text = CH04.read_text(encoding="utf-8")
     offenders = [
+        "14. For period I inscriptions, see \\$527.1; for",
+        "17. \\pinyinterm{dong-short} (1933), facing p. 344;",
+        "21. The circled numbers indicate the ritual",
+        "22. E.g., \\pinyinterm{jiatu} 87; \\pinyinterm{pinbian} 204.21;",
         "period IIb@@",
         "113 ]]}",
         "13.0.628131 ] U}",
@@ -106,6 +110,9 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert not found, "Found lingering ch04 mid/late note residue:\n" + "\n".join(found)
 
     assert "1206 (D); 1316 (D); \\pinyinterm{nanbei}, ``Ming'' 352 (D)" in text
+    assert "lineage, in that order.\\footnote[21]{The circled numbers indicate the ritual order" in text
+    assert "decreasing seniority.\\footnote[22]{E.g., \\pinyinterm{jiatu} 87; \\pinyinterm{pinbian} 204.21;" in text
+    assert "% source: scan 114, printed 94\nHorizontal. Some divinations group ancestors of the same generation;" in text
     assert "by the careers of engravers.\\footnote[47]{See \\ref{ch:2} (see ch. 2), nn. 104, 108.}" in text
     assert "432 [D] [S52.3]), correspond to period IIb" in text
     assert "\\footnote[95]{E.g., table 7, no. 1.2, appears mostly in period V; no. 1.4 appears mostly in I; no. 2.3 was common in III + IV.} %95" in text
