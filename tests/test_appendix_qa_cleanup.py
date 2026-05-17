@@ -203,6 +203,22 @@ def test_appendix_1_opening_restored():
     assert "There have been a number of limited attempts at identifying the turtle remains from the\narchaeological site at \\pinyinterm{anyang}." in text
     assert "\\appendixsectionlabel{sec:appendices-app01:1}{1}" in text
     assert "Ting Su (1969) has made the only attempt to date to identify the \\pinyinterm{anyang} turtle shells quantitatively." in text
+    assert r"H. W. Wu (1943) identified the largest plastron (\pinyinterm{pinbian} 184)" in text
+    assert r"reproduced in \pinyinterm{pinbian}, \pinyinterm{yibian}, and, to a lesser extent, in \pinyinterm{jiabian}" in text
+    assert r"on many of the \pinyinterm{pinbian} and \pinyinterm{yibian} plastrons" in text
+    assert r"from as many \pinyinterm{jiabian}, \pinyinterm{pinbian}, and \pinyinterm{yibian} plastrons as possible" in text
+    assert r"with the unknown \pinyinterm{jiabian}," in text
+    assert r"\pinyinterm{pinbian}, and \pinyinterm{yibian} data." in text
+    assert r"for a large number of \pinyinterm{jiabian}," in text
+    assert r"\pinyinterm{pinbian}, and \pinyinterm{yibian} plastrons." in text
+    assert "largest plastron (拼編 184)" not in text
+    assert "reproduced in 拼編, 易編, and, to a lesser extent, in 甲編" not in text
+    assert "on many of the 拼編 and 易編 plastrons" not in text
+    assert "from as many 甲編, 拼編, and 易編 plastrons as possible" not in text
+    assert "with the unknown 甲編," not in text
+    assert "拼編, and 易編 data." not in text
+    assert "for a large number of 甲編," not in text
+    assert "拼編, and 易編 plastrons." not in text
     assert "\n2.\n\\appendixsectionlabel{sec:appendices-app01:2}{2}\nMaterial and Methods\n" in text
     assert "[\\textasciicircum{}2]" not in text
     assert ":L" not in text
