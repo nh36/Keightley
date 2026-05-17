@@ -125,6 +125,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "(1965, p. 96])",
         "Keightley [1973], p. 34",
         "Ta 甲 on chiach'en",
+        "\\pinyinterm{jiabian} 3oo3",
+        "Tui Ẻ:",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -159,6 +161,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "For another dispute, see n. 44.} %36" in text
     assert "perform [\\pinyinterm{dong-short} (1965), p. 96]) yung ritual to Ta Chia on chia-ch'en" in text
     assert "started auspiciously (cf. Keightley [1973a], p. 34)." in text
+    assert "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao):" in text
+    assert "3045+3047; Tui É: \\pinyinterm{jiabian} 3045+3047; 3083;" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
