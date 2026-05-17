@@ -151,6 +151,11 @@ def test_ch04_mid_and_late_note_residue_removed():
         "yi yue A, ``the first month,''",
         "cheng-yüeh",
         "zheng yue iE. A,",
+        "1377 (\\$488.4)",
+        "at \\$488.2491.4",
+        "(all S489.1 \\pinyinterm{renwen} 3091",
+        "\\pinyinterm{renwen} 2373 (\\$488.4)",
+        "\\pinyinterm{qianbian} 5.25.5 (\\$489.1)",
         "Yipien 1834",
         "[D all S441.3]",
         "S442.4443.2",
@@ -210,6 +215,11 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "The term yi yue 一月, ``the first month,'' was used in all periods; the term zheng yue 正月" in text
     assert "For examples by period: Yi yue: period I:" in text
     assert "Zheng yue: period IIb:" in text
+    assert "\\pinyinterm{renwen} 1373 (S488.3); 1377 (S488.4) (both period II);" in text
+    assert "were mainly recorded in period I (see the inscriptions listed at S488.2-491.4)." in text
+    assert "\\pinyinterm{renwen} 3085 (all S489.1); \\pinyinterm{renwen} 3091 (S489.2);" in text
+    assert "\\pinyinterm{renwen} 2373 (S488.4), 2521 (S489.2), and \\pinyinterm{jiabian} 620 (S489.4)" in text
+    assert "Only one period V case, \\pinyinterm{qianbian} 5.25.5 (S489.1) is listed." in text
     assert "RFG: \\pinyinterm{yibian} 1834; \\pinyinterm{qianbian} 8.6.3; \\pinyinterm{xucun} 2.586 [D] [all S441.3]" in text
     assert "appears mainly, if not exclusively, in period V (S442.4-443.2; possible exceptions are \\pinyinterm{renwen} 2141; \\pinyinterm{ninghu} 1.331 [D]; 葉三 43.2)." in text
     assert "recorded only in period V (S417.2; 431.2-432.1; 478.4-479.2)." in text
