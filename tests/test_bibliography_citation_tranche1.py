@@ -84,6 +84,8 @@ def test_first_tranche_citations_are_wired():
     assert r"Wang Ziyu (\citeyear{Wang1933Chia})" in ch05
     assert r"cf. \pinyinterm{zhou-hongxiang} [1976]," in ch05
     assert r"\pinyinterm{zhou-dynasty} [1976]" not in ch05
+    assert r"\pinyinterm{jin-xiangheng} (1973);" in ch05
+    assert r"金 相横 (1973);" not in ch05
     assert r"\pinyinterm{rao-short} (1961a), p. 95;" in ch02
     assert r"\pinyinterm{rao-short} [1961], p. 953" in ch02
     assert r"\pinyinterm{rao-short} [1961], p. 957" in ch01
