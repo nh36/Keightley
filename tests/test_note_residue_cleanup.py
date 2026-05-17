@@ -181,6 +181,10 @@ def test_ch04_mid_and_late_note_residue_removed():
         "positivenegative pair",
         "pp. 37-38,46-48,57.",
         "it will perhaps rain''''",
+        "spill-over-either",
+        "Chang Ping-ch'ü (1952)",
+        "Hsü also argues that",
+        "Chang Ping-ch'üan (1952)",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -256,6 +260,9 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "especially those containing the negative pi---probably a substitution, used principally in period III+IV, for wu ) (Serruys [1974], p. 6; cf. \\pinyinterm{chen-mengjia-spaced} [1956], p. 128)---were merely single, negative charges, and not one of a positive-negative pair." in text
     assert "Keightley (1973a), pp. 37-38, 46-48, 57.} %132" in text
     assert "e.g., ``Divining: ‘(The king) should not hunt on the jen day, (for if he does,) it will perhaps rain’'' (\\pinyinterm{jiabian} 1920 [S293.3])," in text
+    assert "this is an instance of spill-over---either of period II diviners and engravers operating in period I" in text
+    assert "\\pinyinterm{xu-jinxiong} also argues that \\pinyinterm{jiabian} 27+2 and \\pinyinterm{wenlu} 78" in text
+    assert "The basic study is \\pinyinterm{zhang-bingquan} (1952); in English, see Wu Shih-ch'ang (1955)." in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
