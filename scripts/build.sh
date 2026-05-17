@@ -67,6 +67,7 @@ rm -f "$TEX_DIR/main.pdf"
 
 # Build with xelatex/bibtex
 cd "$TEX_DIR"
+NONFATAL_TOOL_NOTES=()
 
 run_xelatex_pass() {
     local pass="$1"
@@ -79,7 +80,7 @@ run_xelatex_pass() {
     set -e
 
     if [ "$status" -ne 0 ]; then
-        echo "  Warning: xelatex exited with status $status on pass $pass"
+        NONFATAL_TOOL_NOTES+=("xelatex pass $pass exited with status $status")
     fi
 }
 
@@ -95,7 +96,7 @@ status=$?
 set -e
 
 if [ "$status" -ne 0 ]; then
-    echo "  Warning: bibtex exited with status $status"
+    NONFATAL_TOOL_NOTES+=("bibtex exited with status $status")
 fi
 
 run_xelatex_pass 2
@@ -106,6 +107,12 @@ if [ -f "$BUILD_OUTPUT/main.pdf" ]; then
     size=$(du -h "$BUILD_OUTPUT/main.pdf" | cut -f1)
     echo -e "${GREEN}✓ Build successful${NC}"
     echo "  Output: $BUILD_OUTPUT/main.pdf ($size)"
+    if [ "${#NONFATAL_TOOL_NOTES[@]}" -gt 0 ]; then
+        notes=$(printf '%s; ' "${NONFATAL_TOOL_NOTES[@]}")
+        notes="${notes%; }"
+        echo "  Note: $notes"
+        echo "  This project can still produce a valid final PDF while intermediate TeX passes return non-zero."
+    fi
     exit 0
 else
     echo -e "${RED}✗ PDF generation failed - no output file${NC}"

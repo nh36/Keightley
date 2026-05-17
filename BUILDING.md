@@ -164,7 +164,23 @@ Check for errors:
 4. Ensure no special characters in commit messages in `.tex` files
 
 ### PDF generated but cross-references show "??"
-This is normal after first build. The build script runs xelatex twice to resolve all references.
+This is normal after the first pass. The build script runs `xelatex`, `bibtex`, `xelatex`, `xelatex` to resolve references and bibliography.
+
+### Build succeeded but reported a TeX pass note
+`./scripts/build.sh` now collapses intermediate TeX-tool warnings into a single note at the end of a successful build.
+
+In this repository, `xelatex` sometimes returns a non-zero status on intermediate passes even when the final PDF is valid. If you see:
+
+```text
+✓ Build successful
+  Note: xelatex pass ...
+```
+
+trust the final success banner and `build/output/main.pdf`. Investigate further only if:
+
+1. the script ends without `✓ Build successful`
+2. `build/output/main.pdf` is missing
+3. the rendered PDF still shows broken references or bibliography output
 
 ## Development Workflow
 
