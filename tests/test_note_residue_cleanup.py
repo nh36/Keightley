@@ -127,6 +127,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "Ta 甲 on chiach'en",
         "\\pinyinterm{jiabian} 3oo3",
         "Tui Ẻ:",
+        "3.4.4.2. 98.",
+        "to which periods.98 Spill-over",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -163,6 +165,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "started auspiciously (cf. Keightley [1973a], p. 34)." in text
     assert "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao):" in text
     assert "3045+3047; Tui É: \\pinyinterm{jiabian} 3045+3047; 3083;" in text
+    assert "\\footnote[97]{E.g., table 7, nos. 1.4.-1.4.6; 2.4.-2.5.1; 3.4.4.2.} %97" in text
+    assert "to which periods.\\footnote[98]{\\listitem{1} The phrase chin yüeh" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
