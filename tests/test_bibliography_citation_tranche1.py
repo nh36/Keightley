@@ -48,6 +48,22 @@ def test_first_tranche_citations_are_wired():
         r"Keightley (\citeyear{Keightley1975The}) and "
         r"(\citeyear{Keightley1975bDate})."
     ) in app04
+    assert "Barnard (1975), pp. 16-17" not in app04
+    assert r"Barnard (\citeyear{Barnard1975First}), pp. 16-17" in app04
+    assert "cf. Barnard (1972), pp. xxxix-xlii" not in app04
+    assert r"cf. Barnard (\citeyear{Barnard1972Early}), pp. xxxix-xlii" in app04
+    assert "Tung (1945), pt. 1, ch. 2, pp. 6b-8a; ch. 4, pp. 11b-28b; (1951b), p. 199; Shima (1966); Shirakawa (1971), pp. 280–281." not in app04
+    assert r"Tung (\citeyear{Tung1945Yin}), pt. 1, ch. 2, pp. 6b-8a; ch. 4, pp. 11b-28b; (\citeyear{Tung1951bWuWang}), p. 199; Shima (\citeyear{Shima1966Bokuji}); Shirakawa (\citeyear{Shirakawa1971Kimbun}), pp. 280–281." in app04
+    assert "Chang Kwang-chih has remarked ([1965], pp. 505-506)" not in app04
+    assert r"Chang Kwang-chih has remarked ([\citeyear{Chang1965Relative}], pp. 505-506)" in app04
+    assert "Chavannes (1895), pp. cxc-cxcvi; Gardner (1961), p. 26, n. 8." not in app04
+    assert r"Chavannes (\citeyear{Chavannes1895Memoires}), pp. cxc-cxcvi; Gardner (\citeyear{Gardner1961Chinese}), p. 26, n. 8." in app04
+    assert "de Saussure (1924), pp. 322-339; Noda and Yabuuchi (1945), pp. 137-179 and passim;" not in app04
+    assert r"de Saussure (\citeyear{Saussure1924Chronologie}), pp. 322-339; Noda and Yabuuchi (\citeyear{Noda1945Kanjo}), pp. 137-179 and passim;" in app04
+    assert "This is the translation given by Sivin (1969), p. 12." not in app04
+    assert r"This is the translation given by Sivin (\citeyear{Sivin1969Cosmos}), p. 12." in app04
+    assert "For comment on this passage, see de Saussure (1924), pp. 330-331; Noda and Yabuuchi (1945), p. 289." not in app04
+    assert r"de Saussure (\citeyear{Saussure1924Chronologie}), pp. 330-331; Noda and Yabuuchi (\citeyear{Noda1945Kanjo}), p. 289." in app04
 
     assert "Keightley (1975), pp. 142144" not in ch02
     assert r"\textcite[pp.~142--144]{Keightley1975The}" in ch02
