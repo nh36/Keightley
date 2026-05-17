@@ -80,22 +80,29 @@ def test_first_tranche_citations_are_wired():
     assert r"Ting Shan (\citeyear{TingShan1956Chia}), p. 125" in ch01
     assert "Chan Pingleung (1972), pp. 39-41" not in ch01
     assert r"Chan Ping-leung (\citeyear{Chan1972Chutzu}), pp. 39-41" in ch01
+    assert "并 知 (1931)" not in ch01
+    assert "Ping Chih (1931)" not in ch01
+    assert "see Bing Zhi (1931)," not in ch01
+    assert r"see Bing Zhi (\citeyear{Ping1931Honan})," in ch01
     assert "史 Changju (1959), p. 321." not in ch05
     assert r"\pinyinterm{shi-zhangru} (\citeyear{Shih1959Hsiao}), p. 321." in ch05
     assert "Wang Ziyu (1933)" not in ch05
     assert r"Wang Ziyu (\citeyear{Wang1933Chia})" in ch05
     assert "陳 春县 (1933)" not in ch04
-    assert r"Ch'en Ch'ün-hsien (\citeyear{Chen1933Chenren}) or Hopkins (1934), pp. 80-81" in ch04
+    assert r"Ch'en Ch'ün-hsien (\citeyear{Chen1933Chenren})" not in ch04
+    assert r"Chen Qunxian (\citeyear{Chen1933Chenren}) or Hopkins (1934), pp. 80-81" in ch04
     assert "并 (1930)" not in ch05
-    assert "Ping (1930) described an extinct terrestrial tortoise" in ch05
+    assert "Ping (1930) described an extinct terrestrial tortoise" not in ch05
+    assert r"Ping (\citeyear{Ping1930Notes}) described an extinct terrestrial tortoise" in ch05
     assert "turtle examined by Ping was, in fact," in ch05
     assert r"cf. \pinyinterm{zhou-hongxiang} [1976]," in ch05
     assert r"\pinyinterm{zhou-dynasty} [1976]" not in ch05
-    assert r"\pinyinterm{jin-xiangheng} (1973);" in ch05
+    assert r"\pinyinterm{jin-xiangheng} (\citeyear{Chin1973Fujen});" in ch05
     assert r"金 相横 (1973);" not in ch05
     assert r"\pinyinterm{rao-short} (1961a), p. 95;" in ch02
     assert r"\pinyinterm{rao-short} [1961], p. 953" in ch02
-    assert r"\pinyinterm{rao-short} [1961], p. 957" in ch01
+    assert r"\pinyinterm{rao-short} [1961], p. 957" not in ch01
+    assert r"\pinyinterm{rao-short} [\citeyear{Jao1961Yupuchao}], p. 957" in ch01
     assert r"see 焦 (1961), p. 957" not in ch01
     assert r"(\pinyinterm{rao-short}, loc. cit.;" in ch01
     assert r"\pinyinterm{jiao-short}" not in ch01
@@ -103,6 +110,7 @@ def test_first_tranche_citations_are_wired():
     assert r"\pinyinterm{huang-peirong} [1969], pp. 3a-b" in ch02
     assert r"\pinyinterm{huang-peirong} [1975]" not in ch02
     assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1945Chiakuhsueh}), p. 5b," in ch03
+    assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1955Yinhsu}), pp. 38-41" in ch03
     assert "Lefeuvre (1971)" not in ch03
     assert r"Lefeuvre (\citeyear{Lefeuvre1971SerieH})" in ch03
     assert "Kuo Mo-jo (1972), p. 5" not in app04

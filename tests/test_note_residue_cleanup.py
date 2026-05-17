@@ -44,7 +44,7 @@ def test_ch03_no_long_note_spills():
     assert "In Tuan (?).\\footnote[94]{" in text
     assert "\\ref{sec:chapters-ch01:1.6.4} (sec. 1.6.4)).\\footnote[95]{" in text
     assert "cracks were left numberless.\\footnote[96]{" in text
-    assert "\\pinyinterm{hu-houxuan} (1955), pp. 38-41" in text
+    assert "\\pinyinterm{hu-houxuan} (\\citeyear{Hu1955Yinhsu}), pp. 38-41" in text
     assert "胡 (1955), pp. 38-41" not in text
 
 
@@ -104,19 +104,22 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "tie them together.\\footnote[56]{" in ch01
     assert "period V.\\footnote[57]{" in ch01
     assert "had been formed\\footnote[58]{" in ch01
-    assert "\\pinyinterm{hu-houxuan} (1944), p. 55b" in ch01
+    assert "\\pinyinterm{hu-houxuan} (\\citeyear{Hu1944Wuting}), p. 55b" in ch01
     assert "see 胡 (1944), p. 55b" not in ch01
     assert "\\pinyinterm{xu-jinxiong} stresses" in ch01
     assert "scapulas, 徐 stresses" not in ch01
-    assert "cf. \\pinyinterm{xu-jinxiong} (1973a), pp. 6, 40-41, 64-65." in ch01
+    assert "\\pinyinterm{hu-houxuan} (\\citeyear{Hu1944aYintai}), pp. 6b-8a." in ch01
+    assert "see \\pinyinterm{hu-houxuan} (\\citeyear{Hu1944Wuting}), p. 55b" in ch01
+    assert "\\pinyinterm{xu-jinxiong} (\\citeyear{Hsu1974Scapulimantic}), p. 12;" in ch01
+    assert "cf. \\pinyinterm{xu-jinxiong} (\\citeyear{Hsu1973aPuku}), pp. 6, 40-41, 64-65." in ch01
     assert "cf. 徐 (1973a), pp. 6, 40-41, 64-65." not in ch01
-    assert "cf. \\pinyinterm{xu-jinxiong} (1973a), pp. 15, 40-41, 88-89;" in ch01
+    assert "cf. \\pinyinterm{xu-jinxiong} (\\citeyear{Hsu1973aPuku}), pp. 15, 40-41, 88-89;" in ch01
     assert "cf. 徐 (1973a), pp. 15, 40-41, 88-89;" not in ch01
     assert "vice versa.\\footnote[84]{" in ch01
     assert "vice versa.\\footnote[85]{" in ch01
     assert "pp. 125–127.} %83" in ch01
     assert "n 0 ] 0 0" not in ch01
-    assert "\\footnote[95]{\\pinyinterm{xu-jinxiong} (1973a), pp. 15, 88-89;" in ch01
+    assert "\\footnote[95]{\\pinyinterm{xu-jinxiong} (\\citeyear{Hsu1973aPuku}), pp. 15, 88-89;" in ch01
     assert "\\footnote[95]{徐 (1973a), pp. 15, 88-89;" not in ch01
     assert "bureaucratic works of art.\\footnote[86]{" in ch01
     assert "left scapula.\\footnote[87]{" in ch01
