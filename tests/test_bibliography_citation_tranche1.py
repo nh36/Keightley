@@ -86,6 +86,8 @@ def test_first_tranche_citations_are_wired():
     assert r"\pinyinterm{zhou-dynasty} [1976]" not in ch05
     assert r"\pinyinterm{rao-short} (1961a), p. 95;" in ch02
     assert r"\pinyinterm{rao-short} [1961], p. 953" in ch02
+    assert r"\pinyinterm{rao-short} [1961], p. 957" in ch01
+    assert r"see 焦 (1961), p. 957" not in ch01
     assert r"(\pinyinterm{rao-short}, loc. cit.;" in ch01
     assert r"\pinyinterm{jiao-short}" not in ch01
     assert r"\pinyinterm{jiao-short}" not in ch02
