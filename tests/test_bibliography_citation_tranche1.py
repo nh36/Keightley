@@ -74,6 +74,29 @@ def test_first_tranche_citations_are_wired():
     assert r"Barnard (\citeyear{Barnard1960bReview})." in app04
     assert "see Keightley [1975a]" not in app04
     assert r"see Keightley [\citeyear{Keightley1975aThe}]" in app04
+    assert "Barnard (1975), pp. 30-31." not in app04
+    assert r"Barnard (\citeyear{Barnard1975First}), pp. 30-31." in app04
+    assert "Michels (1973), pp. 158-159." not in app04
+    assert r"Michels (\citeyear{Michels1973Dating}), pp. 158-159." in app04
+    assert 'Barnard (1975), p. 31, refers to it as ``a comparatively late burial,'' but Kane (1975), p. 109,' not in app04
+    assert r"Barnard (\citeyear{Barnard1975First}), p. 31," in app04
+    assert r"Kane (\citeyear{Kane1975Reexamination}), p. 109," in app04
+    assert "Ch'iu (1972) argues, unconvincingly in my view," not in app04
+    assert r"Ch'iu (\citeyear{Chiu1972DuAnyang}) argues, unconvincingly in my view," in app04
+    assert "Clark (1975), pp. 265-266." not in app04
+    assert r"Clark (\citeyear{Clark1975Calibration}), pp. 265-266." in app04
+    assert "Goodyear (1971), p. 181:" not in app04
+    assert r"Goodyear (\citeyear{Goodyear1971Archaeological}), p. 181:" in app04
+    assert "Clark (1975) uses the 5568 half-life. Barnard (1975) usually records both the 5568 and the 5730 half-life figures." not in app04
+    assert r"Clark (\citeyear{Clark1975Calibration}) uses the 5568 half-life. Barnard (\citeyear{Barnard1975First}) usually records both the 5568 and the 5730 half-life figures." in app04
+    assert "Cf. Barnard (1975), p. 38." not in app04
+    assert r"Cf. Barnard (\citeyear{Barnard1975First}), p. 38." in app04
+    assert "Kigoshi and Hasegawa (1966)" not in app04
+    assert r"Kigoshi and Hasegawa (\citeyear{Kigoshi1966Secular})" in app04
+    assert "Clark (1975), p. 260," not in app04
+    assert r"Clark (\citeyear{Clark1975Calibration}), p. 260," in app04
+    assert "Cf. Barnard (1975), pp. vi, vii, 21-22; Clark (1975), pp. 252, 258-259." not in app04
+    assert r"Cf. Barnard (\citeyear{Barnard1975First}), pp. vi, vii, 21-22; Clark (\citeyear{Clark1975Calibration}), pp. 252, 258-259." in app04
 
     assert "Keightley (1975), pp. 142144" not in ch02
     assert r"\textcite[pp.~142--144]{Keightley1975The}" in ch02
