@@ -128,10 +128,23 @@ def test_appendix_2_ratios_and_footnote_stubs_restored():
     assert "shell-bone ratio of 2 to 1." in text
     assert '``the ratio of plastrons to extant scapulae is 3 to 1.\'\' '[:-1] in text
     assert "ratio of 4 to 3." in text
+    assert r"in \pinyinterm{jiabian}, \pinyinterm{renwen}, Menzies, and White" in text
+    assert r"\pinyinterm{renwen} 1096, shakubun, p. 358, n." in text
+    assert r"in \pinyinterm{yibian} and Tieyun, two nontypical collections." in text
+    assert r"\footnote[6]{I exclude \pinyinterm{yibian} from these discussions." in text
+    assert r"selected 寧滬 1.119 (D) as an average" in text
+    assert r"plastrons (excluding duplicates) in \pinyinterm{pinbian} is 24.6 cms." in text
+    assert r"throwing the \pinyinterm{yibian} fragments into the balance" in text
+    assert r"\footnote[17]{Using the \pinyinterm{yibian} ratio (table 33)" in text
+    assert r"\pinyinterm{yibian} and \pinyinterm{pinbian}." in text
+    assert r"the \pinyinterm{renwen} and Menzies" in text
+    assert r"\pinyinterm{renwen}: 432 inscribed shell fragments = ca. 21 plastrons;" in text
+    assert r"The \pinyinterm{renwen} fragments reveal a strong preference" in text
+    assert r"the situation in \pinyinterm{jiabian} indicates" in text
+    assert r"\pinyinterm{jiabian}, \pinyinterm{pinbian}, \pinyinterm{yibian}, and \pinyinterm{renwen}" in text
     assert "[\\textasciicircum{}5]" not in text
     assert "[\\textasciicircum{}6]" not in text
     assert "\\footnote[5]{In what follows, I make no attempt to distinguish plastrons from carapaces" in text
-    assert "\\footnote[6]{I exclude 易編 from these discussions." in text
     assert "approximately 16 bone fragments (310 ÷ 19)" in text
     assert "8 bone fragments;\\footnote[16]" in text
     assert "\\footnote[8]{For similar tabulations" in text
@@ -143,6 +156,19 @@ def test_appendix_2_ratios_and_footnote_stubs_restored():
     assert "} the shell fragments" in text
     assert "18. On this find, see ch. 4, n. 188, above." not in text
     assert "22. Ca. 72 inscribed shell fragments = ca. 2" not in text
+    assert "The ratio of bone and shell fragments in 甲編, 人文, Menzies, and White" not in text
+    assert "人文 1096, shakubun, p. 358, n." not in text
+    assert "in 易編 and Tieyun, two nontypical collections." not in text
+    assert "\\footnote[6]{I exclude 易編 from these discussions." not in text
+    assert "plastrons (excluding duplicates) in 拼編 is 24.6 cms." not in text
+    assert "throwing the 易編 fragments into the balance" not in text
+    assert "\\footnote[17]{Using the 易編 ratio (table 33)" not in text
+    assert "易編 and 拼編." not in text
+    assert "the 人文 and Menzies" not in text
+    assert "人文: 432 inscribed shell fragments = ca. 21 plastrons;" not in text
+    assert "The 人文 fragments reveal a strong preference" not in text
+    assert "the situation in 甲編 indicates" not in text
+    assert "about the various cattle sacrifices in 甲編, 拼編, 易編, and 人文" not in text
 
 
 def test_appendix_5_vertical_ocr_garbage_removed():
