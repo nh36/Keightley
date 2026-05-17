@@ -9,6 +9,7 @@ APP02 = REPO_ROOT / "tex" / "appendices" / "app02.tex"
 CH01 = REPO_ROOT / "tex" / "chapters" / "ch01.tex"
 CH02 = REPO_ROOT / "tex" / "chapters" / "ch02.tex"
 CH03 = REPO_ROOT / "tex" / "chapters" / "ch03.tex"
+CH04 = REPO_ROOT / "tex" / "chapters" / "ch04.tex"
 CH05 = REPO_ROOT / "tex" / "chapters" / "ch05.tex"
 PREFACE = REPO_ROOT / "tex" / "frontmatter" / "preface.tex"
 FIGURES = REPO_ROOT / "tex" / "plates" / "figures.tex"
@@ -23,6 +24,7 @@ def test_first_tranche_citations_are_wired():
     ch01 = CH01.read_text(encoding="utf-8")
     ch02 = CH02.read_text(encoding="utf-8")
     ch03 = CH03.read_text(encoding="utf-8")
+    ch04 = CH04.read_text(encoding="utf-8")
     ch05 = CH05.read_text(encoding="utf-8")
     preface = PREFACE.read_text(encoding="utf-8")
     figures = FIGURES.read_text(encoding="utf-8")
@@ -82,6 +84,8 @@ def test_first_tranche_citations_are_wired():
     assert r"\pinyinterm{shi-zhangru} (\citeyear{Shih1959Hsiao}), p. 321." in ch05
     assert "Wang Ziyu (1933)" not in ch05
     assert r"Wang Ziyu (\citeyear{Wang1933Chia})" in ch05
+    assert "陳 春县 (1933)" not in ch04
+    assert r"Ch'en Ch'ün-hsien (\citeyear{Chen1933Chenren}) or Hopkins (1934), pp. 80-81" in ch04
     assert r"cf. \pinyinterm{zhou-hongxiang} [1976]," in ch05
     assert r"\pinyinterm{zhou-dynasty} [1976]" not in ch05
     assert r"\pinyinterm{jin-xiangheng} (1973);" in ch05
