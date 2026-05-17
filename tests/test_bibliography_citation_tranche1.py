@@ -84,6 +84,14 @@ def test_first_tranche_citations_are_wired():
     assert "Ping Chih (1931)" not in ch01
     assert "see Bing Zhi (1931)," not in ch01
     assert r"see Bing Zhi (\citeyear{Ping1931Honan})," in ch01
+    assert "Malcolm A. Smith (1931), facing p. 50" not in ch01
+    assert r"Malcolm A. Smith (\citeyear{Smith1931Fauna}), facing p. 50" in ch01
+    assert "Carr (1952), pp. 37-39" not in ch01
+    assert r"Carr (\citeyear{Carr1952Handbook}), pp. 37-39" in ch01
+    assert "Romer (1956), p. 32" not in ch01
+    assert r"Romer (\citeyear{Romer1956Osteology}), p. 32" in ch01
+    assert "Malcolm A. Smith (1931), p. 50" not in ch01
+    assert r"Malcolm A. Smith (\citeyear{Smith1931Fauna}), p. 50" in ch01
     assert "史 Changju (1959), p. 321." not in ch05
     assert r"\pinyinterm{shi-zhangru} (\citeyear{Shih1959Hsiao}), p. 321." in ch05
     assert "Wang Ziyu (1933)" not in ch05
@@ -94,6 +102,10 @@ def test_first_tranche_citations_are_wired():
     assert "并 (1930)" not in ch05
     assert "Ping (1930) described an extinct terrestrial tortoise" not in ch05
     assert r"Ping (\citeyear{Ping1930Notes}) described an extinct terrestrial tortoise" in ch05
+    assert "Lindholm (1931) concluded" not in ch05
+    assert r"Lindholm (\citeyear{Lindholm1931Uber}) concluded" in ch05
+    assert "Pope (1935), in his monograph" not in ch05
+    assert r"Pope (\citeyear{Pope1935Reptiles}), in his monograph" in ch05
     assert "turtle examined by Ping was, in fact," in ch05
     assert r"cf. \pinyinterm{zhou-hongxiang} [1976]," in ch05
     assert r"\pinyinterm{zhou-dynasty} [1976]" not in ch05
