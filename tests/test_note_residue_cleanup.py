@@ -112,6 +112,10 @@ def test_ch04_mid_and_late_note_residue_removed():
         "Studies. 129 1",
         "useful.53",
         "Page design.''",
+        "p. 339. Nor are",
+        "A25\\%",
+        "[1956]. p. 169",
+        "\\pinyinterm{jiabian} 490928 came",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -134,6 +138,10 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "Any discussion of the distribution of inscriptions by\nperiod (appendix \\ref{app:3} (appendix 3))" in text
     assert "criterion in these cases is frequently too subjective to be useful.\\footnote[53]{For an initial attempt to study the grooves objectively" in text
     assert "4. Page design. This refers to the care with which the graphs were placed on the" in text
+    assert "found there (Itō [1959], p. 339). Nor are some of the early reports" in text
+    assert "whether \\pinyinterm{jiabian} 110-178, 368-375, and 391 came from A26 or A25?;" in text
+    assert "282-296 (cf. \\pinyinterm{chen-mengjia} [1956], p. 169)." in text
+    assert "we can only suppose that \\pinyinterm{jiabian} 490-928 came from sector F within the village" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
