@@ -18,6 +18,12 @@ def test_appendix_3_page_marker_debris_removed():
 def test_appendix_3_note_block_restored():
     text = APP03.read_text(encoding="utf-8")
 
+    assert r"\pinyinterm{yibian} 7758, for example, is a fragment;" in text
+    assert r"\pinyinterm{pinbian} 45 (formed by joining \pinyinterm{yibian} 4864 and 7758) is a piece." in text
+    assert r"were published in \pinyinterm{jiabian} and \pinyinterm{yibian}" in text
+    assert "易編 7758, for example, is a fragment;" not in text
+    assert "拼編 45 (formed by joining 易編 4864 and 7758) is a piece." not in text
+    assert "were published in 甲編 and 易編" not in text
     assert "150 years\\footnote[9]{" in text
     assert "every 16 days.”\\footnote[8]{" in text
     assert "original corpus.''\\footnote[10]{" in text
