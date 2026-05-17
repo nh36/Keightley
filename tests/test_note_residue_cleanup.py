@@ -176,6 +176,10 @@ def test_ch04_mid_and_late_note_residue_removed():
         "wanted to have happen-``there will be no disaster,” “today",
         'it will not rain"-with the crack numbers',
         "甲三元三I 田宮管甲九二。KIX田宮::",
+        "nega. tive pi-probably",
+        "p. 128-were merely",
+        "positivenegative pair",
+        "pp. 37-38,46-48,57.",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -248,6 +252,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "date should be considered a verification (see n. 99)\n---if so, such verifications also appeared, rarely, in\nperiod II (n. 101)---\\listitem{4} uncertainty about the" in text
     assert "wanted to have happen---``there will be no disaster,'' ``today\nit will not rain''---with the crack numbers running from 1 to 5" in text
     assert "and sets, in short, became standardized and simplified with the passage of time.\n\n\\subsubsection[Crack Notations]{Crack Notations}" in text
+    assert "especially those containing the negative pi---probably a substitution, used principally in period III+IV, for wu ) (Serruys [1974], p. 6; cf. \\pinyinterm{chen-mengjia-spaced} [1956], p. 128)---were merely single, negative charges, and not one of a positive-negative pair." in text
+    assert "Keightley (1973a), pp. 37-38, 46-48, 57.} %132" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
