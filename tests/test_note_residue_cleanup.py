@@ -170,6 +170,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "originally meant here (at this point in the divination process)",
         "徐. ibid., p. gb",
         "Ogawa 6, shakubun, p. 263, n. 5. It is hard",
+        "``verification notations, their presence",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -237,6 +238,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "and campaigning (the inscriptions cited by Xu, ibid., p. 9a)." in text
     assert "originally meant ``here (at this point in the divination process) we offered sacrifice,''" in text
     assert "caught so many animals (Xu, ibid., p. 9b; cf. Ogawa 6, shakubun, p. 263, n. 5)." in text
+    assert "which we may refer to as ``verification notations,'' their presence in an inscription provides a clue to its relative date." in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
