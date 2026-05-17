@@ -104,6 +104,8 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "had been formed\\footnote[58]{" in ch01
     assert "vice versa.\\footnote[84]{" in ch01
     assert "vice versa.\\footnote[85]{" in ch01
+    assert "pp. 125–127.} %83" in ch01
+    assert "n 0 ] 0 0" not in ch01
     assert "bureaucratic works of art.\\footnote[86]{" in ch01
     assert "left scapula.\\footnote[87]{" in ch01
     assert "marginal notations.\\footnote[88]{" in ch01
