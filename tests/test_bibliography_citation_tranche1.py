@@ -64,6 +64,16 @@ def test_first_tranche_citations_are_wired():
     assert r"This is the translation given by Sivin (\citeyear{Sivin1969Cosmos}), p. 12." in app04
     assert "For comment on this passage, see de Saussure (1924), pp. 330-331; Noda and Yabuuchi (1945), p. 289." not in app04
     assert r"de Saussure (\citeyear{Saussure1924Chronologie}), pp. 330-331; Noda and Yabuuchi (\citeyear{Noda1945Kanjo}), p. 289." in app04
+    assert "Eberhard, Müller, and Henseling (1970), pp. 949-979; Noda and Yabuuchi (1945), pp. 161-164." not in app04
+    assert r"Eberhard, Müller, and Henseling (\citeyear{Eberhard1970Astronomie}), pp. 949-979; Noda and Yabuuchi (\citeyear{Noda1945Kanjo}), pp. 161-164." in app04
+    assert "The text has been glossed by de Saussure (1924), pp. 330-331; Noda and Yabuuchi (1945), p. 289." not in app04
+    assert r"The text has been glossed by de Saussure (\citeyear{Saussure1924Chronologie}), pp. 330-331; Noda and Yabuuchi (\citeyear{Noda1945Kanjo}), p. 289." in app04
+    assert "Fan (1962), p. 35." not in app04
+    assert r"Fan (\citeyear{Fan1962Kuben}), p. 35." in app04
+    assert "Barnard (1960b)." not in app04
+    assert r"Barnard (\citeyear{Barnard1960bReview})." in app04
+    assert "see Keightley [1975a]" not in app04
+    assert r"see Keightley [\citeyear{Keightley1975aThe}]" in app04
 
     assert "Keightley (1975), pp. 142144" not in ch02
     assert r"\textcite[pp.~142--144]{Keightley1975The}" in ch02
