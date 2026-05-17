@@ -107,6 +107,32 @@ def test_first_tranche_citations_are_wired():
     assert r"Zhang Peiyu (\citeyear{Chang1975Jiaguwen})." in app04
     assert "Shima [1958], p. 270; Serruys [1974], p. 104" not in app04
     assert r"Shima [\citeyear{Shima1958Inkyo}], p. 270; Serruys [\citeyear{Serruys1974The}], p. 104" in app04
+    assert "Shima (1960), p. 51," not in app04
+    assert r"Shima (\citeyear{Shima1960TiYi}), p. 51," in app04
+    assert "subsequently ([1966], p. 13)" not in app04
+    assert r"subsequently ([\citeyear{Shima1966Bokuji}], p. 13)" in app04
+    assert r"\pinyinterm{xu-jinxiong-tight} (1970), p. 26" not in app04
+    assert r"\pinyinterm{xu-jinxiong-tight} (\citeyear{Hsu1970Wuzhong}), p. 26" in app04
+    assert "Tung (1945), pt. 1, ch. 3, p. 18b; pt. 2, ch. 1, p. 42b" not in app04
+    assert r"Tung (\citeyear{Tung1945Yin}), pt. 1, ch. 3, p. 18b; pt. 2, ch. 1, p. 42b" in app04
+    assert "Shima (1960), p. 52," not in app04
+    assert r"Shima (\citeyear{Shima1960TiYi}), p. 52," in app04
+    assert "([1966], p. 21; cf. [1976])" not in app04
+    assert r"([\citeyear{Shima1966Bokuji}], p. 21; cf. [1976])" in app04
+    assert "Tung (1945), pt. 1, ch. 3, p. 19a; pt. 2, ch. 1, p. 50b" not in app04
+    assert r"Tung (\citeyear{Tung1945Yin}), pt. 1, ch. 3, p. 19a; pt. 2, ch. 1, p. 50b" in app04
+    assert "Bishop (1932), pp. 234-235." not in app04
+    assert r"Bishop (\citeyear{Bishop1932Chronology}), pp. 234-235." in app04
+    assert "Lei (1931), who calculated" not in app04
+    assert r"Lei (\citeyear{Lei1931Yinzhou}), who calculated" in app04
+    assert "cf. Ho [1975], p. 4" not in app04
+    assert r"cf. Ho [\citeyear{Ho1975Cradle}], p. 4" in app04
+    assert "Fan [1962], p. 24" not in app04
+    assert r"Fan [\citeyear{Fan1962Kuben}], p. 24" in app04
+    assert "Cf. Bishop (1932), pp. 232-237." not in app04
+    assert r"Cf. Bishop (\citeyear{Bishop1932Chronology}), pp. 232-237." in app04
+    assert "Barnard [1975], pp. 16-17" not in app04
+    assert r"Barnard [\citeyear{Barnard1975First}], pp. 16-17" in app04
 
     assert "Keightley (1975), pp. 142144" not in ch02
     assert r"\textcite[pp.~142--144]{Keightley1975The}" in ch02
