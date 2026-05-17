@@ -137,7 +137,14 @@ def test_ch04_mid_and_late_note_residue_removed():
         "2.15.1 RFG:",
         "Hsieh叶",
         "``Howen,''",
-        "yüeh El ``saying,''",
+        "yüeh A, ``moon'' or ``month,''",
+        "yüeh 曰 ``saying,''",
+        "chin yüeh",
+        "chin chi yüeh",
+        "chi yüeh",
+        "tsai chi yüeh",
+        "yi-yüeh",
+        "cheng-yüeh",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -175,14 +182,21 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao):" in text
     assert "3045+3047; Tui É: \\pinyinterm{jiabian} 3045+3047; 3083;" in text
     assert "\\footnote[97]{E.g., table 7, nos. 1.4.-1.4.6; 2.4.-2.5.1; 3.4.4.2.} %97" in text
-    assert "to which periods.\\footnote[98]{\\listitem{1} The phrase chin yüeh" in text
+    assert "to which periods.\\footnote[98]{\\listitem{1} The phrase jin yue" in text
     assert "table 7, nos. 1.4.2; 1.4.3; 1.4.4; 1.4.5; 2.4; 2.4.1; 2.4.3; 3.4.1; 3.4.2; 3.4.3; 3.4.4; 4.2).} %92" in text
-    assert "Yi-yüeh: period I: \\pinyinterm{jiabian} 2111; \\pinyinterm{pinbian} 485.14; 515.1-2;" in text
+    assert "Yi yue: period I: \\pinyinterm{jiabian} 2111; \\pinyinterm{pinbian} 485.14; 515.1-2;" in text
     assert "period III-IV: \\pinyinterm{renwen} 1737; 1767; period V:" in text
     assert "period V: \\pinyinterm{houbian} 1.10.16; 2.15.1; RFG:" in text
     assert "Tuié and Hsieh.} %93" in text
     assert 'CKWP (1965), ``Ho-wen,\'\' pp. 27a-b;' in text
-    assert "formulas which included the word yüeh 曰 ``saying,''" in text
+    assert "graphs for hsi , ``night,'' and yue A, ``moon'' or ``month,'' changed places in different periods" in text
+    assert "formulas which included the word yue 曰 ``saying,''" in text
+    assert "The phrase jin yue, ``this month,'' or jin chi yue, ``this nth month,''" in text
+    assert "Formula a. chi yue, ``the nth month,''" in text
+    assert "Formula b, zai chi yue, ``in the nth month,''" in text
+    assert "The term yi yue A, ``the first month,'' was used in all periods; the term zheng yue iE. A" in text
+    assert "For examples by period: Yi yue: period I:" in text
+    assert "Zheng yue: period IIb:" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
