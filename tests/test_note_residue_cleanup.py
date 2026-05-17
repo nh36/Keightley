@@ -171,6 +171,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "徐. ibid., p. gb",
         "Ogawa 6, shakubun, p. 263, n. 5. It is hard",
         "``verification notations, their presence",
+        "pu yung T",
+        "period II (n. 101 -\\listitem{4}",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -239,6 +241,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "originally meant ``here (at this point in the divination process) we offered sacrifice,''" in text
     assert "caught so many animals (Xu, ibid., p. 9b; cf. Ogawa 6, shakubun, p. 263, n. 5)." in text
     assert "which we may refer to as ``verification notations,'' their presence in an inscription provides a clue to its relative date." in text
+    assert "The notations tzu puyung 茲不用, pu yung 不用, or tzu wu yung 茲毋用 appear rarely" in text
+    assert "date should be considered a verification (see n. 99)\n---if so, such verifications also appeared, rarely, in\nperiod II (n. 101)---\\listitem{4} uncertainty about the" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
