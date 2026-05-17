@@ -44,6 +44,8 @@ def test_ch03_no_long_note_spills():
     assert "In Tuan (?).\\footnote[94]{" in text
     assert "\\ref{sec:chapters-ch01:1.6.4} (sec. 1.6.4)).\\footnote[95]{" in text
     assert "cracks were left numberless.\\footnote[96]{" in text
+    assert "\\pinyinterm{hu-houxuan} (1955), pp. 38-41" in text
+    assert "胡 (1955), pp. 38-41" not in text
 
 
 def test_ch04_no_calligraphy_note_block_spill():
