@@ -267,7 +267,7 @@ def test_chapter_4_opening_note_block_restored():
 def test_chapter_4_calligraphy_note_band_restored():
     text = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
 
-    assert "of a new king.\\footnote[47]{See \\ref{ch:2} (see ch. 2), nn. 104, 108.}" in text
+    assert "by the careers of engravers.\\footnote[47]{See \\ref{ch:2} (see ch. 2), nn. 104, 108.}" in text
     assert "same shell,\\footnote[48]{" in text
     assert "most\nprefaces.\\footnote[50]{" in text
     assert "below 6 mm. in length.\\footnote[51]{" in text

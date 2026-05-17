@@ -89,6 +89,33 @@ def test_ch04_no_calligraphy_note_block_spill():
     assert "sites.\\footnote[164]{" in text
 
 
+def test_ch04_mid_and_late_note_residue_removed():
+    text = CH04.read_text(encoding="utf-8")
+    offenders = [
+        "period IIb@@",
+        "113 ]]}",
+        "13.0.628131 ] U}",
+        "will ever be written. More rigorous archaeological techniques will presumably be@@",
+        "186. See n. 179",
+        "damaged in 徐-chou-all",
+        "came from YH127; according to 史",
+        "engravers.*7",
+    ]
+
+    found = [needle for needle in offenders if needle in text]
+    assert not found, "Found lingering ch04 mid/late note residue:\n" + "\n".join(found)
+
+    assert "1206 (D); 1316 (D); \\pinyinterm{nanbei}, ``Ming'' 352 (D)" in text
+    assert "by the careers of engravers.\\footnote[47]{See \\ref{ch:2} (see ch. 2), nn. 104, 108.}" in text
+    assert "432 [D] [S52.3]), correspond to period IIb" in text
+    assert "\\footnote[95]{E.g., table 7, no. 1.2, appears mostly in period V; no. 1.4 appears mostly in I; no. 2.3 was common in III + IV.} %95" in text
+    assert "1937 will ever be written." in text
+    assert "13.0.0628-13.0.17714 came from YH127; according to \\pinyinterm{shi-zhangru} (1959), p. 322, shells 13.0.17715-13.0.17756 should also be included." in text
+    assert "resolve some of our dating problems.\\footnote[186]{See n. 179" in text
+    assert "damaged in Xuzhou---all this" in text
+    assert "Any discussion of the distribution of inscriptions by\nperiod (appendix \\ref{app:3} (appendix 3))" in text
+
+
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     ch01 = CH01.read_text(encoding="utf-8")
     ch02 = CH02.read_text(encoding="utf-8")
