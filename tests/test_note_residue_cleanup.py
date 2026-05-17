@@ -116,6 +116,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "A25\\%",
         "[1956]. p. 169",
         "\\pinyinterm{jiabian} 490928 came",
+        "PTXFEKH",
+        "vichih ti fa-hsien yü fa-chüeh: ting pien :",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -142,6 +144,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "whether \\pinyinterm{jiabian} 110-178, 368-375, and 391 came from A26 or A25?;" in text
     assert "282-296 (cf. \\pinyinterm{chen-mengjia} [1956], p. 169)." in text
     assert "we can only suppose that \\pinyinterm{jiabian} 490-928 came from sector F within the village" in text
+    assert "The title of this projected work was \\booktitle{Jiagu wenzi yu Yinxu yizhi};" in text
+    assert "\\pinyinterm{shi-zhangru}'s forthcoming \\booktitle{Xiaotun diyi ben: yizhi de faxian yu fajue, yibian: jianzhu yicun}, to be published by the Academia Sinica" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
