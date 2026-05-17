@@ -141,8 +141,11 @@ def test_ch04_mid_and_late_note_residue_removed():
         "yüeh 曰 ``saying,''",
         "chin yüeh",
         "chin chi yüeh",
+        "jin chi yue",
         "chi yüeh",
+        "chi yue",
         "tsai chi yüeh",
+        "zai chi yue",
         "yi-yüeh",
         "cheng-yüeh",
     ]
@@ -191,9 +194,9 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert 'CKWP (1965), ``Ho-wen,\'\' pp. 27a-b;' in text
     assert "graphs for hsi , ``night,'' and yue A, ``moon'' or ``month,'' changed places in different periods" in text
     assert "formulas which included the word yue 曰 ``saying,''" in text
-    assert "The phrase jin yue, ``this month,'' or jin chi yue, ``this nth month,''" in text
-    assert "Formula a. chi yue, ``the nth month,''" in text
-    assert "Formula b, zai chi yue, ``in the nth month,''" in text
+    assert "The phrase jin yue, ``this month,'' or jin ji yue, ``this nth month,''" in text
+    assert "Formula a. ji yue, ``the nth month,''" in text
+    assert "Formula b, zai ji yue, ``in the nth month,''" in text
     assert "The term yi yue A, ``the first month,'' was used in all periods; the term zheng yue iE. A" in text
     assert "For examples by period: Yi yue: period I:" in text
     assert "Zheng yue: period IIb:" in text
