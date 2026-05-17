@@ -216,8 +216,8 @@ def test_appendix_1_opening_restored():
 
     assert "There have been a number of limited attempts at identifying the turtle remains from the\narchaeological site at \\pinyinterm{anyang}." in text
     assert "\\appendixsectionlabel{sec:appendices-app01:1}{1}" in text
-    assert "Ting Su (1969) has made the only attempt to date to identify the \\pinyinterm{anyang} turtle shells quantitatively." in text
-    assert r"H. W. Wu (1943) identified the largest plastron (\pinyinterm{pinbian} 184)" in text
+    assert r"Ting Su (\citeyear{Su1969Shuo}) has made the only attempt to date to identify the \pinyinterm{anyang} turtle shells quantitatively." in text
+    assert r"H. W. Wu (\citeyear{Wu1943Notes}) identified the largest plastron (\pinyinterm{pinbian} 184)" in text
     assert r"reproduced in \pinyinterm{pinbian}, \pinyinterm{yibian}, and, to a lesser extent, in \pinyinterm{jiabian}" in text
     assert r"on many of the \pinyinterm{pinbian} and \pinyinterm{yibian} plastrons" in text
     assert r"from as many \pinyinterm{jiabian}, \pinyinterm{pinbian}, and \pinyinterm{yibian} plastrons as possible" in text

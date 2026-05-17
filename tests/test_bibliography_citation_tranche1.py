@@ -73,6 +73,17 @@ def test_first_tranche_citations_are_wired():
     assert "to the shell as Ocadia sinensis" in app01
     assert "Ping's figure reproduced in Pope [1935]" not in app01
     assert r"Ping's figure reproduced in Pope [\citeyear{Pope1935Reptiles}]" in app01
+    assert "H. W. Wu (1943) identified the largest plastron" not in app01
+    assert r"H. W. Wu (\citeyear{Wu1943Notes}) identified the largest plastron" in app01
+    assert "Ting Su (1969) has made the only attempt" not in app01
+    assert r"Ting Su (\citeyear{Su1969Shuo}) has made the only attempt" in app01
+    assert "adopted by Ting Su (1969)" not in app01
+    assert r"adopted by Ting Su (\citeyear{Su1969Shuo})" in app01
+    assert "As noted by Wu (1943), the" not in app01
+    assert r"As noted by Wu (\citeyear{Wu1943Notes}), the" in app01
+    assert "Notes on the habits of these turtles can be found in Smith (1931), Pritchard (1967), and Mao" not in app01
+    assert r"Notes on the habits of these turtles can be found in Smith (\citeyear{Smith1931Fauna}), Pritchard (\citeyear{Pritchard1967Living}), and Mao" in app01
+    assert r"(\citeyear{Mao1971Turtles}). Individuals of Ocadia" in app01
 
     assert r"\textcite[p. 98, n. 13]{Serruys1974The}" in ch01
     assert r"\textcite[p. 515, n.~1]{Young1936Fossil}" in ch01
