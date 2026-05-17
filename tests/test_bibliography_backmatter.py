@@ -1424,6 +1424,15 @@ def test_twelfth_manual_override_tranche_replaces_late_l_and_m_block():
     assert "@book{Montell1934Clemmys," not in generated_bib
 
 
+def test_recovered_stejneger_entry_present():
+    manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
+
+    assert "@article{Stejneger1907Herpetology," in manual_bib
+    assert "  author       = {Stejneger, Leonhard}," in manual_bib
+    assert "  title        = {Herpetology of Japan and Adjacent Territory}," in manual_bib
+    assert "  journaltitle = {Bulletin of the United States National Museum}," in manual_bib
+
+
 def test_thirteenth_manual_override_tranche_replaces_n_to_s_bridge():
     manual_bib = MANUAL_BIB.read_text(encoding="utf-8")
     generated_bib = GENERATED_BIB.read_text(encoding="utf-8")
@@ -1471,7 +1480,7 @@ def test_fourteenth_manual_override_tranche_replaces_s_page_block():
     assert "@book{Shirakawa1970Setsubun," in manual_bib
     assert "@book{Shirakawa1971Kimbun,\n  author      = {Shirakawa, Shizuka},\n  year        = {1971},\n  title       = {Kimbun no sekai},\n  userb       = {金文の世界}," in manual_bib
     assert "@book{Shirakawa1972Kokotsubun,\n  author      = {Shirakawa, Shizuka},\n  year        = {1972},\n  title       = {Kokotsubun no sekai---kodai In ocho no kozo},\n  userb       = {甲骨文の世界：古代殷王朝の構造}," in manual_bib
-    assert "@article{Shirakawa1976Teishin," in manual_bib
+    assert "@article{Shima1976Teishin,\n  author       = {Shima, Kunio},\n  year         = {1976},\n  title        = {Teishin sanjusannen Imbosetsu},\n  journaltitle = {Kokotsugaku},\n  userc        = {甲骨學},\n  volume       = {11},\n  pages        = {15--19}," in manual_bib
 
     assert "@book{Serruys1969Negatives," not in generated_bib
     assert "@book{Serruys1974The," not in generated_bib

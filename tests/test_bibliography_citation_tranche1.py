@@ -7,6 +7,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 APP04 = REPO_ROOT / "tex" / "appendices" / "app04.tex"
 APP01 = REPO_ROOT / "tex" / "appendices" / "app01.tex"
 APP02 = REPO_ROOT / "tex" / "appendices" / "app02.tex"
+APP03 = REPO_ROOT / "tex" / "appendices" / "app03.tex"
+APP05 = REPO_ROOT / "tex" / "appendices" / "app05.tex"
 CH01 = REPO_ROOT / "tex" / "chapters" / "ch01.tex"
 CH02 = REPO_ROOT / "tex" / "chapters" / "ch02.tex"
 CH03 = REPO_ROOT / "tex" / "chapters" / "ch03.tex"
@@ -22,7 +24,9 @@ CITATION_SCRIPT = REPO_ROOT / "scripts" / "09_intext_citations.py"
 def test_first_tranche_citations_are_wired():
     app01 = APP01.read_text(encoding="utf-8")
     app02 = APP02.read_text(encoding="utf-8")
+    app03 = APP03.read_text(encoding="utf-8")
     app04 = APP04.read_text(encoding="utf-8")
+    app05 = APP05.read_text(encoding="utf-8")
     ch01 = CH01.read_text(encoding="utf-8")
     ch02 = CH02.read_text(encoding="utf-8")
     ch03 = CH03.read_text(encoding="utf-8")
@@ -52,6 +56,8 @@ def test_first_tranche_citations_are_wired():
     assert r"Barnard (\citeyear{Barnard1975First}), pp. 16-17" in app04
     assert "cf. Barnard (1972), pp. xxxix-xlii" not in app04
     assert r"cf. Barnard (\citeyear{Barnard1972Early}), pp. xxxix-xlii" in app04
+    assert "Lao Kan [1974]" not in app04
+    assert r"Lao Gan [\citeyear{Lao1974Chou}]" in app04
     assert "Tung (1945), pt. 1, ch. 2, pp. 6b-8a; ch. 4, pp. 11b-28b; (1951b), p. 199; Shima (1966); Shirakawa (1971), pp. 280–281." not in app04
     assert r"Tung (\citeyear{Tung1945Yin}), pt. 1, ch. 2, pp. 6b-8a; ch. 4, pp. 11b-28b; (\citeyear{Tung1951bWuWang}), p. 199; Shima (\citeyear{Shima1966Bokuji}); Shirakawa (\citeyear{Shirakawa1971Kimbun}), pp. 280–281." in app04
     assert "Chang Kwang-chih has remarked ([1965], pp. 505-506)" not in app04
@@ -81,6 +87,8 @@ def test_first_tranche_citations_are_wired():
     assert 'Barnard (1975), p. 31, refers to it as ``a comparatively late burial,'' but Kane (1975), p. 109,' not in app04
     assert r"Barnard (\citeyear{Barnard1975First}), p. 31," in app04
     assert r"Kane (\citeyear{Kane1975Reexamination}), p. 109," in app04
+    assert "Kuo Pao-chün [1951]" not in app04
+    assert r"\pinyinterm{guo-baojun} [\citeyear{KuoBaojun1951Yichiu}]" in app04
     assert "Ch'iu (1972) argues, unconvincingly in my view," not in app04
     assert r"Ch'iu (\citeyear{Chiu1972DuAnyang}) argues, unconvincingly in my view," in app04
     assert "Clark (1975), pp. 265-266." not in app04
@@ -107,6 +115,8 @@ def test_first_tranche_citations_are_wired():
     assert r"Zhang Peiyu (\citeyear{Chang1975Jiaguwen})." in app04
     assert "Shima [1958], p. 270; Serruys [1974], p. 104" not in app04
     assert r"Shima [\citeyear{Shima1958Inkyo}], p. 270; Serruys [\citeyear{Serruys1974The}], p. 104" in app04
+    assert "KK [1975.1], p. 38; cf. KK [1975.3], p. 142 and plate 1" not in app04
+    assert r"KK [\citeyear{KK1975Anyang}], p. 38; cf. KK [\citeyear{KK1975aJufa}], p. 142 and plate 1" in app04
     assert "Shima (1960), p. 51," not in app04
     assert r"Shima (\citeyear{Shima1960TiYi}), p. 51," in app04
     assert "subsequently ([1966], p. 13)" not in app04
@@ -118,7 +128,7 @@ def test_first_tranche_citations_are_wired():
     assert "Shima (1960), p. 52," not in app04
     assert r"Shima (\citeyear{Shima1960TiYi}), p. 52," in app04
     assert "([1966], p. 21; cf. [1976])" not in app04
-    assert r"([\citeyear{Shima1966Bokuji}], p. 21; cf. [1976])" in app04
+    assert r"([\citeyear{Shima1966Bokuji}], p. 21; cf. [\citeyear{Shima1976Teishin}])" in app04
     assert "Tung (1945), pt. 1, ch. 3, p. 19a; pt. 2, ch. 1, p. 50b" not in app04
     assert r"Tung (\citeyear{Tung1945Yin}), pt. 1, ch. 3, p. 19a; pt. 2, ch. 1, p. 50b" in app04
     assert "Bishop (1932), pp. 234-235." not in app04
@@ -174,11 +184,33 @@ def test_first_tranche_citations_are_wired():
     assert "Schmidt [1927]; Pope [1935]; McDowell [1964]" not in app01
     assert r"Schmidt [\citeyear{Schmidt1927Reptiles}]; Pope [\citeyear{Pope1935Reptiles}]; McDowell [\citeyear{McDowell1964Partition}]" in app01
     assert "Stejneger [1907]; Pope [1935]; McDowell [1964]; Mao [1971]" not in app01
-    assert r"Stejneger [1907]; Pope [\citeyear{Pope1935Reptiles}]; McDowell [\citeyear{McDowell1964Partition}]; Mao [\citeyear{Mao1971Turtles}]" in app01
+    assert r"Stejneger [\citeyear{Stejneger1907Herpetology}]; Pope [\citeyear{Pope1935Reptiles}]; McDowell [\citeyear{McDowell1964Partition}]; Mao [\citeyear{Mao1971Turtles}]" in app01
     assert "Stejneger [1907]; Pope [1935]; McDowell [1964]; and Mao [1971]" not in app01
-    assert r"Stejneger [1907]; Pope [\citeyear{Pope1935Reptiles}]; McDowell [\citeyear{McDowell1964Partition}]; and Mao [\citeyear{Mao1971Turtles}]" in app01
+    assert r"Stejneger [\citeyear{Stejneger1907Herpetology}]; Pope [\citeyear{Pope1935Reptiles}]; McDowell [\citeyear{McDowell1964Partition}]; and Mao [\citeyear{Mao1971Turtles}]" in app01
     assert "Smith [1931]; Pope [1935]" not in app01
     assert r"Smith [\citeyear{Smith1931Fauna}]; Pope [\citeyear{Pope1935Reptiles}]" in app01
+
+    assert "KK [1975.1]" not in app03
+    assert "KK (1975.1)" not in app03
+    assert r"KK [\citeyear{KK1975Anyang}]" in app03
+    assert r"KK (\citeyear{KK1975Anyang})" in app03
+    assert "KK [1975.1]" not in app05
+    assert r"KK [\citeyear{KK1975Anyang}]" in app05
+    assert "KK [1975.1]" not in ch02
+    assert "KK (1975.1)" not in ch02
+    assert r"KK [\citeyear{KK1975Anyang}]" in ch02
+    assert r"KK (\citeyear{KK1975Anyang})" in ch02
+    assert "Kuo Pao-chün (1951)" not in ch02
+    assert r"\pinyinterm{guo-baojun} (\citeyear{KuoBaojun1951Yichiu}), pp. 26-27, plate 9.4" in ch02
+    assert r"\pinyinterm{guo-baojun} (\citeyear{KuoBaojun1951Yichiu}), plate 41.1-2," in ch02
+    assert "KK [1975.1]" not in ch04
+    assert r"KK [\citeyear{KK1975Anyang}]" in ch04
+    assert "KK [1975.1]" not in ch05
+    assert "KK (1975.1)" not in ch05
+    assert r"KK [\citeyear{KK1975Anyang}]" in ch05
+    assert r"KK (\citeyear{KK1975Anyang})" in ch05
+    assert "KK (1975.1)" not in preface
+    assert r"KK (\citeyear{KK1975Anyang}), pp. 31-32." in preface
 
     assert r"\textcite[p. 98, n. 13]{Serruys1974The}" in ch01
     assert r"\textcite[p. 515, n.~1]{Young1936Fossil}" in ch01
