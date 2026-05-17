@@ -96,6 +96,10 @@ def test_ch04_mid_and_late_note_residue_removed():
         "17. \\pinyinterm{dong-short} (1933), facing p. 344;",
         "21. The circled numbers indicate the ritual",
         "22. E.g., \\pinyinterm{jiatu} 87; \\pinyinterm{pinbian} 204.21;",
+        "175. Pit E16 is a case in point. It contained",
+        "176. The slope of the shell fragments in YH127",
+        "177. To cite but one example, all but one of",
+        "178. The situation in particular pits, as well as",
         "period IIb@@",
         "113 ]]}",
         "13.0.628131 ] U}",
@@ -104,6 +108,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "damaged in 徐-chou-all",
         "came from YH127; according to 史",
         "engravers.*7",
+        "pp. 4142",
+        "Studies. 129 1",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -116,6 +122,9 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "by the careers of engravers.\\footnote[47]{See \\ref{ch:2} (see ch. 2), nn. 104, 108.}" in text
     assert "432 [D] [S52.3]), correspond to period IIb" in text
     assert "\\footnote[95]{E.g., table 7, no. 1.2, appears mostly in period V; no. 1.4 appears mostly in I; no. 2.3 was common in III + IV.} %95" in text
+    assert "It is rarely possible to use other objects found in a pit, such as bronzes or pots, to date\n% source: scan 147, printed 130\nthe inscriptions; the inscriptions," in text
+    assert "\\footnote[176]{The slope of the shell fragments in YH127 indicated that they had been poured into the pit from the north (\\pinyinterm{shi-zhangru} [1947], pp. 41-42).} %176" in text
+    assert "pit provenance are probabilities rather than certainties.\\footnote[178]{The situation in particular pits, as well as the reasons why the \\pinyinterm{shang} buried their oracle bones, will be considered in Studies.} %178" in text
     assert "1937 will ever be written." in text
     assert "13.0.0628-13.0.17714 came from YH127; according to \\pinyinterm{shi-zhangru} (1959), p. 322, shells 13.0.17715-13.0.17756 should also be included." in text
     assert "resolve some of our dating problems.\\footnote[186]{See n. 179" in text
