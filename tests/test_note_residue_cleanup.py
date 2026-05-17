@@ -99,6 +99,7 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "6970717273" not in ch02
 
     assert "smoothed.\\footnote[53]{" in ch01
+    assert "shell is speculative.} %52" in ch01
     assert "thickness (fig. 3).\\footnote[54]{" in ch01
     assert "written on.\\footnote[55]{" in ch01
     assert "tie them together.\\footnote[56]{" in ch01
@@ -128,6 +129,7 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "continuing a tradition first recorded in Kojiki" in ch01
     assert "Unlike this unprepared, Neolithic scapulimancy," in ch01
     assert "23 \\{] | J}" not in ch01
+    assert "shell is 13 [ ] ]] ] 11 1}" not in ch01
     assert "appeared behind the semicircular side hollow,\\footnote[102]{" in ch01
 
     assert "black.\\footnote[146]{" in ch02
