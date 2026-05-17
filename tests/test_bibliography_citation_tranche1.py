@@ -86,6 +86,9 @@ def test_first_tranche_citations_are_wired():
     assert r"Wang Ziyu (\citeyear{Wang1933Chia})" in ch05
     assert "陳 春县 (1933)" not in ch04
     assert r"Ch'en Ch'ün-hsien (\citeyear{Chen1933Chenren}) or Hopkins (1934), pp. 80-81" in ch04
+    assert "并 (1930)" not in ch05
+    assert "Ping (1930) described an extinct terrestrial tortoise" in ch05
+    assert "turtle examined by Ping was, in fact," in ch05
     assert r"cf. \pinyinterm{zhou-hongxiang} [1976]," in ch05
     assert r"\pinyinterm{zhou-dynasty} [1976]" not in ch05
     assert r"\pinyinterm{jin-xiangheng} (1973);" in ch05
