@@ -132,6 +132,9 @@ def test_ch04_mid_and_late_note_residue_removed():
         "1.4.2 1.4.3 1.4.4",
         "2.4.1\\%",
         "3.4.4;4.2",
+        "515.12",
+        "1767\\%",
+        "2.15.1 RFG:",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -171,6 +174,9 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "\\footnote[97]{E.g., table 7, nos. 1.4.-1.4.6; 2.4.-2.5.1; 3.4.4.2.} %97" in text
     assert "to which periods.\\footnote[98]{\\listitem{1} The phrase chin yüeh" in text
     assert "table 7, nos. 1.4.2; 1.4.3; 1.4.4; 1.4.5; 2.4; 2.4.1; 2.4.3; 3.4.1; 3.4.2; 3.4.3; 3.4.4; 4.2).} %92" in text
+    assert "Yi-yüeh: period I: \\pinyinterm{jiabian} 2111; \\pinyinterm{pinbian} 485.14; 515.1-2;" in text
+    assert "period III-IV: \\pinyinterm{renwen} 1737; 1767; period V:" in text
+    assert "period V: \\pinyinterm{houbian} 1.10.16; 2.15.1; RFG:" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
