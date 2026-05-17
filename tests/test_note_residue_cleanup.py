@@ -122,6 +122,9 @@ def test_ch04_mid_and_late_note_residue_removed():
         "pp. 208209",
         "periodsrests",
         "101 U 11 C",
+        "(1965, p. 96])",
+        "Keightley [1973], p. 34",
+        "Ta 甲 on chiach'en",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -154,6 +157,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "Kaizuka (1946), pp. 208-209 for a Chinese translation" in text
     assert "fundamental premise---that individual diviners may be associated with limited periods---rests upon the unverifiable assumption" in text
     assert "For another dispute, see n. 44.} %36" in text
+    assert "perform [\\pinyinterm{dong-short} (1965), p. 96]) yung ritual to Ta Chia on chia-ch'en" in text
+    assert "started auspiciously (cf. Keightley [1973a], p. 34)." in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
