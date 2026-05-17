@@ -97,6 +97,15 @@ def test_first_tranche_citations_are_wired():
     assert r"Clark (\citeyear{Clark1975Calibration}), p. 260," in app04
     assert "Cf. Barnard (1975), pp. vi, vii, 21-22; Clark (1975), pp. 252, 258-259." not in app04
     assert r"Cf. Barnard (\citeyear{Barnard1975First}), pp. vi, vii, 21-22; Clark (\citeyear{Clark1975Calibration}), pp. 252, 258-259." in app04
+    assert "Newton [1977]" not in app04
+    assert r"Newton [\citeyear{Newton1977Canon}]" in app04
+    assert "Dubs (1947)" not in app04
+    assert r"Dubs (\citeyear{Dubs1947Canon})" in app04
+    assert "Chang P'ei-yü (1975)." not in app04
+    assert r"Chang P'ei-yü (\citeyear{Chang1975Ancient})." not in app04
+    assert "Zhang Peiyu (1975)." in app04
+    assert "Shima [1958], p. 270; Serruys [1974], p. 104" not in app04
+    assert r"Shima [\citeyear{Shima1958Inkyo}], p. 270; Serruys [\citeyear{Serruys1974The}], p. 104" in app04
 
     assert "Keightley (1975), pp. 142144" not in ch02
     assert r"\textcite[pp.~142--144]{Keightley1975The}" in ch02
