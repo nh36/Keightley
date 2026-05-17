@@ -180,6 +180,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "p. 128-were merely",
         "positivenegative pair",
         "pp. 37-38,46-48,57.",
+        "it will perhaps rain''''",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -254,6 +255,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "and sets, in short, became standardized and simplified with the passage of time.\n\n\\subsubsection[Crack Notations]{Crack Notations}" in text
     assert "especially those containing the negative pi---probably a substitution, used principally in period III+IV, for wu ) (Serruys [1974], p. 6; cf. \\pinyinterm{chen-mengjia-spaced} [1956], p. 128)---were merely single, negative charges, and not one of a positive-negative pair." in text
     assert "Keightley (1973a), pp. 37-38, 46-48, 57.} %132" in text
+    assert "e.g., ``Divining: ‘(The king) should not hunt on the jen day, (for if he does,) it will perhaps rain’'' (\\pinyinterm{jiabian} 1920 [S293.3])," in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
