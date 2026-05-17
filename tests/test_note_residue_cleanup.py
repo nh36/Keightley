@@ -119,6 +119,9 @@ def test_ch04_mid_and_late_note_residue_removed():
         "PTXFEKH",
         "vichih ti fa-hsien yü fa-chüeh: ting pien :",
         "311 119 後下X1 88 AKESNAE",
+        "pp. 208209",
+        "periodsrests",
+        "101 U 11 C",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -148,6 +151,9 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "The title of this projected work was \\booktitle{Jiagu wenzi yu Yinxu yizhi};" in text
     assert "\\pinyinterm{shi-zhangru}'s forthcoming \\booktitle{Xiaotun diyi ben: yizhi de faxian yu fajue, yibian: jianzhu yicun}, to be published by the Academia Sinica" in text
     assert "according to \\pinyinterm{hu-houxuan} (1939a), p. 484, only in periods II and IV.} %130" in text
+    assert "Kaizuka (1946), pp. 208-209 for a Chinese translation" in text
+    assert "fundamental premise---that individual diviners may be associated with limited periods---rests upon the unverifiable assumption" in text
+    assert "For another dispute, see n. 44.} %36" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
