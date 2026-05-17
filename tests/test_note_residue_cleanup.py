@@ -185,6 +185,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "Chang Ping-ch'ü (1952)",
         "Hsü also argues that",
         "Chang Ping-ch'üan (1952)",
+        "there is I shang-chi and I hsiao-chi",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -263,6 +264,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "this is an instance of spill-over---either of period II diviners and engravers operating in period I" in text
     assert "\\pinyinterm{xu-jinxiong} also argues that \\pinyinterm{jiabian} 27+2 and \\pinyinterm{wenlu} 78" in text
     assert "The basic study is \\pinyinterm{zhang-bingquan} (1952); in English, see Wu Shih-ch'ang (1955)." in text
+    assert "on RFG fragments there is 1 shang-chi and 1 hsiao-chi; in period II, there are no crack notations;" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
