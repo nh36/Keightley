@@ -110,6 +110,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "engravers.*7",
         "pp. 4142",
         "Studies. 129 1",
+        "useful.53",
+        "Page design.''",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -130,6 +132,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "resolve some of our dating problems.\\footnote[186]{See n. 179" in text
     assert "damaged in Xuzhou---all this" in text
     assert "Any discussion of the distribution of inscriptions by\nperiod (appendix \\ref{app:3} (appendix 3))" in text
+    assert "criterion in these cases is frequently too subjective to be useful.\\footnote[53]{For an initial attempt to study the grooves objectively" in text
+    assert "4. Page design. This refers to the care with which the graphs were placed on the" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
