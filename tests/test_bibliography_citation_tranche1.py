@@ -5,6 +5,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 APP04 = REPO_ROOT / "tex" / "appendices" / "app04.tex"
+APP01 = REPO_ROOT / "tex" / "appendices" / "app01.tex"
 APP02 = REPO_ROOT / "tex" / "appendices" / "app02.tex"
 CH01 = REPO_ROOT / "tex" / "chapters" / "ch01.tex"
 CH02 = REPO_ROOT / "tex" / "chapters" / "ch02.tex"
@@ -19,6 +20,7 @@ CITATION_SCRIPT = REPO_ROOT / "scripts" / "09_intext_citations.py"
 
 
 def test_first_tranche_citations_are_wired():
+    app01 = APP01.read_text(encoding="utf-8")
     app02 = APP02.read_text(encoding="utf-8")
     app04 = APP04.read_text(encoding="utf-8")
     ch01 = CH01.read_text(encoding="utf-8")
@@ -51,6 +53,26 @@ def test_first_tranche_citations_are_wired():
     assert r"\textcite[pp.~142--144]{Keightley1975The}" in ch02
     assert r"\textcite[pp.~11--17]{Keightley1975Legitimation}" in ch02
     assert r"\textcite[pp.~13--15]{Keightley1975Legitimation}" in ch02
+
+    assert "Ping (1930) described an extinct terrestrial tortoise" not in app01
+    assert r"Ping (\citeyear{Ping1930Notes}) described an extinct terrestrial tortoise" in app01
+    assert "Lindholm (1931) concluded that the" not in app01
+    assert r"Lindholm (\citeyear{Lindholm1931Uber}) concluded that the" in app01
+    assert "Pope (1935), in his monograph on the" not in app01
+    assert r"Pope (\citeyear{Pope1935Reptiles}), in his monograph on the" in app01
+    assert "Carr, 1952" not in app01
+    assert r"Carr (\citeyear{Carr1952Handbook})" in app01
+    assert "Auffenberg (1962) commented" not in app01
+    assert r"Auffenberg (\citeyear{Auffenberg1962Status}) commented" in app01
+    assert "McDowell (1964), in a taxonomic revision" not in app01
+    assert r"McDowell (\citeyear{McDowell1964Partition}), in a taxonomic revision" in app01
+    assert "Nakamura (1934) and more recently by Mao (1971)" not in app01
+    assert r"Nakamura (\citeyear{Nakamura1934Clemmys}) and more recently by Mao (\citeyear{Mao1971Turtles})" in app01
+    assert "Bien (1937) referred to the shell as Ocadia sinensis" not in app01
+    assert r"Bien (\citeyear{Bien1937Turtle}) referred" in app01
+    assert "to the shell as Ocadia sinensis" in app01
+    assert "Ping's figure reproduced in Pope [1935]" not in app01
+    assert r"Ping's figure reproduced in Pope [\citeyear{Pope1935Reptiles}]" in app01
 
     assert r"\textcite[p. 98, n. 13]{Serruys1974The}" in ch01
     assert r"\textcite[p. 515, n.~1]{Young1936Fossil}" in ch01
