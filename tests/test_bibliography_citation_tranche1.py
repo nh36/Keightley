@@ -103,7 +103,8 @@ def test_first_tranche_citations_are_wired():
     assert r"Dubs (\citeyear{Dubs1947Canon})" in app04
     assert "Chang P'ei-yü (1975)." not in app04
     assert r"Chang P'ei-yü (\citeyear{Chang1975Ancient})." not in app04
-    assert "Zhang Peiyu (1975)." in app04
+    assert "Zhang Peiyu (1975)." not in app04
+    assert r"Zhang Peiyu (\citeyear{Chang1975Jiaguwen})." in app04
     assert "Shima [1958], p. 270; Serruys [1974], p. 104" not in app04
     assert r"Shima [\citeyear{Shima1958Inkyo}], p. 270; Serruys [\citeyear{Serruys1974The}], p. 104" in app04
 

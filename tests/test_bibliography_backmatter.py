@@ -267,6 +267,8 @@ def test_c_pinyin_audit_updates_high_confidence_chinese_cluster():
     assert "shortauthor  = {Mengjia}" in manual_bib
     assert "title        = {Jiagu duantaixue jiabian}" in manual_bib
     assert "title        = {Jiefanghou jiagu de xin ziliao he zhengli yanjiu}" in manual_bib
+    assert "author       = {Zhang, Peiyu}" in manual_bib
+    assert "title        = {Jiaguwen riyueshi jishi de zhengli yanjiu}" in manual_bib
     assert "title        = {Shang Yin yu Xia Zhou de niandai wenti}" in manual_bib
     assert "title       = {Yinxu buci zongshu}" in manual_bib
     assert "author      = {Jin, Xiangheng}" in manual_bib
