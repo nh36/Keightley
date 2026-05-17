@@ -129,6 +129,9 @@ def test_ch04_mid_and_late_note_residue_removed():
         "Tui Ẻ:",
         "3.4.4.2. 98.",
         "to which periods.98 Spill-over",
+        "1.4.2 1.4.3 1.4.4",
+        "2.4.1\\%",
+        "3.4.4;4.2",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -167,6 +170,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "3045+3047; Tui É: \\pinyinterm{jiabian} 3045+3047; 3083;" in text
     assert "\\footnote[97]{E.g., table 7, nos. 1.4.-1.4.6; 2.4.-2.5.1; 3.4.4.2.} %97" in text
     assert "to which periods.\\footnote[98]{\\listitem{1} The phrase chin yüeh" in text
+    assert "table 7, nos. 1.4.2; 1.4.3; 1.4.4; 1.4.5; 2.4; 2.4.1; 2.4.3; 3.4.1; 3.4.2; 3.4.3; 3.4.4; 4.2).} %92" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
