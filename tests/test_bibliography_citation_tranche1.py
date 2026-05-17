@@ -292,6 +292,8 @@ def test_first_tranche_citations_are_wired():
     assert r"\pinyinterm{chen-mengjia} ([\citeyear{Chen1955ShangYin}], pp. 55-56) has shown" in app04
     assert r"\pinyinterm{chen-mengjia} (\citeyear{Chen1956Yin}), p. 251;" in preface
     assert r"\pinyinterm{chen-mengjia} [\citeyear{Chen1956Yin}], p. 252;" in preface
+    assert "X222" not in preface
+    assert "authentic, i.e., Shang.}" in preface
     assert r"\pinyinterm{tang-lan} [\citeyear{TangLan1976Hotsun}], p. 60" in preface
     assert r"\pinyinterm{qu-wanli} (\citeyear{Chu1965aShihchi}), pp. 88-89," in preface
     assert r"\pinyinterm{yan-yiping} (\citeyear{Yen1961Chiaku}), pp. 207-215" in preface
