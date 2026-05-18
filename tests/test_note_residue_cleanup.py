@@ -199,6 +199,11 @@ def test_ch04_mid_and_late_note_residue_removed():
         "p. 118. 刘 (p. 117, plate 12.1)",
         "led 徐 to",
         "as 徐 claims, the same as another",
+        "diviner 成, whom",
+        "what constitutes “sameness''?",
+        "straight shoulders and tridentshaped ends",
+        "cf [1973], pp. 6, 63",
+        "\\pinyinposs{xu-jinxiong} con-\nclusions may need revision.",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -291,6 +296,11 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "periods II to V.\\footnote[151]{\\pinyinterm{liu-yuanlin} (1974), p. 118. \\pinyinterm{liu-yuanlin} (p. 117, plate 12.1) notes a rare period V bone fragment" in text
     assert "The topic---which has led \\pinyinterm{xu-jinxiong} to\nwrite several articles and two book-length monographs" in text
     assert "I frequently find myself uncertain as to whether one hollow was, as \\pinyinterm{xu-jinxiong} claims, the same as another." in text
+    assert "the diviner Cheng, whom \\pinyinterm{xu-jinxiong-tight} (1974), pp. 86-87, suggests may be linked" in text
+    assert "And what constitutes ``sameness''? These are not quibbles;" in text
+    assert "straight shoulders and trident-shaped ends. He is also paying greater attention" in text
+    assert "when needed (e.g., [1974], pp. 86, 170, 207-208; cf. [1973], pp. 6, 63).} and he is beginning to publish the" in text
+    assert "This aspect of oracle-bone scholarship is still in its infancy, and some of \\pinyinposs{xu-jinxiong} conclusions may need revision." in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
