@@ -194,6 +194,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "preparation technique-reflecting, presumably",
         "artisans involved-to be used as criteria",
         "\\pinyinterm{xu-jinxiong} (1974, pp. 209, 254-255, has proposed",
+        "Other Neo-\n% source: scan 141, printed 123\nlithic and early",
+        " 龙 scapulimancers mainly used bored",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -281,6 +283,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "subtle distinctions in preparation technique---reflecting, presumably, the habits of the" in text
     assert "artisans involved---to be used as criteria for assigning different periods to the inscribed" in text
     assert "\\footnote[143]{E.g., \\pinyinterm{xu-jinxiong} (1974), pp. 209, 254-255, has proposed that variations in the shape of the ridge made on the outer edge" in text
+    assert "Other Neolithic and early \\pinyinterm{shang} oracle bones, however, did have pyromantic hollows, which varied" in text
+    assert "\\pinyintext{longshan} scapulimancers mainly used bored\nhollows that were round and shallow;" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
