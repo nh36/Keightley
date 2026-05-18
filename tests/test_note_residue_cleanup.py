@@ -214,6 +214,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "judgment-barring the presence of criteria such as ancestral titles or diviners' names on\nevery single fragment—can never be more than probable",
         "Qu Wan, in his kǎoshì, dates these to period I.",
         "A26, E9 (\\pinyinterm{dong-short} [1929], p. 180);",
+        "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao):",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -248,7 +249,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "For another dispute, see n. 44.} %36" in text
     assert "perform [\\pinyinterm{dong-short} (1965), p. 96]) yung ritual to Ta Chia on chia-ch'en" in text
     assert "started auspiciously (cf. Keightley [1973a], p. 34)." in text
-    assert "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao):" in text
+    assert "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao: \\pinyinterm{jiabian} 2941; 3012; 3045+3047;" in text
     assert "3045+3047; Tui É: \\pinyinterm{jiabian} 3045+3047; 3083;" in text
     assert "\\footnote[97]{E.g., table 7, nos. 1.4.-1.4.6; 2.4.-2.5.1; 3.4.4.2.} %97" in text
     assert "to which periods.\\footnote[98]{\\listitem{1} The phrase jin yue" in text
