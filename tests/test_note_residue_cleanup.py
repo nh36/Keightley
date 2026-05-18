@@ -220,6 +220,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "sector B (陳, op. cit., p. 143)",
         "sector F within the village (陳, op. cit., pp. 143, 147)",
         "trenches F1-4 (陳, op. cit., pp. 143-144)",
+        "significant number of the inscriptions in Jiabian.",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -330,6 +331,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "1.2.0123 and 1.2.0145, for example, were found in A26, but we cannot conclude" in text
     assert "sector B (\\pinyinterm{chen-mengjia}, op. cit., p. 143); we can only suppose that \\pinyinterm{jiabian} 490-928 came from sector F within the village (\\pinyinterm{chen-mengjia}, op. cit., pp. 143, 147)" in text
     assert "that \\pinyinterm{jiabian} 3483 came from trenches F1-4 (\\pinyinterm{chen-mengjia}, op. cit., pp. 143-144)." in text
+    assert "significant number of the inscriptions in \\pinyinterm{jiabian}.\\footnote[182]{" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
@@ -443,7 +445,7 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "vice versa.\\footnote[179]{" in ch04
     assert "significant.\\footnote[180]{" in ch04
     assert "appeared.\\footnote[181]{" in ch04
-    assert "Jiabian.\\footnote[182]{" in ch04
+    assert "\\pinyinterm{jiabian}.\\footnote[182]{" in ch04
     assert "Late (V).\\footnote[8]{" in ch04
     assert "comparative certainty.\\footnote[10]{" in ch04
     assert "historical terms.\\footnote[11]{" in ch04
