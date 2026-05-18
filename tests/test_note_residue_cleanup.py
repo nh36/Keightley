@@ -215,6 +215,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "Qu Wan, in his kǎoshì, dates these to period I.",
         "A26, E9 (\\pinyinterm{dong-short} [1929], p. 180);",
         "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao):",
+        "1.2.01281.2.0139",
+        "1.2.0123 and I.2.0145, for example, were found in A26",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -321,6 +323,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "judgment---barring the presence of criteria such as ancestral titles or diviners' names on\nevery single fragment---can never be more than probable" in text
     assert "\\pinyinterm{qu-wanli}, in his kǎoshì, dates these to period I." in text
     assert "More marked chronological confusion was found in other pits; e.g., A26, E9 (\\pinyinterm{dong-short} [1929a], p. 180); 5: H20;" in text
+    assert "1.2.0123 (from A26; 20 October); 1.2.0128-1.2.0139 (from F24; 22 October); 1.2.0145 (from A26 again; 23 October);" in text
+    assert "1.2.0123 and 1.2.0145, for example, were found in A26, but we cannot conclude" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
