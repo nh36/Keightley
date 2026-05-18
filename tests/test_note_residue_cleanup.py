@@ -207,6 +207,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "the ``one-one'' pattern. in which",
         "the ``one-three pattern, in which",
         "period\\footnote[169]{\\pinyinterm{xu-jinxiong} (1973a), pp. 19, 101.} 1.169",
+        "龙 site at Keshengzhuang E; see 豐西發掘報告, p. 68, plate 35) no cracks appear to have formed. 127 U ] B C",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -307,6 +308,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "the ``one-one'' pattern, in which the two columns of hollows start at the same level" in text
     assert "and the ``one-three'' pattern, in which the inner column of hollows starts two spaces below the outer column" in text
     assert "the bone surface was more frequently chipped in the later periods than it had been in\nperiod I.\\footnote[169]{\\pinyinterm{xu-jinxiong} (1973a), pp. 19, 101.} He has also discerned differences in the burn marks of periods III and IV." in text
+    assert "the sheep scapulas from the Lung-shan site at Keshengzhuang E; see 豐西發掘報告, p. 68, plate 35) no cracks appear to have formed.} %168" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
