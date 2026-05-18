@@ -221,6 +221,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "sector F within the village (陳, op. cit., pp. 143, 147)",
         "trenches F1-4 (陳, op. cit., pp. 143-144)",
         "significant number of the inscriptions in Jiabian.",
+        "appendix 3, sec. 1, therefore, that depend upon the registration numbers",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -332,6 +333,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "sector B (\\pinyinterm{chen-mengjia}, op. cit., p. 143); we can only suppose that \\pinyinterm{jiabian} 490-928 came from sector F within the village (\\pinyinterm{chen-mengjia}, op. cit., pp. 143, 147)" in text
     assert "that \\pinyinterm{jiabian} 3483 came from trenches F1-4 (\\pinyinterm{chen-mengjia}, op. cit., pp. 143-144)." in text
     assert "significant number of the inscriptions in \\pinyinterm{jiabian}.\\footnote[182]{" in text
+    assert "Those estimates of total numbers of fragments excavated (as in appendix 3, sec. 1), therefore, that depend upon the registration numbers for their fragment counts may not be fully accurate" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
