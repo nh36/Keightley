@@ -212,6 +212,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "physical criteria--hollow shapes, hollow placement, burn marks—are helping to develop",
         "see Itō (1971), p. 88. 科} %174",
         "judgment-barring the presence of criteria such as ancestral titles or diviners' names on\nevery single fragment—can never be more than probable",
+        "Qu Wan, in his kǎoshì, dates these to period I.",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -316,6 +317,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "It will be clear from \\ref{sec:chapters-ch04:4.3.2} (see sec. 4.3.2) that \\pinyinterm{xu-jinxiong}'s pioneering analyses of related\nphysical criteria---hollow shapes, hollow placement, burn marks---are helping to develop" in text
     assert "regard to one another and other datable objects in the ground.\\footnote[174]{This is only possible in the case of oracle bones that were scientifically excavated; for these, see the archaeological reports listed in n. 173. For an interesting attempt to deduce the location where certain privately excavated inscriptions must have been found, see Itō (1971), p. 88.} %174" in text
     assert "judgment---barring the presence of criteria such as ancestral titles or diviners' names on\nevery single fragment---can never be more than probable" in text
+    assert "\\pinyinterm{qu-wanli}, in his kǎoshì, dates these to period I." in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
