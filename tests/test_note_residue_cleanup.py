@@ -210,6 +210,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "龙 site at Keshengzhuang E; see 豐西發掘報告, p. 68, plate 35) no cracks appear to have formed. 127 U ] B C",
         "It will be clear from\\ref{sec:chapters-ch04:4.3.2}",
         "physical criteria--hollow shapes, hollow placement, burn marks—are helping to develop",
+        "see Itō (1971), p. 88. 科} %174",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -312,6 +313,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "the bone surface was more frequently chipped in the later periods than it had been in\nperiod I.\\footnote[169]{\\pinyinterm{xu-jinxiong} (1973a), pp. 19, 101.} He has also discerned differences in the burn marks of periods III and IV." in text
     assert "the sheep scapulas from the Lung-shan site at Keshengzhuang E; see 豐西發掘報告, p. 68, plate 35) no cracks appear to have formed.} %168" in text
     assert "It will be clear from \\ref{sec:chapters-ch04:4.3.2} (see sec. 4.3.2) that \\pinyinterm{xu-jinxiong}'s pioneering analyses of related\nphysical criteria---hollow shapes, hollow placement, burn marks---are helping to develop" in text
+    assert "regard to one another and other datable objects in the ground.\\footnote[174]{This is only possible in the case of oracle bones that were scientifically excavated; for these, see the archaeological reports listed in n. 173. For an interesting attempt to deduce the location where certain privately excavated inscriptions must have been found, see Itō (1971), p. 88.} %174" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
