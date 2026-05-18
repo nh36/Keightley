@@ -120,7 +120,7 @@ def test_missing_character_glyph_residue_cleaned():
     assert "estimates are---and they are probably conservative---\nthey indicate" in ch03
     assert "Specific changes in topics and idioms---changes" in ch04
     assert "general evolution\n---are presented in appendix \\ref{app:5} (appendix 5)." in ch04
-    assert "The topic---which has led 徐 to" in ch04
+    assert "The topic---which has led \\pinyinterm{xu-jinxiong} to" in ch04
     assert "\n---is technical and the conclusions still tentative." in ch04
     assert "to Ta Chia (K3 9)." in ch04
     assert "yüeh yu chih (*fiak)." in app04
