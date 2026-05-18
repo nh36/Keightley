@@ -190,6 +190,10 @@ def test_ch04_mid_and_late_note_residue_removed():
         "state or king was concerned or-which is not necessarily the same thing-as far as the",
         "the reduced size of the script-these",
         "Bovid scapulas\nfollowed\nwere the material used most commonly in 龙 and early",
+        "period\\footnote[142]{Ibid., p. 123.} 1.142 Further research",
+        "preparation technique-reflecting, presumably",
+        "artisans involved-to be used as criteria",
+        "\\pinyinterm{xu-jinxiong} (1974, pp. 209, 254-255, has proposed",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -273,6 +277,10 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "state or king was concerned---which is not necessarily the same thing---as far as the \\pinyinterm{shang} diviners were concerned" in text
     assert "of calligraphic variants and divination formulas, the reduced size of the script---these\nphenomena were related" in text
     assert "Bovid scapulas\nwere the material used most commonly in \\pinyintext{longshan} and early \\pinyinterm{shang} pyromancy,\nfollowed in frequency by the scapulas of pig and sheep;" in text
+    assert "sawn in the socket never appear after period I.\\footnote[142]{Ibid., p. 123.} Further research may permit relatively" in text
+    assert "subtle distinctions in preparation technique---reflecting, presumably, the habits of the" in text
+    assert "artisans involved---to be used as criteria for assigning different periods to the inscribed" in text
+    assert "\\footnote[143]{E.g., \\pinyinterm{xu-jinxiong} (1974), pp. 209, 254-255, has proposed that variations in the shape of the ridge made on the outer edge" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
