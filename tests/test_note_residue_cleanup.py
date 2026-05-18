@@ -204,6 +204,8 @@ def test_ch04_mid_and_late_note_residue_removed():
         "straight shoulders and tridentshaped ends",
         "cf [1973], pp. 6, 63",
         "\\pinyinposs{xu-jinxiong} con-\nclusions may need revision.",
+        "the ``one-one'' pattern. in which",
+        "the ``one-three pattern, in which",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -301,6 +303,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "straight shoulders and trident-shaped ends. He is also paying greater attention" in text
     assert "when needed (e.g., [1974], pp. 86, 170, 207-208; cf. [1973], pp. 6, 63).} and he is beginning to publish the" in text
     assert "This aspect of oracle-bone scholarship is still in its infancy, and some of \\pinyinposs{xu-jinxiong} conclusions may need revision." in text
+    assert "the ``one-one'' pattern, in which the two columns of hollows start at the same level" in text
+    assert "and the ``one-three'' pattern, in which the inner column of hollows starts two spaces below the outer column" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
