@@ -222,6 +222,9 @@ def test_ch04_mid_and_late_note_residue_removed():
         "trenches F1-4 (陳, op. cit., pp. 143-144)",
         "significant number of the inscriptions in Jiabian.",
         "appendix 3, sec. 1, therefore, that depend upon the registration numbers",
+        "Only the 乙 Z and 并 areas were excavated comprehensively; the 甲 section of foundations",
+        "Only the Yi Z and Ping areas were excavated comprehensively; the Chia section of foundations",
+        "may be related to the blank spaces on the excavation maps).\\footnote[188]{",
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -334,6 +337,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "that \\pinyinterm{jiabian} 3483 came from trenches F1-4 (\\pinyinterm{chen-mengjia}, op. cit., pp. 143-144)." in text
     assert "significant number of the inscriptions in \\pinyinterm{jiabian}.\\footnote[182]{" in text
     assert "Those estimates of total numbers of fragments excavated (as in appendix 3, sec. 1), therefore, that depend upon the registration numbers for their fragment counts may not be fully accurate" in text
+    assert "Only the Yi and Bing areas were excavated comprehensively; the Jia section of foundations was not thoroughly trenched" in text
+    assert "period (appendix \\ref{app:3} (appendix 3)) must consider that the comparatively blank periods in our chronology\nmay be related to the blank spaces on the excavation maps.\\footnote[188]{" in text
 
 
 def test_ch01_and_ch02_long_note_sentinel_runs_removed():
@@ -434,7 +439,9 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "first published by 董" not in ch03
     assert "Wang 乙-jung" not in ch03
     assert "刘 E" not in ch03
+    assert "Chang Ping-ch'üan (1956)" not in ch03
     assert "Wang Yi-jung and Liu E" in ch03
+    assert "\\pinyinterm{zhang-bingquan} (1956), pp. 246, 253-254;" in ch03
 
     assert "vice versa.¹ 179" not in ch04
     assert "110111112113114115" not in ch04
@@ -474,6 +481,9 @@ def test_ch05_reconstruction_note_runs_removed():
     assert "mirror together\\footnote[69]" not in ch05
     assert "'' 69 should remind us" not in ch05
     assert "151 0 ]" not in ch05
+    assert "K'u-fang 1661 (D) may be joined with Chia-pien 297" not in ch05
+    assert "Ts'ui-pien 425 may be joined with Chia-pien 264, Ching-chin 1266 with Ping-pien 24" not in ch05
+    assert "For other authenticating cases of this sort, see Chui-hsin 14; 15; 27; 70; 104; 107" not in ch05
 
     assert "mirror together''\\footnote[69]{" in ch05
     assert "question.\\footnote[70]{" in ch05
@@ -489,3 +499,6 @@ def test_ch05_reconstruction_note_runs_removed():
     assert "unreason''\\footnote[92]{" in ch05
     assert "history.''\\footnote[93]{" in ch05
     assert "extend our own.\\footnote[94]{" in ch05
+    assert "\\pinyinterm{kufang} 1661 (D) may be joined with \\pinyinterm{jiabian} 297, forming \\pinyinterm{zhuihe} 328" in ch05
+    assert "\\pinyinterm{cuibian} 425 may be joined with \\pinyinterm{jiabian} 264, \\pinyinterm{jingjin} 1266 with \\pinyinterm{pinbian} 24" in ch05
+    assert "For other authenticating cases of this sort, see \\pinyinterm{zhuixin} 14; 15; 27; 70; 104; 107" in ch05

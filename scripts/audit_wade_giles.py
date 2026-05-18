@@ -3,7 +3,10 @@
 Wade-Giles Audit Script
 
 Systematically finds and catalogs Wade-Giles romanizations in the document.
-Generates a TSV file for tracking conversions to pinyin.
+Generates a TSV file for tracking conversions to pinyin, with lightweight
+context classification so title systems, excavation labels, and the one
+allowed preservation class (western-language self-spelled author names)
+do not get conflated.
 
 The script identifies patterns like:
 - Ch'en, Ch'ien, Tung, Hsü (names with apostrophes or aspirated initials)
@@ -37,7 +40,7 @@ class WadeGilesAuditor:
             'ch05': self.root_dir / 'tex/chapters/ch05.tex',
         }
 
-        # Terms that are not Wade-Giles cleanup targets even though the broad regexes catch them.
+        # Terms that are audit noise rather than meaningful Wade-Giles targets.
         self.exact_exclusions = {
             "Shima",
             "Barnard's",
@@ -85,14 +88,31 @@ class WadeGilesAuditor:
             "Ming",
             "Lien-kuan",
             "T'aishun",
-            "Shu-chi",
             "Ya-nung",
-            "Cho-ts’un",
-            "Ch'i-chi",
             "Chu",
             "K'o",
-            "Ling-shih",
             "Kung",
+        }
+        self.preserved_self_spellings = {
+            "Shih-ch'ang",
+        }
+        self.publication_title_terms = {
+            "Chia-pien",
+            "Ping-pien",
+            "Yi-pien",
+            "Hou-pien",
+            "Ts'ui-pien",
+            "Chui-hsin",
+            "Chui-ho",
+            "K'u-fang",
+            "Wen-lu",
+            "Shih-chi",
+            "Ching-chin",
+            "Fu-yin",
+            "T'ieh-yün",
+            "Cho-ts'un",
+            "Cho-ts’un",
+            "Ch'i-chi",
         }
         
         # Wade-Giles patterns to match
@@ -133,6 +153,34 @@ class WadeGilesAuditor:
             return 'hyphenated_term'
         else:
             return 'term'
+
+    def classify_term(self, term, context):
+        """Classify a matched Wade-Giles term using its local context."""
+        if term in self.preserved_self_spellings:
+            return 'author-self-spelling', 'Preserve: western-language author self-spelling'
+
+        lower_context = context.lower()
+        term_key = term.replace("’", "'")
+
+        if (
+            term_key in self.publication_title_terms
+            or re.search(r"(?:-pien|-lu|-hsin|-ho|-kuei|-yiin|-yun)$", term_key.lower())
+        ):
+            return 'publication-title', 'Normalize title or collection name to pinyin unless it is an author self-spelling'
+
+        if term in {'Yi', 'Ping', 'Chia', 'Bing', 'Jia'} and re.search(
+            r"\b(area|areas|section|sections|foundation|foundations|pit|pits|trench|trenches|sector|sectors)\b",
+            lower_context,
+        ):
+            return 'excavation-label', 'Normalize excavation labels to pinyin once the underlying character is secure'
+
+        if term in {'Chia', 'Yi', 'Hsin', 'Keng', "Ch'eng", 'Shang'} and re.search(
+            r"\b(ancestor|ancestors|altar|altars|lineage|ritual|rituals|sacrifice|sacrifices|king|kings|father|grandfather)\b",
+            lower_context,
+        ):
+            return 'ritual-or-ancestor-name', 'Normalize to pinyin; ritual and ancestor names are not keep-Wade exceptions'
+
+        return self.infer_type(term), ''
     
     def extract_context(self, text, match_start, match_end, context_length=80):
         """Extract surrounding context around a match."""
@@ -243,7 +291,7 @@ class WadeGilesAuditor:
                     # Clean up for TSV
                     first_context = first_context.replace('\t', ' ').replace('\n', ' ')[:100]
                 
-                term_type = self.infer_type(term)
+                term_type, notes = self.classify_term(term, first_context)
                 
                 # Write row
                 f.write('\t'.join([
@@ -253,7 +301,7 @@ class WadeGilesAuditor:
                     chapters,
                     first_context,
                     '',  # pinyin (empty for now)
-                    ''   # notes (empty for now)
+                    notes
                 ]))
                 f.write('\n')
         
@@ -286,7 +334,8 @@ class WadeGilesAuditor:
         )[:20]
         
         for i, (term, data) in enumerate(sorted_terms, 1):
-            term_type = self.infer_type(term)
+            first_context = data['contexts'][0]['text'] if data['contexts'] else ''
+            term_type, _ = self.classify_term(term, first_context)
             print(f"{i:2d}. {term:20s} ({data['frequency']:3d}x) - {term_type}")
 
 
