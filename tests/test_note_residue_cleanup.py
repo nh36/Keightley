@@ -404,6 +404,9 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "day of divination.\\footnote[71]{" in ch02
     assert "advance.\\footnote[72]{" in ch02
     assert "to stress.\\footnote[73]{" in ch02
+    assert "Soothill (1951, pp. 141-142, that wang in this formula referred to the dead kings." not in ch02
+    assert '} ... ``66 These forecasts, which were carved for only a minority of the charges,' not in ch02
+    assert "Soothill (1951, pp. 141-142), that wang in this formula referred to the dead kings.} These forecasts, which were carved for only a minority of the charges,\\footnote[67]{" in ch02
 
 
 def test_appendix_note_reference_residue_removed():
@@ -552,11 +555,15 @@ def test_ch05_reconstruction_note_runs_removed():
     assert "mirror together\\footnote[69]" not in ch05
     assert "'' 69 should remind us" not in ch05
     assert "151 0 ]" not in ch05
+    assert "practice inscriptionwere" not in ch05
+    assert "139 ]" not in ch05
     assert "K'u-fang 1661 (D) may be joined with Chia-pien 297" not in ch05
     assert "Ts'ui-pien 425 may be joined with Chia-pien 264, Ching-chin 1266 with Ping-pien 24" not in ch05
     assert "For other authenticating cases of this sort, see Chui-hsin 14; 15; 27; 70; 104; 107" not in ch05
     assert "and Tung-tsuan, ``pieh''" not in ch05
 
+    assert "The inscriptions---one thought to be a practice inscription---were on a bovid humerus and rib" in ch05
+    assert "been discovered.\\footnote[21]{See \\ref{ch:4} (see ch. 4), n. 24.} %21" in ch05
     assert "mirror together''\\footnote[69]{" in ch05
     assert "question.\\footnote[70]{" in ch05
     assert "\\ref{sec:chapters-ch02:2.9.4} (secs. 1.5.1; 2.4; 2.6; 2.9.4)).\\footnote[71]{" in ch05
