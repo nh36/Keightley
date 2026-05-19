@@ -546,6 +546,7 @@ def test_ch05_reconstruction_note_runs_removed():
     assert "K'u-fang 1661 (D) may be joined with Chia-pien 297" not in ch05
     assert "Ts'ui-pien 425 may be joined with Chia-pien 264, Ching-chin 1266 with Ping-pien 24" not in ch05
     assert "For other authenticating cases of this sort, see Chui-hsin 14; 15; 27; 70; 104; 107" not in ch05
+    assert "and Tung-tsuan, ``pieh''" not in ch05
 
     assert "mirror together''\\footnote[69]{" in ch05
     assert "question.\\footnote[70]{" in ch05
@@ -564,3 +565,4 @@ def test_ch05_reconstruction_note_runs_removed():
     assert "\\pinyinterm{kufang} 1661 (D) may be joined with \\pinyinterm{jiabian} 297, forming \\pinyinterm{zhuihe} 328" in ch05
     assert "\\pinyinterm{cuibian} 425 may be joined with \\pinyinterm{jiabian} 264, \\pinyinterm{jingjin} 1266 with \\pinyinterm{pinbian} 24" in ch05
     assert "For other authenticating cases of this sort, see \\pinyinterm{zhuixin} 14; 15; 27; 70; 104; 107" in ch05
+    assert 'and \\pinyinterm{tongzuan}, ``pieh\'\'' in ch05
