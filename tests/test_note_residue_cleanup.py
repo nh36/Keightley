@@ -566,3 +566,19 @@ def test_ch05_reconstruction_note_runs_removed():
     assert "\\pinyinterm{cuibian} 425 may be joined with \\pinyinterm{jiabian} 264, \\pinyinterm{jingjin} 1266 with \\pinyinterm{pinbian} 24" in ch05
     assert "For other authenticating cases of this sort, see \\pinyinterm{zhuixin} 14; 15; 27; 70; 104; 107" in ch05
     assert 'and \\pinyinterm{tongzuan}, ``pieh\'\'' in ch05
+
+
+def test_ch01_ch03_low_frequency_author_forms_are_normalized():
+    ch01 = CH01.read_text(encoding="utf-8")
+    ch03 = CH03.read_text(encoding="utf-8")
+
+    assert "Chang Kuang-yüan made what is probably the most serious modern attempt" not in ch01
+    assert "Hu Hsü [1782--1787], ch. 4, p. 4b" not in ch01
+    assert "Tung Tso-pin's accounts ([1929], p. 58; [1958], p. 921)" not in ch01
+    assert r"Zhang Guangyuan made what is probably the most serious modern attempt to reproduce \pinyinterm{shang} plastromancy" in ch01
+    assert r"(something noted by \pinyinterm{hu-xu} [1782--1787], ch. 4, p. 4b)" in ch01
+    assert r"\pinyinterm{dong-zuobin}'s accounts ([1929], p. 58; [1958], p. 921)" in ch01
+    assert r"the so-called \textit{gui-yu} 龜語" in ch01
+
+    assert "see Chang Ch'un-shu [1972], p. 283" not in ch03
+    assert "see Zhang Chunshu [1972], p. 283" in ch03
