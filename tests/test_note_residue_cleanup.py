@@ -470,6 +470,10 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "Wang Yi-jung and Liu E" not in ch03
     assert "Wang Yirong's sickness" in ch03
     assert "Wang Yirong and Liu E" in ch03
+    assert "Kuo (?)---hence Guo of Zhi?---" not in ch03
+    assert "The reading of kuo for is not certain." not in ch03
+    assert "Guo (?)---hence Guo of Zhi?---" in ch03
+    assert "The reading of guo for is not certain." in ch03
     assert "\\pinyinterm{zhang-bingquan} (1956), pp. 246, 253-254;" in ch03
     assert r"\pinyinterm{jiaguwenzi-jishi} (\ref{sec:chapters-ch03:3.3.1} (sec. 3.3.1))" in ch03
     assert r"follow Zhi Guo (to attack the \pinyinterm{bafang}, for if he does, we will not perhaps" in ch03

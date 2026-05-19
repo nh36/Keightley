@@ -150,7 +150,13 @@ def test_first_tranche_citations_are_wired():
     assert r"\textcite[pp.~13--15]{Keightley1975Legitimation}" in ch02
 
     assert "Ping (1930) described an extinct terrestrial tortoise" not in app01
-    assert r"Ping (\citeyear{Ping1930Notes}) described an extinct terrestrial tortoise" in app01
+    assert "turtle examined by Ping was" not in app01
+    assert "characters used by Ping (" not in app01
+    assert "Ping's figure reproduced in Pope" not in app01
+    assert r"Bing Zhi (\citeyear{Ping1930Notes}) described an extinct terrestrial tortoise" in app01
+    assert r"turtle examined by Bing Zhi was" in app01
+    assert r"characters used by Bing Zhi (\citeyear{Ping1930Notes}), Lindholm (\citeyear{Lindholm1931Uber})" in app01
+    assert r"on Bing Zhi's figure reproduced in Pope [\citeyear{Pope1935Reptiles}])" in app01
     assert "Lindholm (1931) concluded that the" not in app01
     assert r"Lindholm (\citeyear{Lindholm1931Uber}) concluded that the" in app01
     assert "Pope (1935), in his monograph on the" not in app01
@@ -167,7 +173,7 @@ def test_first_tranche_citations_are_wired():
     assert r"Bien (\citeyear{Bien1937Turtle}) referred" in app01
     assert "to the shell as Ocadia sinensis" in app01
     assert "Ping's figure reproduced in Pope [1935]" not in app01
-    assert r"Ping's figure reproduced in Pope [\citeyear{Pope1935Reptiles}]" in app01
+    assert r"Bing Zhi's figure reproduced in Pope [\citeyear{Pope1935Reptiles}]" in app01
     assert "H. W. Wu (1943) identified the largest plastron" not in app01
     assert r"H. W. Wu (\citeyear{Wu1943Notes}) identified the largest plastron" in app01
     assert "Ting Su (1969) has made the only attempt" not in app01
@@ -261,12 +267,15 @@ def test_first_tranche_citations_are_wired():
     assert r"Chen Qunxian (\citeyear{Chen1933Chenren}) or Hopkins (1934), pp. 80-81" in ch04
     assert "并 (1930)" not in ch05
     assert "Ping (1930) described an extinct terrestrial tortoise" not in ch05
-    assert r"Ping (\citeyear{Ping1930Notes}) described an extinct terrestrial tortoise" in ch05
+    assert "turtle examined by Ping was" not in ch05
+    assert r"Bing Zhi (\citeyear{Ping1930Notes}) described an extinct terrestrial tortoise" in ch05
+    assert r"turtle examined by Bing Zhi was" in ch05
     assert "Lindholm (1931) concluded" not in ch05
     assert r"Lindholm (\citeyear{Lindholm1931Uber}) concluded" in ch05
     assert "Pope (1935), in his monograph" not in ch05
     assert r"Pope (\citeyear{Pope1935Reptiles}), in his monograph" in ch05
-    assert "turtle examined by Ping was, in fact," in ch05
+    assert "turtle examined by Ping was, in fact," not in ch05
+    assert "turtle examined by Bing Zhi was, in fact," in ch05
     assert r"cf. \pinyinterm{zhou-hongxiang} [1976]," in ch05
     assert r"\pinyinterm{zhou-dynasty} [1976]" not in ch05
     assert r"\pinyinterm{jin-xiangheng} (\citeyear{Chin1973Fujen});" in ch05

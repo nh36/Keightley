@@ -99,6 +99,8 @@ class WadeGilesAuditor:
         }
         self.preserved_self_spellings = {
             "Shih-ch'ang",
+            "Ping-leung",
+            "Shu-chi",
         }
         self.possessive_pinyin_exclusions = {
             "Bingquan's",
@@ -261,6 +263,7 @@ class WadeGilesAuditor:
             if (
                 term in english_words
                 or term_key in self.exact_exclusions
+                or term_key in self.preserved_self_spellings
                 or term_key in self.possessive_pinyin_exclusions
                 or term_key in self.same_spelling_exclusions
             ):

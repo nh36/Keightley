@@ -38,5 +38,5 @@ def test_audit_ignores_possessive_pinyin_name_fragments():
     ]:
         assert noise not in findings
 
-    assert "Ping-leung" in findings
-    assert "Shih-ch'ang" in findings
+    for preserved in ["Ping-leung", "Shih-ch'ang", "Shu-chi"]:
+        assert preserved not in findings
