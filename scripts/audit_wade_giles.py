@@ -96,6 +96,14 @@ class WadeGilesAuditor:
         self.preserved_self_spellings = {
             "Shih-ch'ang",
         }
+        self.possessive_pinyin_exclusions = {
+            "Bingquan's",
+            "Guo's",
+            "Yirong's",
+            "Zhang's",
+            "Zongdong's",
+            "Zuobin's",
+        }
         self.publication_title_terms = {
             "Chia-pien",
             "Ping-pien",
@@ -234,9 +242,14 @@ class WadeGilesAuditor:
         
         for match in re.finditer(combined_pattern, content):
             term = match.group(1).strip()
+            term_key = term.replace("’", "'")
             
             # Skip English words
-            if term in english_words or term in self.exact_exclusions:
+            if (
+                term in english_words
+                or term_key in self.exact_exclusions
+                or term_key in self.possessive_pinyin_exclusions
+            ):
                 continue
             
             # Record this finding
