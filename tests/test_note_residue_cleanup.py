@@ -440,8 +440,12 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "Wang 乙-jung" not in ch03
     assert "刘 E" not in ch03
     assert "Chang Ping-ch'üan (1956)" not in ch03
+    assert r"\booktitle{Chia-ku wen-tzu chi-shih}" not in ch03
+    assert "attack the Pa-fang" not in ch03
     assert "Wang Yi-jung and Liu E" in ch03
     assert "\\pinyinterm{zhang-bingquan} (1956), pp. 246, 253-254;" in ch03
+    assert r"\pinyinterm{jiaguwenzi-jishi} (\ref{sec:chapters-ch03:3.3.1} (sec. 3.3.1))" in ch03
+    assert r"follow Zhi Guo (to attack the \pinyinterm{bafang}, for if he does, we will not perhaps" in ch03
 
     assert "vice versa.¹ 179" not in ch04
     assert "110111112113114115" not in ch04
@@ -451,6 +455,9 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "董 concluded that the pit" not in ch04
     assert "董 and his" not in ch04
     assert "Ti 乙" not in ch04
+    assert "Lu Shih-hsien (1961)" not in ch04
+    assert "Mien-ch'ih, Ch'u-ch'iu, Ch'i-li-p'u" not in ch04
+    assert "Ch'eng-tzu-yai" not in ch04
     assert "vice versa.\\footnote[179]{" in ch04
     assert "significant.\\footnote[180]{" in ch04
     assert "appeared.\\footnote[181]{" in ch04
@@ -472,6 +479,23 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "detailed verifications,\\footnote[121]{" in ch04
     assert "thirteen foxes''\\footnote[122]{" in ch04
     assert "other periods.\\footnote[123]{" in ch04
+    assert "Lu Shixian (1961), p. 72.1;" in ch04
+    assert "oracle bones found at \\pinyinterm{erligang}, \\pinyinterm{liulige}, Mianchi, Chuqiu, Qilipu, and \\pinyinterm{gaohuangmiao}." in ch04
+    assert "the upper stratum at \\pinyinterm{chengziyai}" in ch04
+
+
+def test_app04_collection_titles_are_pinyinized():
+    app04 = APP04.read_text(encoding="utf-8")
+
+    assert "Ping-pien 57.1" not in app04
+    assert "Fu-yin, ``T'ien'' 2" not in app04
+    assert "Hou-pien 1.29.6" not in app04
+    assert "Ts'ui-pien 55 [S581.2]" not in app04
+
+    assert r"\pinyinterm{pinbian} 57.1" in app04
+    assert r"\pinyinterm{fuyin}, ``T'ien'' 2" in app04
+    assert r"\pinyinterm{houbian} 1.29.6" in app04
+    assert r"\pinyinterm{cuibian} 55 [S581.2]" in app04
 
 
 def test_ch05_reconstruction_note_runs_removed():

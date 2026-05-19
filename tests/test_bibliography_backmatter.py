@@ -37,6 +37,13 @@ def test_build_script_runs_bibtex():
     assert "render_abbreviations_tex.py" in build_script
 
 
+def test_phase5_qa_checks_live_abbreviations_file():
+    qa_script = (REPO_ROOT / "scripts" / "12_qa.py").read_text(encoding="utf-8")
+
+    assert 'tex" / "backmatter" / "abbreviations_live.tex"' in qa_script
+    assert 'tex" / "backmatter" / "abbreviations.tex"' not in qa_script
+
+
 def test_bibliography_a_uses_curated_abbreviation_entries():
     abbreviations_yml = ABBREVIATIONS_YML.read_text(encoding="utf-8")
     abbreviations_live = ABBREVIATIONS_LIVE.read_text(encoding="utf-8")

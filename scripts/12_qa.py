@@ -382,7 +382,7 @@ def check_phase5() -> None:
     bib_files = sorted(bib_dir.glob("*.bib"))
     raw_tsv = ROOT / "data" / "bibliography_raw.tsv"
     abbr_yml = ROOT / "data" / "abbreviations.yml"
-    abbr_tex = ROOT / "tex" / "backmatter" / "abbreviations.tex"
+    abbr_tex = ROOT / "tex" / "backmatter" / "abbreviations_live.tex"
     citations_tsv = ROOT / "data" / "citations.tsv"
     bib_a_tex = ROOT / "tex" / "backmatter" / "biblio_a.tex"
     bib_b_tex = ROOT / "tex" / "backmatter" / "biblio_b.tex"
