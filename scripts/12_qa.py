@@ -295,7 +295,7 @@ def check_phase4() -> None:
        - footnote inventory tsv exists with reasonable row count.
        - For each unit in structure_inventory.tsv with footnotes_anchored or
          footnotes_unanchored set, the corresponding .tex file contains
-         exactly that many \\footnote[N]{ calls.
+         exactly that many numbered \\footnote[N]{ / \\footnotetext[N]{ calls.
        - No @@FN@@, @@FOOTNOTE@@, or @@HEADING@@ sentinels remain in tex/.
        - Per-unit note numbering forms a roughly contiguous run (warn on gaps).
     """
@@ -342,7 +342,7 @@ def check_phase4() -> None:
                     # Skip silently — emitter may use distinct filenames
                     continue
                 text = cand.read_text(errors="replace")
-                actual = len(re.findall(r"\\footnote\[\d+\]\{", text))
+                actual = len(re.findall(r"\\footnote(?:text)?\[\d+\]\{", text))
                 if actual != expected:
                     warn(f"phase4: {unit_id} expected {expected} footnotes, "
                          f"tex has {actual}")
@@ -363,7 +363,7 @@ def check_phase4() -> None:
         tex_path = tex_path_for_unit(unit)
         if tex_path and tex_path.exists():
             tex_text = tex_path.read_text(errors="replace")
-            nums_sorted = sorted({int(n) for n in re.findall(r"\\footnote\[(\d+)\]\{", tex_text)})
+            nums_sorted = sorted({int(n) for n in re.findall(r"\\footnote(?:text)?\[(\d+)\]\{", tex_text)})
         else:
             nums_sorted = sorted(set(nums))
         if not nums_sorted:

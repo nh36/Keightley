@@ -4,6 +4,7 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+PREFACE = REPO_ROOT / "tex" / "frontmatter" / "preface.tex"
 CH01 = REPO_ROOT / "tex" / "chapters" / "ch01.tex"
 CH02 = REPO_ROOT / "tex" / "chapters" / "ch02.tex"
 CH03 = REPO_ROOT / "tex" / "chapters" / "ch03.tex"
@@ -520,6 +521,55 @@ def test_appendix_note_reference_residue_removed():
     assert r"yi \pinyinterm{qiang}, ``taking (captured) Qiang,''" in app05
     assert "The enemy statelet of the Tufang was" in app05
     assert "Yizhu 90" in app05
+
+
+def test_preface_postscript_and_chapter_opening_repairs():
+    preface = PREFACE.read_text(encoding="utf-8")
+    ch02 = CH02.read_text(encoding="utf-8")
+    ch03 = CH03.read_text(encoding="utf-8")
+    ch04 = CH04.read_text(encoding="utf-8")
+    ch05 = CH05.read_text(encoding="utf-8")
+    app04 = APP04.read_text(encoding="utf-8")
+
+    assert "\\textsc{Postscript}" in preface
+    assert "\\begin{flushright}\nD.N.K.\\\\" in preface
+    assert "The excavation at \\pinyinterm{xiaotun} in the spring of 1976 of tomb number 5, undisturbed" in preface
+    assert "\\begin{flushright}\n3 January 1978\n\\end{flushright}" in preface
+    assert "5,\nThe excavation at \\pinyinterm{xiaotun} in the spring of 1976 of tomb number undisturbed" not in preface
+
+    assert "readable.\\footnote[56]{" in ch02
+    assert "subcharge.\\footnote[57]{" in ch02
+    assert "king,\\footnote[58]{" in ch02
+    assert "readable.\\footnote[56]{There is some evidence to support this view. Sets which were cracked more times stood a better chance of being inscribed with crack notations. Of the thirteen extra-large, twenty-crack sets listed in n. 47, twelve (92 percent) contain one or more crack notations; of the twenty medium-large, eleven-to-nineteen crack sets (n. 48), fourteen (70 percent) contain one or more crack notations. By contrast, only 59 percent of the regular ten-crack sets (n. 46) contain crack notations. The function of sets will be considered more fully in Studies.}\\footnote[57]" not in ch02
+
+    assert r"\section[Introduction to the Scholarship]{Introduction to the Scholarship\protect\footnotemark[1]}" in ch03
+    assert r"\footnotetext[1]{For the famous story, first published by \pinyinterm{dong-short} in 1930," in ch03
+    assert "Introduction\\footnote[1]{" not in ch03
+    assert r"\textcite{Takashima1973Negatives} and \textcite{Serruys1974The}" in ch03
+    assert "乙-chu" not in ch03
+    assert "Yizhu or \\pinyinterm{yicun}" in ch03
+    assert "Yizhu 503" in ch03
+    assert "Few events have excited the minds of modern Chinese scholars like the discovery" in ch03
+
+    assert "would first be carved as.\\footnote[109]{" in ch02
+    assert "may be completed to read.\\footnote[110]{" in ch02
+    assert "would first be carved as\\footnote[109]{" not in ch02
+
+    assert "乙-chu" not in ch04
+    assert "Yizhu 244" in ch04
+    assert "Yizhu 116" in ch04
+    assert "Yizhu 393" in ch04
+    assert "one. . . .\\footnote[127]{" in ch04
+
+    assert "trace.''\\footnote[83]{" in ch05
+    assert "trace.\\footnote[83]{" not in ch05
+
+    assert "Western Chou" not in app04
+    assert "Eastern Chou" not in app04
+    assert "Chi-nien" not in app04
+    assert "Western Zhou" in app04
+    assert "Eastern Zhou" in app04
+    assert "Jinian" in app04
 
 
 def test_cross_chapter_footnote_and_name_residue_removed():

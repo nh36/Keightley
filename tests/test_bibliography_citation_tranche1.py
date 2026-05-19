@@ -222,6 +222,7 @@ def test_first_tranche_citations_are_wired():
     assert r"\textcite[p. 515, n.~1]{Young1936Fossil}" in ch01
     assert r"\textcite[p. 515]{Young1936Fossil}" in ch01
     assert r"\textcite[p. 86, n. 3]{Serruys1974The}" in ch02
+    assert r"\textcite{Takashima1973Negatives} and \textcite{Serruys1974The}" in ch03
     assert r"\textcite{Serruys1974The}" in ch03
     assert r"\textcite[esp. pp. 19-21]{Serruys1974The}" in ch03
     assert r"\textcite{Mickel1973Review}" in app02
@@ -319,6 +320,12 @@ def test_first_tranche_citations_are_wired():
     assert r"\pinyinterm{yan-yiping} (\citeyear{Yen1961Chiaku}), pp. 207-215" in preface
     assert "\\pinyinterm{yan-yiping} (\\citeyear{Yen1961Chiaku}),\n207-217." in preface
     assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1977Niao})," in preface
+    assert "\\begin{center}\n\\textsc{Postscript}\n\\end{center}" in preface
+    assert "\\begin{flushright}\nD.N.K.\\\\" in preface
+    assert "Berkeley, 12 January 1977" in preface
+    assert "The excavation at \\pinyinterm{xiaotun} in the spring of 1976 of tomb number 5, undisturbed" in preface
+    assert "\\begin{flushright}\n3 January 1978\n\\end{flushright}" in preface
+    assert "5,\nThe excavation at \\pinyinterm{xiaotun} in the spring of 1976 of tomb number undisturbed" not in preface
     assert r"from \pinyinterm{yan-yiping} (\citeyear{Yen1961Chiaku}), 1." in figures
 
 

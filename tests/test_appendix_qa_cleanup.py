@@ -75,7 +75,7 @@ def test_appendix_4_opening_note_block_restored():
     assert "Han times.\\footnote[7]{" in text
     assert "its preface.\\footnote[8]{" in text
     assert "257 years.”\\footnote[9]{" in text
-    assert "Western Chou records.\\footnote[10]{" in text
+    assert "Western Zhou records.\\footnote[10]{" in text
     assert "flawed accordingly.\\footnote[11]{" in text
     assert "5. This is the translation given by Sivin" not in text
     assert "6. The passage in question reads" not in text

@@ -21,4 +21,5 @@ def test_legacy_qa_script_matches_current_phase3_structure():
     assert "phase3: main.tex doesn't \\input{preamble}" not in output
     assert "phase3: chapters/ch01.tex missing \\chapter{...}" not in output
     assert "phase4: appendix/1 first note is 2 (not 1)" not in output
+    assert "phase4: chapter/3 first note is 2 (not 1)" not in output
     assert "pages have mean_conf < 70 with >30 tokens" not in output
