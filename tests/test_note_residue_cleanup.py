@@ -106,6 +106,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "will ever be written. More rigorous archaeological techniques will presumably be@@",
         "186. See n. 179",
         "damaged in 徐-chou-all",
+        "pp. 4952",
         "came from YH127; according to 史",
         "engravers.*7",
         "pp. 4142",
@@ -132,6 +133,7 @@ def test_ch04_mid_and_late_note_residue_removed():
         "1.4.2 1.4.3 1.4.4",
         "2.4.1\\%",
         "3.4.4;4.2",
+        "abbreviationcharges",
         "515.12",
         "1767\\%",
         "2.15.1 RFG:",
@@ -230,7 +232,9 @@ def test_ch04_mid_and_late_note_residue_removed():
     found = [needle for needle in offenders if needle in text]
     assert not found, "Found lingering ch04 mid/late note residue:\n" + "\n".join(found)
 
+    assert "The ultimate abbreviation---charges recorded with no preface whatever (no. 4.3)---may be found in every period." in text
     assert "1206 (D); 1316 (D); \\pinyinterm{nanbei}, ``Ming'' 352 (D)" in text
+    assert "pp. 49-52.} %90" in text
     assert "lineage, in that order.\\footnote[21]{The circled numbers indicate the ritual order" in text
     assert "decreasing seniority.\\footnote[22]{E.g., \\pinyinterm{jiatu} 87; \\pinyinterm{pinbian} 204.21;" in text
     assert "% source: scan 114, printed 94\nHorizontal. Some divinations group ancestors of the same generation;" in text
@@ -348,10 +352,52 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "535455565758" not in ch01
     assert "848586878889" not in ch01
     assert "] ] ] 0 0 ] 1 ] 门 ] 1 ] ]" not in ch01
+    assert "11 1 ] 13 ] 0 ] 5 ] 0 ] 0 ] ] ] ]" not in ch01
+    assert "art-sedentary Neolithic inhabitants" not in ch01
+    assert "Lungshanoid village life" not in ch01
+    assert "apyroscapulimancy" not in ch01
+    assert "pyroscapulimancy" not in ch01
+    assert "nonGreek" not in ch01
+    assert "Chinngis" not in ch01
+    assert "pp. 3031, 38" not in ch01
+    assert "pp. 8189" not in ch01
+    assert "from 龙 and other Neolithic sites" not in ch01
+    assert "from 龙 and Bronze Age sites" not in ch01
+    assert "pp. 842844" not in ch01
+    assert "p. 1843 (1968), p. 128" not in ch01
+    assert "For carbon-14 dates of Lung3 ] ] ] 1 1 ] ] 1 7 ] 0" not in ch01
+    assert "plate 8.1-4. in} %23" not in ch01
+    assert "late 龙 sites" not in ch01
+    assert "pp. 267268" not in ch01
+    assert "ttant VE" not in ch01
     assert "146147148149150151152153" not in ch02
     assert "6970717273" not in ch02
 
     assert "smoothed.\\footnote[53]{" in ch01
+    assert "the pyromantic art---sedentary Neolithic inhabitants" in ch01
+    assert "one of the characteristic features of Longshanoid village life" in ch01
+    assert "apyro-scapulimancy to have been the older form." in ch01
+    assert "non-Greek" in ch01
+    assert "Chinggis Khan was scorching" in ch01
+    assert "pyro-scapulimancy from the Old World to the New" in ch01
+    assert "Cooper (1936), pp. 30-31, 38;" in ch01
+    assert "Eisenberger (1938), pp. 81-89;" in ch01
+    assert r"from \pinyinterm{longshan} and other Neolithic sites" in ch01
+    assert r"from \pinyinterm{longshan} and Bronze Age sites" in ch01
+    assert "pp. 842-844" in ch01
+    assert r"For scapulimancy, Longshanoid culture, and ancestor worship, see \pinyinterm{zhang-guangzhi} (1962), p. 184; (1968), p. 128; Wheatley (1971), pp. 27-28." in ch01
+    assert r"For carbon-14 dates of \pinyinterm{longshan} sites, see Barnard (1975), pp. 46-47." in ch01
+    assert r"For the possibility of scapulimantic remains in \pinyinterm{yangshao} sites, see KK (1959.2), pp. 63-64" in ch01
+    assert r"The earliest evidence of pyromancy comes from \pinyinterm{fuhegoumen} in Liaoning" in ch01
+    assert "3416 ± 139 B.C." in ch01
+    assert "plate 8.1-4.} %23" in ch01
+    assert r"tentatively classifies these as late \pinyinterm{longshan} sites;" in ch01
+    assert "KK [1973.5], pp. 267-268" in ch01
+    assert "S436.3-4; 437.4." in ch01
+    assert "S150.1-151.2" in ch01
+    assert "Li Chengfu [1965], pp. 50-51;" in ch01
+    assert "Katō [1970], p. 155;" in ch01
+    assert "no distinction is intended.} %15" in ch01
     assert "male ones (Mao [1971], pp. 34–52).} %30" in ch01
     assert "shell is speculative.} %52" in ch01
     assert "thickness (fig. 3).\\footnote[54]{" in ch01
@@ -399,11 +445,17 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "exercise sheets.''\\footnote[100]{" in ch02
     assert "shell.\\footnote[102]{" in ch02
     assert "Ti 乙" not in ch02
+    assert "S289.3298.2" not in ch02
+    assert "S169.3170.2" not in ch02
+    assert "Royal Family and Tzu groups see table 6 for their names)" not in ch02
     assert "Royal Family group.\\footnote[69]{" in ch02
     assert "ten-day week.\\footnote[70]{" in ch02
     assert "day of divination.\\footnote[71]{" in ch02
     assert "advance.\\footnote[72]{" in ch02
     assert "to stress.\\footnote[73]{" in ch02
+    assert "S289.3-298.2" in ch02
+    assert "S169.3-170.2" in ch02
+    assert "The periodization of diviners of the Royal Family and Tzu groups (see table 6 for their names)" in ch02
     assert "Soothill (1951, pp. 141-142, that wang in this formula referred to the dead kings." not in ch02
     assert '} ... ``66 These forecasts, which were carved for only a minority of the charges,' not in ch02
     assert "Soothill (1951, pp. 141-142), that wang in this formula referred to the dead kings.} These forecasts, which were carved for only a minority of the charges,\\footnote[67]{" in ch02
@@ -475,13 +527,19 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "Wang Yi-jung and Liu E" not in ch03
     assert "Wang Yirong's sickness" in ch03
     assert "Wang Yirong and Liu E" in ch03
+    assert "pp. 13213465 D ]" not in ch03
+    assert r"\footnote[40]{E.g., \pinyinterm{chen-mengjia-spaced} (1956), pp. 132-134.} %40" in ch03
     assert "Kuo (?)---hence Guo of Zhi?---" not in ch03
     assert "The reading of kuo for is not certain." not in ch03
+    assert "and twelve charges (I-N, P-U),}85" not in ch03
+    assert "pp. 10It" not in ch03
     assert "Guo (?)---hence Guo of Zhi?---" in ch03
     assert "The reading of guo for is not certain." in ch03
     assert "\\pinyinterm{zhang-bingquan} (1956), pp. 246, 253-254;" in ch03
     assert r"\pinyinterm{jiaguwenzi-jishi} (\ref{sec:chapters-ch03:3.3.1} (sec. 3.3.1))" in ch03
     assert r"follow Zhi Guo (to attack the \pinyinterm{bafang}, for if he does, we will not perhaps" in ch03
+    assert "probably divined on the same day, about the king following Zhi Guo to attack the \\pinyinterm{bafang}" in ch03
+    assert "Wu Qichang ([1971], pp. 10-11)" in ch03
 
     assert "vice versa.¹ 179" not in ch04
     assert "110111112113114115" not in ch04
@@ -557,12 +615,16 @@ def test_ch05_reconstruction_note_runs_removed():
     assert "151 0 ]" not in ch05
     assert "practice inscriptionwere" not in ch05
     assert "139 ]" not in ch05
+    assert "S293.4297.1" not in ch05
+    assert "pp. 140143" not in ch05
     assert "K'u-fang 1661 (D) may be joined with Chia-pien 297" not in ch05
     assert "Ts'ui-pien 425 may be joined with Chia-pien 264, Ching-chin 1266 with Ping-pien 24" not in ch05
     assert "For other authenticating cases of this sort, see Chui-hsin 14; 15; 27; 70; 104; 107" not in ch05
     assert "and Tung-tsuan, ``pieh''" not in ch05
 
     assert "The inscriptions---one thought to be a practice inscription---were on a bovid humerus and rib" in ch05
+    assert "cf. S293.4-297.1" in ch05
+    assert "pp. 140-143" in ch05
     assert "been discovered.\\footnote[21]{See \\ref{ch:4} (see ch. 4), n. 24.} %21" in ch05
     assert "mirror together''\\footnote[69]{" in ch05
     assert "question.\\footnote[70]{" in ch05
