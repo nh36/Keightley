@@ -432,11 +432,25 @@ def test_appendix_note_reference_residue_removed():
     assert "group, but never in period V.\\footnote[31]{" in app05
     assert "Shang Chia" not in app05
     assert "Ta Chia (K3 9)'s consort" not in app05
+    assert "Tsu Ting (K15 1)" not in app05
+    assert "Tsu Hsin" not in app05
+    assert "Pu Ping" not in app05
+    assert "Pi Hsin" not in app05
+    assert "Ta Keng" not in app05
+    assert "Pi Jen" not in app05
+    assert "Ta Wu" not in app05
+    assert "Pi Chi" not in app05
     assert "Ch'eng Meng-chia (1956)" not in app05
     assert "the Chou appear" not in app05
     assert "the Yü-fang occur" not in app05
     assert r"ancestors from \pinyinterm{shangjia} to \pinyinterm{xiaoxin}" in app05
-    assert r"The king entertains \pinyinterm{dajia} (K3 9)'s consort, Pi Hsin" in app05
+    assert r"perform hsieh ritual to \pinyinterm{zuding} (K15 1); no curse." in app05
+    assert r"we perform hsieh-ritual to \pinyinterm{zu-xin}, there will be no curse." in app05
+    assert r"The king entertains \pinyinterm{bubing} (K4 1); performs the hsieh ritual; no fault." in app05
+    assert r"The king entertains \pinyinterm{dajia} (K3 9)'s consort, \pinyinterm{bixin}" in app05
+    assert r"The king entertains \pinyinterm{dageng} (K5 11)'s consort, \pinyinterm{biren}" in app05
+    assert r"The king entertains \pinyinterm{dawu} (K7 1)'s consort, \pinyinterm{biren}" in app05
+    assert r"The king entertains \pinyinterm{zuding}'s (K15 21) consort, \pinyinterm{biji}" in app05
     assert r"\pinyinterm{chen-mengjia} (1956), p. 273;" in app05
     assert "references to the Zhou appear mainly in period I" in app05
     assert "references to the Yufang occur only in period V" in app05
