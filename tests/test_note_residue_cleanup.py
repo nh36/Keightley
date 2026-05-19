@@ -347,10 +347,12 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
 
     assert "535455565758" not in ch01
     assert "848586878889" not in ch01
+    assert "] ] ] 0 0 ] 1 ] 门 ] 1 ] ]" not in ch01
     assert "146147148149150151152153" not in ch02
     assert "6970717273" not in ch02
 
     assert "smoothed.\\footnote[53]{" in ch01
+    assert "male ones (Mao [1971], pp. 34–52).} %30" in ch01
     assert "shell is speculative.} %52" in ch01
     assert "thickness (fig. 3).\\footnote[54]{" in ch01
     assert "written on.\\footnote[55]{" in ch01
