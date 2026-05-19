@@ -304,12 +304,12 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "and sets, in short, became standardized and simplified with the passage of time.\n\n\\subsubsection[Crack Notations]{Crack Notations}" in text
     assert "especially those containing the negative pi---probably a substitution, used principally in period III+IV, for wu ) (Serruys [1974], p. 6; cf. \\pinyinterm{chen-mengjia-spaced} [1956], p. 128)---were merely single, negative charges, and not one of a positive-negative pair." in text
     assert "Keightley (1973a), pp. 37-38, 46-48, 57.} %132" in text
-    assert "e.g., ``Divining: ‘(The king) should not hunt on the jen day, (for if he does,) it will perhaps rain’'' (\\pinyinterm{jiabian} 1920 [S293.3])," in text
+    assert "e.g., ``Divining: `(The king) should not hunt on the jen day, (for if he does,) it will perhaps rain''' (\\pinyinterm{jiabian} 1920 [S293.3])," in text
     assert "this is an instance of spill-over---either of period II diviners and engravers operating in period I" in text
     assert "\\pinyinterm{xu-jinxiong} also argues that \\pinyinterm{jiabian} 27+2 and \\pinyinterm{wenlu} 78" in text
     assert "The basic study is \\pinyinterm{zhang-bingquan} (1952); in English, see Wu Shih-ch'ang (1955)." in text
     assert "on RFG fragments there is 1 shang-chi and 1 hsiao-chi; in period II, there are no crack notations;" in text
-    assert "hsiao-chi, “slightly auspicious,”\\footnote[133]{\\pinyinterm{yibian} 7767 (left hyoplastron) contains a unique hsia-chi F, probably an engraver's error.} pu tsai ming\\footnote[135]{" in text
+    assert "hsiao-chi, ``slightly auspicious,''\\footnote[133]{\\pinyinterm{yibian} 7767 (left hyoplastron) contains a unique hsia-chi F, probably an engraver's error.} pu tsai ming\\footnote[135]{" in text
     assert "state or king was concerned---which is not necessarily the same thing---as far as the \\pinyinterm{shang} diviners were concerned" in text
     assert "of calligraphic variants and divination formulas, the reduced size of the script---these\nphenomena were related" in text
     assert "Bovid scapulas\nwere the material used most commonly in \\pinyintext{longshan} and early \\pinyinterm{shang} pyromancy,\nfollowed in frequency by the scapulas of pig and sheep;" in text
@@ -703,6 +703,45 @@ def test_ch05_reconstruction_note_runs_removed():
     assert "\\pinyinterm{cuibian} 425 may be joined with \\pinyinterm{jiabian} 264, \\pinyinterm{jingjin} 1266 with \\pinyinterm{pinbian} 24" in ch05
     assert "For other authenticating cases of this sort, see \\pinyinterm{zhuixin} 14; 15; 27; 70; 104; 107" in ch05
     assert 'and \\pinyinterm{tongzuan}, ``pieh\'\'' in ch05
+
+
+def test_footnote_gaps_and_chapter4_layout_repairs():
+    preface = PREFACE.read_text(encoding="utf-8")
+    ch02 = CH02.read_text(encoding="utf-8")
+    ch03 = CH03.read_text(encoding="utf-8")
+    ch04 = CH04.read_text(encoding="utf-8")
+    ch05 = CH05.read_text(encoding="utf-8")
+
+    assert r"removed the capital there.}\footnote[7]{This theory appears first" in preface
+    assert "number of cases into the bone or shell.\\footnote[74]{" in ch02
+    assert "back of\nscapulas.\\footnote[75]{See n. 65.} Thus a full divination record" in ch02
+    assert r"\booktitle{Jimbun shakubun} 344 (S232.4),\footnote[79]{" in ch03
+    assert "This translation may be ``kept on ice''" in ch03
+    assert "been taken by the experienced traveler.\\footnote[81]{" in ch03
+    assert "20.5. III." not in ch03
+    assert "20.5.} %110" in ch03
+    assert "against the Xiawei.\\footnote[111]{" in ch03
+    assert "Relative Chronology\\footnote[1]" not in ch04
+    assert "the historian's task.\\footnote[1]{" in ch04
+    assert "field;\\footnote[2]{" in ch04
+    assert "handling the actual objects.\\footnote[48]{" in ch05
+    assert "lost track of.\\footnote[49]{" in ch05
+    assert "drawings, and photographs.\\footnote[50]{" in ch05
+    assert "two forms of reproduction.\\footnote[51]{" in ch05
+    assert "\n48. Forgers frequently carved their inscriptions" not in ch05
+    assert "\n49. As in the case of" not in ch05
+    assert "\n50. The present corpus consists of about 43" not in ch05
+    assert "\n51. For an example of the three types of reproduction" not in ch05
+
+
+def test_tex_files_use_latex_quote_markers():
+    offenders = []
+    for path in (REPO_ROOT / "tex").rglob("*.tex"):
+        text = path.read_text(encoding="utf-8")
+        if any(ch in text for ch in "“”‘’"):
+            offenders.append(str(path.relative_to(REPO_ROOT)))
+
+    assert not offenders, "Found smart quotes in tex files:\n" + "\n".join(offenders)
 
 
 def test_ch01_ch03_low_frequency_author_forms_are_normalized():

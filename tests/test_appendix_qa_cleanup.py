@@ -27,7 +27,7 @@ def test_appendix_3_note_block_restored():
     assert "were published in 甲編 and 易編" not in text
     assert "ch. I, n. 71" not in text
     assert "150 years\\footnote[9]{" in text
-    assert "every 16 days.”\\footnote[8]{" in text
+    assert "every 16 days.''\\footnote[8]{" in text
     assert "original corpus.''\\footnote[10]{" in text
     assert "from pit YH127.\\footnote[11]{" in text
     assert "same notation,\\footnote[12]{" in text
@@ -74,7 +74,7 @@ def test_appendix_4_opening_note_block_restored():
     assert "the conquest.\\footnote[6]{" in text
     assert "Han times.\\footnote[7]{" in text
     assert "its preface.\\footnote[8]{" in text
-    assert "257 years.”\\footnote[9]{" in text
+    assert "257 years.''\\footnote[9]{" in text
     assert "Western Zhou records.\\footnote[10]{" in text
     assert "flawed accordingly.\\footnote[11]{" in text
     assert "5. This is the translation given by Sivin" not in text
@@ -121,7 +121,8 @@ def test_missing_character_glyph_residue_cleaned():
     assert "Specific changes in topics and idioms---changes" in ch04
     assert "general evolution\n---are presented in appendix \\ref{app:5} (appendix 5)." in ch04
     assert "The topic---which has led \\pinyinterm{xu-jinxiong} to" in ch04
-    assert "\n---is technical and the conclusions still tentative." in ch04
+    assert "}---is technical and the conclusions still tentative." in ch04
+    assert "\n---is technical and the conclusions still tentative." not in ch04
     assert r"to \pinyinterm{dajia} (K3 9)." in ch04
     assert "yüeh yu chih (*fiak)." in app04
     assert "―" not in ch02 + ch03 + ch04

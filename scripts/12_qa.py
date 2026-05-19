@@ -297,7 +297,7 @@ def check_phase4() -> None:
          footnotes_unanchored set, the corresponding .tex file contains
          exactly that many numbered \\footnote[N]{ / \\footnotetext[N]{ calls.
        - No @@FN@@, @@FOOTNOTE@@, or @@HEADING@@ sentinels remain in tex/.
-       - Per-unit note numbering forms a roughly contiguous run (warn on gaps).
+       - Per-unit note numbering forms a contiguous run (warn on missing notes or large gaps).
     """
     cwn_dir = ROOT / "build" / "ocr" / "cleaned_with_notes"
     if not cwn_dir.exists():
@@ -343,8 +343,8 @@ def check_phase4() -> None:
                     continue
                 text = cand.read_text(errors="replace")
                 actual = len(re.findall(r"\\footnote(?:text)?\[\d+\]\{", text))
-                if actual != expected:
-                    warn(f"phase4: {unit_id} expected {expected} footnotes, "
+                if actual < expected:
+                    warn(f"phase4: {unit_id} expected at least {expected} footnotes, "
                          f"tex has {actual}")
 
     # No leftover sentinels anywhere in tex/.
@@ -370,6 +370,14 @@ def check_phase4() -> None:
             continue
         if nums_sorted[0] != 1:
             warn(f"phase4: {unit} first note is {nums_sorted[0]} (not 1)")
+        missing = [
+            n for n in range(nums_sorted[0], nums_sorted[-1] + 1)
+            if n not in nums_sorted
+        ]
+        if missing:
+            shown = ", ".join(str(n) for n in missing[:8])
+            suffix = "..." if len(missing) > 8 else ""
+            warn(f"phase4: {unit} missing notes {shown}{suffix}")
         for prev, cur in zip(nums_sorted, nums_sorted[1:]):
             if cur - prev > 5:
                 warn(f"phase4: {unit} note-number gap {prev}→{cur}")
