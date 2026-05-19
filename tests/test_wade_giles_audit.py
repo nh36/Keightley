@@ -18,8 +18,12 @@ def test_audit_ignores_possessive_pinyin_name_fragments():
     findings = auditor.findings
 
     for noise in [
+        "Athapaskan-speaking",
         "Bingquan's",
+        "Cicero's",
+        "Crack-making",
         "Guo's",
+        "Shima's",
         "Yirong's",
         "Zhang's",
         "Zongdong's",

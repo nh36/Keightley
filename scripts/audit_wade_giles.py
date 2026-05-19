@@ -50,6 +50,7 @@ class WadeGilesAuditor:
             "Evans-Pritchard",
             "Pyro-scapulimancy",
             "Pyro-Scapulimancy",
+            "Athapaskan-speaking",
             "Attila's",
             "Berry's",
             "Maenchen-Helfen",
@@ -57,6 +58,7 @@ class WadeGilesAuditor:
             "Van-kiem",
             "School's",
             "Western-language",
+            "Shima's",
             "E's",
             "Keng's",
             "Peng's",
@@ -92,6 +94,8 @@ class WadeGilesAuditor:
             "Chu",
             "K'o",
             "Kung",
+            "Crack-making",
+            "Cicero's",
         }
         self.preserved_self_spellings = {
             "Shih-ch'ang",
