@@ -108,6 +108,15 @@ class WadeGilesAuditor:
             "Zongdong's",
             "Zuobin's",
         }
+        self.same_spelling_exclusions = {
+            "Cheng",
+            "Hu",
+            "Li",
+            "Liu",
+            "Shang",
+            "Yi",
+            "Yi's",
+        }
         self.publication_title_terms = {
             "Chia-pien",
             "Ping-pien",
@@ -253,6 +262,7 @@ class WadeGilesAuditor:
                 term in english_words
                 or term_key in self.exact_exclusions
                 or term_key in self.possessive_pinyin_exclusions
+                or term_key in self.same_spelling_exclusions
             ):
                 continue
             
