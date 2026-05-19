@@ -122,7 +122,7 @@ def test_missing_character_glyph_residue_cleaned():
     assert "general evolution\n---are presented in appendix \\ref{app:5} (appendix 5)." in ch04
     assert "The topic---which has led \\pinyinterm{xu-jinxiong} to" in ch04
     assert "\n---is technical and the conclusions still tentative." in ch04
-    assert "to Ta Chia (K3 9)." in ch04
+    assert r"to \pinyinterm{dajia} (K3 9)." in ch04
     assert "yüeh yu chih (*fiak)." in app04
     assert "―" not in ch02 + ch03 + ch04
     assert "⑨" not in ch04
@@ -248,7 +248,7 @@ def test_chapter_4_opening_note_block_restored():
     text = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
 
     assert "but not in 史赤.\\footnote[13]{" in text
-    assert "\\pinyinterm{zu-xin}, ``Grand-\n% source: scan 113, printed 93\nfather Hsin'';" in text
+    assert "\\pinyinterm{zu-xin}, ``Grand-\n% source: scan 113, printed 93\nfather Xin'';" in text
     assert "brothers.\\footnote[28]{" in text
     assert "\\booktitle{Jimbun shakubun}, English preface, p. 15;" in text
     assert "\\pinyinterm{pinbian} 12--21 (\\ref{sec:chapters-ch03:3.7} (sec. 3.7))." in text

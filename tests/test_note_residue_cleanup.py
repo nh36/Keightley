@@ -257,7 +257,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "Kaizuka (1946), pp. 208-209 for a Chinese translation" in text
     assert "fundamental premise---that individual diviners may be associated with limited periods---rests upon the unverifiable assumption" in text
     assert "For another dispute, see n. 44.} %36" in text
-    assert "perform [\\pinyinterm{dong-short} (1965), p. 96]) yung ritual to Ta Chia on chia-ch'en" in text
+    assert "perform [\\pinyinterm{dong-short} (1965), p. 96]) yung ritual to \\pinyinterm{dajia} on chia-ch'en" in text
     assert "started auspiciously (cf. Keightley [1973a], p. 34)." in text
     assert "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao: \\pinyinterm{jiabian} 2941; 3012; 3045+3047;" in text
     assert "3045+3047; Tui É: \\pinyinterm{jiabian} 3045+3047; 3083;" in text
@@ -268,7 +268,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "period III-IV: \\pinyinterm{renwen} 1737; 1767; period V:" in text
     assert "period V: \\pinyinterm{houbian} 1.10.16; 2.15.1; RFG:" in text
     assert "Tuié and Hsieh.} %93" in text
-    assert 'CKWP (1965), ``Ho-wen,\'\' pp. 27a-b;' in text
+    assert "CKWP (1965), ``\\pinyinterm{hewen},'' pp. 27a-b;" in text
     assert "graphs for hsi , ``night,'' and yue 月, ``moon'' or ``month,'' changed places in different periods" in text
     assert "formulas which included the word yue 曰 ``saying,''" in text
     assert "The phrase jin yue, ``this month,'' or jin ji yue, ``this nth month,''" in text
@@ -325,7 +325,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "the ``one-one'' pattern, in which the two columns of hollows start at the same level" in text
     assert "and the ``one-three'' pattern, in which the inner column of hollows starts two spaces below the outer column" in text
     assert "the bone surface was more frequently chipped in the later periods than it had been in\nperiod I.\\footnote[169]{\\pinyinterm{xu-jinxiong} (1973a), pp. 19, 101.} He has also discerned differences in the burn marks of periods III and IV." in text
-    assert "the sheep scapulas from the Lung-shan site at Keshengzhuang E; see 豐西發掘報告, p. 68, plate 35) no cracks appear to have formed.} %168" in text
+    assert "the sheep scapulas from the \\pinyinterm{longshan} site at Keshengzhuang E; see 豐西發掘報告, p. 68, plate 35) no cracks appear to have formed.} %168" in text
     assert "It will be clear from \\ref{sec:chapters-ch04:4.3.2} (see sec. 4.3.2) that \\pinyinterm{xu-jinxiong}'s pioneering analyses of related\nphysical criteria---hollow shapes, hollow placement, burn marks---are helping to develop" in text
     assert "regard to one another and other datable objects in the ground.\\footnote[174]{This is only possible in the case of oracle bones that were scientifically excavated; for these, see the archaeological reports listed in n. 173. For an interesting attempt to deduce the location where certain privately excavated inscriptions must have been found, see Itō (1971), p. 88.} %174" in text
     assert "judgment---barring the presence of criteria such as ancestral titles or diviners' names on\nevery single fragment---can never be more than probable" in text
@@ -430,6 +430,16 @@ def test_appendix_note_reference_residue_removed():
     assert "statelets.\\footnote[15]{" in app05
     assert "periods II to V.\\footnote[30]{" in app05
     assert "group, but never in period V.\\footnote[31]{" in app05
+    assert "Shang Chia" not in app05
+    assert "Ta Chia (K3 9)'s consort" not in app05
+    assert "Ch'eng Meng-chia (1956)" not in app05
+    assert "the Chou appear" not in app05
+    assert "the Yü-fang occur" not in app05
+    assert r"ancestors from \pinyinterm{shangjia} to \pinyinterm{xiaoxin}" in app05
+    assert r"The king entertains \pinyinterm{dajia} (K3 9)'s consort, Pi Hsin" in app05
+    assert r"\pinyinterm{chen-mengjia} (1956), p. 273;" in app05
+    assert "references to the Zhou appear mainly in period I" in app05
+    assert "references to the Yufang occur only in period V" in app05
 
 
 def test_cross_chapter_footnote_and_name_residue_removed():
@@ -458,6 +468,13 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "Lu Shih-hsien (1961)" not in ch04
     assert "Mien-ch'ih, Ch'u-ch'iu, Ch'i-li-p'u" not in ch04
     assert "Ch'eng-tzu-yai" not in ch04
+    assert "Grandfather Hsin" not in ch04
+    assert "Shang Chia, Ch'eng, Ta Ting, Ta Chia, Tsu Yi" not in ch04
+    assert "Tung-tsuan 118" not in ch04
+    assert "``Ho-wen,''" not in ch04
+    assert "``Fu-lu,''" not in ch04
+    assert "to Ta Chia (K3 9)." not in ch04
+    assert "Lung-shan site" not in ch04
     assert "vice versa.\\footnote[179]{" in ch04
     assert "significant.\\footnote[180]{" in ch04
     assert "appeared.\\footnote[181]{" in ch04
@@ -482,6 +499,13 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "Lu Shixian (1961), p. 72.1;" in ch04
     assert "oracle bones found at \\pinyinterm{erligang}, \\pinyinterm{liulige}, Mianchi, Chuqiu, Qilipu, and \\pinyinterm{gaohuangmiao}." in ch04
     assert "the upper stratum at \\pinyinterm{chengziyai}" in ch04
+    assert "father Xin'';" in ch04
+    assert r"altars: \pinyinterm{shangjia}, \pinyinterm{cheng-ancestor}, \pinyinterm{tading}, \pinyinterm{dajia}, \pinyinterm{zuyi}" in ch04
+    assert "Tongzuan 118, kǎoshì" in ch04
+    assert "CKWP (1965), ``\\pinyinterm{hewen},''" in ch04
+    assert "\\pinyinterm{xu-jiaguwen-bian}, ``\\pinyinterm{fulu},''" in ch04
+    assert r"to \pinyinterm{dajia} (K3 9)." in ch04
+    assert r"the \pinyinterm{longshan} site at Keshengzhuang E" in ch04
 
 
 def test_app04_collection_titles_are_pinyinized():
