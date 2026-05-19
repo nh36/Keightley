@@ -189,17 +189,17 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     assert "e.g., 甲編 1656; \\pinyinterm{jingjin} 4418" not in text
     assert "dates the relevant 甲編 inscriptions to period III." not in text
     assert "e.g., 甲編 1651, kǎoshì, p. 218; 人文 1996, shakubun, p. 504" not in text
-    assert "(1)\n(2)\n\\inscriptionsection{INSCRIPTION}" in text
-    assert "(I)\n(2)\n\\inscriptionsection{INSCRIPTION}" not in text
+    assert "\\listitem{1}\n\\listitem{2}\n\\inscriptionsection{INSCRIPTION}" in text
+    assert "(I)\n\\listitem{2}\n\\inscriptionsection{INSCRIPTION}" not in text
     assert "[Hsing] divined:" in text
     assert "[Xing] divined:" not in text
-    assert "\\inscriptionref{\\pinyinterm{jisi} divination}\n\n(1)\n\\inscriptionlabel{Preface} [Crack-making] on \\pinyinterm{jisi}" in text
-    assert "\\inscriptionlabel{Postface} In the [seventh month].\n\n(2)\n\\inscriptionlabel{Preface} Crack-making on ping-shen" in text
-    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n(3)\n\\inscriptionlabel{Preface} Crack-making on hsin-ch'ou" in text
-    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n(4)\n\\inscriptionlabel{Preface} Crack-making on hsin-ch'ou" in text
-    assert "\\inscriptionlabel{Charge} The king entertains; performs the chui ritual.\n\n(5)\n\\inscriptionlabel{Preface} Crack-making on jen-yin" in text
-    assert "ritual; no fault.\n\n(6)\n\\inscriptionlabel{Preface} Crack-making on jen-yin" in text
-    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n(7)\n\\inscriptionlabel{Preface} Crack-making on jen-tzu" in text
+    assert "\\inscriptionref{\\pinyinterm{jisi} divination}\n\n\\listitem{1}\n\\inscriptionlabel{Preface} [Crack-making] on \\pinyinterm{jisi}" in text
+    assert "\\inscriptionlabel{Postface} In the [seventh month].\n\n\\listitem{2}\n\\inscriptionlabel{Preface} Crack-making on ping-shen" in text
+    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n\\listitem{3}\n\\inscriptionlabel{Preface} Crack-making on hsin-ch'ou" in text
+    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n\\listitem{4}\n\\inscriptionlabel{Preface} Crack-making on hsin-ch'ou" in text
+    assert "\\inscriptionlabel{Charge} The king entertains; performs the chui ritual.\n\n\\listitem{5}\n\\inscriptionlabel{Preface} Crack-making on jen-yin" in text
+    assert "ritual; no fault.\n\n\\listitem{6}\n\\inscriptionlabel{Preface} Crack-making on jen-yin" in text
+    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n\\listitem{7}\n\\inscriptionlabel{Preface} Crack-making on jen-tzu" in text
     assert "wish that no fault or misfortune would occur.''\\footnote[7]{" in text
     assert "Royal Family group inscriptions.\\footnote[7]" not in text
     assert "\\footnote[13]{See the inscriptions listed at S43.1-3; Shih-to 2.82, to III + IV; the rest are either RFG or, in my opinion, undatable.}" in text

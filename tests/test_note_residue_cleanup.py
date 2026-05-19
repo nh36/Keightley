@@ -340,7 +340,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "sector B (\\pinyinterm{chen-mengjia}, op. cit., p. 143); we can only suppose that \\pinyinterm{jiabian} 490-928 came from sector F within the village (\\pinyinterm{chen-mengjia}, op. cit., pp. 143, 147)" in text
     assert "that \\pinyinterm{jiabian} 3483 came from trenches F1-4 (\\pinyinterm{chen-mengjia}, op. cit., pp. 143-144)." in text
     assert "significant number of the inscriptions in \\pinyinterm{jiabian}.\\footnote[182]{" in text
-    assert "Those estimates of total numbers of fragments excavated (as in appendix 3, sec. 1), therefore, that depend upon the registration numbers for their fragment counts may not be fully accurate" in text
+    assert "Those estimates of total numbers of fragments excavated (as in appendix \\ref{app:3}, sec. \\ref{sec:appendices-app03:1} (appendix 3, sec. 1)), therefore, that depend upon the registration numbers for their fragment counts may not be fully accurate" in text
     assert "Only the Yi and Bing areas were excavated comprehensively; the Jia section of foundations was not thoroughly trenched" in text
     assert "period (appendix \\ref{app:3} (appendix 3)) must consider that the comparatively blank periods in our chronology\nmay be related to the blank spaces on the excavation maps.\\footnote[188]{" in text
 
@@ -500,6 +500,11 @@ def test_appendix_note_reference_residue_removed():
     assert "Ch'eng Meng-chia (1956)" not in app05
     assert "the Chou appear" not in app05
     assert "the Yü-fang occur" not in app05
+    assert "jen \\textasciicircum{}" not in app05
+    assert "taking (captured) Ch'iang" not in app05
+    assert "yi Ẻ (D)" not in app05
+    assert "T'u-fang ±" not in app05
+    assert "Yizhu go" not in app05
     assert r"ancestors from \pinyinterm{shangjia} to \pinyinterm{xiaoxin}" in app05
     assert r"perform hsieh ritual to \pinyinterm{zuding} (K15 1); no curse." in app05
     assert r"we perform hsieh-ritual to \pinyinterm{zu-xin}, there will be no curse." in app05
@@ -511,6 +516,10 @@ def test_appendix_note_reference_residue_removed():
     assert r"\pinyinterm{chen-mengjia} (1956), p. 273;" in app05
     assert "references to the Zhou appear mainly in period I" in app05
     assert "references to the Yufang occur only in period V" in app05
+    assert "shi\nren, ``to send men.''" in app05
+    assert r"yi \pinyinterm{qiang}, ``taking (captured) Qiang,''" in app05
+    assert "The enemy statelet of the Tufang was" in app05
+    assert "Yizhu 90" in app05
 
 
 def test_cross_chapter_footnote_and_name_residue_removed():

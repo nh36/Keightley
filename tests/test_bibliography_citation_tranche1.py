@@ -302,9 +302,20 @@ def test_first_tranche_citations_are_wired():
     assert r"\pinyinterm{chen-mengjia} (\citeyear{Chen1956Yin}), p. 251;" in preface
     assert r"\pinyinterm{chen-mengjia} [\citeyear{Chen1956Yin}], p. 252;" in preface
     assert "X222" not in preface
+    assert "pp. 1314, 420" not in preface
+    assert "da-yi )" not in preface
+    assert "the name Shang itself. U}" not in preface
+    assert "finding list. XV}" not in preface
+    assert "1241 ±\nB.C." not in preface
+    assert "Yin-wang E" not in preface
+    assert "yin-chi 1, ``prolonged auspiciousness." not in preface
     assert "authentic, i.e., Shang.}" in preface
+    assert "1241 ±\n160 B.C." in preface
+    assert "Yin-wang 殷王" in preface
+    assert "yin-chi, ``prolonged auspiciousness.''" in preface
     assert r"\pinyinterm{tang-lan} [\citeyear{TangLan1976Hotsun}], p. 60" in preface
     assert r"\pinyinterm{qu-wanli} (\citeyear{Chu1965aShihchi}), pp. 88-89," in preface
+    assert r"Wheatley (1971), pp. 13-14, 420;" in preface
     assert r"\pinyinterm{yan-yiping} (\citeyear{Yen1961Chiaku}), pp. 207-215" in preface
     assert "\\pinyinterm{yan-yiping} (\\citeyear{Yen1961Chiaku}),\n207-217." in preface
     assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1977Niao})," in preface

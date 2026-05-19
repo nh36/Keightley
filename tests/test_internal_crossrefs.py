@@ -165,6 +165,7 @@ def test_app02_section_crossrefs_show_ref_plus_ocr_copy():
 def test_app03_section_crossrefs_show_ref_plus_ocr_copy():
     text = APPENDICES["app03"].read_text(encoding="utf-8")
 
+    assert "(\\ref{sec:chapters-ch05:5.3} (sec. 5.3))," in text
     assert "\\ref{sec:chapters-ch03:3.7.4.1} (sec. 3.7.4.1)" in text
     assert "\\ref{sec:chapters-ch02:2.9.3} (sec. 2.9.3)" in text
     assert "\\ref{sec:chapters-ch01:1.4} (sec. 1.4)" in text
@@ -236,6 +237,7 @@ def test_ch01_section_crossrefs_show_ref_plus_ocr_copy():
 def test_ch02_section_crossrefs_show_ref_plus_ocr_copy():
     text = CH02.read_text(encoding="utf-8")
 
+    assert "\\ref{sec:chapters-ch03:3.5} (sec. 3.5)" in text
     assert "\\ref{sec:chapters-ch02:2.8} (sec. 2.8)" in text
     assert "\\ref{sec:chapters-ch02:2.7} (sec. 2.7)" in text
     assert "\\ref{sec:chapters-ch02:2.7.1} (sec. 2.7.1)" in text
@@ -299,6 +301,11 @@ def test_ch03_section_crossrefs_show_ref_plus_ocr_copy():
 def test_ch04_section_crossrefs_show_ref_plus_ocr_copy():
     text = CH04.read_text(encoding="utf-8")
 
+    assert "\\ref{sec:chapters-ch04:4.3.3.3} (sec. 4.3.3.3)" in text
+    assert (
+        "appendix \\ref{app:3}, sec. \\ref{sec:appendices-app03:1} "
+        "(appendix 3, sec. 1)"
+    ) in text
     assert "\\ref{sec:chapters-ch03:3.3.2} (sec. 3.3.2)" in text
     assert "[\\ref{sec:chapters-ch03:3.3.1} (sec. 3.3.1)]" in text
     assert "\\ref{sec:chapters-ch04:4.3.1.12} (sec. 4.3.1.12)" in text
@@ -346,6 +353,7 @@ def test_ch04_section_crossrefs_show_ref_plus_ocr_copy():
 def test_ch05_section_crossrefs_show_ref_plus_ocr_copy():
     text = CH05.read_text(encoding="utf-8")
 
+    assert "\\ref{sec:chapters-ch02:2.5} (sec.\n2.5)" in text
     assert "\\ref{sec:chapters-ch02:2.3.1} (sec. 2.3.1)" in text
     assert text.count("\\ref{sec:chapters-ch02:2.3.1} (sec. 2.3.1)") >= 2
     assert "\\ref{sec:chapters-ch05:5.3.2} (sec. 5.3.2)" in text

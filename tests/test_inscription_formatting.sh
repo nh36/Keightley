@@ -87,6 +87,15 @@ test_inscriptionlabel_examples() {
   echo $?
 }
 
+# Test 13: Verify remaining raw inscription numbering/headings are macro-formatted
+test_remaining_inscription_lists_formatted() {
+  grep -q "\\\\listitem{7}" tex/appendices/app05.tex && \
+  grep -q "\\\\inscriptionside{negative, left side}" tex/chapters/ch03.tex && \
+  grep -q "\\\\inscriptionside{positive, right side}" tex/chapters/ch03.tex && \
+  ! grep -q "^Positive charge right side)" tex/chapters/ch03.tex
+  echo $?
+}
+
 # Run all tests
 echo ""
 echo "=== Test Results ==="
@@ -128,7 +137,12 @@ result=$(test_inscriptionlabel_examples)
 
 echo ""
 echo "=== LaTeX Compilation Test ==="
-echo -n "Test 13: LaTeX compilation... "
+result=$(test_remaining_inscription_lists_formatted)
+[ "$result" -eq 0 ] && echo "✓ Test 13: Remaining inscription lists/headings macro-formatted" || echo "✗ Test 13: Raw inscription numbering/headings remain"
+
+echo ""
+echo "=== LaTeX Compilation Test ==="
+echo -n "Test 14: LaTeX compilation... "
 ./scripts/build.sh > /tmp/inscription_build.log 2>&1
 if [ -f build/output/main.pdf ]; then
   echo "✓ LaTeX compilation successful"
@@ -136,7 +150,7 @@ else
   echo "✗ LaTeX compilation failed"
 fi
 
-echo -n "Test 14: PDF validation... "
+echo -n "Test 15: PDF validation... "
 if file build/output/main.pdf | grep -q "PDF document"; then
   echo "✓ Valid PDF generated"
 else
