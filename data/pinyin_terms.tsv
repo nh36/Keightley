@@ -84,7 +84,7 @@ jiatu	title	甲圖	Jiatu	Jiǎtú
 pinbian	title	拼編	Pinbian	Pīnbiān
 yibian	title	易編	Yibian	Yìbiān
 qianbian	title	前編	Qianbian	Qiánbiān
-houbian	title	侯编	Houbian	Hòubiān
+houbian	title	後編	Houbian	Hòubiān
 hebian	title	何編	Hebian	Hébiān
 xubian	title	續編	Xubian	Xùbiān
 xubu	title	續補	Xubu	Xùbǔ
@@ -115,7 +115,7 @@ xu-jiaguwen-bian	title	續甲骨文編	Xu jiaguwen bian	Xù Jiǎgǔwén biān
 zhouli	title	周禮	Zhouli	Zhōulǐ
 liji	title	禮記	Liji	Lǐjì
 yili	title	儀禮	Yili	Yílǐ
-shuowen	title	说文	Shuowen	Shuōwén
+shuowen	title	說文	Shuowen	Shuōwén
 shijing-ages	title	世經	Shijing	Shìjīng
 shijing-classic	title	詩經	Shijing	Shījīng
 santongli	title	三統曆	Santongli	Sāntǒnglì
@@ -128,7 +128,7 @@ lu-shijia	title	魯世家	Lu shijia	Lǔ shìjiā
 guben-zhushu-jinian	title	古本竹書紀年	Guben zhushu jinian	Gǔběn Zhúshū Jìnián
 diwang-shiji	title	帝王世紀	Diwang shiji	Dìwáng shìjì
 mengzi	title	孟子	Mengzi	Mèngzǐ
-dong-zuobin	person	董 作宾	Dong Zuobin	Dǒng Zuòbīn
+dong-zuobin	person	董 作賓	Dong Zuobin	Dǒng Zuòbīn
 dong-short	person	董	Dong	Dǒng
 dong-tonghe	person	董同龢	Dong Tonghe	Dǒng Tónghé
 xu-short	person	徐	Xu	Xú
@@ -169,6 +169,8 @@ jimao	day	己卯	Jimao	Jǐmǎo
 jisi	day	己巳	Jisi	Jǐsì
 kengshen	day	庚申	Gengshen	Gēngshēn
 kengyin	day	庚寅	Gengyin	Gēngyín
+gengxu	day	庚戌	Gengxu	Gēngxū
+gengzi	day	庚子	Gengzi	Gēngzǐ
 xinmao	day	辛卯	Xinmao	Xīnmǎo
 xinwei	day	辛未	Xinwei	Xīnwèi
 xinyou	day	辛酉	Xinyou	Xīnyǒu
@@ -221,7 +223,7 @@ renwen	title	人文	Renwen	Rénwén
 zhuihe	title	綴合	Zhuihe	Zhuìhé
 zhuixin	title	追新	Zhuixin	Zhuīxīn
 jinghua	title	京華	Jinghua	Jīnghuá
-jianshou	title	践授	Jianshou	Jiànshòu
+jianshou	title	踐授	Jianshou	Jiànshòu
 nanbei	title	南北	Nanbei	Nánběi
 minghou	title	明候	Minghou	Mínghòu
 fuyin	title	傅印	Fuyin	Fùyìn
@@ -230,22 +232,22 @@ wenlu	title	文錄	Wenlu	Wénlù
 xucun	title	續存	Xucun	Xùcún
 yicun	title	遺存	Yicun	Yícún
 jicheng	title	集成	Jicheng	Jíchéng
-tongxuan	title	通选	Tongxuan	Tōngxuǎn
+tongxuan	title	通選	Tongxuan	Tōngxuǎn
 chaocun	title	朝村	Chaocun	Cháocūn
 fujia-title	title	傅家	Fujia	Fùjiā
 chen-mengjia-spaced	person	陳 孟家	Chen Mengjia	Chén Mèngjiā
 chen-zhimai	person	陳志邁	Chen Zhimai	Chén Zhìmài
 guo-moruo-spaced	person	郭 沫若	Guo Moruo	Guō Mòruò
-li-xueqin-spaced	person	李 学琴	Li Xueqin	Lǐ Xuéqín
+li-xueqin-spaced	person	李 學勤	Li Xueqin	Lǐ Xuéqín
 gao-quxun	person	高去尋	Gao Quxun	Gāo Qùxún
 yang-junshi-spaced	person	楊 鈞史	Yang Junshi	Yáng Jūnshǐ
-li-yan-spaced	person	李 颜	Li Yan	Lǐ Yán
+li-yan-spaced	person	李 炎	Li Yan	Lǐ Yán
 mengjia-short	person	孟家	Mengjia	Mèngjiā
 hongxiang-short	person	洪祥	Hongxiang	Hóngxiáng
 junshi-short	person	鈞史	Junshi	Jūnshǐ
 moruo-short	person	沫若	Moruo	Mòruò
 rao-short	person	饒	Rao	Ráo
-li-yan	person	李顏	Li Yan	Lǐ Yán
+li-yan	person	李炎	Li Yan	Lǐ Yán
 ninghu	title	寧滬	Ninghu	Nínghù
 bali	title	巴黎	Bali	Bālí
 cunzhen	title	存真	Cunzhen	Cúnzhēn

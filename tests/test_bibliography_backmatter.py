@@ -78,7 +78,7 @@ def test_bibliography_a_uses_curated_abbreviation_entries():
     assert 'cjk: "殷契粹編"' in abbreviations_yml
     assert 'cjk: "本系所藏甲骨文字"' in abbreviations_yml
     assert 'cjk: "殷契拾掇"' in abbreviations_yml
-    assert 'cjk: "天壤閣甲骨文存并考釋"' in abbreviations_yml
+    assert 'cjk: "天壤閣甲骨文存並考釋"' in abbreviations_yml
     assert 'cjk: "鄴中片羽初集"' in abbreviations_yml
     assert 'cjk: "鄴中片羽三集"' in abbreviations_yml
     assert 'cjk: "臺灣大學所藏甲骨文字附考釋"' in abbreviations_yml
