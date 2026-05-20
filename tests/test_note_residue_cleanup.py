@@ -5,6 +5,7 @@ import re
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+PREAMBLE = REPO_ROOT / "tex" / "preamble.tex"
 PREFACE = REPO_ROOT / "tex" / "frontmatter" / "preface.tex"
 CH01 = REPO_ROOT / "tex" / "chapters" / "ch01.tex"
 CH02 = REPO_ROOT / "tex" / "chapters" / "ch02.tex"
@@ -40,6 +41,12 @@ def test_ch03_no_long_note_spills():
         "(cf. sec.\\footnote[92]",
         "carved. more",
         "CCC C D U 0 81",
+        "\\pinyinterm{zhou-dynasty}\n\\pinyinterm{hongxiang-short}",
+        "\\pinyinterm{zhou-dynasty} \\pinyinterm{hongxiang-short}",
+        "see \\ref{ch:2} (see ch. 2), n. 32",
+        "see \\ref{ch:1} (see ch. 1), n. 62",
+        "inscriptions (see \\ref{ch:2} (see ch. 2), n. 7).",
+        'On the mao sacrifice, see n. 52. ``',
     ]
 
     found = [needle for needle in offenders if needle in text]
@@ -57,6 +64,23 @@ def test_ch03_no_long_note_spills():
     assert "cracks were left numberless.\\footnote[96]{" in text
     assert "\\pinyinterm{hu-houxuan} (\\citeyear{Hu1955Yinhsu}), pp. 38-41" in text
     assert "胡 (1955), pp. 38-41" not in text
+    assert "\\pinyinterm{zhou-hongxiang} (\\citeyear{Chou1969Putzu}), pp. 60-69" in text
+    assert "He also notes (pp. 138, 157) that when" in text
+    assert "see ch.~\\ref{ch:2}, n. 32, above," in text
+    assert "On the mao sacrifice, see n. 52.}\\footnote[89]{" in text
+    assert "see ch.~\\ref{ch:1}, n. 62." in text
+    assert "inscriptions (see ch.~\\ref{ch:2}, n. 7)." in text
+
+
+def test_inscriptionblock_uses_page_footnotes():
+    text = PREAMBLE.read_text(encoding="utf-8")
+    ch04 = CH04.read_text(encoding="utf-8")
+
+    assert r"\begin{minipage}{\textwidth}" not in text
+    assert r"\renewcommand{\thempfootnote}{\arabic{mpfootnote}}" not in text
+    assert r"\begingroup" in text
+    assert r"\footnote[126]{See n. 124.}" in ch04
+    assert r"\footnote[127]{\pinyinterm{qianbian} 2.27.1 (S220.3; period V).}" in ch04
 
 
 def test_ch04_no_calligraphy_note_block_spill():
@@ -254,27 +278,27 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "432 [D] [S52.3]), correspond to period IIb" in text
     assert "\\footnote[95]{E.g., table 7, no. 1.2, appears mostly in period V; no. 1.4 appears mostly in I; no. 2.3 was common in III + IV.} %95" in text
     assert "It is rarely possible to use other objects found in a pit, such as bronzes or pots, to date\n% source: scan 147, printed 130\nthe inscriptions; the inscriptions," in text
-    assert "\\footnote[176]{The slope of the shell fragments in YH127 indicated that they had been poured into the pit from the north (\\pinyinterm{shi-zhangru} [1947], pp. 41-42).} %176" in text
+    assert "\\footnote[176]{The slope of the shell fragments in YH127 indicated that they had been poured into the pit from the north (\\pinyinterm{shi-zhangru} [\\citeyear{Shih1947Yinhsu}], pp. 41-42).} %176" in text
     assert "pit provenance are probabilities rather than certainties.\\footnote[178]{The situation in particular pits, as well as the reasons why the \\pinyinterm{shang} buried their oracle bones, will be considered in Studies.} %178" in text
     assert "1937 will ever be written." in text
-    assert "13.0.0628-13.0.17714 came from YH127; according to \\pinyinterm{shi-zhangru} (1959), p. 322, shells 13.0.17715-13.0.17756 should also be included." in text
+    assert "13.0.0628-13.0.17714 came from YH127; according to \\pinyinterm{shi-zhangru} (\\citeyear{Shih1959Hsiao}), p. 322, shells 13.0.17715-13.0.17756 should also be included." in text
     assert "resolve some of our dating problems.\\footnote[186]{See n. 179" in text
     assert "damaged in Xuzhou---all this" in text
     assert "Any discussion of the distribution of inscriptions by\nperiod (appendix \\ref{app:3} (appendix 3))" in text
     assert "criterion in these cases is frequently too subjective to be useful.\\footnote[53]{For an initial attempt to study the grooves objectively" in text
     assert "4. Page design. This refers to the care with which the graphs were placed on the" in text
-    assert "found there (Itō [1959], p. 339). Nor are some of the early reports" in text
+    assert r"found there (Itō [\citeyear{Ito1959Anyo}], p. 339). Nor are some of the early reports" in text
     assert "whether \\pinyinterm{jiabian} 110-178, 368-375, and 391 came from A26 or A25?;" in text
-    assert "282-296 (cf. \\pinyinterm{chen-mengjia} [1956], p. 169)." in text
+    assert "282-296 (cf. \\pinyinterm{chen-mengjia} [\\citeyear{Chen1956Yin}], p. 169)." in text
     assert "we can only suppose that \\pinyinterm{jiabian} 490-928 came from sector F within the village" in text
     assert "The title of this projected work was \\booktitle{Jiagu wenzi yu Yinxu yizhi};" in text
     assert "\\pinyinterm{shi-zhangru}'s forthcoming \\booktitle{Xiaotun diyi ben: yizhi de faxian yu fajue, yibian: jianzhu yicun}, to be published by the Academia Sinica" in text
-    assert "according to \\pinyinterm{hu-houxuan} (1939a), p. 484, only in periods II and IV.} %130" in text
-    assert "Kaizuka (1946), pp. 208-209 for a Chinese translation" in text
+    assert "according to \\pinyinterm{hu-houxuan} (\\citeyear{Hu1939aShih}), p. 484, only in periods II and IV.} %130" in text
+    assert "Kaizuka (\\citeyear{Kaizuka1946Chiigoku}), pp. 208-209 for a Chinese translation" in text
     assert "fundamental premise---that individual diviners may be associated with limited periods---rests upon the unverifiable assumption" in text
     assert "For another dispute, see n. 44.} %36" in text
-    assert "perform [\\pinyinterm{dong-short} (1965), p. 96]) yung ritual to \\pinyinterm{dajia} on chia-ch'en" in text
-    assert "started auspiciously (cf. Keightley [1973a], p. 34)." in text
+    assert "performed (or were going to perform [\\pinyinterm{dong-short} (\\citeyear{Tung1965Chia}), p. 96]) yung ritual to \\pinyinterm{dajia} on chia-ch'en" in text
+    assert "started auspiciously (cf. Keightley [\\citeyear{Keightley1973aShang}], p. 34)." in text
     assert "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao: \\pinyinterm{jiabian} 2941; 3012; 3045+3047;" in text
     assert "3045+3047; Tui É: \\pinyinterm{jiabian} 3045+3047; 3083;" in text
     assert "\\footnote[97]{E.g., table 7, nos. 1.4.-1.4.6; 2.4.-2.5.1; 3.4.4.2.} %97" in text
@@ -284,7 +308,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "period III-IV: \\pinyinterm{renwen} 1737; 1767; period V:" in text
     assert "period V: \\pinyinterm{houbian} 1.10.16; 2.15.1; RFG:" in text
     assert "Tuié and Hsieh.} %93" in text
-    assert "CKWP (1965), ``\\pinyinterm{hewen},'' pp. 27a-b;" in text
+    assert "CKWP (\\citeyear{CKWP1965Chia}), ``\\pinyinterm{hewen},'' pp. 27a-b;" in text
     assert "graphs for hsi , ``night,'' and yue 月, ``moon'' or ``month,'' changed places in different periods" in text
     assert "formulas which included the word yue 曰 ``saying,''" in text
     assert "The phrase jin yue, ``this month,'' or jin ji yue, ``this nth month,''" in text
@@ -303,8 +327,8 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "recorded only in period V (S417.2; 431.2-432.1; 478.4-479.2)." in text
     assert "period II: \\pinyinterm{nanbei}, ``Ming'' 395 [D]; period V: \\pinyinterm{qianbian} 2.8.7)." in text
     assert 'occurrences of the phrase tsai mou, ``at X-place,\'\' may be found at S498;' in text
-    assert "\\pinyinterm{xu-jinxiong} (1963), pp. 8a-11b." in text
-    assert "equivalent phrases (e.g., Hu, ibid., p. 481; Ikeda [1964], 2.18.13);" in text
+    assert "\\pinyinterm{xu-jinxiong} (\\citeyear{Hsu1963Shihyu}), pp. 8a-11b." in text
+    assert "equivalent phrases (e.g., Hu, ibid., p. 481; Ikeda [\\citeyear{Ikeda1964Inkyo}], 2.18.13);" in text
     assert "and campaigning (the inscriptions cited by Xu, ibid., p. 9a)." in text
     assert "originally meant ``here (at this point in the divination process) we offered sacrifice,''" in text
     assert "caught so many animals (Xu, ibid., p. 9b; cf. Ogawa 6, shakubun, p. 263, n. 5)." in text
@@ -313,12 +337,12 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "date should be considered a verification (see n. 99)\n---if so, such verifications also appeared, rarely, in\nperiod II (n. 101)---\\listitem{4} uncertainty about the" in text
     assert "wanted to have happen---``there will be no disaster,'' ``today\nit will not rain''---with the crack numbers running from 1 to 5" in text
     assert "and sets, in short, became standardized and simplified with the passage of time.\n\n\\subsubsection[Crack Notations]{Crack Notations}" in text
-    assert "especially those containing the negative pi---probably a substitution, used principally in period III+IV, for wu ) (Serruys [1974], p. 6; cf. \\pinyinterm{chen-mengjia-spaced} [1956], p. 128)---were merely single, negative charges, and not one of a positive-negative pair." in text
-    assert "Keightley (1973a), pp. 37-38, 46-48, 57.} %132" in text
+    assert "especially those containing the negative pi---probably a substitution, used principally in period III+IV, for wu ) (Serruys [\\citeyear{Serruys1974The}], p. 6; cf. \\pinyinterm{chen-mengjia-spaced} [\\citeyear{Chen1956Yin}], p. 128)---were merely single, negative charges, and not one of a positive-negative pair." in text
+    assert "Keightley (\\citeyear{Keightley1973aShang}), pp. 37-38, 46-48, 57.} %132" in text
     assert "e.g., ``Divining: `(The king) should not hunt on the jen day, (for if he does,) it will perhaps rain''' (\\pinyinterm{jiabian} 1920 [S293.3])," in text
     assert "this is an instance of spill-over---either of period II diviners and engravers operating in period I" in text
     assert "\\pinyinterm{xu-jinxiong} also argues that \\pinyinterm{jiabian} 27+2 and \\pinyinterm{wenlu} 78" in text
-    assert "The basic study is \\pinyinterm{zhang-bingquan} (1952); in English, see Wu Shih-ch'ang (1955)." in text
+    assert "The basic study is \\pinyinterm{zhang-bingquan} (\\citeyear{Chang1952Shuo}); in English, see Wu Shih-ch'ang (\\citeyear{Wu1955Broken})." in text
     assert "on RFG fragments there is 1 shang-chi and 1 hsiao-chi; in period II, there are no crack notations;" in text
     assert "hsiao-chi, ``slightly auspicious,''\\footnote[133]{\\pinyinterm{yibian} 7767 (left hyoplastron) contains a unique hsia-chi F, probably an engraver's error.} pu tsai ming\\footnote[135]{" in text
     assert "state or king was concerned---which is not necessarily the same thing---as far as the \\pinyinterm{shang} diviners were concerned" in text
@@ -327,29 +351,29 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "sawn in the socket never appear after period I.\\footnote[142]{Ibid., p. 123.} Further research may permit relatively" in text
     assert "subtle distinctions in preparation technique---reflecting, presumably, the habits of the" in text
     assert "artisans involved---to be used as criteria for assigning different periods to the inscribed" in text
-    assert "\\footnote[143]{E.g., \\pinyinterm{xu-jinxiong} (1974), pp. 209, 254-255, has proposed that variations in the shape of the ridge made on the outer edge" in text
+    assert "\\footnote[143]{E.g., \\pinyinterm{xu-jinxiong} (\\citeyear{Hsu1974Scapulimantic}), pp. 209, 254-255, has proposed that variations in the shape of the ridge made on the outer edge" in text
     assert "Other Neolithic and early \\pinyinterm{shang} oracle bones, however, did have pyromantic hollows, which varied" in text
     assert "\\pinyintext{longshan} scapulimancers mainly used bored\nhollows that were round and shallow;" in text
     assert r"Pyromantic bones and shells excavated from the \pinyinterm{renmin-gongyuan} phase at \pinyinterm{zhengzhou}\footnote[148]{" in text
     assert r"phase)\footnote[149]{" in text
     assert "\n\n(which is thought to stand chronologically just prior to period I of the \\pinyinterm{anyang} phase)" not in text
-    assert "periods II to V.\\footnote[151]{\\pinyinterm{liu-yuanlin} (1974), p. 118. \\pinyinterm{liu-yuanlin} (p. 117, plate 12.1) notes a rare period V bone fragment" in text
+    assert "periods II to V.\\footnote[151]{\\pinyinterm{liu-yuanlin} (\\citeyear{Liu1974Puku}), p. 118. \\pinyinterm{liu-yuanlin} (p. 117, plate 12.1) notes a rare period V bone fragment" in text
     assert "The topic---which has led \\pinyinterm{xu-jinxiong} to\nwrite several articles and two book-length monographs" in text
     assert "I frequently find myself uncertain as to whether one hollow was, as \\pinyinterm{xu-jinxiong} claims, the same as another." in text
-    assert "the diviner Cheng, whom \\pinyinterm{xu-jinxiong-tight} (1974), pp. 86-87, suggests may be linked" in text
+    assert "the diviner Cheng, whom \\pinyinterm{xu-jinxiong-tight} (\\citeyear{Hsu1974Scapulimantic}), pp. 86-87, suggests may be linked" in text
     assert "And what constitutes ``sameness''? These are not quibbles;" in text
     assert "straight shoulders and trident-shaped ends. He is also paying greater attention" in text
-    assert "when needed (e.g., [1974], pp. 86, 170, 207-208; cf. [1973], pp. 6, 63).} and he is beginning to publish the" in text
+    assert "when needed (e.g., [\\citeyear{Hsu1974Scapulimantic}], pp. 86, 170, 207-208; cf. [\\citeyear{Hsu1973Tsung}], pp. 6, 63).} and he is beginning to publish the" in text
     assert "This aspect of oracle-bone scholarship is still in its infancy, and some of \\pinyinposs{xu-jinxiong} conclusions may need revision." in text
     assert "the ``one-one'' pattern, in which the two columns of hollows start at the same level" in text
     assert "and the ``one-three'' pattern, in which the inner column of hollows starts two spaces below the outer column" in text
-    assert "the bone surface was more frequently chipped in the later periods than it had been in\nperiod I.\\footnote[169]{\\pinyinterm{xu-jinxiong} (1973a), pp. 19, 101.} He has also discerned differences in the burn marks of periods III and IV." in text
+    assert "the bone surface was more frequently chipped in the later periods than it had been in\nperiod I.\\footnote[169]{\\pinyinterm{xu-jinxiong} (\\citeyear{Hsu1973aPuku}), pp. 19, 101.} He has also discerned differences in the burn marks of periods III and IV." in text
     assert "the sheep scapulas from the \\pinyinterm{longshan} site at Keshengzhuang E; see 豐西發掘報告, p. 68, plate 35) no cracks appear to have formed.} %168" in text
     assert "It will be clear from sec.~\\ref{sec:chapters-ch04:4.3.2} that \\pinyinterm{xu-jinxiong}'s pioneering analyses of related physical criteria---hollow shapes, hollow placement, burn marks---are helping to develop" in visible
-    assert "regard to one another and other datable objects in the ground.\\footnote[174]{This is only possible in the case of oracle bones that were scientifically excavated; for these, see the archaeological reports listed in n. 173. For an interesting attempt to deduce the location where certain privately excavated inscriptions must have been found, see Itō (1971), p. 88.} %174" in text
+    assert "regard to one another and other datable objects in the ground.\\footnote[174]{This is only possible in the case of oracle bones that were scientifically excavated; for these, see the archaeological reports listed in n. 173. For an interesting attempt to deduce the location where certain privately excavated inscriptions must have been found, see Itō (\\citeyear{Ito1971Fujii}), p. 88.} %174" in text
     assert "judgment---barring the presence of criteria such as ancestral titles or diviners' names on\nevery single fragment---can never be more than probable" in text
     assert "\\pinyinterm{qu-wanli}, in his kǎoshì, dates these to period I." in text
-    assert "More marked chronological confusion was found in other pits; e.g., A26, E9 (\\pinyinterm{dong-short} [1929a], p. 180); 5: H20;" in text
+    assert "More marked chronological confusion was found in other pits; e.g., A26, E9 (\\pinyinterm{dong-short} [\\citeyear{Tung1929aHsin}], p. 180); 5: H20;" in text
     assert "1.2.0123 (from A26; 20 October); 1.2.0128-1.2.0139 (from F24; 22 October); 1.2.0145 (from A26 again; 23 October);" in text
     assert "1.2.0123 and 1.2.0145, for example, were found in A26, but we cannot conclude" in text
     assert "sector B (\\pinyinterm{chen-mengjia}, op. cit., p. 143); we can only suppose that \\pinyinterm{jiabian} 490-928 came from sector F within the village (\\pinyinterm{chen-mengjia}, op. cit., pp. 143, 147)" in text
@@ -395,13 +419,13 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "non-Greek" in ch01
     assert "Chinggis Khan was scorching" in ch01
     assert "pyro-scapulimancy from the Old World to the New" in ch01
-    assert "Cooper (1936), pp. 30-31, 38;" in ch01
-    assert "Eisenberger (1938), pp. 81-89;" in ch01
+    assert r"Cooper (\citeyear{Cooper1936Scapulimancy}), pp. 30-31, 38;" in ch01
+    assert r"Eisenberger (\citeyear{Eisenberger1938Das}), pp. 81-89;" in ch01
     assert r"from \pinyinterm{longshan} and other Neolithic sites" in ch01
     assert r"from \pinyinterm{longshan} and Bronze Age sites" in ch01
     assert "pp. 842-844" in ch01
-    assert r"For scapulimancy, Longshanoid culture, and ancestor worship, see \pinyinterm{zhang-guangzhi} (1962), p. 184; (1968), p. 128; Wheatley (1971), pp. 27-28." in ch01
-    assert r"For carbon-14 dates of \pinyinterm{longshan} sites, see Barnard (1975), pp. 46-47." in ch01
+    assert r"For scapulimancy, Longshanoid culture, and ancestor worship, see \pinyinterm{zhang-guangzhi} (\citeyear{Chang1962China}), p. 184; (\citeyear{Chang1968Archaeology}), p. 128; Wheatley (\citeyear{Wheatley1971Pivot}), pp. 27-28." in ch01
+    assert r"For carbon-14 dates of \pinyinterm{longshan} sites, see Barnard (\citeyear{Barnard1975First}), pp. 46-47." in ch01
     assert r"For the possibility of scapulimantic remains in \pinyinterm{yangshao} sites, see KK (1959.2), pp. 63-64" in ch01
     assert r"The earliest evidence of pyromancy comes from \pinyinterm{fuhegoumen} in Liaoning" in ch01
     assert "3416 ± 139 B.C." in ch01
@@ -410,10 +434,10 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
     assert "KK [1973.5], pp. 267-268" in ch01
     assert "S436.3-4; 437.4." in ch01
     assert "S150.1-151.2" in ch01
-    assert "Li Chengfu [1965], pp. 50-51;" in ch01
-    assert "Katō [1970], p. 155;" in ch01
+    assert "Li Chengfu [\\citeyear{LiChengfu1965Ku}], pp. 50-51;" in ch01
+    assert "Katō [\\citeyear{Kato1970Kanji}], p. 155;" in ch01
     assert "no distinction is intended.} %15" in ch01
-    assert "male ones (Mao [1971], pp. 34–52).} %30" in ch01
+    assert "male ones (Mao [\\citeyear{Mao1971Turtles}], pp. 34–52).} %30" in ch01
     assert "shell is speculative.} %52" in ch01
     assert "thickness (fig. 3).\\footnote[54]{" in ch01
     assert "written on.\\footnote[55]{" in ch01
@@ -529,7 +553,7 @@ def test_appendix_note_reference_residue_removed():
     assert r"The king entertains \pinyinterm{dageng} (K5 11)'s consort, \pinyinterm{biren}" in app05
     assert r"The king entertains \pinyinterm{dawu} (K7 1)'s consort, \pinyinterm{biren}" in app05
     assert r"The king entertains \pinyinterm{zuding}'s (K15 21) consort, \pinyinterm{biji}" in app05
-    assert r"\pinyinterm{chen-mengjia} (1956), p. 273;" in app05
+    assert r"\pinyinterm{chen-mengjia} (\citeyear{Chen1956Yin}), p. 273;" in app05
     assert "references to the Zhou appear mainly in period I" in app05
     assert "references to the Yufang occur only in period V" in app05
     assert "shi\nren, ``to send men.''" in app05
@@ -603,18 +627,18 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "Wang Yirong's sickness" in ch03
     assert "Wang Yirong and Liu E" in ch03
     assert "pp. 13213465 D ]" not in ch03
-    assert r"\footnote[40]{E.g., \pinyinterm{chen-mengjia-spaced} (1956), pp. 132-134.} %40" in ch03
+    assert r"\footnote[40]{E.g., \pinyinterm{chen-mengjia-spaced} (\citeyear{Chen1956Yin}), pp. 132-134.} %40" in ch03
     assert "Kuo (?)---hence Guo of Zhi?---" not in ch03
     assert "The reading of kuo for is not certain." not in ch03
     assert "and twelve charges (I-N, P-U),}85" not in ch03
     assert "pp. 10It" not in ch03
     assert "Guo (?)---hence Guo of Zhi?---" in ch03
     assert "The reading of guo for is not certain." in ch03
-    assert "\\pinyinterm{zhang-bingquan} (1956), pp. 246, 253-254;" in ch03
+    assert "\\pinyinterm{zhang-bingquan} (\\citeyear{Zhang1956Pu}), pp. 246, 253-254;" in ch03
     assert r"CKWP (sec.~\ref{sec:chapters-ch03:3.3.1}" in ch03_visible
     assert r"follow Zhi Guo (to attack the \pinyinterm{bafang}, for if he does, we will not perhaps" in ch03
     assert "probably divined on the same day, about the king following Zhi Guo to attack the \\pinyinterm{bafang}" in ch03
-    assert "Wu Qichang ([1971], pp. 10-11)" in ch03
+    assert "Wu Qichang ([\\citeyear{Wu1971Study}], pp. 10-11)" in ch03
 
     assert "vice versa.¹ 179" not in ch04
     assert "110111112113114115" not in ch04
@@ -655,13 +679,13 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "detailed verifications,\\footnote[121]{" in ch04
     assert "thirteen foxes''\\footnote[122]{" in ch04
     assert "other periods.\\footnote[123]{" in ch04
-    assert "Lu Shixian (1961), p. 72.1;" in ch04
+    assert "Lu Shixian (\\citeyear{Lu1961Yinchi}), p. 72.1;" in ch04
     assert "oracle bones found at \\pinyinterm{erligang}, \\pinyinterm{liulige}, Mianchi, Chuqiu, Qilipu, and \\pinyinterm{gaohuangmiao}." in ch04
     assert "the upper stratum at \\pinyinterm{chengziyai}" in ch04
     assert "father Xin'';" in ch04
     assert r"altars: \pinyinterm{shangjia}, \pinyinterm{cheng-ancestor}, \pinyinterm{tading}, \pinyinterm{dajia}, \pinyinterm{zuyi}" in ch04
     assert "Tongzuan 118, kǎoshì" in ch04
-    assert "CKWP (1965), ``\\pinyinterm{hewen},''" in ch04
+    assert "CKWP (\\citeyear{CKWP1965Chia}), ``\\pinyinterm{hewen},''" in ch04
     assert "\\pinyinterm{xu-jiaguwen-bian}, ``\\pinyinterm{fulu},''" in ch04
     assert r"to \pinyinterm{dajia} (K3 9)." in ch04
     assert r"the \pinyinterm{longshan} site at Keshengzhuang E" in ch04
@@ -770,8 +794,8 @@ def test_ch01_ch03_low_frequency_author_forms_are_normalized():
     assert "Tung Tso-pin's accounts ([1929], p. 58; [1958], p. 921)" not in ch01
     assert r"Zhang Guangyuan made what is probably the most serious modern attempt to reproduce \pinyinterm{shang} plastromancy" in ch01
     assert r"(something noted by \pinyinterm{hu-xu} [1782--1787], ch. 4, p. 4b)" in ch01
-    assert r"\pinyinterm{dong-zuobin}'s accounts ([1929], p. 58; [1958], p. 921)" in ch01
+    assert r"\pinyinterm{dong-zuobin}'s accounts ([\citeyear{Tung1929Shang}], p. 58; [\citeyear{Tung1958Chiaku}], p. 921)" in ch01
     assert r"the so-called \textit{gui-yu} 龜語" in ch01
 
     assert "see Chang Ch'un-shu [1972], p. 283" not in ch03
-    assert "see Zhang Chunshu [1972], p. 283" in ch03
+    assert "see Zhang Chunshu [\\citeyear{Chang1972Yin}], p. 283" in ch03

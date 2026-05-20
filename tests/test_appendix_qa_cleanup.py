@@ -67,7 +67,7 @@ def test_appendix_4_heading_debris_and_note_splice_removed():
     assert "@@HEADING@@21@@" not in text
     assert "@@HEADING@@1180@@" not in text
     assert "21 years; Later Han, at 16 years; T'ang, at 12" in text
-    assert "Knoblock (1964).} %27" in text
+    assert r"Knoblock (\citeyear{Knoblock1964The}).} %27" in text
     assert "period II burial (see n. 13)." in text
     assert "The possibility that the charcoal was older than the burial has already been mentioned." in text
 
@@ -250,7 +250,7 @@ def test_appendix_1_opening_restored():
     assert "Only relationships between scute seams (fig. 3) will be considered here" in text
     assert "which were scraped clean (sec.~\\ref{sec:chapters-ch01:1.3.2}" in visible
     assert "so that only the bone seams are visible" in visible
-    assert "Blackith and Reyment [1971]).\\footnote[1]{" in text
+    assert "Blackith and Reyment [\\citeyear{BlackithReyment1971Morphometrics}]).\\footnote[1]{" in text
     assert "(R - \\lambda I)v = 0" in text
     assert "yielding a set of eigenvalues ($\\lambda$)" in text
     assert "1. With the technique of principal component" not in text
@@ -377,8 +377,8 @@ def test_chapter_5_authenticity_note_block_restored():
 
     assert "See too n. 34.} %47" in text
     assert "buy these bones he may encounter a hundred forgeries for every genuine piece" in text
-    assert "\\footnote[34]{For an introduction to authenticating criteria, see White (1945), pp. 75, 77; \\pinyinterm{yan-yiping} (1967), 1, pp. 2-6." in text
-    assert "As Yetts (1954), p. xix, concludes, ``Their words in jest were only too true." in text
+    assert r"\footnote[34]{For an introduction to authenticating criteria, see White (\citeyear{White1945Bone}), pp. 75, 77; \pinyinterm{yan-yiping} (\citeyear{Yen1967Chiaku}), 1, pp. 2-6." in text
+    assert r"As Yetts (\citeyear{Yetts1954Shang}), p. xix, concludes, ``Their words in jest were only too true." in text
     assert "recognized.\\footnote[36]{" in text
     assert "inscription.\\footnote[37]{" in text
     assert "forgery;\\footnote[38]{" in text
@@ -462,8 +462,8 @@ def test_chapter_2_note_111_restored():
     visible = normalized_visible_text(text)
 
     assert "intentional abbreviation; cf. sec.~\\ref{sec:chapters-ch03:3.7.1.1}" in visible
-    assert "\\pinyinterm{yan-yiping} [1959], pp. 230, 233;" in text
-    assert "\\pinyinterm{qiu-short} (1972), p. 43.} %111" in text
+    assert "\\pinyinterm{yan-yiping} [\\citeyear{Yen1959Shih}], pp. 230, 233;" in text
+    assert "\\pinyinterm{qiu-short} (\\citeyear{Chiu1972DuAnyang}), p. 43.} %111" in text
     assert "see  cf. sec. 3.7.1.1" not in text
     assert "49 1 U U" not in text
 
@@ -481,11 +481,11 @@ def test_chapter_2_notes_116_to_124_restored():
     text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
     visible = normalized_visible_text(text)
 
-    assert "(1951a), p. 304.} %116" in text
+    assert "(\\citeyear{Tung1951aChungkuo}), p. 304.} %116" in text
     assert "For the symbols \\_ or \\_, sec.~\\ref{sec:chapters-ch05:5.6}" in visible
     assert "has made an exhaustive study of inscription patterns on various parts of the shell, both front and back." in text
     assert "center.\\footnote[123]{It was frequently the case that columns on a left scapula ran to the right and vice versa;" in text
-    assert "vice versa.\\footnote[124]{\\pinyinterm{zhou-hongxiang} (1969), pp. 37-52," in text
+    assert "vice versa.\\footnote[124]{\\pinyinterm{zhou-hongxiang} (\\citeyear{Chou1969Putzu}), pp. 37-52," in text
     assert "The remains of the wished-for, negative charge, ``Tzu [\\pinyinterm{shang}] will not have sickness,''" in text
     assert "123. It was frequently the case that columns" not in text
     assert "124. \\pinyinterm{zhou-hongxiang} (1969), pp. 37-52," not in text
@@ -496,7 +496,7 @@ def test_chapter_2_notes_116_to_124_restored():
 def test_chapter_2_note_130_hybrid_cleaned():
     text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
 
-    assert "Li Daliang [1972], p. 29" in text
+    assert "Li Daliang [\\citeyear{Li1972Kuei}], p. 29" in text
     assert "李 Taliang [1972], p. 29" not in text
 
 
@@ -504,8 +504,8 @@ def test_chapter_2_note_99_local_cleanup():
     text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
 
     assert "\\listitem{1} practice inscriptions carved on unprepared or unburned bone (e.g., KK [\\citeyear{KK1975Anyang}], p. 45, citing H99:3);" in text
-    assert "Taida 2, 7; see \\pinyinterm{liu-yuanlin} [1974], p. 121" in text
-    assert "see \\pinyinterm{xu-zhongshu} [1931], p. 528, for a drawing" in text
+    assert "Taida 2, 7; see \\pinyinterm{liu-yuanlin} [\\citeyear{Liu1974Puku}], p. 121" in text
+    assert "see \\pinyinterm{xu-zhongshu} [\\citeyear{HsuChungshu1931Tsailun}], p. 528, for a drawing" in text
     assert "\\pinyinterm{jiatu} 125/126); \\listitem{5}" in text
     assert "\\listitem{6} kan-chih tables (n. 100).} %99" in text
     assert "(I) practice inscriptions" not in text

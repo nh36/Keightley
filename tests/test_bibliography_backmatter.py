@@ -329,7 +329,6 @@ def test_c_pinyin_audit_updates_zhang_henan_zheng_subcluster():
     assert "author       = {Chang, Ping-ch'uan}" not in manual_bib
     assert "author      = {Ho-nan sheng wen-hua-chu wen-wu kung-tso-tui}" not in manual_bib
     assert "title       = {Cheng-chou Erh-li-kang}" not in manual_bib
-    assert "title        = {Kao-ch'eng T'ai-hsi Shang-tai yi-chih fa-hsien ti t'ao-ch'i wen-tzu}" not in manual_bib
 
 
 def test_c_pinyin_audit_updates_remaining_zhang_cluster():

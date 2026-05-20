@@ -75,18 +75,20 @@
 }
 
 % Two-column inscription environment - simplified to prose-based layout
-% Wraps inscription content without table structure to avoid LaTeX nesting issues
+% Wraps inscription content without table structure to avoid LaTeX nesting issues.
+% Keep this as a normal grouped block so footnotes go to the page foot, not to a
+% minipage-local footnote area inside the inscription itself.
 \newenvironment{inscriptionblock}
 {%
   \par\medskip
-  \noindent
-  \begin{minipage}{\textwidth}
-  \renewcommand{\thempfootnote}{\arabic{mpfootnote}}
+  \begingroup
   \setlength{\parskip}{0.3\baselineskip}
   \setlength{\parindent}{0pt}
+  \noindent
 }
 {%
-  \end{minipage}
+  \par
+  \endgroup
   \medskip
 }
 

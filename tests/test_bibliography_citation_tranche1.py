@@ -283,7 +283,7 @@ def test_first_tranche_citations_are_wired():
     assert r"Wang Ziyu (\citeyear{Wang1933Chia})" in ch05
     assert "陳 春县 (1933)" not in ch04
     assert r"Ch'en Ch'ün-hsien (\citeyear{Chen1933Chenren})" not in ch04
-    assert r"Chen Qunxian (\citeyear{Chen1933Chenren}) or Hopkins (1934), pp. 80-81" in ch04
+    assert r"Chen Qunxian (\citeyear{Chen1933Chenren}) or Hopkins (\citeyear{Hopkins1934Archaic}), pp. 80-81" in ch04
     assert "并 (1930)" not in ch05
     assert "Ping (1930) described an extinct terrestrial tortoise" not in ch05
     assert "turtle examined by Ping was" not in ch05
@@ -303,19 +303,19 @@ def test_first_tranche_citations_are_wired():
     assert r"Ting Su (\citeyear{Su1969Shuo}) has made the only attempt" in ch05
     assert "turtle examined by Ping was, in fact," not in ch05
     assert "turtle examined by Bing Zhi was, in fact," in ch05
-    assert r"cf. \pinyinterm{zhou-hongxiang} [1976]," in ch05
+    assert r"cf. \pinyinterm{zhou-hongxiang} [\citeyear{Chou1976OracleBone}]," in ch05
     assert r"\pinyinterm{zhou-dynasty} [1976]" not in ch05
     assert r"\pinyinterm{jin-xiangheng} (\citeyear{Chin1973Fujen});" in ch05
     assert r"金 相横 (1973);" not in ch05
-    assert r"\pinyinterm{rao-short} (1961a), p. 95;" in ch02
-    assert r"\pinyinterm{rao-short} [1961], p. 953" in ch02
+    assert r"\pinyinterm{rao-short} (\citeyear{Jao1961aLun}), p. 95;" in ch02
+    assert r"\pinyinterm{rao-short} [\citeyear{Jao1961Yupuchao}], p. 953" in ch02
     assert r"\pinyinterm{rao-short} [1961], p. 957" not in ch01
     assert r"\pinyinterm{rao-short} [\citeyear{Jao1961Yupuchao}], p. 957" in ch01
     assert r"see 焦 (1961), p. 957" not in ch01
     assert r"(\pinyinterm{rao-short}, loc. cit.;" in ch01
     assert r"\pinyinterm{jiao-short}" not in ch01
     assert r"\pinyinterm{jiao-short}" not in ch02
-    assert r"\pinyinterm{huang-peirong} [1969], pp. 3a-b" in ch02
+    assert r"\pinyinterm{huang-peirong} [\citeyear{Huang1969Putsaiming}], pp. 3a-b" in ch02
     assert r"\pinyinterm{huang-peirong} [1975]" not in ch02
     assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1945Chiakuhsueh}), p. 5b," in ch03
     assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1955Yinhsu}), pp. 38-41" in ch03
@@ -365,7 +365,7 @@ def test_first_tranche_citations_are_wired():
     assert r"Shen Wenzhuo (\citeyear{Shen1977Fuyu})" in preface
     assert r"\pinyinterm{tang-lan} [\citeyear{TangLan1976Hotsun}], p. 60" in preface
     assert r"\pinyinterm{qu-wanli} (\citeyear{Chu1965aShihchi}), pp. 88-89," in preface
-    assert r"Wheatley (1971), pp. 13-14, 420;" in preface
+    assert r"Wheatley (\citeyear{Wheatley1971Pivot}), pp. 13-14, 420;" in preface
     assert r"\pinyinterm{yan-yiping} (\citeyear{Yen1961Chiaku}), pp. 207-215" in preface
     assert "\\pinyinterm{yan-yiping} (\\citeyear{Yen1961Chiaku}),\n207-217." in preface
     assert r"\pinyinterm{hu-houxuan} (\citeyear{Hu1977Niao})," in preface
