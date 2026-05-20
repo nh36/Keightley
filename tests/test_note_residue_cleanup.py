@@ -1,6 +1,7 @@
 """Regression checks for recent inline note-residue cleanup."""
 
 from pathlib import Path
+import re
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -14,8 +15,17 @@ APP04 = REPO_ROOT / "tex" / "appendices" / "app04.tex"
 APP05 = REPO_ROOT / "tex" / "appendices" / "app05.tex"
 
 
+def strip_tex_comments(text: str) -> str:
+    return "\n".join(re.sub(r"(?<!\\)%.*", "", line) for line in text.splitlines())
+
+
+def normalized_visible_text(text: str) -> str:
+    return re.sub(r"\s+", " ", strip_tex_comments(text)).strip()
+
+
 def test_ch03_no_long_note_spills():
     text = CH03.read_text(encoding="utf-8")
+    visible = normalized_visible_text(text)
     offenders = [
         "dictionary. 14 Following",
         "} 15 it also quotes",
@@ -39,11 +49,11 @@ def test_ch03_no_long_note_spills():
     assert "vessels,\\footnote[15]{" in text
     assert "Guo\\footnote[104]{" in text
     assert "routine abbreviation.\\footnote[106]{" in text
-    assert "inscriptionless cracks identified in \\ref{sec:chapters-ch03:3.7.2} (sec. 3.7.2)\\footnote[119]{" in text
+    assert "inscriptionless cracks identified in sec.~\\ref{sec:chapters-ch03:3.7.2}" in visible
     assert "it will be inauspicious.\\footnote[92]{" in text
     assert "be inauspicious.\\footnote[93]{" in text
     assert "In Tuan (?).\\footnote[94]{" in text
-    assert "\\ref{sec:chapters-ch01:1.6.4} (sec. 1.6.4)).\\footnote[95]{" in text
+    assert "cf. sec.~\\ref{sec:chapters-ch01:1.6.4}" in visible
     assert "cracks were left numberless.\\footnote[96]{" in text
     assert "\\pinyinterm{hu-houxuan} (\\citeyear{Hu1955Yinhsu}), pp. 38-41" in text
     assert "胡 (1955), pp. 38-41" not in text
@@ -92,6 +102,7 @@ def test_ch04_no_calligraphy_note_block_spill():
 
 def test_ch04_mid_and_late_note_residue_removed():
     text = CH04.read_text(encoding="utf-8")
+    visible = normalized_visible_text(text)
     offenders = [
         "14. For period I inscriptions, see \\$527.1; for",
         "17. \\pinyinterm{dong-short} (1933), facing p. 344;",
@@ -334,7 +345,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "and the ``one-three'' pattern, in which the inner column of hollows starts two spaces below the outer column" in text
     assert "the bone surface was more frequently chipped in the later periods than it had been in\nperiod I.\\footnote[169]{\\pinyinterm{xu-jinxiong} (1973a), pp. 19, 101.} He has also discerned differences in the burn marks of periods III and IV." in text
     assert "the sheep scapulas from the \\pinyinterm{longshan} site at Keshengzhuang E; see 豐西發掘報告, p. 68, plate 35) no cracks appear to have formed.} %168" in text
-    assert "It will be clear from \\ref{sec:chapters-ch04:4.3.2} (see sec. 4.3.2) that \\pinyinterm{xu-jinxiong}'s pioneering analyses of related\nphysical criteria---hollow shapes, hollow placement, burn marks---are helping to develop" in text
+    assert "It will be clear from sec.~\\ref{sec:chapters-ch04:4.3.2} that \\pinyinterm{xu-jinxiong}'s pioneering analyses of related physical criteria---hollow shapes, hollow placement, burn marks---are helping to develop" in visible
     assert "regard to one another and other datable objects in the ground.\\footnote[174]{This is only possible in the case of oracle bones that were scientifically excavated; for these, see the archaeological reports listed in n. 173. For an interesting attempt to deduce the location where certain privately excavated inscriptions must have been found, see Itō (1971), p. 88.} %174" in text
     assert "judgment---barring the presence of criteria such as ancestral titles or diviners' names on\nevery single fragment---can never be more than probable" in text
     assert "\\pinyinterm{qu-wanli}, in his kǎoshì, dates these to period I." in text
@@ -344,7 +355,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "sector B (\\pinyinterm{chen-mengjia}, op. cit., p. 143); we can only suppose that \\pinyinterm{jiabian} 490-928 came from sector F within the village (\\pinyinterm{chen-mengjia}, op. cit., pp. 143, 147)" in text
     assert "that \\pinyinterm{jiabian} 3483 came from trenches F1-4 (\\pinyinterm{chen-mengjia}, op. cit., pp. 143-144)." in text
     assert "significant number of the inscriptions in \\pinyinterm{jiabian}.\\footnote[182]{" in text
-    assert "Those estimates of total numbers of fragments excavated (as in appendix \\ref{app:3}, sec. \\ref{sec:appendices-app03:1} (appendix 3, sec. 1)), therefore, that depend upon the registration numbers for their fragment counts may not be fully accurate" in text
+    assert "Those estimates of total numbers of fragments excavated (as in appendix \\ref{app:3}, sec. \\ref{sec:appendices-app03:1}" in visible
     assert "Only the Yi and Bing areas were excavated comprehensively; the Jia section of foundations was not thoroughly trenched" in text
     assert "period (appendix \\ref{app:3} (appendix 3)) must consider that the comparatively blank periods in our chronology\nmay be related to the blank spaces on the excavation maps.\\footnote[188]{" in text
 
@@ -468,11 +479,12 @@ def test_ch01_and_ch02_long_note_sentinel_runs_removed():
 def test_appendix_note_reference_residue_removed():
     app04 = APP04.read_text(encoding="utf-8")
     app05 = APP05.read_text(encoding="utf-8")
+    app05_visible = normalized_visible_text(app05)
 
     assert "table\\footnote[28]" not in app04
     assert "table 2.\\footnote[28]{" in app04
     assert "described in sec.\\footnote[1]" not in app05
-    assert "described in \\ref{sec:chapters-ch04:4.3.1.12} (sec. 4.3.1.12). Changes" in app05
+    assert "described in sec.~\\ref{sec:chapters-ch04:4.3.1.12}" in app05_visible
     assert "period I.\\footnote[1]{" in app05
     assert "(day\\footnote[5]" not in app05
     assert "[In the tenth month].\\footnote[5]{" in app05
@@ -577,6 +589,7 @@ def test_preface_postscript_and_chapter_opening_repairs():
 
 def test_cross_chapter_footnote_and_name_residue_removed():
     ch03 = CH03.read_text(encoding="utf-8")
+    ch03_visible = normalized_visible_text(ch03)
     ch04 = CH04.read_text(encoding="utf-8")
 
     assert "first published by 董" not in ch03
@@ -598,7 +611,7 @@ def test_cross_chapter_footnote_and_name_residue_removed():
     assert "Guo (?)---hence Guo of Zhi?---" in ch03
     assert "The reading of guo for is not certain." in ch03
     assert "\\pinyinterm{zhang-bingquan} (1956), pp. 246, 253-254;" in ch03
-    assert r"\pinyinterm{jiaguwenzi-jishi} (\ref{sec:chapters-ch03:3.3.1} (sec. 3.3.1))" in ch03
+    assert r"CKWP (sec.~\ref{sec:chapters-ch03:3.3.1}" in ch03_visible
     assert r"follow Zhi Guo (to attack the \pinyinterm{bafang}, for if he does, we will not perhaps" in ch03
     assert "probably divined on the same day, about the king following Zhi Guo to attack the \\pinyinterm{bafang}" in ch03
     assert "Wu Qichang ([1971], pp. 10-11)" in ch03
@@ -670,6 +683,7 @@ def test_app04_collection_titles_are_pinyinized():
 
 def test_ch05_reconstruction_note_runs_removed():
     ch05 = CH05.read_text(encoding="utf-8")
+    ch05_visible = normalized_visible_text(ch05)
 
     assert "7071727374757677" not in ch05
     assert "mirror together\\footnote[69]" not in ch05
@@ -690,7 +704,7 @@ def test_ch05_reconstruction_note_runs_removed():
     assert "been discovered.\\footnote[21]{See \\ref{ch:4} (see ch. 4), n. 24.} %21" in ch05
     assert "mirror together''\\footnote[69]{" in ch05
     assert "question.\\footnote[70]{" in ch05
-    assert "\\ref{sec:chapters-ch02:2.9.4} (secs. 1.5.1; 2.4; 2.6; 2.9.4)).\\footnote[71]{" in ch05
+    assert "secs.~\\ref{sec:chapters-ch01:1.5.1}; \\ref{sec:chapters-ch02:2.4}; \\ref{sec:chapters-ch02:2.6}; \\ref{sec:chapters-ch02:2.9.4}" in ch05_visible
     assert "fig. 30),\\footnote[72]{" in ch05
     assert "to be wrong.\\footnote[73]{" in ch05
     assert "serious consequences.\\footnote[74]{" in ch05

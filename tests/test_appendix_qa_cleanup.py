@@ -1,8 +1,17 @@
 from pathlib import Path
+import re
 
 
 APP03 = Path("tex/appendices/app03.tex")
 APP04 = Path("tex/appendices/app04.tex")
+
+
+def strip_tex_comments(text: str) -> str:
+    return "\n".join(re.sub(r"(?<!\\)%.*", "", line) for line in text.splitlines())
+
+
+def normalized_visible_text(text: str) -> str:
+    return re.sub(r"\s+", " ", strip_tex_comments(text)).strip()
 
 
 def test_appendix_3_page_marker_debris_removed():
@@ -214,6 +223,7 @@ def test_appendix_5_vertical_ocr_garbage_removed():
 
 def test_appendix_1_opening_restored():
     text = Path("tex/appendices/app01.tex").read_text(encoding="utf-8")
+    visible = normalized_visible_text(text)
 
     assert "There have been a number of limited attempts at identifying the turtle remains from the\narchaeological site at \\pinyinterm{anyang}." in text
     assert "\\appendixsectionlabel{sec:appendices-app01:1}{1}" in text
@@ -238,7 +248,8 @@ def test_appendix_1_opening_restored():
     assert "[\\textasciicircum{}2]" not in text
     assert ":L" not in text
     assert "Only relationships between scute seams (fig. 3) will be considered here" in text
-    assert "which were scraped clean (\\ref{sec:chapters-ch01:1.3.2} (sec. 1.3.2)) so that only the bone seams are visible" in text
+    assert "which were scraped clean (sec.~\\ref{sec:chapters-ch01:1.3.2}" in visible
+    assert "so that only the bone seams are visible" in visible
     assert "Blackith and Reyment [1971]).\\footnote[1]{" in text
     assert "(R - \\lambda I)v = 0" in text
     assert "yielding a set of eigenvalues ($\\lambda$)" in text
@@ -247,12 +258,13 @@ def test_appendix_1_opening_restored():
 
 def test_chapter_4_opening_note_block_restored():
     text = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
+    visible = normalized_visible_text(text)
 
     assert "but not in 史赤.\\footnote[13]{" in text
     assert "\\pinyinterm{zu-xin}, ``Grand-\n% source: scan 113, printed 93\nfather Xin'';" in text
     assert "brothers.\\footnote[28]{" in text
     assert "\\booktitle{Jimbun shakubun}, English preface, p. 15;" in text
-    assert "\\pinyinterm{pinbian} 12--21 (\\ref{sec:chapters-ch03:3.7} (sec. 3.7))." in text
+    assert "\\pinyinterm{pinbian} 12--21 (sec.~\\ref{sec:chapters-ch03:3.7}" in visible
     assert "groups of kings.\\footnote[3]{" in text
     assert "to \\pinyinterm{di-xin}.\\footnote[4]{" in text
     assert "period IVa.\\footnote[5]{" in text
@@ -306,8 +318,9 @@ def test_chapter_4_note_83_tail_cleaned():
 def test_ch01_and_ch04_roman_ref_display_cleaned():
     ch01 = Path("tex/chapters/ch01.tex").read_text(encoding="utf-8")
     ch04 = Path("tex/chapters/ch04.tex").read_text(encoding="utf-8")
+    ch01_visible = normalized_visible_text(ch01)
 
-    assert r"appendix \ref{app:1}, sec. \ref{sec:appendices-app01:4} (appendix 1, sec. 4)" in ch01
+    assert r"appendix \ref{app:1}, sec. \ref{sec:appendices-app01:4}" in ch01_visible
     assert "(appendix I, sec. 4)" not in ch01
     assert "appendix 3, sec. 1" in ch04
     assert "appendix 3, sec. I" not in ch04
@@ -337,9 +350,11 @@ def test_chapter_3_note_52_restored():
 
 def test_chapter_3_opening_source_block_restored():
     text = Path("tex/chapters/ch03.tex").read_text(encoding="utf-8")
+    visible = normalized_visible_text(text)
 
     assert "form of rubbings.\\footnote[4]{" in text
-    assert "(\\ref{sec:chapters-ch05:5.5} (see sec. 5.5)), these rubbings are the primary sources" in text
+    assert "no question (sec.~\\ref{sec:chapters-ch05:5.5}" in visible
+    assert "these rubbings are the primary sources" in visible
     assert "historians.''\\footnote[5]{" in text
     assert "published collections.\\footnote[6]{" in text
     assert "study of the inscriptions.\\footnote[7]{" in text
@@ -390,6 +405,7 @@ def test_chapter_5_transcription_tail_cleanup():
 
 def test_chapter_2_mid_note_block_restored():
     text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+    visible = normalized_visible_text(text)
 
     assert "Tribute payments.\\footnote[25]{" in text
     assert "not yet been made.\\footnote[26]{" in text
@@ -398,11 +414,11 @@ def test_chapter_2_mid_note_block_restored():
     assert "ten-day week.\\footnote[29]{" in text
     assert "days in advance,\\footnote[30]{" in text
     assert "prognostications.\\footnote[31]{" in text
-    assert "sec. 2.5)).\\footnote[32]{" in text
+    assert "sec.~\\ref{sec:chapters-ch03:3.7.2}" in visible
     assert "\\textit{xushu})\\footnote[33]{" in text
     assert "1 to 10.\\footnote[34]{" in text
     assert "itself was carved.\\footnote[35]{" in text
-    assert "study of sets (\\ref{sec:chapters-ch02:2.5} (sec. 2.5)).\\footnote[37]{" in text
+    assert "study of sets (sec.~\\ref{sec:chapters-ch02:2.5}" in visible
     assert "fan-chao\\footnote[38]{" in text
     assert "}), the crack numbers were commonly erased" in text
     assert "25. But cf." not in text
@@ -435,15 +451,17 @@ def test_chapter_2_note_101_tail_cleaned():
 
 def test_chapter_2_note_88_tail_cleaned():
     text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+    visible = normalized_visible_text(text)
 
-    assert "see sec. 3.7.2).} %88" in text
+    assert "see too sec.~\\ref{sec:chapters-ch03:3.7.2}" in visible
     assert "45 Q D E L U [" not in text
 
 
 def test_chapter_2_note_111_restored():
     text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+    visible = normalized_visible_text(text)
 
-    assert "intentional abbreviation; cf. \\ref{sec:chapters-ch03:3.7.1.1} (see sec. 3.7.1.1));" in text
+    assert "intentional abbreviation; cf. sec.~\\ref{sec:chapters-ch03:3.7.1.1}" in visible
     assert "\\pinyinterm{yan-yiping} [1959], pp. 230, 233;" in text
     assert "\\pinyinterm{qiu-short} (1972), p. 43.} %111" in text
     assert "see  cf. sec. 3.7.1.1" not in text
@@ -461,9 +479,10 @@ def test_chapter_2_note_115_tail_cleaned():
 
 def test_chapter_2_notes_116_to_124_restored():
     text = Path("tex/chapters/ch02.tex").read_text(encoding="utf-8")
+    visible = normalized_visible_text(text)
 
     assert "(1951a), p. 304.} %116" in text
-    assert "For the symbols \\_ or \\_, \\ref{sec:chapters-ch05:5.6} (see sec. 5.6).} %121" in text
+    assert "For the symbols \\_ or \\_, sec.~\\ref{sec:chapters-ch05:5.6}" in visible
     assert "has made an exhaustive study of inscription patterns on various parts of the shell, both front and back." in text
     assert "center.\\footnote[123]{It was frequently the case that columns on a left scapula ran to the right and vice versa;" in text
     assert "vice versa.\\footnote[124]{\\pinyinterm{zhou-hongxiang} (1969), pp. 37-52," in text

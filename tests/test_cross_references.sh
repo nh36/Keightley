@@ -48,9 +48,9 @@ orphaned=$(grep -B 1 '\\label{' tex/chapters/ch01.tex | grep -v '\\label' | grep
 [ "$orphaned" -lt 5 ]
 test_case "Labels properly positioned after headings" $?
 
-# Test 6: Verify section references exist
-grep -q 'see sec\.' tex/chapters/ch01.tex
-test_case "Section references exist ('see sec. X.Y')" $?
+# Test 6: Verify live linked section references exist
+grep -Eq 'secs?\.~\\ref\{sec:' tex/chapters/ch01.tex
+test_case "Section references exist as live links ('sec.~\\ref{...}')" $?
 
 # Test 7: Verify chapter references exist
 grep -q 'ch\. [0-9]' tex/chapters/ch01.tex
