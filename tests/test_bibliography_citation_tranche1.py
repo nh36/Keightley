@@ -241,8 +241,26 @@ def test_first_tranche_citations_are_wired():
     assert r"David Nivison (\citeyear{Nivison1977aPronominal})" in ch03
     assert "Nivison (1977)." not in ch05
     assert r"Nivison (\citeyear{Nivison1977Interpretation})." in ch05
+    assert "Itō Michiharu (1967)" not in ch03
+    assert "Kaizuka Shigeki (1967)" not in ch03
+    assert "Shirakawa Shizuka (1972)" not in ch03
+    assert "李 Ya-nung (1955)" not in ch03
+    assert "Shima Kunio (1958)" not in ch03
+    assert "Itō (1975, pt. 1)" not in ch03
+    assert "Akatsuka (1977)" not in ch03
+    assert "Chen Mengjia (1956)" not in ch03
+    assert "The study of Shang religion by Zhang Zongdong (1970)" not in ch03
+    assert r"\citeyear{Ito1967Kodai}" in ch03
+    assert r"\citeyear{Kaizuka1967Kodai}" in ch03
+    assert r"\citeyear{Shirakawa1972Kokotsubun}" in ch03
+    assert r"Li Yanong (\citeyear{LiYanung1955Yintai})" in ch03
     assert "Wu Tse (1953)" not in ch03
     assert r"Wu Tse (\citeyear{Wu1953Kutai})" in ch03
+    assert r"\citeyear{Shima1958Inkyo}" in ch03
+    assert r"\citeyear{Ito1975Chugoku}" in ch03
+    assert r"\citeyear{Akatsuka1977Chugoku}" in ch03
+    assert r"\citeyear{Chen1956Yin}" in ch03
+    assert r"\citeyear{Chang1970Shang}" in ch03
     assert "Ting Shan (1956), p. 125" not in ch01
     assert r"Ting Shan (\citeyear{TingShan1956Chia}), p. 125" in ch01
     assert "Chan Pingleung (1972), pp. 39-41" not in ch01
@@ -275,6 +293,14 @@ def test_first_tranche_citations_are_wired():
     assert r"Lindholm (\citeyear{Lindholm1931Uber}) concluded" in ch05
     assert "Pope (1935), in his monograph" not in ch05
     assert r"Pope (\citeyear{Pope1935Reptiles}), in his monograph" in ch05
+    assert "(cited in Carr, 1952)" not in ch05
+    assert r"(cited in Carr (\citeyear{Carr1952Handbook}))" in ch05
+    assert "Auffenberg (1962) commented" not in ch05
+    assert r"Auffenberg (\citeyear{Auffenberg1962Status}) commented" in ch05
+    assert "McDowell (1964), in a taxonomic revision" not in ch05
+    assert r"McDowell (\citeyear{McDowell1964Partition}), in a taxonomic revision" in ch05
+    assert "Ting Su (1969) has made the only attempt" not in ch05
+    assert r"Ting Su (\citeyear{Su1969Shuo}) has made the only attempt" in ch05
     assert "turtle examined by Ping was, in fact," not in ch05
     assert "turtle examined by Bing Zhi was, in fact," in ch05
     assert r"cf. \pinyinterm{zhou-hongxiang} [1976]," in ch05
@@ -310,10 +336,33 @@ def test_first_tranche_citations_are_wired():
     assert "1241 ±\nB.C." not in preface
     assert "Yin-wang E" not in preface
     assert "yin-chi 1, ``prolonged auspiciousness." not in preface
+    assert "Chang Kwang-chih (1977)" not in preface
+    assert "Chang (1968)" not in preface
+    assert "Lung Yü-ch'un (1976)" not in preface
+    assert "Nivison (1977a)" not in preface
+    assert "Nivison [1977]" not in preface
+    assert "Takashima\n(1977a)" not in preface
+    assert "Yü Hao-liang (1977)" not in preface
+    assert "Mickel (1977a)" not in preface
+    assert "Britton (1935)" not in preface
+    assert "Creel (1937)" not in preface
+    assert "Chiang Hung (1976)" not in preface
+    assert "Shen Wenzhuo (1977)" not in preface
     assert "authentic, i.e., Shang.}" in preface
     assert "1241 ±\n160 B.C." in preface
     assert "Yin-wang 殷王" in preface
     assert "yin-chi, ``prolonged auspiciousness.''" in preface
+    assert r"Chang Kwang-chih (\citeyear{Chang1977Archaeology}) has superseded Chang (\citeyear{Chang1968Archaeology})" in preface
+    assert r"Lung Yü-ch'un (\citeyear{Lung1976Shih})" in preface
+    assert r"Nivison (\citeyear{Nivison1977aPronominal})" in preface
+    assert r"Nivison [\citeyear{Nivison1977Interpretation}]" in preface
+    assert r"\citeyear{Takashima1977aExistence}" in preface
+    assert r"Yü Hao-liang (\citeyear{Yu1977Shuo})" in preface
+    assert r"Mickel (\citeyear{Mickel1977aIndex}) provides indexes" in preface
+    assert r"Britton (\citeyear{Britton1935Yin})," in preface
+    assert r"Creel (\citeyear{Creel1937Birth})," in preface
+    assert r"Chiang Hung (\citeyear{Hung1976Panlongcheng})" in preface
+    assert r"Shen Wenzhuo (\citeyear{Shen1977Fuyu})" in preface
     assert r"\pinyinterm{tang-lan} [\citeyear{TangLan1976Hotsun}], p. 60" in preface
     assert r"\pinyinterm{qu-wanli} (\citeyear{Chu1965aShihchi}), pp. 88-89," in preface
     assert r"Wheatley (1971), pp. 13-14, 420;" in preface

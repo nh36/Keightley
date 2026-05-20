@@ -319,6 +319,9 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "\\footnote[143]{E.g., \\pinyinterm{xu-jinxiong} (1974), pp. 209, 254-255, has proposed that variations in the shape of the ridge made on the outer edge" in text
     assert "Other Neolithic and early \\pinyinterm{shang} oracle bones, however, did have pyromantic hollows, which varied" in text
     assert "\\pinyintext{longshan} scapulimancers mainly used bored\nhollows that were round and shallow;" in text
+    assert r"Pyromantic bones and shells excavated from the \pinyinterm{renmin-gongyuan} phase at \pinyinterm{zhengzhou}\footnote[148]{" in text
+    assert r"phase)\footnote[149]{" in text
+    assert "\n\n(which is thought to stand chronologically just prior to period I of the \\pinyinterm{anyang} phase)" not in text
     assert "periods II to V.\\footnote[151]{\\pinyinterm{liu-yuanlin} (1974), p. 118. \\pinyinterm{liu-yuanlin} (p. 117, plate 12.1) notes a rare period V bone fragment" in text
     assert "The topic---which has led \\pinyinterm{xu-jinxiong} to\nwrite several articles and two book-length monographs" in text
     assert "I frequently find myself uncertain as to whether one hollow was, as \\pinyinterm{xu-jinxiong} claims, the same as another." in text
