@@ -157,6 +157,10 @@ jiaxu	day	甲戌	Jiaxu	Jiǎxū
 jiashen	day	甲申	Jiashen	Jiǎshēn
 jiazi	day	甲子	Jiazi	Jiǎzǐ
 jiawu	day	甲午	Jiawu	Jiǎwǔ
+yichou	day	乙丑	Yichou	Yǐchǒu
+yimao	day	乙卯	Yimao	Yǐmǎo
+yisi	day	乙巳	Yisi	Yǐsì
+yiyou	day	乙酉	Yiyou	Yǐyǒu
 bingchen	day	丙辰	Bingchen	Bǐngchén
 bingshen	day	丙申	Bingshen	Bǐngshēn
 bingyin	day	丙寅	Bingyin	Bǐngyín
@@ -172,6 +176,7 @@ kengyin	day	庚寅	Gengyin	Gēngyín
 gengxu	day	庚戌	Gengxu	Gēngxū
 gengzi	day	庚子	Gengzi	Gēngzǐ
 xinmao	day	辛卯	Xinmao	Xīnmǎo
+xinchou	day	辛丑	Xinchou	Xīnchǒu
 xinwei	day	辛未	Xinwei	Xīnwèi
 xinyou	day	辛酉	Xinyou	Xīnyǒu
 renwu	day	壬午	Renwu	Rénwǔ

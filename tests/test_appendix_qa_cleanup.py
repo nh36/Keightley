@@ -201,19 +201,19 @@ def test_appendix_5_vertical_ocr_garbage_removed():
     assert "e.g., 甲編 1651, kǎoshì, p. 218; 人文 1996, shakubun, p. 504" not in text
     assert "\\listitem{1}\n\\listitem{2}\n\\inscriptionsection{INSCRIPTION}" in text
     assert "(I)\n\\listitem{2}\n\\inscriptionsection{INSCRIPTION}" not in text
-    assert "[Hsing] divined:" in text
-    assert "[Xing] divined:" not in text
+    assert "[Xing] divined:" in text
+    assert "[Hsing] divined:" not in text
     assert "\\inscriptionref{\\pinyinterm{jisi} divination}\n\n\\listitem{1}\n\\inscriptionlabel{Preface} [Crack-making] on \\pinyinterm{jisi}" in text
-    assert "\\inscriptionlabel{Postface} In the [seventh month].\n\n\\listitem{2}\n\\inscriptionlabel{Preface} Crack-making on ping-shen" in text
-    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n\\listitem{3}\n\\inscriptionlabel{Preface} Crack-making on hsin-ch'ou" in text
-    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n\\listitem{4}\n\\inscriptionlabel{Preface} Crack-making on hsin-ch'ou" in text
-    assert "\\inscriptionlabel{Charge} The king entertains; performs the chui ritual.\n\n\\listitem{5}\n\\inscriptionlabel{Preface} Crack-making on jen-yin" in text
-    assert "ritual; no fault.\n\n\\listitem{6}\n\\inscriptionlabel{Preface} Crack-making on jen-yin" in text
-    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n\\listitem{7}\n\\inscriptionlabel{Preface} Crack-making on jen-tzu" in text
+    assert "\\inscriptionlabel{Postface} In the [seventh month].\n\n\\listitem{2}\n\\inscriptionlabel{Preface} Crack-making on \\pinyinterm{bingshen}" in text
+    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n\\listitem{3}\n\\inscriptionlabel{Preface} Crack-making on \\pinyinterm{xinchou}" in text
+    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n\\listitem{4}\n\\inscriptionlabel{Preface} Crack-making on \\pinyinterm{xinchou}" in text
+    assert "\\inscriptionlabel{Charge} The king entertains; performs the zhui ritual.\n\n\\listitem{5}\n\\inscriptionlabel{Preface} Crack-making on \\pinyinterm{renyin}" in text
+    assert "ritual; no fault.\n\n\\listitem{6}\n\\inscriptionlabel{Preface} Crack-making on \\pinyinterm{renyin}" in text
+    assert "\\inscriptionlabel{Postface} In the eighth month.\n\n\\listitem{7}\n\\inscriptionlabel{Preface} Crack-making on \\pinyinterm{renzi}" in text
     assert "wish that no fault or misfortune would occur.''\\footnote[7]{" in text
     assert "Royal Family group inscriptions.\\footnote[7]" not in text
     assert "\\footnote[13]{See the inscriptions listed at S43.1-3; Shih-to 2.82, to III + IV; the rest are either RFG or, in my opinion, undatable.}" in text
-    assert "\\footnote[26]{See the inscriptions listed at S230.2-3; phrases wang hsing 往省, ``go to inspect,'' 489.3-4, and wang t'ien 往田, ``go to hunt'' (S76.4-77.4); the fact that wang hsing was not used after period I suggests that this topic came to be incorporated in the hsing-t'ien, ``inspect and hunt,'' or t'ien-hsing, ``hunt and inspect,'' divinations of III + IV.}" in text
+    assert "\\footnote[26]{See the inscriptions listed at S230.2-3; phrases wang xing 往省, ``go to inspect,'' 489.3-4, and wang tian 往田, ``go to hunt'' (S76.4-77.4); the fact that wang xing was not used after period I suggests that this topic came to be incorporated in the xing-tian, ``inspect and hunt,'' or tian-xing, ``hunt and inspect,'' divinations of III + IV.}" in text
     assert "Other divinations contain the wang t'ien E" not in text
     assert "``encountering great rain'' (kou ta yü) or ``encountering great wind'' (kou ta feng), which" in text
     assert "``encountering great rain'' (kou ta yü or “encountering great wind'' (kou ta feng), which" not in text
@@ -507,7 +507,7 @@ def test_chapter_2_note_99_local_cleanup():
     assert "Taida 2, 7; see \\pinyinterm{liu-yuanlin} [\\citeyear{Liu1974Puku}], p. 121" in text
     assert "see \\pinyinterm{xu-zhongshu} [\\citeyear{HsuChungshu1931Tsailun}], p. 528, for a drawing" in text
     assert "\\pinyinterm{jiatu} 125/126); \\listitem{5}" in text
-    assert "\\listitem{6} kan-chih tables (n. 100).} %99" in text
+    assert "\\listitem{6} ganzhi tables (n. 100).} %99" in text
     assert "(I) practice inscriptions" not in text
     assert "KK [1975.1]" not in text
     assert "台-ta 2, 7" not in text

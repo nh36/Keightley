@@ -297,7 +297,7 @@ def test_ch04_mid_and_late_note_residue_removed():
     assert "Kaizuka (\\citeyear{Kaizuka1946Chiigoku}), pp. 208-209 for a Chinese translation" in text
     assert "fundamental premise---that individual diviners may be associated with limited periods---rests upon the unverifiable assumption" in text
     assert "For another dispute, see n. 44.} %36" in text
-    assert "performed (or were going to perform [\\pinyinterm{dong-short} (\\citeyear{Tung1965Chia}), p. 96]) yung ritual to \\pinyinterm{dajia} on chia-ch'en" in text
+    assert "performed (or were going to perform [\\pinyinterm{dong-short} (\\citeyear{Tung1965Chia}), p. 96]) yong ritual to \\pinyinterm{dajia} on \\pinyinterm{jiachen}" in text
     assert "started auspiciously (cf. Keightley [\\citeyear{Keightley1973aShang}], p. 34)." in text
     assert "6 pieces bore the names of RFG diviners (Chu: \\pinyinterm{jiabian} 3003; Shao: \\pinyinterm{jiabian} 2941; 3012; 3045+3047;" in text
     assert "3045+3047; Tui É: \\pinyinterm{jiabian} 3045+3047; 3083;" in text
@@ -546,9 +546,9 @@ def test_appendix_note_reference_residue_removed():
     assert "T'u-fang ±" not in app05
     assert "Yizhu go" not in app05
     assert r"ancestors from \pinyinterm{shangjia} to \pinyinterm{xiaoxin}" in app05
-    assert r"perform hsieh ritual to \pinyinterm{zuding} (K15 1); no curse." in app05
-    assert r"we perform hsieh-ritual to \pinyinterm{zu-xin}, there will be no curse." in app05
-    assert r"The king entertains \pinyinterm{bubing} (K4 1); performs the hsieh ritual; no fault." in app05
+    assert r"perform xie ritual to \pinyinterm{zuding} (K15 1); no curse." in app05
+    assert r"we perform xie ritual to \pinyinterm{zu-xin}, there will be no curse." in app05
+    assert r"The king entertains \pinyinterm{bubing} (K4 1); performs the xie ritual; no fault." in app05
     assert r"The king entertains \pinyinterm{dajia} (K3 9)'s consort, \pinyinterm{bixin}" in app05
     assert r"The king entertains \pinyinterm{dageng} (K5 11)'s consort, \pinyinterm{biren}" in app05
     assert r"The king entertains \pinyinterm{dawu} (K7 1)'s consort, \pinyinterm{biren}" in app05
